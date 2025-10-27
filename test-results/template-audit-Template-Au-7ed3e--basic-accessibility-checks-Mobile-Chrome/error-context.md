@@ -1,0 +1,161 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - navigation [ref=e3]:
+      - generic [ref=e4]:
+        - link "← Back" [ref=e5] [cursor=pointer]:
+          - /url: /
+        - generic [ref=e6]:
+          - link "Services" [ref=e7] [cursor=pointer]:
+            - /url: "#services"
+          - link "Contact" [ref=e8] [cursor=pointer]:
+            - /url: "#contact"
+    - generic [ref=e9]:
+      - heading "Marcus Stone" [level=1] [ref=e11]:
+        - generic [ref=e12]: Marcus
+        - generic [ref=e13]: Stone
+      - generic [ref=e15]:
+        - paragraph [ref=e16]: Brand Strategist
+        - paragraph [ref=e17]: Creating bold identities for fearless brands
+        - button "Let's Talk" [ref=e18] [cursor=pointer]:
+          - text: Let's Talk
+          - img
+    - generic [ref=e21]:
+      - heading "About" [level=2] [ref=e23]
+      - paragraph [ref=e25]: I help startups and established companies craft memorable brand experiences through strategic thinking and bold visual communication. 12+ years crafting brands that break through the noise.
+    - generic [ref=e28]:
+      - generic [ref=e29]:
+        - generic [ref=e30]: 150+
+        - paragraph [ref=e31]: Brands Launched
+      - generic [ref=e32]:
+        - generic [ref=e33]: 50M+
+        - paragraph [ref=e34]: Revenue Generated
+      - generic [ref=e35]:
+        - generic [ref=e36]: 12+
+        - paragraph [ref=e37]: Years Experience
+      - generic [ref=e38]:
+        - generic [ref=e39]: 98%
+        - paragraph [ref=e40]: Client Satisfaction
+    - generic [ref=e41]:
+      - heading "Services" [level=2] [ref=e43]
+      - generic [ref=e44]:
+        - generic [ref=e46] [cursor=pointer]:
+          - generic [ref=e47]: "01"
+          - heading "Brand Strategy" [level=3] [ref=e49]
+          - paragraph [ref=e51]: Comprehensive brand positioning and messaging frameworks that differentiate you from competitors.
+        - generic [ref=e53] [cursor=pointer]:
+          - generic [ref=e54]: "02"
+          - heading "Visual Identity" [level=3] [ref=e56]
+          - paragraph [ref=e58]: Logo design, color systems, and typography that stands out and stays memorable.
+        - generic [ref=e60] [cursor=pointer]:
+          - generic [ref=e61]: "03"
+          - heading "Creative Direction" [level=3] [ref=e63]
+          - paragraph [ref=e65]: End-to-end creative leadership for campaigns and launches that drive results.
+    - generic [ref=e66]:
+      - heading "Process" [level=2] [ref=e68]
+      - generic [ref=e69]:
+        - generic [ref=e71]:
+          - generic [ref=e72]: DISCOVER
+          - heading "DISCOVER" [level=3] [ref=e73]
+          - paragraph [ref=e74]: Deep dive into your brand, competitors, and audience
+        - generic [ref=e76]:
+          - generic [ref=e77]: DEFINE
+          - heading "DEFINE" [level=3] [ref=e78]
+          - paragraph [ref=e79]: Clarify positioning, messaging, and visual direction
+        - generic [ref=e81]:
+          - generic [ref=e82]: DESIGN
+          - heading "DESIGN" [level=3] [ref=e83]
+          - paragraph [ref=e84]: Create bold visual systems that stand out
+        - generic [ref=e86]:
+          - generic [ref=e87]: DELIVER
+          - heading "DELIVER" [level=3] [ref=e88]
+          - paragraph [ref=e89]: Launch with confidence and measure impact
+    - generic [ref=e90]:
+      - heading "Case Studies" [level=2] [ref=e92]
+      - generic [ref=e93]:
+        - generic [ref=e95]:
+          - generic [ref=e96]:
+            - generic [ref=e97]: SaaS Startup
+            - heading "TechFlow" [level=3] [ref=e98]
+            - generic [ref=e99]:
+              - generic [ref=e100]:
+                - heading "Challenge" [level=4] [ref=e101]
+                - paragraph [ref=e102]: New B2B SaaS needed to stand out in crowded market
+              - generic [ref=e103]:
+                - heading "Solution" [level=4] [ref=e104]
+                - paragraph [ref=e105]: Bold brand identity with data-driven messaging
+              - generic [ref=e106]:
+                - heading "Impact" [level=4] [ref=e107]
+                - paragraph [ref=e108]: 300% increase in demo requests, $2M seed round
+          - generic [ref=e109]:
+            - generic [ref=e110]:
+              - generic [ref=e111]: Before
+              - paragraph [ref=e112]: Generic tech branding, low conversion rates
+            - generic [ref=e113]:
+              - generic [ref=e114]: After
+              - paragraph [ref=e115]: Distinctive brand, clear value prop, 10x engagement
+        - generic [ref=e117]:
+          - generic [ref=e118]:
+            - generic [ref=e119]: Food Tech
+            - heading "GreenEats" [level=3] [ref=e120]
+            - generic [ref=e121]:
+              - generic [ref=e122]:
+                - heading "Challenge" [level=4] [ref=e123]
+                - paragraph [ref=e124]: Sustainable food delivery struggling with brand awareness
+              - generic [ref=e125]:
+                - heading "Solution" [level=4] [ref=e126]
+                - paragraph [ref=e127]: Purpose-driven brand with vibrant visuals
+              - generic [ref=e128]:
+                - heading "Impact" [level=4] [ref=e129]
+                - paragraph [ref=e130]: 5x social media growth, featured in major press
+          - generic [ref=e131]:
+            - generic [ref=e132]:
+              - generic [ref=e133]: Before
+              - paragraph [ref=e134]: Invisible in market, 2% monthly growth
+            - generic [ref=e135]:
+              - generic [ref=e136]: After
+              - paragraph [ref=e137]: Category leader, 45% monthly growth
+    - generic [ref=e138]:
+      - heading "Testimonials" [level=2] [ref=e140]
+      - generic [ref=e141]:
+        - generic [ref=e143]:
+          - paragraph [ref=e144]: "\"Marcus didn't just design a logo. He transformed how we think about our brand. We went from invisible to unforgettable.\""
+          - paragraph [ref=e145]: Sarah Chen, CEO TechFlow
+        - generic [ref=e147]:
+          - paragraph [ref=e148]: "\"The ROI speaks for itself. Our brand work with Marcus paid for itself in 3 months.\""
+          - paragraph [ref=e149]: David Park, Founder GreenEats
+    - generic [ref=e150]:
+      - heading "Clients" [level=2] [ref=e152]
+      - generic [ref=e154]:
+        - generic [ref=e156]: Nike
+        - generic [ref=e158]: Spotify
+        - generic [ref=e160]: Airbnb
+        - generic [ref=e162]: Tesla
+        - generic [ref=e164]: Netflix
+        - generic [ref=e166]: Apple
+        - generic [ref=e168]: Stripe
+        - generic [ref=e170]: Notion
+    - generic [ref=e171]:
+      - heading "Let's Create Something Bold" [level=2] [ref=e173]:
+        - text: Let's Create
+        - text: Something
+        - text: Bold
+      - generic [ref=e175]:
+        - generic [ref=e176]:
+          - button "hello@marcusstone.com" [ref=e177] [cursor=pointer]:
+            - img
+            - text: hello@marcusstone.com
+          - paragraph [ref=e178]: Los Angeles, CA
+        - generic [ref=e179]:
+          - button [ref=e180] [cursor=pointer]:
+            - img
+          - button [ref=e181] [cursor=pointer]:
+            - img
+    - contentinfo [ref=e182]:
+      - paragraph [ref=e184]: © 2025 Marcus Stone. All rights reserved.
+  - button "Open Next.js Dev Tools" [ref=e190] [cursor=pointer]:
+    - img [ref=e191]
+  - alert [ref=e194]
+```

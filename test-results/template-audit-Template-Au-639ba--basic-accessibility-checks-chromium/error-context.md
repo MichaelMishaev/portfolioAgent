@@ -1,0 +1,123 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - navigation [ref=e3]:
+      - generic [ref=e4]:
+        - link "← Back" [ref=e5] [cursor=pointer]:
+          - /url: /
+        - generic [ref=e6]:
+          - link "Work" [ref=e7] [cursor=pointer]:
+            - /url: "#work"
+          - link "About" [ref=e8] [cursor=pointer]:
+            - /url: "#about"
+          - link "Contact" [ref=e9] [cursor=pointer]:
+            - /url: "#contact"
+    - generic [ref=e14]:
+      - heading "Sarah Chen" [level=1] [ref=e16]
+      - paragraph [ref=e18]: Creative Director & Photographer
+      - button "Explore My Work" [ref=e20] [cursor=pointer]
+    - generic [ref=e25]:
+      - generic [ref=e27]:
+        - generic [ref=e28]: 500+
+        - generic [ref=e29]: Projects Completed
+      - generic [ref=e31]:
+        - generic [ref=e32]: 50+
+        - generic [ref=e33]: Brand Clients
+      - generic [ref=e35]:
+        - generic [ref=e36]: 10+
+        - generic [ref=e37]: Awards Won
+    - generic [ref=e38]:
+      - heading "Selected Work" [level=2] [ref=e40]
+      - generic [ref=e41]:
+        - generic [ref=e44] [cursor=pointer]:
+          - img "Urban Stories" [ref=e46]
+          - generic [ref=e47]:
+            - text: Photography
+            - heading "Urban Stories" [level=3] [ref=e48]
+            - paragraph [ref=e49]: A visual journey through urban landscapes and city life.
+          - img [ref=e52]
+        - generic [ref=e58] [cursor=pointer]:
+          - img "Fashion Forward" [ref=e60]
+          - generic [ref=e61]:
+            - text: Fashion
+            - heading "Fashion Forward" [level=3] [ref=e62]
+            - paragraph [ref=e63]: Editorial fashion photography for leading magazines.
+          - img [ref=e66]
+        - generic [ref=e72] [cursor=pointer]:
+          - img "Brand Campaign" [ref=e74]
+          - generic [ref=e75]:
+            - text: Commercial
+            - heading "Brand Campaign" [level=3] [ref=e76]
+            - paragraph [ref=e77]: Complete visual identity and campaign for luxury brand.
+          - img [ref=e80]
+        - generic [ref=e86] [cursor=pointer]:
+          - img "Portrait Series" [ref=e88]
+          - generic [ref=e89]:
+            - text: Portrait
+            - heading "Portrait Series" [level=3] [ref=e90]
+            - paragraph [ref=e91]: Intimate portraits exploring human emotion and character.
+          - img [ref=e94]
+        - generic [ref=e100] [cursor=pointer]:
+          - img "Night Life Series" [ref=e102]
+          - generic [ref=e103]:
+            - text: Photography
+            - heading "Night Life Series" [level=3] [ref=e104]
+            - paragraph [ref=e105]: Capturing the energy and atmosphere of nighttime cityscapes.
+          - img [ref=e108]
+        - generic [ref=e114] [cursor=pointer]:
+          - img "Product Showcase" [ref=e116]
+          - generic [ref=e117]:
+            - text: Commercial
+            - heading "Product Showcase" [level=3] [ref=e118]
+            - paragraph [ref=e119]: High-end product photography for e-commerce and advertising.
+          - img [ref=e122]
+    - generic [ref=e126]:
+      - heading "What I Do" [level=2] [ref=e128]
+      - generic [ref=e129]:
+        - paragraph [ref=e132]: Portrait Photography
+        - paragraph [ref=e135]: Fashion Editorial
+        - paragraph [ref=e138]: Commercial Campaigns
+        - paragraph [ref=e141]: Creative Direction
+        - paragraph [ref=e144]: Photo Editing
+        - paragraph [ref=e147]: Brand Storytelling
+    - generic [ref=e151]:
+      - generic [ref=e152]:
+        - heading "About Me" [level=2] [ref=e153]
+        - paragraph [ref=e154]: Capturing moments that tell stories. Specialized in portrait, fashion, and commercial photography with a cinematic touch.
+      - generic [ref=e156]:
+        - link "Instagram Profile" [ref=e157] [cursor=pointer]:
+          - /url: "#"
+          - img [ref=e158]
+        - link "LinkedIn Profile" [ref=e161] [cursor=pointer]:
+          - /url: "#"
+          - img [ref=e162]
+        - link "GitHub Profile" [ref=e166] [cursor=pointer]:
+          - /url: "#"
+          - img [ref=e167]
+    - generic [ref=e169]:
+      - heading "Client Testimonials" [level=2] [ref=e171]
+      - generic [ref=e172]:
+        - generic [ref=e174]:
+          - paragraph [ref=e175]: "\"Sarah's creative vision transformed our brand campaign beyond expectations.\""
+          - generic [ref=e176]:
+            - paragraph [ref=e177]: Marcus Lee
+            - paragraph [ref=e178]: Creative Director, Vogue
+        - generic [ref=e180]:
+          - paragraph [ref=e181]: "\"Working with Sarah is always a pleasure. Her attention to detail is unmatched.\""
+          - generic [ref=e182]:
+            - paragraph [ref=e183]: Amanda Rodriguez
+            - paragraph [ref=e184]: Brand Manager, Nike
+    - generic [ref=e186]:
+      - heading "Let's Create Something Amazing" [level=2] [ref=e188]
+      - paragraph [ref=e190]: Available for freelance projects and collaborations
+      - button "Get in Touch" [ref=e192] [cursor=pointer]:
+        - img
+        - text: Get in Touch
+    - contentinfo [ref=e193]:
+      - paragraph [ref=e195]: © 2025 Sarah Chen. All rights reserved.
+  - button "Open Next.js Dev Tools" [ref=e201] [cursor=pointer]:
+    - img [ref=e202]
+  - alert [ref=e205]
+```

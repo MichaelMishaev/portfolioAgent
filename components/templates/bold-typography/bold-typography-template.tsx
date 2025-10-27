@@ -1,0 +1,367 @@
+"use client";
+
+import { FadeIn } from "@/components/animations/fade-in";
+import { ScrollReveal } from "@/components/animations/scroll-reveal";
+import { Button } from "@/components/ui/button";
+import { FiMail, FiGithub, FiLinkedin, FiArrowRight } from "react-icons/fi";
+import Link from "next/link";
+
+const portfolioData = {
+  name: "Marcus Stone",
+  tagline: "Brand Strategist",
+  subtitle: "Creating bold identities for fearless brands",
+  bio: "I help startups and established companies craft memorable brand experiences through strategic thinking and bold visual communication. 12+ years crafting brands that break through the noise.",
+  stats: [
+    { number: "150+", label: "Brands Launched" },
+    { number: "50M+", label: "Revenue Generated" },
+    { number: "12+", label: "Years Experience" },
+    { number: "98%", label: "Client Satisfaction" },
+  ],
+  services: [
+    {
+      number: "01",
+      title: "Brand Strategy",
+      description: "Comprehensive brand positioning and messaging frameworks that differentiate you from competitors.",
+    },
+    {
+      number: "02",
+      title: "Visual Identity",
+      description: "Logo design, color systems, and typography that stands out and stays memorable.",
+    },
+    {
+      number: "03",
+      title: "Creative Direction",
+      description: "End-to-end creative leadership for campaigns and launches that drive results.",
+    },
+  ],
+  process: [
+    { step: "DISCOVER", desc: "Deep dive into your brand, competitors, and audience" },
+    { step: "DEFINE", desc: "Clarify positioning, messaging, and visual direction" },
+    { step: "DESIGN", desc: "Create bold visual systems that stand out" },
+    { step: "DELIVER", desc: "Launch with confidence and measure impact" },
+  ],
+  caseStudies: [
+    {
+      title: "TechFlow",
+      category: "SaaS Startup",
+      challenge: "New B2B SaaS needed to stand out in crowded market",
+      solution: "Bold brand identity with data-driven messaging",
+      impact: "300% increase in demo requests, $2M seed round",
+      before: "Generic tech branding, low conversion rates",
+      after: "Distinctive brand, clear value prop, 10x engagement",
+    },
+    {
+      title: "GreenEats",
+      category: "Food Tech",
+      challenge: "Sustainable food delivery struggling with brand awareness",
+      solution: "Purpose-driven brand with vibrant visuals",
+      impact: "5x social media growth, featured in major press",
+      before: "Invisible in market, 2% monthly growth",
+      after: "Category leader, 45% monthly growth",
+    },
+  ],
+  testimonials: [
+    { client: "Sarah Chen, CEO TechFlow", quote: "Marcus didn't just design a logo. He transformed how we think about our brand. We went from invisible to unforgettable." },
+    { client: "David Park, Founder GreenEats", quote: "The ROI speaks for itself. Our brand work with Marcus paid for itself in 3 months." },
+  ],
+  clients: ["Nike", "Spotify", "Airbnb", "Tesla", "Netflix", "Apple", "Stripe", "Notion"],
+  contact: {
+    email: "hello@marcusstone.com",
+    location: "Los Angeles, CA",
+  },
+};
+
+export function BoldTypographyTemplate() {
+  return (
+    <div className="min-h-screen bg-background">
+      {/* Navigation */}
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm border-b">
+        <div className="container mx-auto px-6 py-4 flex items-center justify-between">
+          <Link href="/" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+            ← Back
+          </Link>
+          <div className="flex items-center gap-8">
+            <a href="#services" className="text-sm hover:text-primary transition-colors">
+              Services
+            </a>
+            <a href="#contact" className="text-sm hover:text-primary transition-colors">
+              Contact
+            </a>
+          </div>
+        </div>
+      </nav>
+
+      {/* Hero Section - Bold Typography */}
+      <section className="container mx-auto px-6 pt-32 pb-20 min-h-screen flex flex-col justify-center">
+        <FadeIn>
+          <h1 className="text-[clamp(3rem,12vw,12rem)] font-black leading-[0.85] tracking-tight mb-8">
+            {portfolioData.name.split(" ").map((word, i) => (
+              <div key={i}>{word}</div>
+            ))}
+          </h1>
+        </FadeIn>
+
+        <FadeIn delay={0.2}>
+          <div className="max-w-2xl ml-auto">
+            <p className="text-2xl md:text-4xl font-bold mb-4">
+              {portfolioData.tagline}
+            </p>
+            <p className="text-lg md:text-xl text-muted-foreground mb-8">
+              {portfolioData.subtitle}
+            </p>
+            <Button size="lg" className="group">
+              Let's Talk
+              <FiArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+            </Button>
+          </div>
+        </FadeIn>
+      </section>
+
+      {/* About Section */}
+      <section className="container mx-auto px-6 py-20 border-t">
+        <ScrollReveal>
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-6xl md:text-8xl font-black mb-6">
+                About
+              </h2>
+            </div>
+            <div>
+              <p className="text-xl leading-relaxed text-foreground/90">
+                {portfolioData.bio}
+              </p>
+            </div>
+          </div>
+        </ScrollReveal>
+      </section>
+
+      {/* Stats Section */}
+      <section className="container mx-auto px-6 py-20 border-t bg-accent/5">
+        <ScrollReveal>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {portfolioData.stats.map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className="text-5xl md:text-7xl font-black mb-2 text-primary">
+                  {stat.number}
+                </div>
+                <p className="text-sm md:text-base font-semibold text-muted-foreground uppercase tracking-wide">
+                  {stat.label}
+                </p>
+              </div>
+            ))}
+          </div>
+        </ScrollReveal>
+      </section>
+
+      {/* Services Section */}
+      <section id="services" className="container mx-auto px-6 py-20 border-t">
+        <ScrollReveal>
+          <h2 className="text-6xl md:text-8xl font-black mb-16">
+            Services
+          </h2>
+        </ScrollReveal>
+
+        <div className="space-y-12">
+          {portfolioData.services.map((service, index) => (
+            <ScrollReveal key={service.number} delay={index * 0.1}>
+              <div className="group grid md:grid-cols-12 gap-6 py-8 border-b hover:bg-accent/50 transition-colors -mx-6 px-6 cursor-pointer">
+                <div className="md:col-span-2">
+                  <span className="text-4xl font-black text-muted-foreground group-hover:text-primary transition-colors">
+                    {service.number}
+                  </span>
+                </div>
+                <div className="md:col-span-4">
+                  <h3 className="text-3xl md:text-4xl font-bold">
+                    {service.title}
+                  </h3>
+                </div>
+                <div className="md:col-span-6">
+                  <p className="text-lg text-muted-foreground">
+                    {service.description}
+                  </p>
+                </div>
+              </div>
+            </ScrollReveal>
+          ))}
+        </div>
+      </section>
+
+      {/* Process Section */}
+      <section className="container mx-auto px-6 py-20 border-t">
+        <ScrollReveal>
+          <h2 className="text-6xl md:text-8xl font-black mb-16 text-center">
+            Process
+          </h2>
+        </ScrollReveal>
+
+        <div className="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto">
+          {portfolioData.process.map((step, index) => (
+            <ScrollReveal key={step.step} delay={index * 0.1}>
+              <div className="text-center">
+                <div className="text-4xl font-black text-primary mb-4">
+                  {step.step}
+                </div>
+                <h3 className="text-xl font-bold mb-3 uppercase">
+                  {step.step}
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  {step.desc}
+                </p>
+              </div>
+            </ScrollReveal>
+          ))}
+        </div>
+      </section>
+
+      {/* Case Studies Section */}
+      <section className="container mx-auto px-6 py-20 border-t bg-accent/5">
+        <ScrollReveal>
+          <h2 className="text-6xl md:text-8xl font-black mb-16">
+            Case Studies
+          </h2>
+        </ScrollReveal>
+
+        <div className="space-y-20">
+          {portfolioData.caseStudies.map((study, index) => (
+            <ScrollReveal key={study.title} delay={index * 0.1}>
+              <div className="grid md:grid-cols-2 gap-12">
+                {/* Left: Project Info */}
+                <div>
+                  <span className="inline-block text-sm font-bold px-4 py-2 bg-primary text-primary-foreground mb-4 uppercase">
+                    {study.category}
+                  </span>
+                  <h3 className="text-5xl md:text-6xl font-black mb-6">
+                    {study.title}
+                  </h3>
+
+                  <div className="space-y-6">
+                    <div>
+                      <h4 className="text-xl font-bold mb-2 uppercase">Challenge</h4>
+                      <p className="text-lg text-muted-foreground">{study.challenge}</p>
+                    </div>
+
+                    <div>
+                      <h4 className="text-xl font-bold mb-2 uppercase">Solution</h4>
+                      <p className="text-lg text-muted-foreground">{study.solution}</p>
+                    </div>
+
+                    <div>
+                      <h4 className="text-xl font-bold mb-2 uppercase">Impact</h4>
+                      <p className="text-lg font-bold text-primary">{study.impact}</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Right: Before & After */}
+                <div className="space-y-6">
+                  <div className="border-l-4 border-muted pl-6">
+                    <div className="text-sm font-bold uppercase text-muted-foreground mb-2">Before</div>
+                    <p className="text-lg">{study.before}</p>
+                  </div>
+
+                  <div className="border-l-4 border-primary pl-6">
+                    <div className="text-sm font-bold uppercase text-primary mb-2">After</div>
+                    <p className="text-lg font-semibold">{study.after}</p>
+                  </div>
+                </div>
+              </div>
+            </ScrollReveal>
+          ))}
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="container mx-auto px-6 py-20 border-t">
+        <ScrollReveal>
+          <h2 className="text-6xl md:text-8xl font-black mb-16">
+            Testimonials
+          </h2>
+        </ScrollReveal>
+
+        <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+          {portfolioData.testimonials.map((testimonial, index) => (
+            <ScrollReveal key={testimonial.client} delay={index * 0.1}>
+              <div className="border-l-4 border-primary pl-6">
+                <p className="text-2xl md:text-3xl font-bold leading-snug mb-6">
+                  "{testimonial.quote}"
+                </p>
+                <p className="text-lg font-semibold">
+                  {testimonial.client}
+                </p>
+              </div>
+            </ScrollReveal>
+          ))}
+        </div>
+      </section>
+
+      {/* Clients Section */}
+      <section className="container mx-auto px-6 py-20 border-t">
+        <ScrollReveal>
+          <h2 className="text-6xl md:text-8xl font-black mb-16">
+            Clients
+          </h2>
+        </ScrollReveal>
+
+        <ScrollReveal delay={0.2}>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
+            {portfolioData.clients.map((client) => (
+              <div
+                key={client}
+                className="aspect-square flex items-center justify-center border hover:bg-accent/50 transition-colors"
+              >
+                <span className="text-2xl md:text-3xl font-bold">
+                  {client}
+                </span>
+              </div>
+            ))}
+          </div>
+        </ScrollReveal>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact" className="container mx-auto px-6 py-32 border-t">
+        <ScrollReveal>
+          <h2 className="text-[clamp(3rem,10vw,10rem)] font-black leading-[0.9] mb-12">
+            Let's Create
+            <br />
+            Something
+            <br />
+            <span className="text-primary">Bold</span>
+          </h2>
+        </ScrollReveal>
+
+        <ScrollReveal delay={0.2}>
+          <div className="flex flex-col md:flex-row gap-8 items-start justify-between">
+            <div className="space-y-4">
+              <Button size="lg" className="text-lg">
+                <FiMail className="mr-2" />
+                {portfolioData.contact.email}
+              </Button>
+              <p className="text-lg text-muted-foreground">
+                {portfolioData.contact.location}
+              </p>
+            </div>
+
+            <div className="flex gap-4">
+              <Button variant="outline" size="icon" className="h-12 w-12">
+                <FiGithub className="h-5 w-5" />
+              </Button>
+              <Button variant="outline" size="icon" className="h-12 w-12">
+                <FiLinkedin className="h-5 w-5" />
+              </Button>
+            </div>
+          </div>
+        </ScrollReveal>
+      </section>
+
+      {/* Footer */}
+      <footer className="border-t bg-background">
+        <div className="container mx-auto px-6 py-8">
+          <p className="text-sm text-muted-foreground text-center">
+            © {new Date().getFullYear()} {portfolioData.name}. All rights reserved.
+          </p>
+        </div>
+      </footer>
+    </div>
+  );
+}

@@ -1,0 +1,137 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - navigation [ref=e3]:
+      - generic [ref=e4]:
+        - link "← Back" [ref=e5] [cursor=pointer]:
+          - /url: /
+        - link "Contact" [ref=e6] [cursor=pointer]:
+          - /url: "#contact"
+    - generic [ref=e8]:
+      - generic [ref=e11]:
+        - generic [ref=e12]:
+          - generic [ref=e13]: Available for Projects
+          - heading "Riley Chen" [level=1] [ref=e14]
+          - paragraph [ref=e15]: Product Designer & Developer
+          - paragraph [ref=e16]: 📍 San Francisco, CA
+        - button "Get in Touch" [ref=e18] [cursor=pointer]:
+          - img
+          - text: Get in Touch
+      - generic [ref=e21]:
+        - img [ref=e23]
+        - generic [ref=e27]: "42"
+        - generic [ref=e28]: Projects
+      - generic [ref=e31]:
+        - img [ref=e33]
+        - generic [ref=e36]: "28"
+        - generic [ref=e37]: Clients
+      - generic [ref=e39] [cursor=pointer]:
+        - img "Latest Project" [ref=e41]
+        - generic [ref=e42]:
+          - generic [ref=e43]: Featured
+          - generic [ref=e44]: Latest Project
+          - generic [ref=e45]: Redesigned mobile banking experience for 2M+ users
+      - generic [ref=e48]:
+        - img [ref=e50]
+        - generic [ref=e52]: 5+
+        - generic [ref=e53]: Years
+      - generic [ref=e56]:
+        - img [ref=e58]
+        - generic [ref=e61]: "12"
+        - generic [ref=e62]: Countries
+      - generic [ref=e65]:
+        - heading "About Me" [level=3] [ref=e66]
+        - paragraph [ref=e67]: I design and build digital experiences that blend creativity with code. From mobile apps to web platforms, I turn ideas into products people love to use.
+      - generic [ref=e69]:
+        - generic [ref=e71]: Journey
+        - generic [ref=e73]:
+          - generic [ref=e74]:
+            - generic [ref=e75]: 🚀
+            - generic [ref=e76]:
+              - generic [ref=e77]: "2024"
+              - generic [ref=e78]: Senior Product Designer at Tech Giant
+          - generic [ref=e79]:
+            - generic [ref=e80]: 🎨
+            - generic [ref=e81]:
+              - generic [ref=e82]: "2022"
+              - generic [ref=e83]: Founded Design Studio
+          - generic [ref=e84]:
+            - generic [ref=e85]: 💼
+            - generic [ref=e86]:
+              - generic [ref=e87]: "2020"
+              - generic [ref=e88]: Lead Designer at Startup
+          - generic [ref=e89]:
+            - generic [ref=e90]: ✨
+            - generic [ref=e91]:
+              - generic [ref=e92]: "2019"
+              - generic [ref=e93]: Started Freelancing
+      - generic [ref=e95] [cursor=pointer]:
+        - img "E-Commerce Dashboard" [ref=e97]
+        - generic [ref=e98]:
+          - generic [ref=e99]: E-Commerce Dashboard
+          - generic [ref=e100]: Analytics platform for online retailers
+      - generic [ref=e102] [cursor=pointer]:
+        - img "Health & Fitness App" [ref=e104]
+        - generic [ref=e105]:
+          - generic [ref=e106]: Health & Fitness App
+          - generic [ref=e107]: iOS app with 500K+ downloads
+      - generic [ref=e109]:
+        - generic [ref=e111]: What I Do
+        - generic [ref=e113]:
+          - generic [ref=e114]:
+            - heading "Product Design" [level=4] [ref=e115]
+            - paragraph [ref=e116]: End-to-end product design from research to delivery
+          - generic [ref=e117]:
+            - heading "Frontend Development" [level=4] [ref=e118]
+            - paragraph [ref=e119]: React, Next.js, and modern web technologies
+          - generic [ref=e120]:
+            - heading "Design Systems" [level=4] [ref=e121]
+            - paragraph [ref=e122]: Scalable component libraries and guidelines
+      - generic [ref=e124]:
+        - generic [ref=e126]:
+          - img [ref=e127]
+          - text: Skills & Tools
+        - generic [ref=e131]:
+          - generic [ref=e132]: UI/UX Design
+          - generic [ref=e133]: React
+          - generic [ref=e134]: Figma
+          - generic [ref=e135]: TypeScript
+          - generic [ref=e136]: Tailwind
+          - generic [ref=e137]: Node.js
+          - generic [ref=e138]: Framer Motion
+          - generic [ref=e139]: Design Systems
+      - generic [ref=e141]:
+        - generic [ref=e143]: Client Testimonials
+        - generic [ref=e145]:
+          - generic [ref=e146]:
+            - generic [ref=e147]: 💬
+            - paragraph [ref=e148]: "\"Riley's attention to detail and creative solutions elevated our product significantly.\""
+            - generic [ref=e149]:
+              - generic [ref=e150]: Sarah Johnson
+              - generic [ref=e151]: CEO, TechStart
+          - generic [ref=e152]:
+            - generic [ref=e153]: 💬
+            - paragraph [ref=e154]: "\"Best designer we've worked with. Delivered beyond expectations.\""
+            - generic [ref=e155]:
+              - generic [ref=e156]: Marcus Wong
+              - generic [ref=e157]: CTO, FinanceApp
+      - generic [ref=e160]:
+        - heading "Ready to Start Your Project?" [level=3] [ref=e161]
+        - paragraph [ref=e162]: Let's create something amazing together
+        - generic [ref=e163]:
+          - button "hello@rileychen.com" [ref=e164] [cursor=pointer]:
+            - img
+            - text: hello@rileychen.com
+          - generic [ref=e165]:
+            - button "GitHub Profile" [ref=e166] [cursor=pointer]:
+              - img
+            - button "LinkedIn Profile" [ref=e167] [cursor=pointer]:
+              - img
+    - contentinfo [ref=e168]:
+      - paragraph [ref=e170]: © 2025 Riley Chen. All rights reserved.
+  - button "Open Next.js Dev Tools" [ref=e176] [cursor=pointer]:
+    - img [ref=e177]
+  - alert [ref=e180]
+```

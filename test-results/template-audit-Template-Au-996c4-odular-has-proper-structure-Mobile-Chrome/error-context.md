@@ -1,0 +1,176 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - navigation [ref=e3]:
+      - generic [ref=e4]:
+        - link "← Back" [ref=e5] [cursor=pointer]:
+          - /url: /
+        - generic [ref=e6]:
+          - link "About" [ref=e7] [cursor=pointer]:
+            - /url: "#about"
+          - link "Projects" [ref=e8] [cursor=pointer]:
+            - /url: "#projects"
+          - link "Contact" [ref=e9] [cursor=pointer]:
+            - /url: "#contact"
+    - generic [ref=e12]:
+      - generic [ref=e13]:
+        - generic [ref=e14]: TM
+        - generic [ref=e15]: Taylor Morgan
+        - generic [ref=e16]: Product Designer
+      - generic [ref=e17]:
+        - paragraph [ref=e18]: Creating digital experiences that are both beautiful and functional. I focus on user-centered design and seamless interactions.
+        - button "Get in Touch" [ref=e19] [cursor=pointer]:
+          - img
+          - text: Get in Touch
+    - generic [ref=e21]:
+      - generic [ref=e24]:
+        - generic [ref=e25]: 50+
+        - generic [ref=e26]: Projects Completed
+      - generic [ref=e29]:
+        - generic [ref=e30]: "6"
+        - generic [ref=e31]: Years Experience
+      - generic [ref=e34]:
+        - generic [ref=e35]: 30+
+        - generic [ref=e36]: Happy Clients
+    - generic [ref=e37]:
+      - heading "Skills & Expertise" [level=2] [ref=e39]
+      - generic [ref=e40]:
+        - generic [ref=e42]:
+          - generic [ref=e43]:
+            - img [ref=e45]
+            - generic [ref=e47]: UI/UX Design
+            - generic [ref=e49]: Expert
+          - generic [ref=e51]:
+            - generic [ref=e52]: Figma
+            - generic [ref=e53]: Sketch
+            - generic [ref=e54]: Adobe XD
+        - generic [ref=e56]:
+          - generic [ref=e57]:
+            - img [ref=e59]
+            - generic [ref=e62]: Frontend Dev
+            - generic [ref=e64]: Advanced
+          - generic [ref=e66]:
+            - generic [ref=e67]: React
+            - generic [ref=e68]: Tailwind
+            - generic [ref=e69]: TypeScript
+        - generic [ref=e71]:
+          - generic [ref=e72]:
+            - img [ref=e74]
+            - generic [ref=e78]: Prototyping
+            - generic [ref=e80]: Expert
+          - generic [ref=e82]:
+            - generic [ref=e83]: Framer
+            - generic [ref=e84]: Principle
+            - generic [ref=e85]: ProtoPie
+    - generic [ref=e86]:
+      - heading "Featured Projects" [level=2] [ref=e88]
+      - generic [ref=e89]:
+        - generic [ref=e91] [cursor=pointer]:
+          - img [ref=e93]
+          - generic [ref=e97]:
+            - generic [ref=e99]: Mobile App
+            - generic [ref=e100]: Banking App Redesign
+            - generic [ref=e101]: Complete UX overhaul of mobile banking application
+          - generic [ref=e103]:
+            - generic [ref=e104]: UI/UX
+            - generic [ref=e105]: Fintech
+        - generic [ref=e107] [cursor=pointer]:
+          - img [ref=e109]
+          - generic [ref=e113]:
+            - generic [ref=e115]: Web Design
+            - generic [ref=e116]: E-Commerce Platform
+            - generic [ref=e117]: Modern shopping experience for fashion brand
+          - generic [ref=e119]:
+            - generic [ref=e120]: E-commerce
+            - generic [ref=e121]: React
+        - generic [ref=e123] [cursor=pointer]:
+          - img [ref=e125]
+          - generic [ref=e129]:
+            - generic [ref=e131]: Web App
+            - generic [ref=e132]: SaaS Dashboard
+            - generic [ref=e133]: Analytics dashboard for B2B software
+          - generic [ref=e135]:
+            - generic [ref=e136]: SaaS
+            - generic [ref=e137]: Data Viz
+        - generic [ref=e139] [cursor=pointer]:
+          - img [ref=e141]
+          - generic [ref=e145]:
+            - generic [ref=e147]: Mobile App
+            - generic [ref=e148]: Fitness Tracking App
+            - generic [ref=e149]: Health and wellness mobile application
+          - generic [ref=e151]:
+            - generic [ref=e152]: Health
+            - generic [ref=e153]: IoT
+        - generic [ref=e155] [cursor=pointer]:
+          - img [ref=e157]
+          - generic [ref=e161]:
+            - generic [ref=e163]: System
+            - generic [ref=e164]: Design System
+            - generic [ref=e165]: Component library for enterprise products
+          - generic [ref=e167]:
+            - generic [ref=e168]: Components
+            - generic [ref=e169]: Figma
+        - generic [ref=e171] [cursor=pointer]:
+          - img [ref=e173]
+          - generic [ref=e177]:
+            - generic [ref=e179]: Web Design
+            - generic [ref=e180]: Travel Booking Site
+            - generic [ref=e181]: Seamless booking experience for travelers
+          - generic [ref=e183]:
+            - generic [ref=e184]: Travel
+            - generic [ref=e185]: UX
+    - generic [ref=e186]:
+      - heading "My Process" [level=2] [ref=e188]
+      - generic [ref=e189]:
+        - generic [ref=e192]:
+          - generic [ref=e193]: 🔍
+          - heading "Research" [level=3] [ref=e194]
+          - paragraph [ref=e195]: Understanding user needs and business goals
+        - generic [ref=e198]:
+          - generic [ref=e199]: ✏️
+          - heading "Design" [level=3] [ref=e200]
+          - paragraph [ref=e201]: Creating intuitive and beautiful interfaces
+        - generic [ref=e204]:
+          - generic [ref=e205]: ✅
+          - heading "Test" [level=3] [ref=e206]
+          - paragraph [ref=e207]: Validating solutions with real users
+        - generic [ref=e210]:
+          - generic [ref=e211]: 🔄
+          - heading "Iterate" [level=3] [ref=e212]
+          - paragraph [ref=e213]: Continuously improving based on feedback
+    - generic [ref=e214]:
+      - heading "What Clients Say" [level=2] [ref=e216]
+      - generic [ref=e217]:
+        - generic [ref=e220]:
+          - paragraph [ref=e221]: "\"Taylor's design thinking transformed our product. User engagement increased by 60%.\""
+          - generic [ref=e222]:
+            - paragraph [ref=e223]: Alex Chen
+            - paragraph [ref=e224]: CEO, TechCo
+        - generic [ref=e227]:
+          - paragraph [ref=e228]: "\"Professional, creative, and always delivers on time. Best designer we've worked with.\""
+          - generic [ref=e229]:
+            - paragraph [ref=e230]: Sarah Kim
+            - paragraph [ref=e231]: Product Manager, StartupX
+    - generic [ref=e234]:
+      - generic [ref=e235]:
+        - generic [ref=e236]: Let's Connect
+        - generic [ref=e237]: I'm always open to discussing new projects, creative ideas, or opportunities.
+      - generic [ref=e238]:
+        - generic [ref=e239]:
+          - button "Email Me" [ref=e240] [cursor=pointer]:
+            - img
+            - text: Email Me
+          - button "Download Resume" [ref=e241] [cursor=pointer]
+        - generic [ref=e242]:
+          - button "GitHub Profile" [ref=e243] [cursor=pointer]:
+            - img
+          - button "LinkedIn Profile" [ref=e244] [cursor=pointer]:
+            - img
+    - contentinfo [ref=e245]:
+      - paragraph [ref=e247]: © 2025 Taylor Morgan. All rights reserved.
+  - button "Open Next.js Dev Tools" [ref=e253] [cursor=pointer]:
+    - img [ref=e254]
+  - alert [ref=e257]
+```
