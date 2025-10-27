@@ -65,6 +65,14 @@ export function TemplateGallery() {
     }
     router.push(`/?${params.toString()}`, { scroll: false });
     setIsSidebarOpen(false); // Close sidebar on mobile after selection
+
+    // Scroll to templates section on mobile
+    setTimeout(() => {
+      const templatesSection = document.getElementById('templates-grid');
+      if (templatesSection) {
+        templatesSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }, 100);
   };
 
   return (
@@ -185,7 +193,7 @@ export function TemplateGallery() {
         </motion.div>
 
         {/* Template Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6 px-4 lg:px-0">
+        <div id="templates-grid" className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6 px-4 lg:px-0">
           {filteredTemplates.map((template, index) => (
             <motion.div
               key={template.id}
