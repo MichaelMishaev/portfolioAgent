@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { FiMenu, FiX } from "react-icons/fi";
 import { FadeIn } from "@/components/animations/fade-in";
 import { ScrollReveal } from "@/components/animations/scroll-reveal";
 import { Button } from "@/components/ui/button";
@@ -304,7 +305,7 @@ export function TechBlogTemplate() {
   }, []);
 
   return (
-    <div className={`min-h-screen ${darkMode ? 'bg-gray-900 text-white' : 'bg-white text-gray-900'} transition-colors duration-300`}>
+    <div className={`min-h-screen overflow-x-hidden max-w-full ${darkMode ? 'bg-gray-900 text-white' : 'bg-white text-gray-900'} transition-colors duration-300`}>
       {/* Reading Progress Bar */}
       <div className="fixed top-0 left-0 right-0 h-1 bg-gray-200 dark:bg-gray-800 z-[100]">
         <div
@@ -315,11 +316,12 @@ export function TechBlogTemplate() {
 
       {/* Header */}
       <header className={`sticky top-0 z-50 ${darkMode ? 'bg-gray-900 border-gray-800' : 'bg-white border-gray-200'} border-b backdrop-blur-lg bg-opacity-90`}>
-        <div className="container mx-auto px-4 sm:px-6 py-4">
+        <div className="container mx-auto px-3 max-w-full py-4">
           <div className="flex items-center justify-between">
-            <Link href="/" className="text-2xl font-bold flex items-center gap-2">
-              <FiCode className="w-7 h-7 text-blue-600" />
-              <span>DEV<span className="text-blue-600">INSIGHTS</span></span>
+            <Link href="/" className="text-lg sm:text-2xl font-bold flex items-center gap-1 sm:gap-2">
+              <FiCode className="w-5 h-5 sm:w-7 sm:h-7 text-blue-600" />
+              <span className="hidden sm:inline">DEV<span className="text-blue-600">INSIGHTS</span></span>
+              <span className="inline sm:hidden text-blue-600">DI</span>
             </Link>
 
             <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
@@ -350,7 +352,7 @@ export function TechBlogTemplate() {
 
       {/* Hero Section */}
       <section className={`py-20 ${darkMode ? 'bg-gradient-to-br from-gray-900 via-blue-950 to-gray-900' : 'bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50'}`}>
-        <div className="container mx-auto px-4 sm:px-6 max-w-5xl text-center">
+        <div className="container mx-auto px-3 max-w-full text-center">
           <FadeIn>
             <Badge className="mb-6 bg-blue-600 text-white">
               <FiZap className="w-3 h-3 mr-1" />
@@ -362,15 +364,15 @@ export function TechBlogTemplate() {
             <p className={`text-xl mb-8 ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
               {techBlogData.hero.subtitle}
             </p>
-            <div className="flex items-center justify-center gap-4 mb-12">
-              <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-12">
+              <Button size="lg" className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700">
                 Start Reading
               </Button>
-              <Button size="lg" variant="outline">
+              <Button size="lg" variant="outline" className="w-full sm:w-auto">
                 Browse Topics
               </Button>
             </div>
-            <div className="grid grid-cols-3 gap-8 max-w-2xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-8 max-w-2xl mx-auto">
               {techBlogData.hero.stats.map((stat) => (
                 <div key={stat.label}>
                   <div className="text-3xl font-bold text-blue-600 mb-1">{stat.value}</div>
@@ -384,7 +386,7 @@ export function TechBlogTemplate() {
 
       {/* Featured Article */}
       <section className={`py-16 ${darkMode ? 'bg-gray-900' : 'bg-white'}`}>
-        <div className="container mx-auto px-4 sm:px-6 max-w-6xl">
+        <div className="container mx-auto px-3 max-w-full">
           <div className="flex items-center gap-2 mb-8">
             <FiTrendingUp className="w-6 h-6 text-blue-600" />
             <h2 className="text-3xl font-bold">Featured Tutorial</h2>
@@ -482,7 +484,7 @@ export function TechBlogTemplate() {
 
       {/* Learning Series */}
       <section className={`py-16 ${darkMode ? 'bg-gray-800' : 'bg-gray-50'}`}>
-        <div className="container mx-auto px-4 sm:px-6 max-w-6xl">
+        <div className="container mx-auto px-3 max-w-full">
           <div className="flex items-center justify-between mb-8">
             <div>
               <h2 className="text-3xl font-bold mb-2">Learning Series</h2>
@@ -544,7 +546,7 @@ export function TechBlogTemplate() {
 
       {/* Latest Articles */}
       <section className={`py-16 ${darkMode ? 'bg-gray-900' : 'bg-white'}`}>
-        <div className="container mx-auto px-4 sm:px-6 max-w-6xl">
+        <div className="container mx-auto px-3 max-w-full">
           <div className="flex items-center justify-between mb-8">
             <h2 className="text-3xl font-bold">Latest Articles</h2>
             <div className="flex items-center gap-2">
@@ -599,7 +601,7 @@ export function TechBlogTemplate() {
                         </div>
 
                         <div className="flex items-center justify-between">
-                          <div className="flex items-center gap-4">
+                          <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
                             <img
                               src={article.author.avatar}
                               alt={article.author.name}
@@ -620,7 +622,7 @@ export function TechBlogTemplate() {
                             </div>
                           </div>
 
-                          <div className="flex items-center gap-4">
+                          <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
                             <button className={`flex items-center gap-1 text-sm ${darkMode ? 'text-gray-400 hover:text-red-500' : 'text-gray-600 hover:text-red-600'} transition-colors`}>
                               <FiHeart className="w-4 h-4" />
                               <span>{article.likes}</span>
@@ -646,7 +648,7 @@ export function TechBlogTemplate() {
 
       {/* Popular Articles & Contributors */}
       <section className={`py-16 ${darkMode ? 'bg-gray-800' : 'bg-gray-50'}`}>
-        <div className="container mx-auto px-4 sm:px-6 max-w-6xl">
+        <div className="container mx-auto px-3 max-w-full">
           <div className="grid lg:grid-cols-2 gap-8">
             {/* Popular Articles */}
             <div>
@@ -687,7 +689,7 @@ export function TechBlogTemplate() {
               <div className="grid gap-4">
                 {techBlogData.contributors.map((contributor) => (
                   <Card key={contributor.name} className={`p-6 ${darkMode ? 'bg-gray-900 border-gray-700' : 'bg-white'} hover:shadow-lg transition-shadow`}>
-                    <div className="flex items-center gap-4">
+                    <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
                       <img
                         src={contributor.avatar}
                         alt={contributor.name}
@@ -712,9 +714,9 @@ export function TechBlogTemplate() {
 
       {/* Topics Grid */}
       <section className={`py-16 ${darkMode ? 'bg-gray-900' : 'bg-white'}`}>
-        <div className="container mx-auto px-4 sm:px-6 max-w-6xl">
+        <div className="container mx-auto px-3 max-w-full">
           <h2 className="text-3xl font-bold mb-8">Explore Topics</h2>
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
             {techBlogData.topics.map((topic, index) => (
               <ScrollReveal key={topic.name} delay={index * 0.05}>
                 <Card className={`p-6 text-center hover:shadow-lg transition-all cursor-pointer group ${darkMode ? 'bg-gray-800 border-gray-700 hover:border-blue-600' : 'bg-white hover:border-blue-600'}`}>
@@ -730,8 +732,8 @@ export function TechBlogTemplate() {
 
       {/* Achievements */}
       <section className={`py-12 ${darkMode ? 'bg-gray-800' : 'bg-gray-50'}`}>
-        <div className="container mx-auto px-4 sm:px-6 max-w-6xl">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div className="container mx-auto px-3 max-w-full">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
             {techBlogData.achievements.map((achievement) => (
               <div key={achievement.label}>
                 <div className="text-4xl font-bold text-blue-600 mb-2">{achievement.value}</div>
@@ -744,7 +746,7 @@ export function TechBlogTemplate() {
 
       {/* Newsletter */}
       <section id="newsletter" className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
-        <div className="container mx-auto px-4 sm:px-6 max-w-4xl text-center">
+        <div className="container mx-auto px-3 max-w-full text-center">
           <ScrollReveal>
             <FiMail className="w-16 h-16 mx-auto mb-6 text-white" />
             <h2 className="text-4xl font-bold text-white mb-4">Join 50,000+ Developers</h2>
@@ -782,7 +784,7 @@ export function TechBlogTemplate() {
 
       {/* Footer */}
       <footer className={`py-12 ${darkMode ? 'bg-gray-900 border-gray-800' : 'bg-white border-gray-200'} border-t`}>
-        <div className="container mx-auto px-4 sm:px-6 max-w-6xl">
+        <div className="container mx-auto px-3 max-w-full">
           <div className="grid md:grid-cols-5 gap-8 mb-8">
             <div className="md:col-span-2">
               <div className="flex items-center gap-2 text-xl font-bold mb-4">

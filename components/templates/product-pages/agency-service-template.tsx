@@ -174,10 +174,10 @@ export function AgencyServiceTemplate() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-white text-gray-900">
+    <div className="min-h-screen overflow-x-hidden max-w-full bg-white text-gray-900">
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur-lg border-b border-gray-200">
-        <div className="container mx-auto px-4 sm:px-6 py-4">
+        <div className="container mx-auto px-3 max-w-full py-4">
           <div className="flex items-center justify-between">
             <Link href="/" className="text-2xl font-bold text-gray-900">
               PIXEL<span className="text-blue-600">PERFECT</span>
@@ -211,7 +211,7 @@ export function AgencyServiceTemplate() {
         {/* Mobile Menu */}
         {mobileMenuOpen && (
           <div className="md:hidden bg-white/95 backdrop-blur-sm border-t">
-            <div className="container mx-auto px-4 sm:px-6 py-4 flex flex-col gap-4">
+            <div className="container mx-auto px-3 max-w-full py-4 flex flex-col gap-4">
               <a
                 href="#services"
                 className="text-sm font-medium hover:text-blue-600 transition-colors py-2"
@@ -242,7 +242,7 @@ export function AgencyServiceTemplate() {
       </nav>
 
       {/* Hero Section */}
-      <section className="container mx-auto px-4 sm:px-6 py-24">
+      <section className="container mx-auto px-3 max-w-full py-24">
         <div className="max-w-4xl mx-auto text-center">
           <FadeIn>
             <Badge className="mb-4 bg-blue-100 text-blue-700 border-blue-200">
@@ -263,12 +263,12 @@ export function AgencyServiceTemplate() {
           </FadeIn>
 
           <FadeIn delay={0.3}>
-            <div className="flex items-center justify-center gap-4">
-              <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
+            <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-center">
+              <Button size="lg" className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700">
                 View Our Work
                 <FiArrowRight className="ml-2" />
               </Button>
-              <Button size="lg" variant="outline" className="group">
+              <Button size="lg" variant="outline" className="w-full sm:w-auto group">
                 <FiPlay className="mr-2 group-hover:scale-110 transition-transform" />
                 Watch Showreel
               </Button>
@@ -277,7 +277,7 @@ export function AgencyServiceTemplate() {
 
           {/* Stats */}
           <FadeIn delay={0.4}>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mt-16">
               {serviceData.hero.stats.map((stat) => (
                 <div key={stat.label}>
                   <div className="text-4xl font-bold text-blue-600">{stat.value}</div>
@@ -291,7 +291,7 @@ export function AgencyServiceTemplate() {
 
       {/* Services Section */}
       <section id="services" className="bg-gray-50 py-24">
-        <div className="container mx-auto px-4 sm:px-6">
+        <div className="container mx-auto px-3 max-w-full">
           <ScrollReveal>
             <div className="text-center mb-16">
               <h2 className="text-5xl font-bold mb-4">Our Services</h2>
@@ -340,7 +340,7 @@ export function AgencyServiceTemplate() {
 
       {/* Portfolio Section */}
       <section id="portfolio" className="py-24">
-        <div className="container mx-auto px-4 sm:px-6">
+        <div className="container mx-auto px-3 max-w-full">
           <ScrollReveal>
             <div className="text-center mb-16">
               <h2 className="text-5xl font-bold mb-4">Featured Work</h2>
@@ -383,7 +383,7 @@ export function AgencyServiceTemplate() {
 
       {/* Team Section */}
       <section className="bg-gray-50 py-24">
-        <div className="container mx-auto px-4 sm:px-6">
+        <div className="container mx-auto px-3 max-w-full">
           <ScrollReveal>
             <div className="text-center mb-16">
               <h2 className="text-5xl font-bold mb-4">Meet the Team</h2>
@@ -414,7 +414,7 @@ export function AgencyServiceTemplate() {
 
       {/* Process Section */}
       <section id="process" className="py-24">
-        <div className="container mx-auto px-4 sm:px-6">
+        <div className="container mx-auto px-3 max-w-full">
           <ScrollReveal>
             <div className="text-center mb-16">
               <h2 className="text-5xl font-bold mb-4">{serviceData.process.title}</h2>
@@ -448,18 +448,18 @@ export function AgencyServiceTemplate() {
 
       {/* CTA Section */}
       <section className="bg-gradient-to-r from-blue-600 to-blue-700 py-24">
-        <div className="container mx-auto px-4 sm:px-6 text-center">
+        <div className="container mx-auto px-3 max-w-full text-center">
           <ScrollReveal>
             <h2 className="text-5xl font-bold text-white mb-6">Ready to Transform Your Brand?</h2>
             <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
               Let's create something extraordinary together. Book a free strategy call today.
             </p>
-            <div className="flex items-center justify-center gap-4">
-              <Button size="lg" variant="secondary" className="bg-white text-blue-600 hover:bg-gray-100">
+            <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-center">
+              <Button size="lg" variant="secondary" className="w-full sm:w-auto bg-white text-blue-600 hover:bg-gray-100">
                 Start Your Project
                 <FiArrowRight className="ml-2" />
               </Button>
-              <Button size="lg" variant="outline" className="text-white border-white hover:bg-white/10">
+              <Button size="lg" variant="outline" className="w-full sm:w-auto text-white border-white hover:bg-white/10">
                 View Pricing
               </Button>
             </div>
@@ -469,7 +469,7 @@ export function AgencyServiceTemplate() {
 
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-12">
-        <div className="container mx-auto px-4 sm:px-6 text-center">
+        <div className="container mx-auto px-3 max-w-full text-center">
           <div className="text-2xl font-bold mb-4">
             PIXEL<span className="text-blue-500">PERFECT</span>
           </div>

@@ -245,10 +245,10 @@ export function B2BServiceTemplate() {
   const [selectedIndustry, setSelectedIndustry] = useState<string | null>(null);
 
   return (
-    <div className="min-h-screen bg-white text-stone-900">
+    <div className="min-h-screen overflow-x-hidden max-w-full bg-white text-stone-900">
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-stone-200">
-        <div className="container mx-auto px-4 sm:px-6 py-4">
+        <div className="container mx-auto px-3 max-w-full py-4">
           <div className="flex items-center justify-between">
             <Link href="/" className="text-2xl font-bold text-blue-900">
             STRATEX
@@ -291,7 +291,7 @@ export function B2BServiceTemplate() {
         {/* Mobile Menu */}
         {mobileMenuOpen && (
           <div className="md:hidden bg-background/95 backdrop-blur-sm border-t">
-            <div className="container mx-auto px-4 sm:px-6 py-4 flex flex-col gap-4">
+            <div className="container mx-auto px-3 max-w-full py-4 flex flex-col gap-4">
               <a
                 href="#capabilities"
                 className="text-sm hover:text-primary transition-colors py-2"
@@ -323,7 +323,7 @@ export function B2BServiceTemplate() {
 
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 text-white py-32">
-        <div className="container mx-auto px-4 sm:px-6">
+        <div className="container mx-auto px-3 max-w-full">
           <div className="max-w-4xl mx-auto text-center">
             <FadeIn>
               <h1 className="text-6xl md:text-7xl font-bold mb-6 tracking-tight">
@@ -333,14 +333,14 @@ export function B2BServiceTemplate() {
               <p className="text-xl mb-12 text-blue-100 max-w-2xl mx-auto">
                 {serviceData.description}
               </p>
-              <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white text-lg px-12">
+              <Button size="lg" className="w-full sm:w-auto bg-red-600 hover:bg-red-700 text-white text-lg px-12">
                 Schedule Consultation
               </Button>
             </FadeIn>
           </div>
 
           {/* Stats */}
-          <div className="max-w-6xl mx-auto mt-24 grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="max-w-6xl mx-auto mt-24 grid grid-cols-1 md:grid-cols-4 gap-8">
             {serviceData.hero.stats.map((stat, index) => (
               <ScrollReveal key={index} delay={index * 0.1}>
                 <div className="text-center">
@@ -355,7 +355,7 @@ export function B2BServiceTemplate() {
 
       {/* Service Capabilities */}
       <section id="capabilities" className="py-32 bg-stone-50">
-        <div className="container mx-auto px-4 sm:px-6">
+        <div className="container mx-auto px-3 max-w-full">
           <ScrollReveal>
             <div className="text-center mb-16">
               <h2 className="text-5xl font-bold mb-6">Our Capabilities</h2>
@@ -393,7 +393,7 @@ export function B2BServiceTemplate() {
 
       {/* Case Studies */}
       <section id="case-studies" className="py-32">
-        <div className="container mx-auto px-4 sm:px-6">
+        <div className="container mx-auto px-3 max-w-full">
           <ScrollReveal>
             <div className="text-center mb-16">
               <h2 className="text-5xl font-bold mb-6">Proven Results</h2>
@@ -431,7 +431,7 @@ export function B2BServiceTemplate() {
                       </div>
 
                       {/* Results Grid */}
-                      <div className="grid grid-cols-2 gap-4 mb-8 p-6 bg-stone-50 rounded-lg">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8 p-6 bg-stone-50 rounded-lg">
                         {study.results.map((result) => (
                           <div key={result.metric} className="text-center">
                             <div className="text-3xl font-bold text-red-600 mb-1">
@@ -459,7 +459,7 @@ export function B2BServiceTemplate() {
 
       {/* Industry Expertise */}
       <section className="py-32 bg-stone-50">
-        <div className="container mx-auto px-4 sm:px-6">
+        <div className="container mx-auto px-3 max-w-full">
           <ScrollReveal>
             <div className="text-center mb-16">
               <h2 className="text-5xl font-bold mb-6">Industry Expertise</h2>
@@ -502,7 +502,7 @@ export function B2BServiceTemplate() {
 
       {/* Thought Leadership */}
       <section id="insights" className="py-32">
-        <div className="container mx-auto px-4 sm:px-6">
+        <div className="container mx-auto px-3 max-w-full">
           <ScrollReveal>
             <div className="text-center mb-16">
               <h2 className="text-5xl font-bold mb-6">Insights & Research</h2>
@@ -538,14 +538,14 @@ export function B2BServiceTemplate() {
 
       {/* Client Logos */}
       <section className="py-24 bg-stone-50">
-        <div className="container mx-auto px-4 sm:px-6">
+        <div className="container mx-auto px-3 max-w-full">
           <ScrollReveal>
             <h3 className="text-center text-2xl font-bold mb-12 text-stone-600">
               Trusted by Industry Leaders
             </h3>
           </ScrollReveal>
 
-          <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
             {serviceData.clientLogos.map((client, index) => (
               <ScrollReveal key={index} delay={index * 0.05}>
                 <div className="flex items-center justify-center p-6 bg-white rounded-lg border border-stone-200">
@@ -561,7 +561,7 @@ export function B2BServiceTemplate() {
 
       {/* Application Process */}
       <section className="py-32">
-        <div className="container mx-auto px-4 sm:px-6">
+        <div className="container mx-auto px-3 max-w-full">
           <ScrollReveal>
             <div className="text-center mb-16">
               <h2 className="text-5xl font-bold mb-6">{serviceData.applicationProcess.title}</h2>
@@ -591,7 +591,7 @@ export function B2BServiceTemplate() {
 
       {/* Final CTA */}
       <section className="py-32 bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 text-white">
-        <div className="container mx-auto px-4 sm:px-6">
+        <div className="container mx-auto px-3 max-w-full">
           <ScrollReveal>
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-5xl md:text-6xl font-bold mb-8">Ready to Transform?</h2>
@@ -599,7 +599,7 @@ export function B2BServiceTemplate() {
                 Schedule a complimentary consultation to explore how we can help you achieve your
                 strategic objectives.
               </p>
-              <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white text-lg px-12">
+              <Button size="lg" className="w-full sm:w-auto bg-red-600 hover:bg-red-700 text-white text-lg px-12">
                 Apply for Engagement
               </Button>
               <p className="text-sm text-blue-300 mt-6">
@@ -612,7 +612,7 @@ export function B2BServiceTemplate() {
 
       {/* Footer */}
       <footer className="border-t border-stone-200 py-12 bg-white">
-        <div className="container mx-auto px-4 sm:px-6">
+        <div className="container mx-auto px-3 max-w-full">
           <div className="text-center">
             <div className="text-2xl font-bold text-blue-900 mb-2">STRATEX</div>
             <p className="text-sm text-stone-600">

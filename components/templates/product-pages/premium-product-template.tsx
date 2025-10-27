@@ -295,10 +295,10 @@ export function PremiumProductTemplate() {
   };
 
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen overflow-x-hidden max-w-full bg-black text-white">
       {/* Elegant Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-black/60 backdrop-blur-xl border-b border-white/5">
-        <div className="container mx-auto px-4 sm:px-6 py-4">
+        <div className="container mx-auto px-3 max-w-full py-4">
           <div className="flex items-center justify-between">
             <Link href="/" className="text-2xl font-light tracking-[0.2em] text-white">
             CHRONOS
@@ -328,7 +328,7 @@ export function PremiumProductTemplate() {
         {/* Mobile Menu */}
         {mobileMenuOpen && (
           <div className="md:hidden bg-background/95 backdrop-blur-sm border-t">
-            <div className="container mx-auto px-4 sm:px-6 py-4 flex flex-col gap-4">
+            <div className="container mx-auto px-3 max-w-full py-4 flex flex-col gap-4">
               <a
                 href="#heritage"
                 className="text-sm hover:text-primary transition-colors py-2"
@@ -438,7 +438,7 @@ export function PremiumProductTemplate() {
       </section>
 
       {/* Heritage Section */}
-      <section id="heritage" className="container mx-auto px-4 sm:px-6 py-32">
+      <section id="heritage" className="container mx-auto px-3 max-w-full py-32">
         <ScrollReveal>
           <div className="max-w-4xl mx-auto text-center mb-20">
             <h2 className="text-6xl md:text-7xl font-light mb-8 tracking-tight">
@@ -478,7 +478,7 @@ export function PremiumProductTemplate() {
       </section>
 
       {/* Technical Mastery */}
-      <section className="container mx-auto px-4 sm:px-6 py-32 bg-gradient-to-b from-transparent via-gray-950/50 to-transparent">
+      <section className="container mx-auto px-3 max-w-full py-32 bg-gradient-to-b from-transparent via-gray-950/50 to-transparent">
         <ScrollReveal>
           <div className="text-center mb-20">
             <h2 className="text-6xl md:text-7xl font-light mb-6 tracking-tight">
@@ -518,7 +518,7 @@ export function PremiumProductTemplate() {
       </section>
 
       {/* Interactive Configurator */}
-      <section id="configure" className="container mx-auto px-4 sm:px-6 py-32">
+      <section id="configure" className="container mx-auto px-3 max-w-full py-32">
         <ScrollReveal>
           <div className="text-center mb-20">
             <h2 className="text-6xl md:text-7xl font-light mb-6 tracking-tight">
@@ -682,7 +682,7 @@ export function PremiumProductTemplate() {
                   ))}
                   <p>{productData.configurator.straps[selectedStrap].name}</p>
                 </div>
-                <Button size="lg" className="bg-white text-black hover:bg-gray-200 px-12 py-6">
+                <Button size="lg" className="w-full sm:w-auto bg-white text-black hover:bg-gray-200 px-12 py-6">
                   Request Consultation
                   <FiArrowRight className="ml-2" />
                 </Button>
@@ -694,7 +694,7 @@ export function PremiumProductTemplate() {
       </section>
 
       {/* Master Craftsmen */}
-      <section className="container mx-auto px-4 sm:px-6 py-32 bg-gradient-to-b from-transparent via-gray-950/50 to-transparent">
+      <section className="container mx-auto px-3 max-w-full py-32 bg-gradient-to-b from-transparent via-gray-950/50 to-transparent">
         <ScrollReveal>
           <div className="text-center mb-20">
             <h2 className="text-6xl md:text-7xl font-light mb-6 tracking-tight">
@@ -733,7 +733,7 @@ export function PremiumProductTemplate() {
       </section>
 
       {/* Technical Specifications */}
-      <section className="container mx-auto px-4 sm:px-6 py-32">
+      <section className="container mx-auto px-3 max-w-full py-32">
         <ScrollReveal>
           <div className="text-center mb-20">
             <h2 className="text-6xl md:text-7xl font-light mb-6 tracking-tight">
@@ -765,7 +765,7 @@ export function PremiumProductTemplate() {
       </section>
 
       {/* Ownership Benefits */}
-      <section id="ownership" className="container mx-auto px-4 sm:px-6 py-32 bg-gradient-to-b from-transparent via-gray-950/50 to-transparent">
+      <section id="ownership" className="container mx-auto px-3 max-w-full py-32 bg-gradient-to-b from-transparent via-gray-950/50 to-transparent">
         <ScrollReveal>
           <div className="text-center mb-20">
             <h2 className="text-6xl md:text-7xl font-light mb-6 tracking-tight">
@@ -795,7 +795,7 @@ export function PremiumProductTemplate() {
       </section>
 
       {/* Testimonials */}
-      <section className="container mx-auto px-4 sm:px-6 py-32">
+      <section className="container mx-auto px-3 max-w-full py-32">
         <ScrollReveal>
           <div className="text-center mb-20">
             <h2 className="text-6xl md:text-7xl font-light mb-6 tracking-tight">
@@ -837,7 +837,7 @@ export function PremiumProductTemplate() {
       </section>
 
       {/* Final CTA */}
-      <section className="container mx-auto px-4 sm:px-6 py-32">
+      <section className="container mx-auto px-3 max-w-full py-32">
         <ScrollReveal>
           <Card className="max-w-5xl mx-auto bg-gradient-to-br from-white/10 to-white/5 border-white/20 backdrop-blur-xl">
             <CardContent className="p-16 text-center">
@@ -852,11 +852,11 @@ export function PremiumProductTemplate() {
                 {productData.finalCTA.urgency}
               </p>
               <div className="flex flex-col gap-4 sm:flex-row gap-4 justify-center">
-                <Button size="lg" className="bg-white text-black hover:bg-gray-200 px-12 py-6 text-sm tracking-wider">
+                <Button size="lg" className="w-full sm:w-auto bg-white text-black hover:bg-gray-200 px-12 py-6 text-sm tracking-wider">
                   Schedule Consultation
                   <FiArrowRight className="ml-2" />
                 </Button>
-                <Button size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10 px-12 py-6 text-sm tracking-wider">
+                <Button size="lg" variant="outline" className="w-full sm:w-auto border-white/30 text-white hover:bg-white/10 px-12 py-6 text-sm tracking-wider">
                   Download Brochure
                 </Button>
               </div>
@@ -867,7 +867,7 @@ export function PremiumProductTemplate() {
 
       {/* Elegant Footer */}
       <footer className="border-t border-white/5 py-16">
-        <div className="container mx-auto px-4 sm:px-6">
+        <div className="container mx-auto px-3 max-w-full">
           <div className="text-center">
             <div className="text-3xl font-light tracking-[0.2em] mb-6">CHRONOS</div>
             <p className="text-xs text-gray-500 uppercase tracking-widest mb-8">Geneva · Since 1824</p>

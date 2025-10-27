@@ -116,10 +116,10 @@ const portfolioData = {
 
 export function BentoGridTemplate() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
+    <div className="min-h-screen overflow-x-hidden max-w-full bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border-b">
-        <div className="container mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
+        <div className="container mx-auto px-3 max-w-full py-4 flex items-center justify-between">
           <Link href="/" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
             ← Back
           </Link>
@@ -130,7 +130,7 @@ export function BentoGridTemplate() {
       </nav>
 
       {/* Bento Grid Layout */}
-      <div className="container mx-auto px-4 sm:px-6 pt-24 pb-20">
+      <div className="container mx-auto px-3 max-w-full pt-24 pb-20">
         <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 gap-4 max-w-7xl mx-auto">
 
           {/* Hero Card - Large */}
@@ -431,7 +431,7 @@ export function BentoGridTemplate() {
               <CardContent>
                 <div className="space-y-4">
                   {portfolioData.achievements.map((achievement, index) => (
-                    <div key={index} className="flex items-center gap-4">
+                    <div key={index} className="flex flex-col gap-4 sm:flex-row sm:items-center">
                       <div className="text-3xl">{achievement.icon}</div>
                       <div>
                         <div className="font-semibold">{achievement.title}</div>
@@ -671,7 +671,7 @@ export function BentoGridTemplate() {
 
       {/* Footer */}
       <footer className="border-t bg-white dark:bg-gray-900 py-8">
-        <div className="container mx-auto px-4 sm:px-6">
+        <div className="container mx-auto px-3 max-w-full">
           <p className="text-sm text-muted-foreground text-center">
             © {new Date().getFullYear()} {portfolioData.name}. All rights reserved.
           </p>

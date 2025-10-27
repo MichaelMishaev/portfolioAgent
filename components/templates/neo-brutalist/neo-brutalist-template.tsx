@@ -41,10 +41,10 @@ const portfolioData = {
 export function NeoBrutalistTemplate() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 return (
-    <div className="min-h-screen bg-white text-black font-mono">
+    <div className="min-h-screen overflow-x-hidden max-w-full bg-white text-black font-mono">
       {/* Navigation */}
       <nav className="border-b-4 border-black bg-yellow-400">
-        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
+        <div className="container mx-auto px-3 max-w-full py-4 flex items-center justify-between">
           <Link href="/" className="text-sm font-bold hover:bg-black hover:text-yellow-400 px-2 py-1 transition-colors">
             ← BACK
           </Link>
@@ -164,7 +164,7 @@ return (
                           </p>
                         </div>
                       </div>
-                      <div className="flex items-center gap-4">
+                      <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
                         <span className="text-xl font-bold">{project.year}</span>
                         <FiArrowRight className="w-8 h-8 group-hover:translate-x-2 transition-transform" />
                       </div>
@@ -293,7 +293,7 @@ return (
 
       {/* Footer */}
       <footer className="border-t-4 border-black bg-black text-white py-8">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-3 max-w-full">
           <p className="text-center font-bold uppercase text-sm">
             © {new Date().getFullYear()} {portfolioData.name} /// ANTI-DESIGN STUDIO
           </p>

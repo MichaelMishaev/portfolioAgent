@@ -26,6 +26,8 @@ import {
   FiEye,
   FiHeart,
   FiStar,
+  FiMenu,
+  FiX,
 } from "react-icons/fi";
 import Link from "next/link";
 
@@ -302,12 +304,13 @@ const magazineData = {
 
 export function MagazineBlogTemplate() {
   const [selectedCategory, setSelectedCategory] = useState("All");
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white overflow-x-hidden max-w-full">
       {/* Top Bar */}
       <div className="bg-gray-900 text-white py-2">
-        <div className="container mx-auto px-4 sm:px-6 flex items-center justify-between text-sm">
+        <div className="container mx-auto px-3 max-w-full flex items-center justify-between text-sm">
           <div className="flex items-center gap-6">
             <span className="flex items-center gap-2">
               <FiTrendingUp className="w-4 h-4" />
@@ -324,12 +327,13 @@ export function MagazineBlogTemplate() {
 
       {/* Header */}
       <header className="bg-white border-b sticky top-0 z-50">
-        <div className="container mx-auto px-4 sm:px-6 py-5">
-          <div className="flex items-center justify-between mb-4">
-            <Link href="/" className="text-3xl font-bold">
-              CREATIVE<span className="text-blue-600">MAG</span>
+        <div className="container mx-auto px-3 max-w-full py-4">
+          <div className="flex items-center justify-between">
+            <Link href="/" className="text-xl sm:text-3xl font-bold">
+              <span className="hidden sm:inline">CREATIVE<span className="text-blue-600">MAG</span></span>
+              <span className="inline sm:hidden">C<span className="text-blue-600">M</span></span>
             </Link>
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-2 sm:gap-4">
               <div className="relative hidden md:block">
                 <FiSearch className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
                 <Input
@@ -338,10 +342,19 @@ export function MagazineBlogTemplate() {
                   className="pl-10 w-64"
                 />
               </div>
-              <Button size="sm">Write</Button>
+              <Button size="sm" className="hidden sm:inline-flex">Write</Button>
+              <button
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                className="md:hidden p-2 hover:bg-gray-100 rounded-lg transition-colors"
+                aria-label="Toggle menu"
+              >
+                {mobileMenuOpen ? <FiX className="w-6 h-6" /> : <FiMenu className="w-6 h-6" />}
+              </button>
             </div>
           </div>
-          <nav className="flex items-center gap-6 text-sm overflow-x-auto">
+
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex items-center gap-6 text-sm mt-4">
             {["Latest", "Trending", "Design", "Development", "UX", "Tools", "Career"].map((item) => (
               <a
                 key={item}
@@ -352,12 +365,31 @@ export function MagazineBlogTemplate() {
               </a>
             ))}
           </nav>
+
+          {/* Mobile Navigation */}
+          {mobileMenuOpen && (
+            <nav className="md:hidden mt-4 py-4 border-t">
+              <div className="flex flex-col gap-3">
+                {["Latest", "Trending", "Design", "Development", "UX", "Tools", "Career"].map((item) => (
+                  <a
+                    key={item}
+                    href={`#${item.toLowerCase()}`}
+                    className="font-medium hover:text-blue-600 transition-colors py-2"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    {item}
+                  </a>
+                ))}
+                <Button size="sm" className="mt-2">Write</Button>
+              </div>
+            </nav>
+          )}
         </div>
       </header>
 
       {/* Hero - Featured Articles */}
       <section className="py-12 bg-gray-50">
-        <div className="container mx-auto px-4 sm:px-6 max-w-7xl">
+        <div className="container mx-auto px-3 max-w-full">
           <div className="grid lg:grid-cols-2 gap-8">
             {/* Main Featured */}
             <FadeIn>
@@ -401,7 +433,7 @@ export function MagazineBlogTemplate() {
             <div className="space-y-8">
               <FadeIn delay={0.1}>
                 <Card className="overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all group">
-                  <div className="grid grid-cols-2 gap-0">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-0">
                     <div className="relative h-64">
                       <img
                         src={magazineData.featured[1].image}
@@ -462,7 +494,7 @@ export function MagazineBlogTemplate() {
 
       {/* Stats Bar */}
       <section className="py-8 bg-white border-y">
-        <div className="container mx-auto px-4 sm:px-6 max-w-7xl">
+        <div className="container mx-auto px-3 max-w-full">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <div>
               <div className="text-3xl font-bold text-blue-600 mb-1">{magazineData.stats.subscribers}</div>
@@ -486,7 +518,7 @@ export function MagazineBlogTemplate() {
 
       {/* Category Filter */}
       <section className="py-8 bg-white border-b">
-        <div className="container mx-auto px-4 sm:px-6 max-w-7xl">
+        <div className="container mx-auto px-3 max-w-full">
           <div className="flex items-center justify-between flex-wrap gap-4">
             <div className="flex items-center gap-3 flex-wrap">
               {magazineData.categories.map((cat) => (
@@ -513,7 +545,7 @@ export function MagazineBlogTemplate() {
 
       {/* Latest Articles Grid */}
       <section className="py-16 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 max-w-7xl">
+        <div className="container mx-auto px-3 max-w-full">
           <div className="flex items-center justify-between mb-8">
             <h2 className="text-3xl font-bold">Latest Articles</h2>
             <Button variant="ghost">
@@ -574,7 +606,7 @@ export function MagazineBlogTemplate() {
 
       {/* Editor's Picks & Tags */}
       <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4 sm:px-6 max-w-7xl">
+        <div className="container mx-auto px-3 max-w-full">
           <div className="grid lg:grid-cols-3 gap-8">
             {/* Editor's Picks */}
             <div className="lg:col-span-2">
@@ -625,7 +657,7 @@ export function MagazineBlogTemplate() {
 
       {/* Editorial Team */}
       <section className="py-16 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 max-w-7xl">
+        <div className="container mx-auto px-3 max-w-full">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Meet Our Editorial Team</h2>
             <p className="text-xl text-gray-600">
@@ -662,7 +694,7 @@ export function MagazineBlogTemplate() {
 
       {/* Testimonials */}
       <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4 sm:px-6 max-w-5xl">
+        <div className="container mx-auto px-3 max-w-full">
           <h2 className="text-3xl font-bold text-center mb-12">What Readers Say</h2>
           <div className="grid md:grid-cols-2 gap-8">
             {magazineData.testimonials.map((testimonial) => (
@@ -692,7 +724,7 @@ export function MagazineBlogTemplate() {
 
       {/* Newsletter */}
       <section id="newsletter" className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
-        <div className="container mx-auto px-4 sm:px-6 max-w-4xl text-center">
+        <div className="container mx-auto px-3 max-w-full text-center">
           <ScrollReveal>
             <FiMail className="w-16 h-16 mx-auto mb-6 text-white" />
             <h2 className="text-4xl font-bold text-white mb-4">Stay in the Loop</h2>
@@ -710,7 +742,7 @@ export function MagazineBlogTemplate() {
               </Button>
             </div>
             <p className="text-sm text-blue-100 mb-8">Join {magazineData.stats.subscribers} designers and developers</p>
-            <div className="grid grid-cols-3 gap-8 max-w-2xl mx-auto text-white">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-8 max-w-2xl mx-auto text-white">
               <div>
                 <div className="text-2xl font-bold mb-1">Weekly</div>
                 <div className="text-sm text-blue-100">Frequency</div>
@@ -730,7 +762,7 @@ export function MagazineBlogTemplate() {
 
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-12">
-        <div className="container mx-auto px-4 sm:px-6 max-w-7xl">
+        <div className="container mx-auto px-3 max-w-full">
           <div className="grid md:grid-cols-5 gap-8 mb-8">
             <div className="md:col-span-2">
               <h3 className="text-2xl font-bold mb-4">CREATIVE<span className="text-blue-500">MAG</span></h3>

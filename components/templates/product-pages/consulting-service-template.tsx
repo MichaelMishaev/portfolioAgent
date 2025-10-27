@@ -240,10 +240,10 @@ export function ConsultingServiceTemplate() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-white text-gray-900">
+    <div className="min-h-screen overflow-x-hidden max-w-full bg-white text-gray-900">
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-lg border-b border-gray-200 shadow-sm">
-        <div className="container mx-auto px-4 sm:px-6 py-4">
+        <div className="container mx-auto px-3 max-w-full py-4">
           <div className="flex items-center justify-between">
             <Link href="/" className="text-2xl font-bold">
             APEX<span className="text-emerald-600">CONSULTING</span>
@@ -280,7 +280,7 @@ export function ConsultingServiceTemplate() {
         {/* Mobile Menu */}
         {mobileMenuOpen && (
           <div className="md:hidden bg-background/95 backdrop-blur-sm border-t">
-            <div className="container mx-auto px-4 sm:px-6 py-4 flex flex-col gap-4">
+            <div className="container mx-auto px-3 max-w-full py-4 flex flex-col gap-4">
               <a
                 href="#services"
                 className="text-sm hover:text-primary transition-colors py-2"
@@ -320,7 +320,7 @@ export function ConsultingServiceTemplate() {
       {/* Hero Section */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-emerald-50 via-white to-blue-50 opacity-70"></div>
-        <div className="container relative mx-auto px-6 py-32">
+        <div className="container relative mx-auto px-4 py-32">
           <div className="max-w-4xl">
             <FadeIn>
               <Badge className="mb-6 bg-emerald-100 text-emerald-700 border-emerald-200">
@@ -341,12 +341,12 @@ export function ConsultingServiceTemplate() {
             </FadeIn>
 
             <FadeIn delay={0.3}>
-              <div className="flex items-center gap-4">
-                <Button size="lg" className="bg-emerald-600 hover:bg-emerald-700 text-lg px-8">
+              <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
+                <Button size="lg" className="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-700 text-lg px-8">
                   Schedule Consultation
                   <FiArrowRight className="ml-2" />
                 </Button>
-                <Button size="lg" variant="outline" className="text-lg px-8">
+                <Button size="lg" variant="outline" className="w-full sm:w-auto text-lg px-8">
                   Download Insights
                 </Button>
               </div>
@@ -354,7 +354,7 @@ export function ConsultingServiceTemplate() {
 
             {/* Stats */}
             <FadeIn delay={0.4}>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-20">
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mt-20">
                 {serviceData.hero.stats.map((stat) => (
                   <div key={stat.label} className="border-l-4 border-emerald-600 pl-4">
                     <div className="text-5xl font-bold text-emerald-600 mb-1">{stat.value}</div>
@@ -369,7 +369,7 @@ export function ConsultingServiceTemplate() {
 
       {/* Services Section */}
       <section id="services" className="py-24 bg-white">
-        <div className="container mx-auto px-4 sm:px-6">
+        <div className="container mx-auto px-3 max-w-full">
           <ScrollReveal>
             <div className="text-center mb-16">
               <h2 className="text-5xl font-bold mb-4">Our Services</h2>
@@ -438,7 +438,7 @@ export function ConsultingServiceTemplate() {
 
       {/* Case Studies */}
       <section id="engagements" className="py-24 bg-gray-50">
-        <div className="container mx-auto px-4 sm:px-6">
+        <div className="container mx-auto px-3 max-w-full">
           <ScrollReveal>
             <div className="text-center mb-16">
               <h2 className="text-5xl font-bold mb-4">Client Engagements</h2>
@@ -498,7 +498,7 @@ export function ConsultingServiceTemplate() {
 
       {/* Team Section */}
       <section id="team" className="py-24 bg-white">
-        <div className="container mx-auto px-4 sm:px-6">
+        <div className="container mx-auto px-3 max-w-full">
           <ScrollReveal>
             <div className="text-center mb-16">
               <h2 className="text-5xl font-bold mb-4">Our Partners</h2>
@@ -530,7 +530,7 @@ export function ConsultingServiceTemplate() {
 
       {/* Methodology */}
       <section className="py-24 bg-gradient-to-br from-emerald-50 to-blue-50">
-        <div className="container mx-auto px-4 sm:px-6">
+        <div className="container mx-auto px-3 max-w-full">
           <ScrollReveal>
             <div className="text-center mb-16">
               <h2 className="text-5xl font-bold mb-4">{serviceData.methodology.title}</h2>
@@ -574,7 +574,7 @@ export function ConsultingServiceTemplate() {
 
       {/* Thought Leadership */}
       <section id="insights" className="py-24 bg-white">
-        <div className="container mx-auto px-4 sm:px-6">
+        <div className="container mx-auto px-3 max-w-full">
           <ScrollReveal>
             <div className="text-center mb-16">
               <h2 className="text-5xl font-bold mb-4">Latest Insights</h2>
@@ -612,7 +612,7 @@ export function ConsultingServiceTemplate() {
 
       {/* CTA */}
       <section className="bg-gradient-to-r from-emerald-600 to-emerald-800 py-24">
-        <div className="container mx-auto px-4 sm:px-6 text-center">
+        <div className="container mx-auto px-3 max-w-full text-center">
           <ScrollReveal>
             <h2 className="text-5xl font-bold text-white mb-6">
               Let's Discuss Your Strategic Priorities
@@ -620,12 +620,12 @@ export function ConsultingServiceTemplate() {
             <p className="text-xl text-emerald-100 mb-8 max-w-2xl mx-auto">
               Schedule a confidential consultation with one of our senior partners.
             </p>
-            <div className="flex items-center justify-center gap-4">
-              <Button size="lg" variant="secondary" className="bg-white text-emerald-600 hover:bg-gray-100 text-lg px-8">
+            <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-center">
+              <Button size="lg" variant="secondary" className="w-full sm:w-auto bg-white text-emerald-600 hover:bg-gray-100 text-lg px-8">
                 Schedule Consultation
                 <FiArrowRight className="ml-2" />
               </Button>
-              <Button size="lg" variant="outline" className="text-white border-white hover:bg-white/10 text-lg px-8">
+              <Button size="lg" variant="outline" className="w-full sm:w-auto text-white border-white hover:bg-white/10 text-lg px-8">
                 Request Proposal
               </Button>
             </div>
@@ -635,7 +635,7 @@ export function ConsultingServiceTemplate() {
 
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-12">
-        <div className="container mx-auto px-4 sm:px-6">
+        <div className="container mx-auto px-3 max-w-full">
           <div className="text-center mb-6">
             <div className="text-2xl font-bold mb-4">
               APEX<span className="text-emerald-500">CONSULTING</span>

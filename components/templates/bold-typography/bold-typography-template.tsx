@@ -76,10 +76,10 @@ export function BoldTypographyTemplate() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen overflow-x-hidden max-w-full bg-background">
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm border-b">
-        <div className="container mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
+        <div className="container mx-auto px-3 max-w-full py-4 flex items-center justify-between">
           <Link href="/" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
             ← Back
           </Link>
@@ -107,7 +107,7 @@ export function BoldTypographyTemplate() {
         {/* Mobile Menu */}
         {mobileMenuOpen && (
           <div className="md:hidden bg-background/95 backdrop-blur-sm border-t">
-            <div className="container mx-auto px-4 sm:px-6 py-4 flex flex-col gap-4">
+            <div className="container mx-auto px-3 max-w-full py-4 flex flex-col gap-4">
               <a
                 href="#services"
                 className="text-sm hover:text-primary transition-colors py-2"
@@ -128,7 +128,7 @@ export function BoldTypographyTemplate() {
       </nav>
 
       {/* Hero Section - Bold Typography */}
-      <section className="container mx-auto px-4 sm:px-6 pt-32 pb-20 min-h-screen flex flex-col justify-center">
+      <section className="container mx-auto px-3 max-w-full pt-32 pb-20 min-h-screen flex flex-col justify-center">
         <FadeIn>
           <h1 className="text-[clamp(3rem,12vw,12rem)] font-black leading-[0.85] tracking-tight mb-8">
             {portfolioData.name.split(" ").map((word, i) => (
@@ -154,7 +154,7 @@ export function BoldTypographyTemplate() {
       </section>
 
       {/* About Section */}
-      <section className="container mx-auto px-4 sm:px-6 py-20 border-t">
+      <section className="container mx-auto px-3 max-w-full py-20 border-t">
         <ScrollReveal>
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
@@ -172,9 +172,9 @@ export function BoldTypographyTemplate() {
       </section>
 
       {/* Stats Section */}
-      <section className="container mx-auto px-4 sm:px-6 py-20 border-t bg-accent/5">
+      <section className="container mx-auto px-3 max-w-full py-20 border-t bg-accent/5">
         <ScrollReveal>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {portfolioData.stats.map((stat, index) => (
               <div key={index} className="text-center">
                 <div className="text-5xl md:text-7xl font-black mb-2 text-primary">
@@ -190,7 +190,7 @@ export function BoldTypographyTemplate() {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="container mx-auto px-4 sm:px-6 py-20 border-t">
+      <section id="services" className="container mx-auto px-3 max-w-full py-20 border-t">
         <ScrollReveal>
           <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-black mb-16">
             Services
@@ -223,7 +223,7 @@ export function BoldTypographyTemplate() {
       </section>
 
       {/* Process Section */}
-      <section className="container mx-auto px-4 sm:px-6 py-20 border-t">
+      <section className="container mx-auto px-3 max-w-full py-20 border-t">
         <ScrollReveal>
           <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-black mb-16 text-center">
             Process
@@ -250,7 +250,7 @@ export function BoldTypographyTemplate() {
       </section>
 
       {/* Case Studies Section */}
-      <section className="container mx-auto px-4 sm:px-6 py-20 border-t bg-accent/5">
+      <section className="container mx-auto px-3 max-w-full py-20 border-t bg-accent/5">
         <ScrollReveal>
           <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-black mb-16">
             Case Studies
@@ -307,7 +307,7 @@ export function BoldTypographyTemplate() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="container mx-auto px-4 sm:px-6 py-20 border-t">
+      <section className="container mx-auto px-3 max-w-full py-20 border-t">
         <ScrollReveal>
           <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-black mb-16">
             Testimonials
@@ -331,7 +331,7 @@ export function BoldTypographyTemplate() {
       </section>
 
       {/* Clients Section */}
-      <section className="container mx-auto px-4 sm:px-6 py-20 border-t">
+      <section className="container mx-auto px-3 max-w-full py-20 border-t">
         <ScrollReveal>
           <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-black mb-16">
             Clients
@@ -339,7 +339,7 @@ export function BoldTypographyTemplate() {
         </ScrollReveal>
 
         <ScrollReveal delay={0.2}>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {portfolioData.clients.map((client) => (
               <div
                 key={client}
@@ -355,7 +355,7 @@ export function BoldTypographyTemplate() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="container mx-auto px-4 sm:px-6 py-32 border-t">
+      <section id="contact" className="container mx-auto px-3 max-w-full py-32 border-t">
         <ScrollReveal>
           <h2 className="text-[clamp(3rem,10vw,10rem)] font-black leading-[0.9] mb-12">
             Let's Create
@@ -392,7 +392,7 @@ export function BoldTypographyTemplate() {
 
       {/* Footer */}
       <footer className="border-t bg-background">
-        <div className="container mx-auto px-4 sm:px-6 py-8">
+        <div className="container mx-auto px-3 max-w-full py-8">
           <p className="text-sm text-muted-foreground text-center">
             © {new Date().getFullYear()} {portfolioData.name}. All rights reserved.
           </p>
