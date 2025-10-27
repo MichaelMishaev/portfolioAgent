@@ -15,7 +15,7 @@ import {
   FiArrowRight,
   FiDownload,
   FiFileText,
-} from "react-icons/fi";
+} , FiMenu, FiX } from "react-icons/fi";
 import Link from "next/link";
 
 const serviceData = {
@@ -244,7 +244,7 @@ export function B2BServiceTemplate() {
     <div className="min-h-screen bg-white text-stone-900">
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-stone-200">
-        <div className="container mx-auto px-6 py-4 flex items-center justify-between">
+        <div className="container mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
           <Link href="/" className="text-2xl font-bold text-blue-900">
             STRATEX
           </Link>
@@ -274,7 +274,7 @@ export function B2BServiceTemplate() {
 
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 text-white py-32">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <div className="max-w-4xl mx-auto text-center">
             <FadeIn>
               <h1 className="text-6xl md:text-7xl font-bold mb-6 tracking-tight">
@@ -306,7 +306,7 @@ export function B2BServiceTemplate() {
 
       {/* Service Capabilities */}
       <section id="capabilities" className="py-32 bg-stone-50">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <ScrollReveal>
             <div className="text-center mb-16">
               <h2 className="text-5xl font-bold mb-6">Our Capabilities</h2>
@@ -344,7 +344,7 @@ export function B2BServiceTemplate() {
 
       {/* Case Studies */}
       <section id="case-studies" className="py-32">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <ScrollReveal>
             <div className="text-center mb-16">
               <h2 className="text-5xl font-bold mb-6">Proven Results</h2>
@@ -410,7 +410,7 @@ export function B2BServiceTemplate() {
 
       {/* Industry Expertise */}
       <section className="py-32 bg-stone-50">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <ScrollReveal>
             <div className="text-center mb-16">
               <h2 className="text-5xl font-bold mb-6">Industry Expertise</h2>
@@ -453,7 +453,7 @@ export function B2BServiceTemplate() {
 
       {/* Thought Leadership */}
       <section id="insights" className="py-32">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <ScrollReveal>
             <div className="text-center mb-16">
               <h2 className="text-5xl font-bold mb-6">Insights & Research</h2>
@@ -489,7 +489,7 @@ export function B2BServiceTemplate() {
 
       {/* Client Logos */}
       <section className="py-24 bg-stone-50">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <ScrollReveal>
             <h3 className="text-center text-2xl font-bold mb-12 text-stone-600">
               Trusted by Industry Leaders
@@ -512,7 +512,7 @@ export function B2BServiceTemplate() {
 
       {/* Application Process */}
       <section className="py-32">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <ScrollReveal>
             <div className="text-center mb-16">
               <h2 className="text-5xl font-bold mb-6">{serviceData.applicationProcess.title}</h2>
@@ -542,7 +542,7 @@ export function B2BServiceTemplate() {
 
       {/* Final CTA */}
       <section className="py-32 bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 text-white">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <ScrollReveal>
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-5xl md:text-6xl font-bold mb-8">Ready to Transform?</h2>
@@ -563,7 +563,7 @@ export function B2BServiceTemplate() {
 
       {/* Footer */}
       <footer className="border-t border-stone-200 py-12 bg-white">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <div className="text-center">
             <div className="text-2xl font-bold text-blue-900 mb-2">STRATEX</div>
             <p className="text-sm text-stone-600">

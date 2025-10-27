@@ -18,7 +18,7 @@ import {
   FiCloud,
   FiBarChart,
   FiSettings,
-} from "react-icons/fi";
+} , FiMenu, FiX } from "react-icons/fi";
 import Link from "next/link";
 
 const serviceData = {
@@ -206,7 +206,7 @@ export function EnterpriseServiceTemplate() {
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white text-gray-900">
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur-lg border-b border-gray-200 shadow-sm">
-        <div className="container mx-auto px-6 py-4 flex items-center justify-between">
+        <div className="container mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
           <Link href="/" className="text-2xl font-bold text-gray-900">
             ENTERPRISE<span className="text-blue-600">CLOUD</span>
           </Link>
@@ -226,7 +226,7 @@ export function EnterpriseServiceTemplate() {
       </nav>
 
       {/* Hero Section */}
-      <section className="container mx-auto px-6 py-24">
+      <section className="container mx-auto px-4 sm:px-6 py-24">
         <div className="max-w-5xl mx-auto">
           <FadeIn>
             <div className="flex items-center gap-3 mb-6">
@@ -282,7 +282,7 @@ export function EnterpriseServiceTemplate() {
 
       {/* Solutions Section */}
       <section id="solutions" className="bg-white py-24">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <ScrollReveal>
             <div className="text-center mb-16">
               <h2 className="text-5xl font-bold mb-4">Enterprise Solutions</h2>
@@ -327,7 +327,7 @@ export function EnterpriseServiceTemplate() {
 
       {/* Integrations */}
       <section className="bg-gray-50 py-24">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <ScrollReveal>
             <div className="text-center mb-16">
               <h2 className="text-5xl font-bold mb-4">Seamless Integrations</h2>
@@ -353,7 +353,7 @@ export function EnterpriseServiceTemplate() {
 
       {/* Client Case Studies */}
       <section id="clients" className="py-24">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <ScrollReveal>
             <div className="text-center mb-16">
               <h2 className="text-5xl font-bold mb-4">Trusted by Industry Leaders</h2>
@@ -405,7 +405,7 @@ export function EnterpriseServiceTemplate() {
 
       {/* Enterprise Support */}
       <section className="bg-gray-50 py-24">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <ScrollReveal>
             <div className="text-center mb-16">
               <h2 className="text-5xl font-bold mb-4">{serviceData.support.title}</h2>
@@ -437,7 +437,7 @@ export function EnterpriseServiceTemplate() {
 
       {/* Pricing */}
       <section id="pricing" className="py-24">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <ScrollReveal>
             <div className="text-center mb-16">
               <h2 className="text-5xl font-bold mb-4">Enterprise Pricing</h2>
@@ -487,7 +487,7 @@ export function EnterpriseServiceTemplate() {
 
       {/* CTA Section */}
       <section className="bg-gradient-to-r from-blue-600 to-blue-800 py-24">
-        <div className="container mx-auto px-6 text-center">
+        <div className="container mx-auto px-4 sm:px-6 text-center">
           <ScrollReveal>
             <h2 className="text-5xl font-bold text-white mb-6">
               Ready to Scale Your Enterprise?
@@ -510,7 +510,7 @@ export function EnterpriseServiceTemplate() {
 
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-12">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="text-2xl font-bold mb-4 md:mb-0">
               ENTERPRISE<span className="text-blue-500">CLOUD</span>

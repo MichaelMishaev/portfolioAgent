@@ -6,7 +6,7 @@ import { ScrollReveal } from "@/components/animations/scroll-reveal";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { FiCheck, FiZap, FiWind, FiBattery, FiActivity, FiAward, FiTrendingUp, FiFilter } from "react-icons/fi";
+import { FiCheck, FiZap, FiWind, FiBattery, FiActivity, FiAward, FiTrendingUp, FiFilter } , FiMenu, FiX } from "react-icons/fi";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
@@ -203,7 +203,7 @@ export function VacuumProductTemplate() {
     <div className="min-h-screen bg-white dark:bg-gray-900">
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-lg border-b">
-        <div className="container mx-auto px-6 py-4 flex items-center justify-between">
+        <div className="container mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
           <Link href="/" className="text-xl font-bold text-blue-600">
             QUANTUM
           </Link>
@@ -218,7 +218,7 @@ export function VacuumProductTemplate() {
 
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-b from-gray-50 to-white dark:from-gray-950 dark:to-gray-900 pt-20 pb-32">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
             {/* Left: Product Info */}
             <FadeIn>
@@ -310,7 +310,7 @@ export function VacuumProductTemplate() {
 
       {/* Key Features with Stats */}
       <section id="features" className="py-32 bg-gray-50 dark:bg-gray-950">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <ScrollReveal>
             <div className="text-center mb-20">
               <h2 className="text-5xl md:text-6xl font-bold mb-6">
@@ -361,7 +361,7 @@ export function VacuumProductTemplate() {
 
       {/* Cleaning Modes */}
       <section className="py-32 bg-white dark:bg-gray-900">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <ScrollReveal>
             <div className="text-center mb-20">
               <h2 className="text-5xl md:text-6xl font-bold mb-6">
@@ -413,7 +413,7 @@ export function VacuumProductTemplate() {
 
       {/* Technical Specifications */}
       <section id="specs" className="py-32 bg-gray-50 dark:bg-gray-950">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <ScrollReveal>
             <div className="text-center mb-20">
               <h2 className="text-5xl md:text-6xl font-bold mb-6">
@@ -448,7 +448,7 @@ export function VacuumProductTemplate() {
 
       {/* Accessories */}
       <section className="py-32 bg-white dark:bg-gray-900">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <ScrollReveal>
             <div className="text-center mb-20">
               <h2 className="text-5xl md:text-6xl font-bold mb-6">
@@ -484,7 +484,7 @@ export function VacuumProductTemplate() {
 
       {/* Comparison Table */}
       <section id="compare" className="py-32 bg-gray-50 dark:bg-gray-950">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <ScrollReveal>
             <div className="text-center mb-20">
               <h2 className="text-5xl md:text-6xl font-bold mb-6">
@@ -581,7 +581,7 @@ export function VacuumProductTemplate() {
 
       {/* Awards */}
       <section className="py-32 bg-white dark:bg-gray-900">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <ScrollReveal>
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -606,7 +606,7 @@ export function VacuumProductTemplate() {
 
       {/* Final CTA */}
       <section className="py-32 bg-gradient-to-br from-blue-600 to-blue-800 text-white">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <ScrollReveal>
             <div className="text-center max-w-4xl mx-auto">
               <h2 className="text-5xl md:text-6xl font-bold mb-6">
@@ -630,7 +630,7 @@ export function VacuumProductTemplate() {
 
       {/* Footer */}
       <footer className="border-t py-12">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <div className="text-center text-sm text-muted-foreground">
             <p>© 2024 Quantum Home. All rights reserved.</p>
           </div>

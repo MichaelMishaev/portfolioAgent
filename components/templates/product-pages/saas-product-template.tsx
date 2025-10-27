@@ -6,7 +6,7 @@ import { ScrollReveal } from "@/components/animations/scroll-reveal";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { FiCheck, FiZap, FiShield, FiTrendingUp, FiUsers, FiStar, FiArrowRight, FiPlay } from "react-icons/fi";
+import { FiCheck, FiZap, FiShield, FiTrendingUp, FiUsers, FiStar, FiArrowRight, FiPlay, FiMenu, FiX } from "react-icons/fi";
 import Link from "next/link";
 
 const productData = {
@@ -162,25 +162,64 @@ const productData = {
 
 export function SaaSProductTemplate() {
   const [activePlan, setActivePlan] = useState<"monthly" | "annual">("monthly");
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white dark:from-gray-950 dark:to-gray-900">
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-lg border-b">
-        <div className="container mx-auto px-6 py-4 flex items-center justify-between">
-          <Link href="/" className="text-xl font-bold">
-            TaskFlow Pro
-          </Link>
-          <div className="flex items-center gap-6">
-            <a href="#features" className="text-sm hover:text-primary transition-colors">Features</a>
-            <a href="#pricing" className="text-sm hover:text-primary transition-colors">Pricing</a>
-            <Button size="sm">{productData.cta.primary}</Button>
+        <div className="container mx-auto px-4 sm:px-6 py-4">
+          <div className="flex items-center justify-between">
+            <Link href="/" className="text-xl font-bold">
+              TaskFlow Pro
+            </Link>
+
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex items-center gap-6">
+              <a href="#features" className="text-sm hover:text-primary transition-colors">Features</a>
+              <a href="#pricing" className="text-sm hover:text-primary transition-colors">Pricing</a>
+              <Button size="sm">{productData.cta.primary}</Button>
+            </div>
+
+            {/* Mobile Menu Button */}
+            <button
+              className="md:hidden p-2 text-foreground hover:text-primary transition-colors"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label="Toggle menu"
+            >
+              {mobileMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
+            </button>
           </div>
         </div>
+
+        {/* Mobile Menu */}
+        {mobileMenuOpen && (
+          <div className="md:hidden bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm border-t">
+            <div className="container mx-auto px-4 sm:px-6 py-4 flex flex-col gap-4">
+              <a
+                href="#features"
+                className="text-sm hover:text-primary transition-colors py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Features
+              </a>
+              <a
+                href="#pricing"
+                className="text-sm hover:text-primary transition-colors py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Pricing
+              </a>
+              <Button size="sm" className="w-full" onClick={() => setMobileMenuOpen(false)}>
+                {productData.cta.primary}
+              </Button>
+            </div>
+          </div>
+        )}
       </nav>
 
       {/* Hero Section */}
-      <section className="container mx-auto px-6 pt-20 pb-16">
+      <section className="container mx-auto px-4 sm:px-6 pt-20 pb-16">
         <div className="max-w-4xl mx-auto text-center">
           <FadeIn>
             <Badge className="mb-4" variant="secondary">
@@ -189,24 +228,24 @@ export function SaaSProductTemplate() {
           </FadeIn>
 
           <FadeIn delay={0.1}>
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+            <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-6 leading-tight bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
               {productData.tagline}
             </h1>
           </FadeIn>
 
           <FadeIn delay={0.2}>
-            <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+            <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto">
               {productData.description}
             </p>
           </FadeIn>
 
           <FadeIn delay={0.3}>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Button size="lg" className="text-lg px-8">
+              <Button size="lg" className="text-lg px-8 w-full sm:w-auto">
                 {productData.cta.primary}
                 <FiArrowRight className="ml-2" />
               </Button>
-              <Button size="lg" variant="outline" className="text-lg px-8">
+              <Button size="lg" variant="outline" className="text-lg px-8 w-full sm:w-auto">
                 <FiPlay className="mr-2" />
                 {productData.cta.secondary}
               </Button>
@@ -239,27 +278,27 @@ export function SaaSProductTemplate() {
       </section>
 
       {/* Social Proof */}
-      <section className="container mx-auto px-6 py-12 border-t">
+      <section className="container mx-auto px-4 sm:px-6 py-12 border-t">
         <ScrollReveal>
           <p className="text-center text-sm text-muted-foreground mb-8">
             {productData.socialProof.title}
           </p>
-          <div className="flex flex-wrap justify-center items-center gap-12 opacity-60">
+          <div className="flex flex-wrap justify-center items-center gap-8 sm:gap-12 opacity-60">
             {productData.socialProof.companies.map((company) => (
-              <div key={company} className="text-2xl font-bold">{company}</div>
+              <div key={company} className="text-xl sm:text-2xl font-bold">{company}</div>
             ))}
           </div>
         </ScrollReveal>
       </section>
 
       {/* Features Section */}
-      <section id="features" className="container mx-auto px-6 py-20">
+      <section id="features" className="container mx-auto px-4 sm:px-6 py-20">
         <ScrollReveal>
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
               Everything you need to ship faster
             </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto">
               Powerful features that help teams collaborate and deliver exceptional results
             </p>
           </div>
@@ -283,13 +322,13 @@ export function SaaSProductTemplate() {
       </section>
 
       {/* Testimonials */}
-      <section className="container mx-auto px-6 py-20 bg-muted/30">
+      <section className="container mx-auto px-4 sm:px-6 py-20 bg-muted/30">
         <ScrollReveal>
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
               Loved by teams worldwide
             </h2>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-lg sm:text-xl text-muted-foreground">
               See what our customers have to say
             </p>
           </div>
@@ -325,13 +364,13 @@ export function SaaSProductTemplate() {
       </section>
 
       {/* Pricing */}
-      <section id="pricing" className="container mx-auto px-6 py-20">
+      <section id="pricing" className="container mx-auto px-4 sm:px-6 py-20">
         <ScrollReveal>
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
               {productData.pricing.title}
             </h2>
-            <p className="text-xl text-muted-foreground mb-8">
+            <p className="text-lg sm:text-xl text-muted-foreground mb-8">
               {productData.pricing.subtitle}
             </p>
           </div>
@@ -374,10 +413,10 @@ export function SaaSProductTemplate() {
       </section>
 
       {/* FAQ */}
-      <section className="container mx-auto px-6 py-20 bg-muted/30">
+      <section className="container mx-auto px-4 sm:px-6 py-20 bg-muted/30">
         <ScrollReveal>
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
               Frequently Asked Questions
             </h2>
           </div>
@@ -398,17 +437,17 @@ export function SaaSProductTemplate() {
       </section>
 
       {/* Final CTA */}
-      <section className="container mx-auto px-6 py-20">
+      <section className="container mx-auto px-4 sm:px-6 py-20">
         <ScrollReveal>
           <Card className="max-w-4xl mx-auto bg-gradient-to-r from-blue-600 to-purple-600 text-white border-0">
-            <CardContent className="p-12 text-center">
-              <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            <CardContent className="p-8 sm:p-12 text-center">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
                 {productData.finalCTA.title}
               </h2>
-              <p className="text-xl mb-8 opacity-90">
+              <p className="text-lg sm:text-xl mb-8 opacity-90">
                 {productData.finalCTA.description}
               </p>
-              <Button size="lg" variant="secondary" className="text-lg px-8">
+              <Button size="lg" variant="secondary" className="text-lg px-8 w-full sm:w-auto">
                 {productData.cta.primary}
                 <FiArrowRight className="ml-2" />
               </Button>
@@ -422,7 +461,7 @@ export function SaaSProductTemplate() {
 
       {/* Footer */}
       <footer className="border-t bg-white dark:bg-gray-900 py-12">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <div className="text-center text-sm text-muted-foreground">
             <p>© 2024 TaskFlow Pro. All rights reserved.</p>
           </div>

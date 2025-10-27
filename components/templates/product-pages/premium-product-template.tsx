@@ -1,605 +1,742 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
 import { FadeIn } from "@/components/animations/fade-in";
 import { ScrollReveal } from "@/components/animations/scroll-reveal";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { FiCheck, FiStar, FiArrowRight, FiAward, FiTrendingUp, FiUsers, FiZap } from "react-icons/fi";
+import {
+  FiCheck,
+  FiStar,
+  FiArrowRight,
+  FiAward,
+  FiTrendingUp,
+  FiClock,
+  FiZap,
+  FiShield,
+  FiPackage,
+  FiGlobe,
+  FiHeart
+} , FiMenu, FiX } from "react-icons/fi";
 import Link from "next/link";
 
 const productData = {
-  name: "Executive Transformation Program",
-  tagline: "Exclusive. Transformative. Results-Driven.",
-  description: "A bespoke 6-month journey for C-level executives ready to 10x their impact and income.",
-  subtitle: "Limited to 12 clients per year",
-  investment: {
-    amount: 150000,
+  name: "CHRONOS ÉLITE",
+  collection: "Heritage Collection 2024",
+  tagline: "Where Time Becomes Art",
+  description: "Hand-crafted Swiss timepiece featuring a flying tourbillon, perpetual calendar, and our signature moon phase complication. Limited to 500 pieces worldwide.",
+  price: {
+    amount: 185000,
     currency: "$",
-    period: "6-month engagement",
-    paymentOptions: "Payment plans available",
+    starting: "Starting at",
   },
   hero: {
-    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&h=800&fit=crop",
-    exclusiveBadge: "By Application Only",
+    image: "https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=1920&h=1080&fit=crop&q=90",
+    badge: "Limited Edition · 47 Remaining",
   },
-  transformation: {
-    title: "The Transformation",
-    before: {
-      title: "Where You Are Now",
-      points: [
-        "Earning $200K-500K annually",
-        "Working 60+ hour weeks",
-        "Feeling stuck at current level",
-        "No clear path to 7-figure income",
-        "Limited strategic network",
-      ],
-    },
-    after: {
-      title: "Where You'll Be",
-      points: [
-        "Earning $1M+ annually",
-        "Working 40 hours or less",
-        "Clear executive presence",
-        "Multiple income streams",
-        "Connected to key decision-makers",
-      ],
-    },
+  heritage: {
+    title: "Two Centuries of Excellence",
+    founded: "1824",
+    story: "For 200 years, CHRONOS has been at the pinnacle of haute horlogerie. Each timepiece is a masterwork, requiring over 1,200 hours of craftsmanship by our master watchmakers in Geneva.",
+    milestones: [
+      { year: "1824", event: "Founded in Geneva by Master Horologist Jacques Beaumont", image: "https://images.unsplash.com/photo-1509048191080-d2984bad6ae5?w=800&h=600&fit=crop&q=90" },
+      { year: "1889", event: "Awarded Gold Medal at Paris Universal Exposition", image: "https://images.unsplash.com/photo-1594534475808-b18fc33b045e?w=800&h=600&fit=crop&q=90" },
+      { year: "1955", event: "Introduced first automatic tourbillon movement", image: "https://images.unsplash.com/photo-1587836374828-4dbafa94cf0e?w=800&h=600&fit=crop&q=90" },
+      { year: "2024", event: "Heritage Collection: Our most sophisticated caliber yet", image: "https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=800&h=600&fit=crop&q=90" },
+    ],
   },
-  caseStudies: [
-    {
-      name: "Michael Chen",
-      title: "From VP to CEO",
-      company: "Tech Fortune 500",
-      photo: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop",
-      challenge: "Stuck as VP for 5 years with no path to C-suite. Earning $280K.",
-      transformation: "Landed CEO role at mid-sized tech company. Now earning $850K + equity worth $2M+.",
-      metrics: [
-        { label: "Income Increase", value: "+204%" },
-        { label: "Time to C-Suite", value: "7 months" },
-        { label: "Equity Value", value: "$2M+" },
-      ],
-      quote: "This program didn't just change my career trajectory—it transformed my entire life. Best investment I've ever made.",
-    },
-    {
-      name: "Sarah Martinez",
-      title: "From Corporate to Founder",
-      company: "SaaS Startup (Acquired)",
-      photo: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop",
-      challenge: "Senior Director earning $320K but dreaming of starting her own company.",
-      transformation: "Left corporate, launched SaaS company, grew to $5M ARR in 18 months. Acquired for $22M.",
-      metrics: [
-        { label: "Exit Value", value: "$22M" },
-        { label: "Time to Exit", value: "18 months" },
-        { label: "ROI", value: "14,567%" },
-      ],
-      quote: "I had the idea but not the strategy or network. This program gave me both. My company was acquired for $22M.",
-    },
-    {
-      name: "David Park",
-      title: "From Employee to Board Member",
-      company: "Multiple Companies",
-      photo: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&h=200&fit=crop",
-      challenge: "C-level executive at $450K wanting to expand influence and income.",
-      transformation: "Now serves on 4 boards, consults for Fortune 100, and earns $1.2M+ annually while working less.",
-      metrics: [
-        { label: "Board Seats", value: "4" },
-        { label: "Income", value: "$1.2M+" },
-        { label: "Hours/Week", value: "35" },
-      ],
-      quote: "I went from being well-paid to being wealthy. The network alone is worth 10x the investment.",
-    },
-  ],
-  whatYouGet: {
-    title: "What's Included",
-    subtitle: "A comprehensive 6-month transformation designed exclusively for you",
-    modules: [
+  technicalMastery: {
+    title: "Technical Mastery",
+    subtitle: "Every component engineered to perfection",
+    features: [
       {
-        icon: <FiUsers className="w-8 h-8" />,
-        title: "1-on-1 Executive Coaching",
-        description: "24 private sessions (weekly) with your dedicated executive coach",
-        details: [
-          "Custom strategy development",
-          "Real-time problem-solving",
-          "Accountability & momentum",
-          "24/7 messaging access",
-        ],
+        title: "Flying Tourbillon",
+        description: "Our signature flying tourbillon compensates for gravity's effects on accuracy. Visible through the sapphire caseback, it completes one rotation every 60 seconds.",
+        image: "https://images.unsplash.com/photo-1514498911774-ea6177c201ab?w=1200&h=800&fit=crop&q=90",
+        stat: "±1 sec/day",
+        metric: "Precision",
       },
       {
-        icon: <FiTrendingUp className="w-8 h-8" />,
-        title: "Strategic Positioning",
-        description: "Become the obvious choice for C-suite roles and board seats",
-        details: [
-          "Personal brand architecture",
-          "Executive presence training",
-          "Thought leadership strategy",
-          "Media & speaking opportunities",
-        ],
+        title: "Perpetual Calendar",
+        description: "Automatically accounts for leap years until 2100. Moon phase accuracy: one day's deviation every 122 years.",
+        image: "https://images.unsplash.com/photo-1622434641406-a158123450f9?w=1200&h=800&fit=crop&q=90",
+        stat: "122 years",
+        metric: "Moon Phase Accuracy",
       },
       {
-        icon: <FiZap className="w-8 h-8" />,
-        title: "Elite Network Access",
-        description: "Direct introductions to CEOs, investors, and board members",
-        details: [
-          "Quarterly exclusive dinners",
-          "Introduction to 50+ decision-makers",
-          "Private community access",
-          "Partnership opportunities",
+        title: "In-House Caliber CE-1824",
+        description: "Our entirely in-house movement features 473 components, 68 jewels, and a 7-day power reserve. Each movement is aged for 3 months before assembly.",
+        image: "https://images.unsplash.com/photo-1606402179428-a57976d71fa4?w=1200&h=800&fit=crop&q=90",
+        stat: "168 hours",
+        metric: "Power Reserve",
+      },
+      {
+        title: "Artisan Dial Making",
+        description: "Each dial undergoes 17 manual processes including Grand Feu enameling, hand-guilloché engraving, and 24K gold appliqués.",
+        image: "https://images.unsplash.com/photo-1611858923112-1970299d2b38?w=1200&h=800&fit=crop&q=90",
+        stat: "17 steps",
+        metric: "Hand Crafted",
+      },
+    ],
+  },
+  configurator: {
+    title: "Configure Your Masterpiece",
+    subtitle: "Each CHRONOS ÉLITE is made to order",
+    materials: [
+      {
+        name: "18K Rose Gold",
+        price: 185000,
+        image: "https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=600&h=600&fit=crop&q=90",
+        color: "#D4AF37",
+        description: "Our signature 5N rose gold alloy",
+      },
+      {
+        name: "Platinum 950",
+        price: 235000,
+        image: "https://images.unsplash.com/photo-1594534475808-b18fc33b045e?w=600&h=600&fit=crop&q=90",
+        color: "#E5E4E2",
+        description: "Ultra-rare platinum case",
+      },
+      {
+        name: "White Gold & Diamonds",
+        price: 325000,
+        image: "https://images.unsplash.com/photo-1622434641406-a158123450f9?w=600&h=600&fit=crop&q=90",
+        color: "#F0F0F0",
+        description: "18K white gold with 2.5ct diamonds",
+      },
+    ],
+    complications: [
+      { name: "Flying Tourbillon", included: true },
+      { name: "Perpetual Calendar", included: true },
+      { name: "Moon Phase", included: true },
+      { name: "Minute Repeater", price: 75000 },
+      { name: "Celestial Chart", price: 50000 },
+      { name: "Equation of Time", price: 35000 },
+    ],
+    straps: [
+      { name: "Alligator Leather - Black", price: 0, image: "https://images.unsplash.com/photo-1524805444758-089113d48a6d?w=400&h=400&fit=crop&q=90" },
+      { name: "Alligator Leather - Brown", price: 0, image: "https://images.unsplash.com/photo-1533139142584-c2c6e4ba3b7e?w=400&h=400&fit=crop&q=90" },
+      { name: "Crocodile Leather - Navy", price: 8500, image: "https://images.unsplash.com/photo-1547996160-81dfa63595aa?w=400&h=400&fit=crop&q=90" },
+      { name: "Solid Gold Bracelet", price: 45000, image: "https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=400&h=400&fit=crop&q=90" },
+    ],
+  },
+  craftsmen: {
+    title: "The Masters Behind Your Timepiece",
+    subtitle: "Meet the artisans who will craft your CHRONOS ÉLITE",
+    profiles: [
+      {
+        name: "Laurent Beaumont",
+        title: "Master Watchmaker",
+        specialty: "Tourbillon Assembly",
+        experience: "37 years",
+        image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&q=90",
+        quote: "Each tourbillon cage is balanced to within 0.001 grams. It's not just precision—it's poetry.",
+      },
+      {
+        name: "Sophie Mercier",
+        title: "Dial Artisan",
+        specialty: "Grand Feu Enameling",
+        experience: "28 years",
+        image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop&q=90",
+        quote: "The enamel fires at 800°C. One mistake and we start over. Perfection cannot be rushed.",
+      },
+      {
+        name: "Pierre Dubois",
+        title: "Movement Finisher",
+        specialty: "Hand Engraving",
+        experience: "42 years",
+        image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&q=90",
+        quote: "I engrave your serial number by hand. Your watch carries my signature forever.",
+      },
+    ],
+  },
+  specifications: {
+    title: "Technical Specifications",
+    details: {
+      case: {
+        title: "Case",
+        specs: [
+          "Diameter: 42mm",
+          "Thickness: 13.8mm",
+          "Crystal: Sapphire (front & back)",
+          "Water resistance: 50m",
+          "Bezel: Polished with 24 screws",
         ],
+      },
+      movement: {
+        title: "Movement",
+        specs: [
+          "Caliber: CE-1824 (in-house)",
+          "Components: 473 parts",
+          "Jewels: 68 rubies",
+          "Frequency: 21,600 vph",
+          "Power reserve: 168 hours",
+          "Finish: Côtes de Genève, perlage",
+        ],
+      },
+      dial: {
+        title: "Dial & Hands",
+        specs: [
+          "Material: Grand Feu enamel",
+          "Technique: Hand guilloché",
+          "Markers: 24K gold appliqués",
+          "Hands: Heat-blued steel",
+          "Lume: Super-LumiNova",
+        ],
+      },
+    },
+  },
+  ownership: {
+    title: "The CHRONOS ÉLITE Experience",
+    subtitle: "Ownership extends far beyond the timepiece",
+    benefits: [
+      {
+        icon: <FiShield className="w-8 h-8" />,
+        title: "Lifetime Warranty",
+        description: "Comprehensive coverage for all mechanical components. Free servicing every 5 years at our Geneva atelier.",
+      },
+      {
+        icon: <FiGlobe className="w-8 h-8" />,
+        title: "Global Concierge",
+        description: "24/7 access to our concierge team. Priority reservations, travel assistance, and exclusive event invitations.",
       },
       {
         icon: <FiAward className="w-8 h-8" />,
-        title: "Income Acceleration",
-        description: "Multiple strategies to reach 7-figure income within 12 months",
-        details: [
-          "Negotiation masterclasses",
-          "Side business opportunities",
-          "Investment strategy sessions",
-          "Equity & compensation optimization",
-        ],
-      },
-    ],
-  },
-  investment: {
-    title: "Investment",
-    subtitle: "Most clients earn back their investment within 6 months",
-    options: [
-      {
-        name: "Full Investment",
-        price: "$150,000",
-        period: "6-month program",
-        description: "Pay in full and receive additional benefits",
-        features: [
-          "24 private 1-on-1 coaching sessions",
-          "Lifetime community access",
-          "4 exclusive executive dinners",
-          "Direct introductions to 50+ executives",
-          "Personal brand & positioning",
-          "Income acceleration strategies",
-          "24/7 coach messaging access",
-          "6-month post-program support",
-          "Bonus: 2 additional strategy sessions",
-          "Bonus: VIP event access for 1 year",
-        ],
-        cta: "Apply Now",
-        popular: false,
-        bonus: "+$25K in bonuses",
+        title: "Certificate of Authenticity",
+        description: "Hand-signed by Master Watchmaker Laurent Beaumont. Includes detailed movement photograph and serial number.",
       },
       {
-        name: "Payment Plan",
-        price: "$27,500",
-        period: "per month × 6 months",
-        description: "Flexible payment option ($165K total)",
-        features: [
-          "24 private 1-on-1 coaching sessions",
-          "Lifetime community access",
-          "4 exclusive executive dinners",
-          "Direct introductions to 50+ executives",
-          "Personal brand & positioning",
-          "Income acceleration strategies",
-          "24/7 coach messaging access",
-          "6-month post-program support",
-        ],
-        cta: "Apply Now",
-        popular: true,
-        bonus: "",
-      },
-    ],
-  },
-  guarantee: {
-    title: "Our Commitment",
-    description: "If you complete the program, implement the strategies, and don't see at least a $150K increase in your annual income within 12 months, we'll work with you for free until you do.",
-    badge: "Income Guarantee",
-  },
-  applicationProcess: {
-    title: "Application Process",
-    subtitle: "We only work with committed, action-oriented executives",
-    steps: [
-      {
-        number: "01",
-        title: "Submit Application",
-        description: "Complete our detailed application form. Tell us about your current situation and goals.",
+        icon: <FiTrendingUp className="w-8 h-8" />,
+        title: "Investment Grade",
+        description: "Our timepieces appreciate avg. 12% annually. We offer first refusal for resale through our heritage program.",
       },
       {
-        number: "02",
-        title: "Strategy Call",
-        description: "If selected, you'll have a 60-minute strategy call with our team to discuss your fit.",
+        icon: <FiPackage className="w-8 h-8" />,
+        title: "Private Delivery",
+        description: "Hand-delivered to your door in a bespoke wooden presentation case. Includes certified appraisal ($5,000 value).",
       },
       {
-        number: "03",
-        title: "Custom Proposal",
-        description: "We'll create a custom transformation roadmap specifically for your situation.",
-      },
-      {
-        number: "04",
-        title: "Begin Transformation",
-        description: "Once accepted, we begin immediately with your first coaching session.",
+        icon: <FiHeart className="w-8 h-8" />,
+        title: "Geneva Experience",
+        description: "Complimentary 3-day visit to our atelier. Watch your timepiece being assembled and meet your craftsmen.",
       },
     ],
   },
   testimonials: [
     {
-      quote: "I was skeptical about the investment, but within 4 months I negotiated a $400K raise. The program paid for itself twice over before it even ended.",
-      author: "Jessica Wu",
-      role: "Chief Product Officer",
-      company: "Enterprise SaaS",
-      avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop",
+      quote: "I've owned Patek, Vacheron, and AP. My CHRONOS ÉLITE is the crown jewel of my collection. The craftsmanship is simply unparalleled.",
+      author: "James Morrison",
+      title: "Collector",
+      collection: "18 timepieces",
+      avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&q=90",
       rating: 5,
-      result: "$400K salary increase",
     },
     {
-      quote: "The network alone is worth millions. I've closed 3 major deals through introductions made in this program. ROI is infinite.",
-      author: "Robert Chen",
-      role: "Founder & CEO",
-      company: "AI Startup",
-      avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop",
+      quote: "Bought it as an investment. It's appreciated 28% in three years. But honestly, I'll never sell it. It's going to my son.",
+      author: "Victoria Chen",
+      title: "Investment Banker",
+      collection: "2024 Heritage Edition",
+      avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&q=90",
       rating: 5,
-      result: "3 major deals closed",
     },
     {
-      quote: "I went from feeling stuck to sitting on 2 boards and running my own advisory practice. My income tripled. This program is the real deal.",
-      author: "Amanda Foster",
-      role: "Board Member & Advisor",
-      company: "Multiple Companies",
-      avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop",
+      quote: "The Geneva experience was incredible. Watching Laurent assemble the tourbillon for MY watch was a moment I'll never forget.",
+      author: "Alexander Petrov",
+      title: "Entrepreneur",
+      collection: "Platinum 950",
+      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&q=90",
       rating: 5,
-      result: "Income tripled",
-    },
-  ],
-  faqs: [
-    {
-      question: "Who is this program for?",
-      answer: "This program is exclusively for senior executives and high-performers earning $200K+ who are ready to make the leap to $1M+ income. You should be ambitious, coachable, and ready to invest in yourself.",
-    },
-    {
-      question: "How is this different from other coaching programs?",
-      answer: "Most programs are group coaching with generic advice. This is 1-on-1, fully customized to your situation, and includes direct access to our elite network of CEOs, investors, and board members.",
-    },
-    {
-      question: "What if I can't afford the full investment upfront?",
-      answer: "We offer a 6-month payment plan. Given that most clients see ROI within the first 4-6 months, the program often pays for itself before you finish paying.",
-    },
-    {
-      question: "How much time does this require?",
-      answer: "You'll have one 90-minute coaching session per week, plus 2-4 hours of implementation work. Most of the 'work' happens during your regular job as you apply the strategies.",
-    },
-    {
-      question: "What's your success rate?",
-      answer: "94% of our clients achieve at least a $150K income increase within 12 months. The average increase is $427K. We only work with committed individuals, which is why we have an application process.",
-    },
-    {
-      question: "Do you guarantee results?",
-      answer: "Yes. If you complete the program, implement the strategies, and don't see at least a $150K income increase within 12 months, we'll continue working with you at no additional cost until you do.",
     },
   ],
   finalCTA: {
-    title: "Ready to Transform?",
-    description: "Limited to 12 clients per year. 4 spots remaining for Q4 2024.",
-    urgency: "Applications close in 14 days",
+    title: "Begin Your Journey",
+    description: "47 of 500 pieces remain. Each CHRONOS ÉLITE requires 6-8 months to craft.",
+    urgency: "Next availability: March 2025",
   },
 };
 
 export function PremiumProductTemplate() {
+  const [selectedMaterial, setSelectedMaterial] = useState(0);
+  const [selectedComplications, setSelectedComplications] = useState<number[]>([]);
+  const [selectedStrap, setSelectedStrap] = useState(0);
+  const { scrollYProgress } = useScroll();
+
+  const heroY = useTransform(scrollYProgress, [0, 0.5], [0, 200]);
+  const heroOpacity = useTransform(scrollYProgress, [0, 0.3], [1, 0]);
+  const heroScale = useTransform(scrollYProgress, [0, 0.3], [1, 1.1]);
+
+  const calculatePrice = () => {
+    let total = productData.configurator.materials[selectedMaterial].price;
+    selectedComplications.forEach(idx => {
+      const complication = productData.configurator.complications[idx];
+      if (complication.price) total += complication.price;
+    });
+    const strap = productData.configurator.straps[selectedStrap];
+    if (strap.price) total += strap.price;
+    return total.toLocaleString();
+  };
+
+  const toggleComplication = (index: number) => {
+    const complication = productData.configurator.complications[index];
+    if (complication.included) return; // Can't toggle included complications
+
+    if (selectedComplications.includes(index)) {
+      setSelectedComplications(selectedComplications.filter(i => i !== index));
+    } else {
+      setSelectedComplications([...selectedComplications, index]);
+    }
+  };
+
   return (
     <div className="min-h-screen bg-black text-white">
-      {/* Navigation */}
-      <nav className="sticky top-0 z-50 bg-black/80 backdrop-blur-lg border-b border-gold-500/20">
-        <div className="container mx-auto px-6 py-4 flex items-center justify-between">
-          <Link href="/" className="text-xl font-bold text-gold-400">
-            EXECUTIVE ASCENT
+      {/* Elegant Navigation */}
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-black/60 backdrop-blur-xl border-b border-white/5">
+        <div className="container mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
+          <Link href="/" className="text-2xl font-light tracking-[0.2em] text-white">
+            CHRONOS
           </Link>
-          <div className="flex items-center gap-6">
-            <a href="#case-studies" className="text-sm text-gray-200 hover:text-gold-400 transition-colors font-medium">Case Studies</a>
-            <a href="#investment" className="text-sm text-gray-200 hover:text-gold-400 transition-colors font-medium">Investment</a>
-            <Button size="sm" className="bg-gold-500 text-black hover:bg-gold-400">
-              Apply Now
+          <div className="flex items-center gap-8">
+            <a href="#heritage" className="text-xs uppercase tracking-widest text-gray-300 hover:text-white transition-colors">Heritage</a>
+            <a href="#configure" className="text-xs uppercase tracking-widest text-gray-300 hover:text-white transition-colors">Configure</a>
+            <a href="#ownership" className="text-xs uppercase tracking-widest text-gray-300 hover:text-white transition-colors">Ownership</a>
+            <Button size="sm" className="bg-white text-black hover:bg-gray-200 font-light tracking-wider">
+              Inquire
             </Button>
           </div>
         </div>
       </nav>
 
-      {/* Hero Section */}
-      <section className="container mx-auto px-6 pt-20 pb-16">
-        <div className="max-w-5xl mx-auto text-center">
+      {/* Cinematic Hero with Parallax */}
+      <section className="relative h-screen overflow-hidden">
+        <motion.div
+          className="absolute inset-0"
+          style={{ y: heroY, scale: heroScale }}
+        >
+          <img
+            src={productData.hero.image}
+            alt={productData.name}
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black" />
+        </motion.div>
+
+        <motion.div
+          className="relative h-full flex flex-col items-center justify-center text-center px-6"
+          style={{ opacity: heroOpacity }}
+        >
           <FadeIn>
-            <Badge className="mb-4 bg-gold-500/10 text-gold-400 border-gold-500/30">
-              {productData.hero.exclusiveBadge}
+            <Badge className="mb-6 bg-white/10 text-white border-white/20 backdrop-blur-sm px-4 py-2 text-xs tracking-widest">
+              {productData.hero.badge}
             </Badge>
           </FadeIn>
 
-          <FadeIn delay={0.1}>
-            <h1 className="text-6xl md:text-8xl font-bold mb-6 leading-tight">
-              <span className="bg-gradient-to-r from-gold-400 to-gold-600 bg-clip-text text-transparent">
-                {productData.name}
-              </span>
+          <FadeIn delay={0.2}>
+            <h1 className="text-7xl md:text-9xl font-light mb-4 tracking-tight">
+              {productData.name}
             </h1>
           </FadeIn>
 
-          <FadeIn delay={0.2}>
-            <p className="text-2xl md:text-3xl text-gray-100 mb-4 font-light">
-              {productData.tagline}
-            </p>
-          </FadeIn>
-
           <FadeIn delay={0.3}>
-            <p className="text-xl text-gray-100 mb-8 max-w-3xl mx-auto">
-              {productData.description}
+            <p className="text-xl md:text-2xl text-gray-300 mb-3 font-light tracking-wide">
+              {productData.collection}
             </p>
           </FadeIn>
 
           <FadeIn delay={0.4}>
-            <p className="text-lg text-gold-400 mb-12">
-              {productData.subtitle}
+            <p className="text-lg text-gray-400 mb-12 max-w-2xl font-light italic">
+              {productData.tagline}
             </p>
           </FadeIn>
 
           <FadeIn delay={0.5}>
-            <Button size="lg" className="text-lg px-12 bg-gold-500 text-black hover:bg-gold-400">
-              Submit Application
-              <FiArrowRight className="ml-2" />
-            </Button>
+            <p className="text-base text-gray-300 mb-12 max-w-3xl leading-relaxed">
+              {productData.description}
+            </p>
           </FadeIn>
 
-          {/* Hero Image */}
           <FadeIn delay={0.6}>
-            <div className="relative rounded-3xl overflow-hidden mt-16 border border-gold-500/20">
-              <img
-                src={productData.hero.image}
-                alt="Executive Transformation"
-                className="w-full h-[500px] object-cover opacity-70"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent" />
+            <div className="flex flex-col items-center gap-4">
+              <span className="text-sm text-gray-400 uppercase tracking-widest">{productData.price.starting}</span>
+              <span className="text-5xl font-light tracking-tight">
+                {productData.price.currency}{productData.price.amount.toLocaleString()}
+              </span>
+              <Button size="lg" className="mt-4 bg-white text-black hover:bg-gray-200 px-8 py-6 text-sm tracking-wider">
+                Schedule Private Viewing
+                <FiArrowRight className="ml-2" />
+              </Button>
             </div>
           </FadeIn>
-        </div>
+        </motion.div>
+
+        {/* Scroll Indicator */}
+        <motion.div
+          className="absolute bottom-12 left-1/2 -translate-x-1/2"
+          animate={{ y: [0, 10, 0] }}
+          transition={{ duration: 2, repeat: Infinity }}
+          style={{ opacity: heroOpacity }}
+        >
+          <div className="w-6 h-10 border border-white/30 rounded-full flex items-start justify-center p-2">
+            <motion.div
+              className="w-1.5 h-1.5 bg-white rounded-full"
+              animate={{ y: [0, 16, 0] }}
+              transition={{ duration: 2, repeat: Infinity }}
+            />
+          </div>
+        </motion.div>
       </section>
 
-      {/* Transformation - Before/After */}
-      <section className="container mx-auto px-6 py-32 border-t border-gold-500/20">
+      {/* Heritage Section */}
+      <section id="heritage" className="container mx-auto px-4 sm:px-6 py-32">
         <ScrollReveal>
-          <div className="text-center mb-16">
-            <h2 className="text-5xl md:text-6xl font-bold mb-4 text-white">
-              {productData.transformation.title}
+          <div className="max-w-4xl mx-auto text-center mb-20">
+            <h2 className="text-6xl md:text-7xl font-light mb-8 tracking-tight">
+              {productData.heritage.title}
             </h2>
-          </div>
-        </ScrollReveal>
-
-        <div className="max-w-5xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12">
-            <ScrollReveal delay={0.1}>
-              <Card className="h-full bg-gray-900 border-gray-800">
-                <CardHeader>
-                  <CardTitle className="text-3xl text-white">
-                    {productData.transformation.before.title}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-4">
-                    {productData.transformation.before.points.map((point, idx) => (
-                      <li key={idx} className="text-lg text-gray-300">
-                        {point}
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
-            </ScrollReveal>
-
-            <ScrollReveal delay={0.2}>
-              <Card className="h-full bg-gradient-to-br from-gold-500/10 to-gold-600/10 border-gold-500/30">
-                <CardHeader>
-                  <CardTitle className="text-3xl text-gold-300">
-                    {productData.transformation.after.title}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-4">
-                    {productData.transformation.after.points.map((point, idx) => (
-                      <li key={idx} className="flex items-start gap-3 text-lg text-white">
-                        <FiCheck className="w-6 h-6 text-gold-300 flex-shrink-0 mt-1" />
-                        <span>{point}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
-            </ScrollReveal>
-          </div>
-        </div>
-      </section>
-
-      {/* Case Studies */}
-      <section id="case-studies" className="container mx-auto px-6 py-32 bg-gradient-to-b from-transparent to-gray-950">
-        <ScrollReveal>
-          <div className="text-center mb-20">
-            <h2 className="text-5xl md:text-6xl font-bold mb-6 text-white">
-              Real Results from Real Executives
-            </h2>
-            <p className="text-xl text-gray-300">
-              These are actual clients who invested in themselves and transformed their careers
+            <div className="text-9xl font-light text-gray-800 mb-8">
+              {productData.heritage.founded}
+            </div>
+            <p className="text-xl text-gray-400 leading-relaxed">
+              {productData.heritage.story}
             </p>
           </div>
         </ScrollReveal>
 
-        <div className="max-w-6xl mx-auto space-y-16">
-          {productData.caseStudies.map((study, index) => (
-            <ScrollReveal key={study.name} delay={index * 0.1}>
-              <Card className="bg-gray-900 border-gold-500/20 hover:border-gold-500/40 transition-all">
-                <CardContent className="p-10">
-                  <div className="grid md:grid-cols-3 gap-8">
-                    {/* Left: Photo and Info */}
-                    <div className="text-center md:text-left">
+        {/* Timeline */}
+        <div className="max-w-6xl mx-auto space-y-24 mt-32">
+          {productData.heritage.milestones.map((milestone, index) => (
+            <ScrollReveal key={milestone.year} delay={index * 0.1}>
+              <div className={`grid md:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'md:grid-flow-dense' : ''}`}>
+                <div className={index % 2 === 1 ? 'md:col-start-2' : ''}>
+                  <div className="relative overflow-hidden rounded-2xl aspect-[4/3]">
+                    <img
+                      src={milestone.image}
+                      alt={milestone.year}
+                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                    />
+                  </div>
+                </div>
+                <div className={index % 2 === 1 ? 'md:col-start-1 md:row-start-1' : ''}>
+                  <div className="text-7xl font-light text-gray-700 mb-6">{milestone.year}</div>
+                  <p className="text-2xl text-gray-300 leading-relaxed">{milestone.event}</p>
+                </div>
+              </div>
+            </ScrollReveal>
+          ))}
+        </div>
+      </section>
+
+      {/* Technical Mastery */}
+      <section className="container mx-auto px-4 sm:px-6 py-32 bg-gradient-to-b from-transparent via-gray-950/50 to-transparent">
+        <ScrollReveal>
+          <div className="text-center mb-20">
+            <h2 className="text-6xl md:text-7xl font-light mb-6 tracking-tight">
+              {productData.technicalMastery.title}
+            </h2>
+            <p className="text-xl text-gray-400">
+              {productData.technicalMastery.subtitle}
+            </p>
+          </div>
+        </ScrollReveal>
+
+        <div className="max-w-7xl mx-auto space-y-32">
+          {productData.technicalMastery.features.map((feature, index) => (
+            <ScrollReveal key={feature.title} delay={index * 0.1}>
+              <div className={`grid lg:grid-cols-2 gap-16 items-center ${index % 2 === 1 ? 'lg:grid-flow-dense' : ''}`}>
+                <div className={index % 2 === 1 ? 'lg:col-start-2' : ''}>
+                  <div className="relative overflow-hidden rounded-3xl aspect-[3/2] border border-white/5">
+                    <img
+                      src={feature.image}
+                      alt={feature.title}
+                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                    />
+                  </div>
+                </div>
+                <div className={index % 2 === 1 ? 'lg:col-start-1 lg:row-start-1' : ''}>
+                  <div className="inline-block px-6 py-3 bg-white/5 rounded-full mb-6">
+                    <span className="text-4xl font-light">{feature.stat}</span>
+                    <span className="text-sm text-gray-400 ml-3 uppercase tracking-wider">{feature.metric}</span>
+                  </div>
+                  <h3 className="text-4xl font-light mb-6">{feature.title}</h3>
+                  <p className="text-lg text-gray-400 leading-relaxed">{feature.description}</p>
+                </div>
+              </div>
+            </ScrollReveal>
+          ))}
+        </div>
+      </section>
+
+      {/* Interactive Configurator */}
+      <section id="configure" className="container mx-auto px-4 sm:px-6 py-32">
+        <ScrollReveal>
+          <div className="text-center mb-20">
+            <h2 className="text-6xl md:text-7xl font-light mb-6 tracking-tight">
+              {productData.configurator.title}
+            </h2>
+            <p className="text-xl text-gray-400">
+              {productData.configurator.subtitle}
+            </p>
+          </div>
+        </ScrollReveal>
+
+        <div className="max-w-6xl mx-auto">
+          {/* Material Selection */}
+          <ScrollReveal delay={0.1}>
+            <div className="mb-16">
+              <h3 className="text-3xl font-light mb-8 text-center">Select Case Material</h3>
+              <div className="grid md:grid-cols-3 gap-6">
+                {productData.configurator.materials.map((material, index) => (
+                  <motion.div
+                    key={material.name}
+                    whileHover={{ y: -8 }}
+                    onClick={() => setSelectedMaterial(index)}
+                    className={`cursor-pointer rounded-2xl overflow-hidden border-2 transition-all ${
+                      selectedMaterial === index
+                        ? 'border-white shadow-2xl shadow-white/20'
+                        : 'border-white/10 hover:border-white/30'
+                    }`}
+                  >
+                    <div className="aspect-square relative overflow-hidden">
                       <img
-                        src={study.photo}
-                        alt={study.name}
-                        className="w-32 h-32 rounded-full mx-auto md:mx-0 mb-4 border-2 border-gold-500"
+                        src={material.image}
+                        alt={material.name}
+                        className="w-full h-full object-cover"
                       />
-                      <h3 className="text-2xl font-bold mb-2 text-white">{study.name}</h3>
-                      <p className="text-gold-300 font-semibold mb-1">{study.title}</p>
-                      <p className="text-sm text-gray-300 font-medium">{study.company}</p>
+                      {selectedMaterial === index && (
+                        <motion.div
+                          initial={{ scale: 0 }}
+                          animate={{ scale: 1 }}
+                          className="absolute top-4 right-4 w-8 h-8 bg-white rounded-full flex items-center justify-center"
+                        >
+                          <FiCheck className="text-black" />
+                        </motion.div>
+                      )}
                     </div>
-
-                    {/* Middle: Story */}
-                    <div className="md:col-span-2">
-                      <div className="mb-6">
-                        <h4 className="text-sm uppercase text-gray-300 font-bold tracking-wider mb-3">CHALLENGE</h4>
-                        <p className="text-lg text-gray-100 leading-relaxed">{study.challenge}</p>
+                    <div className="p-6 bg-gray-900/50 backdrop-blur">
+                      <div className="flex items-center gap-3 mb-2">
+                        <div
+                          className="w-4 h-4 rounded-full border border-white/20"
+                          style={{ backgroundColor: material.color }}
+                        />
+                        <h4 className="text-lg font-light">{material.name}</h4>
                       </div>
-                      <div className="mb-6">
-                        <h4 className="text-sm uppercase text-gold-300 font-bold tracking-wider mb-3">TRANSFORMATION</h4>
-                        <p className="text-lg text-gray-100 leading-relaxed font-medium">{study.transformation}</p>
-                      </div>
-
-                      {/* Metrics */}
-                      <div className="grid grid-cols-3 gap-4 mb-6">
-                        {study.metrics.map((metric) => (
-                          <div key={metric.label} className="text-center p-5 bg-black/60 rounded-lg border border-gold-500/30">
-                            <div className="text-3xl font-bold text-gold-300 mb-2">{metric.value}</div>
-                            <div className="text-xs text-gray-300 font-semibold uppercase tracking-wide">{metric.label}</div>
-                          </div>
-                        ))}
-                      </div>
-
-                      {/* Quote */}
-                      <div className="border-l-4 border-gold-400 pl-6 py-2">
-                        <p className="italic text-gray-200 text-lg leading-relaxed">"{study.quote}"</p>
-                      </div>
+                      <p className="text-sm text-gray-400 mb-3">{material.description}</p>
+                      <p className="text-2xl font-light">${material.price.toLocaleString()}</p>
                     </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </ScrollReveal>
-          ))}
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </ScrollReveal>
+
+          {/* Complications */}
+          <ScrollReveal delay={0.2}>
+            <div className="mb-16">
+              <h3 className="text-3xl font-light mb-8 text-center">Complications</h3>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto">
+                {productData.configurator.complications.map((complication, index) => (
+                  <motion.button
+                    key={complication.name}
+                    whileHover={{ scale: complication.included ? 1 : 1.02 }}
+                    whileTap={{ scale: complication.included ? 1 : 0.98 }}
+                    onClick={() => toggleComplication(index)}
+                    disabled={complication.included}
+                    className={`p-4 rounded-xl border-2 text-left transition-all ${
+                      complication.included
+                        ? 'border-white/20 bg-white/5 cursor-default'
+                        : selectedComplications.includes(index)
+                        ? 'border-white bg-white/10'
+                        : 'border-white/10 hover:border-white/30'
+                    }`}
+                  >
+                    <div className="flex items-start justify-between mb-2">
+                      <span className="text-base font-light">{complication.name}</span>
+                      {complication.included ? (
+                        <Badge className="bg-white/10 text-white text-xs">Included</Badge>
+                      ) : (
+                        <div className={`w-5 h-5 rounded border-2 flex items-center justify-center ${
+                          selectedComplications.includes(index) ? 'border-white bg-white' : 'border-white/30'
+                        }`}>
+                          {selectedComplications.includes(index) && (
+                            <FiCheck className="w-3 h-3 text-black" />
+                          )}
+                        </div>
+                      )}
+                    </div>
+                    {complication.price && (
+                      <p className="text-sm text-gray-400">+${complication.price.toLocaleString()}</p>
+                    )}
+                  </motion.button>
+                ))}
+              </div>
+            </div>
+          </ScrollReveal>
+
+          {/* Strap Selection */}
+          <ScrollReveal delay={0.3}>
+            <div className="mb-16">
+              <h3 className="text-3xl font-light mb-8 text-center">Select Strap</h3>
+              <div className="grid md:grid-cols-4 gap-4 max-w-5xl mx-auto">
+                {productData.configurator.straps.map((strap, index) => (
+                  <motion.div
+                    key={strap.name}
+                    whileHover={{ y: -4 }}
+                    onClick={() => setSelectedStrap(index)}
+                    className={`cursor-pointer rounded-xl overflow-hidden border-2 transition-all ${
+                      selectedStrap === index
+                        ? 'border-white'
+                        : 'border-white/10 hover:border-white/30'
+                    }`}
+                  >
+                    <div className="aspect-square relative overflow-hidden">
+                      <img
+                        src={strap.image}
+                        alt={strap.name}
+                        className="w-full h-full object-cover"
+                      />
+                      {selectedStrap === index && (
+                        <motion.div
+                          initial={{ scale: 0 }}
+                          animate={{ scale: 1 }}
+                          className="absolute top-2 right-2 w-6 h-6 bg-white rounded-full flex items-center justify-center"
+                        >
+                          <FiCheck className="text-black w-4 h-4" />
+                        </motion.div>
+                      )}
+                    </div>
+                    <div className="p-3 bg-gray-900/50 backdrop-blur">
+                      <p className="text-sm font-light mb-1">{strap.name}</p>
+                      <p className="text-xs text-gray-400">
+                        {strap.price === 0 ? 'Included' : `+$${strap.price.toLocaleString()}`}
+                      </p>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </ScrollReveal>
+
+          {/* Price Summary */}
+          <ScrollReveal delay={0.4}>
+            <Card className="max-w-2xl mx-auto bg-gradient-to-br from-white/5 to-white/[0.02] border-white/10 backdrop-blur">
+              <CardContent className="p-10 text-center">
+                <p className="text-sm uppercase tracking-widest text-gray-400 mb-4">Your Configuration</p>
+                <div className="text-6xl font-light mb-8">
+                  ${calculatePrice()}
+                </div>
+                <div className="space-y-2 mb-8 text-sm text-gray-400">
+                  <p>{productData.configurator.materials[selectedMaterial].name}</p>
+                  {selectedComplications.map(idx => (
+                    <p key={idx}>{productData.configurator.complications[idx].name}</p>
+                  ))}
+                  <p>{productData.configurator.straps[selectedStrap].name}</p>
+                </div>
+                <Button size="lg" className="bg-white text-black hover:bg-gray-200 px-12 py-6">
+                  Request Consultation
+                  <FiArrowRight className="ml-2" />
+                </Button>
+                <p className="text-xs text-gray-500 mt-6">Estimated delivery: 6-8 months from order</p>
+              </CardContent>
+            </Card>
+          </ScrollReveal>
         </div>
       </section>
 
-      {/* What You Get */}
-      <section className="container mx-auto px-6 py-32">
+      {/* Master Craftsmen */}
+      <section className="container mx-auto px-4 sm:px-6 py-32 bg-gradient-to-b from-transparent via-gray-950/50 to-transparent">
         <ScrollReveal>
           <div className="text-center mb-20">
-            <h2 className="text-5xl md:text-6xl font-bold mb-6 text-white">
-              {productData.whatYouGet.title}
+            <h2 className="text-6xl md:text-7xl font-light mb-6 tracking-tight">
+              {productData.craftsmen.title}
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              {productData.whatYouGet.subtitle}
+            <p className="text-xl text-gray-400">
+              {productData.craftsmen.subtitle}
             </p>
           </div>
         </ScrollReveal>
 
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
-          {productData.whatYouGet.modules.map((module, index) => (
-            <ScrollReveal key={module.title} delay={index * 0.1}>
-              <Card className="h-full bg-gray-900 border-gold-500/20 hover:border-gold-500/40 transition-all">
-                <CardHeader>
-                  <div className="w-16 h-16 rounded-lg bg-gradient-to-br from-gold-500 to-gold-600 flex items-center justify-center text-black mb-4">
-                    {module.icon}
-                  </div>
-                  <CardTitle className="text-2xl text-white">{module.title}</CardTitle>
-                  <CardDescription className="text-base text-gray-300 leading-relaxed">{module.description}</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-2">
-                    {module.details.map((detail, idx) => (
-                      <li key={idx} className="flex items-start gap-2">
-                        <FiCheck className="w-5 h-5 text-gold-300 flex-shrink-0 mt-0.5" />
-                        <span className="text-sm text-gray-300 font-medium">{detail}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
-            </ScrollReveal>
-          ))}
-        </div>
-      </section>
-
-      {/* Investment/Pricing */}
-      <section id="investment" className="container mx-auto px-6 py-32 bg-gradient-to-b from-transparent to-gray-950">
-        <ScrollReveal>
-          <div className="text-center mb-20">
-            <h2 className="text-5xl md:text-6xl font-bold mb-6 text-white">
-              {productData.investment.title}
-            </h2>
-            <p className="text-xl text-gray-300">
-              {productData.investment.subtitle}
-            </p>
-          </div>
-        </ScrollReveal>
-
-        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8 mb-16">
-          {productData.investment.options.map((option, index) => (
-            <ScrollReveal key={option.name} delay={index * 0.1}>
-              <Card className={`relative h-full bg-gray-900 ${option.popular ? "border-gold-500 shadow-lg shadow-gold-500/20 scale-105" : "border-gold-500/20"}`}>
-                {option.popular && (
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                    <Badge className="bg-gold-500 text-black">Most Popular</Badge>
-                  </div>
-                )}
-                {option.bonus && (
-                  <div className="absolute -top-4 right-4">
-                    <Badge className="bg-gold-500 text-black">{option.bonus}</Badge>
-                  </div>
-                )}
-                <CardHeader>
-                  <CardTitle className="text-3xl text-white">{option.name}</CardTitle>
-                  <div className="mt-6">
-                    <span className="text-5xl font-bold text-gold-300">{option.price}</span>
-                    <p className="text-gray-300 mt-2 text-lg">{option.period}</p>
-                  </div>
-                  <CardDescription className="mt-4 text-gray-300 text-base">{option.description}</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <Button className="w-full mb-8 bg-gold-500 text-black hover:bg-gold-400" size="lg">
-                    {option.cta}
-                  </Button>
-                  <ul className="space-y-3">
-                    {option.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-start gap-3">
-                        <FiCheck className="w-5 h-5 text-gold-300 flex-shrink-0 mt-0.5" />
-                        <span className="text-sm text-gray-300 font-medium">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
-            </ScrollReveal>
-          ))}
-        </div>
-
-        {/* Guarantee */}
-        <ScrollReveal>
-          <Card className="max-w-4xl mx-auto bg-gradient-to-r from-gold-500/10 to-gold-600/10 border-gold-500/30">
-            <CardContent className="p-10 text-center">
-              <Badge className="mb-4 bg-gold-500 text-black">{productData.guarantee.badge}</Badge>
-              <h3 className="text-3xl font-bold mb-4 text-white">{productData.guarantee.title}</h3>
-              <p className="text-lg text-gray-200">{productData.guarantee.description}</p>
-            </CardContent>
-          </Card>
-        </ScrollReveal>
-      </section>
-
-      {/* Application Process */}
-      <section className="container mx-auto px-6 py-32">
-        <ScrollReveal>
-          <div className="text-center mb-20">
-            <h2 className="text-5xl md:text-6xl font-bold mb-6 text-white">
-              {productData.applicationProcess.title}
-            </h2>
-            <p className="text-xl text-gray-300">
-              {productData.applicationProcess.subtitle}
-            </p>
-          </div>
-        </ScrollReveal>
-
-        <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
-          {productData.applicationProcess.steps.map((step, index) => (
-            <ScrollReveal key={step.number} delay={index * 0.1}>
-              <Card className="bg-gray-900 border-gold-500/20">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-12">
+          {productData.craftsmen.profiles.map((craftsman, index) => (
+            <ScrollReveal key={craftsman.name} delay={index * 0.1}>
+              <Card className="h-full bg-white/5 border-white/10 hover:border-white/20 transition-all backdrop-blur">
                 <CardContent className="p-8">
-                  <div className="text-6xl font-bold text-gold-400/40 mb-4">{step.number}</div>
-                  <h3 className="text-2xl font-bold mb-3 text-white">{step.title}</h3>
-                  <p className="text-gray-300 leading-relaxed">{step.description}</p>
+                  <div className="aspect-square rounded-2xl overflow-hidden mb-6 border border-white/10">
+                    <img
+                      src={craftsman.image}
+                      alt={craftsman.name}
+                      className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                    />
+                  </div>
+                  <h3 className="text-2xl font-light mb-2">{craftsman.name}</h3>
+                  <p className="text-sm text-gray-400 uppercase tracking-wider mb-1">{craftsman.title}</p>
+                  <p className="text-sm text-gray-500 mb-4">{craftsman.specialty}</p>
+                  <Badge className="bg-white/10 text-white text-xs mb-6">{craftsman.experience}</Badge>
+                  <div className="border-l-2 border-white/20 pl-4 py-2">
+                    <p className="text-sm text-gray-300 italic leading-relaxed">"{craftsman.quote}"</p>
+                  </div>
+                </CardContent>
+              </Card>
+            </ScrollReveal>
+          ))}
+        </div>
+      </section>
+
+      {/* Technical Specifications */}
+      <section className="container mx-auto px-4 sm:px-6 py-32">
+        <ScrollReveal>
+          <div className="text-center mb-20">
+            <h2 className="text-6xl md:text-7xl font-light mb-6 tracking-tight">
+              {productData.specifications.title}
+            </h2>
+          </div>
+        </ScrollReveal>
+
+        <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-8">
+          {Object.values(productData.specifications.details).map((section, index) => (
+            <ScrollReveal key={section.title} delay={index * 0.1}>
+              <Card className="h-full bg-white/5 border-white/10 backdrop-blur">
+                <CardHeader>
+                  <CardTitle className="text-2xl font-light">{section.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-3">
+                    {section.specs.map((spec, idx) => (
+                      <li key={idx} className="text-sm text-gray-400 leading-relaxed border-b border-white/5 pb-3 last:border-0">
+                        {spec}
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+            </ScrollReveal>
+          ))}
+        </div>
+      </section>
+
+      {/* Ownership Benefits */}
+      <section id="ownership" className="container mx-auto px-4 sm:px-6 py-32 bg-gradient-to-b from-transparent via-gray-950/50 to-transparent">
+        <ScrollReveal>
+          <div className="text-center mb-20">
+            <h2 className="text-6xl md:text-7xl font-light mb-6 tracking-tight">
+              {productData.ownership.title}
+            </h2>
+            <p className="text-xl text-gray-400">
+              {productData.ownership.subtitle}
+            </p>
+          </div>
+        </ScrollReveal>
+
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {productData.ownership.benefits.map((benefit, index) => (
+            <ScrollReveal key={benefit.title} delay={index * 0.1}>
+              <Card className="h-full bg-white/5 border-white/10 hover:border-white/20 transition-all backdrop-blur">
+                <CardContent className="p-8">
+                  <div className="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center mb-6">
+                    {benefit.icon}
+                  </div>
+                  <h3 className="text-xl font-light mb-3">{benefit.title}</h3>
+                  <p className="text-sm text-gray-400 leading-relaxed">{benefit.description}</p>
                 </CardContent>
               </Card>
             </ScrollReveal>
@@ -608,11 +745,11 @@ export function PremiumProductTemplate() {
       </section>
 
       {/* Testimonials */}
-      <section className="container mx-auto px-6 py-32 bg-gradient-to-b from-transparent to-gray-950">
+      <section className="container mx-auto px-4 sm:px-6 py-32">
         <ScrollReveal>
           <div className="text-center mb-20">
-            <h2 className="text-5xl md:text-6xl font-bold mb-6 text-white">
-              What Clients Say
+            <h2 className="text-6xl md:text-7xl font-light mb-6 tracking-tight">
+              Collector Testimonials
             </h2>
           </div>
         </ScrollReveal>
@@ -620,27 +757,27 @@ export function PremiumProductTemplate() {
         <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
           {productData.testimonials.map((testimonial, index) => (
             <ScrollReveal key={testimonial.author} delay={index * 0.1}>
-              <Card className="h-full bg-gray-900 border-gold-500/20">
+              <Card className="h-full bg-white/5 border-white/10 backdrop-blur">
                 <CardContent className="p-8">
                   <div className="flex gap-1 mb-6">
                     {Array.from({ length: testimonial.rating }).map((_, i) => (
-                      <FiStar key={i} className="w-5 h-5 fill-gold-400 text-gold-400" />
+                      <FiStar key={i} className="w-4 h-4 fill-white text-white" />
                     ))}
                   </div>
-                  <p className="text-lg mb-6 text-gray-200 leading-relaxed">"{testimonial.quote}"</p>
-                  <div className="flex items-center gap-3 mb-4">
+                  <p className="text-base mb-8 text-gray-300 leading-relaxed italic">"{testimonial.quote}"</p>
+                  <div className="flex items-center gap-3 mb-3">
                     <img
                       src={testimonial.avatar}
                       alt={testimonial.author}
-                      className="w-12 h-12 rounded-full"
+                      className="w-12 h-12 rounded-full grayscale"
                     />
                     <div>
-                      <div className="font-semibold text-white">{testimonial.author}</div>
-                      <div className="text-sm text-gray-300">{testimonial.role}</div>
+                      <div className="font-light">{testimonial.author}</div>
+                      <div className="text-xs text-gray-400">{testimonial.title}</div>
                     </div>
                   </div>
-                  <Badge className="bg-gold-500/10 text-gold-400 border-gold-500/30">
-                    {testimonial.result}
+                  <Badge className="bg-white/5 text-gray-400 text-xs border-white/10">
+                    {testimonial.collection}
                   </Badge>
                 </CardContent>
               </Card>
@@ -649,58 +786,47 @@ export function PremiumProductTemplate() {
         </div>
       </section>
 
-      {/* FAQ */}
-      <section className="container mx-auto px-6 py-32">
-        <ScrollReveal>
-          <div className="text-center mb-20">
-            <h2 className="text-5xl md:text-6xl font-bold mb-6 text-white">
-              Frequently Asked Questions
-            </h2>
-          </div>
-        </ScrollReveal>
-
-        <div className="max-w-4xl mx-auto space-y-4">
-          {productData.faqs.map((item, index) => (
-            <ScrollReveal key={item.question} delay={index * 0.05}>
-              <Card className="bg-gray-900 border-gold-500/20">
-                <CardHeader>
-                  <CardTitle className="text-xl text-white">{item.question}</CardTitle>
-                  <CardDescription className="text-gray-300 text-base leading-relaxed mt-3">{item.answer}</CardDescription>
-                </CardHeader>
-              </Card>
-            </ScrollReveal>
-          ))}
-        </div>
-      </section>
-
       {/* Final CTA */}
-      <section className="container mx-auto px-6 py-32 bg-gradient-to-b from-transparent to-black">
+      <section className="container mx-auto px-4 sm:px-6 py-32">
         <ScrollReveal>
-          <Card className="max-w-5xl mx-auto bg-gradient-to-r from-gold-500 to-gold-600 text-black border-0">
+          <Card className="max-w-5xl mx-auto bg-gradient-to-br from-white/10 to-white/5 border-white/20 backdrop-blur-xl">
             <CardContent className="p-16 text-center">
-              <h2 className="text-5xl md:text-6xl font-bold mb-6">
+              <FiClock className="w-16 h-16 mx-auto mb-8 text-gray-400" />
+              <h2 className="text-5xl md:text-6xl font-light mb-6 tracking-tight">
                 {productData.finalCTA.title}
               </h2>
-              <p className="text-2xl mb-4 opacity-90">
+              <p className="text-xl text-gray-300 mb-4">
                 {productData.finalCTA.description}
               </p>
-              <p className="text-lg mb-10 font-semibold">
-                ⚠️ {productData.finalCTA.urgency}
+              <p className="text-sm text-gray-400 mb-10 uppercase tracking-widest">
+                {productData.finalCTA.urgency}
               </p>
-              <Button size="lg" variant="secondary" className="text-lg px-12 bg-black text-white hover:bg-gray-900">
-                Submit Your Application
-                <FiArrowRight className="ml-2" />
-              </Button>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button size="lg" className="bg-white text-black hover:bg-gray-200 px-12 py-6 text-sm tracking-wider">
+                  Schedule Consultation
+                  <FiArrowRight className="ml-2" />
+                </Button>
+                <Button size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10 px-12 py-6 text-sm tracking-wider">
+                  Download Brochure
+                </Button>
+              </div>
             </CardContent>
           </Card>
         </ScrollReveal>
       </section>
 
-      {/* Footer */}
-      <footer className="border-t border-gold-500/20 py-12">
-        <div className="container mx-auto px-6">
-          <div className="text-center text-sm text-gray-400">
-            <p>© 2024 Executive Ascent. All rights reserved.</p>
+      {/* Elegant Footer */}
+      <footer className="border-t border-white/5 py-16">
+        <div className="container mx-auto px-4 sm:px-6">
+          <div className="text-center">
+            <div className="text-3xl font-light tracking-[0.2em] mb-6">CHRONOS</div>
+            <p className="text-xs text-gray-500 uppercase tracking-widest mb-8">Geneva · Since 1824</p>
+            <div className="flex justify-center gap-8 text-xs text-gray-500 uppercase tracking-wider">
+              <a href="#" className="hover:text-white transition-colors">Heritage</a>
+              <a href="#" className="hover:text-white transition-colors">Craftsmanship</a>
+              <a href="#" className="hover:text-white transition-colors">Atelier Visits</a>
+              <a href="#" className="hover:text-white transition-colors">Contact</a>
+            </div>
           </div>
         </div>
       </footer>

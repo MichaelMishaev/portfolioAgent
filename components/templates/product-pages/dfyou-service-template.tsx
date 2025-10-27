@@ -16,7 +16,7 @@ import {
   FiMessageCircle,
   FiPause,
   FiX,
-} from "react-icons/fi";
+} , FiMenu, FiX } from "react-icons/fi";
 import Link from "next/link";
 
 const serviceData = {
@@ -282,7 +282,7 @@ export function DFYouServiceTemplate() {
     <div className="min-h-screen bg-white text-stone-900">
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-stone-200">
-        <div className="container mx-auto px-6 py-4 flex items-center justify-between">
+        <div className="container mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
           <Link href="/" className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-pink-500 bg-clip-text text-transparent">
             DESIGN ON TAP
           </Link>
@@ -311,7 +311,7 @@ export function DFYouServiceTemplate() {
 
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-50 via-white to-pink-50 py-32">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <div className="max-w-5xl mx-auto text-center">
             <FadeIn>
               <Badge className="mb-6 bg-pink-500 text-white text-sm px-4 py-2">
@@ -356,7 +356,7 @@ export function DFYouServiceTemplate() {
 
       {/* How It Works */}
       <section className="py-32 bg-stone-50">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <ScrollReveal>
             <h2 className="text-5xl font-bold text-center mb-24">How It Works</h2>
           </ScrollReveal>
@@ -380,7 +380,7 @@ export function DFYouServiceTemplate() {
 
       {/* Portfolio Showcase */}
       <section id="work" className="py-32">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <ScrollReveal>
             <h2 className="text-5xl font-bold text-center mb-8">{serviceData.portfolio.title}</h2>
             <p className="text-xl text-center text-stone-600 mb-12">
@@ -434,7 +434,7 @@ export function DFYouServiceTemplate() {
 
       {/* Pricing */}
       <section id="pricing" className="py-32 bg-stone-50">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <ScrollReveal>
             <div className="text-center mb-16">
               <h2 className="text-5xl font-bold mb-6">{serviceData.pricing.title}</h2>
@@ -491,7 +491,7 @@ export function DFYouServiceTemplate() {
 
       {/* Guarantees */}
       <section className="py-32">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <ScrollReveal>
             <h2 className="text-5xl font-bold text-center mb-24">Our Guarantees</h2>
           </ScrollReveal>
@@ -514,7 +514,7 @@ export function DFYouServiceTemplate() {
 
       {/* Testimonials */}
       <section className="py-32 bg-stone-50">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <ScrollReveal>
             <h2 className="text-5xl font-bold text-center mb-24">What Clients Say</h2>
           </ScrollReveal>
@@ -546,7 +546,7 @@ export function DFYouServiceTemplate() {
 
       {/* FAQ */}
       <section id="faq" className="py-32">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <ScrollReveal>
             <h2 className="text-5xl font-bold text-center mb-24">Frequently Asked Questions</h2>
           </ScrollReveal>
@@ -570,7 +570,7 @@ export function DFYouServiceTemplate() {
 
       {/* Final CTA */}
       <section className="py-32 bg-gradient-to-br from-blue-600 via-purple-600 to-pink-500 text-white">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <ScrollReveal>
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-5xl md:text-6xl font-bold mb-8">
@@ -596,7 +596,7 @@ export function DFYouServiceTemplate() {
 
       {/* Footer */}
       <footer className="border-t border-stone-200 py-12 bg-white">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <div className="text-center">
             <div className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-pink-500 bg-clip-text text-transparent mb-2">
               DESIGN ON TAP

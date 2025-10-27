@@ -56,9 +56,9 @@
         "templatesLabel": "Projects"
       },
       "gallery": {
-        "title": "Featured",
-        "titleGradient": "Work",
-        "subtitle": "Browse through my portfolio of web applications, landing pages, and interactive experiences"
+        "title": "Customizable",
+        "titleGradient": "Templates",
+        "subtitle": "These templates can be edited to any direction, depending on your needs. Let's talk!"
       }
     },
     "categories": {
@@ -431,6 +431,36 @@
         "features": ["Client Engagements", "Partner Profiles", "Methodology Framework", "Thought Leadership"],
         "tags": ["consulting", "strategy", "transformation", "executive"],
         "bestFor": ["Consulting Firms", "Advisory Services", "Strategic Consulting"]
+      },
+      {
+        "id": "blog-personal",
+        "name": "Clean Personal Blog",
+        "description": "Minimalist personal blog with clean layout, featured posts, newsletter integration, and social sharing.",
+        "category": "Blog",
+        "difficulty": "intermediate",
+        "features": ["Featured Posts", "Category Filter", "Newsletter", "Social Links"],
+        "tags": ["blog", "personal", "minimalist", "clean"],
+        "bestFor": ["Writers", "Personal Brands", "Content Creators"]
+      },
+      {
+        "id": "blog-magazine",
+        "name": "Magazine Editorial Blog",
+        "description": "Professional magazine-style blog with advanced grid layouts, trending articles, editorial team, and multi-column layouts.",
+        "category": "Blog",
+        "difficulty": "advanced",
+        "features": ["Trending Articles", "Editorial Team", "Advanced Grids", "Category System"],
+        "tags": ["magazine", "editorial", "professional", "media"],
+        "bestFor": ["Online Magazines", "News Sites", "Editorial Teams"]
+      },
+      {
+        "id": "blog-tech",
+        "name": "Interactive Tech Blog",
+        "description": "Advanced developer blog with dark mode, code snippets, learning series, progress tracking, and interactive features.",
+        "category": "Blog",
+        "difficulty": "advanced",
+        "features": ["Dark Mode", "Code Snippets", "Learning Series", "Progress Tracking"],
+        "tags": ["tech", "developer", "interactive", "code"],
+        "bestFor": ["Tech Blogs", "Developer Communities", "Tutorial Sites"]
       }
     ]
   },
@@ -491,9 +521,9 @@
         "templatesLabel": "Проектов"
       },
       "gallery": {
-        "title": "Избранные",
-        "titleGradient": "Работы",
-        "subtitle": "Просмотрите мое портфолио веб-приложений, лендингов и интерактивных решений"
+        "title": "Настраиваемые",
+        "titleGradient": "Шаблоны",
+        "subtitle": "Эти шаблоны можно адаптировать в любом направлении, в зависимости от ваших потребностей. Давайте обсудим!"
       }
     },
     "categories": {
@@ -866,6 +896,36 @@
         "features": ["Клиентские Проекты", "Профили Партнеров", "Методология", "Экспертиза"],
         "tags": ["консалтинг", "стратегия", "трансформация", "руководство"],
         "bestFor": ["Консалтинговые Фирмы", "Консультационные Услуги", "Стратегический Консалтинг"]
+      },
+      {
+        "id": "blog-personal",
+        "name": "Чистый Личный Блог",
+        "description": "Минималистичный личный блог с чистым дизайном, избранными постами, подпиской на рассылку и социальными ссылками.",
+        "category": "Blog",
+        "difficulty": "intermediate",
+        "features": ["Избранные Посты", "Фильтр Категорий", "Рассылка", "Социальные Ссылки"],
+        "tags": ["блог", "личный", "минимализм", "чистый"],
+        "bestFor": ["Писатели", "Личные Бренды", "Создатели Контента"]
+      },
+      {
+        "id": "blog-magazine",
+        "name": "Журнальный Редакционный Блог",
+        "description": "Профессиональный блог в стиле журнала с продвинутыми сетками, трендовыми статьями, редакционной командой и многоколоночными макетами.",
+        "category": "Blog",
+        "difficulty": "advanced",
+        "features": ["Трендовые Статьи", "Редакционная Команда", "Продвинутые Сетки", "Система Категорий"],
+        "tags": ["журнал", "редакция", "профессиональный", "медиа"],
+        "bestFor": ["Онлайн Журналы", "Новостные Сайты", "Редакционные Команды"]
+      },
+      {
+        "id": "blog-tech",
+        "name": "Интерактивный Технический Блог",
+        "description": "Продвинутый блог для разработчиков с темной темой, примерами кода, обучающими сериями, отслеживанием прогресса и интерактивными функциями.",
+        "category": "Blog",
+        "difficulty": "advanced",
+        "features": ["Темная Тема", "Примеры Кода", "Обучающие Серии", "Отслеживание Прогресса"],
+        "tags": ["технологии", "разработчик", "интерактивный", "код"],
+        "bestFor": ["Технические Блоги", "Сообщества Разработчиков", "Сайты с Туториалами"]
       }
     ]
   }

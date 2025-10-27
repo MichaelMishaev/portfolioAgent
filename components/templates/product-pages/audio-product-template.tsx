@@ -6,7 +6,7 @@ import { ScrollReveal } from "@/components/animations/scroll-reveal";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { FiCheck, FiMusic, FiHeadphones, FiZap, FiSettings, FiTrendingUp, FiRadio, FiCpu } from "react-icons/fi";
+import { FiCheck, FiMusic, FiHeadphones, FiZap, FiSettings, FiTrendingUp, FiRadio, FiCpu } , FiMenu, FiX } from "react-icons/fi";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
@@ -177,7 +177,7 @@ export function AudioProductTemplate() {
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white dark:from-gray-950 dark:to-gray-900">
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-lg border-b border-gray-200 dark:border-gray-800">
-        <div className="container mx-auto px-6 py-4 flex items-center justify-between">
+        <div className="container mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
           <Link href="/" className="text-xl font-bold">
             AURORA
           </Link>
@@ -191,7 +191,7 @@ export function AudioProductTemplate() {
       </nav>
 
       {/* Hero Section */}
-      <section className="container mx-auto px-6 pt-20 pb-32">
+      <section className="container mx-auto px-4 sm:px-6 pt-20 pb-32">
         <div className="max-w-7xl mx-auto">
           <FadeIn>
             <div className="text-center mb-12">
@@ -272,7 +272,7 @@ export function AudioProductTemplate() {
 
       {/* Features Section */}
       <section id="features" className="py-32 bg-white dark:bg-gray-900">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <ScrollReveal>
             <div className="text-center mb-20">
               <h2 className="text-5xl md:text-6xl font-bold mb-6">
@@ -314,7 +314,7 @@ export function AudioProductTemplate() {
 
       {/* Technical Specifications */}
       <section id="specs" className="py-32 bg-gray-50 dark:bg-gray-950">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <ScrollReveal>
             <div className="text-center mb-20">
               <h2 className="text-5xl md:text-6xl font-bold mb-6">
@@ -352,7 +352,7 @@ export function AudioProductTemplate() {
 
       {/* Comparison Table */}
       <section id="compare" className="py-32 bg-white dark:bg-gray-900">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <ScrollReveal>
             <div className="text-center mb-20">
               <h2 className="text-5xl md:text-6xl font-bold mb-6">
@@ -431,7 +431,7 @@ export function AudioProductTemplate() {
 
       {/* Reviews */}
       <section className="py-32 bg-gray-50 dark:bg-gray-950">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <ScrollReveal>
             <div className="text-center mb-20">
               <h2 className="text-5xl md:text-6xl font-bold mb-6">
@@ -467,7 +467,7 @@ export function AudioProductTemplate() {
 
       {/* In the Box */}
       <section className="py-32 bg-white dark:bg-gray-900">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <div className="max-w-4xl mx-auto">
             <ScrollReveal>
               <div className="text-center mb-16">
@@ -497,7 +497,7 @@ export function AudioProductTemplate() {
 
       {/* Final CTA */}
       <section className="py-32 bg-gradient-to-br from-blue-600 to-purple-600 text-white">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <ScrollReveal>
             <div className="text-center max-w-4xl mx-auto">
               <h2 className="text-5xl md:text-6xl font-bold mb-6">
@@ -521,7 +521,7 @@ export function AudioProductTemplate() {
 
       {/* Footer */}
       <footer className="border-t border-gray-200 dark:border-gray-800 py-12">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <div className="text-center text-sm text-muted-foreground">
             <p>© 2024 Aurora Audio. All rights reserved.</p>
           </div>

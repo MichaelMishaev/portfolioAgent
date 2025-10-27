@@ -1,0 +1,330 @@
+"use client";
+
+import { FadeIn } from "@/components/animations/fade-in";
+import { ScrollReveal } from "@/components/animations/scroll-reveal";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Input } from "@/components/ui/input";
+import {
+  FiSearch,
+  FiCalendar,
+  FiClock,
+  FiTag,
+  FiArrowRight,
+  FiMail,
+  FiTwitter,
+  FiGithub,
+  FiLinkedin,
+} from "react-icons/fi";
+import Link from "next/link";
+
+const blogData = {
+  author: {
+    name: "Sarah Mitchell",
+    bio: "Writer, designer, and creative thinker sharing insights on design, productivity, and life.",
+    avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop",
+    social: {
+      twitter: "https://twitter.com",
+      github: "https://github.com",
+      linkedin: "https://linkedin.com",
+    },
+  },
+  featured: {
+    title: "The Art of Minimalist Design in 2025",
+    excerpt: "Exploring how less is truly more in modern digital design, and why embracing simplicity can lead to more impactful user experiences.",
+    image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=1200&h=600&fit=crop",
+    category: "Design",
+    date: "Jan 15, 2025",
+    readTime: "8 min read",
+    slug: "minimalist-design-2025",
+  },
+  posts: [
+    {
+      id: 1,
+      title: "Building Better User Interfaces",
+      excerpt: "A comprehensive guide to creating intuitive and beautiful user interfaces that users love.",
+      image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&h=400&fit=crop",
+      category: "Design",
+      date: "Jan 12, 2025",
+      readTime: "6 min read",
+      slug: "building-better-ui",
+    },
+    {
+      id: 2,
+      title: "Productivity Hacks for Designers",
+      excerpt: "Simple techniques to boost your productivity and maintain creative flow throughout the day.",
+      image: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=600&h=400&fit=crop",
+      category: "Productivity",
+      date: "Jan 10, 2025",
+      readTime: "5 min read",
+      slug: "productivity-hacks",
+    },
+    {
+      id: 3,
+      title: "The Future of Web Development",
+      excerpt: "Exploring emerging trends and technologies shaping the future of web development.",
+      image: "https://images.unsplash.com/photo-1547658719-da2b51169166?w=600&h=400&fit=crop",
+      category: "Development",
+      date: "Jan 8, 2025",
+      readTime: "7 min read",
+      slug: "future-web-dev",
+    },
+    {
+      id: 4,
+      title: "Typography That Tells a Story",
+      excerpt: "How to choose and pair fonts that enhance your message and create visual harmony.",
+      image: "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=600&h=400&fit=crop",
+      category: "Design",
+      date: "Jan 5, 2025",
+      readTime: "4 min read",
+      slug: "typography-story",
+    },
+    {
+      id: 5,
+      title: "Remote Work: A Year in Review",
+      excerpt: "Lessons learned and best practices from a year of working remotely as a creative professional.",
+      image: "https://images.unsplash.com/photo-1588196749597-9ff075ee6b5b?w=600&h=400&fit=crop",
+      category: "Lifestyle",
+      date: "Jan 3, 2025",
+      readTime: "6 min read",
+      slug: "remote-work-review",
+    },
+    {
+      id: 6,
+      title: "Color Theory for Beginners",
+      excerpt: "Understanding the basics of color theory and how to apply it in your design work.",
+      image: "https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=600&h=400&fit=crop",
+      category: "Design",
+      date: "Dec 28, 2024",
+      readTime: "5 min read",
+      slug: "color-theory",
+    },
+  ],
+  categories: ["All", "Design", "Development", "Productivity", "Lifestyle"],
+};
+
+export function PersonalBlogTemplate() {
+  return (
+    <div className="min-h-screen bg-gray-50">
+      {/* Header */}
+      <header className="bg-white border-b sticky top-0 z-50">
+        <div className="container mx-auto px-6 py-4 flex items-center justify-between">
+          <Link href="/" className="text-2xl font-bold">
+            Sarah Mitchell
+          </Link>
+          <nav className="hidden md:flex items-center gap-8">
+            <a href="#blog" className="text-sm font-medium hover:text-blue-600 transition-colors">
+              Blog
+            </a>
+            <a href="#about" className="text-sm font-medium hover:text-blue-600 transition-colors">
+              About
+            </a>
+            <a href="#newsletter" className="text-sm font-medium hover:text-blue-600 transition-colors">
+              Newsletter
+            </a>
+          </nav>
+          <div className="flex items-center gap-4">
+            <button className="p-2 hover:bg-gray-100 rounded-lg transition-colors">
+              <FiSearch className="w-5 h-5" />
+            </button>
+          </div>
+        </div>
+      </header>
+
+      {/* Hero / About Section */}
+      <section className="bg-white py-16 border-b">
+        <div className="container mx-auto px-6 max-w-4xl">
+          <FadeIn>
+            <div className="flex flex-col md:flex-row items-center gap-8">
+              <img
+                src={blogData.author.avatar}
+                alt={blogData.author.name}
+                className="w-32 h-32 rounded-full object-cover border-4 border-gray-100"
+              />
+              <div className="text-center md:text-left">
+                <h1 className="text-4xl md:text-5xl font-bold mb-3">{blogData.author.name}</h1>
+                <p className="text-xl text-gray-600 mb-4">{blogData.author.bio}</p>
+                <div className="flex items-center gap-3 justify-center md:justify-start">
+                  <a
+                    href={blogData.author.social.twitter}
+                    className="p-2 bg-gray-100 hover:bg-blue-100 rounded-lg transition-colors"
+                  >
+                    <FiTwitter className="w-5 h-5" />
+                  </a>
+                  <a
+                    href={blogData.author.social.github}
+                    className="p-2 bg-gray-100 hover:bg-blue-100 rounded-lg transition-colors"
+                  >
+                    <FiGithub className="w-5 h-5" />
+                  </a>
+                  <a
+                    href={blogData.author.social.linkedin}
+                    className="p-2 bg-gray-100 hover:bg-blue-100 rounded-lg transition-colors"
+                  >
+                    <FiLinkedin className="w-5 h-5" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </FadeIn>
+        </div>
+      </section>
+
+      {/* Featured Post */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-6 max-w-5xl">
+          <ScrollReveal>
+            <Card className="overflow-hidden hover:shadow-xl transition-shadow border-0 shadow-lg">
+              <div className="grid md:grid-cols-2 gap-0">
+                <div className="relative h-80 md:h-auto">
+                  <img
+                    src={blogData.featured.image}
+                    alt={blogData.featured.title}
+                    className="w-full h-full object-cover"
+                  />
+                  <Badge className="absolute top-4 left-4 bg-blue-600">{blogData.featured.category}</Badge>
+                </div>
+                <div className="p-8 flex flex-col justify-center">
+                  <div className="mb-4">
+                    <Badge variant="outline" className="mb-4">Featured</Badge>
+                    <h2 className="text-3xl font-bold mb-4 leading-tight">{blogData.featured.title}</h2>
+                    <p className="text-gray-600 mb-6 text-lg">{blogData.featured.excerpt}</p>
+                  </div>
+                  <div className="flex items-center gap-4 text-sm text-gray-500 mb-6">
+                    <span className="flex items-center gap-1">
+                      <FiCalendar className="w-4 h-4" />
+                      {blogData.featured.date}
+                    </span>
+                    <span className="flex items-center gap-1">
+                      <FiClock className="w-4 h-4" />
+                      {blogData.featured.readTime}
+                    </span>
+                  </div>
+                  <Button className="w-fit">
+                    Read Article
+                    <FiArrowRight className="ml-2 w-4 h-4" />
+                  </Button>
+                </div>
+              </div>
+            </Card>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* Category Filter */}
+      <section id="blog" className="py-8 bg-gray-50 border-t">
+        <div className="container mx-auto px-6 max-w-5xl">
+          <div className="flex items-center gap-3 overflow-x-auto pb-2">
+            {blogData.categories.map((category) => (
+              <Button
+                key={category}
+                variant={category === "All" ? "default" : "outline"}
+                size="sm"
+                className="flex-shrink-0"
+              >
+                {category}
+              </Button>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Blog Grid */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-6 max-w-5xl">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {blogData.posts.map((post, index) => (
+              <ScrollReveal key={post.id} delay={index * 0.1}>
+                <Card className="h-full flex flex-col overflow-hidden hover:shadow-xl transition-all hover:-translate-y-1 group border-0 shadow">
+                  <div className="relative aspect-video overflow-hidden">
+                    <img
+                      src={post.image}
+                      alt={post.title}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                    />
+                    <Badge className="absolute top-4 left-4 bg-white/90 text-gray-900 hover:bg-white">
+                      <FiTag className="w-3 h-3 mr-1" />
+                      {post.category}
+                    </Badge>
+                  </div>
+                  <CardContent className="p-6 flex flex-col flex-grow">
+                    <h3 className="text-xl font-bold mb-3 group-hover:text-blue-600 transition-colors">
+                      {post.title}
+                    </h3>
+                    <p className="text-gray-600 mb-4 flex-grow">{post.excerpt}</p>
+                    <div className="flex items-center justify-between text-sm text-gray-500 pt-4 border-t">
+                      <span className="flex items-center gap-1">
+                        <FiCalendar className="w-4 h-4" />
+                        {post.date}
+                      </span>
+                      <span className="flex items-center gap-1">
+                        <FiClock className="w-4 h-4" />
+                        {post.readTime}
+                      </span>
+                    </div>
+                  </CardContent>
+                </Card>
+              </ScrollReveal>
+            ))}
+          </div>
+
+          {/* Load More */}
+          <div className="text-center mt-12">
+            <Button variant="outline" size="lg">
+              Load More Articles
+              <FiArrowRight className="ml-2 w-4 h-4" />
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Newsletter Section */}
+      <section id="newsletter" className="py-20 bg-gradient-to-br from-blue-600 to-purple-600">
+        <div className="container mx-auto px-6 max-w-3xl text-center">
+          <ScrollReveal>
+            <FiMail className="w-16 h-16 mx-auto mb-6 text-white" />
+            <h2 className="text-4xl font-bold text-white mb-4">Join the Newsletter</h2>
+            <p className="text-xl text-blue-100 mb-8">
+              Get the latest articles and insights delivered to your inbox every week.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+              <Input
+                type="email"
+                placeholder="Your email address"
+                className="bg-white/10 border-white/20 text-white placeholder:text-white/60"
+              />
+              <Button variant="secondary" className="bg-white text-blue-600 hover:bg-gray-100">
+                Subscribe
+              </Button>
+            </div>
+            <p className="text-sm text-blue-100 mt-4">No spam. Unsubscribe anytime.</p>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-white py-12 border-t">
+        <div className="container mx-auto px-6 max-w-5xl">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+            <div className="text-center md:text-left">
+              <p className="text-2xl font-bold mb-2">{blogData.author.name}</p>
+              <p className="text-gray-600">© 2025 All rights reserved.</p>
+            </div>
+            <div className="flex items-center gap-4">
+              <a href={blogData.author.social.twitter} className="text-gray-600 hover:text-blue-600 transition-colors">
+                <FiTwitter className="w-5 h-5" />
+              </a>
+              <a href={blogData.author.social.github} className="text-gray-600 hover:text-blue-600 transition-colors">
+                <FiGithub className="w-5 h-5" />
+              </a>
+              <a href={blogData.author.social.linkedin} className="text-gray-600 hover:text-blue-600 transition-colors">
+                <FiLinkedin className="w-5 h-5" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+}

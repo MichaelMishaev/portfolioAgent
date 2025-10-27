@@ -6,7 +6,7 @@ import { ScrollReveal } from "@/components/animations/scroll-reveal";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { FiCheck, FiStar, FiArrowRight, FiPlay, FiBook, FiUsers, FiTrendingUp, FiAward, FiClock } from "react-icons/fi";
+import { FiCheck, FiStar, FiArrowRight, FiPlay, FiBook, FiUsers, FiTrendingUp, FiAward, FiClock, FiMenu, FiX } from "react-icons/fi";
 import Link from "next/link";
 
 const courseData = {
@@ -249,24 +249,64 @@ const courseData = {
 };
 
 export function CourseProductTemplate() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white dark:from-blue-950 dark:to-gray-900">
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-lg border-b">
-        <div className="container mx-auto px-6 py-4 flex items-center justify-between">
-          <Link href="/" className="text-xl font-bold">
-            Design Mastery
-          </Link>
-          <div className="flex items-center gap-6">
-            <a href="#curriculum" className="text-sm hover:text-primary transition-colors">Curriculum</a>
-            <a href="#pricing" className="text-sm hover:text-primary transition-colors">Pricing</a>
-            <Button size="sm">{courseData.cta.primary}</Button>
+        <div className="container mx-auto px-4 sm:px-6 py-4">
+          <div className="flex items-center justify-between">
+            <Link href="/" className="text-xl font-bold">
+              Design Mastery
+            </Link>
+
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex items-center gap-6">
+              <a href="#curriculum" className="text-sm hover:text-primary transition-colors">Curriculum</a>
+              <a href="#pricing" className="text-sm hover:text-primary transition-colors">Pricing</a>
+              <Button size="sm">{courseData.cta.primary}</Button>
+            </div>
+
+            {/* Mobile Menu Button */}
+            <button
+              className="md:hidden p-2 text-foreground hover:text-primary transition-colors"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label="Toggle menu"
+            >
+              {mobileMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
+            </button>
           </div>
         </div>
+
+        {/* Mobile Menu */}
+        {mobileMenuOpen && (
+          <div className="md:hidden bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm border-t">
+            <div className="container mx-auto px-4 sm:px-6 py-4 flex flex-col gap-4">
+              <a
+                href="#curriculum"
+                className="text-sm hover:text-primary transition-colors py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Curriculum
+              </a>
+              <a
+                href="#pricing"
+                className="text-sm hover:text-primary transition-colors py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Pricing
+              </a>
+              <Button size="sm" className="w-full" onClick={() => setMobileMenuOpen(false)}>
+                {courseData.cta.primary}
+              </Button>
+            </div>
+          </div>
+        )}
       </nav>
 
       {/* Hero Section */}
-      <section className="container mx-auto px-6 pt-20 pb-16">
+      <section className="container mx-auto px-4 sm:px-6 pt-20 pb-16">
         <div className="max-w-4xl mx-auto text-center">
           <FadeIn>
             <Badge className="mb-4 bg-gradient-to-r from-blue-600 to-gold-500 text-white border-0">
@@ -325,7 +365,7 @@ export function CourseProductTemplate() {
       </section>
 
       {/* Instructor Credibility */}
-      <section className="container mx-auto px-6 py-20 border-t">
+      <section className="container mx-auto px-4 sm:px-6 py-20 border-t">
         <ScrollReveal>
           <div className="max-w-4xl mx-auto">
             <div className="flex flex-col md:flex-row gap-8 items-center">
@@ -353,7 +393,7 @@ export function CourseProductTemplate() {
       </section>
 
       {/* Transformation - Before/After */}
-      <section className="container mx-auto px-6 py-20 bg-gradient-to-r from-blue-100 to-gold-100 dark:from-blue-950 dark:to-gold-950">
+      <section className="container mx-auto px-4 sm:px-6 py-20 bg-gradient-to-r from-blue-100 to-gold-100 dark:from-blue-950 dark:to-gold-950">
         <ScrollReveal>
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
@@ -427,7 +467,7 @@ export function CourseProductTemplate() {
       </section>
 
       {/* Curriculum */}
-      <section id="curriculum" className="container mx-auto px-6 py-20">
+      <section id="curriculum" className="container mx-auto px-4 sm:px-6 py-20">
         <ScrollReveal>
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
@@ -476,7 +516,7 @@ export function CourseProductTemplate() {
       </section>
 
       {/* Features */}
-      <section className="container mx-auto px-6 py-20 bg-muted/30">
+      <section className="container mx-auto px-4 sm:px-6 py-20 bg-muted/30">
         <ScrollReveal>
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
@@ -503,7 +543,7 @@ export function CourseProductTemplate() {
       </section>
 
       {/* Testimonials */}
-      <section className="container mx-auto px-6 py-20">
+      <section className="container mx-auto px-4 sm:px-6 py-20">
         <ScrollReveal>
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
@@ -548,7 +588,7 @@ export function CourseProductTemplate() {
       </section>
 
       {/* Pricing */}
-      <section id="pricing" className="container mx-auto px-6 py-20 bg-muted/30">
+      <section id="pricing" className="container mx-auto px-4 sm:px-6 py-20 bg-muted/30">
         <ScrollReveal>
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
@@ -613,7 +653,7 @@ export function CourseProductTemplate() {
       </section>
 
       {/* FAQ */}
-      <section className="container mx-auto px-6 py-20">
+      <section className="container mx-auto px-4 sm:px-6 py-20">
         <ScrollReveal>
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
@@ -637,7 +677,7 @@ export function CourseProductTemplate() {
       </section>
 
       {/* Final CTA */}
-      <section className="container mx-auto px-6 py-20 bg-muted/30">
+      <section className="container mx-auto px-4 sm:px-6 py-20 bg-muted/30">
         <ScrollReveal>
           <Card className="max-w-4xl mx-auto bg-gradient-to-r from-blue-600 to-gold-500 text-white border-0">
             <CardContent className="p-12 text-center">
@@ -661,7 +701,7 @@ export function CourseProductTemplate() {
 
       {/* Footer */}
       <footer className="border-t bg-white dark:bg-gray-900 py-12">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <div className="text-center text-sm text-muted-foreground">
             <p>© 2024 Design Mastery. All rights reserved.</p>
           </div>

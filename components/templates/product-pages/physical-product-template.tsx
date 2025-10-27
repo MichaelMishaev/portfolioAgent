@@ -6,7 +6,7 @@ import { ScrollReveal } from "@/components/animations/scroll-reveal";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { FiCheck, FiStar, FiTruck, FiShield, FiRefreshCw, FiBox } from "react-icons/fi";
+import { FiCheck, FiStar, FiTruck, FiShield, FiRefreshCw, FiBox } , FiMenu, FiX } from "react-icons/fi";
 import Link from "next/link";
 
 const productData = {
@@ -206,7 +206,7 @@ export function PhysicalProductTemplate() {
     <div className="min-h-screen bg-white dark:bg-black text-black dark:text-white">
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-white/80 dark:bg-black/80 backdrop-blur-lg border-b border-gray-200 dark:border-gray-800">
-        <div className="container mx-auto px-6 py-4 flex items-center justify-between">
+        <div className="container mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
           <Link href="/" className="text-xl font-semibold">
             AirWave
           </Link>
@@ -221,7 +221,7 @@ export function PhysicalProductTemplate() {
       </nav>
 
       {/* Hero Section */}
-      <section className="container mx-auto px-6 pt-20 pb-16">
+      <section className="container mx-auto px-4 sm:px-6 pt-20 pb-16">
         <div className="max-w-6xl mx-auto">
           <FadeIn>
             <div className="text-center mb-12">
@@ -301,7 +301,7 @@ export function PhysicalProductTemplate() {
 
       {/* Shipping Info Banner */}
       <section className="border-y border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-950">
-        <div className="container mx-auto px-6 py-8">
+        <div className="container mx-auto px-4 sm:px-6 py-8">
           <div className="grid md:grid-cols-4 gap-6 text-center">
             <div className="flex flex-col items-center">
               <FiTruck className="w-6 h-6 mb-2" />
@@ -324,7 +324,7 @@ export function PhysicalProductTemplate() {
       </section>
 
       {/* Features */}
-      <section id="features" className="container mx-auto px-6 py-32">
+      <section id="features" className="container mx-auto px-4 sm:px-6 py-32">
         <div className="max-w-6xl mx-auto space-y-32">
           {productData.features.map((feature, index) => (
             <ScrollReveal key={feature.title}>
@@ -351,7 +351,7 @@ export function PhysicalProductTemplate() {
       </section>
 
       {/* Technical Specifications */}
-      <section id="specs" className="container mx-auto px-6 py-32 bg-gray-50 dark:bg-gray-950">
+      <section id="specs" className="container mx-auto px-4 sm:px-6 py-32 bg-gray-50 dark:bg-gray-950">
         <ScrollReveal>
           <div className="max-w-6xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center">
@@ -382,7 +382,7 @@ export function PhysicalProductTemplate() {
       </section>
 
       {/* What's in the Box */}
-      <section className="container mx-auto px-6 py-32">
+      <section className="container mx-auto px-4 sm:px-6 py-32">
         <ScrollReveal>
           <div className="max-w-4xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center">
@@ -404,7 +404,7 @@ export function PhysicalProductTemplate() {
       </section>
 
       {/* Reviews */}
-      <section className="container mx-auto px-6 py-32 bg-gray-50 dark:bg-gray-950">
+      <section className="container mx-auto px-4 sm:px-6 py-32 bg-gray-50 dark:bg-gray-950">
         <ScrollReveal>
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
@@ -456,7 +456,7 @@ export function PhysicalProductTemplate() {
       </section>
 
       {/* Comparison Table */}
-      <section className="container mx-auto px-6 py-32">
+      <section className="container mx-auto px-4 sm:px-6 py-32">
         <ScrollReveal>
           <div className="max-w-6xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center">
@@ -505,7 +505,7 @@ export function PhysicalProductTemplate() {
       </section>
 
       {/* Final CTA */}
-      <section className="container mx-auto px-6 py-32 bg-gray-50 dark:bg-gray-950">
+      <section className="container mx-auto px-4 sm:px-6 py-32 bg-gray-50 dark:bg-gray-950">
         <ScrollReveal>
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-5xl md:text-6xl font-bold mb-8">
@@ -523,7 +523,7 @@ export function PhysicalProductTemplate() {
 
       {/* Footer */}
       <footer className="border-t border-gray-200 dark:border-gray-800 py-12">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <div className="text-center text-sm text-gray-600 dark:text-gray-400">
             <p>© 2024 AirWave. All rights reserved.</p>
           </div>

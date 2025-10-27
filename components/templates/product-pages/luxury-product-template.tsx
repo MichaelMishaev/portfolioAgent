@@ -6,7 +6,7 @@ import { ScrollReveal } from "@/components/animations/scroll-reveal";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { FiAward, FiMapPin, FiCalendar, FiClock, FiZap, FiShield } from "react-icons/fi";
+import { FiAward, FiMapPin, FiCalendar, FiClock, FiZap, FiShield } , FiMenu, FiX } from "react-icons/fi";
 import Link from "next/link";
 
 const productData = {
@@ -166,7 +166,7 @@ export function LuxuryProductTemplate() {
     <div className="min-h-screen bg-black text-white">
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-md border-b border-neutral-800">
-        <div className="container mx-auto px-6 py-4 flex items-center justify-between">
+        <div className="container mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
           <Link href="/" className="text-xl font-light tracking-[0.2em]">
             CHRONOS
           </Link>
@@ -230,7 +230,7 @@ export function LuxuryProductTemplate() {
 
       {/* Heritage Story */}
       <section id="heritage" className="py-32 border-t border-neutral-800">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <ScrollReveal>
             <div className="max-w-4xl mx-auto text-center mb-24">
               <h2 className="text-5xl md:text-6xl font-light mb-8 tracking-tight">
@@ -260,7 +260,7 @@ export function LuxuryProductTemplate() {
 
       {/* Craftsmanship Details */}
       <section id="craftsmanship" className="py-32 bg-neutral-950">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <ScrollReveal>
             <h2 className="text-5xl md:text-6xl font-light text-center mb-24 tracking-tight">
               {productData.craftsmanship.title}
@@ -295,7 +295,7 @@ export function LuxuryProductTemplate() {
 
       {/* Premium Configurator */}
       <section className="py-32 border-t border-neutral-800">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <ScrollReveal>
             <h2 className="text-5xl md:text-6xl font-light text-center mb-24 tracking-tight">
               Create Your Masterpiece
@@ -394,7 +394,7 @@ export function LuxuryProductTemplate() {
 
       {/* Technical Excellence */}
       <section className="py-32 bg-neutral-950">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <ScrollReveal>
             <h2 className="text-5xl md:text-6xl font-light text-center mb-24 tracking-tight">
               {productData.technical.title}
@@ -432,7 +432,7 @@ export function LuxuryProductTemplate() {
 
       {/* Awards & Press */}
       <section className="py-32 border-t border-neutral-800">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <ScrollReveal>
             <h2 className="text-5xl font-light text-center mb-24 tracking-tight">
               Recognition of Excellence
@@ -471,7 +471,7 @@ export function LuxuryProductTemplate() {
 
       {/* Boutique Locator CTA */}
       <section className="py-32 bg-neutral-950">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <ScrollReveal>
             <div className="max-w-4xl mx-auto text-center">
               <FiMapPin className="w-16 h-16 mx-auto mb-8 text-amber-500" />
@@ -504,7 +504,7 @@ export function LuxuryProductTemplate() {
 
       {/* Footer */}
       <footer className="border-t border-neutral-800 py-16">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <div className="text-center">
             <div className="text-2xl font-light tracking-[0.2em] mb-4">CHRONOS</div>
             <p className="text-sm text-neutral-500">

@@ -6,7 +6,7 @@ import { ScrollReveal } from "@/components/animations/scroll-reveal";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { FiCheck, FiStar, FiZap, FiCpu, FiActivity, FiTrendingUp } from "react-icons/fi";
+import { FiCheck, FiStar, FiZap, FiCpu, FiActivity, FiTrendingUp } , FiMenu, FiX } from "react-icons/fi";
 import Link from "next/link";
 
 const productData = {
@@ -101,7 +101,7 @@ export function TechProductTemplate() {
     <div className="min-h-screen bg-black text-white">
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-black/90 backdrop-blur-lg border-b border-yellow-500/20">
-        <div className="container mx-auto px-6 py-4 flex items-center justify-between">
+        <div className="container mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
           <Link href="/" className="text-xl font-bold text-yellow-400">
             HYPERX
           </Link>
@@ -116,7 +116,7 @@ export function TechProductTemplate() {
       </nav>
 
       {/* Hero Section */}
-      <section className="container mx-auto px-6 pt-12 pb-8">
+      <section className="container mx-auto px-4 sm:px-6 pt-12 pb-8">
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Left: Product Viewer */}
           <div>
@@ -216,7 +216,7 @@ export function TechProductTemplate() {
       </section>
 
       {/* Key Features Bento Grid */}
-      <section className="container mx-auto px-6 py-16 border-t border-yellow-500/20">
+      <section className="container mx-auto px-4 sm:px-6 py-16 border-t border-yellow-500/20">
         <div className="grid md:grid-cols-4 gap-4">
           {productData.keyFeatures.map((feature, idx) => (
             <ScrollReveal key={feature.title} delay={idx * 0.1}>
@@ -237,7 +237,7 @@ export function TechProductTemplate() {
       </section>
 
       {/* Tech Specs */}
-      <section id="specs" className="container mx-auto px-6 py-16 border-t border-yellow-500/20">
+      <section id="specs" className="container mx-auto px-4 sm:px-6 py-16 border-t border-yellow-500/20">
         <ScrollReveal>
           <h2 className="text-4xl font-black uppercase text-center mb-12 tracking-tight">
             TECHNICAL <span className="text-yellow-400">SPECIFICATIONS</span>
@@ -270,7 +270,7 @@ export function TechProductTemplate() {
       </section>
 
       {/* Comparison Table */}
-      <section className="container mx-auto px-6 py-16 border-t border-yellow-500/20">
+      <section className="container mx-auto px-4 sm:px-6 py-16 border-t border-yellow-500/20">
         <ScrollReveal>
           <h2 className="text-4xl font-black uppercase text-center mb-12 tracking-tight">
             HOW WE <span className="text-yellow-400">COMPARE</span>
@@ -308,7 +308,7 @@ export function TechProductTemplate() {
       </section>
 
       {/* Reviews */}
-      <section id="reviews" className="container mx-auto px-6 py-16 border-t border-yellow-500/20">
+      <section id="reviews" className="container mx-auto px-4 sm:px-6 py-16 border-t border-yellow-500/20">
         <ScrollReveal>
           <h2 className="text-4xl font-black uppercase text-center mb-4 tracking-tight">
             WHAT <span className="text-yellow-400">PROS SAY</span>
@@ -342,7 +342,7 @@ export function TechProductTemplate() {
       </section>
 
       {/* Final CTA */}
-      <section className="container mx-auto px-6 py-16 border-t border-yellow-500/20">
+      <section className="container mx-auto px-4 sm:px-6 py-16 border-t border-yellow-500/20">
         <ScrollReveal>
           <Card className="max-w-4xl mx-auto bg-gradient-to-r from-yellow-400 to-orange-500 border-0">
             <CardContent className="p-12 text-center text-black">
@@ -362,7 +362,7 @@ export function TechProductTemplate() {
 
       {/* Footer */}
       <footer className="border-t border-yellow-500/20 py-12">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <div className="text-center text-sm text-gray-400">
             <p>© 2024 HyperX. All rights reserved.</p>
           </div>

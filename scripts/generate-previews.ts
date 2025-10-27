@@ -106,7 +106,7 @@ async function generatePreviews() {
 
     } catch (error) {
       console.error(`❌ Failed: ${template}`);
-      console.error(`   Error: ${error.message}`);
+      console.error(`   Error: ${error instanceof Error ? error.message : String(error)}`);
       failCount++;
     } finally {
       await page.close();

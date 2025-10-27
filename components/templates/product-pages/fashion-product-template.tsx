@@ -6,7 +6,7 @@ import { ScrollReveal } from "@/components/animations/scroll-reveal";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { FiCheck, FiHeart, FiTruck, FiRefreshCw, FiPackage, FiFeather } from "react-icons/fi";
+import { FiCheck, FiHeart, FiTruck, FiRefreshCw, FiPackage, FiFeather } , FiMenu, FiX } from "react-icons/fi";
 import Link from "next/link";
 
 const productData = {
@@ -169,7 +169,7 @@ export function FashionProductTemplate() {
     <div className="min-h-screen bg-stone-50 text-stone-900">
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-stone-50/95 backdrop-blur-sm border-b border-stone-200">
-        <div className="container mx-auto px-6 py-4 flex items-center justify-between">
+        <div className="container mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
           <Link href="/" className="text-xl font-medium tracking-wide">
             URBAN STRIDE
           </Link>
@@ -193,7 +193,7 @@ export function FashionProductTemplate() {
       </nav>
 
       {/* Hero Section - Vertical Scrolling Gallery */}
-      <section className="container mx-auto px-6 pt-12 pb-8">
+      <section className="container mx-auto px-4 sm:px-6 pt-12 pb-8">
         <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12">
           {/* Left - Image Gallery */}
           <div className="space-y-4">
@@ -321,7 +321,7 @@ export function FashionProductTemplate() {
 
       {/* Sustainability Section */}
       <section id="sustainability" className="bg-stone-100 py-24">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <ScrollReveal>
             <div className="max-w-5xl mx-auto text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -351,7 +351,7 @@ export function FashionProductTemplate() {
 
       {/* Features */}
       <section id="features" className="py-24">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <div className="max-w-6xl mx-auto space-y-24">
             {productData.features.map((feature, index) => (
               <ScrollReveal key={feature.title}>
@@ -376,7 +376,7 @@ export function FashionProductTemplate() {
 
       {/* Customer Photos */}
       <section className="bg-stone-900 text-stone-50 py-24">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <ScrollReveal>
             <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
               #UrbanStrideStyle
@@ -410,7 +410,7 @@ export function FashionProductTemplate() {
 
       {/* Product Details */}
       <section className="py-24">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-12">
             <ScrollReveal>
               <div>
@@ -445,7 +445,7 @@ export function FashionProductTemplate() {
 
       {/* Reviews */}
       <section className="bg-stone-100 py-24">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <ScrollReveal>
             <h2 className="text-4xl font-bold text-center mb-16">What Our Community Says</h2>
           </ScrollReveal>
@@ -481,7 +481,7 @@ export function FashionProductTemplate() {
 
       {/* Complete the Look */}
       <section className="py-24">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <ScrollReveal>
             <h2 className="text-4xl font-bold text-center mb-16">Complete the Look</h2>
           </ScrollReveal>
@@ -508,7 +508,7 @@ export function FashionProductTemplate() {
 
       {/* Footer */}
       <footer className="border-t border-stone-200 py-12 bg-white">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <div className="text-center text-sm text-stone-600">
             <p>© 2024 Urban Stride. Designed with care for people and planet.</p>
           </div>

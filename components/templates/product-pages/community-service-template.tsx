@@ -16,7 +16,7 @@ import {
   FiCheck,
   FiStar,
   FiAward,
-} from "react-icons/fi";
+} , FiMenu, FiX } from "react-icons/fi";
 import Link from "next/link";
 
 const platformData = {
@@ -255,7 +255,7 @@ export function CommunityServiceTemplate() {
     <div className="min-h-screen bg-white text-stone-900">
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-stone-200">
-        <div className="container mx-auto px-6 py-4 flex items-center justify-between">
+        <div className="container mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
           <Link href="/" className="text-2xl font-bold bg-gradient-to-r from-teal-500 to-purple-600 bg-clip-text text-transparent">
             CREATOR COLLECTIVE
           </Link>
@@ -287,7 +287,7 @@ export function CommunityServiceTemplate() {
 
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-teal-50 via-purple-50 to-pink-50 py-24">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <div className="max-w-4xl mx-auto text-center">
             <FadeIn>
               <h1 className="text-6xl md:text-7xl font-bold mb-6 tracking-tight">
@@ -333,7 +333,7 @@ export function CommunityServiceTemplate() {
 
       {/* Dual Value Props */}
       <section id="features" className="py-32">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <div className="max-w-7xl mx-auto space-y-32">
             {/* For Creators */}
             <div>
@@ -396,7 +396,7 @@ export function CommunityServiceTemplate() {
 
       {/* Creator Showcase */}
       <section id="creators" className="py-32 bg-stone-50">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <ScrollReveal>
             <div className="text-center mb-16">
               <h2 className="text-5xl font-bold mb-6">Success Stories</h2>
@@ -464,7 +464,7 @@ export function CommunityServiceTemplate() {
 
       {/* Pricing */}
       <section id="pricing" className="py-32">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <ScrollReveal>
             <div className="text-center mb-16">
               <h2 className="text-5xl font-bold mb-6">{platformData.pricing.title}</h2>
@@ -552,7 +552,7 @@ export function CommunityServiceTemplate() {
 
       {/* Platform Reliability */}
       <section className="py-24 bg-stone-50">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-8">
             {platformData.platformFeatures.map((feature, index) => (
               <ScrollReveal key={feature.title} delay={index * 0.1}>
@@ -569,7 +569,7 @@ export function CommunityServiceTemplate() {
 
       {/* Onboarding Preview */}
       <section className="py-32">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <ScrollReveal>
             <div className="text-center mb-16">
               <h2 className="text-5xl font-bold mb-6">{platformData.onboarding.title}</h2>
@@ -596,7 +596,7 @@ export function CommunityServiceTemplate() {
 
       {/* Final CTA */}
       <section className="py-32 bg-gradient-to-br from-teal-500 via-purple-600 to-pink-500 text-white">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <ScrollReveal>
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-5xl md:text-6xl font-bold mb-8">
@@ -621,7 +621,7 @@ export function CommunityServiceTemplate() {
 
       {/* Footer */}
       <footer className="border-t border-stone-200 py-12 bg-white">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <div className="text-center">
             <div className="text-2xl font-bold bg-gradient-to-r from-teal-500 to-purple-600 bg-clip-text text-transparent mb-2">
               CREATOR COLLECTIVE

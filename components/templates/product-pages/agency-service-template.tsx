@@ -14,6 +14,8 @@ import {
   FiCheckCircle,
   FiArrowRight,
   FiPlay,
+  FiMenu,
+  FiX,
 } from "react-icons/fi";
 import Link from "next/link";
 
@@ -172,7 +174,7 @@ export function AgencyServiceTemplate() {
     <div className="min-h-screen bg-white text-gray-900">
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur-lg border-b border-gray-200">
-        <div className="container mx-auto px-6 py-4 flex items-center justify-between">
+        <div className="container mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
           <Link href="/" className="text-2xl font-bold text-gray-900">
             PIXEL<span className="text-blue-600">PERFECT</span>
           </Link>
@@ -192,7 +194,7 @@ export function AgencyServiceTemplate() {
       </nav>
 
       {/* Hero Section */}
-      <section className="container mx-auto px-6 py-24">
+      <section className="container mx-auto px-4 sm:px-6 py-24">
         <div className="max-w-4xl mx-auto text-center">
           <FadeIn>
             <Badge className="mb-4 bg-blue-100 text-blue-700 border-blue-200">
@@ -241,7 +243,7 @@ export function AgencyServiceTemplate() {
 
       {/* Services Section */}
       <section id="services" className="bg-gray-50 py-24">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <ScrollReveal>
             <div className="text-center mb-16">
               <h2 className="text-5xl font-bold mb-4">Our Services</h2>
@@ -290,7 +292,7 @@ export function AgencyServiceTemplate() {
 
       {/* Portfolio Section */}
       <section id="portfolio" className="py-24">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <ScrollReveal>
             <div className="text-center mb-16">
               <h2 className="text-5xl font-bold mb-4">Featured Work</h2>
@@ -333,7 +335,7 @@ export function AgencyServiceTemplate() {
 
       {/* Team Section */}
       <section className="bg-gray-50 py-24">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <ScrollReveal>
             <div className="text-center mb-16">
               <h2 className="text-5xl font-bold mb-4">Meet the Team</h2>
@@ -364,7 +366,7 @@ export function AgencyServiceTemplate() {
 
       {/* Process Section */}
       <section id="process" className="py-24">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <ScrollReveal>
             <div className="text-center mb-16">
               <h2 className="text-5xl font-bold mb-4">{serviceData.process.title}</h2>
@@ -398,7 +400,7 @@ export function AgencyServiceTemplate() {
 
       {/* CTA Section */}
       <section className="bg-gradient-to-r from-blue-600 to-blue-700 py-24">
-        <div className="container mx-auto px-6 text-center">
+        <div className="container mx-auto px-4 sm:px-6 text-center">
           <ScrollReveal>
             <h2 className="text-5xl font-bold text-white mb-6">Ready to Transform Your Brand?</h2>
             <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
@@ -419,7 +421,7 @@ export function AgencyServiceTemplate() {
 
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-12">
-        <div className="container mx-auto px-6 text-center">
+        <div className="container mx-auto px-4 sm:px-6 text-center">
           <div className="text-2xl font-bold mb-4">
             PIXEL<span className="text-blue-500">PERFECT</span>
           </div>

@@ -18,7 +18,7 @@ import {
   FiBriefcase,
   FiZap,
   FiGlobe,
-} from "react-icons/fi";
+} , FiMenu, FiX } from "react-icons/fi";
 import Link from "next/link";
 
 const serviceData = {
@@ -238,7 +238,7 @@ export function ConsultingServiceTemplate() {
     <div className="min-h-screen bg-white text-gray-900">
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-lg border-b border-gray-200 shadow-sm">
-        <div className="container mx-auto px-6 py-4 flex items-center justify-between">
+        <div className="container mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
           <Link href="/" className="text-2xl font-bold">
             APEX<span className="text-emerald-600">CONSULTING</span>
           </Link>
@@ -312,7 +312,7 @@ export function ConsultingServiceTemplate() {
 
       {/* Services Section */}
       <section id="services" className="py-24 bg-white">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <ScrollReveal>
             <div className="text-center mb-16">
               <h2 className="text-5xl font-bold mb-4">Our Services</h2>
@@ -381,7 +381,7 @@ export function ConsultingServiceTemplate() {
 
       {/* Case Studies */}
       <section id="engagements" className="py-24 bg-gray-50">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <ScrollReveal>
             <div className="text-center mb-16">
               <h2 className="text-5xl font-bold mb-4">Client Engagements</h2>
@@ -441,7 +441,7 @@ export function ConsultingServiceTemplate() {
 
       {/* Team Section */}
       <section id="team" className="py-24 bg-white">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <ScrollReveal>
             <div className="text-center mb-16">
               <h2 className="text-5xl font-bold mb-4">Our Partners</h2>
@@ -473,7 +473,7 @@ export function ConsultingServiceTemplate() {
 
       {/* Methodology */}
       <section className="py-24 bg-gradient-to-br from-emerald-50 to-blue-50">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <ScrollReveal>
             <div className="text-center mb-16">
               <h2 className="text-5xl font-bold mb-4">{serviceData.methodology.title}</h2>
@@ -517,7 +517,7 @@ export function ConsultingServiceTemplate() {
 
       {/* Thought Leadership */}
       <section id="insights" className="py-24 bg-white">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <ScrollReveal>
             <div className="text-center mb-16">
               <h2 className="text-5xl font-bold mb-4">Latest Insights</h2>
@@ -555,7 +555,7 @@ export function ConsultingServiceTemplate() {
 
       {/* CTA */}
       <section className="bg-gradient-to-r from-emerald-600 to-emerald-800 py-24">
-        <div className="container mx-auto px-6 text-center">
+        <div className="container mx-auto px-4 sm:px-6 text-center">
           <ScrollReveal>
             <h2 className="text-5xl font-bold text-white mb-6">
               Let's Discuss Your Strategic Priorities
@@ -578,7 +578,7 @@ export function ConsultingServiceTemplate() {
 
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-12">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <div className="text-center mb-6">
             <div className="text-2xl font-bold mb-4">
               APEX<span className="text-emerald-500">CONSULTING</span>

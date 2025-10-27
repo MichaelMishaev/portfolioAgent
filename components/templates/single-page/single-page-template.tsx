@@ -1,11 +1,12 @@
 "use client";
 
+import { useState } from "react";
 import { FadeIn } from "@/components/animations/fade-in";
 import { ScrollReveal } from "@/components/animations/scroll-reveal";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { FiMail, FiGithub, FiLinkedin, FiTwitter } from "react-icons/fi";
+import { FiMail, FiGithub, FiLinkedin, FiTwitter, FiMenu, FiX } from "react-icons/fi";
 import Link from "next/link";
 
 const portfolioData = {
@@ -91,16 +92,20 @@ const portfolioData = {
 };
 
 export function SinglePageTemplate() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   return (
     <div className="min-h-screen bg-background">
       {/* Fixed Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b">
-        <div className="container mx-auto px-6 py-4">
+        <div className="container mx-auto px-4 sm:px-6 py-4">
           <div className="flex items-center justify-between">
             <Link href="/" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
               ← Back
             </Link>
-            <div className="flex gap-6">
+
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex gap-6">
               <a href="#about" className="text-sm hover:text-primary transition-colors">
                 About
               </a>
@@ -114,30 +119,75 @@ export function SinglePageTemplate() {
                 Contact
               </a>
             </div>
+
+            {/* Mobile Menu Button */}
+            <button
+              className="md:hidden p-2 text-foreground hover:text-primary transition-colors"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label="Toggle menu"
+            >
+              {mobileMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
+            </button>
           </div>
         </div>
+
+        {/* Mobile Menu */}
+        {mobileMenuOpen && (
+          <div className="md:hidden bg-background/95 backdrop-blur-sm border-t">
+            <div className="container mx-auto px-4 sm:px-6 py-4 flex flex-col gap-4">
+              <a
+                href="#about"
+                className="text-sm hover:text-primary transition-colors py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                About
+              </a>
+              <a
+                href="#experience"
+                className="text-sm hover:text-primary transition-colors py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Experience
+              </a>
+              <a
+                href="#projects"
+                className="text-sm hover:text-primary transition-colors py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Projects
+              </a>
+              <a
+                href="#contact"
+                className="text-sm hover:text-primary transition-colors py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Contact
+              </a>
+            </div>
+          </div>
+        )}
       </nav>
 
       {/* Hero Section */}
-      <section className="container mx-auto px-6 pt-32 pb-20 min-h-screen flex items-center">
+      <section className="container mx-auto px-4 sm:px-6 pt-32 pb-20 min-h-screen flex items-center">
         <div className="max-w-3xl">
           <FadeIn>
-            <h1 className="text-5xl md:text-7xl font-bold mb-6">
+            <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-6">
               Hi, I'm {portfolioData.name}
             </h1>
           </FadeIn>
           <FadeIn delay={0.2}>
-            <p className="text-2xl md:text-3xl text-muted-foreground mb-8">
+            <p className="text-xl sm:text-2xl md:text-3xl text-muted-foreground mb-8">
               {portfolioData.title}
             </p>
           </FadeIn>
           <FadeIn delay={0.3}>
-            <div className="flex gap-4">
-              <Button size="lg">
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button size="lg" className="w-full sm:w-auto">
                 <FiMail className="mr-2" />
                 Get in Touch
               </Button>
-              <Button variant="outline" size="lg">
+              <Button variant="outline" size="lg" className="w-full sm:w-auto">
                 View Projects
               </Button>
             </div>
@@ -146,25 +196,25 @@ export function SinglePageTemplate() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="container mx-auto px-6 py-20 scroll-mt-20">
+      <section id="about" className="container mx-auto px-4 sm:px-6 py-20 scroll-mt-20">
         <ScrollReveal>
-          <h2 className="text-3xl md:text-5xl font-bold mb-8">About Me</h2>
-          <p className="text-xl leading-relaxed text-foreground/80 max-w-3xl">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-8">About Me</h2>
+          <p className="text-lg sm:text-xl leading-relaxed text-foreground/80 max-w-3xl">
             {portfolioData.bio}
           </p>
         </ScrollReveal>
       </section>
 
       {/* Stats Section */}
-      <section className="container mx-auto px-6 py-16">
+      <section className="container mx-auto px-4 sm:px-6 py-16">
         <ScrollReveal>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
             {portfolioData.stats.map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="text-4xl md:text-5xl font-bold text-primary mb-2">
+                <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary mb-2">
                   {stat.number}
                 </div>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-xs sm:text-sm text-muted-foreground">
                   {stat.label}
                 </p>
               </div>
@@ -174,14 +224,14 @@ export function SinglePageTemplate() {
       </section>
 
       {/* Skills Section */}
-      <section id="skills" className="container mx-auto px-6 py-20 scroll-mt-20">
+      <section id="skills" className="container mx-auto px-4 sm:px-6 py-20 scroll-mt-20">
         <ScrollReveal>
-          <h2 className="text-3xl md:text-5xl font-bold mb-12">Skills & Technologies</h2>
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-12">Skills & Technologies</h2>
         </ScrollReveal>
         <ScrollReveal delay={0.2}>
-          <div className="flex flex-wrap gap-3 max-w-3xl">
+          <div className="flex flex-wrap gap-2 sm:gap-3 max-w-3xl">
             {portfolioData.skills.map((skill) => (
-              <Badge key={skill} variant="secondary" className="text-base px-4 py-2">
+              <Badge key={skill} variant="secondary" className="text-sm sm:text-base px-3 sm:px-4 py-2">
                 {skill}
               </Badge>
             ))}
@@ -190,9 +240,9 @@ export function SinglePageTemplate() {
       </section>
 
       {/* Experience Timeline Section */}
-      <section id="experience" className="container mx-auto px-6 py-20 scroll-mt-20">
+      <section id="experience" className="container mx-auto px-4 sm:px-6 py-20 scroll-mt-20">
         <ScrollReveal>
-          <h2 className="text-3xl md:text-5xl font-bold mb-12">Experience</h2>
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-12">Experience</h2>
         </ScrollReveal>
 
         <div className="max-w-3xl space-y-8">
@@ -218,7 +268,7 @@ export function SinglePageTemplate() {
       </section>
 
       {/* Process Section */}
-      <section className="container mx-auto px-6 py-20 bg-accent/5">
+      <section className="container mx-auto px-4 sm:px-6 py-20 bg-accent/5">
         <ScrollReveal>
           <h2 className="text-3xl md:text-5xl font-bold mb-12 text-center">How I Work</h2>
         </ScrollReveal>
@@ -243,7 +293,7 @@ export function SinglePageTemplate() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="container mx-auto px-6 py-20 scroll-mt-20">
+      <section id="projects" className="container mx-auto px-4 sm:px-6 py-20 scroll-mt-20">
         <ScrollReveal>
           <h2 className="text-3xl md:text-5xl font-bold mb-12">Recent Projects</h2>
         </ScrollReveal>
@@ -278,7 +328,7 @@ export function SinglePageTemplate() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="container mx-auto px-6 py-20 bg-accent/5">
+      <section className="container mx-auto px-4 sm:px-6 py-20 bg-accent/5">
         <ScrollReveal>
           <h2 className="text-3xl md:text-5xl font-bold mb-12 text-center">What People Say</h2>
         </ScrollReveal>
@@ -308,7 +358,7 @@ export function SinglePageTemplate() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="container mx-auto px-6 py-20 scroll-mt-20">
+      <section id="contact" className="container mx-auto px-4 sm:px-6 py-20 scroll-mt-20">
         <ScrollReveal>
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-4xl md:text-6xl font-bold mb-6">
@@ -357,7 +407,7 @@ export function SinglePageTemplate() {
 
       {/* Footer */}
       <footer className="border-t bg-background py-8">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <p className="text-sm text-muted-foreground text-center">
             © {new Date().getFullYear()} {portfolioData.name}. All rights reserved.
           </p>

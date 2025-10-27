@@ -21,7 +21,9 @@ import {
   FiUsers,
   FiMenu,
   FiX,
-  FiGrid
+  FiGrid,
+  FiMessageCircle,
+  FiTag
 } from "react-icons/fi";
 import { useI18n } from "@/lib/i18n-context";
 
@@ -214,9 +216,37 @@ export function TemplateGallery() {
                   {/* Features */}
                   <div className="flex flex-wrap gap-1.5 min-h-[2rem]">
                     {template.features.slice(0, 3).map((feature) => (
-                      <Badge key={feature} variant="outline" className="text-xs">
-                        {feature}
-                      </Badge>
+                      <motion.div
+                        key={feature}
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                      >
+                        <Badge
+                          variant="outline"
+                          className="text-xs cursor-pointer hover:bg-primary hover:text-primary-foreground transition-all duration-200"
+                        >
+                          {feature}
+                        </Badge>
+                      </motion.div>
+                    ))}
+                  </div>
+
+                  {/* Interactive Tags */}
+                  <div className="flex flex-wrap gap-1.5 min-h-[2rem]">
+                    {template.tags.slice(0, 3).map((tag) => (
+                      <motion.div
+                        key={tag}
+                        whileHover={{ scale: 1.05, rotate: 2 }}
+                        whileTap={{ scale: 0.95 }}
+                      >
+                        <Badge
+                          variant="secondary"
+                          className="text-xs cursor-pointer hover:shadow-md transition-all duration-200 flex items-center gap-1"
+                        >
+                          <FiTag className="w-3 h-3" />
+                          {tag}
+                        </Badge>
+                      </motion.div>
                     ))}
                   </div>
 
@@ -225,9 +255,11 @@ export function TemplateGallery() {
                     <span className="text-xs text-muted-foreground">{t.ui.colors}:</span>
                     <div className="flex space-x-1">
                       {Object.values(template.colors).map((color, i) => (
-                        <div
+                        <motion.div
                           key={i}
-                          className="w-6 h-6 rounded-full border-2 border-background shadow-sm"
+                          whileHover={{ scale: 1.2, rotate: 15 }}
+                          whileTap={{ scale: 0.9 }}
+                          className="w-6 h-6 rounded-full border-2 border-background shadow-sm cursor-pointer"
                           style={{ backgroundColor: color }}
                           title={color}
                         />
@@ -248,8 +280,18 @@ export function TemplateGallery() {
                       {t.ui.viewDemo}
                     </Link>
                   </Button>
-                  <Button variant="outline" size="sm">
-                    <FiStar className="h-4 w-4" />
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="group"
+                    asChild
+                  >
+                    <a href="#contact">
+                      <FiMessageCircle className="h-4 w-4 group-hover:animate-bounce" />
+                    </a>
+                  </Button>
+                  <Button variant="ghost" size="sm" className="group">
+                    <FiStar className="h-4 w-4 group-hover:fill-yellow-400 group-hover:text-yellow-400 transition-all" />
                   </Button>
                 </CardFooter>
               </Card>
