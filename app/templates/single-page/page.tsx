@@ -1,4 +1,5 @@
 import { SinglePageTemplate } from "@/components/templates/single-page/single-page-template";
+import { TemplateLayout } from "@/components/shared/template-layout";
 
 export const metadata = {
   title: "Single-Page Scroll - Portfolio Template",
@@ -6,5 +7,8 @@ export const metadata = {
 };
 
 export default function SinglePagePage() {
-  return <SinglePageTemplate />;
-}
+  return (
+    <TemplateLayout>
+      <SinglePageTemplate />
+    </TemplateLayout>
+  );}

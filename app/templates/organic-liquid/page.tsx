@@ -1,4 +1,5 @@
 import { OrganicLiquidTemplate } from "@/components/templates/organic-liquid/organic-liquid-template";
+import { TemplateLayout } from "@/components/shared/template-layout";
 
 export const metadata = {
   title: "Organic Liquid Morphing - Portfolio Template",
@@ -6,5 +7,8 @@ export const metadata = {
 };
 
 export default function OrganicLiquidPage() {
-  return <OrganicLiquidTemplate />;
-}
+  return (
+    <TemplateLayout>
+      <OrganicLiquidTemplate />
+    </TemplateLayout>
+  );}

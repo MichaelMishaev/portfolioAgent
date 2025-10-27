@@ -1,4 +1,5 @@
 import { PremiumProductTemplate } from "@/components/templates/product-pages/premium-product-template";
+import { TemplateLayout } from "@/components/shared/template-layout";
 
 export const metadata = {
   title: "Premium/High-Ticket Product Landing Page | Portfolio Templates",
@@ -6,5 +7,9 @@ export const metadata = {
 };
 
 export default function PremiumProductPage() {
-  return <PremiumProductTemplate />;
+  return (
+    <TemplateLayout>
+      <PremiumProductTemplate />
+    </TemplateLayout>
+  );
 }

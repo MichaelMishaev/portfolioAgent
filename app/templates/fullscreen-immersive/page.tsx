@@ -1,4 +1,5 @@
 import { FullscreenImmersiveTemplate } from "@/components/templates/fullscreen-immersive/fullscreen-immersive-template";
+import { TemplateLayout } from "@/components/shared/template-layout";
 
 export const metadata = {
   title: "Full-Screen Immersive - Portfolio Template",
@@ -6,5 +7,8 @@ export const metadata = {
 };
 
 export default function FullscreenImmersivePage() {
-  return <FullscreenImmersiveTemplate />;
-}
+  return (
+    <TemplateLayout>
+      <FullscreenImmersiveTemplate />
+    </TemplateLayout>
+  );}

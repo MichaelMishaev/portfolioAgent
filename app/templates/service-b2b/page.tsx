@@ -1,4 +1,5 @@
 import { B2BServiceTemplate } from "@/components/templates/product-pages/b2b-service-template";
+import { TemplateLayout } from "@/components/shared/template-layout";
 
 export const metadata = {
   title: "B2B Service Landing Page | Portfolio Templates",
@@ -6,5 +7,9 @@ export const metadata = {
 };
 
 export default function B2BServicePage() {
-  return <B2BServiceTemplate />;
+  return (
+    <TemplateLayout>
+      <B2BServiceTemplate />
+    </TemplateLayout>
+  );
 }

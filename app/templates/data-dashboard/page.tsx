@@ -1,4 +1,5 @@
 import { DataDashboardTemplate } from "@/components/templates/data-dashboard/data-dashboard-template";
+import { TemplateLayout } from "@/components/shared/template-layout";
 
 export const metadata = {
   title: "Data Visualization Dashboard - Portfolio Template",
@@ -6,5 +7,8 @@ export const metadata = {
 };
 
 export default function DataDashboardPage() {
-  return <DataDashboardTemplate />;
-}
+  return (
+    <TemplateLayout>
+      <DataDashboardTemplate />
+    </TemplateLayout>
+  );}

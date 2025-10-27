@@ -1,4 +1,5 @@
 import { GridMasonryTemplate } from "@/components/templates/grid-masonry/grid-masonry-template";
+import { TemplateLayout } from "@/components/shared/template-layout";
 
 export const metadata = {
   title: "Grid & Masonry - Portfolio Template",
@@ -6,5 +7,9 @@ export const metadata = {
 };
 
 export default function GridMasonryPage() {
-  return <GridMasonryTemplate />;
+  return (
+    <TemplateLayout>
+      <GridMasonryTemplate />
+    </TemplateLayout>
+  );
 }

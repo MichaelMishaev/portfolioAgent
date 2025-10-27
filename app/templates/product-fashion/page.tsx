@@ -1,4 +1,5 @@
 import { FashionProductTemplate } from "@/components/templates/product-pages/fashion-product-template";
+import { TemplateLayout } from "@/components/shared/template-layout";
 
 export const metadata = {
   title: "Fashion Product Landing Page | Portfolio Templates",
@@ -6,5 +7,8 @@ export const metadata = {
 };
 
 export default function FashionProductPage() {
-  return <FashionProductTemplate />;
-}
+  return (
+    <TemplateLayout>
+      <FashionProductTemplate />
+    </TemplateLayout>
+  );}

@@ -1,4 +1,5 @@
 import { MinimalistTemplate } from "@/components/templates/minimalist/minimalist-template";
+import { TemplateLayout } from "@/components/shared/template-layout";
 
 export const metadata = {
   title: "Minimalist & Clean - Portfolio Template",
@@ -6,5 +7,9 @@ export const metadata = {
 };
 
 export default function MinimalistPage() {
-  return <MinimalistTemplate />;
+  return (
+    <TemplateLayout>
+      <MinimalistTemplate />
+    </TemplateLayout>
+  );
 }

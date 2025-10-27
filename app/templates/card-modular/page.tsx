@@ -1,4 +1,5 @@
 import { CardModularTemplate } from "@/components/templates/card-modular/card-modular-template";
+import { TemplateLayout } from "@/components/shared/template-layout";
 
 export const metadata = {
   title: "Card-Based Modular - Portfolio Template",
@@ -6,5 +7,8 @@ export const metadata = {
 };
 
 export default function CardModularPage() {
-  return <CardModularTemplate />;
-}
+  return (
+    <TemplateLayout>
+      <CardModularTemplate />
+    </TemplateLayout>
+  );}

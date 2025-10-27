@@ -1,4 +1,5 @@
 import { KineticTypographyTemplate } from "@/components/templates/kinetic-typography/kinetic-typography-template";
+import { TemplateLayout } from "@/components/shared/template-layout";
 
 export const metadata = {
   title: "Kinetic Typography Motion - Portfolio Template",
@@ -6,5 +7,8 @@ export const metadata = {
 };
 
 export default function KineticTypographyPage() {
-  return <KineticTypographyTemplate />;
-}
+  return (
+    <TemplateLayout>
+      <KineticTypographyTemplate />
+    </TemplateLayout>
+  );}

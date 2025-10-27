@@ -359,7 +359,7 @@ export function PremiumProductTemplate() {
       <section className="container mx-auto px-6 py-32 border-t border-gold-500/20">
         <ScrollReveal>
           <div className="text-center mb-16">
-            <h2 className="text-5xl md:text-6xl font-bold mb-4">
+            <h2 className="text-5xl md:text-6xl font-bold mb-4 text-white">
               {productData.transformation.title}
             </h2>
           </div>
@@ -370,14 +370,14 @@ export function PremiumProductTemplate() {
             <ScrollReveal delay={0.1}>
               <Card className="h-full bg-gray-900 border-gray-800">
                 <CardHeader>
-                  <CardTitle className="text-3xl text-gray-200">
+                  <CardTitle className="text-3xl text-white">
                     {productData.transformation.before.title}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-4">
                     {productData.transformation.before.points.map((point, idx) => (
-                      <li key={idx} className="text-lg text-gray-100">
+                      <li key={idx} className="text-lg text-gray-300">
                         {point}
                       </li>
                     ))}
@@ -413,10 +413,10 @@ export function PremiumProductTemplate() {
       <section id="case-studies" className="container mx-auto px-6 py-32 bg-gradient-to-b from-transparent to-gray-950">
         <ScrollReveal>
           <div className="text-center mb-20">
-            <h2 className="text-5xl md:text-6xl font-bold mb-6">
+            <h2 className="text-5xl md:text-6xl font-bold mb-6 text-white">
               Real Results from Real Executives
             </h2>
-            <p className="text-xl text-gray-100">
+            <p className="text-xl text-gray-300">
               These are actual clients who invested in themselves and transformed their careers
             </p>
           </div>
@@ -437,18 +437,18 @@ export function PremiumProductTemplate() {
                       />
                       <h3 className="text-2xl font-bold mb-2 text-white">{study.name}</h3>
                       <p className="text-gold-300 font-semibold mb-1">{study.title}</p>
-                      <p className="text-sm text-gray-100 font-medium">{study.company}</p>
+                      <p className="text-sm text-gray-300 font-medium">{study.company}</p>
                     </div>
 
                     {/* Middle: Story */}
                     <div className="md:col-span-2">
                       <div className="mb-6">
-                        <h4 className="text-sm uppercase text-gray-100 font-bold tracking-wider mb-3">Challenge</h4>
-                        <p className="text-lg text-white leading-relaxed">{study.challenge}</p>
+                        <h4 className="text-sm uppercase text-gray-300 font-bold tracking-wider mb-3">CHALLENGE</h4>
+                        <p className="text-lg text-gray-100 leading-relaxed">{study.challenge}</p>
                       </div>
                       <div className="mb-6">
-                        <h4 className="text-sm uppercase text-gold-200 font-bold tracking-wider mb-3">Transformation</h4>
-                        <p className="text-lg text-white leading-relaxed font-medium">{study.transformation}</p>
+                        <h4 className="text-sm uppercase text-gold-300 font-bold tracking-wider mb-3">TRANSFORMATION</h4>
+                        <p className="text-lg text-gray-100 leading-relaxed font-medium">{study.transformation}</p>
                       </div>
 
                       {/* Metrics */}
@@ -456,14 +456,14 @@ export function PremiumProductTemplate() {
                         {study.metrics.map((metric) => (
                           <div key={metric.label} className="text-center p-5 bg-black/60 rounded-lg border border-gold-500/30">
                             <div className="text-3xl font-bold text-gold-300 mb-2">{metric.value}</div>
-                            <div className="text-xs text-gray-100 font-semibold uppercase tracking-wide">{metric.label}</div>
+                            <div className="text-xs text-gray-300 font-semibold uppercase tracking-wide">{metric.label}</div>
                           </div>
                         ))}
                       </div>
 
                       {/* Quote */}
                       <div className="border-l-4 border-gold-400 pl-6 py-2">
-                        <p className="italic text-gray-50 text-lg leading-relaxed">"{study.quote}"</p>
+                        <p className="italic text-gray-200 text-lg leading-relaxed">"{study.quote}"</p>
                       </div>
                     </div>
                   </div>
@@ -478,10 +478,10 @@ export function PremiumProductTemplate() {
       <section className="container mx-auto px-6 py-32">
         <ScrollReveal>
           <div className="text-center mb-20">
-            <h2 className="text-5xl md:text-6xl font-bold mb-6">
+            <h2 className="text-5xl md:text-6xl font-bold mb-6 text-white">
               {productData.whatYouGet.title}
             </h2>
-            <p className="text-xl text-gray-100 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               {productData.whatYouGet.subtitle}
             </p>
           </div>
@@ -496,14 +496,14 @@ export function PremiumProductTemplate() {
                     {module.icon}
                   </div>
                   <CardTitle className="text-2xl text-white">{module.title}</CardTitle>
-                  <CardDescription className="text-base text-gray-100 leading-relaxed">{module.description}</CardDescription>
+                  <CardDescription className="text-base text-gray-300 leading-relaxed">{module.description}</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-2">
                     {module.details.map((detail, idx) => (
                       <li key={idx} className="flex items-start gap-2">
                         <FiCheck className="w-5 h-5 text-gold-300 flex-shrink-0 mt-0.5" />
-                        <span className="text-sm text-gray-100 font-medium">{detail}</span>
+                        <span className="text-sm text-gray-300 font-medium">{detail}</span>
                       </li>
                     ))}
                   </ul>
@@ -518,10 +518,10 @@ export function PremiumProductTemplate() {
       <section id="investment" className="container mx-auto px-6 py-32 bg-gradient-to-b from-transparent to-gray-950">
         <ScrollReveal>
           <div className="text-center mb-20">
-            <h2 className="text-5xl md:text-6xl font-bold mb-6">
+            <h2 className="text-5xl md:text-6xl font-bold mb-6 text-white">
               {productData.investment.title}
             </h2>
-            <p className="text-xl text-gray-100">
+            <p className="text-xl text-gray-300">
               {productData.investment.subtitle}
             </p>
           </div>
@@ -545,9 +545,9 @@ export function PremiumProductTemplate() {
                   <CardTitle className="text-3xl text-white">{option.name}</CardTitle>
                   <div className="mt-6">
                     <span className="text-5xl font-bold text-gold-300">{option.price}</span>
-                    <p className="text-gray-100 mt-2 text-lg">{option.period}</p>
+                    <p className="text-gray-300 mt-2 text-lg">{option.period}</p>
                   </div>
-                  <CardDescription className="mt-4 text-gray-100 text-base">{option.description}</CardDescription>
+                  <CardDescription className="mt-4 text-gray-300 text-base">{option.description}</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <Button className="w-full mb-8 bg-gold-500 text-black hover:bg-gold-400" size="lg">
@@ -557,7 +557,7 @@ export function PremiumProductTemplate() {
                     {option.features.map((feature, idx) => (
                       <li key={idx} className="flex items-start gap-3">
                         <FiCheck className="w-5 h-5 text-gold-300 flex-shrink-0 mt-0.5" />
-                        <span className="text-sm text-gray-100 font-medium">{feature}</span>
+                        <span className="text-sm text-gray-300 font-medium">{feature}</span>
                       </li>
                     ))}
                   </ul>
@@ -572,8 +572,8 @@ export function PremiumProductTemplate() {
           <Card className="max-w-4xl mx-auto bg-gradient-to-r from-gold-500/10 to-gold-600/10 border-gold-500/30">
             <CardContent className="p-10 text-center">
               <Badge className="mb-4 bg-gold-500 text-black">{productData.guarantee.badge}</Badge>
-              <h3 className="text-3xl font-bold mb-4">{productData.guarantee.title}</h3>
-              <p className="text-lg text-gray-100">{productData.guarantee.description}</p>
+              <h3 className="text-3xl font-bold mb-4 text-white">{productData.guarantee.title}</h3>
+              <p className="text-lg text-gray-200">{productData.guarantee.description}</p>
             </CardContent>
           </Card>
         </ScrollReveal>
@@ -583,10 +583,10 @@ export function PremiumProductTemplate() {
       <section className="container mx-auto px-6 py-32">
         <ScrollReveal>
           <div className="text-center mb-20">
-            <h2 className="text-5xl md:text-6xl font-bold mb-6">
+            <h2 className="text-5xl md:text-6xl font-bold mb-6 text-white">
               {productData.applicationProcess.title}
             </h2>
-            <p className="text-xl text-gray-100">
+            <p className="text-xl text-gray-300">
               {productData.applicationProcess.subtitle}
             </p>
           </div>
@@ -599,7 +599,7 @@ export function PremiumProductTemplate() {
                 <CardContent className="p-8">
                   <div className="text-6xl font-bold text-gold-400/40 mb-4">{step.number}</div>
                   <h3 className="text-2xl font-bold mb-3 text-white">{step.title}</h3>
-                  <p className="text-gray-100 leading-relaxed">{step.description}</p>
+                  <p className="text-gray-300 leading-relaxed">{step.description}</p>
                 </CardContent>
               </Card>
             </ScrollReveal>
@@ -611,7 +611,7 @@ export function PremiumProductTemplate() {
       <section className="container mx-auto px-6 py-32 bg-gradient-to-b from-transparent to-gray-950">
         <ScrollReveal>
           <div className="text-center mb-20">
-            <h2 className="text-5xl md:text-6xl font-bold mb-6">
+            <h2 className="text-5xl md:text-6xl font-bold mb-6 text-white">
               What Clients Say
             </h2>
           </div>
@@ -627,7 +627,7 @@ export function PremiumProductTemplate() {
                       <FiStar key={i} className="w-5 h-5 fill-gold-400 text-gold-400" />
                     ))}
                   </div>
-                  <p className="text-lg mb-6 text-gray-50 leading-relaxed">"{testimonial.quote}"</p>
+                  <p className="text-lg mb-6 text-gray-200 leading-relaxed">"{testimonial.quote}"</p>
                   <div className="flex items-center gap-3 mb-4">
                     <img
                       src={testimonial.avatar}
@@ -636,7 +636,7 @@ export function PremiumProductTemplate() {
                     />
                     <div>
                       <div className="font-semibold text-white">{testimonial.author}</div>
-                      <div className="text-sm text-gray-100">{testimonial.role}</div>
+                      <div className="text-sm text-gray-300">{testimonial.role}</div>
                     </div>
                   </div>
                   <Badge className="bg-gold-500/10 text-gold-400 border-gold-500/30">
@@ -653,7 +653,7 @@ export function PremiumProductTemplate() {
       <section className="container mx-auto px-6 py-32">
         <ScrollReveal>
           <div className="text-center mb-20">
-            <h2 className="text-5xl md:text-6xl font-bold mb-6">
+            <h2 className="text-5xl md:text-6xl font-bold mb-6 text-white">
               Frequently Asked Questions
             </h2>
           </div>
@@ -665,7 +665,7 @@ export function PremiumProductTemplate() {
               <Card className="bg-gray-900 border-gold-500/20">
                 <CardHeader>
                   <CardTitle className="text-xl text-white">{item.question}</CardTitle>
-                  <CardDescription className="text-gray-100 text-base leading-relaxed mt-3">{item.answer}</CardDescription>
+                  <CardDescription className="text-gray-300 text-base leading-relaxed mt-3">{item.answer}</CardDescription>
                 </CardHeader>
               </Card>
             </ScrollReveal>

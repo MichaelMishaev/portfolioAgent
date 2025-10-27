@@ -174,7 +174,7 @@ export default function Home() {
 
       {/* Templates Gallery */}
       <section id="templates" className="py-20 md:py-32 bg-background">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 max-w-[1600px]">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

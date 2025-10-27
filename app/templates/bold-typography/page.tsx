@@ -1,4 +1,5 @@
 import { BoldTypographyTemplate } from "@/components/templates/bold-typography/bold-typography-template";
+import { TemplateLayout } from "@/components/shared/template-layout";
 
 export const metadata = {
   title: "Bold Typography Hero - Portfolio Template",
@@ -6,5 +7,8 @@ export const metadata = {
 };
 
 export default function BoldTypographyPage() {
-  return <BoldTypographyTemplate />;
-}
+  return (
+    <TemplateLayout>
+      <BoldTypographyTemplate />
+    </TemplateLayout>
+  );}

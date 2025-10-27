@@ -1,4 +1,5 @@
 import { LuxuryProductTemplate } from "@/components/templates/product-pages/luxury-product-template";
+import { TemplateLayout } from "@/components/shared/template-layout";
 
 export const metadata = {
   title: "Luxury Product Landing Page | Portfolio Templates",
@@ -6,5 +7,8 @@ export const metadata = {
 };
 
 export default function LuxuryProductPage() {
-  return <LuxuryProductTemplate />;
-}
+  return (
+    <TemplateLayout>
+      <LuxuryProductTemplate />
+    </TemplateLayout>
+  );}

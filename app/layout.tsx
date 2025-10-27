@@ -10,9 +10,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio Templates - 20 Stunning Designs",
-  description: "Choose from 20 professionally designed portfolio templates for bloggers, creators, and professionals.",
-  keywords: ["portfolio", "templates", "blogger", "personal website", "modern design"],
+  title: "Michael Mishayev - Full-Stack Developer & Designer",
+  description: "Full-Stack Developer & Designer creating modern, responsive web applications and stunning user interfaces. Explore my portfolio of web projects, landing pages, and interactive experiences.",
+  keywords: ["full-stack developer", "web developer", "web designer", "portfolio", "React", "Next.js", "TypeScript", "modern web design"],
 };
 
 export default function RootLayout({

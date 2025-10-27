@@ -1,4 +1,5 @@
 import { CollageMaximalistTemplate } from "@/components/templates/collage-maximalist/collage-maximalist-template";
+import { TemplateLayout } from "@/components/shared/template-layout";
 
 export const metadata = {
   title: "Collage Maximalist - Portfolio Template",
@@ -6,5 +7,8 @@ export const metadata = {
 };
 
 export default function CollageMaximalistPage() {
-  return <CollageMaximalistTemplate />;
-}
+  return (
+    <TemplateLayout>
+      <CollageMaximalistTemplate />
+    </TemplateLayout>
+  );}

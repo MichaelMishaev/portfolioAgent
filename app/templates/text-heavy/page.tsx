@@ -1,4 +1,5 @@
 import { TextHeavyTemplate } from "@/components/templates/text-heavy/text-heavy-template";
+import { TemplateLayout } from "@/components/shared/template-layout";
 
 export const metadata = {
   title: "Text-Heavy SEO - Portfolio Template",
@@ -6,5 +7,8 @@ export const metadata = {
 };
 
 export default function TextHeavyPage() {
-  return <TextHeavyTemplate />;
-}
+  return (
+    <TemplateLayout>
+      <TextHeavyTemplate />
+    </TemplateLayout>
+  );}

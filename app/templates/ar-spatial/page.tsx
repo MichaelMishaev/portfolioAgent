@@ -1,4 +1,5 @@
 import { ARSpatialTemplate } from "@/components/templates/ar-spatial/ar-spatial-template";
+import { TemplateLayout } from "@/components/shared/template-layout";
 
 export const metadata = {
   title: "AR/Spatial Computing - Portfolio Template",
@@ -6,5 +7,8 @@ export const metadata = {
 };
 
 export default function ARSpatialPage() {
-  return <ARSpatialTemplate />;
-}
+  return (
+    <TemplateLayout>
+      <ARSpatialTemplate />
+    </TemplateLayout>
+  );}

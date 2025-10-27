@@ -6,7 +6,7 @@ import { ScrollReveal } from "@/components/animations/scroll-reveal";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { FiCheck, FiHeart, FiTruck, FiRefreshCw, FiLeaf, FiPackage } from "react-icons/fi";
+import { FiCheck, FiHeart, FiTruck, FiRefreshCw, FiPackage, FiFeather } from "react-icons/fi";
 import Link from "next/link";
 
 const productData = {
@@ -43,7 +43,7 @@ const productData = {
     title: "Walk Lighter on the Planet",
     features: [
       {
-        icon: FiLeaf,
+        icon: FiFeather,
         title: "100% Recycled Materials",
         description: "Upper made from 12 recycled plastic bottles. Sole from recycled rubber.",
       },
@@ -309,7 +309,7 @@ export function FashionProductTemplate() {
                     <span>{productData.shipping.returns}</span>
                   </div>
                   <div className="flex items-center gap-3">
-                    <FiLeaf className="w-5 h-5 text-stone-600" />
+                    <FiFeather className="w-5 h-5 text-stone-600" />
                     <span>{productData.shipping.warranty}</span>
                   </div>
                 </div>

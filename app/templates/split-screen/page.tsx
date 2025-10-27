@@ -1,4 +1,5 @@
 import { SplitScreenTemplate } from "@/components/templates/split-screen/split-screen-template";
+import { TemplateLayout } from "@/components/shared/template-layout";
 
 export const metadata = {
   title: "Split-Screen Layout - Portfolio Template",
@@ -6,5 +7,8 @@ export const metadata = {
 };
 
 export default function SplitScreenPage() {
-  return <SplitScreenTemplate />;
-}
+  return (
+    <TemplateLayout>
+      <SplitScreenTemplate />
+    </TemplateLayout>
+  );}

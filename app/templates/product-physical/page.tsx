@@ -1,4 +1,5 @@
 import { PhysicalProductTemplate } from "@/components/templates/product-pages/physical-product-template";
+import { TemplateLayout } from "@/components/shared/template-layout";
 
 export const metadata = {
   title: "Physical Product Landing Page | Portfolio Templates",
@@ -6,5 +7,8 @@ export const metadata = {
 };
 
 export default function PhysicalProductPage() {
-  return <PhysicalProductTemplate />;
-}
+  return (
+    <TemplateLayout>
+      <PhysicalProductTemplate />
+    </TemplateLayout>
+  );}

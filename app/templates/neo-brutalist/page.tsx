@@ -1,4 +1,5 @@
 import { NeoBrutalistTemplate } from "@/components/templates/neo-brutalist/neo-brutalist-template";
+import { TemplateLayout } from "@/components/shared/template-layout";
 
 export const metadata = {
   title: "Neo-Brutalist Chaos - Portfolio Template",
@@ -6,5 +7,8 @@ export const metadata = {
 };
 
 export default function NeoBrutalistPage() {
-  return <NeoBrutalistTemplate />;
-}
+  return (
+    <TemplateLayout>
+      <NeoBrutalistTemplate />
+    </TemplateLayout>
+  );}

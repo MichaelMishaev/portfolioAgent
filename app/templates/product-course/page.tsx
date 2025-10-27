@@ -1,4 +1,5 @@
 import { CourseProductTemplate } from "@/components/templates/product-pages/course-product-template";
+import { TemplateLayout } from "@/components/shared/template-layout";
 
 export const metadata = {
   title: "Course/Educational Landing Page | Portfolio Templates",
@@ -6,5 +7,8 @@ export const metadata = {
 };
 
 export default function CourseProductPage() {
-  return <CourseProductTemplate />;
-}
+  return (
+    <TemplateLayout>
+      <CourseProductTemplate />
+    </TemplateLayout>
+  );}

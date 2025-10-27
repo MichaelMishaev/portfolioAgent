@@ -1,4 +1,5 @@
 import { IllustrationFocusTemplate } from "@/components/templates/illustration-focus/illustration-focus-template";
+import { TemplateLayout } from "@/components/shared/template-layout";
 
 export const metadata = {
   title: "Illustration Focus - Portfolio Template",
@@ -6,5 +7,8 @@ export const metadata = {
 };
 
 export default function IllustrationFocusPage() {
-  return <IllustrationFocusTemplate />;
-}
+  return (
+    <TemplateLayout>
+      <IllustrationFocusTemplate />
+    </TemplateLayout>
+  );}

@@ -1,4 +1,5 @@
 import { TechProductTemplate } from "@/components/templates/product-pages/tech-product-template";
+import { TemplateLayout } from "@/components/shared/template-layout";
 
 export const metadata = {
   title: "Tech/Gaming Product Page | Portfolio Templates",
@@ -6,5 +7,8 @@ export const metadata = {
 };
 
 export default function TechProductPage() {
-  return <TechProductTemplate />;
-}
+  return (
+    <TemplateLayout>
+      <TechProductTemplate />
+    </TemplateLayout>
+  );}

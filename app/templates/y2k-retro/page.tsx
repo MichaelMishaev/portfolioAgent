@@ -1,4 +1,5 @@
 import { Y2KRetroTemplate } from "@/components/templates/y2k-retro/y2k-retro-template";
+import { TemplateLayout } from "@/components/shared/template-layout";
 
 export const metadata = {
   title: "Y2K Retro Nostalgia - Portfolio Template",
@@ -6,5 +7,8 @@ export const metadata = {
 };
 
 export default function Y2KRetroPage() {
-  return <Y2KRetroTemplate />;
-}
+  return (
+    <TemplateLayout>
+      <Y2KRetroTemplate />
+    </TemplateLayout>
+  );}

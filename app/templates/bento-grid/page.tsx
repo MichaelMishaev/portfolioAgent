@@ -1,4 +1,5 @@
 import { BentoGridTemplate } from "@/components/templates/bento-grid/bento-grid-template";
+import { TemplateLayout } from "@/components/shared/template-layout";
 
 export const metadata = {
   title: "Bento Grid Modular - Portfolio Template",
@@ -6,5 +7,9 @@ export const metadata = {
 };
 
 export default function BentoGridPage() {
-  return <BentoGridTemplate />;
+  return (
+    <TemplateLayout>
+      <BentoGridTemplate />
+    </TemplateLayout>
+  );
 }

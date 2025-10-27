@@ -1,4 +1,5 @@
 import { SaaSProductTemplate } from "@/components/templates/product-pages/saas-product-template";
+import { TemplateLayout } from "@/components/shared/template-layout";
 
 export const metadata = {
   title: "SaaS Product Landing Page | Portfolio Templates",
@@ -6,5 +7,8 @@ export const metadata = {
 };
 
 export default function SaaSProductPage() {
-  return <SaaSProductTemplate />;
-}
+  return (
+    <TemplateLayout>
+      <SaaSProductTemplate />
+    </TemplateLayout>
+  );}

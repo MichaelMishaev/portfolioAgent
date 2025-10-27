@@ -1,8 +1,65 @@
 {
   "en": {
     "header": {
-      "title": "Portfolio Templates",
-      "subtitle": "Choose from 25 professionally designed templates. Perfect for bloggers, creators, and professionals."
+      "title": "Michael Mishayev",
+      "subtitle": "Full-Stack Developer & Designer creating modern web experiences"
+    },
+    "homepage": {
+      "hero": {
+        "badge": "Full-Stack Developer & Designer",
+        "title": "Crafting Digital",
+        "titleGradient": "Experiences",
+        "titleEnd": "That Matter",
+        "subtitle": "I create modern, responsive web applications and stunning user interfaces. From concept to deployment, I bring ideas to life with clean code and beautiful design.",
+        "ctaExplore": "View My Work",
+        "ctaDemo": "Contact Me"
+      },
+      "stats": {
+        "templates": "Projects",
+        "categories": "Technologies",
+        "responsive": "Happy Clients",
+        "openSource": "Years Experience"
+      },
+      "features": {
+        "title": "What I Bring to",
+        "titleGradient": "Your Project",
+        "subtitle": "Professional expertise with modern technologies and best practices",
+        "fast": {
+          "title": "Performance First",
+          "description": "Optimized code with Next.js and modern frameworks for lightning-fast experiences"
+        },
+        "modern": {
+          "title": "Modern Design",
+          "description": "Clean, professional interfaces following 2024-2025 design trends"
+        },
+        "production": {
+          "title": "Production Ready",
+          "description": "TypeScript, Tailwind CSS, and industry-standard tools for reliable solutions"
+        },
+        "responsive": {
+          "title": "Fully Responsive",
+          "description": "Beautiful experiences on every device - mobile, tablet, and desktop"
+        },
+        "seo": {
+          "title": "SEO Optimized",
+          "description": "Built-in search engine optimization and performance best practices"
+        },
+        "customize": {
+          "title": "Maintainable Code",
+          "description": "Clean, well-documented code that's easy to extend and maintain"
+        }
+      },
+      "categoriesSection": {
+        "title": "My",
+        "titleGradient": "Projects",
+        "subtitle": "From professional portfolios to product landing pages - explore diverse projects I've created",
+        "templatesLabel": "Projects"
+      },
+      "gallery": {
+        "title": "Featured",
+        "titleGradient": "Work",
+        "subtitle": "Browse through my portfolio of web applications, landing pages, and interactive experiences"
+      }
     },
     "categories": {
       "all": "all",
@@ -17,12 +74,12 @@
       "Experimental": "Experimental"
     },
     "ui": {
-      "viewDemo": "View Demo",
+      "viewDemo": "View Project",
       "colors": "Colors",
-      "bestFor": "Best for",
-      "beginner": "beginner",
-      "intermediate": "intermediate",
-      "advanced": "advanced"
+      "bestFor": "Built for",
+      "beginner": "simple",
+      "intermediate": "moderate",
+      "advanced": "complex"
     },
     "templates": [
       {
@@ -296,6 +353,26 @@
         "bestFor": ["Luxury Brands", "High-End Products", "Swiss Watches", "Premium Goods"]
       },
       {
+        "id": "product-audio",
+        "name": "Premium Audio Product",
+        "description": "High-end wireless headphones product page with 3D interactive viewer, spatial audio demo, technical specifications, and comparison table.",
+        "category": "Product",
+        "difficulty": "advanced",
+        "features": ["Interactive 3D Viewer", "Color Selector", "Spatial Audio Demo", "Specs Table", "Expert Reviews"],
+        "tags": ["audio", "headphones", "wireless", "premium", "tech"],
+        "bestFor": ["Audio Brands", "Consumer Electronics", "Premium Tech Products"]
+      },
+      {
+        "id": "product-vacuum",
+        "name": "Smart Vacuum Cleaner",
+        "description": "Cordless vacuum product page with performance metrics, laser dust detection, intelligent cleaning modes, and power comparison chart.",
+        "category": "Product",
+        "difficulty": "advanced",
+        "features": ["Performance Metrics", "Cleaning Modes", "Accessory Showcase", "Comparison Table", "Awards"],
+        "tags": ["appliance", "vacuum", "smart home", "cleaning", "cordless"],
+        "bestFor": ["Home Appliance Brands", "Smart Home Devices", "Premium Cleaning Tools"]
+      },
+      {
         "id": "service-b2b",
         "name": "B2B Professional Service",
         "description": "Corporate B2B consulting service with extensive case studies, ROI metrics, and institutional credibility.",
@@ -324,13 +401,100 @@
         "features": ["Portfolio Filtering", "Unlimited Model", "Guarantees", "FAQ"],
         "tags": ["service", "subscription", "unlimited", "design"],
         "bestFor": ["Design Services", "Productized Services", "Subscription Services"]
+      },
+      {
+        "id": "service-agency",
+        "name": "Creative Agency Showcase",
+        "description": "Award-winning digital agency landing page with brand strategy, creative design, and performance marketing services.",
+        "category": "Service",
+        "difficulty": "advanced",
+        "features": ["Portfolio Showcase", "Team Profiles", "Service Offerings", "Process Workflow"],
+        "tags": ["agency", "creative", "branding", "marketing"],
+        "bestFor": ["Digital Agencies", "Creative Studios", "Marketing Firms"]
+      },
+      {
+        "id": "service-enterprise",
+        "name": "Enterprise Cloud Platform",
+        "description": "Enterprise-grade cloud solutions with security, compliance, and global scale for Fortune 500 companies.",
+        "category": "Service",
+        "difficulty": "advanced",
+        "features": ["SOC 2 Certified", "Enterprise Pricing", "Case Studies", "Integration Showcase"],
+        "tags": ["enterprise", "cloud", "security", "compliance"],
+        "bestFor": ["SaaS Companies", "Cloud Platforms", "Enterprise Solutions"]
+      },
+      {
+        "id": "service-consulting",
+        "name": "Strategic Consulting Firm",
+        "description": "Elite management consulting for CEOs and boards with corporate strategy, digital transformation, and performance improvement.",
+        "category": "Service",
+        "difficulty": "advanced",
+        "features": ["Client Engagements", "Partner Profiles", "Methodology Framework", "Thought Leadership"],
+        "tags": ["consulting", "strategy", "transformation", "executive"],
+        "bestFor": ["Consulting Firms", "Advisory Services", "Strategic Consulting"]
       }
     ]
   },
   "ru": {
     "header": {
-      "title": "Шаблоны Портфолио",
-      "subtitle": "Выберите из 25 профессионально разработанных шаблонов. Идеально для блогеров, создателей контента и профессионалов."
+      "title": "Михаил Мишаев",
+      "subtitle": "Full-Stack Разработчик и Дизайнер, создающий современные веб-приложения"
+    },
+    "homepage": {
+      "hero": {
+        "badge": "Full-Stack Разработчик и Дизайнер",
+        "title": "Создаю Цифровые",
+        "titleGradient": "Решения",
+        "titleEnd": "Которые Важны",
+        "subtitle": "Я разрабатываю современные, отзывчивые веб-приложения и потрясающие пользовательские интерфейсы. От концепции до деплоя, я воплощаю идеи в жизнь с чистым кодом и красивым дизайном.",
+        "ctaExplore": "Посмотреть Работы",
+        "ctaDemo": "Связаться со Мной"
+      },
+      "stats": {
+        "templates": "Проектов",
+        "categories": "Технологий",
+        "responsive": "Довольных Клиентов",
+        "openSource": "Лет Опыта"
+      },
+      "features": {
+        "title": "Что Я Приношу в",
+        "titleGradient": "Ваш Проект",
+        "subtitle": "Профессиональный опыт с современными технологиями и лучшими практиками",
+        "fast": {
+          "title": "Производительность Прежде Всего",
+          "description": "Оптимизированный код с Next.js и современными фреймворками для молниеносного опыта"
+        },
+        "modern": {
+          "title": "Современный Дизайн",
+          "description": "Чистые, профессиональные интерфейсы, следующие трендам дизайна 2024-2025"
+        },
+        "production": {
+          "title": "Готово к Продакшену",
+          "description": "TypeScript, Tailwind CSS и стандартные инструменты для надежных решений"
+        },
+        "responsive": {
+          "title": "Полностью Адаптивный",
+          "description": "Красивый опыт на всех устройствах - мобильных, планшетах и десктопах"
+        },
+        "seo": {
+          "title": "SEO Оптимизировано",
+          "description": "Встроенная оптимизация для поисковых систем и лучшие практики производительности"
+        },
+        "customize": {
+          "title": "Поддерживаемый Код",
+          "description": "Чистый, хорошо документированный код, который легко расширять и поддерживать"
+        }
+      },
+      "categoriesSection": {
+        "title": "Мои",
+        "titleGradient": "Проекты",
+        "subtitle": "От профессиональных портфолио до лендингов продуктов - исследуйте разнообразные проекты, которые я создал",
+        "templatesLabel": "Проектов"
+      },
+      "gallery": {
+        "title": "Избранные",
+        "titleGradient": "Работы",
+        "subtitle": "Просмотрите мое портфолио веб-приложений, лендингов и интерактивных решений"
+      }
     },
     "categories": {
       "all": "все",
@@ -345,12 +509,12 @@
       "Experimental": "Экспериментальные"
     },
     "ui": {
-      "viewDemo": "Посмотреть Демо",
+      "viewDemo": "Посмотреть Проект",
       "colors": "Цвета",
-      "bestFor": "Лучше всего для",
-      "beginner": "начальный",
+      "bestFor": "Создано для",
+      "beginner": "простой",
       "intermediate": "средний",
-      "advanced": "продвинутый"
+      "advanced": "сложный"
     },
     "templates": [
       {
@@ -624,6 +788,26 @@
         "bestFor": ["Роскошные Бренды", "Товары Класса Люкс", "Швейцарские Часы", "Премиум Товары"]
       },
       {
+        "id": "product-audio",
+        "name": "Премиум Аудио Продукт",
+        "description": "Страница беспроводных наушников премиум класса с интерактивным 3D просмотром, демо пространственного звука, техническими характеристиками и таблицей сравнения.",
+        "category": "Product",
+        "difficulty": "advanced",
+        "features": ["Интерактивный 3D Просмотр", "Выбор Цвета", "Демо Пространственного Звука", "Таблица Характеристик", "Отзывы Экспертов"],
+        "tags": ["аудио", "наушники", "беспроводные", "премиум", "технологии"],
+        "bestFor": ["Аудио Бренды", "Бытовая Электроника", "Премиум Технологии"]
+      },
+      {
+        "id": "product-vacuum",
+        "name": "Умный Пылесос",
+        "description": "Страница беспроводного пылесоса с показателями производительности, лазерным обнаружением пыли, интеллектуальными режимами уборки и графиком сравнения мощности.",
+        "category": "Product",
+        "difficulty": "advanced",
+        "features": ["Метрики Производительности", "Режимы Уборки", "Витрина Аксессуаров", "Таблица Сравнения", "Награды"],
+        "tags": ["бытовая техника", "пылесос", "умный дом", "уборка", "беспроводной"],
+        "bestFor": ["Бренды Бытовой Техники", "Устройства Умного Дома", "Премиум Уборочные Инструменты"]
+      },
+      {
         "id": "service-b2b",
         "name": "B2B Профессиональный Сервис",
         "description": "Корпоративный B2B консалтинговый сервис с кейсами, метриками ROI и институциональным авторитетом.",
@@ -652,6 +836,36 @@
         "features": ["Фильтрация Портфолио", "Безлимитная Модель", "Гарантии", "FAQ"],
         "tags": ["сервис", "подписка", "безлимитный", "дизайн"],
         "bestFor": ["Дизайн Сервисы", "Продуктизированные Сервисы", "Подписные Сервисы"]
+      },
+      {
+        "id": "service-agency",
+        "name": "Креативное Агентство",
+        "description": "Лендинг цифрового агентства с брендинговой стратегией, креативным дизайном и услугами производительного маркетинга.",
+        "category": "Service",
+        "difficulty": "advanced",
+        "features": ["Портфолио", "Профили Команды", "Услуги", "Рабочий Процесс"],
+        "tags": ["агентство", "креатив", "брендинг", "маркетинг"],
+        "bestFor": ["Цифровые Агентства", "Креативные Студии", "Маркетинговые Компании"]
+      },
+      {
+        "id": "service-enterprise",
+        "name": "Облачная Платформа Уровня Enterprise",
+        "description": "Корпоративные облачные решения с безопасностью, соблюдением норм и глобальным масштабом для компаний Fortune 500.",
+        "category": "Service",
+        "difficulty": "advanced",
+        "features": ["Сертификация SOC 2", "Корпоративные Цены", "Кейсы", "Интеграции"],
+        "tags": ["корпоративный", "облако", "безопасность", "соответствие"],
+        "bestFor": ["SaaS Компании", "Облачные Платформы", "Корпоративные Решения"]
+      },
+      {
+        "id": "service-consulting",
+        "name": "Стратегическая Консалтинговая Фирма",
+        "description": "Элитный управленческий консалтинг для CEO и советов директоров с корпоративной стратегией и цифровой трансформацией.",
+        "category": "Service",
+        "difficulty": "advanced",
+        "features": ["Клиентские Проекты", "Профили Партнеров", "Методология", "Экспертиза"],
+        "tags": ["консалтинг", "стратегия", "трансформация", "руководство"],
+        "bestFor": ["Консалтинговые Фирмы", "Консультационные Услуги", "Стратегический Консалтинг"]
       }
     ]
   }

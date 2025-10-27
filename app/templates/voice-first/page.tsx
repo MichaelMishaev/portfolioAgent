@@ -1,4 +1,5 @@
 import { VoiceFirstTemplate } from "@/components/templates/voice-first/voice-first-template";
+import { TemplateLayout } from "@/components/shared/template-layout";
 
 export const metadata = {
   title: "Voice-First Conversational - Portfolio Template",
@@ -6,5 +7,8 @@ export const metadata = {
 };
 
 export default function VoiceFirstPage() {
-  return <VoiceFirstTemplate />;
-}
+  return (
+    <TemplateLayout>
+      <VoiceFirstTemplate />
+    </TemplateLayout>
+  );}

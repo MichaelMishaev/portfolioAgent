@@ -1,4 +1,5 @@
 import { ThreeDImmersiveTemplate } from "@/components/templates/3d-immersive/3d-immersive-template";
+import { TemplateLayout } from "@/components/shared/template-layout";
 
 export const metadata = {
   title: "3D Immersive WebGL - Portfolio Template",
@@ -6,5 +7,8 @@ export const metadata = {
 };
 
 export default function ThreeDImmersivePage() {
-  return <ThreeDImmersiveTemplate />;
-}
+  return (
+    <TemplateLayout>
+      <ThreeDImmersiveTemplate />
+    </TemplateLayout>
+  );}

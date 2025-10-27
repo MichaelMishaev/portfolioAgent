@@ -1,4 +1,5 @@
 import { CommunityServiceTemplate } from "@/components/templates/product-pages/community-service-template";
+import { TemplateLayout } from "@/components/shared/template-layout";
 
 export const metadata = {
   title: "Community Platform Landing Page | Portfolio Templates",
@@ -6,5 +7,9 @@ export const metadata = {
 };
 
 export default function CommunityServicePage() {
-  return <CommunityServiceTemplate />;
+  return (
+    <TemplateLayout>
+      <CommunityServiceTemplate />
+    </TemplateLayout>
+  );
 }

@@ -131,6 +131,14 @@ const staticTemplateData = {
     colors: { primary: "#0A0A0A", secondary: "#D4AF37", accent: "#000000" },
     fonts: { heading: "Inter", body: "Inter" },
   },
+  "product-audio": {
+    colors: { primary: "#3B82F6", secondary: "#8B5CF6", accent: "#06B6D4" },
+    fonts: { heading: "Inter", body: "Inter" },
+  },
+  "product-vacuum": {
+    colors: { primary: "#2563EB", secondary: "#1E3A8A", accent: "#60A5FA" },
+    fonts: { heading: "Inter", body: "Inter" },
+  },
   "service-b2b": {
     colors: { primary: "#0A1F44", secondary: "#232326", accent: "#C8102E" },
     fonts: { heading: "Inter", body: "Inter" },
@@ -143,6 +151,18 @@ const staticTemplateData = {
     colors: { primary: "#0099F6", secondary: "#FF3366", accent: "#FFFFFF" },
     fonts: { heading: "Inter", body: "Inter" },
   },
+  "service-agency": {
+    colors: { primary: "#2563EB", secondary: "#1E40AF", accent: "#3B82F6" },
+    fonts: { heading: "Inter", body: "Inter" },
+  },
+  "service-enterprise": {
+    colors: { primary: "#0F172A", secondary: "#2563EB", accent: "#3B82F6" },
+    fonts: { heading: "Inter", body: "Inter" },
+  },
+  "service-consulting": {
+    colors: { primary: "#059669", secondary: "#047857", accent: "#10B981" },
+    fonts: { heading: "Inter", body: "Inter" },
+  },
 };
 
 export function getTemplates(language: "en" | "ru" = "en"): TemplateConfig[] {
@@ -153,7 +173,7 @@ export function getTemplates(language: "en" | "ru" = "en"): TemplateConfig[] {
     difficulty: template.difficulty as "beginner" | "intermediate" | "advanced",
     colors: staticTemplateData[template.id as keyof typeof staticTemplateData].colors,
     fonts: staticTemplateData[template.id as keyof typeof staticTemplateData].fonts,
-    thumbnail: `/templates/${template.id}/thumbnail.jpg`,
+    thumbnail: `/previews/${template.id}.png`,
     demoPath: `/templates/${template.id}`,
   }));
 }
