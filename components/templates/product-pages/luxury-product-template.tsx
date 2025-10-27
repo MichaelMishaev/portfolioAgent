@@ -202,7 +202,7 @@ export function LuxuryProductTemplate() {
 
             {/* Mobile Menu Button */}
             <button
-              className="md:hidden p-3 text-foreground hover:bg-accent rounded-md border border-border transition-colors"
+              className="md:hidden p-3 text-white hover:bg-white/10 rounded-md border border-white/20 transition-colors"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label="Toggle menu"
             >
