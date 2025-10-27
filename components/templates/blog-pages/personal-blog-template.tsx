@@ -23,6 +23,9 @@ import {
   FiDownload,
   FiStar,
   FiAward,
+  FiLayers,
+  FiZap,
+  FiBookOpen,
 } from "react-icons/fi";
 import Link from "next/link";
 
