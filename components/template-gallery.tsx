@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { getTemplates } from "@/lib/template-registry";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
@@ -23,7 +23,8 @@ import {
   FiX,
   FiGrid,
   FiMessageCircle,
-  FiTag
+  FiTag,
+  FiTarget
 } from "react-icons/fi";
 import { useI18n } from "@/lib/i18n-context";
 
@@ -39,6 +40,7 @@ const categoryIcons: Record<string, any> = {
   Product: FiPackage,
   Service: FiUsers,
   Experimental: FiStar,
+  "Online Business": FiTarget,
 };
 
 export function TemplateGallery() {
@@ -48,6 +50,37 @@ export function TemplateGallery() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const filter = searchParams.get("category") || "all";
+
+  // Restore scroll position when returning from template detail page
+  useEffect(() => {
+    const savedScrollPosition = sessionStorage.getItem('gallery-scroll-position');
+    const savedCategory = sessionStorage.getItem('gallery-category');
+
+    if (savedScrollPosition) {
+      // Restore scroll position
+      window.scrollTo(0, parseInt(savedScrollPosition, 10));
+      // Clean up
+      sessionStorage.removeItem('gallery-scroll-position');
+    }
+
+    // Restore category filter if it was saved
+    if (savedCategory && savedCategory !== filter) {
+      const params = new URLSearchParams(searchParams);
+      if (savedCategory === "all") {
+        params.delete("category");
+      } else {
+        params.set("category", savedCategory);
+      }
+      router.replace(`/?${params.toString()}`, { scroll: false });
+      sessionStorage.removeItem('gallery-category');
+    }
+  }, []);
+
+  // Save scroll position before navigating to template
+  const handleTemplateClick = (e: React.MouseEvent) => {
+    sessionStorage.setItem('gallery-scroll-position', window.scrollY.toString());
+    sessionStorage.setItem('gallery-category', filter);
+  };
 
   const templates = getTemplates(language);
   const categories = ["all", ...Array.from(new Set(templates.map(t => t.category)))];
@@ -287,7 +320,7 @@ export function TemplateGallery() {
 
                 <CardFooter className="flex gap-2 flex-shrink-0 mt-auto">
                   <Button asChild className="flex-1" size="sm">
-                    <Link href={template.demoPath}>
+                    <Link href={template.demoPath} onClick={handleTemplateClick}>
                       <FiExternalLink className="mr-2 h-4 w-4" />
                       {t.ui.viewDemo}
                     </Link>

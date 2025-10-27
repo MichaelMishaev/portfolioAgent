@@ -251,10 +251,10 @@ export function SplitScreenTemplate() {
   const currentProject = portfolioData.projects[activeProject];
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen overflow-x-hidden max-w-full bg-background">
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b">
-        <div className="container mx-auto px-4 sm:px-6 py-4">
+        <div className="container mx-auto px-3 sm:px-3 py-4">
           <div className="flex items-center justify-between">
             <Link href="/" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
             ← Back
@@ -286,7 +286,7 @@ export function SplitScreenTemplate() {
         {/* Mobile Menu */}
         {mobileMenuOpen && (
           <div className="md:hidden bg-background/95 backdrop-blur-sm border-t">
-            <div className="container mx-auto px-4 sm:px-6 py-4 flex flex-col gap-4">
+            <div className="container mx-auto px-3 sm:px-3 py-4 flex flex-col gap-4">
               <a
                 href="#work"
                 className="text-sm hover:text-primary transition-colors py-2"
@@ -311,8 +311,8 @@ export function SplitScreenTemplate() {
 
       {/* Hero Split Screen */}
       <section className="h-screen flex items-center pt-16">
-        <div className="container mx-auto px-4 sm:px-6 h-full">
-          <div className="grid md:grid-cols-2 h-full gap-8">
+        <div className="container mx-auto px-3 sm:px-3 h-full">
+          <div className="grid grid-cols-1 md:grid-cols-2 h-full gap-8">
             {/* Left Side - Text */}
             <div className="flex flex-col justify-center">
               <FadeIn>
@@ -356,15 +356,15 @@ export function SplitScreenTemplate() {
 
       {/* Stats Split Screen */}
       <section className="py-20 border-t">
-        <div className="container mx-auto px-4 sm:px-6">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="container mx-auto px-3 sm:px-3">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-4xl font-bold mb-4">By The Numbers</h2>
               <p className="text-lg text-muted-foreground">
                 Metrics that matter, results that speak for themselves. Over 8 years of creating exceptional digital experiences.
               </p>
             </div>
-            <div className="grid grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {portfolioData.stats.map((stat, index) => (
                 <FadeIn key={stat.label} delay={index * 0.1}>
                   <div className="text-center bg-muted/30 p-4 rounded-lg">
@@ -384,14 +384,14 @@ export function SplitScreenTemplate() {
 
       {/* Skills Split Screen */}
       <section className="py-20 border-t">
-        <div className="container mx-auto px-4 sm:px-6">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="container mx-auto px-3 sm:px-3">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="order-2 md:order-1">
               <div className="flex flex-wrap gap-3">
                 {portfolioData.skills.map((skill) => (
                   <span
                     key={skill}
-                    className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium"
+                    className="px-3 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium"
                   >
                     {skill}
                   </span>
@@ -409,13 +409,13 @@ export function SplitScreenTemplate() {
       </section>
 
       {/* Projects Split Screen */}
-      <section id="work" className="min-h-screen py-20 border-t">
-        <div className="container mx-auto px-4 sm:px-6 mb-12">
+      <section id="work" className="min-h-screen overflow-x-hidden max-w-full py-20 border-t">
+        <div className="container mx-auto px-3 sm:px-3 mb-12">
           <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold">Selected Work</h2>
         </div>
 
-        <div className="container mx-auto px-4 sm:px-6">
-          <div className="grid md:grid-cols-2 gap-8 min-h-[70vh]">
+        <div className="container mx-auto px-3 sm:px-3">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 min-h-[70vh]">
             {/* Left Side - Image */}
             <div className="relative overflow-hidden rounded-2xl">
               <AnimatePresence mode="wait" custom={direction}>
@@ -452,7 +452,7 @@ export function SplitScreenTemplate() {
                 >
                   <div className="flex items-center gap-3 mb-4">
                     <span
-                      className="inline-block text-sm font-semibold px-4 py-2 rounded-full"
+                      className="inline-block text-sm font-semibold px-3 py-2 rounded-full"
                       style={{ backgroundColor: currentProject.color, color: "white" }}
                     >
                       {currentProject.category}
@@ -537,8 +537,8 @@ export function SplitScreenTemplate() {
 
       {/* Testimonials Split Screen */}
       <section className="py-20 border-t">
-        <div className="container mx-auto px-4 sm:px-6">
-          <div className="grid md:grid-cols-2 gap-12">
+        <div className="container mx-auto px-3 sm:px-3">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div>
               <h2 className="text-4xl font-bold mb-8">Client Feedback</h2>
               <p className="text-lg text-muted-foreground">
@@ -573,8 +573,8 @@ export function SplitScreenTemplate() {
 
       {/* Awards Section */}
       <section className="py-20 border-t">
-        <div className="container mx-auto px-4 sm:px-6">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="container mx-auto px-3 sm:px-3">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-4xl font-bold mb-4">Awards & Recognition</h2>
               <p className="text-lg text-muted-foreground">
@@ -600,15 +600,15 @@ export function SplitScreenTemplate() {
 
       {/* Services Section */}
       <section className="py-20 border-t bg-muted/20">
-        <div className="container mx-auto px-4 sm:px-6">
+        <div className="container mx-auto px-3 sm:px-3">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">Services</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-lg text-muted-foreground max-w-full mx-auto">
               Comprehensive design solutions tailored to your needs.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-full mx-auto">
             {portfolioData.services.map((service, index) => (
               <FadeIn key={service.title} delay={index * 0.1}>
                 <div className="bg-background p-8 rounded-lg border hover:shadow-lg transition-shadow h-full flex flex-col">
@@ -633,8 +633,8 @@ export function SplitScreenTemplate() {
 
       {/* Process/Methodology Section */}
       <section className="py-20 border-t">
-        <div className="container mx-auto px-4 sm:px-6">
-          <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
+        <div className="container mx-auto px-3 sm:px-3">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
             <div>
               <h2 className="text-4xl font-bold mb-4">My Process</h2>
               <p className="text-lg text-muted-foreground">
@@ -646,7 +646,7 @@ export function SplitScreenTemplate() {
             </div>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {portfolioData.process.map((step, index) => (
               <FadeIn key={step.name} delay={index * 0.1}>
                 <div className="bg-muted/30 p-6 rounded-lg hover:bg-muted/50 transition-colors">
@@ -662,8 +662,8 @@ export function SplitScreenTemplate() {
 
       {/* Expertise Section - Split Screen */}
       <section className="py-20 border-t bg-muted/20">
-        <div className="container mx-auto px-4 sm:px-6">
-          <div className="grid md:grid-cols-2 gap-12">
+        <div className="container mx-auto px-3 sm:px-3">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div className="flex flex-col justify-center">
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Core Expertise
@@ -692,8 +692,8 @@ export function SplitScreenTemplate() {
 
       {/* Case Studies Section - Split Screen */}
       <section className="py-20 border-t">
-        <div className="container mx-auto px-4 sm:px-6">
-          <div className="grid md:grid-cols-2 gap-12 mb-12">
+        <div className="container mx-auto px-3 sm:px-3">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
             <div>
               <h2 className="text-4xl font-bold mb-4">Featured Case Studies</h2>
               <p className="text-lg text-muted-foreground">
@@ -702,7 +702,7 @@ export function SplitScreenTemplate() {
             </div>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {portfolioData.caseStudies.map((study, index) => (
               <FadeIn key={study.title} delay={index * 0.1}>
                 <div className="bg-muted/30 p-8 rounded-lg hover:bg-muted/50 transition-all cursor-pointer group">
@@ -727,8 +727,8 @@ export function SplitScreenTemplate() {
 
       {/* Collaborators Section - Split Screen */}
       <section className="py-20 border-t bg-muted/20">
-        <div className="container mx-auto px-4 sm:px-6">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="container mx-auto px-3 sm:px-3">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-4xl font-bold mb-4">
                 Trusted Collaborators
@@ -738,7 +738,7 @@ export function SplitScreenTemplate() {
               </p>
             </div>
 
-            <div className="grid grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-4 gap-6">
               {portfolioData.collaborators.map((brand, index) => (
                 <FadeIn key={brand} delay={index * 0.05}>
                   <div className="aspect-square bg-background rounded-lg flex items-center justify-center hover:shadow-lg transition-shadow">
@@ -755,8 +755,8 @@ export function SplitScreenTemplate() {
 
       {/* Newsletter Section - Split Screen */}
       <section className="py-20 border-t">
-        <div className="container mx-auto px-4 sm:px-6">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="container mx-auto px-3 sm:px-3">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
               <div className="text-5xl mb-4">📬</div>
               <h2 className="text-4xl font-bold mb-4">
@@ -772,7 +772,7 @@ export function SplitScreenTemplate() {
                 <input
                   type="email"
                   placeholder="Enter your email"
-                  className="px-4 py-3 rounded-lg border bg-background"
+                  className="px-3 py-3 rounded-lg border bg-background"
                 />
                 <Button size="lg">
                   Subscribe Now
@@ -787,9 +787,9 @@ export function SplitScreenTemplate() {
       </section>
 
       {/* Contact Split Screen */}
-      <section id="contact" className="min-h-screen flex items-center border-t">
-        <div className="container mx-auto px-4 sm:px-6">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+      <section id="contact" className="min-h-screen overflow-x-hidden max-w-full flex items-center border-t">
+        <div className="container mx-auto px-3 sm:px-3">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             {/* Left Side */}
             <div>
               <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-6">
@@ -820,7 +820,7 @@ export function SplitScreenTemplate() {
 
       {/* Footer */}
       <footer className="border-t bg-background py-8">
-        <div className="container mx-auto px-4 sm:px-6">
+        <div className="container mx-auto px-3 sm:px-3">
           <p className="text-sm text-muted-foreground text-center">
             © {new Date().getFullYear()} {portfolioData.name}. All rights reserved.
           </p>

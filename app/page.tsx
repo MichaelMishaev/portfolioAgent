@@ -14,7 +14,7 @@ export default function Home() {
   const { t } = useI18n();
 
   const stats = [
-    { value: "26+", label: t.homepage.stats.templates },
+    { value: "39+", label: t.homepage.stats.templates },
     { value: "9", label: t.homepage.stats.categories },
     { value: "100%", label: t.homepage.stats.responsive },
     { value: "Free", label: t.homepage.stats.openSource }

@@ -277,7 +277,7 @@ export function EnterpriseServiceTemplate() {
 
       {/* Hero Section */}
       <section className="container mx-auto px-3 max-w-full py-24">
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-full mx-auto">
           <FadeIn>
             <div className="flex items-center gap-3 mb-6">
               <Badge className="bg-green-100 text-green-700 border-green-200">
@@ -299,7 +299,7 @@ export function EnterpriseServiceTemplate() {
           </FadeIn>
 
           <FadeIn delay={0.2}>
-            <p className="text-xl text-gray-600 mb-8 max-w-3xl">
+            <p className="text-xl text-gray-600 mb-8 max-w-full">
               {serviceData.description}
             </p>
           </FadeIn>
@@ -340,7 +340,7 @@ export function EnterpriseServiceTemplate() {
             </div>
           </ScrollReveal>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-full mx-auto">
             {serviceData.solutions.map((solution, index) => (
               <ScrollReveal key={solution.name} delay={index * 0.1}>
                 <Card className="h-full border-2 hover:border-blue-200 hover:shadow-xl transition-all">
@@ -386,7 +386,7 @@ export function EnterpriseServiceTemplate() {
           </ScrollReveal>
 
           <ScrollReveal delay={0.2}>
-            <div className="grid grid-cols-1 md:grid-cols-6 gap-8 max-w-5xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-6 gap-8 max-w-full mx-auto">
               {serviceData.integrations.map((integration) => (
                 <Card key={integration.name} className="p-6 flex items-center justify-center bg-white hover:shadow-lg transition-shadow">
                   <img
@@ -411,11 +411,11 @@ export function EnterpriseServiceTemplate() {
             </div>
           </ScrollReveal>
 
-          <div className="max-w-6xl mx-auto space-y-12">
+          <div className="max-w-full mx-auto space-y-12">
             {serviceData.clients.map((client, index) => (
               <ScrollReveal key={client.company} delay={index * 0.1}>
                 <Card className="overflow-hidden hover:shadow-xl transition-shadow">
-                  <div className="grid md:grid-cols-2 gap-8">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div className="p-8">
                       <Badge variant="outline" className="mb-4">{client.industry}</Badge>
                       <h3 className="text-3xl font-bold mb-4">{client.company}</h3>
@@ -429,7 +429,7 @@ export function EnterpriseServiceTemplate() {
                           <p className="text-lg font-medium text-gray-900">{client.result}</p>
                         </div>
                       </div>
-                      <div className="grid grid-cols-3 gap-4 pt-6 border-t border-gray-200">
+                      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-6 border-t border-gray-200">
                         {client.metrics.map((metric) => (
                           <div key={metric.label}>
                             <div className="text-2xl font-bold text-blue-600">{metric.value}</div>
@@ -463,7 +463,7 @@ export function EnterpriseServiceTemplate() {
             </div>
           </ScrollReveal>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-full mx-auto">
             {serviceData.support.features.map((feature, index) => (
               <ScrollReveal key={feature.name} delay={index * 0.1}>
                 <Card>
@@ -495,7 +495,7 @@ export function EnterpriseServiceTemplate() {
             </div>
           </ScrollReveal>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-full mx-auto">
             {serviceData.pricing.tiers.map((tier, index) => (
               <ScrollReveal key={tier.name} delay={index * 0.1}>
                 <Card className={`h-full ${tier.featured ? 'border-2 border-blue-600 shadow-xl scale-105' : 'border'}`}>
@@ -542,7 +542,7 @@ export function EnterpriseServiceTemplate() {
             <h2 className="text-5xl font-bold text-white mb-6">
               Ready to Scale Your Enterprise?
             </h2>
-            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-blue-100 mb-8 max-w-full mx-auto">
               Join 500+ enterprise clients who trust us with their mission-critical operations.
             </p>
             <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-center">

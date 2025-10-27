@@ -213,10 +213,10 @@ export function GridMasonryTemplate() {
       : portfolioData.items.filter((item) => item.category === selectedCategory);
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen overflow-x-hidden max-w-full bg-background">
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-40 bg-background/95 backdrop-blur-sm border-b">
-        <div className="container mx-auto px-4 sm:px-6 py-4">
+        <div className="container mx-auto px-3 sm:px-3 py-4">
           <div className="flex items-center justify-between">
             <Link href="/" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
             ← Back
@@ -245,7 +245,7 @@ export function GridMasonryTemplate() {
         {/* Mobile Menu */}
         {mobileMenuOpen && (
           <div className="md:hidden bg-background/95 backdrop-blur-sm border-t">
-            <div className="container mx-auto px-4 sm:px-6 py-4 flex flex-col gap-4">
+            <div className="container mx-auto px-3 sm:px-3 py-4 flex flex-col gap-4">
               <a
                 href="#contact"
                 className="text-sm hover:text-primary transition-colors py-2"
@@ -262,7 +262,7 @@ export function GridMasonryTemplate() {
       </nav>
 
       {/* Hero Section */}
-      <section className="container mx-auto px-4 sm:px-6 pt-32 pb-16 text-center">
+      <section className="container mx-auto px-3 sm:px-3 pt-32 pb-16 text-center">
         <FadeIn>
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-4">
             {portfolioData.name}
@@ -276,14 +276,14 @@ export function GridMasonryTemplate() {
         </FadeIn>
 
         <FadeIn delay={0.3}>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg text-muted-foreground max-w-full mx-auto">
             {portfolioData.bio}
           </p>
         </FadeIn>
       </section>
 
       {/* Filter Categories */}
-      <section className="container mx-auto px-4 sm:px-6 py-8">
+      <section className="container mx-auto px-3 sm:px-3 py-8">
         <div className="flex flex-wrap justify-center gap-3">
           {portfolioData.categories.map((category) => (
             <Button
@@ -299,7 +299,7 @@ export function GridMasonryTemplate() {
       </section>
 
       {/* Masonry Grid */}
-      <section className="container mx-auto px-4 sm:px-6 py-8">
+      <section className="container mx-auto px-3 sm:px-3 py-8">
         <Masonry
           breakpointCols={breakpointColumns}
           className="flex -ml-6 w-auto"
@@ -339,11 +339,11 @@ export function GridMasonryTemplate() {
       </section>
 
       {/* Approach Section */}
-      <section className="container mx-auto px-4 sm:px-6 py-20 border-t">
+      <section className="container mx-auto px-3 sm:px-3 py-20 border-t">
         <ScrollReveal>
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">My Approach</h2>
         </ScrollReveal>
-        <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-full mx-auto">
           {portfolioData.approach.map((item, index) => (
             <ScrollReveal key={item.step} delay={index * 0.1}>
               <div className="text-center">
@@ -356,11 +356,11 @@ export function GridMasonryTemplate() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="container mx-auto px-4 sm:px-6 py-20 border-t">
+      <section className="container mx-auto px-3 sm:px-3 py-20 border-t">
         <ScrollReveal>
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Client Feedback</h2>
         </ScrollReveal>
-        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-full mx-auto">
           {portfolioData.testimonials.map((testimonial, index) => (
             <ScrollReveal key={testimonial.author} delay={index * 0.1}>
               <div className="bg-muted/30 p-6 rounded-lg">
@@ -376,9 +376,9 @@ export function GridMasonryTemplate() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="container mx-auto px-4 sm:px-6 py-20 border-t">
+      <section id="contact" className="container mx-auto px-3 sm:px-3 py-20 border-t">
         <ScrollReveal>
-          <div className="max-w-2xl mx-auto text-center">
+          <div className="max-w-full mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Let's Work Together
             </h2>
@@ -391,7 +391,7 @@ export function GridMasonryTemplate() {
                 <FiMail className="mr-2" />
                 Get in Touch
               </Button>
-              <div className="flex gap-3 justify-center">
+              <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <Button variant="outline" size="icon" aria-label="Instagram Profile">
                   <FiInstagram className="w-5 h-5" />
                 </Button>
@@ -425,7 +425,7 @@ export function GridMasonryTemplate() {
               initial={{ scale: 0.9 }}
               animate={{ scale: 1 }}
               exit={{ scale: 0.9 }}
-              className="max-w-5xl w-full"
+              className="max-w-full w-full"
               onClick={(e) => e.stopPropagation()}
             >
               <img
@@ -446,7 +446,7 @@ export function GridMasonryTemplate() {
 
       {/* Footer */}
       <footer className="border-t bg-background">
-        <div className="container mx-auto px-4 sm:px-6 py-8">
+        <div className="container mx-auto px-3 sm:px-3 py-8">
           <p className="text-sm text-muted-foreground text-center">
             © {new Date().getFullYear()} {portfolioData.name}. All rights reserved.
           </p>

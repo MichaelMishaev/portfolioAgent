@@ -138,7 +138,7 @@ export function BoldTypographyTemplate() {
         </FadeIn>
 
         <FadeIn delay={0.2}>
-          <div className="max-w-2xl ml-auto">
+          <div className="max-w-full ml-auto">
             <p className="text-2xl md:text-4xl font-bold mb-4">
               {portfolioData.tagline}
             </p>
@@ -156,7 +156,7 @@ export function BoldTypographyTemplate() {
       {/* About Section */}
       <section className="container mx-auto px-3 max-w-full py-20 border-t">
         <ScrollReveal>
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-black mb-6">
                 About
@@ -200,7 +200,7 @@ export function BoldTypographyTemplate() {
         <div className="space-y-12">
           {portfolioData.services.map((service, index) => (
             <ScrollReveal key={service.number} delay={index * 0.1}>
-              <div className="group grid md:grid-cols-12 gap-6 py-8 border-b hover:bg-accent/50 transition-colors -mx-6 px-6 cursor-pointer">
+              <div className="group grid md:grid-cols-12 gap-6 py-8 border-b hover:bg-accent/50 transition-colors -mx-6 px-3 cursor-pointer">
                 <div className="md:col-span-2">
                   <span className="text-4xl font-black text-muted-foreground group-hover:text-primary transition-colors">
                     {service.number}
@@ -230,7 +230,7 @@ export function BoldTypographyTemplate() {
           </h2>
         </ScrollReveal>
 
-        <div className="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-full mx-auto">
           {portfolioData.process.map((step, index) => (
             <ScrollReveal key={step.step} delay={index * 0.1}>
               <div className="text-center">
@@ -260,10 +260,10 @@ export function BoldTypographyTemplate() {
         <div className="space-y-20">
           {portfolioData.caseStudies.map((study, index) => (
             <ScrollReveal key={study.title} delay={index * 0.1}>
-              <div className="grid md:grid-cols-2 gap-12">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                 {/* Left: Project Info */}
                 <div>
-                  <span className="inline-block text-sm font-bold px-4 py-2 bg-primary text-primary-foreground mb-4 uppercase">
+                  <span className="inline-block text-sm font-bold px-3 py-2 bg-primary text-primary-foreground mb-4 uppercase">
                     {study.category}
                   </span>
                   <h3 className="text-5xl md:text-6xl font-black mb-6">
@@ -314,7 +314,7 @@ export function BoldTypographyTemplate() {
           </h2>
         </ScrollReveal>
 
-        <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-full mx-auto">
           {portfolioData.testimonials.map((testimonial, index) => (
             <ScrollReveal key={testimonial.client} delay={index * 0.1}>
               <div className="border-l-4 border-primary pl-6">
@@ -378,7 +378,7 @@ export function BoldTypographyTemplate() {
               </p>
             </div>
 
-            <div className="flex gap-4">
+            <div className="flex flex-col sm:flex-row gap-4">
               <Button variant="outline" size="icon" className="h-12 w-12">
                 <FiGithub className="h-5 w-5" />
               </Button>

@@ -2,6 +2,7 @@
 
 import React, { createContext, useContext, useState, useEffect } from "react";
 import translations from "./translations.json";
+import templateTranslations from "./template-translations.json";
 
 type Language = "en" | "ru";
 
@@ -9,6 +10,7 @@ interface I18nContextType {
   language: Language;
   setLanguage: (lang: Language) => void;
   t: typeof translations.en;
+  tt: typeof templateTranslations.en;
 }
 
 const I18nContext = createContext<I18nContextType | undefined>(undefined);
@@ -29,9 +31,10 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
   };
 
   const t = translations[language];
+  const tt = templateTranslations[language];
 
   return (
-    <I18nContext.Provider value={{ language, setLanguage: handleSetLanguage, t }}>
+    <I18nContext.Provider value={{ language, setLanguage: handleSetLanguage, t, tt }}>
       {children}
     </I18nContext.Provider>
   );

@@ -152,10 +152,10 @@ export function ThreeDImmersiveTemplate() {
   const opacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
 
   return (
-    <div className="min-h-screen bg-black text-white overflow-hidden">
+    <div className="min-h-screen overflow-x-hidden max-w-full bg-black text-white overflow-hidden">
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-black/50 backdrop-blur-md border-b border-white/10">
-        <div className="container mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
+        <div className="container mx-auto px-3 sm:px-3 py-4 flex items-center justify-between">
           <Link
             href="/"
             className="text-sm text-gray-400 hover:text-white transition-colors"
@@ -184,7 +184,7 @@ export function ThreeDImmersiveTemplate() {
 
         {/* Hero Content */}
         <motion.div
-          className="relative z-10 text-center max-w-4xl px-6"
+          className="relative z-10 text-center max-w-full px-3"
           style={{ opacity }}
         >
           <motion.h1
@@ -241,15 +241,15 @@ export function ThreeDImmersiveTemplate() {
       </section>
 
       {/* Projects Section */}
-      <section className="relative py-20 px-6 bg-gradient-to-b from-black via-gray-900 to-black">
-        <div className="container mx-auto max-w-6xl">
+      <section className="relative py-20 px-3 bg-gradient-to-b from-black via-gray-900 to-black">
+        <div className="container mx-auto max-w-full">
           <ScrollReveal>
             <h2 className="text-5xl md:text-6xl font-bold text-center mb-16 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
               Featured Projects
             </h2>
           </ScrollReveal>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {portfolioData.projects.map((project, index) => (
               <ScrollReveal key={project.title} delay={index * 0.1}>
                 <Card className="bg-gray-900/50 border-gray-800 backdrop-blur hover:bg-gray-900/80 transition-all duration-300 group overflow-hidden">
@@ -280,8 +280,8 @@ export function ThreeDImmersiveTemplate() {
       </section>
 
       {/* Skills Section with 3D Elements */}
-      <section className="relative py-20 px-6 bg-black">
-        <div className="container mx-auto max-w-4xl">
+      <section className="relative py-20 px-3 bg-black">
+        <div className="container mx-auto max-w-full">
           <ScrollReveal>
             <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-white">
               Technical Expertise
@@ -318,8 +318,8 @@ export function ThreeDImmersiveTemplate() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="relative py-20 px-6 bg-gradient-to-b from-black to-gray-900">
-        <div className="container mx-auto max-w-3xl text-center">
+      <section id="contact" className="relative py-20 px-3 bg-gradient-to-b from-black to-gray-900">
+        <div className="container mx-auto max-w-full text-center">
           <ScrollReveal>
             <h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
               Let's Create Together
@@ -364,7 +364,7 @@ export function ThreeDImmersiveTemplate() {
 
       {/* Footer */}
       <footer className="border-t border-gray-800 bg-black py-8">
-        <div className="container mx-auto px-4 sm:px-6">
+        <div className="container mx-auto px-3 sm:px-3">
           <p className="text-sm text-gray-500 text-center">
             © {new Date().getFullYear()} {portfolioData.name}. Powered by Three.js & WebGL.
           </p>

@@ -114,10 +114,10 @@ const portfolioData = {
 export function TextHeavyTemplate() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen overflow-x-hidden max-w-full bg-background">
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b">
-        <div className="container mx-auto px-4 sm:px-6 py-4">
+        <div className="container mx-auto px-3 sm:px-3 py-4">
           <div className="flex items-center justify-between">
             <Link href="/" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
             ← Back to Gallery
@@ -155,7 +155,7 @@ return (
         {/* Mobile Menu */}
         {mobileMenuOpen && (
           <div className="md:hidden bg-background/95 backdrop-blur-sm border-t">
-            <div className="container mx-auto px-4 sm:px-6 py-4 flex flex-col gap-4">
+            <div className="container mx-auto px-3 sm:px-3 py-4 flex flex-col gap-4">
               <a
                 href="#about"
                 className="text-sm hover:text-primary transition-colors py-2"
@@ -193,7 +193,7 @@ return (
       </nav>
 
       {/* Hero Section */}
-      <section className="container mx-auto px-4 sm:px-6 pt-32 pb-20 max-w-4xl">
+      <section className="container mx-auto px-3 sm:px-3 pt-32 pb-20 max-w-full">
         <FadeIn>
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-serif font-bold mb-6 leading-tight">
             {portfolioData.name}
@@ -221,9 +221,9 @@ return (
       </section>
 
       {/* Stats Section */}
-      <section className="container mx-auto px-4 sm:px-6 py-16 max-w-4xl border-y">
+      <section className="container mx-auto px-3 sm:px-3 py-16 max-w-full border-y">
         <ScrollReveal>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
             {portfolioData.stats.map((stat, index) => (
               <div key={index} className="text-center">
                 <div className="text-4xl md:text-5xl font-bold text-primary mb-2 font-serif">
@@ -239,7 +239,7 @@ return (
       </section>
 
       {/* About Section */}
-      <section id="about" className="container mx-auto px-4 sm:px-6 py-20 max-w-4xl">
+      <section id="about" className="container mx-auto px-3 sm:px-3 py-20 max-w-full">
         <ScrollReveal>
           <h2 className="text-4xl md:text-5xl font-serif font-bold mb-8">
             About
@@ -254,7 +254,7 @@ return (
           <h3 className="text-2xl font-bold mb-4">Published In</h3>
           <div className="flex flex-wrap gap-3">
             {portfolioData.publications.map((pub) => (
-              <Badge key={pub} variant="outline" className="text-base py-2 px-4">
+              <Badge key={pub} variant="outline" className="text-base py-2 px-3">
                 {pub}
               </Badge>
             ))}
@@ -263,7 +263,7 @@ return (
       </section>
 
       {/* Expertise Section */}
-      <section className="container mx-auto px-4 sm:px-6 py-20 max-w-4xl bg-accent/5">
+      <section className="container mx-auto px-3 sm:px-3 py-20 max-w-full bg-accent/5">
         <ScrollReveal>
           <h2 className="text-4xl md:text-5xl font-serif font-bold mb-8">
             Writing Expertise
@@ -283,7 +283,7 @@ return (
       </section>
 
       {/* Articles Section */}
-      <section id="articles" className="container mx-auto px-4 sm:px-6 py-20 max-w-4xl">
+      <section id="articles" className="container mx-auto px-3 sm:px-3 py-20 max-w-full">
         <ScrollReveal>
           <h2 className="text-4xl md:text-5xl font-serif font-bold mb-12">
             Recent Articles
@@ -331,7 +331,7 @@ return (
       </section>
 
       {/* Services Section */}
-      <section id="services" className="container mx-auto px-4 sm:px-6 py-20 max-w-4xl">
+      <section id="services" className="container mx-auto px-3 sm:px-3 py-20 max-w-full">
         <ScrollReveal>
           <h2 className="text-4xl md:text-5xl font-serif font-bold mb-12">
             Services
@@ -355,7 +355,7 @@ return (
       </section>
 
       {/* Case Studies Section */}
-      <section id="case-studies" className="container mx-auto px-4 sm:px-6 py-20 max-w-4xl">
+      <section id="case-studies" className="container mx-auto px-3 sm:px-3 py-20 max-w-full">
         <ScrollReveal>
           <h2 className="text-4xl md:text-5xl font-serif font-bold mb-12">
             Case Studies
@@ -405,14 +405,14 @@ return (
       </section>
 
       {/* Process Section */}
-      <section className="container mx-auto px-4 sm:px-6 py-20 max-w-4xl bg-accent/5">
+      <section className="container mx-auto px-3 sm:px-3 py-20 max-w-full bg-accent/5">
         <ScrollReveal>
           <h2 className="text-4xl md:text-5xl font-serif font-bold mb-12 text-center">
             My Process
           </h2>
         </ScrollReveal>
 
-        <div className="grid md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {portfolioData.process.map((step, index) => (
             <ScrollReveal key={step.step} delay={index * 0.1}>
               <div className="text-center">
@@ -432,7 +432,7 @@ return (
       </section>
 
       {/* Testimonials Section */}
-      <section className="container mx-auto px-4 sm:px-6 py-20 max-w-4xl">
+      <section className="container mx-auto px-3 sm:px-3 py-20 max-w-full">
         <ScrollReveal>
           <h2 className="text-4xl md:text-5xl font-serif font-bold mb-12">
             Client Testimonials
@@ -457,7 +457,7 @@ return (
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="container mx-auto px-4 sm:px-6 py-20 max-w-4xl">
+      <section id="contact" className="container mx-auto px-3 sm:px-3 py-20 max-w-full">
         <ScrollReveal>
           <div className="border-t pt-12">
             <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6">
@@ -476,7 +476,7 @@ return (
 
       {/* Footer */}
       <footer className="border-t bg-background py-12">
-        <div className="container mx-auto px-4 sm:px-6 max-w-4xl">
+        <div className="container mx-auto px-3 sm:px-3 max-w-full">
           <div className="text-center">
             <p className="text-sm text-muted-foreground mb-4">
               © {new Date().getFullYear()} {portfolioData.name}. All rights reserved.

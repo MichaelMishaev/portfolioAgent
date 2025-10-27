@@ -171,10 +171,10 @@ export function FashionProductTemplate() {
   const [isWishlisted, setIsWishlisted] = useState(false);
 
   return (
-    <div className="min-h-screen bg-stone-50 text-stone-900">
+    <div className="min-h-screen overflow-x-hidden max-w-full bg-stone-50 text-stone-900">
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-stone-50/95 backdrop-blur-sm border-b border-stone-200">
-        <div className="container mx-auto px-4 sm:px-6 py-4">
+        <div className="container mx-auto px-3 sm:px-3 py-4">
           <div className="flex items-center justify-between">
             <Link href="/" className="text-xl font-medium tracking-wide">
             URBAN STRIDE
@@ -212,7 +212,7 @@ export function FashionProductTemplate() {
         {/* Mobile Menu */}
         {mobileMenuOpen && (
           <div className="md:hidden bg-background/95 backdrop-blur-sm border-t">
-            <div className="container mx-auto px-4 sm:px-6 py-4 flex flex-col gap-4">
+            <div className="container mx-auto px-3 sm:px-3 py-4 flex flex-col gap-4">
               <a
                 href="#features"
                 className="text-sm hover:text-primary transition-colors py-2"
@@ -236,8 +236,8 @@ export function FashionProductTemplate() {
       </nav>
 
       {/* Hero Section - Vertical Scrolling Gallery */}
-      <section className="container mx-auto px-4 sm:px-6 pt-12 pb-8">
-        <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12">
+      <section className="container mx-auto px-3 sm:px-3 pt-12 pb-8">
+        <div className="max-w-full mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Left - Image Gallery */}
           <div className="space-y-4">
             <FadeIn>
@@ -276,7 +276,7 @@ export function FashionProductTemplate() {
                   <label className="text-sm font-medium mb-3 block">
                     Color: {selectedColor.name}
                   </label>
-                  <div className="flex gap-3">
+                  <div className="flex flex-col sm:flex-row gap-3">
                     {productData.colors.map((color) => (
                       <button
                         key={color.name}
@@ -298,13 +298,13 @@ export function FashionProductTemplate() {
                   <label className="text-sm font-medium mb-3 block">
                     Size: {selectedSize.size}
                   </label>
-                  <div className="grid grid-cols-3 gap-3">
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                     {productData.sizes.map((size) => (
                       <button
                         key={size.size}
                         onClick={() => size.available && setSelectedSize(size)}
                         disabled={!size.available}
-                        className={`py-3 px-4 border-2 rounded-lg text-sm transition-all ${
+                        className={`py-3 px-3 border-2 rounded-lg text-sm transition-all ${
                           selectedSize.size === size.size
                             ? "border-stone-900 bg-stone-900 text-stone-50"
                             : "border-stone-300 hover:border-stone-500"
@@ -343,15 +343,15 @@ export function FashionProductTemplate() {
 
                 {/* Shipping Info */}
                 <div className="border-t border-stone-200 pt-6 space-y-3 text-sm">
-                  <div className="flex items-center gap-3">
+                  <div className="flex flex-col sm:flex-row sm:items-center gap-3">
                     <FiTruck className="w-5 h-5 text-stone-600" />
                     <span>{productData.shipping.freeShipping}</span>
                   </div>
-                  <div className="flex items-center gap-3">
+                  <div className="flex flex-col sm:flex-row sm:items-center gap-3">
                     <FiRefreshCw className="w-5 h-5 text-stone-600" />
                     <span>{productData.shipping.returns}</span>
                   </div>
-                  <div className="flex items-center gap-3">
+                  <div className="flex flex-col sm:flex-row sm:items-center gap-3">
                     <FiFeather className="w-5 h-5 text-stone-600" />
                     <span>{productData.shipping.warranty}</span>
                   </div>
@@ -364,9 +364,9 @@ export function FashionProductTemplate() {
 
       {/* Sustainability Section */}
       <section id="sustainability" className="bg-stone-100 py-24">
-        <div className="container mx-auto px-4 sm:px-6">
+        <div className="container mx-auto px-3 sm:px-3">
           <ScrollReveal>
-            <div className="max-w-5xl mx-auto text-center mb-16">
+            <div className="max-w-full mx-auto text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 {productData.sustainability.title}
               </h2>
@@ -376,7 +376,7 @@ export function FashionProductTemplate() {
             </div>
           </ScrollReveal>
 
-          <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+          <div className="max-w-full mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
             {productData.sustainability.features.map((feature, index) => (
               <ScrollReveal key={feature.title} delay={index * 0.1}>
                 <Card className="bg-white border-stone-200 h-full">
@@ -394,12 +394,12 @@ export function FashionProductTemplate() {
 
       {/* Features */}
       <section id="features" className="py-24">
-        <div className="container mx-auto px-4 sm:px-6">
-          <div className="max-w-6xl mx-auto space-y-24">
+        <div className="container mx-auto px-3 sm:px-3">
+          <div className="max-w-full mx-auto space-y-24">
             {productData.features.map((feature, index) => (
               <ScrollReveal key={feature.title}>
                 <div
-                  className={`grid md:grid-cols-2 gap-12 items-center ${
+                  className={`grid grid-cols-1 md:grid-cols-2 gap-12 items-center ${
                     index % 2 === 1 ? "md:flex-row-reverse" : ""
                   }`}
                 >
@@ -419,7 +419,7 @@ export function FashionProductTemplate() {
 
       {/* Customer Photos */}
       <section className="bg-stone-900 text-stone-50 py-24">
-        <div className="container mx-auto px-4 sm:px-6">
+        <div className="container mx-auto px-3 sm:px-3">
           <ScrollReveal>
             <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
               #UrbanStrideStyle
@@ -429,7 +429,7 @@ export function FashionProductTemplate() {
             </p>
           </ScrollReveal>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
             {productData.customerPhotos.map((photo, index) => (
               <ScrollReveal key={index} delay={index * 0.1}>
                 <div className="relative group overflow-hidden rounded-xl">
@@ -453,8 +453,8 @@ export function FashionProductTemplate() {
 
       {/* Product Details */}
       <section className="py-24">
-        <div className="container mx-auto px-4 sm:px-6">
-          <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-12">
+        <div className="container mx-auto px-3 sm:px-3">
+          <div className="max-w-full mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
             <ScrollReveal>
               <div>
                 <h3 className="text-2xl font-bold mb-6">Materials</h3>
@@ -488,12 +488,12 @@ export function FashionProductTemplate() {
 
       {/* Reviews */}
       <section className="bg-stone-100 py-24">
-        <div className="container mx-auto px-4 sm:px-6">
+        <div className="container mx-auto px-3 sm:px-3">
           <ScrollReveal>
             <h2 className="text-4xl font-bold text-center mb-16">What Our Community Says</h2>
           </ScrollReveal>
 
-          <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-8">
+          <div className="max-w-full mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
             {productData.reviews.map((review, index) => (
               <ScrollReveal key={index} delay={index * 0.1}>
                 <Card className="bg-white border-stone-200">
@@ -524,12 +524,12 @@ export function FashionProductTemplate() {
 
       {/* Complete the Look */}
       <section className="py-24">
-        <div className="container mx-auto px-4 sm:px-6">
+        <div className="container mx-auto px-3 sm:px-3">
           <ScrollReveal>
             <h2 className="text-4xl font-bold text-center mb-16">Complete the Look</h2>
           </ScrollReveal>
 
-          <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-8">
+          <div className="max-w-full mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
             {productData.completeTheLook.map((item, index) => (
               <ScrollReveal key={index} delay={index * 0.1}>
                 <Card className="border-stone-200 overflow-hidden group cursor-pointer hover:shadow-lg transition-shadow">
@@ -551,7 +551,7 @@ export function FashionProductTemplate() {
 
       {/* Footer */}
       <footer className="border-t border-stone-200 py-12 bg-white">
-        <div className="container mx-auto px-4 sm:px-6">
+        <div className="container mx-auto px-3 sm:px-3">
           <div className="text-center text-sm text-stone-600">
             <p>© 2024 Urban Stride. Designed with care for people and planet.</p>
           </div>

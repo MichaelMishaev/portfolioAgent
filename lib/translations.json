@@ -10,7 +10,7 @@
         "title": "Crafting Digital",
         "titleGradient": "Experiences",
         "titleEnd": "That Matter",
-        "subtitle": "I create modern, responsive web applications and stunning user interfaces. From concept to deployment, I bring ideas to life with clean code and beautiful design.",
+        "subtitle": "I create custom websites adjusted for each specific purpose and business need. From concept to deployment, every project is tailored to achieve your unique goals with clean code and beautiful design.",
         "ctaExplore": "View My Work",
         "ctaDemo": "Contact Me"
       },
@@ -45,20 +45,20 @@
           "description": "Built-in search engine optimization and performance best practices"
         },
         "customize": {
-          "title": "Maintainable Code",
-          "description": "Clean, well-documented code that's easy to extend and maintain"
+          "title": "Custom Solutions",
+          "description": "Every website is tailored to your specific needs, industry, and target audience"
         }
       },
       "categoriesSection": {
         "title": "My",
         "titleGradient": "Projects",
-        "subtitle": "From professional portfolios to product landing pages - explore diverse projects I've created",
+        "subtitle": "Each website is custom-built and adjusted for specific purposes - from portfolios to product launches",
         "templatesLabel": "Projects"
       },
       "gallery": {
-        "title": "Customizable",
-        "titleGradient": "Templates",
-        "subtitle": "These templates can be edited to any direction, depending on your needs. Let's talk!"
+        "title": "Portfolio",
+        "titleGradient": "",
+        "subtitle": "Every website is custom-designed and adjusted to fit your specific business goals and audience. Let's discuss your project!"
       }
     },
     "categories": {
@@ -71,7 +71,8 @@
       "Blog": "Blog",
       "Product": "Product",
       "Service": "Service",
-      "Experimental": "Experimental"
+      "Experimental": "Experimental",
+      "Online Business": "Online Business"
     },
     "ui": {
       "viewDemo": "View Project",
@@ -461,6 +462,46 @@
         "features": ["Dark Mode", "Code Snippets", "Learning Series", "Progress Tracking"],
         "tags": ["tech", "developer", "interactive", "code"],
         "bestFor": ["Tech Blogs", "Developer Communities", "Tutorial Sites"]
+      },
+      {
+        "id": "online-business-coach",
+        "name": "Life & Business Coach",
+        "description": "Premium template for life coaches and business coaches. Features hero with CTA, multi-offer showcase (books/courses/coaching), testimonials, lead magnets, and multi-step forms.",
+        "category": "Online Business",
+        "difficulty": "intermediate",
+        "features": ["Hero Section", "Offerings Showcase", "Testimonials", "Newsletter Signup", "Lead Magnets", "Multi-Step Forms"],
+        "tags": ["coaching", "life-coach", "business-coach", "consulting", "personal-brand"],
+        "bestFor": ["Life Coaches", "Business Coaches", "Consultants", "Authors", "Speakers"]
+      },
+      {
+        "id": "online-business-course",
+        "name": "Online Course Platform",
+        "description": "Course creator template with video preview, curriculum showcase, pricing tiers, student testimonials, and enrollment system. Perfect for digital educators.",
+        "category": "Online Business",
+        "difficulty": "intermediate",
+        "features": ["Video Preview", "Curriculum Modules", "Pricing Tiers", "Student Reviews", "Certificate Badges", "CTA Sections"],
+        "tags": ["courses", "education", "e-learning", "digital-products", "teaching"],
+        "bestFor": ["Course Creators", "Educators", "Digital Product Sellers", "Training Platforms"]
+      },
+      {
+        "id": "online-business-agency",
+        "name": "Digital Agency",
+        "description": "Professional B2B agency template with services showcase, case studies, process timeline, team profiles, and client testimonials. Data-driven approach.",
+        "category": "Online Business",
+        "difficulty": "advanced",
+        "features": ["Services Grid", "Case Studies", "Process Timeline", "Stats Dashboard", "Client Logos", "Project Form"],
+        "tags": ["agency", "b2b", "services", "portfolio", "professional"],
+        "bestFor": ["Digital Agencies", "Marketing Agencies", "Development Studios", "Consulting Firms"]
+      },
+      {
+        "id": "online-business-saas",
+        "name": "SaaS Product Platform",
+        "description": "Modern SaaS landing page with AI-powered features showcase, transparent pricing, feature comparison, and free trial CTA. Built for modern product teams.",
+        "category": "Online Business",
+        "difficulty": "intermediate",
+        "features": ["Hero with CTA", "Features Grid", "Pricing Plans", "Social Proof", "Feature Highlights", "Free Trial"],
+        "tags": ["saas", "product", "pricing", "b2b", "subscription"],
+        "bestFor": ["SaaS Companies", "Software Products", "B2B Tools", "Productivity Apps"]
       }
     ]
   },
@@ -475,7 +516,7 @@
         "title": "Создаю Цифровые",
         "titleGradient": "Решения",
         "titleEnd": "Которые Важны",
-        "subtitle": "Я разрабатываю современные, отзывчивые веб-приложения и потрясающие пользовательские интерфейсы. От концепции до деплоя, я воплощаю идеи в жизнь с чистым кодом и красивым дизайном.",
+        "subtitle": "Я создаю кастомные веб-сайты, адаптированные под каждую конкретную цель и бизнес-задачу. От концепции до деплоя, каждый проект настроен для достижения ваших уникальных целей с чистым кодом и красивым дизайном.",
         "ctaExplore": "Посмотреть Работы",
         "ctaDemo": "Связаться со Мной"
       },
@@ -510,20 +551,20 @@
           "description": "Встроенная оптимизация для поисковых систем и лучшие практики производительности"
         },
         "customize": {
-          "title": "Поддерживаемый Код",
-          "description": "Чистый, хорошо документированный код, который легко расширять и поддерживать"
+          "title": "Индивидуальные Решения",
+          "description": "Каждый веб-сайт адаптирован под ваши конкретные потребности, отрасль и целевую аудиторию"
         }
       },
       "categoriesSection": {
         "title": "Мои",
         "titleGradient": "Проекты",
-        "subtitle": "От профессиональных портфолио до лендингов продуктов - исследуйте разнообразные проекты, которые я создал",
+        "subtitle": "Каждый веб-сайт создан индивидуально и адаптирован под конкретные цели - от портфолио до запуска продуктов",
         "templatesLabel": "Проектов"
       },
       "gallery": {
-        "title": "Настраиваемые",
-        "titleGradient": "Шаблоны",
-        "subtitle": "Эти шаблоны можно адаптировать в любом направлении, в зависимости от ваших потребностей. Давайте обсудим!"
+        "title": "Портфолио",
+        "titleGradient": "",
+        "subtitle": "Каждый веб-сайт разработан индивидуально и адаптирован под ваши бизнес-цели и аудиторию. Давайте обсудим ваш проект!"
       }
     },
     "categories": {
@@ -536,7 +577,8 @@
       "Blog": "Блог",
       "Product": "Продукты",
       "Service": "Услуги",
-      "Experimental": "Экспериментальные"
+      "Experimental": "Экспериментальные",
+      "Online Business": "Онлайн Бизнес"
     },
     "ui": {
       "viewDemo": "Посмотреть Проект",
@@ -926,6 +968,46 @@
         "features": ["Темная Тема", "Примеры Кода", "Обучающие Серии", "Отслеживание Прогресса"],
         "tags": ["технологии", "разработчик", "интерактивный", "код"],
         "bestFor": ["Технические Блоги", "Сообщества Разработчиков", "Сайты с Туториалами"]
+      },
+      {
+        "id": "online-business-coach",
+        "name": "Лайф и Бизнес Коуч",
+        "description": "Премиум шаблон для лайф-коучей и бизнес-коучей. Включает hero с призывом к действию, витрину предложений (книги/курсы/коучинг), отзывы, лид-магниты и многошаговые формы.",
+        "category": "Online Business",
+        "difficulty": "intermediate",
+        "features": ["Главная Секция", "Витрина Предложений", "Отзывы", "Подписка на Рассылку", "Лид-магниты", "Многошаговые Формы"],
+        "tags": ["коучинг", "лайф-коуч", "бизнес-коуч", "консалтинг", "личный-бренд"],
+        "bestFor": ["Лайф-коучи", "Бизнес-коучи", "Консультанты", "Авторы", "Спикеры"]
+      },
+      {
+        "id": "online-business-course",
+        "name": "Платформа Онлайн Курсов",
+        "description": "Шаблон для создателей курсов с видео-превью, витриной учебного плана, тарифными планами, отзывами студентов и системой регистрации. Идеально для цифрового образования.",
+        "category": "Online Business",
+        "difficulty": "intermediate",
+        "features": ["Видео Превью", "Модули Курса", "Тарифные Планы", "Отзывы Студентов", "Сертификаты", "CTA Секции"],
+        "tags": ["курсы", "образование", "онлайн-обучение", "цифровые-продукты", "преподавание"],
+        "bestFor": ["Создатели Курсов", "Преподаватели", "Продавцы Цифровых Продуктов", "Обучающие Платформы"]
+      },
+      {
+        "id": "online-business-agency",
+        "name": "Цифровое Агентство",
+        "description": "Профессиональный B2B шаблон агентства с витриной услуг, кейс-стади, временной линией процесса, профилями команды и отзывами клиентов. Ориентирован на данные.",
+        "category": "Online Business",
+        "difficulty": "advanced",
+        "features": ["Сетка Услуг", "Кейс-стади", "Временная Линия", "Панель Статистики", "Логотипы Клиентов", "Форма Проекта"],
+        "tags": ["агентство", "b2b", "услуги", "портфолио", "профессионально"],
+        "bestFor": ["Цифровые Агентства", "Маркетинговые Агентства", "Студии Разработки", "Консалтинговые Фирмы"]
+      },
+      {
+        "id": "online-business-saas",
+        "name": "SaaS Платформа Продукта",
+        "description": "Современная SaaS лендинг страница с AI-функциями, прозрачными тарифами, сравнением функций и призывом к бесплатному пробному периоду. Создан для современных продуктовых команд.",
+        "category": "Online Business",
+        "difficulty": "intermediate",
+        "features": ["Hero с CTA", "Сетка Функций", "Тарифные Планы", "Социальное Доказательство", "Основные Функции", "Бесплатный Пробный Период"],
+        "tags": ["saas", "продукт", "тарифы", "b2b", "подписка"],
+        "bestFor": ["SaaS Компании", "Программные Продукты", "B2B Инструменты", "Приложения Продуктивности"]
       }
     ]
   }

@@ -165,10 +165,10 @@ export function SaaSProductTemplate() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white dark:from-gray-950 dark:to-gray-900">
+    <div className="min-h-screen overflow-x-hidden max-w-full bg-gradient-to-b from-gray-50 to-white dark:from-gray-950 dark:to-gray-900">
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-lg border-b">
-        <div className="container mx-auto px-4 sm:px-6 py-4">
+        <div className="container mx-auto px-3 sm:px-3 py-4">
           <div className="flex items-center justify-between">
             <Link href="/" className="text-xl font-bold">
               TaskFlow Pro
@@ -195,7 +195,7 @@ export function SaaSProductTemplate() {
         {/* Mobile Menu */}
         {mobileMenuOpen && (
           <div className="md:hidden bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm border-t">
-            <div className="container mx-auto px-4 sm:px-6 py-4 flex flex-col gap-4">
+            <div className="container mx-auto px-3 sm:px-3 py-4 flex flex-col gap-4">
               <a
                 href="#features"
                 className="text-sm hover:text-primary transition-colors py-2"
@@ -219,8 +219,8 @@ export function SaaSProductTemplate() {
       </nav>
 
       {/* Hero Section */}
-      <section className="container mx-auto px-4 sm:px-6 pt-20 pb-16">
-        <div className="max-w-4xl mx-auto text-center">
+      <section className="container mx-auto px-3 sm:px-3 pt-20 pb-16">
+        <div className="max-w-full mx-auto text-center">
           <FadeIn>
             <Badge className="mb-4" variant="secondary">
               🎉 New: AI-powered task suggestions
@@ -234,7 +234,7 @@ export function SaaSProductTemplate() {
           </FadeIn>
 
           <FadeIn delay={0.2}>
-            <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+            <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-8 max-w-full mx-auto">
               {productData.description}
             </p>
           </FadeIn>
@@ -254,7 +254,7 @@ export function SaaSProductTemplate() {
 
           {/* Stats */}
           <FadeIn delay={0.4}>
-            <div className="grid grid-cols-3 gap-8 max-w-2xl mx-auto mb-12">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-full mx-auto mb-12">
               {productData.hero.stats.map((stat, index) => (
                 <div key={index} className="text-center">
                   <div className="text-3xl font-bold text-primary mb-1">{stat.value}</div>
@@ -278,7 +278,7 @@ export function SaaSProductTemplate() {
       </section>
 
       {/* Social Proof */}
-      <section className="container mx-auto px-4 sm:px-6 py-12 border-t">
+      <section className="container mx-auto px-3 sm:px-3 py-12 border-t">
         <ScrollReveal>
           <p className="text-center text-sm text-muted-foreground mb-8">
             {productData.socialProof.title}
@@ -292,19 +292,19 @@ export function SaaSProductTemplate() {
       </section>
 
       {/* Features Section */}
-      <section id="features" className="container mx-auto px-4 sm:px-6 py-20">
+      <section id="features" className="container mx-auto px-3 sm:px-3 py-20">
         <ScrollReveal>
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
               Everything you need to ship faster
             </h2>
-            <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-lg sm:text-xl text-muted-foreground max-w-full mx-auto">
               Powerful features that help teams collaborate and deliver exceptional results
             </p>
           </div>
         </ScrollReveal>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-full mx-auto">
           {productData.features.map((feature, index) => (
             <ScrollReveal key={feature.title} delay={index * 0.1}>
               <Card className="h-full hover:shadow-lg transition-all">
@@ -322,7 +322,7 @@ export function SaaSProductTemplate() {
       </section>
 
       {/* Testimonials */}
-      <section className="container mx-auto px-4 sm:px-6 py-20 bg-muted/30">
+      <section className="container mx-auto px-3 sm:px-3 py-20 bg-muted/30">
         <ScrollReveal>
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
@@ -334,7 +334,7 @@ export function SaaSProductTemplate() {
           </div>
         </ScrollReveal>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-full mx-auto">
           {productData.testimonials.map((testimonial, index) => (
             <ScrollReveal key={testimonial.author} delay={index * 0.1}>
               <Card className="h-full">
@@ -364,7 +364,7 @@ export function SaaSProductTemplate() {
       </section>
 
       {/* Pricing */}
-      <section id="pricing" className="container mx-auto px-4 sm:px-6 py-20">
+      <section id="pricing" className="container mx-auto px-3 sm:px-3 py-20">
         <ScrollReveal>
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
@@ -376,7 +376,7 @@ export function SaaSProductTemplate() {
           </div>
         </ScrollReveal>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-full mx-auto">
           {productData.pricing.plans.map((plan, index) => (
             <ScrollReveal key={plan.name} delay={index * 0.1}>
               <Card className={`relative h-full ${plan.popular ? "border-primary shadow-lg scale-105" : ""}`}>
@@ -413,7 +413,7 @@ export function SaaSProductTemplate() {
       </section>
 
       {/* FAQ */}
-      <section className="container mx-auto px-4 sm:px-6 py-20 bg-muted/30">
+      <section className="container mx-auto px-3 sm:px-3 py-20 bg-muted/30">
         <ScrollReveal>
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
@@ -422,7 +422,7 @@ export function SaaSProductTemplate() {
           </div>
         </ScrollReveal>
 
-        <div className="max-w-3xl mx-auto space-y-4">
+        <div className="max-w-full mx-auto space-y-4">
           {productData.faq.map((item, index) => (
             <ScrollReveal key={item.question} delay={index * 0.05}>
               <Card>
@@ -437,9 +437,9 @@ export function SaaSProductTemplate() {
       </section>
 
       {/* Final CTA */}
-      <section className="container mx-auto px-4 sm:px-6 py-20">
+      <section className="container mx-auto px-3 sm:px-3 py-20">
         <ScrollReveal>
-          <Card className="max-w-4xl mx-auto bg-gradient-to-r from-blue-600 to-purple-600 text-white border-0">
+          <Card className="max-w-full mx-auto bg-gradient-to-r from-blue-600 to-purple-600 text-white border-0">
             <CardContent className="p-8 sm:p-12 text-center">
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
                 {productData.finalCTA.title}
@@ -461,7 +461,7 @@ export function SaaSProductTemplate() {
 
       {/* Footer */}
       <footer className="border-t bg-white dark:bg-gray-900 py-12">
-        <div className="container mx-auto px-4 sm:px-6">
+        <div className="container mx-auto px-3 sm:px-3">
           <div className="text-center text-sm text-muted-foreground">
             <p>© 2024 TaskFlow Pro. All rights reserved.</p>
           </div>

@@ -252,10 +252,10 @@ export function CourseProductTemplate() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white dark:from-blue-950 dark:to-gray-900">
+    <div className="min-h-screen overflow-x-hidden max-w-full bg-gradient-to-b from-blue-50 to-white dark:from-blue-950 dark:to-gray-900">
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-lg border-b">
-        <div className="container mx-auto px-4 sm:px-6 py-4">
+        <div className="container mx-auto px-3 sm:px-3 py-4">
           <div className="flex items-center justify-between">
             <Link href="/" className="text-xl font-bold">
               Design Mastery
@@ -282,7 +282,7 @@ export function CourseProductTemplate() {
         {/* Mobile Menu */}
         {mobileMenuOpen && (
           <div className="md:hidden bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm border-t">
-            <div className="container mx-auto px-4 sm:px-6 py-4 flex flex-col gap-4">
+            <div className="container mx-auto px-3 sm:px-3 py-4 flex flex-col gap-4">
               <a
                 href="#curriculum"
                 className="text-sm hover:text-primary transition-colors py-2"
@@ -306,8 +306,8 @@ export function CourseProductTemplate() {
       </nav>
 
       {/* Hero Section */}
-      <section className="container mx-auto px-4 sm:px-6 pt-20 pb-16">
-        <div className="max-w-4xl mx-auto text-center">
+      <section className="container mx-auto px-3 sm:px-3 pt-20 pb-16">
+        <div className="max-w-full mx-auto text-center">
           <FadeIn>
             <Badge className="mb-4 bg-gradient-to-r from-blue-600 to-gold-500 text-white border-0">
               🎓 New cohort starts November 1st - 12 spots left
@@ -321,7 +321,7 @@ export function CourseProductTemplate() {
           </FadeIn>
 
           <FadeIn delay={0.2}>
-            <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+            <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-full mx-auto">
               {courseData.description}
             </p>
           </FadeIn>
@@ -341,7 +341,7 @@ export function CourseProductTemplate() {
 
           {/* Stats */}
           <FadeIn delay={0.4}>
-            <div className="grid grid-cols-3 gap-8 max-w-2xl mx-auto mb-12">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-full mx-auto mb-12">
               {courseData.hero.stats.map((stat, index) => (
                 <div key={index} className="text-center">
                   <div className="text-3xl font-bold text-blue-600 mb-1">{stat.value}</div>
@@ -365,9 +365,9 @@ export function CourseProductTemplate() {
       </section>
 
       {/* Instructor Credibility */}
-      <section className="container mx-auto px-4 sm:px-6 py-20 border-t">
+      <section className="container mx-auto px-3 sm:px-3 py-20 border-t">
         <ScrollReveal>
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-full mx-auto">
             <div className="flex flex-col md:flex-row gap-8 items-center">
               <img
                 src={courseData.instructor.avatar}
@@ -378,7 +378,7 @@ export function CourseProductTemplate() {
                 <h2 className="text-3xl font-bold mb-2">{courseData.instructor.name}</h2>
                 <p className="text-xl text-muted-foreground mb-4">{courseData.instructor.title}</p>
                 <p className="text-lg mb-6">{courseData.instructor.bio}</p>
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {courseData.instructor.credentials.map((credential, index) => (
                     <div key={index} className="flex items-start gap-2">
                       <FiCheck className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
@@ -393,7 +393,7 @@ export function CourseProductTemplate() {
       </section>
 
       {/* Transformation - Before/After */}
-      <section className="container mx-auto px-4 sm:px-6 py-20 bg-gradient-to-r from-blue-100 to-gold-100 dark:from-blue-950 dark:to-gold-950">
+      <section className="container mx-auto px-3 sm:px-3 py-20 bg-gradient-to-r from-blue-100 to-gold-100 dark:from-blue-950 dark:to-gold-950">
         <ScrollReveal>
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
@@ -402,8 +402,8 @@ export function CourseProductTemplate() {
           </div>
         </ScrollReveal>
 
-        <div className="max-w-5xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
+        <div className="max-w-full mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
             <ScrollReveal delay={0.1}>
               <Card className="h-full bg-red-50 dark:bg-red-950 border-red-200">
                 <CardHeader>
@@ -467,7 +467,7 @@ export function CourseProductTemplate() {
       </section>
 
       {/* Curriculum */}
-      <section id="curriculum" className="container mx-auto px-4 sm:px-6 py-20">
+      <section id="curriculum" className="container mx-auto px-3 sm:px-3 py-20">
         <ScrollReveal>
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
@@ -479,7 +479,7 @@ export function CourseProductTemplate() {
           </div>
         </ScrollReveal>
 
-        <div className="max-w-4xl mx-auto space-y-6">
+        <div className="max-w-full mx-auto space-y-6">
           {courseData.curriculum.modules.map((module, index) => (
             <ScrollReveal key={module.title} delay={index * 0.1}>
               <Card className="hover:shadow-lg transition-all">
@@ -500,7 +500,7 @@ export function CourseProductTemplate() {
                       </div>
                     </div>
                   </div>
-                  <div className="grid grid-cols-2 gap-2 mt-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-4">
                     {module.topics.map((topic, idx) => (
                       <div key={idx} className="flex items-start gap-2">
                         <FiCheck className="w-4 h-4 text-blue-600 flex-shrink-0 mt-0.5" />
@@ -516,7 +516,7 @@ export function CourseProductTemplate() {
       </section>
 
       {/* Features */}
-      <section className="container mx-auto px-4 sm:px-6 py-20 bg-muted/30">
+      <section className="container mx-auto px-3 sm:px-3 py-20 bg-muted/30">
         <ScrollReveal>
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
@@ -525,7 +525,7 @@ export function CourseProductTemplate() {
           </div>
         </ScrollReveal>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-full mx-auto">
           {courseData.features.map((feature, index) => (
             <ScrollReveal key={feature.title} delay={index * 0.1}>
               <Card className="h-full hover:shadow-lg transition-all">
@@ -543,7 +543,7 @@ export function CourseProductTemplate() {
       </section>
 
       {/* Testimonials */}
-      <section className="container mx-auto px-4 sm:px-6 py-20">
+      <section className="container mx-auto px-3 sm:px-3 py-20">
         <ScrollReveal>
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
@@ -555,7 +555,7 @@ export function CourseProductTemplate() {
           </div>
         </ScrollReveal>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-full mx-auto">
           {courseData.testimonials.map((testimonial, index) => (
             <ScrollReveal key={testimonial.author} delay={index * 0.1}>
               <Card className="h-full">
@@ -588,7 +588,7 @@ export function CourseProductTemplate() {
       </section>
 
       {/* Pricing */}
-      <section id="pricing" className="container mx-auto px-4 sm:px-6 py-20 bg-muted/30">
+      <section id="pricing" className="container mx-auto px-3 sm:px-3 py-20 bg-muted/30">
         <ScrollReveal>
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
@@ -600,7 +600,7 @@ export function CourseProductTemplate() {
           </div>
         </ScrollReveal>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-full mx-auto mb-12">
           {courseData.pricing.plans.map((plan, index) => (
             <ScrollReveal key={plan.name} delay={index * 0.1}>
               <Card className={`relative h-full ${plan.popular ? "border-blue-600 shadow-lg scale-105" : ""}`}>
@@ -642,7 +642,7 @@ export function CourseProductTemplate() {
 
         {/* Guarantee */}
         <ScrollReveal>
-          <Card className="max-w-3xl mx-auto bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-950 dark:to-emerald-950 border-green-200">
+          <Card className="max-w-full mx-auto bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-950 dark:to-emerald-950 border-green-200">
             <CardContent className="p-8 text-center">
               <Badge className="mb-4 bg-green-600 text-white">{courseData.guarantee.badge}</Badge>
               <h3 className="text-2xl font-bold mb-3">{courseData.guarantee.title}</h3>
@@ -653,7 +653,7 @@ export function CourseProductTemplate() {
       </section>
 
       {/* FAQ */}
-      <section className="container mx-auto px-4 sm:px-6 py-20">
+      <section className="container mx-auto px-3 sm:px-3 py-20">
         <ScrollReveal>
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
@@ -662,7 +662,7 @@ export function CourseProductTemplate() {
           </div>
         </ScrollReveal>
 
-        <div className="max-w-3xl mx-auto space-y-4">
+        <div className="max-w-full mx-auto space-y-4">
           {courseData.faq.map((item, index) => (
             <ScrollReveal key={item.question} delay={index * 0.05}>
               <Card>
@@ -677,9 +677,9 @@ export function CourseProductTemplate() {
       </section>
 
       {/* Final CTA */}
-      <section className="container mx-auto px-4 sm:px-6 py-20 bg-muted/30">
+      <section className="container mx-auto px-3 sm:px-3 py-20 bg-muted/30">
         <ScrollReveal>
-          <Card className="max-w-4xl mx-auto bg-gradient-to-r from-blue-600 to-gold-500 text-white border-0">
+          <Card className="max-w-full mx-auto bg-gradient-to-r from-blue-600 to-gold-500 text-white border-0">
             <CardContent className="p-12 text-center">
               <h2 className="text-4xl md:text-5xl font-bold mb-4">
                 {courseData.finalCTA.title}
@@ -701,7 +701,7 @@ export function CourseProductTemplate() {
 
       {/* Footer */}
       <footer className="border-t bg-white dark:bg-gray-900 py-12">
-        <div className="container mx-auto px-4 sm:px-6">
+        <div className="container mx-auto px-3 sm:px-3">
           <div className="text-center text-sm text-muted-foreground">
             <p>© 2024 Design Mastery. All rights reserved.</p>
           </div>

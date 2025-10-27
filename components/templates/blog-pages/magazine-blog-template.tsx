@@ -311,7 +311,7 @@ export function MagazineBlogTemplate() {
       {/* Top Bar */}
       <div className="bg-gray-900 text-white py-2">
         <div className="container mx-auto px-3 max-w-full flex items-center justify-between text-sm">
-          <div className="flex items-center gap-6">
+          <div className="flex flex-col sm:flex-row sm:items-center gap-6">
             <span className="flex items-center gap-2">
               <FiTrendingUp className="w-4 h-4" />
               Trending Now
@@ -390,7 +390,7 @@ export function MagazineBlogTemplate() {
       {/* Hero - Featured Articles */}
       <section className="py-12 bg-gray-50">
         <div className="container mx-auto px-3 max-w-full">
-          <div className="grid lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* Main Featured */}
             <FadeIn>
               <Card className="h-full overflow-hidden border-0 shadow-xl hover:shadow-2xl transition-all group">
@@ -495,7 +495,7 @@ export function MagazineBlogTemplate() {
       {/* Stats Bar */}
       <section className="py-8 bg-white border-y">
         <div className="container mx-auto px-3 max-w-full">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <div>
               <div className="text-3xl font-bold text-blue-600 mb-1">{magazineData.stats.subscribers}</div>
               <div className="text-sm text-gray-600">Newsletter Subscribers</div>
@@ -525,7 +525,7 @@ export function MagazineBlogTemplate() {
                 <button
                   key={cat.name}
                   onClick={() => setSelectedCategory(cat.name)}
-                  className={`px-4 py-2 rounded-full font-medium text-sm transition-all ${
+                  className={`px-3 py-2 rounded-full font-medium text-sm transition-all ${
                     selectedCategory === cat.name
                       ? "bg-blue-600 text-white shadow-lg"
                       : "bg-gray-100 text-gray-700 hover:bg-gray-200"
@@ -554,11 +554,11 @@ export function MagazineBlogTemplate() {
             </Button>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {magazineData.latest.map((article, index) => (
               <ScrollReveal key={article.id} delay={index * 0.05}>
                 <Card className="overflow-hidden border hover:shadow-xl transition-all group">
-                  <div className="flex gap-6">
+                  <div className="flex flex-col sm:flex-row gap-6">
                     <div className="w-1/3 flex-shrink-0">
                       <div className="relative h-full min-h-[200px]">
                         <img
@@ -575,7 +575,7 @@ export function MagazineBlogTemplate() {
                       </h3>
                       <p className="text-gray-600 text-sm mb-4">{article.excerpt}</p>
                       <div className="flex items-center justify-between mt-auto">
-                        <div className="flex items-center gap-3">
+                        <div className="flex flex-col sm:flex-row sm:items-center gap-3">
                           <img
                             src={article.author.avatar}
                             alt={article.author.name}
@@ -607,14 +607,14 @@ export function MagazineBlogTemplate() {
       {/* Editor's Picks & Tags */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-3 max-w-full">
-          <div className="grid lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Editor's Picks */}
             <div className="lg:col-span-2">
               <div className="flex items-center gap-2 mb-6">
                 <FiAward className="w-6 h-6 text-blue-600" />
                 <h2 className="text-3xl font-bold">Editor's Picks</h2>
               </div>
-              <div className="grid md:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {magazineData.editorsPicks.map((pick) => (
                   <Card key={pick.id} className="p-6 hover:shadow-lg transition-shadow group cursor-pointer">
                     <Badge variant="outline" className="mb-3">{pick.category}</Badge>
@@ -664,7 +664,7 @@ export function MagazineBlogTemplate() {
               Expert writers and industry leaders sharing their knowledge
             </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {magazineData.editors.map((editor, index) => (
               <ScrollReveal key={editor.name} delay={index * 0.1}>
                 <Card className="p-8 text-center hover:shadow-xl transition-all group">
@@ -696,7 +696,7 @@ export function MagazineBlogTemplate() {
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-3 max-w-full">
           <h2 className="text-3xl font-bold text-center mb-12">What Readers Say</h2>
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {magazineData.testimonials.map((testimonial) => (
               <Card key={testimonial.name} className="p-8 border-0 shadow-lg">
                 <div className="flex gap-1 mb-4">
@@ -705,7 +705,7 @@ export function MagazineBlogTemplate() {
                   ))}
                 </div>
                 <p className="text-gray-600 italic mb-6">"{testimonial.quote}"</p>
-                <div className="flex items-center gap-3">
+                <div className="flex flex-col sm:flex-row sm:items-center gap-3">
                   <img
                     src={testimonial.avatar}
                     alt={testimonial.name}
@@ -742,7 +742,7 @@ export function MagazineBlogTemplate() {
               </Button>
             </div>
             <p className="text-sm text-blue-100 mb-8">Join {magazineData.stats.subscribers} designers and developers</p>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-8 max-w-2xl mx-auto text-white">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-8 max-w-full mx-auto text-white">
               <div>
                 <div className="text-2xl font-bold mb-1">Weekly</div>
                 <div className="text-sm text-blue-100">Frequency</div>
@@ -767,7 +767,7 @@ export function MagazineBlogTemplate() {
             <div className="md:col-span-2">
               <h3 className="text-2xl font-bold mb-4">CREATIVE<span className="text-blue-500">MAG</span></h3>
               <p className="text-gray-400 mb-6">Your source for design and development insights. Join our community of {magazineData.stats.monthlyReaders} monthly readers.</p>
-              <div className="flex items-center gap-3">
+              <div className="flex flex-col sm:flex-row sm:items-center gap-3">
                 <a href="#" className="p-2 bg-gray-800 hover:bg-gray-700 rounded-lg transition-colors">
                   <FiTwitter className="w-5 h-5" />
                 </a>
@@ -812,7 +812,7 @@ export function MagazineBlogTemplate() {
           </div>
           <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray-400">
             <p>© 2025 CreativeMag. All rights reserved.</p>
-            <div className="flex items-center gap-6">
+            <div className="flex flex-col sm:flex-row sm:items-center gap-6">
               <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
               <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
               <a href="#" className="hover:text-white transition-colors">Cookie Policy</a>

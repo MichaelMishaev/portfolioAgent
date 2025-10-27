@@ -1,0 +1,215 @@
+🚀 Starting Mobile Responsiveness Test
+📱 Viewport: 346x878
+🌐 Base URL: http://localhost:3500
+📋 Templates to test: 38
+
+
+Testing: /templates/single-page
+✅ PASS: single-page
+
+Testing: /templates/minimalist
+❌ FAIL: minimalist
+   ❌ Horizontal scroll detected (368px > 346px)
+   ⚠️  Some text elements overflow viewport
+
+Testing: /templates/dark-mode
+✅ PASS: dark-mode
+
+Testing: /templates/bold-typography
+❌ FAIL: bold-typography
+   ❌ Horizontal scroll detected (354px > 346px)
+   ⚠️  Buttons may not be stacking vertically on mobile
+
+Testing: /templates/bento-grid
+❌ FAIL: bento-grid
+   ❌ Horizontal scroll detected (365px > 346px)
+   ⚠️  Some text elements overflow viewport
+   ⚠️  Buttons may not be stacking vertically on mobile
+
+Testing: /templates/grid-masonry
+✅ PASS: grid-masonry
+
+Testing: /templates/split-screen
+✅ PASS: split-screen
+
+Testing: /templates/fullscreen-immersive
+✅ PASS: fullscreen-immersive
+
+Testing: /templates/card-modular
+✅ PASS: card-modular
+
+Testing: /templates/3d-immersive
+✅ PASS: 3d-immersive
+
+Testing: /templates/ar-spatial
+✅ PASS: ar-spatial
+
+Testing: /templates/neo-brutalist
+❌ FAIL: neo-brutalist
+   ❌ Horizontal scroll detected (389px > 346px)
+   ⚠️  Some text elements overflow viewport
+
+Testing: /templates/illustration-focus
+✅ PASS: illustration-focus
+
+Testing: /templates/y2k-retro
+✅ PASS: y2k-retro
+
+Testing: /templates/collage-maximalist
+✅ PASS: collage-maximalist
+
+Testing: /templates/organic-liquid
+✅ PASS: organic-liquid
+
+Testing: /templates/text-heavy
+✅ PASS: text-heavy
+
+Testing: /templates/kinetic-typography
+✅ PASS: kinetic-typography
+
+Testing: /templates/data-dashboard
+✅ PASS: data-dashboard
+
+Testing: /templates/voice-first
+✅ PASS: voice-first
+
+Testing: /templates/product-saas
+✅ PASS: product-saas
+
+Testing: /templates/product-tech
+✅ PASS: product-tech
+
+Testing: /templates/product-luxury
+✅ PASS: product-luxury
+
+Testing: /templates/product-physical
+✅ PASS: product-physical
+
+Testing: /templates/product-audio
+✅ PASS: product-audio
+
+Testing: /templates/product-vacuum
+✅ PASS: product-vacuum
+
+Testing: /templates/product-fashion
+✅ PASS: product-fashion
+
+Testing: /templates/product-course
+✅ PASS: product-course
+
+Testing: /templates/product-premium
+❌ FAIL: product-premium
+   ❌ Horizontal scroll detected (363px > 346px)
+
+Testing: /templates/service-agency
+❌ FAIL: service-agency
+   ❌ Horizontal scroll detected (380px > 346px)
+   ⚠️  Some text elements overflow viewport
+   ⚠️  Buttons may not be stacking vertically on mobile
+
+Testing: /templates/service-b2b
+❌ FAIL: service-b2b
+   ❌ Horizontal scroll detected (380px > 346px)
+
+Testing: /templates/service-community
+❌ FAIL: service-community
+   ❌ Horizontal scroll detected (360px > 346px)
+   ⚠️  Buttons may not be stacking vertically on mobile
+
+Testing: /templates/service-consulting
+❌ FAIL: service-consulting
+   ❌ Horizontal scroll detected (427px > 346px)
+   ⚠️  Some text elements overflow viewport
+   ⚠️  Buttons may not be stacking vertically on mobile
+
+Testing: /templates/service-enterprise
+❌ FAIL: service-enterprise
+   ❌ Horizontal scroll detected (420px > 346px)
+   ⚠️  Some text elements overflow viewport
+   ⚠️  Buttons may not be stacking vertically on mobile
+
+Testing: /templates/service-dfyou
+✅ PASS: service-dfyou
+
+Testing: /templates/blog-personal
+✅ PASS: blog-personal
+
+Testing: /templates/blog-tech
+❌ FAIL: blog-tech
+   ❌ Horizontal scroll detected (347px > 346px)
+   ⚠️  Some text elements overflow viewport
+   ⚠️  Buttons may not be stacking vertically on mobile
+
+Testing: /templates/blog-magazine
+✅ PASS: blog-magazine
+
+================================================================================
+📊 TEST SUMMARY
+================================================================================
+✅ Passed: 27/38
+❌ Failed: 11/38
+📸 Screenshots saved to: mobile-test-screenshots/
+
+
+❌ FAILED TEMPLATES:
+--------------------------------------------------------------------------------
+
+minimalist (/templates/minimalist)
+  ❌ Horizontal scroll detected (368px > 346px)
+  ⚠️  Some text elements overflow viewport
+  Screenshot: minimalist.png
+
+bold-typography (/templates/bold-typography)
+  ❌ Horizontal scroll detected (354px > 346px)
+  ⚠️  Buttons may not be stacking vertically on mobile
+  Screenshot: bold-typography.png
+
+bento-grid (/templates/bento-grid)
+  ❌ Horizontal scroll detected (365px > 346px)
+  ⚠️  Some text elements overflow viewport
+  ⚠️  Buttons may not be stacking vertically on mobile
+  Screenshot: bento-grid.png
+
+neo-brutalist (/templates/neo-brutalist)
+  ❌ Horizontal scroll detected (389px > 346px)
+  ⚠️  Some text elements overflow viewport
+  Screenshot: neo-brutalist.png
+
+product-premium (/templates/product-premium)
+  ❌ Horizontal scroll detected (363px > 346px)
+  Screenshot: product-premium.png
+
+service-agency (/templates/service-agency)
+  ❌ Horizontal scroll detected (380px > 346px)
+  ⚠️  Some text elements overflow viewport
+  ⚠️  Buttons may not be stacking vertically on mobile
+  Screenshot: service-agency.png
+
+service-b2b (/templates/service-b2b)
+  ❌ Horizontal scroll detected (380px > 346px)
+  Screenshot: service-b2b.png
+
+service-community (/templates/service-community)
+  ❌ Horizontal scroll detected (360px > 346px)
+  ⚠️  Buttons may not be stacking vertically on mobile
+  Screenshot: service-community.png
+
+service-consulting (/templates/service-consulting)
+  ❌ Horizontal scroll detected (427px > 346px)
+  ⚠️  Some text elements overflow viewport
+  ⚠️  Buttons may not be stacking vertically on mobile
+  Screenshot: service-consulting.png
+
+service-enterprise (/templates/service-enterprise)
+  ❌ Horizontal scroll detected (420px > 346px)
+  ⚠️  Some text elements overflow viewport
+  ⚠️  Buttons may not be stacking vertically on mobile
+  Screenshot: service-enterprise.png
+
+blog-tech (/templates/blog-tech)
+  ❌ Horizontal scroll detected (347px > 346px)
+  ⚠️  Some text elements overflow viewport
+  ⚠️  Buttons may not be stacking vertically on mobile
+  Screenshot: blog-tech.png
+
+📄 Full report saved to: /Users/michaelmishayev/Desktop/Projects/portfolioWeb/mobile-test-report.json

@@ -373,11 +373,11 @@ export function PremiumProductTemplate() {
         </motion.div>
 
         <motion.div
-          className="relative h-full flex flex-col items-center justify-center text-center px-6"
+          className="relative h-full flex flex-col items-center justify-center text-center px-3"
           style={{ opacity: heroOpacity }}
         >
           <FadeIn>
-            <Badge className="mb-6 bg-white/10 text-white border-white/20 backdrop-blur-sm px-4 py-2 text-xs tracking-widest">
+            <Badge className="mb-6 bg-white/10 text-white border-white/20 backdrop-blur-sm px-3 py-2 text-xs tracking-widest">
               {productData.hero.badge}
             </Badge>
           </FadeIn>
@@ -395,13 +395,13 @@ export function PremiumProductTemplate() {
           </FadeIn>
 
           <FadeIn delay={0.4}>
-            <p className="text-lg text-gray-400 mb-12 max-w-2xl font-light italic">
+            <p className="text-lg text-gray-400 mb-12 max-w-full font-light italic">
               {productData.tagline}
             </p>
           </FadeIn>
 
           <FadeIn delay={0.5}>
-            <p className="text-base text-gray-300 mb-12 max-w-3xl leading-relaxed">
+            <p className="text-base text-gray-300 mb-12 max-w-full leading-relaxed">
               {productData.description}
             </p>
           </FadeIn>
@@ -440,7 +440,7 @@ export function PremiumProductTemplate() {
       {/* Heritage Section */}
       <section id="heritage" className="container mx-auto px-3 max-w-full py-32">
         <ScrollReveal>
-          <div className="max-w-4xl mx-auto text-center mb-20">
+          <div className="max-w-full mx-auto text-center mb-20">
             <h2 className="text-6xl md:text-7xl font-light mb-8 tracking-tight">
               {productData.heritage.title}
             </h2>
@@ -454,10 +454,10 @@ export function PremiumProductTemplate() {
         </ScrollReveal>
 
         {/* Timeline */}
-        <div className="max-w-6xl mx-auto space-y-24 mt-32">
+        <div className="max-w-full mx-auto space-y-24 mt-32">
           {productData.heritage.milestones.map((milestone, index) => (
             <ScrollReveal key={milestone.year} delay={index * 0.1}>
-              <div className={`grid md:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'md:grid-flow-dense' : ''}`}>
+              <div className={`grid grid-cols-1 md:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'md:grid-flow-dense' : ''}`}>
                 <div className={index % 2 === 1 ? 'md:col-start-2' : ''}>
                   <div className="relative overflow-hidden rounded-2xl aspect-[4/3]">
                     <img
@@ -490,10 +490,10 @@ export function PremiumProductTemplate() {
           </div>
         </ScrollReveal>
 
-        <div className="max-w-7xl mx-auto space-y-32">
+        <div className="max-w-full mx-auto space-y-32">
           {productData.technicalMastery.features.map((feature, index) => (
             <ScrollReveal key={feature.title} delay={index * 0.1}>
-              <div className={`grid lg:grid-cols-2 gap-16 items-center ${index % 2 === 1 ? 'lg:grid-flow-dense' : ''}`}>
+              <div className={`grid grid-cols-1 lg:grid-cols-2 gap-16 items-center ${index % 2 === 1 ? 'lg:grid-flow-dense' : ''}`}>
                 <div className={index % 2 === 1 ? 'lg:col-start-2' : ''}>
                   <div className="relative overflow-hidden rounded-3xl aspect-[3/2] border border-white/5">
                     <img
@@ -504,7 +504,7 @@ export function PremiumProductTemplate() {
                   </div>
                 </div>
                 <div className={index % 2 === 1 ? 'lg:col-start-1 lg:row-start-1' : ''}>
-                  <div className="inline-block px-6 py-3 bg-white/5 rounded-full mb-6">
+                  <div className="inline-block px-3 py-3 bg-white/5 rounded-full mb-6">
                     <span className="text-4xl font-light">{feature.stat}</span>
                     <span className="text-sm text-gray-400 ml-3 uppercase tracking-wider">{feature.metric}</span>
                   </div>
@@ -530,12 +530,12 @@ export function PremiumProductTemplate() {
           </div>
         </ScrollReveal>
 
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-full mx-auto">
           {/* Material Selection */}
           <ScrollReveal delay={0.1}>
             <div className="mb-16">
               <h3 className="text-3xl font-light mb-8 text-center">Select Case Material</h3>
-              <div className="grid md:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {productData.configurator.materials.map((material, index) => (
                   <motion.div
                     key={material.name}
@@ -584,7 +584,7 @@ export function PremiumProductTemplate() {
           <ScrollReveal delay={0.2}>
             <div className="mb-16">
               <h3 className="text-3xl font-light mb-8 text-center">Complications</h3>
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-full mx-auto">
                 {productData.configurator.complications.map((complication, index) => (
                   <motion.button
                     key={complication.name}
@@ -627,7 +627,7 @@ export function PremiumProductTemplate() {
           <ScrollReveal delay={0.3}>
             <div className="mb-16">
               <h3 className="text-3xl font-light mb-8 text-center">Select Strap</h3>
-              <div className="grid md:grid-cols-4 gap-4 max-w-5xl mx-auto">
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-4 max-w-full mx-auto">
                 {productData.configurator.straps.map((strap, index) => (
                   <motion.div
                     key={strap.name}
@@ -669,7 +669,7 @@ export function PremiumProductTemplate() {
 
           {/* Price Summary */}
           <ScrollReveal delay={0.4}>
-            <Card className="max-w-2xl mx-auto bg-gradient-to-br from-white/5 to-white/[0.02] border-white/10 backdrop-blur">
+            <Card className="max-w-full mx-auto bg-gradient-to-br from-white/5 to-white/[0.02] border-white/10 backdrop-blur">
               <CardContent className="p-10 text-center">
                 <p className="text-sm uppercase tracking-widest text-gray-400 mb-4">Your Configuration</p>
                 <div className="text-6xl font-light mb-8">
@@ -706,7 +706,7 @@ export function PremiumProductTemplate() {
           </div>
         </ScrollReveal>
 
-        <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-12">
+        <div className="max-w-full mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
           {productData.craftsmen.profiles.map((craftsman, index) => (
             <ScrollReveal key={craftsman.name} delay={index * 0.1}>
               <Card className="h-full bg-white/5 border-white/10 hover:border-white/20 transition-all backdrop-blur">
@@ -742,7 +742,7 @@ export function PremiumProductTemplate() {
           </div>
         </ScrollReveal>
 
-        <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-8">
+        <div className="max-w-full mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
           {Object.values(productData.specifications.details).map((section, index) => (
             <ScrollReveal key={section.title} delay={index * 0.1}>
               <Card className="h-full bg-white/5 border-white/10 backdrop-blur">
@@ -777,7 +777,7 @@ export function PremiumProductTemplate() {
           </div>
         </ScrollReveal>
 
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="max-w-full mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {productData.ownership.benefits.map((benefit, index) => (
             <ScrollReveal key={benefit.title} delay={index * 0.1}>
               <Card className="h-full bg-white/5 border-white/10 hover:border-white/20 transition-all backdrop-blur">
@@ -804,7 +804,7 @@ export function PremiumProductTemplate() {
           </div>
         </ScrollReveal>
 
-        <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+        <div className="max-w-full mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
           {productData.testimonials.map((testimonial, index) => (
             <ScrollReveal key={testimonial.author} delay={index * 0.1}>
               <Card className="h-full bg-white/5 border-white/10 backdrop-blur">
@@ -839,7 +839,7 @@ export function PremiumProductTemplate() {
       {/* Final CTA */}
       <section className="container mx-auto px-3 max-w-full py-32">
         <ScrollReveal>
-          <Card className="max-w-5xl mx-auto bg-gradient-to-br from-white/10 to-white/5 border-white/20 backdrop-blur-xl">
+          <Card className="max-w-full mx-auto bg-gradient-to-br from-white/10 to-white/5 border-white/20 backdrop-blur-xl">
             <CardContent className="p-16 text-center">
               <FiClock className="w-16 h-16 mx-auto mb-8 text-gray-400" />
               <h2 className="text-5xl md:text-6xl font-light mb-6 tracking-tight">

@@ -320,8 +320,8 @@ export function ConsultingServiceTemplate() {
       {/* Hero Section */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-emerald-50 via-white to-blue-50 opacity-70"></div>
-        <div className="container relative mx-auto px-4 py-32">
-          <div className="max-w-4xl">
+        <div className="container relative mx-auto px-3 py-32">
+          <div className="max-w-full">
             <FadeIn>
               <Badge className="mb-6 bg-emerald-100 text-emerald-700 border-emerald-200">
                 Trusted by Fortune 500 Leaders
@@ -335,7 +335,7 @@ export function ConsultingServiceTemplate() {
             </FadeIn>
 
             <FadeIn delay={0.2}>
-              <p className="text-2xl text-gray-600 mb-8 max-w-3xl leading-relaxed">
+              <p className="text-2xl text-gray-600 mb-8 max-w-full leading-relaxed">
                 {serviceData.description}
               </p>
             </FadeIn>
@@ -377,11 +377,11 @@ export function ConsultingServiceTemplate() {
             </div>
           </ScrollReveal>
 
-          <div className="space-y-8 max-w-7xl mx-auto">
+          <div className="space-y-8 max-w-full mx-auto">
             {serviceData.services.map((service, index) => (
               <ScrollReveal key={service.name} delay={index * 0.1}>
                 <Card className="overflow-hidden hover:shadow-2xl transition-all border-2 hover:border-emerald-200">
-                  <div className="grid md:grid-cols-3 gap-8 p-8">
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-8 p-8">
                     <div>
                       <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-emerald-600 to-emerald-700 text-white flex items-center justify-center mb-4">
                         <service.icon className="w-8 h-8" />
@@ -446,11 +446,11 @@ export function ConsultingServiceTemplate() {
             </div>
           </ScrollReveal>
 
-          <div className="max-w-7xl mx-auto space-y-16">
+          <div className="max-w-full mx-auto space-y-16">
             {serviceData.engagements.map((engagement, index) => (
               <ScrollReveal key={engagement.client} delay={index * 0.1}>
                 <Card className="overflow-hidden">
-                  <div className="grid md:grid-cols-2 gap-0">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
                     <div className="relative h-96 md:h-auto">
                       <img
                         src={engagement.image}
@@ -472,7 +472,7 @@ export function ConsultingServiceTemplate() {
                         <p className="text-gray-700">{engagement.intervention}</p>
                       </div>
 
-                      <div className="grid grid-cols-3 gap-4 mb-8 p-6 bg-emerald-50 rounded-xl">
+                      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8 p-6 bg-emerald-50 rounded-xl">
                         {engagement.impact.map((item) => (
                           <div key={item.metric} className="text-center">
                             <div className="text-3xl font-bold text-emerald-600 mb-1">{item.value}</div>
@@ -506,7 +506,7 @@ export function ConsultingServiceTemplate() {
             </div>
           </ScrollReveal>
 
-          <div className="grid md:grid-cols-4 gap-8 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-full mx-auto">
             {serviceData.team.map((member, index) => (
               <ScrollReveal key={member.name} delay={index * 0.1}>
                 <Card className="text-center hover:shadow-xl transition-shadow">
@@ -538,7 +538,7 @@ export function ConsultingServiceTemplate() {
             </div>
           </ScrollReveal>
 
-          <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
+          <div className="max-w-full mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
             {serviceData.methodology.phases.map((phase, index) => (
               <ScrollReveal key={phase.number} delay={index * 0.1}>
                 <Card className="h-full">
@@ -582,7 +582,7 @@ export function ConsultingServiceTemplate() {
             </div>
           </ScrollReveal>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-full mx-auto">
             {serviceData.insights.map((insight, index) => (
               <ScrollReveal key={insight.title} delay={index * 0.1}>
                 <Card className="group overflow-hidden hover:shadow-xl transition-all cursor-pointer">
@@ -617,7 +617,7 @@ export function ConsultingServiceTemplate() {
             <h2 className="text-5xl font-bold text-white mb-6">
               Let's Discuss Your Strategic Priorities
             </h2>
-            <p className="text-xl text-emerald-100 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-emerald-100 mb-8 max-w-full mx-auto">
               Schedule a confidential consultation with one of our senior partners.
             </p>
             <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-center">

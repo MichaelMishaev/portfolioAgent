@@ -82,10 +82,10 @@ const portfolioData = {
 export function OrganicLiquidTemplate() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 return (
-    <div className="min-h-screen bg-gradient-to-br from-amber-50 via-rose-50 to-teal-50 dark:from-gray-900 dark:via-purple-900 dark:to-gray-900 overflow-hidden">
+    <div className="min-h-screen overflow-x-hidden max-w-full bg-gradient-to-br from-amber-50 via-rose-50 to-teal-50 dark:from-gray-900 dark:via-purple-900 dark:to-gray-900 overflow-hidden">
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-white/60 dark:bg-gray-900/60 backdrop-blur-md">
-        <div className="container mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
+        <div className="container mx-auto px-3 sm:px-3 py-4 flex items-center justify-between">
           <Link href="/" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
             ← Back
           </Link>
@@ -96,7 +96,7 @@ return (
       </nav>
 
       {/* Hero with Organic Shapes */}
-      <section className="min-h-screen flex items-center justify-center relative px-6 pt-20">
+      <section className="min-h-screen overflow-x-hidden max-w-full flex items-center justify-center relative px-3 pt-20">
         {/* Morphing Background Blobs */}
         <motion.div
           className="absolute top-20 left-10 w-96 h-96 bg-gradient-to-br from-rose-300 to-amber-300 rounded-full opacity-40 blur-3xl"
@@ -125,7 +125,7 @@ return (
           }}
         />
 
-        <div className="relative z-10 text-center max-w-4xl">
+        <div className="relative z-10 text-center max-w-full">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -149,7 +149,7 @@ return (
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-lg text-muted-foreground mb-12 max-w-2xl mx-auto"
+            className="text-lg text-muted-foreground mb-12 max-w-full mx-auto"
           >
             {portfolioData.tagline}
           </motion.p>
@@ -170,7 +170,7 @@ return (
       </section>
 
       {/* About Section */}
-      <section className="py-20 px-6 relative">
+      <section className="py-20 px-3 relative">
         <motion.div
           className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-amber-300 to-rose-300 rounded-full opacity-20 blur-3xl"
           animate={{
@@ -184,7 +184,7 @@ return (
           }}
         />
 
-        <div className="max-w-4xl mx-auto relative z-10">
+        <div className="max-w-full mx-auto relative z-10">
           <ScrollReveal>
             <h2 className="text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-rose-600 to-teal-600 bg-clip-text text-transparent">
               About Me
@@ -196,7 +196,7 @@ return (
 
           {/* Stats */}
           <ScrollReveal delay={0.2}>
-            <div className="grid grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
               {portfolioData.stats.map((stat, index) => (
                 <motion.div
                   key={index}
@@ -218,14 +218,14 @@ return (
       </section>
 
       {/* Services with Liquid Cards */}
-      <section className="py-20 px-6">
+      <section className="py-20 px-3">
         <ScrollReveal>
           <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold text-center mb-16 bg-gradient-to-r from-rose-600 to-teal-600 bg-clip-text text-transparent">
             What I Do
           </h2>
         </ScrollReveal>
 
-        <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+        <div className="max-w-full mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
           {portfolioData.services.map((service, index) => (
             <ScrollReveal key={service.title} delay={index * 0.1}>
               <Card className="h-full overflow-hidden bg-white/60 dark:bg-gray-800/60 backdrop-blur border-2 border-rose-200/50 dark:border-rose-800/50 hover:shadow-2xl transition-all duration-300 group">
@@ -249,7 +249,7 @@ return (
       </section>
 
       {/* Portfolio Section */}
-      <section className="py-20 px-6 relative">
+      <section className="py-20 px-3 relative">
         <motion.div
           className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-br from-teal-300 to-blue-300 rounded-full opacity-20 blur-3xl"
           animate={{
@@ -263,7 +263,7 @@ return (
           }}
         />
 
-        <div className="max-w-6xl mx-auto relative z-10">
+        <div className="max-w-full mx-auto relative z-10">
           <ScrollReveal>
             <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold text-center mb-16 bg-gradient-to-r from-rose-600 to-teal-600 bg-clip-text text-transparent">
               Selected Work
@@ -308,15 +308,15 @@ return (
       </section>
 
       {/* Process Section */}
-      <section className="py-20 px-6">
-        <div className="max-w-5xl mx-auto">
+      <section className="py-20 px-3">
+        <div className="max-w-full mx-auto">
           <ScrollReveal>
             <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold text-center mb-16 bg-gradient-to-r from-rose-600 to-teal-600 bg-clip-text text-transparent">
               My Process
             </h2>
           </ScrollReveal>
 
-          <div className="grid md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {portfolioData.process.map((step, index) => (
               <ScrollReveal key={step.step} delay={index * 0.1}>
                 <motion.div
@@ -340,7 +340,7 @@ return (
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 px-6 relative">
+      <section className="py-20 px-3 relative">
         <motion.div
           className="absolute top-20 right-20 w-80 h-80 bg-gradient-to-br from-rose-300 to-amber-300 rounded-full opacity-20 blur-3xl"
           animate={{
@@ -354,14 +354,14 @@ return (
           }}
         />
 
-        <div className="max-w-5xl mx-auto relative z-10">
+        <div className="max-w-full mx-auto relative z-10">
           <ScrollReveal>
             <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold text-center mb-16 bg-gradient-to-r from-rose-600 to-teal-600 bg-clip-text text-transparent">
               Kind Words
             </h2>
           </ScrollReveal>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {portfolioData.testimonials.map((testimonial, index) => (
               <ScrollReveal key={testimonial.name} delay={index * 0.1}>
                 <Card className="bg-white/60 dark:bg-gray-800/60 backdrop-blur border-2 border-rose-200/50 hover:shadow-2xl transition-all duration-300">
@@ -382,8 +382,8 @@ return (
       </section>
 
       {/* Values with Organic Pills */}
-      <section className="py-20 px-6">
-        <div className="max-w-4xl mx-auto">
+      <section className="py-20 px-3">
+        <div className="max-w-full mx-auto">
           <ScrollReveal>
             <h3 className="text-3xl md:text-4xl font-bold text-center mb-12">
               Core Values
@@ -411,7 +411,7 @@ return (
       </section>
 
       {/* Contact with Liquid Background */}
-      <section id="contact" className="py-20 px-6 relative">
+      <section id="contact" className="py-20 px-3 relative">
         <motion.div
           className="absolute inset-0 bg-gradient-to-r from-rose-300/30 via-amber-300/30 to-teal-300/30 rounded-[40%_60%_70%_30%_/_60%_30%_70%_40%]"
           animate={{
@@ -428,7 +428,7 @@ return (
           }}
         />
 
-        <div className="relative z-10 max-w-3xl mx-auto text-center">
+        <div className="relative z-10 max-w-full mx-auto text-center">
           <ScrollReveal>
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-8 bg-gradient-to-r from-rose-600 to-teal-600 bg-clip-text text-transparent">
               Let's Create
@@ -457,7 +457,7 @@ return (
 
       {/* Footer */}
       <footer className="border-t border-rose-200/50 dark:border-rose-800/50 bg-white/40 dark:bg-gray-900/40 backdrop-blur py-8">
-        <div className="container mx-auto px-4 sm:px-6">
+        <div className="container mx-auto px-3 sm:px-3">
           <p className="text-sm text-muted-foreground text-center">
             © {new Date().getFullYear()} {portfolioData.name}. Designed with love and nature.
           </p>

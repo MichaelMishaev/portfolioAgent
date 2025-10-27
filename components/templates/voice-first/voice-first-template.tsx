@@ -102,7 +102,7 @@ function CommandChip({ text, onClick }: { text: string; onClick: () => void }) {
   return (
     <motion.button
       onClick={onClick}
-      className="px-4 py-2 bg-gray-800 hover:bg-gray-700 border border-gray-700 rounded-full text-sm text-gray-300 hover:text-white transition-all"
+      className="px-3 py-2 bg-gray-800 hover:bg-gray-700 border border-gray-700 rounded-full text-sm text-gray-300 hover:text-white transition-all"
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
     >
@@ -140,7 +140,7 @@ export function VoiceFirstTemplate() {
     <div className="min-h-screen bg-gradient-to-br from-gray-950 via-blue-950 to-gray-950 text-white overflow-x-hidden max-w-full">
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-gray-900/80 backdrop-blur-md border-b border-gray-800">
-        <div className="container mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
+        <div className="container mx-auto px-3 sm:px-3 py-4 flex items-center justify-between">
           <Link
             href="/"
             className="text-sm text-gray-400 hover:text-white transition-colors"
@@ -157,8 +157,8 @@ export function VoiceFirstTemplate() {
       </nav>
 
       {/* Hero Section with Voice Interface */}
-      <section className="min-h-screen flex items-center justify-center px-6 pt-20 relative">
-        <div className="container mx-auto max-w-4xl">
+      <section className="min-h-screen flex items-center justify-center px-3 pt-20 relative">
+        <div className="container mx-auto max-w-full">
           <div className="text-center mb-12">
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
@@ -271,8 +271,8 @@ export function VoiceFirstTemplate() {
       </section>
 
       {/* Conversation History */}
-      <section className="py-20 px-6 bg-gray-900/30">
-        <div className="container mx-auto max-w-4xl">
+      <section className="py-20 px-3 bg-gray-900/30">
+        <div className="container mx-auto max-w-full">
           <ScrollReveal>
             <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-white">
               Sample Conversation
@@ -314,15 +314,15 @@ export function VoiceFirstTemplate() {
       </section>
 
       {/* Projects Section */}
-      <section className="py-20 px-6">
-        <div className="container mx-auto max-w-6xl">
+      <section className="py-20 px-3">
+        <div className="container mx-auto max-w-full">
           <ScrollReveal>
             <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-white">
               Voice Experience Projects
             </h2>
           </ScrollReveal>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {projects.map((project, index) => (
               <ScrollReveal key={project.title} delay={index * 0.1}>
                 <Card className="bg-gray-900/50 border-gray-800 hover:border-blue-500/50 transition-all group">
@@ -353,15 +353,15 @@ export function VoiceFirstTemplate() {
       </section>
 
       {/* Voice Design Principles */}
-      <section className="py-20 px-6 bg-gray-900/30">
-        <div className="container mx-auto max-w-5xl">
+      <section className="py-20 px-3 bg-gray-900/30">
+        <div className="container mx-auto max-w-full">
           <ScrollReveal>
             <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-white">
               Voice Design Principles
             </h2>
           </ScrollReveal>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
                 title: "Natural Conversation",
@@ -399,8 +399,8 @@ export function VoiceFirstTemplate() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 px-6">
-        <div className="container mx-auto max-w-3xl text-center">
+      <section id="contact" className="py-20 px-3">
+        <div className="container mx-auto max-w-full text-center">
           <ScrollReveal>
             <h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
               Let's Talk About Voice
@@ -433,7 +433,7 @@ export function VoiceFirstTemplate() {
 
       {/* Footer */}
       <footer className="border-t border-gray-800 bg-gray-900/50 py-8">
-        <div className="container mx-auto px-4 sm:px-6">
+        <div className="container mx-auto px-3 sm:px-3">
           <p className="text-sm text-gray-500 text-center">
             © {new Date().getFullYear()} {portfolioData.name}. Designed for voice-first experiences.
           </p>

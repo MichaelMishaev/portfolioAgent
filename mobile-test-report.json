@@ -1,0 +1,405 @@
+[
+  {
+    "template": "single-page",
+    "url": "/templates/single-page",
+    "hamburgerVisible": true,
+    "hasHorizontalScroll": false,
+    "navVisibleOnMobile": false,
+    "screenshotPath": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/mobile-test-screenshots/single-page.png",
+    "issues": [],
+    "passed": true
+  },
+  {
+    "template": "minimalist",
+    "url": "/templates/minimalist",
+    "hamburgerVisible": true,
+    "hasHorizontalScroll": false,
+    "navVisibleOnMobile": false,
+    "screenshotPath": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/mobile-test-screenshots/minimalist.png",
+    "issues": [
+      "⚠️  Some text elements overflow viewport"
+    ],
+    "passed": true
+  },
+  {
+    "template": "dark-mode",
+    "url": "/templates/dark-mode",
+    "hamburgerVisible": true,
+    "hasHorizontalScroll": false,
+    "navVisibleOnMobile": false,
+    "screenshotPath": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/mobile-test-screenshots/dark-mode.png",
+    "issues": [],
+    "passed": true
+  },
+  {
+    "template": "bold-typography",
+    "url": "/templates/bold-typography",
+    "hamburgerVisible": true,
+    "hasHorizontalScroll": false,
+    "navVisibleOnMobile": false,
+    "screenshotPath": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/mobile-test-screenshots/bold-typography.png",
+    "issues": [],
+    "passed": true
+  },
+  {
+    "template": "bento-grid",
+    "url": "/templates/bento-grid",
+    "hamburgerVisible": true,
+    "hasHorizontalScroll": false,
+    "navVisibleOnMobile": false,
+    "screenshotPath": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/mobile-test-screenshots/bento-grid.png",
+    "issues": [],
+    "passed": true
+  },
+  {
+    "template": "grid-masonry",
+    "url": "/templates/grid-masonry",
+    "hamburgerVisible": true,
+    "hasHorizontalScroll": false,
+    "navVisibleOnMobile": false,
+    "screenshotPath": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/mobile-test-screenshots/grid-masonry.png",
+    "issues": [
+      "⚠️  Buttons may not be stacking vertically on mobile"
+    ],
+    "passed": true
+  },
+  {
+    "template": "split-screen",
+    "url": "/templates/split-screen",
+    "hamburgerVisible": true,
+    "hasHorizontalScroll": false,
+    "navVisibleOnMobile": false,
+    "screenshotPath": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/mobile-test-screenshots/split-screen.png",
+    "issues": [],
+    "passed": true
+  },
+  {
+    "template": "fullscreen-immersive",
+    "url": "/templates/fullscreen-immersive",
+    "hamburgerVisible": true,
+    "hasHorizontalScroll": false,
+    "navVisibleOnMobile": false,
+    "screenshotPath": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/mobile-test-screenshots/fullscreen-immersive.png",
+    "issues": [
+      "⚠️  Some text elements overflow viewport"
+    ],
+    "passed": true
+  },
+  {
+    "template": "card-modular",
+    "url": "/templates/card-modular",
+    "hamburgerVisible": true,
+    "hasHorizontalScroll": false,
+    "navVisibleOnMobile": false,
+    "screenshotPath": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/mobile-test-screenshots/card-modular.png",
+    "issues": [
+      "⚠️  Buttons may not be stacking vertically on mobile"
+    ],
+    "passed": true
+  },
+  {
+    "template": "3d-immersive",
+    "url": "/templates/3d-immersive",
+    "hamburgerVisible": true,
+    "hasHorizontalScroll": false,
+    "navVisibleOnMobile": false,
+    "screenshotPath": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/mobile-test-screenshots/3d-immersive.png",
+    "issues": [],
+    "passed": true
+  },
+  {
+    "template": "ar-spatial",
+    "url": "/templates/ar-spatial",
+    "hamburgerVisible": true,
+    "hasHorizontalScroll": false,
+    "navVisibleOnMobile": false,
+    "screenshotPath": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/mobile-test-screenshots/ar-spatial.png",
+    "issues": [],
+    "passed": true
+  },
+  {
+    "template": "neo-brutalist",
+    "url": "/templates/neo-brutalist",
+    "hamburgerVisible": true,
+    "hasHorizontalScroll": false,
+    "navVisibleOnMobile": false,
+    "screenshotPath": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/mobile-test-screenshots/neo-brutalist.png",
+    "issues": [
+      "⚠️  Some text elements overflow viewport"
+    ],
+    "passed": true
+  },
+  {
+    "template": "illustration-focus",
+    "url": "/templates/illustration-focus",
+    "hamburgerVisible": true,
+    "hasHorizontalScroll": false,
+    "navVisibleOnMobile": false,
+    "screenshotPath": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/mobile-test-screenshots/illustration-focus.png",
+    "issues": [],
+    "passed": true
+  },
+  {
+    "template": "y2k-retro",
+    "url": "/templates/y2k-retro",
+    "hamburgerVisible": true,
+    "hasHorizontalScroll": false,
+    "navVisibleOnMobile": false,
+    "screenshotPath": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/mobile-test-screenshots/y2k-retro.png",
+    "issues": [
+      "⚠️  Some text elements overflow viewport"
+    ],
+    "passed": true
+  },
+  {
+    "template": "collage-maximalist",
+    "url": "/templates/collage-maximalist",
+    "hamburgerVisible": true,
+    "hasHorizontalScroll": false,
+    "navVisibleOnMobile": false,
+    "screenshotPath": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/mobile-test-screenshots/collage-maximalist.png",
+    "issues": [],
+    "passed": true
+  },
+  {
+    "template": "organic-liquid",
+    "url": "/templates/organic-liquid",
+    "hamburgerVisible": true,
+    "hasHorizontalScroll": false,
+    "navVisibleOnMobile": false,
+    "screenshotPath": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/mobile-test-screenshots/organic-liquid.png",
+    "issues": [],
+    "passed": true
+  },
+  {
+    "template": "text-heavy",
+    "url": "/templates/text-heavy",
+    "hamburgerVisible": true,
+    "hasHorizontalScroll": false,
+    "navVisibleOnMobile": false,
+    "screenshotPath": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/mobile-test-screenshots/text-heavy.png",
+    "issues": [],
+    "passed": true
+  },
+  {
+    "template": "kinetic-typography",
+    "url": "/templates/kinetic-typography",
+    "hamburgerVisible": true,
+    "hasHorizontalScroll": false,
+    "navVisibleOnMobile": false,
+    "screenshotPath": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/mobile-test-screenshots/kinetic-typography.png",
+    "issues": [],
+    "passed": true
+  },
+  {
+    "template": "data-dashboard",
+    "url": "/templates/data-dashboard",
+    "hamburgerVisible": true,
+    "hasHorizontalScroll": false,
+    "navVisibleOnMobile": false,
+    "screenshotPath": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/mobile-test-screenshots/data-dashboard.png",
+    "issues": [],
+    "passed": true
+  },
+  {
+    "template": "voice-first",
+    "url": "/templates/voice-first",
+    "hamburgerVisible": true,
+    "hasHorizontalScroll": false,
+    "navVisibleOnMobile": false,
+    "screenshotPath": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/mobile-test-screenshots/voice-first.png",
+    "issues": [],
+    "passed": true
+  },
+  {
+    "template": "product-saas",
+    "url": "/templates/product-saas",
+    "hamburgerVisible": true,
+    "hasHorizontalScroll": false,
+    "navVisibleOnMobile": false,
+    "screenshotPath": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/mobile-test-screenshots/product-saas.png",
+    "issues": [],
+    "passed": true
+  },
+  {
+    "template": "product-tech",
+    "url": "/templates/product-tech",
+    "hamburgerVisible": true,
+    "hasHorizontalScroll": false,
+    "navVisibleOnMobile": false,
+    "screenshotPath": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/mobile-test-screenshots/product-tech.png",
+    "issues": [],
+    "passed": true
+  },
+  {
+    "template": "product-luxury",
+    "url": "/templates/product-luxury",
+    "hamburgerVisible": true,
+    "hasHorizontalScroll": false,
+    "navVisibleOnMobile": false,
+    "screenshotPath": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/mobile-test-screenshots/product-luxury.png",
+    "issues": [],
+    "passed": true
+  },
+  {
+    "template": "product-physical",
+    "url": "/templates/product-physical",
+    "hamburgerVisible": true,
+    "hasHorizontalScroll": false,
+    "navVisibleOnMobile": false,
+    "screenshotPath": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/mobile-test-screenshots/product-physical.png",
+    "issues": [
+      "⚠️  Buttons may not be stacking vertically on mobile"
+    ],
+    "passed": true
+  },
+  {
+    "template": "product-audio",
+    "url": "/templates/product-audio",
+    "hamburgerVisible": true,
+    "hasHorizontalScroll": false,
+    "navVisibleOnMobile": false,
+    "screenshotPath": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/mobile-test-screenshots/product-audio.png",
+    "issues": [],
+    "passed": true
+  },
+  {
+    "template": "product-vacuum",
+    "url": "/templates/product-vacuum",
+    "hamburgerVisible": true,
+    "hasHorizontalScroll": false,
+    "navVisibleOnMobile": false,
+    "screenshotPath": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/mobile-test-screenshots/product-vacuum.png",
+    "issues": [
+      "⚠️  Buttons may not be stacking vertically on mobile"
+    ],
+    "passed": true
+  },
+  {
+    "template": "product-fashion",
+    "url": "/templates/product-fashion",
+    "hamburgerVisible": true,
+    "hasHorizontalScroll": false,
+    "navVisibleOnMobile": false,
+    "screenshotPath": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/mobile-test-screenshots/product-fashion.png",
+    "issues": [],
+    "passed": true
+  },
+  {
+    "template": "product-course",
+    "url": "/templates/product-course",
+    "hamburgerVisible": true,
+    "hasHorizontalScroll": false,
+    "navVisibleOnMobile": false,
+    "screenshotPath": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/mobile-test-screenshots/product-course.png",
+    "issues": [],
+    "passed": true
+  },
+  {
+    "template": "product-premium",
+    "url": "/templates/product-premium",
+    "hamburgerVisible": true,
+    "hasHorizontalScroll": false,
+    "navVisibleOnMobile": false,
+    "screenshotPath": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/mobile-test-screenshots/product-premium.png",
+    "issues": [],
+    "passed": true
+  },
+  {
+    "template": "service-agency",
+    "url": "/templates/service-agency",
+    "hamburgerVisible": true,
+    "hasHorizontalScroll": false,
+    "navVisibleOnMobile": false,
+    "screenshotPath": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/mobile-test-screenshots/service-agency.png",
+    "issues": [],
+    "passed": true
+  },
+  {
+    "template": "service-b2b",
+    "url": "/templates/service-b2b",
+    "hamburgerVisible": true,
+    "hasHorizontalScroll": false,
+    "navVisibleOnMobile": false,
+    "screenshotPath": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/mobile-test-screenshots/service-b2b.png",
+    "issues": [],
+    "passed": true
+  },
+  {
+    "template": "service-community",
+    "url": "/templates/service-community",
+    "hamburgerVisible": true,
+    "hasHorizontalScroll": false,
+    "navVisibleOnMobile": false,
+    "screenshotPath": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/mobile-test-screenshots/service-community.png",
+    "issues": [],
+    "passed": true
+  },
+  {
+    "template": "service-consulting",
+    "url": "/templates/service-consulting",
+    "hamburgerVisible": true,
+    "hasHorizontalScroll": false,
+    "navVisibleOnMobile": false,
+    "screenshotPath": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/mobile-test-screenshots/service-consulting.png",
+    "issues": [],
+    "passed": true
+  },
+  {
+    "template": "service-enterprise",
+    "url": "/templates/service-enterprise",
+    "hamburgerVisible": true,
+    "hasHorizontalScroll": false,
+    "navVisibleOnMobile": false,
+    "screenshotPath": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/mobile-test-screenshots/service-enterprise.png",
+    "issues": [],
+    "passed": true
+  },
+  {
+    "template": "service-dfyou",
+    "url": "/templates/service-dfyou",
+    "hamburgerVisible": true,
+    "hasHorizontalScroll": false,
+    "navVisibleOnMobile": false,
+    "screenshotPath": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/mobile-test-screenshots/service-dfyou.png",
+    "issues": [
+      "⚠️  Buttons may not be stacking vertically on mobile"
+    ],
+    "passed": true
+  },
+  {
+    "template": "blog-personal",
+    "url": "/templates/blog-personal",
+    "hamburgerVisible": true,
+    "hasHorizontalScroll": false,
+    "navVisibleOnMobile": false,
+    "screenshotPath": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/mobile-test-screenshots/blog-personal.png",
+    "issues": [
+      "⚠️  Some text elements overflow viewport",
+      "⚠️  Buttons may not be stacking vertically on mobile"
+    ],
+    "passed": true
+  },
+  {
+    "template": "blog-tech",
+    "url": "/templates/blog-tech",
+    "hamburgerVisible": true,
+    "hasHorizontalScroll": false,
+    "navVisibleOnMobile": false,
+    "screenshotPath": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/mobile-test-screenshots/blog-tech.png",
+    "issues": [],
+    "passed": true
+  },
+  {
+    "template": "blog-magazine",
+    "url": "/templates/blog-magazine",
+    "hamburgerVisible": true,
+    "hasHorizontalScroll": false,
+    "navVisibleOnMobile": false,
+    "screenshotPath": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/mobile-test-screenshots/blog-magazine.png",
+    "issues": [
+      "⚠️  Buttons may not be stacking vertically on mobile"
+    ],
+    "passed": true
+  }
+]

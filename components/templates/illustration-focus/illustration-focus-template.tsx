@@ -115,10 +115,10 @@ const portfolioData = {
 export function IllustrationFocusTemplate() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 return (
-    <div className="min-h-screen bg-gradient-to-br from-pink-50 via-purple-50 to-blue-50 dark:from-gray-900 dark:via-purple-900 dark:to-gray-900">
+    <div className="min-h-screen overflow-x-hidden max-w-full bg-gradient-to-br from-pink-50 via-purple-50 to-blue-50 dark:from-gray-900 dark:via-purple-900 dark:to-gray-900">
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border-b">
-        <div className="container mx-auto px-4 sm:px-6 py-4">
+        <div className="container mx-auto px-3 sm:px-3 py-4">
           <div className="flex items-center justify-between">
             <Link href="/" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
             ← Back
@@ -153,7 +153,7 @@ return (
         {/* Mobile Menu */}
         {mobileMenuOpen && (
           <div className="md:hidden bg-background/95 backdrop-blur-sm border-t">
-            <div className="container mx-auto px-4 sm:px-6 py-4 flex flex-col gap-4">
+            <div className="container mx-auto px-3 sm:px-3 py-4 flex flex-col gap-4">
               <a
                 href="#services"
                 className="text-sm hover:text-primary transition-colors py-2"
@@ -184,8 +184,8 @@ return (
       </nav>
 
       {/* Hero Section */}
-      <section className="container mx-auto px-4 sm:px-6 pt-32 pb-20">
-        <div className="text-center max-w-4xl mx-auto">
+      <section className="container mx-auto px-3 sm:px-3 pt-32 pb-20">
+        <div className="text-center max-w-full mx-auto">
           <FadeIn>
             {/* Decorative Illustration Placeholder */}
             <div className="mb-8">
@@ -222,9 +222,9 @@ return (
       </section>
 
       {/* About Section */}
-      <section className="container mx-auto px-4 sm:px-6 py-20">
+      <section className="container mx-auto px-3 sm:px-3 py-20">
         <ScrollReveal>
-          <Card className="max-w-3xl mx-auto bg-white/60 dark:bg-gray-800/60 backdrop-blur border-2 border-purple-200 dark:border-purple-800">
+          <Card className="max-w-full mx-auto bg-white/60 dark:bg-gray-800/60 backdrop-blur border-2 border-purple-200 dark:border-purple-800">
             <CardContent className="p-8">
               <h2 className="text-3xl font-bold mb-4 text-center">About Me 👋</h2>
               <p className="text-lg text-center leading-relaxed text-foreground/80">
@@ -236,8 +236,8 @@ return (
       </section>
 
       {/* Stats Section */}
-      <section className="container mx-auto px-4 sm:px-6 py-16">
-        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+      <section className="container mx-auto px-3 sm:px-3 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-full mx-auto">
           {portfolioData.stats.map((stat, index) => (
             <ScrollReveal key={stat.label} delay={index * 0.1}>
               <Card className="bg-gradient-to-br from-pink-100 to-purple-100 dark:from-pink-900/30 dark:to-purple-900/30 border-2 border-pink-300 dark:border-pink-700 hover:shadow-lg transition-shadow">
@@ -255,14 +255,14 @@ return (
       </section>
 
       {/* Services Section */}
-      <section id="services" className="container mx-auto px-4 sm:px-6 py-20">
+      <section id="services" className="container mx-auto px-3 sm:px-3 py-20">
         <ScrollReveal>
           <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold text-center mb-16">
             What I Do
           </h2>
         </ScrollReveal>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-full mx-auto">
           {portfolioData.services.map((service, index) => (
             <ScrollReveal key={service.title} delay={index * 0.1}>
               <Card className="h-full hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 bg-white/80 dark:bg-gray-800/80 backdrop-blur border-2"
@@ -284,14 +284,14 @@ return (
       </section>
 
       {/* Projects Section */}
-      <section id="work" className="container mx-auto px-4 sm:px-6 py-20">
+      <section id="work" className="container mx-auto px-3 sm:px-3 py-20">
         <ScrollReveal>
           <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold text-center mb-16">
             Recent Projects
           </h2>
         </ScrollReveal>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-full mx-auto">
           {portfolioData.projects.map((project, index) => (
             <ScrollReveal key={project.title} delay={index * 0.1}>
               <Card className="hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 bg-white/80 dark:bg-gray-800/80 backdrop-blur overflow-hidden group">
@@ -313,14 +313,14 @@ return (
       </section>
 
       {/* Process Section */}
-      <section className="container mx-auto px-4 sm:px-6 py-20 bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-blue-950/30 dark:to-cyan-950/30">
+      <section className="container mx-auto px-3 sm:px-3 py-20 bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-blue-950/30 dark:to-cyan-950/30">
         <ScrollReveal>
           <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold text-center mb-16">
             My Creative Process
           </h2>
         </ScrollReveal>
 
-        <div className="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-full mx-auto">
           {portfolioData.process.map((step, index) => (
             <ScrollReveal key={step.step} delay={index * 0.1}>
               <Card className="bg-white/80 dark:bg-gray-800/80 backdrop-blur border-2 border-cyan-200 dark:border-cyan-800 hover:shadow-lg transition-all">
@@ -339,17 +339,17 @@ return (
       </section>
 
       {/* Art Styles Section */}
-      <section className="container mx-auto px-4 sm:px-6 py-20">
+      <section className="container mx-auto px-3 sm:px-3 py-20">
         <ScrollReveal>
           <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold text-center mb-6">
             Art Styles I Love
           </h2>
-          <p className="text-lg text-center text-muted-foreground mb-16 max-w-2xl mx-auto">
+          <p className="text-lg text-center text-muted-foreground mb-16 max-w-full mx-auto">
             From whimsical to minimalist, I adapt my style to match your brand's personality
           </p>
         </ScrollReveal>
 
-        <div className="grid md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-full mx-auto">
           {portfolioData.styles.map((style, index) => (
             <ScrollReveal key={style.name} delay={index * 0.1}>
               <Card className={`bg-gradient-to-br ${style.color} border-0 hover:shadow-xl transition-all hover:-translate-y-2 cursor-pointer`}>
@@ -364,23 +364,23 @@ return (
       </section>
 
       {/* Tools & Software Section */}
-      <section className="container mx-auto px-4 sm:px-6 py-20 bg-gradient-to-br from-orange-50 to-yellow-50 dark:from-orange-950/30 dark:to-yellow-950/30">
+      <section className="container mx-auto px-3 sm:px-3 py-20 bg-gradient-to-br from-orange-50 to-yellow-50 dark:from-orange-950/30 dark:to-yellow-950/30">
         <ScrollReveal>
           <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold text-center mb-6">
             Tools I Use
           </h2>
-          <p className="text-lg text-center text-muted-foreground mb-16 max-w-2xl mx-auto">
+          <p className="text-lg text-center text-muted-foreground mb-16 max-w-full mx-auto">
             Professional software and tools to bring your ideas to life
           </p>
         </ScrollReveal>
 
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-full mx-auto">
           <ScrollReveal delay={0.2}>
             <div className="flex flex-wrap justify-center gap-4">
               {portfolioData.tools.map((tool) => (
                 <Badge
                   key={tool}
-                  className="text-lg px-6 py-3 bg-white dark:bg-gray-800 hover:bg-gradient-to-r hover:from-orange-400 hover:to-yellow-400 hover:text-white transition-all cursor-pointer border-2 border-orange-200 dark:border-orange-800"
+                  className="text-lg px-3 py-3 bg-white dark:bg-gray-800 hover:bg-gradient-to-r hover:from-orange-400 hover:to-yellow-400 hover:text-white transition-all cursor-pointer border-2 border-orange-200 dark:border-orange-800"
                 >
                   {tool}
                 </Badge>
@@ -391,17 +391,17 @@ return (
       </section>
 
       {/* Testimonials Section */}
-      <section className="container mx-auto px-4 sm:px-6 py-20">
+      <section className="container mx-auto px-3 sm:px-3 py-20">
         <ScrollReveal>
           <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold text-center mb-6">
             Client Love
           </h2>
-          <p className="text-lg text-center text-muted-foreground mb-16 max-w-2xl mx-auto">
+          <p className="text-lg text-center text-muted-foreground mb-16 max-w-full mx-auto">
             What people say about working with me
           </p>
         </ScrollReveal>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-full mx-auto">
           {portfolioData.testimonials.map((testimonial, index) => (
             <ScrollReveal key={testimonial.name} delay={index * 0.1}>
               <Card className="bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-950/30 dark:to-pink-950/30 border-2 border-purple-200 dark:border-purple-800 hover:shadow-xl transition-shadow">
@@ -426,9 +426,9 @@ return (
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="container mx-auto px-4 sm:px-6 py-20">
+      <section id="contact" className="container mx-auto px-3 sm:px-3 py-20">
         <ScrollReveal>
-          <div className="max-w-3xl mx-auto text-center">
+          <div className="max-w-full mx-auto text-center">
             <div className="mb-8">
               <span className="text-8xl">💌</span>
             </div>
@@ -448,7 +448,7 @@ return (
 
       {/* Footer */}
       <footer className="border-t bg-white/50 dark:bg-gray-900/50 backdrop-blur">
-        <div className="container mx-auto px-4 sm:px-6 py-8">
+        <div className="container mx-auto px-3 sm:px-3 py-8">
           <p className="text-sm text-muted-foreground text-center">
             © {new Date().getFullYear()} {portfolioData.name}. Made with 💖
           </p>

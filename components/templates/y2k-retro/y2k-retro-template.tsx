@@ -95,7 +95,7 @@ export function Y2KRetroTemplate() {
 
   return (
     <div
-      className="min-h-screen bg-gradient-to-br from-pink-300 via-purple-300 to-blue-300 overflow-hidden"
+      className="min-h-screen overflow-x-hidden max-w-full bg-gradient-to-br from-pink-300 via-purple-300 to-blue-300 overflow-hidden"
       onMouseMove={handleMouseMove}
     >
       {/* Cursor Trail Stars */}
@@ -113,7 +113,7 @@ export function Y2KRetroTemplate() {
 
       {/* Navigation */}
       <nav className="border-b-4 border-white bg-pink-500/90 backdrop-blur-sm">
-        <div className="container mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
+        <div className="container mx-auto px-3 sm:px-3 py-4 flex items-center justify-between">
           <Link
             href="/"
             className="text-white font-bold text-lg hover:scale-110 transition-transform inline-block"
@@ -122,7 +122,7 @@ export function Y2KRetroTemplate() {
           </Link>
           <a
             href="#contact"
-            className="bg-yellow-400 text-purple-900 font-bold px-6 py-2 rounded-full border-4 border-white shadow-[4px_4px_0px_0px_rgba(255,255,255,1)] hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all"
+            className="bg-yellow-400 text-purple-900 font-bold px-3 py-2 rounded-full border-4 border-white shadow-[4px_4px_0px_0px_rgba(255,255,255,1)] hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all"
           >
             contact me! 💌
           </a>
@@ -130,14 +130,14 @@ export function Y2KRetroTemplate() {
       </nav>
 
       {/* Hero Section */}
-      <section className="min-h-screen flex items-center justify-center px-6 relative">
+      <section className="min-h-screen overflow-x-hidden max-w-full flex items-center justify-center px-3 relative">
         {/* Decorative Stars */}
         <div className="absolute top-20 left-20 text-6xl animate-spin-slow">✨</div>
         <div className="absolute top-40 right-32 text-5xl animate-bounce">💫</div>
         <div className="absolute bottom-32 left-40 text-7xl animate-pulse">⭐</div>
         <div className="absolute bottom-20 right-20 text-6xl animate-spin-slow">🌟</div>
 
-        <div className="text-center max-w-4xl relative z-10">
+        <div className="text-center max-w-full relative z-10">
           <motion.div
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
@@ -189,17 +189,17 @@ export function Y2KRetroTemplate() {
 
       {/* Visitor Counter - Y2K Style */}
       <section className="py-8 bg-white/40 backdrop-blur-sm border-y-4 border-white">
-        <div className="container mx-auto px-4 sm:px-6">
+        <div className="container mx-auto px-3 sm:px-3">
           <div className="flex flex-wrap items-center justify-center gap-6">
             <motion.div
-              className="bg-black text-green-400 px-6 py-3 rounded-lg border-4 border-white font-mono text-xl font-bold shadow-[4px_4px_0px_0px_rgba(255,255,255,1)]"
+              className="bg-black text-green-400 px-3 py-3 rounded-lg border-4 border-white font-mono text-xl font-bold shadow-[4px_4px_0px_0px_rgba(255,255,255,1)]"
               animate={{ opacity: [1, 0.7, 1] }}
               transition={{ duration: 2, repeat: Infinity }}
             >
               VISITOR COUNT: 042069 ✨
             </motion.div>
             <div className="text-2xl">👀</div>
-            <div className="bg-yellow-300 text-purple-900 px-6 py-3 rounded-lg border-4 border-white font-bold shadow-[4px_4px_0px_0px_rgba(255,255,255,1)]">
+            <div className="bg-yellow-300 text-purple-900 px-3 py-3 rounded-lg border-4 border-white font-bold shadow-[4px_4px_0px_0px_rgba(255,255,255,1)]">
               welcome 2 my page!! 💖
             </div>
           </div>
@@ -207,14 +207,14 @@ export function Y2KRetroTemplate() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 px-6">
+      <section className="py-16 px-3">
         <ScrollReveal>
-          <h2 className="text-4xl md:text-5xl font-black text-center mb-12 text-white drop-shadow-[4px_4px_0px_rgba(0,0,0,0.3)]">
+          <h2 className="text-4xl md:text-5xl font-black text-center mb-12 text-white drop-shadow-[4px_4px_0px_rgba(0,0,0,0.3)] break-words">
             ~*~ by the numbers ~*~
           </h2>
         </ScrollReveal>
 
-        <div className="max-w-4xl mx-auto grid grid-cols-3 gap-6">
+        <div className="max-w-full mx-auto grid grid-cols-1 sm:grid-cols-3 gap-6">
           {portfolioData.stats.map((stat, index) => (
             <ScrollReveal key={stat.label} delay={index * 0.1}>
               <motion.div
@@ -232,13 +232,13 @@ export function Y2KRetroTemplate() {
       </section>
 
       {/* About Section */}
-      <section className="py-20 px-6 bg-gradient-to-r from-pink-300/50 via-purple-300/50 to-cyan-300/50 border-y-4 border-white">
-        <div className="max-w-4xl mx-auto">
+      <section className="py-20 px-3 bg-gradient-to-r from-pink-300/50 via-purple-300/50 to-cyan-300/50 border-y-4 border-white">
+        <div className="max-w-full mx-auto">
           <ScrollReveal>
             <div className="bg-white rounded-[2rem] p-10 border-8 border-pink-500 shadow-[12px_12px_0px_0px_rgba(236,72,153,1)]">
               <div className="flex items-center gap-4 mb-6">
                 <div className="text-6xl">🎀</div>
-                <h2 className="text-4xl md:text-5xl font-black text-purple-900">
+                <h2 className="text-4xl md:text-5xl font-black text-purple-900 break-words">
                   about meeee~
                 </h2>
               </div>
@@ -262,18 +262,18 @@ export function Y2KRetroTemplate() {
       </section>
 
       {/* Skills Section */}
-      <section className="py-16 px-6">
+      <section className="py-16 px-3">
         <ScrollReveal>
-          <h2 className="text-4xl md:text-5xl font-black text-center mb-12 text-white drop-shadow-[4px_4px_0px_rgba(0,0,0,0.3)]">
+          <h2 className="text-4xl md:text-5xl font-black text-center mb-12 text-white drop-shadow-[4px_4px_0px_rgba(0,0,0,0.3)] break-words">
             ~*~ my skillz ~*~
           </h2>
         </ScrollReveal>
 
-        <div className="max-w-3xl mx-auto flex flex-wrap justify-center gap-4">
+        <div className="max-w-full mx-auto flex flex-wrap justify-center gap-4">
           {portfolioData.skills.map((skill, index) => (
             <ScrollReveal key={skill} delay={index * 0.05}>
               <motion.div
-                className="bg-gradient-to-br from-cyan-400 to-blue-400 text-white px-6 py-3 rounded-full border-4 border-white shadow-[4px_4px_0px_0px_rgba(255,255,255,1)] font-bold text-lg"
+                className="bg-gradient-to-br from-cyan-400 to-blue-400 text-white px-3 py-3 rounded-full border-4 border-white shadow-[4px_4px_0px_0px_rgba(255,255,255,1)] font-bold text-lg"
                 whileHover={{ scale: 1.1, rotate: -5 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
@@ -285,14 +285,14 @@ export function Y2KRetroTemplate() {
       </section>
 
       {/* Projects Section */}
-      <section className="py-20 px-6">
+      <section className="py-20 px-3">
         <ScrollReveal>
-          <h2 className="text-5xl md:text-6xl font-black text-center mb-16 text-white drop-shadow-[4px_4px_0px_rgba(0,0,0,0.3)]">
+          <h2 className="text-5xl md:text-6xl font-black text-center mb-16 text-white drop-shadow-[4px_4px_0px_rgba(0,0,0,0.3)] break-words">
             ~*~ my projects ~*~
           </h2>
         </ScrollReveal>
 
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="max-w-full mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {portfolioData.projects.map((project, index) => (
             <ScrollReveal key={project.title} delay={index * 0.1}>
               <Card
@@ -315,14 +315,14 @@ export function Y2KRetroTemplate() {
       </section>
 
       {/* Achievements Section */}
-      <section className="py-16 px-6 bg-white/30 backdrop-blur-sm border-y-4 border-white">
+      <section className="py-16 px-3 bg-white/30 backdrop-blur-sm border-y-4 border-white">
         <ScrollReveal>
-          <h2 className="text-4xl md:text-5xl font-black text-center mb-12 text-purple-900">
+          <h2 className="text-4xl md:text-5xl font-black text-center mb-12 text-purple-900 break-words">
             ~*~ achievements unlocked ~*~
           </h2>
         </ScrollReveal>
 
-        <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-6">
+        <div className="max-w-full mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
           {portfolioData.achievements.map((achievement, index) => (
             <ScrollReveal key={index} delay={index * 0.1}>
               <motion.div
@@ -339,14 +339,14 @@ export function Y2KRetroTemplate() {
       </section>
 
       {/* Testimonials - Chat Bubble Style */}
-      <section className="py-20 px-6">
+      <section className="py-20 px-3">
         <ScrollReveal>
-          <h2 className="text-5xl md:text-6xl font-black text-center mb-16 text-white drop-shadow-[4px_4px_0px_rgba(0,0,0,0.3)]">
+          <h2 className="text-5xl md:text-6xl font-black text-center mb-16 text-white drop-shadow-[4px_4px_0px_rgba(0,0,0,0.3)] break-words">
             ~*~ what ppl r saying ~*~
           </h2>
         </ScrollReveal>
 
-        <div className="max-w-4xl mx-auto space-y-8">
+        <div className="max-w-full mx-auto space-y-8">
           {portfolioData.testimonials.map((testimonial, index) => (
             <ScrollReveal key={testimonial.name} delay={index * 0.1}>
               <motion.div
@@ -380,7 +380,7 @@ export function Y2KRetroTemplate() {
       </section>
 
       {/* Vibes Section */}
-      <section className="py-20 px-6 bg-white/30 backdrop-blur-sm border-y-4 border-white">
+      <section className="py-20 px-3 bg-white/30 backdrop-blur-sm border-y-4 border-white">
         <ScrollReveal>
           <h3 className="text-4xl font-black text-center mb-12 text-purple-900">
             the vibes~
@@ -388,11 +388,11 @@ export function Y2KRetroTemplate() {
         </ScrollReveal>
 
         <ScrollReveal delay={0.2}>
-          <div className="max-w-3xl mx-auto flex flex-wrap justify-center gap-4">
+          <div className="max-w-full mx-auto flex flex-wrap justify-center gap-4">
             {portfolioData.vibes.map((vibe, index) => (
               <motion.div
                 key={vibe}
-                className="bg-white px-6 py-3 rounded-full border-4 border-purple-500 shadow-[4px_4px_0px_0px_rgba(147,51,234,1)] font-bold text-purple-900 text-lg"
+                className="bg-white px-3 py-3 rounded-full border-4 border-purple-500 shadow-[4px_4px_0px_0px_rgba(147,51,234,1)] font-bold text-purple-900 text-lg"
                 whileHover={{ scale: 1.1, rotate: 5 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
@@ -404,12 +404,12 @@ export function Y2KRetroTemplate() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 px-6">
-        <div className="max-w-3xl mx-auto text-center">
+      <section id="contact" className="py-20 px-3">
+        <div className="max-w-full mx-auto text-center">
           <ScrollReveal>
             <div className="bg-white rounded-3xl p-12 border-8 border-pink-500 shadow-[12px_12px_0px_0px_rgba(236,72,153,1)]">
               <div className="text-7xl mb-6">💌</div>
-              <h2 className="text-5xl md:text-6xl font-black mb-6 text-purple-900">
+              <h2 className="text-5xl md:text-6xl font-black mb-6 text-purple-900 break-words">
                 let's collab!
               </h2>
               <p className="text-xl text-purple-700 mb-8">
@@ -426,7 +426,7 @@ export function Y2KRetroTemplate() {
 
       {/* Footer */}
       <footer className="border-t-4 border-white bg-purple-500/90 backdrop-blur-sm py-8">
-        <div className="container mx-auto px-4 sm:px-6">
+        <div className="container mx-auto px-3 sm:px-3">
           <p className="text-center font-bold text-white text-lg">
             made with 💖 by pixel dreams © {new Date().getFullYear()} ✨
           </p>

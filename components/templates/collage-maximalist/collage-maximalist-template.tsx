@@ -80,13 +80,13 @@ const portfolioData = {
 export function CollageMaximalistTemplate() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 return (
-    <div className="min-h-screen bg-[#f5f3ef] relative overflow-hidden">
+    <div className="min-h-screen overflow-x-hidden max-w-full bg-[#f5f3ef] relative overflow-hidden">
       {/* Background Texture */}
       <div className="fixed inset-0 opacity-10 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48cGF0dGVybiBpZD0iYSIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBwYXR0ZXJuVHJhbnNmb3JtPSJyb3RhdGUoNDUpIj48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJub25lIi8+PHBhdGggZD0iTTAgMTBoNDBNMCAzMGg0MCIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjYSkiLz48L3N2Zz4=')]" />
 
       {/* Navigation */}
       <nav className="sticky top-0 z-50 border-b-4 border-black bg-white/90 backdrop-blur-sm">
-        <div className="container mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
+        <div className="container mx-auto px-3 sm:px-3 py-4 flex items-center justify-between">
           <Link
             href="/"
             className="text-sm font-bold hover:bg-black hover:text-white px-3 py-2 transition-colors border-2 border-black"
@@ -103,8 +103,8 @@ return (
       </nav>
 
       {/* Hero Section - Layered Collage Style */}
-      <section className="container mx-auto px-4 sm:px-6 py-20 relative">
-        <div className="max-w-6xl mx-auto relative min-h-[600px] flex items-center">
+      <section className="container mx-auto px-3 sm:px-3 py-20 relative">
+        <div className="max-w-full mx-auto relative min-h-[600px] flex items-center">
           {/* Decorative Elements */}
           <div className="absolute top-0 right-20 w-32 h-32 bg-yellow-300 rounded-full border-4 border-black transform rotate-12 opacity-70" />
           <div className="absolute bottom-20 left-10 w-40 h-40 bg-pink-300 border-4 border-black transform -rotate-6 opacity-60" />
@@ -113,7 +113,7 @@ return (
 
           {/* Main Content */}
           <div className="relative z-10 bg-white border-4 border-black p-8 md:p-12 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transform -rotate-1">
-            <div className="bg-red-500 text-white px-4 py-1 inline-block transform -rotate-2 mb-4 border-2 border-black">
+            <div className="bg-red-500 text-white px-3 py-1 inline-block transform -rotate-2 mb-4 border-2 border-black">
               <span className="text-sm font-bold">{portfolioData.location}</span>
             </div>
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-black mb-4 leading-none">
@@ -123,7 +123,7 @@ return (
             <p className="text-2xl md:text-3xl font-bold mb-4">
               {portfolioData.title}
             </p>
-            <p className="text-lg max-w-2xl leading-relaxed mb-8">
+            <p className="text-lg max-w-full leading-relaxed mb-8">
               {portfolioData.bio}
             </p>
             <Button className="bg-black hover:bg-gray-800 text-white font-bold border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all">
@@ -139,8 +139,8 @@ return (
       </section>
 
       {/* Stats Section - Chaotic Stamps */}
-      <section className="container mx-auto px-4 sm:px-6 py-16 relative">
-        <div className="max-w-4xl mx-auto flex flex-wrap justify-center gap-8">
+      <section className="container mx-auto px-3 sm:px-3 py-16 relative">
+        <div className="max-w-full mx-auto flex flex-wrap justify-center gap-8">
           {portfolioData.stats.map((stat, index) => (
             <ScrollReveal key={stat.label} delay={index * 0.1}>
               <div
@@ -162,8 +162,8 @@ return (
       </section>
 
       {/* About Section - Torn Paper Effect */}
-      <section className="container mx-auto px-4 sm:px-6 py-20 relative">
-        <div className="max-w-5xl mx-auto relative">
+      <section className="container mx-auto px-3 sm:px-3 py-20 relative">
+        <div className="max-w-full mx-auto relative">
           {/* Background Chaos */}
           <div className="absolute top-0 left-0 w-40 h-40 bg-blue-300 border-4 border-black transform -rotate-12 opacity-40" />
           <div className="absolute bottom-0 right-0 w-48 h-48 bg-pink-300 rounded-full border-4 border-black opacity-40" />
@@ -171,7 +171,7 @@ return (
 
           <ScrollReveal>
             <div className="relative z-10 bg-white border-4 border-black p-10 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transform rotate-1">
-              <div className="bg-orange-400 text-white px-6 py-2 inline-block transform -rotate-2 mb-6 border-2 border-black font-black text-xl">
+              <div className="bg-orange-400 text-white px-3 py-2 inline-block transform -rotate-2 mb-6 border-2 border-black font-black text-xl">
                 ABOUT ME
               </div>
               <p className="text-xl leading-relaxed mb-6 font-medium">
@@ -190,7 +190,7 @@ return (
                 {portfolioData.tools.map((tool, index) => (
                   <Badge
                     key={tool}
-                    className={`text-base px-4 py-2 border-2 border-black font-bold ${
+                    className={`text-base px-3 py-2 border-2 border-black font-bold ${
                       index % 5 === 0
                         ? "bg-red-300"
                         : index % 5 === 1
@@ -216,7 +216,7 @@ return (
       </section>
 
       {/* Projects Section - Scattered Polaroid Style */}
-      <section className="container mx-auto px-4 sm:px-6 py-20">
+      <section className="container mx-auto px-3 sm:px-3 py-20">
         <ScrollReveal>
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black inline-block bg-blue-200 px-8 py-4 border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] transform -rotate-1">
@@ -225,7 +225,7 @@ return (
           </div>
         </ScrollReveal>
 
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-12">
+        <div className="max-w-full mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
           {portfolioData.projects.map((project, index) => (
             <ScrollReveal key={project.title} delay={index * 0.1}>
               <div
@@ -266,7 +266,7 @@ return (
       </section>
 
       {/* Process Section - Stamp Style */}
-      <section className="container mx-auto px-4 sm:px-6 py-20 relative">
+      <section className="container mx-auto px-3 sm:px-3 py-20 relative">
         <div className="absolute top-0 left-0 w-full h-full opacity-5 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIgZmlsbD0iIzAwMCIvPjwvc3ZnPg==')]" />
 
         <ScrollReveal>
@@ -277,7 +277,7 @@ return (
           </div>
         </ScrollReveal>
 
-        <div className="max-w-5xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="max-w-full mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {portfolioData.process.map((item, index) => (
             <ScrollReveal key={item.step} delay={index * 0.1}>
               <div
@@ -301,7 +301,7 @@ return (
       </section>
 
       {/* Testimonials Section - Polaroid Quotes */}
-      <section className="container mx-auto px-4 sm:px-6 py-20 relative">
+      <section className="container mx-auto px-3 sm:px-3 py-20 relative">
         <div className="absolute -top-10 -right-10 w-64 h-64 bg-yellow-200 border-4 border-black transform rotate-45 opacity-20" />
         <div className="absolute -bottom-10 -left-10 w-56 h-56 bg-blue-200 rounded-full border-4 border-black opacity-20" />
 
@@ -313,7 +313,7 @@ return (
           </div>
         </ScrollReveal>
 
-        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 relative z-10">
+        <div className="max-w-full mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 relative z-10">
           {portfolioData.testimonials.map((testimonial, index) => (
             <ScrollReveal key={testimonial.name} delay={index * 0.1}>
               <div
@@ -339,16 +339,16 @@ return (
       </section>
 
       {/* Hand-drawn Arrow Decoration */}
-      <div className="container mx-auto px-4 sm:px-6 py-12 text-center">
+      <div className="container mx-auto px-3 sm:px-3 py-12 text-center">
         <div className="text-8xl">↓</div>
-        <p className="text-2xl font-bold mt-4 transform -rotate-2 inline-block bg-yellow-300 px-6 py-2 border-2 border-black">
+        <p className="text-2xl font-bold mt-4 transform -rotate-2 inline-block bg-yellow-300 px-3 py-2 border-2 border-black">
           Let's collaborate!
         </p>
       </div>
 
       {/* Contact Section - Mixed Media Style */}
-      <section id="contact" className="container mx-auto px-4 sm:px-6 py-20">
-        <div className="max-w-4xl mx-auto relative">
+      <section id="contact" className="container mx-auto px-3 sm:px-3 py-20">
+        <div className="max-w-full mx-auto relative">
           {/* Background Shapes */}
           <div className="absolute -top-12 -right-12 w-64 h-64 bg-orange-200 border-4 border-black transform rotate-12 opacity-50" />
           <div className="absolute -bottom-12 -left-12 w-48 h-48 bg-green-200 rounded-full border-4 border-black opacity-50" />
@@ -359,7 +359,7 @@ return (
               <h2 className="text-5xl md:text-6xl font-black mb-6">
                 GET IN TOUCH
               </h2>
-              <p className="text-xl mb-8 max-w-2xl mx-auto">
+              <p className="text-xl mb-8 max-w-full mx-auto">
                 Available for commissions, collaborations, and creative projects that push boundaries.
               </p>
 
@@ -391,7 +391,7 @@ return (
 
       {/* Footer */}
       <footer className="border-t-4 border-black bg-white py-8">
-        <div className="container mx-auto px-4 sm:px-6">
+        <div className="container mx-auto px-3 sm:px-3">
           <p className="text-center font-bold text-sm">
             © {new Date().getFullYear()} {portfolioData.name} // HANDCRAFTED WITH LOVE
           </p>

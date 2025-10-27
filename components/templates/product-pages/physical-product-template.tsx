@@ -207,10 +207,10 @@ export function PhysicalProductTemplate() {
   const [selectedImage, setSelectedImage] = useState(0);
 
   return (
-    <div className="min-h-screen bg-white dark:bg-black text-black dark:text-white">
+    <div className="min-h-screen overflow-x-hidden max-w-full bg-white dark:bg-black text-black dark:text-white">
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-white/80 dark:bg-black/80 backdrop-blur-lg border-b border-gray-200 dark:border-gray-800">
-        <div className="container mx-auto px-4 sm:px-6 py-4">
+        <div className="container mx-auto px-3 sm:px-3 py-4">
           <div className="flex items-center justify-between">
 <Link href="/" className="text-xl font-semibold">
             AirWave
@@ -239,7 +239,7 @@ export function PhysicalProductTemplate() {
         {/* Mobile Menu */}
         {mobileMenuOpen && (
           <div className="md:hidden bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm border-t">
-            <div className="container mx-auto px-4 sm:px-6 py-4 flex flex-col gap-4">
+            <div className="container mx-auto px-3 sm:px-3 py-4 flex flex-col gap-4">
               <a
                 href="#features"
                 className="text-sm hover:text-primary transition-colors py-2"
@@ -265,8 +265,8 @@ export function PhysicalProductTemplate() {
       </nav>
 
       {/* Hero Section */}
-      <section className="container mx-auto px-4 sm:px-6 pt-20 pb-16">
-        <div className="max-w-6xl mx-auto">
+      <section className="container mx-auto px-3 sm:px-3 pt-20 pb-16">
+        <div className="max-w-full mx-auto">
           <FadeIn>
             <div className="text-center mb-12">
               <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold mb-6 tracking-tight">
@@ -319,7 +319,7 @@ export function PhysicalProductTemplate() {
               </div>
 
               {/* Thumbnail Images */}
-              <div className="grid grid-cols-4 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-4 gap-4">
                 {productData.hero.productViews.map((view, index) => (
                   <button
                     key={index}
@@ -345,8 +345,8 @@ export function PhysicalProductTemplate() {
 
       {/* Shipping Info Banner */}
       <section className="border-y border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-950">
-        <div className="container mx-auto px-4 sm:px-6 py-8">
-          <div className="grid md:grid-cols-4 gap-6 text-center">
+        <div className="container mx-auto px-3 sm:px-3 py-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
             <div className="flex flex-col items-center">
               <FiTruck className="w-6 h-6 mb-2" />
               <div className="font-semibold text-sm">{productData.shipping.freeShipping}</div>
@@ -368,11 +368,11 @@ export function PhysicalProductTemplate() {
       </section>
 
       {/* Features */}
-      <section id="features" className="container mx-auto px-4 sm:px-6 py-32">
-        <div className="max-w-6xl mx-auto space-y-32">
+      <section id="features" className="container mx-auto px-3 sm:px-3 py-32">
+        <div className="max-w-full mx-auto space-y-32">
           {productData.features.map((feature, index) => (
             <ScrollReveal key={feature.title}>
-              <div className={`grid md:grid-cols-2 gap-16 items-center ${index % 2 === 1 ? "md:flex-row-reverse" : ""}`}>
+              <div className={`grid grid-cols-1 md:grid-cols-2 gap-16 items-center ${index % 2 === 1 ? "md:flex-row-reverse" : ""}`}>
                 <div className={index % 2 === 1 ? "md:order-2" : ""}>
                   <h2 className="text-4xl md:text-5xl font-bold mb-6">
                     {feature.title}
@@ -395,14 +395,14 @@ export function PhysicalProductTemplate() {
       </section>
 
       {/* Technical Specifications */}
-      <section id="specs" className="container mx-auto px-4 sm:px-6 py-32 bg-gray-50 dark:bg-gray-950">
+      <section id="specs" className="container mx-auto px-3 sm:px-3 py-32 bg-gray-50 dark:bg-gray-950">
         <ScrollReveal>
-          <div className="max-w-6xl mx-auto">
+          <div className="max-w-full mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center">
               {productData.specifications.title}
             </h2>
 
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {productData.specifications.categories.map((category) => (
                 <Card key={category.name} className="bg-white dark:bg-black border-gray-200 dark:border-gray-800">
                   <CardHeader>
@@ -426,14 +426,14 @@ export function PhysicalProductTemplate() {
       </section>
 
       {/* What's in the Box */}
-      <section className="container mx-auto px-4 sm:px-6 py-32">
+      <section className="container mx-auto px-3 sm:px-3 py-32">
         <ScrollReveal>
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-full mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center">
               {productData.inTheBox.title}
             </h2>
 
-            <div className="grid md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {productData.inTheBox.items.map((item) => (
                 <Card key={item.name} className="text-center hover:shadow-lg transition-all border-gray-200 dark:border-gray-800">
                   <CardContent className="p-8">
@@ -448,9 +448,9 @@ export function PhysicalProductTemplate() {
       </section>
 
       {/* Reviews */}
-      <section className="container mx-auto px-4 sm:px-6 py-32 bg-gray-50 dark:bg-gray-950">
+      <section className="container mx-auto px-3 sm:px-3 py-32 bg-gray-50 dark:bg-gray-950">
         <ScrollReveal>
-          <div className="max-w-6xl mx-auto">
+          <div className="max-w-full mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold mb-4">
                 What Customers Say
@@ -463,7 +463,7 @@ export function PhysicalProductTemplate() {
               <p className="text-gray-600 dark:text-gray-400">4.9 out of 5 stars from 1,847 reviews</p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {productData.reviews.map((review, index) => (
                 <ScrollReveal key={index} delay={index * 0.1}>
                   <Card className="h-full border-gray-200 dark:border-gray-800">
@@ -474,7 +474,7 @@ export function PhysicalProductTemplate() {
                         ))}
                       </div>
                       <p className="text-lg mb-6">"{review.quote}"</p>
-                      <div className="flex items-center gap-3">
+                      <div className="flex flex-col sm:flex-row sm:items-center gap-3">
                         {review.withPhoto && review.photo && (
                           <img
                             src={review.photo}
@@ -500,9 +500,9 @@ export function PhysicalProductTemplate() {
       </section>
 
       {/* Comparison Table */}
-      <section className="container mx-auto px-4 sm:px-6 py-32">
+      <section className="container mx-auto px-3 sm:px-3 py-32">
         <ScrollReveal>
-          <div className="max-w-6xl mx-auto">
+          <div className="max-w-full mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center">
               {productData.comparison.title}
             </h2>
@@ -511,13 +511,13 @@ export function PhysicalProductTemplate() {
               <table className="w-full">
                 <thead>
                   <tr className="border-b-2 border-gray-200 dark:border-gray-800">
-                    <th className="text-left py-4 px-4">Brand</th>
-                    <th className="text-center py-4 px-4">Price</th>
-                    <th className="text-center py-4 px-4">Battery</th>
-                    <th className="text-center py-4 px-4">ANC</th>
-                    <th className="text-center py-4 px-4">Multi-Device</th>
-                    <th className="text-center py-4 px-4">Weight</th>
-                    <th className="text-center py-4 px-4">Warranty</th>
+                    <th className="text-left py-4 px-3">Brand</th>
+                    <th className="text-center py-4 px-3">Price</th>
+                    <th className="text-center py-4 px-3">Battery</th>
+                    <th className="text-center py-4 px-3">ANC</th>
+                    <th className="text-center py-4 px-3">Multi-Device</th>
+                    <th className="text-center py-4 px-3">Weight</th>
+                    <th className="text-center py-4 px-3">Warranty</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -528,17 +528,17 @@ export function PhysicalProductTemplate() {
                         competitor.isOurs ? "bg-gray-100 dark:bg-gray-900 font-semibold" : ""
                       }`}
                     >
-                      <td className="py-4 px-4">{competitor.brand}</td>
-                      <td className="text-center py-4 px-4">${competitor.price}</td>
-                      <td className="text-center py-4 px-4">{competitor.battery}</td>
-                      <td className="text-center py-4 px-4">
+                      <td className="py-4 px-3">{competitor.brand}</td>
+                      <td className="text-center py-4 px-3">${competitor.price}</td>
+                      <td className="text-center py-4 px-3">{competitor.battery}</td>
+                      <td className="text-center py-4 px-3">
                         {competitor.anc ? <FiCheck className="w-5 h-5 mx-auto" /> : "—"}
                       </td>
-                      <td className="text-center py-4 px-4">
+                      <td className="text-center py-4 px-3">
                         {competitor.multiDevice ? <FiCheck className="w-5 h-5 mx-auto" /> : "—"}
                       </td>
-                      <td className="text-center py-4 px-4">{competitor.weight}</td>
-                      <td className="text-center py-4 px-4">{competitor.warranty}</td>
+                      <td className="text-center py-4 px-3">{competitor.weight}</td>
+                      <td className="text-center py-4 px-3">{competitor.warranty}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -549,9 +549,9 @@ export function PhysicalProductTemplate() {
       </section>
 
       {/* Final CTA */}
-      <section className="container mx-auto px-4 sm:px-6 py-32 bg-gray-50 dark:bg-gray-950">
+      <section className="container mx-auto px-3 sm:px-3 py-32 bg-gray-50 dark:bg-gray-950">
         <ScrollReveal>
-          <div className="max-w-4xl mx-auto text-center">
+          <div className="max-w-full mx-auto text-center">
             <h2 className="text-5xl md:text-6xl font-bold mb-8">
               Ready to experience perfection?
             </h2>
@@ -567,7 +567,7 @@ export function PhysicalProductTemplate() {
 
       {/* Footer */}
       <footer className="border-t border-gray-200 dark:border-gray-800 py-12">
-        <div className="container mx-auto px-4 sm:px-6">
+        <div className="container mx-auto px-3 sm:px-3">
           <div className="text-center text-sm text-gray-600 dark:text-gray-400">
             <p>© 2024 AirWave. All rights reserved.</p>
           </div>

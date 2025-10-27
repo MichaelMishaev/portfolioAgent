@@ -7,145 +7,42 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { FiMail, FiGithub, FiLinkedin, FiTwitter, FiArrowRight } from "react-icons/fi";
 import { ThemeToggle } from "@/components/theme-toggle";
+import { LanguageToggle } from "@/components/language-toggle";
 import Link from "next/link";
-
-// Sample data - in real app, this would come from props or CMS
-const portfolioData = {
-  name: "Alex Johnson",
-  tagline: "Product Designer & Creative Developer",
-  bio: "I'm a product designer and creative developer focused on crafting beautiful, functional experiences. With over 8 years of experience, I help startups and established companies bring their digital products to life. I believe in the power of simplicity and user-centered design. My work has been featured in Awwwards, CSS Design Awards, and other industry publications.",
-  email: "hello@alexjohnson.com",
-  location: "San Francisco, CA",
-  availability: "Available for select projects",
-  social: {
-    github: "https://github.com",
-    linkedin: "https://linkedin.com",
-    twitter: "https://twitter.com",
-  },
-  statement: "Less is more. Every pixel serves a purpose. Design should be invisible yet unforgettable.",
-  stats: [
-    { value: "8+", label: "Years" },
-    { value: "150+", label: "Projects" },
-    { value: "60+", label: "Clients" },
-    { value: "20+", label: "Awards" },
-  ],
-  testimonials: [
-    {
-      quote: "Alex's minimalist approach elevated our product. Clean, functional, and beautiful.",
-      author: "Sarah Chen",
-      role: "CEO, TechStart",
-      rating: 5,
-    },
-    {
-      quote: "Working with Alex was seamless. Every detail was considered and executed perfectly.",
-      author: "Marcus Lee",
-      role: "Product Lead, StartupX",
-      rating: 5,
-    },
-    {
-      quote: "The best designer we've worked with. Minimalism done right.",
-      author: "Elena Rodriguez",
-      role: "CTO, FinanceApp",
-      rating: 5,
-    },
-  ],
-  awards: [
-    { title: "Awwwards Site of the Day", year: "2024" },
-    { title: "CSS Design Awards Winner", year: "2023" },
-    { title: "FWA of the Month", year: "2023" },
-  ],
-  projects: [
-    {
-      id: 1,
-      title: "E-Commerce Platform",
-      description: "A modern e-commerce platform with seamless checkout experience and inventory management.",
-      tags: ["UI/UX", "React", "Node.js"],
-      year: "2024",
-    },
-    {
-      id: 2,
-      title: "Health & Wellness App",
-      description: "Mobile app helping users track their fitness goals and maintain healthy habits.",
-      tags: ["Mobile", "Figma", "Flutter"],
-      year: "2024",
-    },
-    {
-      id: 3,
-      title: "SaaS Dashboard",
-      description: "Analytics dashboard for B2B SaaS platform with real-time data visualization.",
-      tags: ["Dashboard", "TypeScript", "D3.js"],
-      year: "2023",
-    },
-    {
-      id: 4,
-      title: "Brand Identity System",
-      description: "Complete brand identity and design system for a fintech startup.",
-      tags: ["Branding", "Design System", "Figma"],
-      year: "2023",
-    },
-    {
-      id: 5,
-      title: "Travel Booking Platform",
-      description: "Intuitive booking experience for modern travelers with smart recommendations.",
-      tags: ["Web", "UX Research", "Next.js"],
-      year: "2023",
-    },
-    {
-      id: 6,
-      title: "Banking Mobile App",
-      description: "Secure and accessible financial management for everyday users.",
-      tags: ["Mobile", "Accessibility", "Swift"],
-      year: "2022",
-    },
-  ],
-  skills: [
-    "UI/UX Design",
-    "Product Strategy",
-    "Frontend Development",
-    "Design Systems",
-    "User Research",
-    "Prototyping",
-  ],
-  clients: ["Apple", "Google", "Stripe", "Airbnb", "Notion", "Figma"],
-  services: [
-    "Product Design",
-    "Design Systems",
-    "User Research",
-    "Prototyping",
-    "Frontend Dev",
-    "Brand Strategy",
-  ],
-};
+import { useI18n } from "@/lib/i18n-context";
 
 export function MinimalistTemplate() {
+  const { tt } = useI18n();
+  const portfolioData = tt.minimalist;
   return (
     <div className="min-h-screen overflow-x-hidden max-w-full bg-background">
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm border-b">
         <div className="container mx-auto px-3 max-w-full py-4 flex items-center justify-between">
           <Link href="/" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-            ← Back to Gallery
+            {tt.common.backToGallery}
           </Link>
           <div className="flex items-center gap-6">
             <a href="#about" className="text-sm hover:text-primary transition-colors">
-              About
+              {tt.common.about}
             </a>
             <a href="#work" className="text-sm hover:text-primary transition-colors">
-              Work
+              {tt.common.work}
             </a>
             <a href="#contact" className="text-sm hover:text-primary transition-colors">
-              Contact
+              {tt.common.contact}
             </a>
             <ThemeToggle />
+            <LanguageToggle />
           </div>
         </div>
       </nav>
 
       {/* Hero Section - Maximum Simplicity */}
       <section className="container mx-auto px-3 max-w-full pt-40 pb-32">
-        <div className="max-w-4xl">
+        <div className="max-w-full">
           <FadeIn>
-            <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-9xl font-light mb-8 tracking-tighter leading-none">
+            <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-9xl font-light mb-8 tracking-tighter leading-none break-words">
               {portfolioData.name}
             </h1>
           </FadeIn>
@@ -161,7 +58,7 @@ export function MinimalistTemplate() {
               href="#contact"
               className="text-sm uppercase tracking-widest border-b border-foreground pb-1 hover:border-foreground/50 transition-colors"
             >
-              Get in Touch
+              {tt.common.getInTouch}
             </a>
           </FadeIn>
         </div>
@@ -169,10 +66,10 @@ export function MinimalistTemplate() {
 
       {/* About Section - Minimal Typography */}
       <section id="about" className="container mx-auto px-3 max-w-full py-32">
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-full mx-auto">
           <ScrollReveal>
             <h2 className="text-xs font-medium text-muted-foreground mb-16 uppercase tracking-widest">
-              About
+              {tt.common.about}
             </h2>
             <p className="text-2xl leading-loose text-foreground/70 font-light">
               {portfolioData.bio}
@@ -183,9 +80,9 @@ export function MinimalistTemplate() {
 
       {/* Philosophy Statement */}
       <section className="container mx-auto px-3 max-w-full py-32 border-t">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-full mx-auto">
           <ScrollReveal>
-            <p className="text-4xl md:text-5xl font-light leading-tight tracking-tight text-center">
+            <p className="text-4xl md:text-5xl font-light leading-tight tracking-tight text-center break-words">
               {portfolioData.statement}
             </p>
           </ScrollReveal>
@@ -194,8 +91,8 @@ export function MinimalistTemplate() {
 
       {/* Stats - Minimal Grid */}
       <section className="container mx-auto px-3 max-w-full py-20">
-        <div className="max-w-4xl mx-auto">
-          <div className="grid grid-cols-3 gap-12">
+        <div className="max-w-full mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-12">
             {portfolioData.stats.map((stat, index) => (
               <ScrollReveal key={stat.label} delay={index * 0.1}>
                 <div className="text-center">
@@ -214,7 +111,7 @@ export function MinimalistTemplate() {
 
       {/* Skills Section - Minimal List */}
       <section className="container mx-auto px-3 max-w-full py-20 border-t">
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-full mx-auto">
           <ScrollReveal>
             <h2 className="text-xs font-medium text-muted-foreground mb-12 uppercase tracking-widest">
               Expertise
@@ -232,7 +129,7 @@ export function MinimalistTemplate() {
 
       {/* Work Section - Minimal List */}
       <section id="work" className="container mx-auto px-3 max-w-full py-32">
-        <div className="max-w-4xl">
+        <div className="max-w-full">
           <ScrollReveal>
             <h2 className="text-xs font-medium text-muted-foreground mb-16 uppercase tracking-widest">
               Selected Work
@@ -268,12 +165,12 @@ export function MinimalistTemplate() {
 
       {/* Services */}
       <section className="container mx-auto px-3 max-w-full py-32 border-t">
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-full mx-auto">
           <ScrollReveal>
             <h2 className="text-xs font-medium text-muted-foreground mb-16 uppercase tracking-widest">
               Services
             </h2>
-            <div className="grid md:grid-cols-2 gap-x-12 gap-y-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
               {portfolioData.services.map((service) => (
                 <div key={service} className="text-lg font-light text-foreground/70">
                   {service}
@@ -286,7 +183,7 @@ export function MinimalistTemplate() {
 
       {/* Clients */}
       <section className="container mx-auto px-3 max-w-full py-32 border-t">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-full mx-auto">
           <ScrollReveal>
             <h2 className="text-xs font-medium text-muted-foreground mb-16 uppercase tracking-widest text-center">
               Selected Clients
@@ -304,13 +201,13 @@ export function MinimalistTemplate() {
 
       {/* Contact Section - Minimal CTA */}
       <section id="contact" className="container mx-auto px-3 max-w-full py-40 border-t">
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-full mx-auto">
           <ScrollReveal>
             <h2 className="text-xs font-medium text-muted-foreground mb-16 uppercase tracking-widest">
-              Contact
+              {tt.common.contact}
             </h2>
-            <p className="text-5xl md:text-6xl font-light mb-16 leading-tight tracking-tight">
-              Let's work together.
+            <p className="text-5xl md:text-6xl font-light mb-16 leading-tight tracking-tight break-words">
+              {tt.common.letsWorkTogether}
             </p>
           </ScrollReveal>
 
@@ -326,7 +223,7 @@ export function MinimalistTemplate() {
           <ScrollReveal delay={0.3}>
             <div className="flex gap-8 mt-16">
               <a
-                href={portfolioData.social.github}
+                href={portfolioData.social?.github || "https://github.com"}
                 className="text-xs uppercase tracking-widest text-muted-foreground hover:text-foreground transition-colors"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -335,7 +232,7 @@ export function MinimalistTemplate() {
                 GitHub
               </a>
               <a
-                href={portfolioData.social.linkedin}
+                href={portfolioData.social?.linkedin || "https://linkedin.com"}
                 className="text-xs uppercase tracking-widest text-muted-foreground hover:text-foreground transition-colors"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -344,7 +241,7 @@ export function MinimalistTemplate() {
                 LinkedIn
               </a>
               <a
-                href={portfolioData.social.twitter}
+                href={portfolioData.social?.twitter || "https://twitter.com"}
                 className="text-xs uppercase tracking-widest text-muted-foreground hover:text-foreground transition-colors"
                 target="_blank"
                 rel="noopener noreferrer"

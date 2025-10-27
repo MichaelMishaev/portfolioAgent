@@ -175,6 +175,22 @@ const staticTemplateData = {
     colors: { primary: "#0F172A", secondary: "#3B82F6", accent: "#8B5CF6" },
     fonts: { heading: "Inter", body: "Inter" },
   },
+  "online-business-coach": {
+    colors: { primary: "#D97706", secondary: "#3B82F6", accent: "#EC4899" },
+    fonts: { heading: "Inter", body: "Inter" },
+  },
+  "online-business-course": {
+    colors: { primary: "#9333EA", secondary: "#EC4899", accent: "#8B5CF6" },
+    fonts: { heading: "Inter", body: "Inter" },
+  },
+  "online-business-agency": {
+    colors: { primary: "#0F172A", secondary: "#3B82F6", accent: "#06B6D4" },
+    fonts: { heading: "Inter", body: "Inter" },
+  },
+  "online-business-saas": {
+    colors: { primary: "#6366F1", secondary: "#8B5CF6", accent: "#3B82F6" },
+    fonts: { heading: "Inter", body: "Inter" },
+  },
 };
 
 export function getTemplates(language: "en" | "ru" = "en"): TemplateConfig[] {

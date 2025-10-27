@@ -282,10 +282,10 @@ export function DFYouServiceTemplate() {
       : serviceData.portfolio.projects.filter((p) => p.category === selectedCategory);
 
   return (
-    <div className="min-h-screen bg-white text-stone-900">
+    <div className="min-h-screen overflow-x-hidden max-w-full bg-white text-stone-900">
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-stone-200">
-        <div className="container mx-auto px-4 sm:px-6 py-4">
+        <div className="container mx-auto px-3 sm:px-3 py-4">
           <div className="flex items-center justify-between">
             <Link href="/" className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-pink-500 bg-clip-text text-transparent">
             DESIGN ON TAP
@@ -327,7 +327,7 @@ export function DFYouServiceTemplate() {
         {/* Mobile Menu */}
         {mobileMenuOpen && (
           <div className="md:hidden bg-background/95 backdrop-blur-sm border-t">
-            <div className="container mx-auto px-4 sm:px-6 py-4 flex flex-col gap-4">
+            <div className="container mx-auto px-3 sm:px-3 py-4 flex flex-col gap-4">
               <a
                 href="#work"
                 className="text-sm hover:text-primary transition-colors py-2"
@@ -359,17 +359,17 @@ export function DFYouServiceTemplate() {
 
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-50 via-white to-pink-50 py-32">
-        <div className="container mx-auto px-4 sm:px-6">
-          <div className="max-w-5xl mx-auto text-center">
+        <div className="container mx-auto px-3 sm:px-3">
+          <div className="max-w-full mx-auto text-center">
             <FadeIn>
-              <Badge className="mb-6 bg-pink-500 text-white text-sm px-4 py-2">
+              <Badge className="mb-6 bg-pink-500 text-white text-sm px-3 py-2">
                 {serviceData.speed}
               </Badge>
               <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold mb-6 tracking-tight">
                 {serviceData.name}
               </h1>
               <p className="text-3xl font-light mb-8 text-stone-700">{serviceData.tagline}</p>
-              <p className="text-xl mb-12 text-stone-600 max-w-2xl mx-auto">
+              <p className="text-xl mb-12 text-stone-600 max-w-full mx-auto">
                 {serviceData.description}
               </p>
 
@@ -404,12 +404,12 @@ export function DFYouServiceTemplate() {
 
       {/* How It Works */}
       <section className="py-32 bg-stone-50">
-        <div className="container mx-auto px-4 sm:px-6">
+        <div className="container mx-auto px-3 sm:px-3">
           <ScrollReveal>
             <h2 className="text-5xl font-bold text-center mb-24">How It Works</h2>
           </ScrollReveal>
 
-          <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-12">
+          <div className="max-w-full mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
             {serviceData.howItWorks.map((step, index) => (
               <ScrollReveal key={step.step} delay={index * 0.15}>
                 <div className="text-center">
@@ -428,7 +428,7 @@ export function DFYouServiceTemplate() {
 
       {/* Portfolio Showcase */}
       <section id="work" className="py-32">
-        <div className="container mx-auto px-4 sm:px-6">
+        <div className="container mx-auto px-3 sm:px-3">
           <ScrollReveal>
             <h2 className="text-5xl font-bold text-center mb-8">{serviceData.portfolio.title}</h2>
             <p className="text-xl text-center text-stone-600 mb-12">
@@ -442,7 +442,7 @@ export function DFYouServiceTemplate() {
               <button
                 key={category}
                 onClick={() => setSelectedCategory(category)}
-                className={`px-6 py-2 rounded-full transition-all ${
+                className={`px-3 py-2 rounded-full transition-all ${
                   selectedCategory === category
                     ? "bg-blue-600 text-white"
                     : "bg-stone-200 text-stone-700 hover:bg-stone-300"
@@ -454,7 +454,7 @@ export function DFYouServiceTemplate() {
           </div>
 
           {/* Portfolio Grid */}
-          <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-8">
+          <div className="max-w-full mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
             {filteredProjects.map((project, index) => (
               <ScrollReveal key={index} delay={(index % 9) * 0.05}>
                 <Card className="overflow-hidden border-2 border-stone-200 hover:border-blue-600 transition-all hover:shadow-xl group">
@@ -482,17 +482,17 @@ export function DFYouServiceTemplate() {
 
       {/* Pricing */}
       <section id="pricing" className="py-32 bg-stone-50">
-        <div className="container mx-auto px-4 sm:px-6">
+        <div className="container mx-auto px-3 sm:px-3">
           <ScrollReveal>
             <div className="text-center mb-16">
               <h2 className="text-5xl font-bold mb-6">{serviceData.pricing.title}</h2>
-              <p className="text-xl text-stone-600 max-w-3xl mx-auto">
+              <p className="text-xl text-stone-600 max-w-full mx-auto">
                 {serviceData.pricing.subtitle}
               </p>
             </div>
           </ScrollReveal>
 
-          <div className="max-w-3xl mx-auto">
+          <div className="max-w-full mx-auto">
             <ScrollReveal>
               <Card className="border-4 border-blue-600 shadow-2xl">
                 <CardHeader className="text-center pb-8 pt-12 bg-gradient-to-br from-blue-50 to-pink-50">
@@ -539,12 +539,12 @@ export function DFYouServiceTemplate() {
 
       {/* Guarantees */}
       <section className="py-32">
-        <div className="container mx-auto px-4 sm:px-6">
+        <div className="container mx-auto px-3 sm:px-3">
           <ScrollReveal>
             <h2 className="text-5xl font-bold text-center mb-24">Our Guarantees</h2>
           </ScrollReveal>
 
-          <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
+          <div className="max-w-full mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
             {serviceData.guarantees.map((guarantee, index) => (
               <ScrollReveal key={guarantee.title} delay={index * 0.1}>
                 <Card className="border-2 border-stone-200 hover:border-blue-600 transition-colors">
@@ -562,18 +562,18 @@ export function DFYouServiceTemplate() {
 
       {/* Testimonials */}
       <section className="py-32 bg-stone-50">
-        <div className="container mx-auto px-4 sm:px-6">
+        <div className="container mx-auto px-3 sm:px-3">
           <ScrollReveal>
             <h2 className="text-5xl font-bold text-center mb-24">What Clients Say</h2>
           </ScrollReveal>
 
-          <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+          <div className="max-w-full mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
             {serviceData.testimonials.map((testimonial, index) => (
               <ScrollReveal key={index} delay={index * 0.1}>
                 <Card className="border-2 border-stone-200">
                   <CardContent className="p-8">
                     <p className="text-lg italic mb-6 text-stone-700">"{testimonial.quote}"</p>
-                    <div className="flex items-center gap-4">
+                    <div className="flex flex-col sm:flex-row sm:items-center gap-4">
                       <img
                         src={testimonial.image}
                         alt={testimonial.author}
@@ -594,12 +594,12 @@ export function DFYouServiceTemplate() {
 
       {/* FAQ */}
       <section id="faq" className="py-32">
-        <div className="container mx-auto px-4 sm:px-6">
+        <div className="container mx-auto px-3 sm:px-3">
           <ScrollReveal>
             <h2 className="text-5xl font-bold text-center mb-24">Frequently Asked Questions</h2>
           </ScrollReveal>
 
-          <div className="max-w-4xl mx-auto space-y-6">
+          <div className="max-w-full mx-auto space-y-6">
             {serviceData.faq.map((item, index) => (
               <ScrollReveal key={index} delay={index * 0.05}>
                 <Card className="border-2 border-stone-200">
@@ -618,13 +618,13 @@ export function DFYouServiceTemplate() {
 
       {/* Final CTA */}
       <section className="py-32 bg-gradient-to-br from-blue-600 via-purple-600 to-pink-500 text-white">
-        <div className="container mx-auto px-4 sm:px-6">
+        <div className="container mx-auto px-3 sm:px-3">
           <ScrollReveal>
-            <div className="max-w-4xl mx-auto text-center">
+            <div className="max-w-full mx-auto text-center">
               <h2 className="text-5xl md:text-6xl font-bold mb-8">
                 Ready for Unlimited Design?
               </h2>
-              <p className="text-xl mb-12 max-w-2xl mx-auto opacity-90">
+              <p className="text-xl mb-12 max-w-full mx-auto opacity-90">
                 Subscribe today and get your first design delivered in 48 hours. Pause or cancel
                 anytime.
               </p>
@@ -644,7 +644,7 @@ export function DFYouServiceTemplate() {
 
       {/* Footer */}
       <footer className="border-t border-stone-200 py-12 bg-white">
-        <div className="container mx-auto px-4 sm:px-6">
+        <div className="container mx-auto px-3 sm:px-3">
           <div className="text-center">
             <div className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-pink-500 bg-clip-text text-transparent mb-2">
               DESIGN ON TAP

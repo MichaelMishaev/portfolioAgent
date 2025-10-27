@@ -243,7 +243,7 @@ export function AgencyServiceTemplate() {
 
       {/* Hero Section */}
       <section className="container mx-auto px-3 max-w-full py-24">
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="max-w-full mx-auto text-center">
           <FadeIn>
             <Badge className="mb-4 bg-blue-100 text-blue-700 border-blue-200">
               Award-Winning Agency
@@ -257,7 +257,7 @@ export function AgencyServiceTemplate() {
           </FadeIn>
 
           <FadeIn delay={0.2}>
-            <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-600 mb-8 max-w-full mx-auto">
               {serviceData.description}
             </p>
           </FadeIn>
@@ -299,7 +299,7 @@ export function AgencyServiceTemplate() {
             </div>
           </ScrollReveal>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {serviceData.services.map((service, index) => (
               <ScrollReveal key={service.name} delay={index * 0.1}>
                 <Card className="h-full hover:shadow-xl transition-shadow">
@@ -348,7 +348,7 @@ export function AgencyServiceTemplate() {
             </div>
           </ScrollReveal>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {serviceData.portfolio.map((project, index) => (
               <ScrollReveal key={project.client} delay={index * 0.1}>
                 <Card className="group overflow-hidden hover:shadow-xl transition-shadow">
@@ -391,7 +391,7 @@ export function AgencyServiceTemplate() {
             </div>
           </ScrollReveal>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-full mx-auto">
             {serviceData.team.map((member, index) => (
               <ScrollReveal key={member.name} delay={index * 0.1}>
                 <Card className="text-center">
@@ -422,7 +422,7 @@ export function AgencyServiceTemplate() {
             </div>
           </ScrollReveal>
 
-          <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8">
+          <div className="max-w-full mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
             {serviceData.process.steps.map((step, index) => (
               <ScrollReveal key={step.number} delay={index * 0.1}>
                 <Card>
@@ -451,7 +451,7 @@ export function AgencyServiceTemplate() {
         <div className="container mx-auto px-3 max-w-full text-center">
           <ScrollReveal>
             <h2 className="text-5xl font-bold text-white mb-6">Ready to Transform Your Brand?</h2>
-            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-blue-100 mb-8 max-w-full mx-auto">
               Let's create something extraordinary together. Book a free strategy call today.
             </p>
             <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-center">

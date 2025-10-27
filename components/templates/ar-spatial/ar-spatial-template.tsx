@@ -162,7 +162,7 @@ export function ARSpatialTemplate() {
   const parallaxY = useTransform(cursorY, [0, typeof window !== 'undefined' ? window.innerHeight : 1080], [-20, 20]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-950 via-blue-950 to-purple-950 text-white overflow-hidden relative">
+    <div className="min-h-screen overflow-x-hidden max-w-full bg-gradient-to-br from-gray-950 via-blue-950 to-purple-950 text-white overflow-hidden relative">
       {/* Grid Background */}
       <div className="fixed inset-0 bg-[linear-gradient(to_right,#4f46e520_1px,transparent_1px),linear-gradient(to_bottom,#4f46e520_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_110%)]" />
 
@@ -179,7 +179,7 @@ export function ARSpatialTemplate() {
 
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-40 bg-black/20 backdrop-blur-xl border-b border-white/10">
-        <div className="container mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
+        <div className="container mx-auto px-3 sm:px-3 py-4 flex items-center justify-between">
           <Link
             href="/"
             className="text-sm text-gray-400 hover:text-cyan-400 transition-colors"
@@ -188,7 +188,7 @@ export function ARSpatialTemplate() {
           </Link>
           <a
             href="#contact"
-            className="px-6 py-2 bg-cyan-500/20 border border-cyan-500/50 rounded-full text-cyan-400 text-sm hover:bg-cyan-500/30 transition-all backdrop-blur-sm"
+            className="px-3 py-2 bg-cyan-500/20 border border-cyan-500/50 rounded-full text-cyan-400 text-sm hover:bg-cyan-500/30 transition-all backdrop-blur-sm"
           >
             Connect
           </a>
@@ -196,9 +196,9 @@ export function ARSpatialTemplate() {
       </nav>
 
       {/* Hero Section with Layered Depth */}
-      <section className="relative min-h-screen flex items-center justify-center px-6 pt-20">
+      <section className="relative min-h-screen flex items-center justify-center px-3 pt-20">
         <motion.div
-          className="relative z-10 text-center max-w-5xl"
+          className="relative z-10 text-center max-w-full"
           style={{ x: parallaxX, y: parallaxY }}
         >
           <FloatingLayer depth={100}>
@@ -261,15 +261,15 @@ export function ARSpatialTemplate() {
       </section>
 
       {/* Spatial Projects Section */}
-      <section className="relative py-20 px-6">
-        <div className="container mx-auto max-w-6xl">
+      <section className="relative py-20 px-3">
+        <div className="container mx-auto max-w-full">
           <ScrollReveal>
             <h2 className="text-5xl md:text-6xl font-bold text-center mb-16 bg-gradient-to-r from-cyan-300 to-purple-300 bg-clip-text text-transparent">
               Spatial Experiences
             </h2>
           </ScrollReveal>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {portfolioData.experiences.map((exp, index) => (
               <ScrollReveal key={exp.title} delay={index * 0.1}>
                 <SpatialCard depth={exp.depth} className="h-full">
@@ -302,15 +302,15 @@ export function ARSpatialTemplate() {
       </section>
 
       {/* Capabilities Section */}
-      <section className="relative py-20 px-6 bg-black/20 backdrop-blur-sm">
-        <div className="container mx-auto max-w-5xl">
+      <section className="relative py-20 px-3 bg-black/20 backdrop-blur-sm">
+        <div className="container mx-auto max-w-full">
           <ScrollReveal>
             <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-white">
               Spatial Computing Capabilities
             </h2>
           </ScrollReveal>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {portfolioData.capabilities.map((cap, index) => (
               <ScrollReveal key={cap.name} delay={index * 0.1}>
                 <motion.div
@@ -331,8 +331,8 @@ export function ARSpatialTemplate() {
       </section>
 
       {/* Spatial Info Panel */}
-      <section className="py-20 px-6">
-        <div className="container mx-auto max-w-4xl">
+      <section className="py-20 px-3">
+        <div className="container mx-auto max-w-full">
           <ScrollReveal>
             <div className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 backdrop-blur-xl border border-purple-500/30 rounded-2xl p-12">
               <div className="flex items-center gap-4 mb-6">
@@ -348,7 +348,7 @@ export function ARSpatialTemplate() {
                 {["Hand Tracking", "Eye Gaze", "Spatial Audio", "6DOF"].map((tech) => (
                   <span
                     key={tech}
-                    className="px-4 py-2 bg-purple-500/20 border border-purple-500/50 rounded-full text-purple-300 text-sm"
+                    className="px-3 py-2 bg-purple-500/20 border border-purple-500/50 rounded-full text-purple-300 text-sm"
                   >
                     {tech}
                   </span>
@@ -360,8 +360,8 @@ export function ARSpatialTemplate() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="relative py-20 px-6">
-        <div className="container mx-auto max-w-3xl text-center">
+      <section id="contact" className="relative py-20 px-3">
+        <div className="container mx-auto max-w-full text-center">
           <ScrollReveal>
             <h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-300 bg-clip-text text-transparent">
               Step Into the Future
@@ -394,7 +394,7 @@ export function ARSpatialTemplate() {
 
       {/* Footer */}
       <footer className="border-t border-white/10 bg-black/40 backdrop-blur-xl py-8">
-        <div className="container mx-auto px-4 sm:px-6">
+        <div className="container mx-auto px-3 sm:px-3">
           <p className="text-sm text-gray-400 text-center">
             © {new Date().getFullYear()} {portfolioData.name}. Designed for the spatial web.
           </p>

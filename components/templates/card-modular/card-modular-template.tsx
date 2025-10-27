@@ -285,10 +285,10 @@ const portfolioData = {
 export function CardModularTemplate() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen overflow-x-hidden max-w-full bg-background">
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b">
-        <div className="container mx-auto px-4 sm:px-6 py-4">
+        <div className="container mx-auto px-3 sm:px-3 py-4">
           <div className="flex items-center justify-between">
             <Link href="/" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
             ← Back
@@ -323,7 +323,7 @@ return (
         {/* Mobile Menu */}
         {mobileMenuOpen && (
           <div className="md:hidden bg-background/95 backdrop-blur-sm border-t">
-            <div className="container mx-auto px-4 sm:px-6 py-4 flex flex-col gap-4">
+            <div className="container mx-auto px-3 sm:px-3 py-4 flex flex-col gap-4">
               <a
                 href="#about"
                 className="text-sm hover:text-primary transition-colors py-2"
@@ -354,9 +354,9 @@ return (
       </nav>
 
       {/* Hero Card */}
-      <section className="container mx-auto px-4 sm:px-6 pt-32 pb-12">
+      <section className="container mx-auto px-3 sm:px-3 pt-32 pb-12">
         <FadeIn>
-          <Card className="max-w-4xl mx-auto">
+          <Card className="max-w-full mx-auto">
             <CardHeader className="text-center pb-8">
               <div className="w-24 h-24 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full mx-auto mb-6 flex items-center justify-center text-white text-3xl font-bold">
                 {portfolioData.name.split(" ").map(n => n[0]).join("")}
@@ -369,7 +369,7 @@ return (
               </CardDescription>
             </CardHeader>
             <CardContent className="text-center">
-              <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+              <p className="text-lg text-muted-foreground mb-8 max-w-full mx-auto">
                 {portfolioData.bio}
               </p>
               <Button size="lg">
@@ -382,8 +382,8 @@ return (
       </section>
 
       {/* Stats Cards */}
-      <section className="container mx-auto px-4 sm:px-6 py-12">
-        <div className="grid md:grid-cols-4 gap-6 max-w-6xl mx-auto">
+      <section className="container mx-auto px-3 sm:px-3 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-full mx-auto">
           {portfolioData.stats.map((stat, index) => (
             <FadeIn key={stat.label} delay={index * 0.1}>
               <Card className="hover:shadow-xl transition-shadow">
@@ -402,14 +402,14 @@ return (
       </section>
 
       {/* Skills Section */}
-      <section id="about" className="container mx-auto px-4 sm:px-6 py-12">
+      <section id="about" className="container mx-auto px-3 sm:px-3 py-12">
         <ScrollReveal>
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
             Skills & Expertise
           </h2>
         </ScrollReveal>
 
-        <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-full mx-auto">
           {portfolioData.skills.map((skill, index) => (
             <ScrollReveal key={skill.name} delay={index * 0.1}>
               <Card className="h-full hover:shadow-lg transition-shadow">
@@ -451,14 +451,14 @@ return (
       </section>
 
       {/* Projects Grid */}
-      <section id="projects" className="container mx-auto px-4 sm:px-6 py-12">
+      <section id="projects" className="container mx-auto px-3 sm:px-3 py-12">
         <ScrollReveal>
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
             Featured Projects
           </h2>
         </ScrollReveal>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-full mx-auto">
           {portfolioData.projects.map((project, index) => (
             <ScrollReveal key={project.title} delay={index * 0.05}>
               <Card className="h-full hover:shadow-xl transition-all duration-300 group cursor-pointer overflow-hidden">
@@ -517,14 +517,14 @@ return (
       </section>
 
       {/* Process Cards */}
-      <section className="container mx-auto px-4 sm:px-6 py-20">
+      <section className="container mx-auto px-3 sm:px-3 py-20">
         <ScrollReveal>
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
             My Process
           </h2>
         </ScrollReveal>
 
-        <div className="grid md:grid-cols-5 gap-6 max-w-7xl mx-auto">
+        <div className="grid md:grid-cols-5 gap-6 max-w-full mx-auto">
           {portfolioData.process.map((step, index) => (
             <ScrollReveal key={step.title} delay={index * 0.1}>
               <Card className="h-full hover:shadow-lg transition-shadow text-center">
@@ -540,14 +540,14 @@ return (
       </section>
 
       {/* Awards Section */}
-      <section className="container mx-auto px-4 sm:px-6 py-20 border-t">
+      <section className="container mx-auto px-3 sm:px-3 py-20 border-t">
         <ScrollReveal>
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
             Awards & Recognition
           </h2>
         </ScrollReveal>
 
-        <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-full mx-auto">
           {portfolioData.awards.map((award, index) => (
             <ScrollReveal key={award.title} delay={index * 0.1}>
               <Card className="hover:shadow-lg transition-shadow text-center">
@@ -563,14 +563,14 @@ return (
       </section>
 
       {/* Services Section */}
-      <section className="container mx-auto px-4 sm:px-6 py-20 border-t">
+      <section className="container mx-auto px-3 sm:px-3 py-20 border-t">
         <ScrollReveal>
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
             Services
           </h2>
         </ScrollReveal>
 
-        <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-full mx-auto">
           {portfolioData.services.map((service, index) => (
             <ScrollReveal key={service.title} delay={index * 0.1}>
               <Card className="h-full hover:shadow-xl transition-shadow">
@@ -599,14 +599,14 @@ return (
       </section>
 
       {/* Testimonials Cards */}
-      <section className="container mx-auto px-4 sm:px-6 py-20 border-t">
+      <section className="container mx-auto px-3 sm:px-3 py-20 border-t">
         <ScrollReveal>
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
             What Clients Say
           </h2>
         </ScrollReveal>
 
-        <div className="grid md:grid-cols-3 gap-6 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-full mx-auto">
           {portfolioData.testimonials.map((testimonial, index) => (
             <ScrollReveal key={testimonial.author} delay={index * 0.1}>
               <Card className="h-full hover:shadow-lg transition-shadow">
@@ -631,14 +631,14 @@ return (
       </section>
 
       {/* Experience Timeline Section */}
-      <section className="container mx-auto px-4 sm:px-6 py-20 border-t">
+      <section className="container mx-auto px-3 sm:px-3 py-20 border-t">
         <ScrollReveal>
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
             Experience & Journey
           </h2>
         </ScrollReveal>
 
-        <div className="max-w-4xl mx-auto space-y-8">
+        <div className="max-w-full mx-auto space-y-8">
           {portfolioData.experience.map((exp, index) => (
             <ScrollReveal key={exp.company} delay={index * 0.1}>
               <Card className="hover:shadow-xl transition-shadow">
@@ -672,14 +672,14 @@ return (
       </section>
 
       {/* Achievements Section */}
-      <section className="container mx-auto px-4 sm:px-6 py-20 border-t bg-muted/20">
+      <section className="container mx-auto px-3 sm:px-3 py-20 border-t bg-muted/20">
         <ScrollReveal>
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
             Achievements & Impact
           </h2>
         </ScrollReveal>
 
-        <div className="grid md:grid-cols-4 gap-6 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-full mx-auto">
           {portfolioData.achievements.map((achievement, index) => (
             <ScrollReveal key={achievement.title} delay={index * 0.1}>
               <Card className="text-center hover:shadow-lg transition-shadow">
@@ -695,17 +695,17 @@ return (
       </section>
 
       {/* Clients Logo Grid */}
-      <section className="container mx-auto px-4 sm:px-6 py-20 border-t">
+      <section className="container mx-auto px-3 sm:px-3 py-20 border-t">
         <ScrollReveal>
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
             Trusted By Leading Brands
           </h2>
-          <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+          <p className="text-center text-muted-foreground mb-12 max-w-full mx-auto">
             I've had the privilege of working with some of the world's most innovative companies
           </p>
         </ScrollReveal>
 
-        <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 max-w-full mx-auto">
           {portfolioData.clients.map((client, index) => (
             <ScrollReveal key={client} delay={index * 0.05}>
               <Card className="hover:shadow-lg transition-all hover:scale-105">
@@ -721,17 +721,17 @@ return (
       </section>
 
       {/* Blog Posts Section */}
-      <section className="container mx-auto px-4 sm:px-6 py-20 border-t bg-muted/20">
+      <section className="container mx-auto px-3 sm:px-3 py-20 border-t bg-muted/20">
         <ScrollReveal>
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
             Latest Insights
           </h2>
-          <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+          <p className="text-center text-muted-foreground mb-12 max-w-full mx-auto">
             Thoughts on design, technology, and building great products
           </p>
         </ScrollReveal>
 
-        <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-full mx-auto">
           {portfolioData.blogPosts.map((post, index) => (
             <ScrollReveal key={post.title} delay={index * 0.1}>
               <Card className="h-full hover:shadow-xl transition-shadow cursor-pointer group">
@@ -763,14 +763,14 @@ return (
       </section>
 
       {/* Tools & Technologies Section */}
-      <section className="container mx-auto px-4 sm:px-6 py-20 border-t">
+      <section className="container mx-auto px-3 sm:px-3 py-20 border-t">
         <ScrollReveal>
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
             Tools & Technologies
           </h2>
         </ScrollReveal>
 
-        <div className="max-w-6xl mx-auto space-y-8">
+        <div className="max-w-full mx-auto space-y-8">
           {Object.entries(portfolioData.tools).map(([category, tools], index) => (
             <ScrollReveal key={category} delay={index * 0.1}>
               <Card>
@@ -780,7 +780,7 @@ return (
                 <CardContent>
                   <div className="flex flex-wrap gap-3">
                     {tools.map((tool) => (
-                      <Badge key={tool} variant="secondary" className="px-4 py-2 text-sm">
+                      <Badge key={tool} variant="secondary" className="px-3 py-2 text-sm">
                         {tool}
                       </Badge>
                     ))}
@@ -793,9 +793,9 @@ return (
       </section>
 
       {/* Newsletter Signup Card */}
-      <section className="container mx-auto px-4 sm:px-6 py-20 border-t bg-muted/20">
+      <section className="container mx-auto px-3 sm:px-3 py-20 border-t bg-muted/20">
         <ScrollReveal>
-          <Card className="max-w-2xl mx-auto bg-gradient-to-br from-primary/10 to-purple-500/10 border-primary/20">
+          <Card className="max-w-full mx-auto bg-gradient-to-br from-primary/10 to-purple-500/10 border-primary/20">
             <CardContent className="p-12 text-center">
               <div className="text-4xl mb-4">📬</div>
               <h2 className="text-3xl font-bold mb-4">Stay Updated</h2>
@@ -806,7 +806,7 @@ return (
                 <input
                   type="email"
                   placeholder="Enter your email"
-                  className="flex-1 px-4 py-3 rounded-lg border bg-background"
+                  className="flex-1 px-3 py-3 rounded-lg border bg-background"
                 />
                 <Button size="lg" className="whitespace-nowrap">
                   Subscribe Now
@@ -821,9 +821,9 @@ return (
       </section>
 
       {/* Contact Card */}
-      <section id="contact" className="container mx-auto px-4 sm:px-6 py-20">
+      <section id="contact" className="container mx-auto px-3 sm:px-3 py-20">
         <ScrollReveal>
-          <Card className="max-w-2xl mx-auto">
+          <Card className="max-w-full mx-auto">
             <CardHeader className="text-center">
               <CardTitle className="text-4xl md:text-5xl font-bold mb-4">
                 Let's Connect
@@ -858,7 +858,7 @@ return (
 
       {/* Footer */}
       <footer className="border-t bg-background py-8">
-        <div className="container mx-auto px-4 sm:px-6">
+        <div className="container mx-auto px-3 sm:px-3">
           <p className="text-sm text-muted-foreground text-center">
             © {new Date().getFullYear()} {portfolioData.name}. All rights reserved.
           </p>

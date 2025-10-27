@@ -168,10 +168,10 @@ export function LuxuryProductTemplate() {
     selectedStrap.premium;
 
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen overflow-x-hidden max-w-full bg-black text-white">
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-md border-b border-neutral-800">
-        <div className="container mx-auto px-4 sm:px-6 py-4">
+        <div className="container mx-auto px-3 sm:px-3 py-4">
           <div className="flex items-center justify-between">
             <Link href="/" className="text-xl font-light tracking-[0.2em]">
             CHRONOS
@@ -214,7 +214,7 @@ export function LuxuryProductTemplate() {
         {/* Mobile Menu */}
         {mobileMenuOpen && (
           <div className="md:hidden bg-background/95 backdrop-blur-sm border-t">
-            <div className="container mx-auto px-4 sm:px-6 py-4 flex flex-col gap-4">
+            <div className="container mx-auto px-3 sm:px-3 py-4 flex flex-col gap-4">
               <a
                 href="#heritage"
                 className="text-sm hover:text-primary transition-colors py-2"
@@ -253,7 +253,7 @@ export function LuxuryProductTemplate() {
           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
         </div>
 
-        <div className="relative h-full flex items-center justify-center text-center px-6">
+        <div className="relative h-full flex items-center justify-center text-center px-3">
           <FadeIn>
             <div className="space-y-6">
               <div className="text-sm tracking-[0.3em] text-amber-500 font-light">
@@ -262,10 +262,10 @@ export function LuxuryProductTemplate() {
               <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-9xl font-light tracking-tight">
                 {productData.name}
               </h1>
-              <p className="text-2xl md:text-3xl font-light text-neutral-400 max-w-2xl mx-auto">
+              <p className="text-2xl md:text-3xl font-light text-neutral-400 max-w-full mx-auto">
                 {productData.tagline}
               </p>
-              <p className="text-lg text-neutral-500 max-w-xl mx-auto">{productData.description}</p>
+              <p className="text-lg text-neutral-500 max-w-full mx-auto">{productData.description}</p>
             </div>
           </FadeIn>
         </div>
@@ -273,9 +273,9 @@ export function LuxuryProductTemplate() {
 
       {/* Heritage Story */}
       <section id="heritage" className="py-32 border-t border-neutral-800">
-        <div className="container mx-auto px-4 sm:px-6">
+        <div className="container mx-auto px-3 sm:px-3">
           <ScrollReveal>
-            <div className="max-w-4xl mx-auto text-center mb-24">
+            <div className="max-w-full mx-auto text-center mb-24">
               <h2 className="text-5xl md:text-6xl font-light mb-8 tracking-tight">
                 {productData.heritage.title}
               </h2>
@@ -285,10 +285,10 @@ export function LuxuryProductTemplate() {
             </div>
           </ScrollReveal>
 
-          <div className="max-w-6xl mx-auto">
+          <div className="max-w-full mx-auto">
             {productData.heritage.timeline.map((event, index) => (
               <ScrollReveal key={event.year} delay={index * 0.15}>
-                <div className="grid md:grid-cols-4 gap-8 mb-16 pb-16 border-b border-neutral-800 last:border-0">
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16 pb-16 border-b border-neutral-800 last:border-0">
                   <div className="text-6xl font-light text-amber-500">{event.year}</div>
                   <div className="md:col-span-3">
                     <h3 className="text-3xl font-light mb-4">{event.title}</h3>
@@ -303,18 +303,18 @@ export function LuxuryProductTemplate() {
 
       {/* Craftsmanship Details */}
       <section id="craftsmanship" className="py-32 bg-neutral-950">
-        <div className="container mx-auto px-4 sm:px-6">
+        <div className="container mx-auto px-3 sm:px-3">
           <ScrollReveal>
             <h2 className="text-5xl md:text-6xl font-light text-center mb-24 tracking-tight">
               {productData.craftsmanship.title}
             </h2>
           </ScrollReveal>
 
-          <div className="max-w-6xl mx-auto space-y-32">
+          <div className="max-w-full mx-auto space-y-32">
             {productData.craftsmanship.details.map((detail, index) => (
               <ScrollReveal key={detail.title}>
                 <div
-                  className={`grid md:grid-cols-2 gap-16 items-center ${
+                  className={`grid grid-cols-1 md:grid-cols-2 gap-16 items-center ${
                     index % 2 === 1 ? "md:flex-row-reverse" : ""
                   }`}
                 >
@@ -338,20 +338,20 @@ export function LuxuryProductTemplate() {
 
       {/* Premium Configurator */}
       <section className="py-32 border-t border-neutral-800">
-        <div className="container mx-auto px-4 sm:px-6">
+        <div className="container mx-auto px-3 sm:px-3">
           <ScrollReveal>
             <h2 className="text-5xl md:text-6xl font-light text-center mb-24 tracking-tight">
               Create Your Masterpiece
             </h2>
           </ScrollReveal>
 
-          <div className="max-w-5xl mx-auto space-y-12">
+          <div className="max-w-full mx-auto space-y-12">
             {/* Material Selection */}
             <div>
               <label className="text-sm tracking-wider text-neutral-400 mb-4 block">
                 CASE MATERIAL
               </label>
-              <div className="grid md:grid-cols-3 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 {productData.configurator.materials.map((material) => (
                   <button
                     key={material.name}
@@ -375,7 +375,7 @@ export function LuxuryProductTemplate() {
             {/* Dial Selection */}
             <div>
               <label className="text-sm tracking-wider text-neutral-400 mb-4 block">DIAL</label>
-              <div className="grid md:grid-cols-3 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 {productData.configurator.dials.map((dial) => (
                   <button
                     key={dial.name}
@@ -399,7 +399,7 @@ export function LuxuryProductTemplate() {
             {/* Strap Selection */}
             <div>
               <label className="text-sm tracking-wider text-neutral-400 mb-4 block">STRAP</label>
-              <div className="grid md:grid-cols-3 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 {productData.configurator.straps.map((strap) => (
                   <button
                     key={strap.name}
@@ -437,15 +437,15 @@ export function LuxuryProductTemplate() {
 
       {/* Technical Excellence */}
       <section className="py-32 bg-neutral-950">
-        <div className="container mx-auto px-4 sm:px-6">
+        <div className="container mx-auto px-3 sm:px-3">
           <ScrollReveal>
             <h2 className="text-5xl md:text-6xl font-light text-center mb-24 tracking-tight">
               {productData.technical.title}
             </h2>
           </ScrollReveal>
 
-          <div className="max-w-5xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-8 mb-16">
+          <div className="max-w-full mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
               {productData.technical.specs.map((spec, index) => (
                 <ScrollReveal key={spec.label} delay={index * 0.1}>
                   <Card className="bg-black border-neutral-800">
@@ -461,7 +461,7 @@ export function LuxuryProductTemplate() {
               ))}
             </div>
 
-            <div className="grid md:grid-cols-2 gap-x-12 gap-y-6 border-t border-neutral-800 pt-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6 border-t border-neutral-800 pt-12">
               {productData.technical.details.map((detail, index) => (
                 <div key={index} className="flex justify-between py-3 border-b border-neutral-900">
                   <span className="text-neutral-400">{detail.label}</span>
@@ -475,15 +475,15 @@ export function LuxuryProductTemplate() {
 
       {/* Awards & Press */}
       <section className="py-32 border-t border-neutral-800">
-        <div className="container mx-auto px-4 sm:px-6">
+        <div className="container mx-auto px-3 sm:px-3">
           <ScrollReveal>
             <h2 className="text-5xl font-light text-center mb-24 tracking-tight">
               Recognition of Excellence
             </h2>
           </ScrollReveal>
 
-          <div className="max-w-5xl mx-auto">
-            <div className="grid md:grid-cols-3 gap-8 mb-24">
+          <div className="max-w-full mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
               {productData.awards.map((award, index) => (
                 <ScrollReveal key={index} delay={index * 0.1}>
                   <Card className="bg-neutral-950 border-neutral-800 text-center">
@@ -514,14 +514,14 @@ export function LuxuryProductTemplate() {
 
       {/* Boutique Locator CTA */}
       <section className="py-32 bg-neutral-950">
-        <div className="container mx-auto px-4 sm:px-6">
+        <div className="container mx-auto px-3 sm:px-3">
           <ScrollReveal>
-            <div className="max-w-4xl mx-auto text-center">
+            <div className="max-w-full mx-auto text-center">
               <FiMapPin className="w-16 h-16 mx-auto mb-8 text-amber-500" />
               <h2 className="text-5xl md:text-6xl font-light mb-8 tracking-tight">
                 Experience Chronos Royal
               </h2>
-              <p className="text-xl text-neutral-400 mb-12 max-w-2xl mx-auto">
+              <p className="text-xl text-neutral-400 mb-12 max-w-full mx-auto">
                 Visit one of our exclusive boutiques for a private viewing. Our Master Watchmakers
                 will guide you through every detail.
               </p>
@@ -547,7 +547,7 @@ export function LuxuryProductTemplate() {
 
       {/* Footer */}
       <footer className="border-t border-neutral-800 py-16">
-        <div className="container mx-auto px-4 sm:px-6">
+        <div className="container mx-auto px-3 sm:px-3">
           <div className="text-center">
             <div className="text-2xl font-light tracking-[0.2em] mb-4">CHRONOS</div>
             <p className="text-sm text-neutral-500">

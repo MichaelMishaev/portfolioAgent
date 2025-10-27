@@ -204,10 +204,10 @@ export function VacuumProductTemplate() {
   const [selectedColor, setSelectedColor] = useState(productData.colors[0]);
 
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900">
+    <div className="min-h-screen overflow-x-hidden max-w-full bg-white dark:bg-gray-900">
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-lg border-b">
-        <div className="container mx-auto px-4 sm:px-6 py-4">
+        <div className="container mx-auto px-3 sm:px-3 py-4">
           <div className="flex items-center justify-between">
 <Link href="/" className="text-xl font-bold text-blue-600">
             QUANTUM
@@ -235,7 +235,7 @@ export function VacuumProductTemplate() {
         {/* Mobile Menu */}
         {mobileMenuOpen && (
           <div className="md:hidden bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm border-t">
-            <div className="container mx-auto px-4 sm:px-6 py-4 flex flex-col gap-4">
+            <div className="container mx-auto px-3 sm:px-3 py-4 flex flex-col gap-4">
               <a
                 href="#features"
                 className="text-sm hover:text-primary transition-colors py-2"
@@ -267,8 +267,8 @@ export function VacuumProductTemplate() {
 
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-b from-gray-50 to-white dark:from-gray-950 dark:to-gray-900 pt-20 pb-32">
-        <div className="container mx-auto px-4 sm:px-6">
-          <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+        <div className="container mx-auto px-3 sm:px-3">
+          <div className="max-w-full mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
             {/* Left: Product Info */}
             <FadeIn>
               <div>
@@ -286,7 +286,7 @@ export function VacuumProductTemplate() {
                 </p>
 
                 {/* Performance Metrics Grid */}
-                <div className="grid grid-cols-3 gap-4 mb-8 p-6 bg-gray-100 dark:bg-gray-800 rounded-2xl">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8 p-6 bg-gray-100 dark:bg-gray-800 rounded-2xl">
                   <div className="text-center">
                     <div className="text-3xl font-bold text-blue-600 dark:text-blue-400">{productData.performanceMetrics.suctionPower}</div>
                     <div className="text-xs text-muted-foreground mt-1">Suction</div>
@@ -315,9 +315,9 @@ export function VacuumProductTemplate() {
                 </div>
 
                 {/* Color Selector */}
-                <div className="flex items-center gap-4">
+                <div className="flex flex-col sm:flex-row sm:items-center gap-4">
                   <span className="text-sm text-muted-foreground">Color:</span>
-                  <div className="flex gap-3">
+                  <div className="flex flex-col sm:flex-row gap-3">
                     {productData.colors.map((color) => (
                       <button
                         key={color.name}
@@ -359,22 +359,22 @@ export function VacuumProductTemplate() {
 
       {/* Key Features with Stats */}
       <section id="features" className="py-32 bg-gray-50 dark:bg-gray-950">
-        <div className="container mx-auto px-4 sm:px-6">
+        <div className="container mx-auto px-3 sm:px-3">
           <ScrollReveal>
             <div className="text-center mb-20">
               <h2 className="text-5xl md:text-6xl font-bold mb-6">
                 Engineered to Outperform
               </h2>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              <p className="text-xl text-muted-foreground max-w-full mx-auto">
                 Every component optimized for maximum cleaning power and efficiency
               </p>
             </div>
           </ScrollReveal>
 
-          <div className="max-w-7xl mx-auto space-y-24">
+          <div className="max-w-full mx-auto space-y-24">
             {productData.keyFeatures.map((feature, index) => (
               <ScrollReveal key={feature.title} delay={index * 0.1}>
-                <div className={`grid md:grid-cols-2 gap-16 items-center ${index % 2 === 1 ? "md:grid-flow-dense" : ""}`}>
+                <div className={`grid grid-cols-1 md:grid-cols-2 gap-16 items-center ${index % 2 === 1 ? "md:grid-flow-dense" : ""}`}>
                   {/* Text Content */}
                   <div className={index % 2 === 1 ? "md:col-start-2" : ""}>
                     <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-blue-600 text-white mb-6">
@@ -410,7 +410,7 @@ export function VacuumProductTemplate() {
 
       {/* Cleaning Modes */}
       <section className="py-32 bg-white dark:bg-gray-900">
-        <div className="container mx-auto px-4 sm:px-6">
+        <div className="container mx-auto px-3 sm:px-3">
           <ScrollReveal>
             <div className="text-center mb-20">
               <h2 className="text-5xl md:text-6xl font-bold mb-6">
@@ -422,7 +422,7 @@ export function VacuumProductTemplate() {
             </div>
           </ScrollReveal>
 
-          <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-6">
+          <div className="max-w-full mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
             {productData.modes.map((mode, index) => (
               <ScrollReveal key={mode.name} delay={index * 0.1}>
                 <Card
@@ -462,7 +462,7 @@ export function VacuumProductTemplate() {
 
       {/* Technical Specifications */}
       <section id="specs" className="py-32 bg-gray-50 dark:bg-gray-950">
-        <div className="container mx-auto px-4 sm:px-6">
+        <div className="container mx-auto px-3 sm:px-3">
           <ScrollReveal>
             <div className="text-center mb-20">
               <h2 className="text-5xl md:text-6xl font-bold mb-6">
@@ -471,7 +471,7 @@ export function VacuumProductTemplate() {
             </div>
           </ScrollReveal>
 
-          <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+          <div className="max-w-full mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
             {Object.entries(productData.technicalSpecs).map(([key, specs], index) => (
               <ScrollReveal key={key} delay={index * 0.1}>
                 <Card>
@@ -497,7 +497,7 @@ export function VacuumProductTemplate() {
 
       {/* Accessories */}
       <section className="py-32 bg-white dark:bg-gray-900">
-        <div className="container mx-auto px-4 sm:px-6">
+        <div className="container mx-auto px-3 sm:px-3">
           <ScrollReveal>
             <div className="text-center mb-20">
               <h2 className="text-5xl md:text-6xl font-bold mb-6">
@@ -509,7 +509,7 @@ export function VacuumProductTemplate() {
             </div>
           </ScrollReveal>
 
-          <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-6">
+          <div className="max-w-full mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
             {productData.accessories.map((accessory, index) => (
               <ScrollReveal key={accessory.name} delay={index * 0.05}>
                 <Card>
@@ -533,7 +533,7 @@ export function VacuumProductTemplate() {
 
       {/* Comparison Table */}
       <section id="compare" className="py-32 bg-gray-50 dark:bg-gray-950">
-        <div className="container mx-auto px-4 sm:px-6">
+        <div className="container mx-auto px-3 sm:px-3">
           <ScrollReveal>
             <div className="text-center mb-20">
               <h2 className="text-5xl md:text-6xl font-bold mb-6">
@@ -542,7 +542,7 @@ export function VacuumProductTemplate() {
             </div>
           </ScrollReveal>
 
-          <div className="max-w-5xl mx-auto overflow-x-auto">
+          <div className="max-w-full mx-auto overflow-x-auto">
             <ScrollReveal>
               <table className="w-full border-collapse bg-white dark:bg-gray-900 rounded-2xl overflow-hidden">
                 <thead className="bg-gray-100 dark:bg-gray-800">
@@ -630,7 +630,7 @@ export function VacuumProductTemplate() {
 
       {/* Awards */}
       <section className="py-32 bg-white dark:bg-gray-900">
-        <div className="container mx-auto px-4 sm:px-6">
+        <div className="container mx-auto px-3 sm:px-3">
           <ScrollReveal>
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -639,7 +639,7 @@ export function VacuumProductTemplate() {
             </div>
           </ScrollReveal>
 
-          <div className="max-w-4xl mx-auto flex flex-wrap justify-center gap-8">
+          <div className="max-w-full mx-auto flex flex-wrap justify-center gap-8">
             {productData.awards.map((award, index) => (
               <ScrollReveal key={award.name} delay={index * 0.1}>
                 <div className="text-center">
@@ -655,9 +655,9 @@ export function VacuumProductTemplate() {
 
       {/* Final CTA */}
       <section className="py-32 bg-gradient-to-br from-blue-600 to-blue-800 text-white">
-        <div className="container mx-auto px-4 sm:px-6">
+        <div className="container mx-auto px-3 sm:px-3">
           <ScrollReveal>
-            <div className="text-center max-w-4xl mx-auto">
+            <div className="text-center max-w-full mx-auto">
               <h2 className="text-5xl md:text-6xl font-bold mb-6">
                 Ready for Quantum Clean?
               </h2>
@@ -679,7 +679,7 @@ export function VacuumProductTemplate() {
 
       {/* Footer */}
       <footer className="border-t py-12">
-        <div className="container mx-auto px-4 sm:px-6">
+        <div className="container mx-auto px-3 sm:px-3">
           <div className="text-center text-sm text-muted-foreground">
             <p>© 2024 Quantum Home. All rights reserved.</p>
           </div>

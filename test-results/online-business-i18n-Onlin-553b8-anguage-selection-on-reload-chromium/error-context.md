@@ -1,0 +1,364 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - navigation [ref=e3]:
+      - generic [ref=e4]:
+        - link "← Вернуться в галерею" [ref=e5] [cursor=pointer]:
+          - /url: /
+        - generic [ref=e6]:
+          - link "Курсы" [ref=e7] [cursor=pointer]:
+            - /url: "#courses"
+          - link "Учебный план" [ref=e8] [cursor=pointer]:
+            - /url: "#curriculum"
+          - link "Тарифы" [ref=e9] [cursor=pointer]:
+            - /url: "#pricing"
+          - link "Вопросы и ответы" [ref=e10] [cursor=pointer]:
+            - /url: "#faq"
+          - button "Toggle theme" [ref=e11] [cursor=pointer]:
+            - img
+            - generic [ref=e12]: Toggle theme
+          - button "Toggle language" [ref=e14] [cursor=pointer]:
+            - img
+            - generic [ref=e15]: Toggle language
+    - generic [ref=e17]:
+      - generic [ref=e19]:
+        - generic [ref=e20]:
+          - img [ref=e21]
+          - text: 100,000+ Студентов зачислено
+        - heading "Освойте цифровой маркетинг за 90 дней" [level=1] [ref=e23]:
+          - text: Освойте цифровой маркетинг
+          - text: за 90 дней
+        - paragraph [ref=e24]: Пошаговые видео-курсы, практические задания и пожизненный доступ. Учитесь в своем темпе у экспертов индустрии.
+        - generic [ref=e25]:
+          - button "Начать обучение" [ref=e26] [cursor=pointer]:
+            - img
+            - text: Начать обучение
+          - button "Бесплатные пробные уроки" [ref=e27] [cursor=pointer]:
+            - img
+            - text: Бесплатные пробные уроки
+        - generic [ref=e28]:
+          - generic [ref=e29]:
+            - img [ref=e30]
+            - generic [ref=e33]: Возврат средств 30 дней
+          - generic [ref=e34]:
+            - img [ref=e35]
+            - generic [ref=e38]: Пожизненный доступ
+          - generic [ref=e39]:
+            - img [ref=e40]
+            - generic [ref=e43]: Сертификат включен
+      - generic [ref=e47]:
+        - generic [ref=e48] [cursor=pointer]:
+          - img "Course Preview" [ref=e49]
+          - img [ref=e52]
+          - generic [ref=e54]:
+            - img [ref=e55]
+            - text: 4.9 (12,450 reviews)
+        - generic [ref=e58]:
+          - generic [ref=e59]:
+            - generic [ref=e60]: 120+
+            - generic [ref=e61]: Видео-уроков
+          - generic [ref=e62]:
+            - generic [ref=e63]: 45h
+            - generic [ref=e64]: Общая длительность
+          - generic [ref=e65]:
+            - generic [ref=e66]: 100K+
+            - generic [ref=e67]: Студентов
+    - generic [ref=e70]:
+      - generic [ref=e72]:
+        - img [ref=e74]
+        - heading "Видео по запросу" [level=3] [ref=e76]
+        - paragraph [ref=e77]: Смотрите в любое время, в любом месте
+      - generic [ref=e79]:
+        - img [ref=e81]
+        - heading "Рабочие тетради и PDF" [level=3] [ref=e84]
+        - paragraph [ref=e85]: Загружаемые материалы
+      - generic [ref=e87]:
+        - img [ref=e89]
+        - heading "Закрытое сообщество" [level=3] [ref=e94]
+        - paragraph [ref=e95]: Общайтесь с коллегами
+      - generic [ref=e97]:
+        - img [ref=e99]
+        - heading "Сертификат" [level=3] [ref=e102]
+        - paragraph [ref=e103]: По завершении
+    - generic [ref=e104]:
+      - generic [ref=e106]:
+        - heading "Полная программа курса" [level=2] [ref=e107]
+        - paragraph [ref=e108]: 8 комплексных модулей, охватывающих все от начального до продвинутого уровня
+      - generic [ref=e109]:
+        - generic [ref=e113]:
+          - generic [ref=e114]:
+            - generic [ref=e115]: "1"
+            - generic [ref=e116]:
+              - 'heading "Module 1: Foundations & Mindset" [level=3] [ref=e117]'
+              - generic [ref=e118]:
+                - generic [ref=e119]:
+                  - img [ref=e120]
+                  - text: 12 уроков
+                - generic [ref=e122]:
+                  - img [ref=e123]
+                  - text: 2.5h
+          - button "Предпросмотр" [ref=e126] [cursor=pointer]:
+            - text: Предпросмотр
+            - img
+        - generic [ref=e130]:
+          - generic [ref=e131]:
+            - generic [ref=e132]: "2"
+            - generic [ref=e133]:
+              - 'heading "Module 2: Strategy & Planning" [level=3] [ref=e134]'
+              - generic [ref=e135]:
+                - generic [ref=e136]:
+                  - img [ref=e137]
+                  - text: 15 уроков
+                - generic [ref=e139]:
+                  - img [ref=e140]
+                  - text: 3h
+          - button "Предпросмотр" [ref=e143] [cursor=pointer]:
+            - text: Предпросмотр
+            - img
+        - generic [ref=e147]:
+          - generic [ref=e148]:
+            - generic [ref=e149]: "3"
+            - generic [ref=e150]:
+              - 'heading "Module 3: Content Creation Mastery" [level=3] [ref=e151]'
+              - generic [ref=e152]:
+                - generic [ref=e153]:
+                  - img [ref=e154]
+                  - text: 18 уроков
+                - generic [ref=e156]:
+                  - img [ref=e157]
+                  - text: 4.5h
+          - button "Предпросмотр" [ref=e160] [cursor=pointer]:
+            - text: Предпросмотр
+            - img
+        - generic [ref=e165]:
+          - img [ref=e167]
+          - generic [ref=e170]:
+            - 'heading "Module 4: Social Media Marketing" [level=3] [ref=e171]'
+            - generic [ref=e172]:
+              - generic [ref=e173]:
+                - img [ref=e174]
+                - text: 20 уроков
+              - generic [ref=e176]:
+                - img [ref=e177]
+                - text: 5h
+        - generic [ref=e184]:
+          - img [ref=e186]
+          - generic [ref=e189]:
+            - 'heading "Module 5: Email Marketing & Automation" [level=3] [ref=e190]'
+            - generic [ref=e191]:
+              - generic [ref=e192]:
+                - img [ref=e193]
+                - text: 16 уроков
+              - generic [ref=e195]:
+                - img [ref=e196]
+                - text: 4h
+        - generic [ref=e203]:
+          - img [ref=e205]
+          - generic [ref=e208]:
+            - 'heading "Module 6: Paid Advertising Strategies" [level=3] [ref=e209]'
+            - generic [ref=e210]:
+              - generic [ref=e211]:
+                - img [ref=e212]
+                - text: 14 уроков
+              - generic [ref=e214]:
+                - img [ref=e215]
+                - text: 3.5h
+        - generic [ref=e222]:
+          - img [ref=e224]
+          - generic [ref=e227]:
+            - 'heading "Module 7: Analytics & Optimization" [level=3] [ref=e228]'
+            - generic [ref=e229]:
+              - generic [ref=e230]:
+                - img [ref=e231]
+                - text: 12 уроков
+              - generic [ref=e233]:
+                - img [ref=e234]
+                - text: 3h
+        - generic [ref=e241]:
+          - img [ref=e243]
+          - generic [ref=e246]:
+            - 'heading "Module 8: Scaling Your Business" [level=3] [ref=e247]'
+            - generic [ref=e248]:
+              - generic [ref=e249]:
+                - img [ref=e250]
+                - text: 13 уроков
+              - generic [ref=e252]:
+                - img [ref=e253]
+                - text: 3.5h
+    - generic [ref=e256]:
+      - generic [ref=e258]:
+        - heading "Выберите свой путь обучения" [level=2] [ref=e259]
+        - paragraph [ref=e260]: Все планы включают пожизненный доступ. Никаких подписок. Платите один раз, учитесь всегда.
+      - generic [ref=e261]:
+        - generic [ref=e264]:
+          - heading "Основы" [level=3] [ref=e265]
+          - paragraph [ref=e266]: Идеально для начала работы
+          - generic [ref=e267]: $297один раз
+          - list [ref=e268]:
+            - listitem [ref=e269]:
+              - img [ref=e270]
+              - text: Modules 1-3
+            - listitem [ref=e273]:
+              - img [ref=e274]
+              - text: Video Lessons
+            - listitem [ref=e277]:
+              - img [ref=e278]
+              - text: Basic Workbooks
+            - listitem [ref=e281]:
+              - img [ref=e282]
+              - text: Email Support
+          - button "Начать" [ref=e285] [cursor=pointer]
+        - generic [ref=e287]:
+          - generic [ref=e289]: САМЫЙ ПОПУЛЯРНЫЙ
+          - generic [ref=e290]:
+            - heading "Полный курс" [level=3] [ref=e291]
+            - paragraph [ref=e292]: Все, что вам нужно для успеха
+            - generic [ref=e293]: $697$997
+            - list [ref=e294]:
+              - listitem [ref=e295]:
+                - img [ref=e296]
+                - text: All 8 Modules
+              - listitem [ref=e299]:
+                - img [ref=e300]
+                - text: 120+ Video Lessons
+              - listitem [ref=e303]:
+                - img [ref=e304]
+                - text: Premium Workbooks
+              - listitem [ref=e307]:
+                - img [ref=e308]
+                - text: Private Community
+              - listitem [ref=e311]:
+                - img [ref=e312]
+                - text: Live Q&A Sessions
+              - listitem [ref=e315]:
+                - img [ref=e316]
+                - text: Certificate
+            - button "Записаться" [ref=e319] [cursor=pointer]
+        - generic [ref=e322]:
+          - heading "VIP-наставничество" [level=3] [ref=e323]
+          - paragraph [ref=e324]: Для серьезных предпринимателей
+          - generic [ref=e325]: $1,997один раз
+          - list [ref=e326]:
+            - listitem [ref=e327]:
+              - img [ref=e328]
+              - text: Everything in Complete
+            - listitem [ref=e331]:
+              - img [ref=e332]
+              - text: 1-on-1 Coaching Calls
+            - listitem [ref=e335]:
+              - img [ref=e336]
+              - text: Personalized Feedback
+            - listitem [ref=e339]:
+              - img [ref=e340]
+              - text: Implementation Support
+            - listitem [ref=e343]:
+              - img [ref=e344]
+              - text: Bonus Templates
+            - listitem [ref=e347]:
+              - img [ref=e348]
+              - text: Priority Support
+          - button "Подать заявку" [ref=e351] [cursor=pointer]
+      - paragraph [ref=e352]: 💳 Безопасная оплата • Гарантия возврата 30 дней • Без подписок
+    - generic [ref=e353]:
+      - generic [ref=e355]:
+        - heading "Истории успеха студентов" [level=2] [ref=e356]
+        - paragraph [ref=e357]: Реальные результаты от реальных студентов
+      - generic [ref=e358]:
+        - generic [ref=e361]:
+          - generic [ref=e362]:
+            - img [ref=e363]
+            - img [ref=e365]
+            - img [ref=e367]
+            - img [ref=e369]
+            - img [ref=e371]
+          - paragraph [ref=e373]: Этот курс полностью изменил мою жизнь. Стратегии практичные, действенные и реально работают. Стоит каждого рубля!
+          - generic [ref=e376]:
+            - generic [ref=e377]: Emily Rodriguez
+            - generic [ref=e378]: Quit my 9-5 and now making $15K/mo
+        - generic [ref=e381]:
+          - generic [ref=e382]:
+            - img [ref=e383]
+            - img [ref=e385]
+            - img [ref=e387]
+            - img [ref=e389]
+            - img [ref=e391]
+          - paragraph [ref=e393]: Этот курс полностью изменил мою жизнь. Стратегии практичные, действенные и реально работают. Стоит каждого рубля!
+          - generic [ref=e396]:
+            - generic [ref=e397]: James Chen
+            - generic [ref=e398]: Grew my agency from 0 to $50K/mo
+        - generic [ref=e401]:
+          - generic [ref=e402]:
+            - img [ref=e403]
+            - img [ref=e405]
+            - img [ref=e407]
+            - img [ref=e409]
+            - img [ref=e411]
+          - paragraph [ref=e413]: Этот курс полностью изменил мою жизнь. Стратегии практичные, действенные и реально работают. Стоит каждого рубля!
+          - generic [ref=e416]:
+            - generic [ref=e417]: Sarah Johnson
+            - generic [ref=e418]: Landed 5 high-ticket clients in 60 days
+    - generic [ref=e423]:
+      - heading "Готовы трансформировать вашу жизнь?" [level=2] [ref=e424]
+      - paragraph [ref=e425]: Присоединяйтесь к 100 000+ студентов, которые уже начали свой путь. Гарантия возврата 30 дней.
+      - button "Записаться на полный курс - $697" [ref=e426] [cursor=pointer]:
+        - img
+        - text: Записаться на полный курс - $697
+      - paragraph [ref=e427]: "⏰ Ограниченное время: Сэкономьте $300 (Обычная цена $997)"
+    - contentinfo [ref=e428]:
+      - generic [ref=e429]:
+        - generic [ref=e430]:
+          - generic [ref=e431]:
+            - heading "Курсы" [level=3] [ref=e432]
+            - list [ref=e433]:
+              - listitem [ref=e434]:
+                - link "Все курсы" [ref=e435] [cursor=pointer]:
+                  - /url: "#"
+              - listitem [ref=e436]:
+                - link "Пакеты" [ref=e437] [cursor=pointer]:
+                  - /url: "#"
+              - listitem [ref=e438]:
+                - link "Бесплатные уроки" [ref=e439] [cursor=pointer]:
+                  - /url: "#"
+          - generic [ref=e440]:
+            - heading "Услуги" [level=3] [ref=e441]
+            - list [ref=e442]:
+              - listitem [ref=e443]:
+                - link "Читать далее" [ref=e444] [cursor=pointer]:
+                  - /url: "#"
+              - listitem [ref=e445]:
+                - link "Шаблоны" [ref=e446] [cursor=pointer]:
+                  - /url: "#"
+              - listitem [ref=e447]:
+                - link "Инструменты" [ref=e448] [cursor=pointer]:
+                  - /url: "#"
+          - generic [ref=e449]:
+            - heading "Support" [level=3] [ref=e450]
+            - list [ref=e451]:
+              - listitem [ref=e452]:
+                - link "Центр помощи" [ref=e453] [cursor=pointer]:
+                  - /url: "#"
+              - listitem [ref=e454]:
+                - link "Контакты" [ref=e455] [cursor=pointer]:
+                  - /url: "#"
+              - listitem [ref=e456]:
+                - link "Политика возврата" [ref=e457] [cursor=pointer]:
+                  - /url: "#"
+          - generic [ref=e458]:
+            - heading "Connect" [level=3] [ref=e459]
+            - generic [ref=e460]:
+              - link [ref=e461] [cursor=pointer]:
+                - /url: "#"
+                - img [ref=e462]
+              - link [ref=e465] [cursor=pointer]:
+                - /url: "#"
+                - img [ref=e466]
+              - link [ref=e469] [cursor=pointer]:
+                - /url: "#"
+                - img [ref=e470]
+        - paragraph [ref=e473]: © 2025 Цифровая академия. Все права защищены. | Условия • Конфиденциальность • Возвраты
+  - button "Open Next.js Dev Tools" [ref=e479] [cursor=pointer]:
+    - img [ref=e480]
+  - alert [ref=e483]
+```

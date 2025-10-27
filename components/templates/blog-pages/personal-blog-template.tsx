@@ -265,10 +265,10 @@ const blogData = {
 
 export function PersonalBlogTemplate() {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen overflow-x-hidden max-w-full bg-gray-50">
       {/* Header */}
       <header className="bg-white border-b sticky top-0 z-50">
-        <div className="container mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
+        <div className="container mx-auto px-3 sm:px-3 py-4 flex items-center justify-between">
           <Link href="/" className="text-2xl font-bold">
             Sarah Mitchell
           </Link>
@@ -286,7 +286,7 @@ export function PersonalBlogTemplate() {
               Newsletter
             </a>
           </nav>
-          <div className="flex items-center gap-4">
+          <div className="flex flex-col sm:flex-row sm:items-center gap-4">
             <button className="p-2 hover:bg-gray-100 rounded-lg transition-colors">
               <FiSearch className="w-5 h-5" />
             </button>
@@ -296,7 +296,7 @@ export function PersonalBlogTemplate() {
 
       {/* Hero / About Section */}
       <section className="bg-white py-16 border-b">
-        <div className="container mx-auto px-4 sm:px-6 max-w-4xl">
+        <div className="container mx-auto px-3 sm:px-3 max-w-full">
           <FadeIn>
             <div className="flex flex-col md:flex-row items-center gap-8">
               <img
@@ -305,7 +305,7 @@ export function PersonalBlogTemplate() {
                 className="w-32 h-32 rounded-full object-cover border-4 border-gray-100"
               />
               <div className="text-center md:text-left flex-1">
-                <h1 className="text-4xl md:text-5xl font-bold mb-3">{blogData.author.name}</h1>
+                <h1 className="text-4xl md:text-5xl font-bold mb-3 break-words">{blogData.author.name}</h1>
                 <p className="text-xl text-gray-600 mb-4">{blogData.author.bio}</p>
                 <div className="flex items-center gap-3 justify-center md:justify-start mb-4">
                   <a
@@ -349,10 +349,10 @@ export function PersonalBlogTemplate() {
 
       {/* Featured Post */}
       <section className="py-16 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 max-w-5xl">
+        <div className="container mx-auto px-3 sm:px-3 max-w-full">
           <ScrollReveal>
             <Card className="overflow-hidden hover:shadow-xl transition-shadow border-0 shadow-lg">
-              <div className="grid md:grid-cols-2 gap-0">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
                 <div className="relative h-80 md:h-auto">
                   <img
                     src={blogData.featured.image}
@@ -390,7 +390,7 @@ export function PersonalBlogTemplate() {
 
       {/* Category Filter */}
       <section id="blog" className="py-8 bg-gray-50 border-t">
-        <div className="container mx-auto px-4 sm:px-6 max-w-5xl">
+        <div className="container mx-auto px-3 sm:px-3 max-w-full">
           <div className="flex items-center gap-3 overflow-x-auto pb-2">
             {blogData.categories.map((category) => (
               <Button
@@ -408,11 +408,11 @@ export function PersonalBlogTemplate() {
 
       {/* Blog Grid with Sidebar */}
       <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4 sm:px-6 max-w-6xl">
-          <div className="grid lg:grid-cols-3 gap-8">
+        <div className="container mx-auto px-3 sm:px-3 max-w-full">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Main Content */}
             <div className="lg:col-span-2">
-              <div className="grid md:grid-cols-2 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {blogData.posts.map((post, index) => (
                   <ScrollReveal key={post.id} delay={index * 0.1}>
                     <Card className="h-full flex flex-col overflow-hidden hover:shadow-xl transition-all hover:-translate-y-1 group border-0 shadow">
@@ -539,14 +539,14 @@ export function PersonalBlogTemplate() {
 
       {/* Testimonials Section */}
       <section className="py-20 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 max-w-5xl">
+        <div className="container mx-auto px-3 sm:px-3 max-w-full">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">What Readers Say</h2>
+            <h2 className="text-4xl font-bold mb-4 break-words">What Readers Say</h2>
             <p className="text-xl text-gray-600">
               Join thousands of designers and developers who trust this blog
             </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {blogData.testimonials.map((testimonial) => (
               <ScrollReveal key={testimonial.id}>
                 <Card className="border-0 shadow-lg h-full">
@@ -578,14 +578,14 @@ export function PersonalBlogTemplate() {
 
       {/* Resources Section */}
       <section id="resources" className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4 sm:px-6 max-w-5xl">
+        <div className="container mx-auto px-3 sm:px-3 max-w-full">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">Free Resources</h2>
+            <h2 className="text-4xl font-bold mb-4 break-words">Free Resources</h2>
             <p className="text-xl text-gray-600">
               Downloadable tools and templates to help you in your creative journey
             </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {blogData.resources.map((resource) => (
               <ScrollReveal key={resource.id}>
                 <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow group">
@@ -616,28 +616,28 @@ export function PersonalBlogTemplate() {
 
       {/* About Section */}
       <section id="about" className="py-20 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 max-w-4xl">
+        <div className="container mx-auto px-3 sm:px-3 max-w-full">
           <ScrollReveal>
-            <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
               <div>
-                <h2 className="text-4xl font-bold mb-6">About Sarah</h2>
+                <h2 className="text-4xl font-bold mb-6 break-words">About Sarah</h2>
                 <p className="text-gray-600 mb-4 text-lg leading-relaxed">
                   {blogData.author.fullBio}
                 </p>
                 <div className="space-y-3 mb-6">
-                  <div className="flex items-center gap-3">
+                  <div className="flex flex-col sm:flex-row sm:items-center gap-3">
                     <div className="w-8 h-8 rounded-lg bg-blue-100 flex items-center justify-center">
                       <FiAward className="w-4 h-4 text-blue-600" />
                     </div>
                     <span className="text-gray-700">10+ years of experience in design</span>
                   </div>
-                  <div className="flex items-center gap-3">
+                  <div className="flex flex-col sm:flex-row sm:items-center gap-3">
                     <div className="w-8 h-8 rounded-lg bg-purple-100 flex items-center justify-center">
                       <FiBookOpen className="w-4 h-4 text-purple-600" />
                     </div>
                     <span className="text-gray-700">124 articles published</span>
                   </div>
-                  <div className="flex items-center gap-3">
+                  <div className="flex flex-col sm:flex-row sm:items-center gap-3">
                     <div className="w-8 h-8 rounded-lg bg-pink-100 flex items-center justify-center">
                       <FiHeart className="w-4 h-4 text-pink-600" />
                     </div>
@@ -667,10 +667,10 @@ export function PersonalBlogTemplate() {
 
       {/* Newsletter Section */}
       <section id="newsletter" className="py-20 bg-gradient-to-br from-blue-600 to-purple-600">
-        <div className="container mx-auto px-4 sm:px-6 max-w-3xl text-center">
+        <div className="container mx-auto px-3 sm:px-3 max-w-full text-center">
           <ScrollReveal>
             <FiMail className="w-16 h-16 mx-auto mb-6 text-white" />
-            <h2 className="text-4xl font-bold text-white mb-4">Join the Newsletter</h2>
+            <h2 className="text-4xl font-bold text-white mb-4 break-words">Join the Newsletter</h2>
             <p className="text-xl text-blue-100 mb-8">
               Get the latest articles and insights delivered to your inbox every week.
             </p>
@@ -705,14 +705,14 @@ export function PersonalBlogTemplate() {
 
       {/* Footer */}
       <footer className="bg-white py-12 border-t">
-        <div className="container mx-auto px-4 sm:px-6 max-w-5xl">
-          <div className="grid md:grid-cols-4 gap-8 mb-8">
+        <div className="container mx-auto px-3 sm:px-3 max-w-full">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
             <div>
               <p className="text-2xl font-bold mb-2">{blogData.author.name}</p>
               <p className="text-gray-600 text-sm mb-4">
                 Sharing insights on design, development, and creativity.
               </p>
-              <div className="flex items-center gap-3">
+              <div className="flex flex-col sm:flex-row sm:items-center gap-3">
                 <a href={blogData.author.social.twitter} className="text-gray-600 hover:text-blue-600 transition-colors">
                   <FiTwitter className="w-5 h-5" />
                 </a>

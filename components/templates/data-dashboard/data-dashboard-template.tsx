@@ -109,10 +109,10 @@ const kpiData = [
 
 export function DataDashboardTemplate() {
   return (
-    <div className="min-h-screen bg-gray-950 text-white">
+    <div className="min-h-screen overflow-x-hidden max-w-full bg-gray-950 text-white">
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-gray-900/80 backdrop-blur-md border-b border-gray-800">
-        <div className="container mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
+        <div className="container mx-auto px-3 sm:px-3 py-4 flex items-center justify-between">
           <Link
             href="/"
             className="text-sm text-gray-400 hover:text-white transition-colors"
@@ -129,8 +129,8 @@ export function DataDashboardTemplate() {
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-32 pb-16 px-6">
-        <div className="container mx-auto max-w-7xl">
+      <section className="pt-32 pb-16 px-3">
+        <div className="container mx-auto max-w-full">
           <div className="text-center mb-12">
             <h1 className="text-5xl md:text-7xl font-black mb-6 bg-gradient-to-r from-blue-400 via-cyan-400 to-teal-400 bg-clip-text text-transparent">
               {portfolioData.name}
@@ -146,8 +146,8 @@ export function DataDashboardTemplate() {
       </section>
 
       {/* KPI Cards */}
-      <section className="py-8 px-6">
-        <div className="container mx-auto max-w-7xl">
+      <section className="py-8 px-3">
+        <div className="container mx-auto max-w-full">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {kpiData.map((kpi, index) => (
               <ScrollReveal key={kpi.title} delay={index * 0.1}>
@@ -175,8 +175,8 @@ export function DataDashboardTemplate() {
       </section>
 
       {/* Charts Section */}
-      <section className="py-12 px-6">
-        <div className="container mx-auto max-w-7xl">
+      <section className="py-12 px-3">
+        <div className="container mx-auto max-w-full">
           {/* Revenue & Expenses Chart */}
           <ScrollReveal>
             <Card className="bg-gray-900 border-gray-800 mb-8">
@@ -226,7 +226,7 @@ export function DataDashboardTemplate() {
             </Card>
           </ScrollReveal>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* User Growth Chart */}
             <ScrollReveal delay={0.1}>
               <Card className="bg-gray-900 border-gray-800">
@@ -327,15 +327,15 @@ export function DataDashboardTemplate() {
       </section>
 
       {/* Insights Section */}
-      <section className="py-16 px-6 bg-gray-900/50">
-        <div className="container mx-auto max-w-5xl">
+      <section className="py-16 px-3 bg-gray-900/50">
+        <div className="container mx-auto max-w-full">
           <ScrollReveal>
             <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-white">
               Key Insights
             </h2>
           </ScrollReveal>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
                 title: "Revenue Trend",
@@ -368,8 +368,8 @@ export function DataDashboardTemplate() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 px-6">
-        <div className="container mx-auto max-w-3xl text-center">
+      <section id="contact" className="py-20 px-3">
+        <div className="container mx-auto max-w-full text-center">
           <ScrollReveal>
             <h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
               Let's Analyze Your Data
@@ -414,7 +414,7 @@ export function DataDashboardTemplate() {
 
       {/* Footer */}
       <footer className="border-t border-gray-800 bg-gray-900 py-8">
-        <div className="container mx-auto px-4 sm:px-6">
+        <div className="container mx-auto px-3 sm:px-3">
           <p className="text-sm text-gray-500 text-center">
             © {new Date().getFullYear()} {portfolioData.name}. Powered by Recharts & React.
           </p>

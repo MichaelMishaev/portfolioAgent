@@ -337,13 +337,13 @@ export function CommunityServiceTemplate() {
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-teal-50 via-purple-50 to-pink-50 py-24">
         <div className="container mx-auto px-3 max-w-full">
-          <div className="max-w-4xl mx-auto text-center">
+          <div className="max-w-full mx-auto text-center">
             <FadeIn>
               <h1 className="text-6xl md:text-7xl font-bold mb-6 tracking-tight">
                 {platformData.name}
               </h1>
               <p className="text-3xl font-light mb-8 text-stone-700">{platformData.tagline}</p>
-              <p className="text-xl mb-12 text-stone-600 max-w-2xl mx-auto">
+              <p className="text-xl mb-12 text-stone-600 max-w-full mx-auto">
                 {platformData.description}
               </p>
               <div className="flex flex-col gap-4 sm:flex-row gap-4 justify-center mb-16">
@@ -383,7 +383,7 @@ export function CommunityServiceTemplate() {
       {/* Dual Value Props */}
       <section id="features" className="py-32">
         <div className="container mx-auto px-3 max-w-full">
-          <div className="max-w-7xl mx-auto space-y-32">
+          <div className="max-w-full mx-auto space-y-32">
             {/* For Creators */}
             <div>
               <ScrollReveal>
@@ -397,7 +397,7 @@ export function CommunityServiceTemplate() {
                 </div>
               </ScrollReveal>
 
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 {platformData.valueProps.creators.benefits.map((benefit, index) => (
                   <ScrollReveal key={benefit.title} delay={index * 0.1}>
                     <Card className="border-2 border-stone-200 hover:border-teal-500 transition-colors">
@@ -425,7 +425,7 @@ export function CommunityServiceTemplate() {
                 </div>
               </ScrollReveal>
 
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 {platformData.valueProps.members.benefits.map((benefit, index) => (
                   <ScrollReveal key={benefit.title} delay={index * 0.1}>
                     <Card className="border-2 border-stone-200 hover:border-purple-600 transition-colors">
@@ -449,13 +449,13 @@ export function CommunityServiceTemplate() {
           <ScrollReveal>
             <div className="text-center mb-16">
               <h2 className="text-5xl font-bold mb-6">Success Stories</h2>
-              <p className="text-xl text-stone-600 max-w-3xl mx-auto">
+              <p className="text-xl text-stone-600 max-w-full mx-auto">
                 Real creators building sustainable businesses on our platform.
               </p>
             </div>
           </ScrollReveal>
 
-          <div className="max-w-6xl mx-auto space-y-16">
+          <div className="max-w-full mx-auto space-y-16">
             {platformData.creatorShowcase.map((creator, index) => (
               <ScrollReveal key={creator.name}>
                 <Card
@@ -463,7 +463,7 @@ export function CommunityServiceTemplate() {
                     index % 2 === 0 ? "" : "md:flex-row-reverse"
                   }`}
                 >
-                  <div className="grid md:grid-cols-2 gap-0">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
                     <div className={index % 2 === 1 ? "md:order-2" : ""}>
                       <img
                         src={creator.communityImage}
@@ -517,7 +517,7 @@ export function CommunityServiceTemplate() {
           <ScrollReveal>
             <div className="text-center mb-16">
               <h2 className="text-5xl font-bold mb-6">{platformData.pricing.title}</h2>
-              <p className="text-xl text-stone-600 max-w-3xl mx-auto mb-8">
+              <p className="text-xl text-stone-600 max-w-full mx-auto mb-8">
                 {platformData.pricing.subtitle}
               </p>
 
@@ -525,7 +525,7 @@ export function CommunityServiceTemplate() {
               <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-center">
                 <button
                   onClick={() => setBillingPeriod("monthly")}
-                  className={`px-6 py-2 rounded-full transition-all ${
+                  className={`px-3 py-2 rounded-full transition-all ${
                     billingPeriod === "monthly"
                       ? "bg-teal-500 text-white"
                       : "bg-stone-200 text-stone-600"
@@ -535,7 +535,7 @@ export function CommunityServiceTemplate() {
                 </button>
                 <button
                   onClick={() => setBillingPeriod("annual")}
-                  className={`px-6 py-2 rounded-full transition-all ${
+                  className={`px-3 py-2 rounded-full transition-all ${
                     billingPeriod === "annual"
                       ? "bg-teal-500 text-white"
                       : "bg-stone-200 text-stone-600"
@@ -547,7 +547,7 @@ export function CommunityServiceTemplate() {
             </div>
           </ScrollReveal>
 
-          <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+          <div className="max-w-full mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
             {platformData.pricing.tiers.map((tier, index) => (
               <ScrollReveal key={tier.name} delay={index * 0.1}>
                 <Card
@@ -559,7 +559,7 @@ export function CommunityServiceTemplate() {
                 >
                   {tier.highlighted && (
                     <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                      <Badge className="bg-gradient-to-r from-teal-500 to-purple-600 text-white px-6 py-1">
+                      <Badge className="bg-gradient-to-r from-teal-500 to-purple-600 text-white px-3 py-1">
                         Most Popular
                       </Badge>
                     </div>
@@ -602,7 +602,7 @@ export function CommunityServiceTemplate() {
       {/* Platform Reliability */}
       <section className="py-24 bg-stone-50">
         <div className="container mx-auto px-3 max-w-full">
-          <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-8">
+          <div className="max-w-full mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
             {platformData.platformFeatures.map((feature, index) => (
               <ScrollReveal key={feature.title} delay={index * 0.1}>
                 <div className="text-center">
@@ -625,7 +625,7 @@ export function CommunityServiceTemplate() {
             </div>
           </ScrollReveal>
 
-          <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
+          <div className="max-w-full mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
             {platformData.onboarding.steps.map((step, index) => (
               <ScrollReveal key={step.step} delay={index * 0.1}>
                 <div className="flex gap-6">
@@ -647,11 +647,11 @@ export function CommunityServiceTemplate() {
       <section className="py-32 bg-gradient-to-br from-teal-500 via-purple-600 to-pink-500 text-white">
         <div className="container mx-auto px-3 max-w-full">
           <ScrollReveal>
-            <div className="max-w-4xl mx-auto text-center">
+            <div className="max-w-full mx-auto text-center">
               <h2 className="text-5xl md:text-6xl font-bold mb-8">
                 Start Building Your Community Today
               </h2>
-              <p className="text-xl mb-12 max-w-2xl mx-auto opacity-90">
+              <p className="text-xl mb-12 max-w-full mx-auto opacity-90">
                 Join 50,000+ creators who've chosen Creator Collective. No credit card required.
               </p>
               <Button

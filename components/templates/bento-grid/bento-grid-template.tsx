@@ -131,7 +131,7 @@ export function BentoGridTemplate() {
 
       {/* Bento Grid Layout */}
       <div className="container mx-auto px-3 max-w-full pt-24 pb-20">
-        <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 gap-4 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 gap-4 max-w-full mx-auto">
 
           {/* Hero Card - Large */}
           <ScrollReveal className="md:col-span-4 lg:col-span-4 md:row-span-2">
@@ -141,7 +141,7 @@ export function BentoGridTemplate() {
                   <Badge className="mb-4 bg-white/20 text-white border-0">
                     {portfolioData.availability}
                   </Badge>
-                  <h1 className="text-5xl md:text-7xl font-bold mb-4 leading-tight">
+                  <h1 className="text-5xl md:text-7xl font-bold mb-4 leading-tight break-words">
                     {portfolioData.name}
                   </h1>
                   <p className="text-2xl md:text-3xl mb-6 opacity-90">
@@ -151,7 +151,7 @@ export function BentoGridTemplate() {
                     📍 {portfolioData.location}
                   </p>
                 </div>
-                <div className="flex gap-3">
+                <div className="flex flex-col sm:flex-row gap-3">
                   <Button size="lg" variant="secondary">
                     <FiMail className="mr-2" />
                     Get in Touch
@@ -310,7 +310,7 @@ export function BentoGridTemplate() {
                 <CardTitle>What I Do</CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="grid md:grid-cols-3 gap-4">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                   {portfolioData.services.map((service, index) => (
                     <div key={index} className="space-y-2">
                       <h4 className="font-bold text-lg">{service.title}</h4>
@@ -326,7 +326,7 @@ export function BentoGridTemplate() {
           <ScrollReveal delay={0.25} className="md:col-span-4 lg:col-span-3">
             <Card className="h-full">
               <CardHeader>
-                <CardTitle className="flex items-center gap-2">
+                <CardTitle className="flex flex-col sm:flex-row sm:items-center gap-2">
                   <FiCode className="text-primary" />
                   Skills & Tools
                 </CardTitle>
@@ -350,7 +350,7 @@ export function BentoGridTemplate() {
                 <CardTitle>Client Testimonials</CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="grid md:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                   {portfolioData.testimonials.map((testimonial, index) => (
                     <div key={index} className="space-y-3">
                       <div className="flex gap-1 mb-2">
@@ -454,7 +454,7 @@ export function BentoGridTemplate() {
                 <div className="space-y-4">
                   {portfolioData.blogPosts.map((post, index) => (
                     <div key={index} className="space-y-1">
-                      <div className="flex items-center gap-2">
+                      <div className="flex flex-col sm:flex-row sm:items-center gap-2">
                         <Badge variant="secondary" className="text-xs">{post.category}</Badge>
                         <span className="text-xs text-muted-foreground">{post.readTime}</span>
                       </div>
@@ -470,7 +470,7 @@ export function BentoGridTemplate() {
           <ScrollReveal delay={0.85} className="md:col-span-4 lg:col-span-6">
             <Card className="h-full bg-gradient-to-r from-indigo-500 to-purple-600 text-white border-0">
               <CardContent className="p-8">
-                <div className="grid grid-cols-4 gap-6 text-center">
+                <div className="grid grid-cols-1 sm:grid-cols-4 gap-6 text-center">
                   <div>
                     <div className="text-4xl font-bold mb-2">{portfolioData.socialProof.followers}</div>
                     <div className="text-sm opacity-90">Followers</div>
@@ -527,7 +527,7 @@ export function BentoGridTemplate() {
           <ScrollReveal delay={1.05} className="md:col-span-4 lg:col-span-6">
             <Card className="h-full">
               <CardHeader>
-                <CardTitle className="flex items-center gap-2">
+                <CardTitle className="flex flex-col sm:flex-row sm:items-center gap-2">
                   <FiCode className="text-primary" />
                   Tools I Use Daily
                 </CardTitle>
@@ -553,11 +553,11 @@ export function BentoGridTemplate() {
                 <p className="text-muted-foreground mb-6">
                   Get design tips, project updates, and exclusive content delivered monthly
                 </p>
-                <div className="flex gap-2">
+                <div className="flex flex-col sm:flex-row gap-2">
                   <input
                     type="email"
                     placeholder="Your email"
-                    className="flex-1 px-4 py-2 rounded-lg border bg-white/50 dark:bg-black/50"
+                    className="flex-1 px-3 py-2 rounded-lg border bg-white/50 dark:bg-black/50"
                   />
                   <Button>Subscribe</Button>
                 </div>
@@ -653,7 +653,7 @@ export function BentoGridTemplate() {
                     <FiMail className="mr-2" />
                     hello@rileychen.com
                   </Button>
-                  <div className="flex gap-3">
+                  <div className="flex flex-col sm:flex-row gap-3">
                     <Button variant="ghost" size="icon" className="text-white hover:text-white hover:bg-white/20" aria-label="GitHub Profile">
                       <FiGithub className="w-5 h-5" />
                     </Button>

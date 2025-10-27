@@ -88,7 +88,7 @@ const containerRef = useRef(null);
     <div ref={containerRef} className="bg-black text-white overflow-x-hidden max-w-full">
       {/* Fixed Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 mix-blend-difference">
-        <div className="container mx-auto px-4 sm:px-6 py-6 flex items-center justify-between">
+        <div className="container mx-auto px-3 sm:px-3 py-6 flex items-center justify-between">
           <Link href="/" className="text-sm text-white hover:text-gray-300 transition-colors">
             ← Back
           </Link>
@@ -106,9 +106,9 @@ const containerRef = useRef(null);
         <div className="absolute inset-0 bg-gradient-to-br from-purple-900 via-black to-blue-900" />
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&h=1080&fit=crop')] bg-cover bg-center opacity-30 mix-blend-overlay" />
 
-        <div className="relative z-10 text-center px-6">
+        <div className="relative z-10 text-center px-3">
           <FadeIn>
-            <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-9xl font-bold mb-6">
+            <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-9xl font-bold mb-6 break-words">
               {portfolioData.name}
             </h1>
           </FadeIn>
@@ -142,7 +142,7 @@ const containerRef = useRef(null);
           </ParallaxSection>
 
           {/* Content */}
-          <div className="relative z-10 container mx-auto px-4 sm:px-6 text-center">
+          <div className="relative z-10 container mx-auto px-3 sm:px-3 text-center">
             <motion.div
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -150,18 +150,18 @@ const containerRef = useRef(null);
               viewport={{ once: true }}
             >
               <span
-                className="inline-block text-sm font-semibold px-4 py-2 rounded-full mb-4"
+                className="inline-block text-sm font-semibold px-3 py-2 rounded-full mb-4"
                 style={{ backgroundColor: section.color }}
               >
                 {section.subtitle}
               </span>
-              <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold mb-6">
+              <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold mb-6 break-words">
                 {section.title}
               </h2>
-              <p className="text-xl md:text-2xl text-gray-300 max-w-2xl mx-auto mb-4">
+              <p className="text-xl md:text-2xl text-gray-300 max-w-full mx-auto mb-4">
                 {section.description}
               </p>
-              <p className="text-lg text-gray-400 max-w-xl mx-auto italic">
+              <p className="text-lg text-gray-400 max-w-full mx-auto italic">
                 {section.details}
               </p>
             </motion.div>
@@ -181,8 +181,8 @@ const containerRef = useRef(null);
 
       {/* About Section - Split Screen */}
       <section className="min-h-screen flex items-center bg-gray-900">
-        <div className="container mx-auto px-4 sm:px-6">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="container mx-auto px-3 sm:px-3">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             {/* Image Side */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
@@ -201,7 +201,7 @@ const containerRef = useRef(null);
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-5xl md:text-6xl font-bold mb-6">
+              <h2 className="text-5xl md:text-6xl font-bold mb-6 break-words">
                 About Me
               </h2>
               <p className="text-xl text-gray-300 leading-relaxed mb-6">
@@ -211,7 +211,7 @@ const containerRef = useRef(null);
                 {portfolioData.clients.map((client) => (
                   <span
                     key={client}
-                    className="px-4 py-2 bg-white/10 backdrop-blur rounded-lg text-sm"
+                    className="px-3 py-2 bg-white/10 backdrop-blur rounded-lg text-sm"
                   >
                     {client}
                   </span>
@@ -226,7 +226,7 @@ const containerRef = useRef(null);
       <section className="min-h-screen flex items-center justify-center bg-black relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-emerald-900/20 to-teal-900/20" />
 
-        <div className="relative z-10 container mx-auto px-4 sm:px-6">
+        <div className="relative z-10 container mx-auto px-3 sm:px-3">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -234,7 +234,7 @@ const containerRef = useRef(null);
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-4 break-words">
               My Process
             </h2>
             <p className="text-xl text-gray-400">
@@ -242,7 +242,7 @@ const containerRef = useRef(null);
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {portfolioData.process.map((step, index) => (
               <motion.div
                 key={step.step}
@@ -265,7 +265,7 @@ const containerRef = useRef(null);
 
       {/* Services Section - Split Screen */}
       <section className="min-h-screen flex items-center bg-gray-900">
-        <div className="container mx-auto px-4 sm:px-6 py-20">
+        <div className="container mx-auto px-3 sm:px-3 py-20">
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -276,7 +276,7 @@ const containerRef = useRef(null);
             Services
           </motion.h2>
 
-          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-full mx-auto">
             {portfolioData.services.map((service, index) => (
               <motion.div
                 key={service.name}
@@ -299,17 +299,17 @@ const containerRef = useRef(null);
       <section className="min-h-screen flex items-center justify-center bg-black relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1606925797300-0b35e9d1794e?w=1920&h=1080&fit=crop')] bg-cover bg-center opacity-20" />
 
-        <div className="relative z-10 container mx-auto px-4 sm:px-6 text-center">
+        <div className="relative z-10 container mx-auto px-3 sm:px-3 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-12">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-12 break-words">
               My Gear
             </h2>
-            <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-full mx-auto">
               {portfolioData.gear.map((item, index) => (
                 <motion.div
                   key={item}
@@ -329,17 +329,17 @@ const containerRef = useRef(null);
 
       {/* Contact Section */}
       <section id="contact" className="min-h-screen flex items-center justify-center relative bg-black">
-        <div className="container mx-auto px-4 sm:px-6 text-center">
+        <div className="container mx-auto px-3 sm:px-3 text-center">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold mb-8">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold mb-8 break-words">
               Let's Create
             </h2>
-            <p className="text-xl md:text-2xl text-gray-400 mb-12 max-w-2xl mx-auto">
+            <p className="text-xl md:text-2xl text-gray-400 mb-12 max-w-full mx-auto">
               Have a project in mind? Let's bring your vision to life.
             </p>
             <Button
@@ -355,7 +355,7 @@ const containerRef = useRef(null);
 
       {/* Footer */}
       <footer className="border-t border-white/10 bg-black py-8">
-        <div className="container mx-auto px-4 sm:px-6">
+        <div className="container mx-auto px-3 sm:px-3">
           <p className="text-sm text-gray-500 text-center">
             © {new Date().getFullYear()} {portfolioData.name}. All rights reserved.
           </p>

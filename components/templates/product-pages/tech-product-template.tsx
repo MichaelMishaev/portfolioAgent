@@ -102,10 +102,10 @@ export function TechProductTemplate() {
   const [showVideo, setShowVideo] = useState(true);
 
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen overflow-x-hidden max-w-full bg-black text-white">
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-black/90 backdrop-blur-lg border-b border-yellow-500/20">
-        <div className="container mx-auto px-4 sm:px-6 py-4">
+        <div className="container mx-auto px-3 sm:px-3 py-4">
           <div className="flex items-center justify-between">
 <Link href="/" className="text-xl font-bold text-yellow-400">
             HYPERX
@@ -134,7 +134,7 @@ export function TechProductTemplate() {
         {/* Mobile Menu */}
         {mobileMenuOpen && (
           <div className="md:hidden bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm border-t">
-            <div className="container mx-auto px-4 sm:px-6 py-4 flex flex-col gap-4">
+            <div className="container mx-auto px-3 sm:px-3 py-4 flex flex-col gap-4">
               <a
                 href="#specs"
                 className="text-sm hover:text-primary transition-colors py-2"
@@ -160,8 +160,8 @@ export function TechProductTemplate() {
       </nav>
 
       {/* Hero Section */}
-      <section className="container mx-auto px-4 sm:px-6 pt-12 pb-8">
-        <div className="grid lg:grid-cols-2 gap-12">
+      <section className="container mx-auto px-3 sm:px-3 pt-12 pb-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Left: Product Viewer */}
           <div>
             <FadeIn>
@@ -177,7 +177,7 @@ export function TechProductTemplate() {
                   </video>
                   <button
                     onClick={() => setShowVideo(false)}
-                    className="absolute bottom-4 right-4 px-4 py-2 bg-black/70 hover:bg-black text-sm rounded"
+                    className="absolute bottom-4 right-4 px-3 py-2 bg-black/70 hover:bg-black text-sm rounded"
                   >
                     View Images
                   </button>
@@ -191,7 +191,7 @@ export function TechProductTemplate() {
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <div className="grid grid-cols-4 gap-2">
+                  <div className="grid grid-cols-1 sm:grid-cols-4 gap-2">
                     {productData.hero.images.map((img, idx) => (
                       <button
                         key={idx}
@@ -230,7 +230,7 @@ export function TechProductTemplate() {
               {/* Color Selector */}
               <div className="mb-8">
                 <p className="text-sm uppercase tracking-wider text-gray-400 mb-3">COLOR</p>
-                <div className="flex gap-3">
+                <div className="flex flex-col sm:flex-row gap-3">
                   {productData.configuration.colors.map((color) => (
                     <button
                       key={color.name}
@@ -260,8 +260,8 @@ export function TechProductTemplate() {
       </section>
 
       {/* Key Features Bento Grid */}
-      <section className="container mx-auto px-4 sm:px-6 py-16 border-t border-yellow-500/20">
-        <div className="grid md:grid-cols-4 gap-4">
+      <section className="container mx-auto px-3 sm:px-3 py-16 border-t border-yellow-500/20">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
           {productData.keyFeatures.map((feature, idx) => (
             <ScrollReveal key={feature.title} delay={idx * 0.1}>
               <Card className="bg-gradient-to-br from-gray-900 to-black border-yellow-500/20 hover:border-yellow-400/40 transition-all">
@@ -281,14 +281,14 @@ export function TechProductTemplate() {
       </section>
 
       {/* Tech Specs */}
-      <section id="specs" className="container mx-auto px-4 sm:px-6 py-16 border-t border-yellow-500/20">
+      <section id="specs" className="container mx-auto px-3 sm:px-3 py-16 border-t border-yellow-500/20">
         <ScrollReveal>
           <h2 className="text-4xl font-black uppercase text-center mb-12 tracking-tight">
             TECHNICAL <span className="text-yellow-400">SPECIFICATIONS</span>
           </h2>
         </ScrollReveal>
 
-        <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-full mx-auto">
           {Object.entries(productData.specs).map(([category, specs]) => (
             <ScrollReveal key={category}>
               <Card className="bg-gray-900 border-yellow-500/20">
@@ -314,34 +314,34 @@ export function TechProductTemplate() {
       </section>
 
       {/* Comparison Table */}
-      <section className="container mx-auto px-4 sm:px-6 py-16 border-t border-yellow-500/20">
+      <section className="container mx-auto px-3 sm:px-3 py-16 border-t border-yellow-500/20">
         <ScrollReveal>
           <h2 className="text-4xl font-black uppercase text-center mb-12 tracking-tight">
             HOW WE <span className="text-yellow-400">COMPARE</span>
           </h2>
         </ScrollReveal>
 
-        <div className="max-w-4xl mx-auto overflow-x-auto">
+        <div className="max-w-full mx-auto overflow-x-auto">
           <table className="w-full">
             <thead>
               <tr className="border-b-2 border-yellow-500">
-                <th className="text-left py-4 px-4 uppercase text-sm tracking-wider">Feature</th>
-                <th className="text-center py-4 px-4 uppercase text-sm tracking-wider bg-yellow-400/10">HyperX Ultra</th>
-                <th className="text-center py-4 px-4 uppercase text-sm tracking-wider">Competitor A</th>
-                <th className="text-center py-4 px-4 uppercase text-sm tracking-wider">Competitor B</th>
+                <th className="text-left py-4 px-3 uppercase text-sm tracking-wider">Feature</th>
+                <th className="text-center py-4 px-3 uppercase text-sm tracking-wider bg-yellow-400/10">HyperX Ultra</th>
+                <th className="text-center py-4 px-3 uppercase text-sm tracking-wider">Competitor A</th>
+                <th className="text-center py-4 px-3 uppercase text-sm tracking-wider">Competitor B</th>
               </tr>
             </thead>
             <tbody>
               {productData.comparison.map((row) => (
                 <tr key={row.feature} className="border-b border-gray-800">
-                  <td className="py-4 px-4 font-semibold">{row.feature}</td>
-                  <td className={`text-center py-4 px-4 ${row.winner === "us" ? "text-yellow-400 font-bold" : ""}`}>
+                  <td className="py-4 px-3 font-semibold">{row.feature}</td>
+                  <td className={`text-center py-4 px-3 ${row.winner === "us" ? "text-yellow-400 font-bold" : ""}`}>
                     {row.us} {row.winner === "us" && "✓"}
                   </td>
-                  <td className={`text-center py-4 px-4 ${row.winner === "competitor1" ? "text-yellow-400 font-bold" : "text-gray-400"}`}>
+                  <td className={`text-center py-4 px-3 ${row.winner === "competitor1" ? "text-yellow-400 font-bold" : "text-gray-400"}`}>
                     {row.competitor1} {row.winner === "competitor1" && "✓"}
                   </td>
-                  <td className={`text-center py-4 px-4 ${row.winner === "competitor2" ? "text-yellow-400 font-bold" : "text-gray-400"}`}>
+                  <td className={`text-center py-4 px-3 ${row.winner === "competitor2" ? "text-yellow-400 font-bold" : "text-gray-400"}`}>
                     {row.competitor2} {row.winner === "competitor2" && "✓"}
                   </td>
                 </tr>
@@ -352,7 +352,7 @@ export function TechProductTemplate() {
       </section>
 
       {/* Reviews */}
-      <section id="reviews" className="container mx-auto px-4 sm:px-6 py-16 border-t border-yellow-500/20">
+      <section id="reviews" className="container mx-auto px-3 sm:px-3 py-16 border-t border-yellow-500/20">
         <ScrollReveal>
           <h2 className="text-4xl font-black uppercase text-center mb-4 tracking-tight">
             WHAT <span className="text-yellow-400">PROS SAY</span>
@@ -368,7 +368,7 @@ export function TechProductTemplate() {
           </div>
         </ScrollReveal>
 
-        <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-full mx-auto">
           {productData.reviews.map((review, idx) => (
             <ScrollReveal key={review.author} delay={idx * 0.1}>
               <Card className="bg-gray-900 border-yellow-500/20">
@@ -386,9 +386,9 @@ export function TechProductTemplate() {
       </section>
 
       {/* Final CTA */}
-      <section className="container mx-auto px-4 sm:px-6 py-16 border-t border-yellow-500/20">
+      <section className="container mx-auto px-3 sm:px-3 py-16 border-t border-yellow-500/20">
         <ScrollReveal>
-          <Card className="max-w-4xl mx-auto bg-gradient-to-r from-yellow-400 to-orange-500 border-0">
+          <Card className="max-w-full mx-auto bg-gradient-to-r from-yellow-400 to-orange-500 border-0">
             <CardContent className="p-12 text-center text-black">
               <h2 className="text-4xl md:text-5xl font-black uppercase mb-4 tracking-tight">
                 READY TO DOMINATE?
@@ -406,7 +406,7 @@ export function TechProductTemplate() {
 
       {/* Footer */}
       <footer className="border-t border-yellow-500/20 py-12">
-        <div className="container mx-auto px-4 sm:px-6">
+        <div className="container mx-auto px-3 sm:px-3">
           <div className="text-center text-sm text-gray-400">
             <p>© 2024 HyperX. All rights reserved.</p>
           </div>

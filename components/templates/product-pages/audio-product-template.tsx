@@ -178,10 +178,10 @@ export function AudioProductTemplate() {
 
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white dark:from-gray-950 dark:to-gray-900">
+    <div className="min-h-screen overflow-x-hidden max-w-full bg-gradient-to-b from-gray-50 to-white dark:from-gray-950 dark:to-gray-900">
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-lg border-b border-gray-200 dark:border-gray-800">
-        <div className="container mx-auto px-4 sm:px-6 py-4">
+        <div className="container mx-auto px-3 sm:px-3 py-4">
           <div className="flex items-center justify-between">
 <Link href="/" className="text-xl font-bold">
             AURORA
@@ -209,7 +209,7 @@ export function AudioProductTemplate() {
         {/* Mobile Menu */}
         {mobileMenuOpen && (
           <div className="md:hidden bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm border-t">
-            <div className="container mx-auto px-4 sm:px-6 py-4 flex flex-col gap-4">
+            <div className="container mx-auto px-3 sm:px-3 py-4 flex flex-col gap-4">
               <a
                 href="#features"
                 className="text-sm hover:text-primary transition-colors py-2"
@@ -240,8 +240,8 @@ export function AudioProductTemplate() {
       </nav>
 
       {/* Hero Section */}
-      <section className="container mx-auto px-4 sm:px-6 pt-20 pb-32">
-        <div className="max-w-7xl mx-auto">
+      <section className="container mx-auto px-3 sm:px-3 pt-20 pb-32">
+        <div className="max-w-full mx-auto">
           <FadeIn>
             <div className="text-center mb-12">
               <Badge className="mb-4 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 border-blue-200 dark:border-blue-800">
@@ -253,7 +253,7 @@ export function AudioProductTemplate() {
               <p className="text-2xl md:text-3xl text-muted-foreground mb-4 font-light">
                 {productData.tagline}
               </p>
-              <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
+              <p className="text-xl text-muted-foreground max-w-full mx-auto mb-8">
                 {productData.description}
               </p>
               <div className="text-4xl font-semibold mb-8">
@@ -284,7 +284,7 @@ export function AudioProductTemplate() {
           {/* Color Selector */}
           <FadeIn delay={0.3}>
             <div className="flex flex-col items-center gap-6 mb-12">
-              <div className="flex gap-3">
+              <div className="flex flex-col sm:flex-row gap-3">
                 {productData.colors.map((color) => (
                   <button
                     key={color.name}
@@ -321,22 +321,22 @@ export function AudioProductTemplate() {
 
       {/* Features Section */}
       <section id="features" className="py-32 bg-white dark:bg-gray-900">
-        <div className="container mx-auto px-4 sm:px-6">
+        <div className="container mx-auto px-3 sm:px-3">
           <ScrollReveal>
             <div className="text-center mb-20">
               <h2 className="text-5xl md:text-6xl font-bold mb-6">
                 Engineered for Excellence
               </h2>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              <p className="text-xl text-muted-foreground max-w-full mx-auto">
                 Every detail refined. Every component optimized. Experience audio engineering at its finest.
               </p>
             </div>
           </ScrollReveal>
 
-          <div className="max-w-6xl mx-auto space-y-32">
+          <div className="max-w-full mx-auto space-y-32">
             {productData.features.map((feature, index) => (
               <ScrollReveal key={feature.title} delay={index * 0.1}>
-                <div className={`grid md:grid-cols-2 gap-16 items-center ${index % 2 === 1 ? "md:grid-flow-dense" : ""}`}>
+                <div className={`grid grid-cols-1 md:grid-cols-2 gap-16 items-center ${index % 2 === 1 ? "md:grid-flow-dense" : ""}`}>
                   <div className={index % 2 === 1 ? "md:col-start-2" : ""}>
                     <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center text-white mb-6">
                       {feature.icon}
@@ -363,7 +363,7 @@ export function AudioProductTemplate() {
 
       {/* Technical Specifications */}
       <section id="specs" className="py-32 bg-gray-50 dark:bg-gray-950">
-        <div className="container mx-auto px-4 sm:px-6">
+        <div className="container mx-auto px-3 sm:px-3">
           <ScrollReveal>
             <div className="text-center mb-20">
               <h2 className="text-5xl md:text-6xl font-bold mb-6">
@@ -375,7 +375,7 @@ export function AudioProductTemplate() {
             </div>
           </ScrollReveal>
 
-          <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
+          <div className="max-w-full mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
             {Object.values(productData.specs).map((category, index) => (
               <ScrollReveal key={category.title} delay={index * 0.1}>
                 <Card className="h-full">
@@ -401,7 +401,7 @@ export function AudioProductTemplate() {
 
       {/* Comparison Table */}
       <section id="compare" className="py-32 bg-white dark:bg-gray-900">
-        <div className="container mx-auto px-4 sm:px-6">
+        <div className="container mx-auto px-3 sm:px-3">
           <ScrollReveal>
             <div className="text-center mb-20">
               <h2 className="text-5xl md:text-6xl font-bold mb-6">
@@ -410,7 +410,7 @@ export function AudioProductTemplate() {
             </div>
           </ScrollReveal>
 
-          <div className="max-w-5xl mx-auto overflow-x-auto">
+          <div className="max-w-full mx-auto overflow-x-auto">
             <ScrollReveal>
               <table className="w-full border-collapse">
                 <thead>
@@ -480,7 +480,7 @@ export function AudioProductTemplate() {
 
       {/* Reviews */}
       <section className="py-32 bg-gray-50 dark:bg-gray-950">
-        <div className="container mx-auto px-4 sm:px-6">
+        <div className="container mx-auto px-3 sm:px-3">
           <ScrollReveal>
             <div className="text-center mb-20">
               <h2 className="text-5xl md:text-6xl font-bold mb-6">
@@ -489,7 +489,7 @@ export function AudioProductTemplate() {
             </div>
           </ScrollReveal>
 
-          <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+          <div className="max-w-full mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
             {productData.reviews.map((review, index) => (
               <ScrollReveal key={review.author} delay={index * 0.1}>
                 <Card className="h-full">
@@ -516,8 +516,8 @@ export function AudioProductTemplate() {
 
       {/* In the Box */}
       <section className="py-32 bg-white dark:bg-gray-900">
-        <div className="container mx-auto px-4 sm:px-6">
-          <div className="max-w-4xl mx-auto">
+        <div className="container mx-auto px-3 sm:px-3">
+          <div className="max-w-full mx-auto">
             <ScrollReveal>
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -531,7 +531,7 @@ export function AudioProductTemplate() {
                 <CardContent className="p-8">
                   <ul className="space-y-4">
                     {productData.inTheBox.map((item, index) => (
-                      <li key={index} className="flex items-center gap-3">
+                      <li key={index} className="flex flex-col sm:flex-row sm:items-center gap-3">
                         <FiCheck className="w-5 h-5 text-blue-500 flex-shrink-0" />
                         <span className="text-lg">{item}</span>
                       </li>
@@ -546,9 +546,9 @@ export function AudioProductTemplate() {
 
       {/* Final CTA */}
       <section className="py-32 bg-gradient-to-br from-blue-600 to-purple-600 text-white">
-        <div className="container mx-auto px-4 sm:px-6">
+        <div className="container mx-auto px-3 sm:px-3">
           <ScrollReveal>
-            <div className="text-center max-w-4xl mx-auto">
+            <div className="text-center max-w-full mx-auto">
               <h2 className="text-5xl md:text-6xl font-bold mb-6">
                 Ready to Experience Aurora?
               </h2>
@@ -570,7 +570,7 @@ export function AudioProductTemplate() {
 
       {/* Footer */}
       <footer className="border-t border-gray-200 dark:border-gray-800 py-12">
-        <div className="container mx-auto px-4 sm:px-6">
+        <div className="container mx-auto px-3 sm:px-3">
           <div className="text-center text-sm text-muted-foreground">
             <p>© 2024 Aurora Audio. All rights reserved.</p>
           </div>

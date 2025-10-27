@@ -50,12 +50,12 @@ export function KineticTypographyTemplate() {
   return (
     <div
       ref={containerRef}
-      className="min-h-screen bg-black text-white overflow-hidden"
+      className="min-h-screen overflow-x-hidden max-w-full bg-black text-white overflow-hidden"
       onMouseMove={handleMouseMove}
     >
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 mix-blend-difference">
-        <div className="container mx-auto px-4 sm:px-6 py-6 flex items-center justify-between">
+        <div className="container mx-auto px-3 sm:px-3 py-6 flex items-center justify-between">
           <Link href="/" className="text-sm text-white hover:text-gray-300 transition-colors">
             ← BACK
           </Link>
@@ -113,8 +113,8 @@ export function KineticTypographyTemplate() {
       </motion.section>
 
       {/* Kinetic Tagline */}
-      <section className="min-h-screen flex items-center justify-center px-6">
-        <div className="max-w-5xl">
+      <section className="min-h-screen overflow-x-hidden max-w-full flex items-center justify-center px-3">
+        <div className="max-w-full">
           {portfolioData.tagline.split(" ").map((word, i) => (
             <motion.div
               key={i}
@@ -136,9 +136,9 @@ export function KineticTypographyTemplate() {
       </section>
 
       {/* Description with morphing effect */}
-      <section className="min-h-screen flex items-center justify-center px-6">
+      <section className="min-h-screen overflow-x-hidden max-w-full flex items-center justify-center px-3">
         <motion.div
-          className="max-w-4xl"
+          className="max-w-full"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
@@ -160,8 +160,8 @@ export function KineticTypographyTemplate() {
       </section>
 
       {/* Services with text morphing */}
-      <section className="min-h-screen flex items-center justify-center px-6">
-        <div className="space-y-12 max-w-6xl w-full">
+      <section className="min-h-screen overflow-x-hidden max-w-full flex items-center justify-center px-3">
+        <div className="space-y-12 max-w-full w-full">
           {["BRANDING", "MOTION DESIGN", "WEB EXPERIENCES"].map((service, i) => (
             <motion.div
               key={service}
@@ -195,8 +195,8 @@ export function KineticTypographyTemplate() {
       </section>
 
       {/* Stats with counting animation */}
-      <section className="min-h-screen flex items-center justify-center px-6">
-        <div className="grid md:grid-cols-3 gap-16 max-w-6xl w-full">
+      <section className="min-h-screen overflow-x-hidden max-w-full flex items-center justify-center px-3">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-16 max-w-full w-full">
           {portfolioData.stats.map((stat, i) => (
             <motion.div
               key={stat.label}
@@ -238,8 +238,8 @@ export function KineticTypographyTemplate() {
       </section>
 
       {/* Projects with kinetic reveals */}
-      <section className="min-h-screen flex items-center justify-center px-6">
-        <div className="space-y-16 max-w-6xl w-full">
+      <section className="min-h-screen overflow-x-hidden max-w-full flex items-center justify-center px-3">
+        <div className="space-y-16 max-w-full w-full">
           <motion.h2
             className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-black text-center mb-20"
             initial={{ opacity: 0 }}
@@ -280,8 +280,8 @@ export function KineticTypographyTemplate() {
       </section>
 
       {/* Capabilities with split animation */}
-      <section className="min-h-screen flex items-center justify-center px-6">
-        <div className="max-w-6xl w-full">
+      <section className="min-h-screen overflow-x-hidden max-w-full flex items-center justify-center px-3">
+        <div className="max-w-full w-full">
           <motion.h2
             className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-black text-center mb-20"
             initial={{ opacity: 0 }}
@@ -291,7 +291,7 @@ export function KineticTypographyTemplate() {
             CAPABILITIES
           </motion.h2>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {portfolioData.capabilities.map((capability, i) => (
               <motion.div
                 key={capability}
@@ -329,8 +329,8 @@ export function KineticTypographyTemplate() {
       </section>
 
       {/* Testimonials with glitch effect */}
-      <section className="min-h-screen flex items-center justify-center px-6">
-        <div className="space-y-20 max-w-5xl w-full">
+      <section className="min-h-screen overflow-x-hidden max-w-full flex items-center justify-center px-3">
+        <div className="space-y-20 max-w-full w-full">
           {portfolioData.testimonials.map((testimonial, i) => (
             <motion.div
               key={testimonial.client}
@@ -371,7 +371,7 @@ export function KineticTypographyTemplate() {
       </section>
 
       {/* Contact with pulsing text */}
-      <section id="contact" className="min-h-screen flex items-center justify-center px-6">
+      <section id="contact" className="min-h-screen overflow-x-hidden max-w-full flex items-center justify-center px-3">
         <div className="text-center">
           <motion.h2
             className="text-[clamp(3rem,12vw,12rem)] font-black leading-none mb-12"
@@ -407,7 +407,7 @@ export function KineticTypographyTemplate() {
 
       {/* Footer */}
       <footer className="border-t border-white/10 py-8">
-        <div className="container mx-auto px-4 sm:px-6">
+        <div className="container mx-auto px-3 sm:px-3">
           <p className="text-sm text-gray-500 text-center">
             © {new Date().getFullYear()} MOTION STUDIO. ALL RIGHTS RESERVED.
           </p>

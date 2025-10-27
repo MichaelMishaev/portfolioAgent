@@ -94,10 +94,10 @@ export function DarkModeTemplate() {
   if (!mounted) return null;
 
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen overflow-x-hidden max-w-full bg-black text-white">
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
-        <div className="container mx-auto px-4 sm:px-6 py-4">
+        <div className="container mx-auto px-3 sm:px-3 py-4">
           <div className="flex items-center justify-between">
             <Link
             href="/"
@@ -144,7 +144,7 @@ export function DarkModeTemplate() {
         {/* Mobile Menu */}
         {mobileMenuOpen && (
           <div className="md:hidden bg-background/95 backdrop-blur-sm border-t">
-            <div className="container mx-auto px-4 sm:px-6 py-4 flex flex-col gap-4">
+            <div className="container mx-auto px-3 sm:px-3 py-4 flex flex-col gap-4">
               <a
                 href="#work"
                 className="text-sm hover:text-primary transition-colors py-2"
@@ -182,7 +182,7 @@ export function DarkModeTemplate() {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(139,92,246,0.1),transparent_50%)]" />
         </div>
 
-        <div className="relative z-10 text-center px-6">
+        <div className="relative z-10 text-center px-3">
           <FadeIn>
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl lg:text-9xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
               {portfolioData.name}
@@ -214,8 +214,8 @@ export function DarkModeTemplate() {
       </section>
 
       {/* Stats Section */}
-      <section className="container mx-auto px-4 sm:px-6 py-20 border-t border-white/10">
-        <div className="grid md:grid-cols-3 gap-12 max-w-5xl mx-auto">
+      <section className="container mx-auto px-3 sm:px-3 py-20 border-t border-white/10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-full mx-auto">
           {portfolioData.stats.map((stat, index) => (
             <ScrollReveal key={stat.label} delay={index * 0.1}>
               <div className="text-center">
@@ -232,7 +232,7 @@ export function DarkModeTemplate() {
       </section>
 
       {/* Work Section */}
-      <section id="work" className="container mx-auto px-4 sm:px-6 py-32">
+      <section id="work" className="container mx-auto px-3 sm:px-3 py-32">
         <ScrollReveal>
           <h2 className="text-sm font-semibold text-cyan-400 mb-12 uppercase tracking-wider">
             Selected Work
@@ -274,14 +274,14 @@ export function DarkModeTemplate() {
       </section>
 
       {/* Services Section */}
-      <section className="container mx-auto px-4 sm:px-6 py-32 border-t border-white/10">
+      <section className="container mx-auto px-3 sm:px-3 py-32 border-t border-white/10">
         <ScrollReveal>
           <h2 className="text-sm font-semibold text-cyan-400 mb-12 uppercase tracking-wider text-center">
             What I Do
           </h2>
         </ScrollReveal>
 
-        <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-full mx-auto">
           {portfolioData.services.map((service, index) => (
             <ScrollReveal key={service} delay={index * 0.05}>
               <div className="bg-white/5 hover:bg-cyan-400/10 border border-white/10 hover:border-cyan-400/50 p-6 transition-all">
@@ -296,8 +296,8 @@ export function DarkModeTemplate() {
       <section id="about" className="relative py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-black via-gray-900/50 to-black" />
 
-        <div className="container mx-auto px-4 sm:px-6 relative z-10">
-          <div className="max-w-3xl mx-auto text-center">
+        <div className="container mx-auto px-3 sm:px-3 relative z-10">
+          <div className="max-w-full mx-auto text-center">
             <ScrollReveal>
               <h2 className="text-sm font-semibold text-cyan-400 mb-8 uppercase tracking-wider">
                 About Me
@@ -337,14 +337,14 @@ export function DarkModeTemplate() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="container mx-auto px-4 sm:px-6 py-32 border-t border-white/10">
+      <section className="container mx-auto px-3 sm:px-3 py-32 border-t border-white/10">
         <ScrollReveal>
           <h2 className="text-sm font-semibold text-cyan-400 mb-16 uppercase tracking-wider text-center">
             Client Testimonials
           </h2>
         </ScrollReveal>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-full mx-auto">
           {portfolioData.testimonials.map((testimonial, index) => (
             <ScrollReveal key={testimonial.author} delay={index * 0.1}>
               <Card className="bg-white/5 border-white/10 p-8">
@@ -362,8 +362,8 @@ export function DarkModeTemplate() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="container mx-auto px-4 sm:px-6 py-32">
-        <div className="max-w-3xl mx-auto text-center">
+      <section id="contact" className="container mx-auto px-3 sm:px-3 py-32">
+        <div className="max-w-full mx-auto text-center">
           <ScrollReveal>
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-8">
               Let's Create Something{" "}
@@ -393,7 +393,7 @@ export function DarkModeTemplate() {
 
       {/* Footer */}
       <footer className="border-t border-white/10 bg-black">
-        <div className="container mx-auto px-4 sm:px-6 py-8">
+        <div className="container mx-auto px-3 sm:px-3 py-8">
           <p className="text-sm text-gray-500 text-center">
             © {new Date().getFullYear()} {portfolioData.name}. All rights
             reserved.

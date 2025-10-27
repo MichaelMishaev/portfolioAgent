@@ -331,7 +331,7 @@ export function TechBlogTemplate() {
               <a href="#newsletter" className={`hover:text-blue-600 transition-colors`}>Newsletter</a>
             </nav>
 
-            <div className="flex items-center gap-3">
+            <div className="flex flex-col sm:flex-row sm:items-center gap-3">
               <button className={`p-2 rounded-lg ${darkMode ? 'hover:bg-gray-800' : 'hover:bg-gray-100'} transition-colors`}>
                 <FiSearch className="w-5 h-5" />
               </button>
@@ -372,7 +372,7 @@ export function TechBlogTemplate() {
                 Browse Topics
               </Button>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-8 max-w-2xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-8 max-w-full mx-auto">
               {techBlogData.hero.stats.map((stat) => (
                 <div key={stat.label}>
                   <div className="text-3xl font-bold text-blue-600 mb-1">{stat.value}</div>
@@ -394,7 +394,7 @@ export function TechBlogTemplate() {
 
           <ScrollReveal>
             <Card className={`overflow-hidden border-0 shadow-2xl ${darkMode ? 'bg-gray-800' : 'bg-white'}`}>
-              <div className="grid lg:grid-cols-2 gap-0">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
                 <div className="relative h-96 lg:h-auto">
                   <img
                     src={techBlogData.featured.image}
@@ -464,7 +464,7 @@ export function TechBlogTemplate() {
                     </span>
                   </div>
 
-                  <div className="flex items-center gap-3">
+                  <div className="flex flex-col sm:flex-row sm:items-center gap-3">
                     <Button className="flex-1 bg-blue-600 hover:bg-blue-700">
                       Read Full Tutorial
                     </Button>
@@ -495,7 +495,7 @@ export function TechBlogTemplate() {
             <Button variant="ghost">View All</Button>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {techBlogData.series.map((series, index) => (
               <ScrollReveal key={series.id} delay={index * 0.1}>
                 <Card className={`overflow-hidden hover:shadow-xl transition-all group ${darkMode ? 'bg-gray-900 border-gray-800' : 'bg-white'}`}>
@@ -649,7 +649,7 @@ export function TechBlogTemplate() {
       {/* Popular Articles & Contributors */}
       <section className={`py-16 ${darkMode ? 'bg-gray-800' : 'bg-gray-50'}`}>
         <div className="container mx-auto px-3 max-w-full">
-          <div className="grid lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* Popular Articles */}
             <div>
               <div className="flex items-center gap-2 mb-6">
@@ -764,7 +764,7 @@ export function TechBlogTemplate() {
               </Button>
             </div>
             <p className="text-sm text-blue-100 mb-8">Free forever. No spam. Unsubscribe anytime.</p>
-            <div className="grid grid-cols-3 gap-8 max-w-2xl mx-auto text-white">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-full mx-auto text-white">
               <div>
                 <div className="text-2xl font-bold mb-1">Weekly</div>
                 <div className="text-sm text-blue-100">Updates</div>
@@ -794,7 +794,7 @@ export function TechBlogTemplate() {
               <p className={`${darkMode ? 'text-gray-400' : 'text-gray-600'} mb-6`}>
                 Empowering developers with knowledge. Join our community of 50K+ developers learning and growing together.
               </p>
-              <div className="flex items-center gap-3">
+              <div className="flex flex-col sm:flex-row sm:items-center gap-3">
                 <a href="#" className={`p-2 ${darkMode ? 'bg-gray-800 hover:bg-gray-700' : 'bg-gray-100 hover:bg-gray-200'} rounded-lg transition-colors`}>
                   <FiGithub className="w-5 h-5" />
                 </a>
@@ -836,7 +836,7 @@ export function TechBlogTemplate() {
           </div>
           <div className={`border-t ${darkMode ? 'border-gray-800' : 'border-gray-200'} pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
             <p>© 2025 DevInsights. All rights reserved.</p>
-            <div className="flex items-center gap-6">
+            <div className="flex flex-col sm:flex-row sm:items-center gap-6">
               <a href="#" className={`${darkMode ? 'hover:text-white' : 'hover:text-gray-900'} transition-colors`}>Privacy</a>
               <a href="#" className={`${darkMode ? 'hover:text-white' : 'hover:text-gray-900'} transition-colors`}>Terms</a>
               <a href="#" className={`${darkMode ? 'hover:text-white' : 'hover:text-gray-900'} transition-colors`}>RSS</a>

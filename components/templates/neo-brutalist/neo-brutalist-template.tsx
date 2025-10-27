@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { FiMail, FiArrowRight , FiMenu, FiX } from "react-icons/fi";
+import { FiMail, FiArrowRight } from "react-icons/fi";
 import Link from "next/link";
 
 const portfolioData = {
@@ -56,9 +56,9 @@ return (
 
       {/* Hero - Harsh Typography */}
       <section className="min-h-screen flex items-center justify-center p-4 border-b-4 border-black">
-        <div className="max-w-5xl w-full">
+        <div className="max-w-full w-full">
           <div className="bg-black text-white p-8 md:p-12 border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] mb-8">
-            <h1 className="text-6xl md:text-9xl font-black leading-none mb-4 tracking-tighter">
+            <h1 className="text-6xl md:text-9xl font-black leading-none mb-4 tracking-tighter break-words">
               {portfolioData.name}
             </h1>
             <div className="h-2 w-32 bg-red-600 mb-4"></div>
@@ -76,9 +76,9 @@ return (
       </section>
 
       {/* About Section - Harsh Bio */}
-      <section className="py-20 px-4 border-b-4 border-black bg-yellow-400">
-        <div className="max-w-5xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-8 items-center">
+      <section className="py-20 px-3 border-b-4 border-black bg-yellow-400">
+        <div className="max-w-full mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             {/* Photo Placeholder */}
             <div className="bg-black border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] aspect-square flex items-center justify-center rotate-2">
               <span className="text-9xl">⚡</span>
@@ -87,7 +87,7 @@ return (
             {/* Bio */}
             <div className="space-y-6">
               <div className="bg-black text-white p-6 border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] -rotate-1">
-                <h2 className="text-4xl md:text-5xl font-black mb-4">
+                <h2 className="text-4xl md:text-5xl font-black mb-4 break-words">
                   WHO IS THIS?
                 </h2>
                 <p className="text-lg font-bold uppercase leading-relaxed">
@@ -100,15 +100,15 @@ return (
       </section>
 
       {/* Skills Section - Harsh Grid */}
-      <section className="py-20 px-4 border-b-4 border-black">
-        <div className="max-w-5xl mx-auto">
+      <section className="py-20 px-3 border-b-4 border-black">
+        <div className="max-w-full mx-auto">
           <div className="bg-red-600 text-white p-6 border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] mb-12 rotate-1">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black break-words">
               SKILLS
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {portfolioData.skills.map((skill, index) => (
               <div
                 key={skill.name}
@@ -130,11 +130,11 @@ return (
       </section>
 
       {/* Work Section - Detailed Projects */}
-      <section className="py-20 px-4 border-b-4 border-black">
-        <div className="max-w-5xl mx-auto">
+      <section className="py-20 px-3 border-b-4 border-black">
+        <div className="max-w-full mx-auto">
           <div className="bg-blue-600 text-white p-6 border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] mb-12 -rotate-1">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black">
-              SELECTED WORK
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black break-words">
+              {"SELECTED WORK" || "SELECTED WORK"}
             </h2>
           </div>
 
@@ -183,15 +183,15 @@ return (
       </section>
 
       {/* Process Section */}
-      <section className="py-20 px-4 border-b-4 border-black bg-lime-300">
-        <div className="max-w-5xl mx-auto">
+      <section className="py-20 px-3 border-b-4 border-black bg-lime-300">
+        <div className="max-w-full mx-auto">
           <div className="bg-black text-white p-6 border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] mb-12 rotate-1">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black">
-              HOW I WORK
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black break-words">
+              {"HOW I WORK" || "HOW I WORK"}
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {portfolioData.process.map((step, index) => (
               <div
                 key={step.step}
@@ -214,11 +214,11 @@ return (
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 px-4 border-b-4 border-black">
-        <div className="max-w-5xl mx-auto">
+      <section className="py-20 px-3 border-b-4 border-black">
+        <div className="max-w-full mx-auto">
           <div className="bg-purple-600 text-white p-6 border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] mb-12 -rotate-1">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black">
-              WHAT THEY SAY
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black break-words">
+              {"WHAT THEY SAY" || "WHAT THEY SAY"}
             </h2>
           </div>
 
@@ -246,46 +246,37 @@ return (
       </section>
 
       {/* Manifesto Section */}
-      <section className="py-20 px-4 bg-black text-white border-b-4 border-white">
-        <div className="max-w-3xl mx-auto">
+      <section className="py-20 px-3 bg-black text-white border-b-4 border-white">
+        <div className="max-w-full mx-auto">
           <div className="space-y-6">
-            <div className="p-6 bg-white text-black border-4 border-white rotate-2">
-              <p className="text-2xl font-black uppercase">
-                NO ROUNDED CORNERS
-              </p>
-            </div>
-            <div className="p-6 bg-red-600 text-white border-4 border-white -rotate-1">
-              <p className="text-2xl font-black uppercase">
-                NO SUBTLE GRADIENTS
-              </p>
-            </div>
-            <div className="p-6 bg-yellow-400 text-black border-4 border-white rotate-1">
-              <p className="text-2xl font-black uppercase">
-                NO SAFE CHOICES
-              </p>
-            </div>
-            <div className="p-6 bg-blue-600 text-white border-4 border-white -rotate-2">
-              <p className="text-2xl font-black uppercase">
-                ONLY HONEST WORK
-              </p>
-            </div>
+            {["NO ROUNDED CORNERS", "NO SUBTLE GRADIENTS", "NO SAFE CHOICES", "ONLY HONEST WORK"].map((item, index) => {
+              const colors = ["bg-white text-black", "bg-red-600 text-white", "bg-yellow-400 text-black", "bg-blue-600 text-white"];
+              const rotations = ["rotate-2", "-rotate-1", "rotate-1", "-rotate-2"];
+              return (
+                <div key={index} className={`p-6 ${colors[index % colors.length]} border-4 border-white ${rotations[index % rotations.length]}`}>
+                  <p className="text-2xl font-black uppercase">
+                    {item}
+                  </p>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 px-4 bg-lime-300">
-        <div className="max-w-4xl mx-auto text-center">
+      <section id="contact" className="py-20 px-3 bg-lime-300">
+        <div className="max-w-full mx-auto text-center">
           <div className="bg-black text-white p-12 border-4 border-black shadow-[12px_12px_0px_0px_rgba(0,0,0,1)]">
-            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-black mb-8 uppercase">
-              LET'S TALK
+            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-black mb-8 uppercase break-words">
+              {"LET'S TALK" || "LET'S TALK"}
             </h2>
             <Button
               size="lg"
               className="bg-red-600 hover:bg-red-700 text-white border-4 border-white shadow-[4px_4px_0px_0px_rgba(255,255,255,1)] font-black text-xl px-8 py-6 h-auto uppercase"
             >
               <FiMail className="mr-2 w-6 h-6" />
-              {portfolioData.contact}
+              {portfolioData.contact || "ash@antistudio.xyz"}
             </Button>
           </div>
         </div>
@@ -295,7 +286,7 @@ return (
       <footer className="border-t-4 border-black bg-black text-white py-8">
         <div className="container mx-auto px-3 max-w-full">
           <p className="text-center font-bold uppercase text-sm">
-            © {new Date().getFullYear()} {portfolioData.name} /// ANTI-DESIGN STUDIO
+            © {new Date().getFullYear()} {portfolioData.name || "ASH WOLF"} /// {"ANTI-DESIGN STUDIO" || "ANTI-DESIGN STUDIO"}
           </p>
         </div>
       </footer>

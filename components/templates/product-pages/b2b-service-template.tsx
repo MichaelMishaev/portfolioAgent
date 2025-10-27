@@ -324,13 +324,13 @@ export function B2BServiceTemplate() {
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 text-white py-32">
         <div className="container mx-auto px-3 max-w-full">
-          <div className="max-w-4xl mx-auto text-center">
+          <div className="max-w-full mx-auto text-center">
             <FadeIn>
               <h1 className="text-6xl md:text-7xl font-bold mb-6 tracking-tight">
                 {serviceData.name}
               </h1>
               <p className="text-3xl font-light mb-8 text-blue-200">{serviceData.tagline}</p>
-              <p className="text-xl mb-12 text-blue-100 max-w-2xl mx-auto">
+              <p className="text-xl mb-12 text-blue-100 max-w-full mx-auto">
                 {serviceData.description}
               </p>
               <Button size="lg" className="w-full sm:w-auto bg-red-600 hover:bg-red-700 text-white text-lg px-12">
@@ -340,7 +340,7 @@ export function B2BServiceTemplate() {
           </div>
 
           {/* Stats */}
-          <div className="max-w-6xl mx-auto mt-24 grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="max-w-full mx-auto mt-24 grid grid-cols-1 md:grid-cols-4 gap-8">
             {serviceData.hero.stats.map((stat, index) => (
               <ScrollReveal key={index} delay={index * 0.1}>
                 <div className="text-center">
@@ -359,13 +359,13 @@ export function B2BServiceTemplate() {
           <ScrollReveal>
             <div className="text-center mb-16">
               <h2 className="text-5xl font-bold mb-6">Our Capabilities</h2>
-              <p className="text-xl text-stone-600 max-w-3xl mx-auto">
+              <p className="text-xl text-stone-600 max-w-full mx-auto">
                 Integrated services that deliver measurable business impact across your organization.
               </p>
             </div>
           </ScrollReveal>
 
-          <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
+          <div className="max-w-full mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
             {serviceData.capabilities.map((capability, index) => (
               <ScrollReveal key={capability.name} delay={index * 0.1}>
                 <Card className="h-full border-2 border-stone-200 hover:border-red-600 transition-colors">
@@ -397,13 +397,13 @@ export function B2BServiceTemplate() {
           <ScrollReveal>
             <div className="text-center mb-16">
               <h2 className="text-5xl font-bold mb-6">Proven Results</h2>
-              <p className="text-xl text-stone-600 max-w-3xl mx-auto">
+              <p className="text-xl text-stone-600 max-w-full mx-auto">
                 Real transformations. Real impact. Real ROI.
               </p>
             </div>
           </ScrollReveal>
 
-          <div className="max-w-6xl mx-auto space-y-24">
+          <div className="max-w-full mx-auto space-y-24">
             {serviceData.caseStudies.map((study, index) => (
               <ScrollReveal key={index}>
                 <Card className="overflow-hidden border-2 border-stone-200">
@@ -463,13 +463,13 @@ export function B2BServiceTemplate() {
           <ScrollReveal>
             <div className="text-center mb-16">
               <h2 className="text-5xl font-bold mb-6">Industry Expertise</h2>
-              <p className="text-xl text-stone-600 max-w-3xl mx-auto">
+              <p className="text-xl text-stone-600 max-w-full mx-auto">
                 Deep sector knowledge combined with cross-industry best practices.
               </p>
             </div>
           </ScrollReveal>
 
-          <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-6">
+          <div className="max-w-full mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
             {serviceData.industries.map((industry, index) => (
               <ScrollReveal key={industry.name} delay={index * 0.1}>
                 <Card
@@ -506,13 +506,13 @@ export function B2BServiceTemplate() {
           <ScrollReveal>
             <div className="text-center mb-16">
               <h2 className="text-5xl font-bold mb-6">Insights & Research</h2>
-              <p className="text-xl text-stone-600 max-w-3xl mx-auto">
+              <p className="text-xl text-stone-600 max-w-full mx-auto">
                 Download our latest thinking on critical business challenges.
               </p>
             </div>
           </ScrollReveal>
 
-          <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-8">
+          <div className="max-w-full mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
             {serviceData.thoughtLeadership.map((item, index) => (
               <ScrollReveal key={index} delay={index * 0.1}>
                 <Card className="border-2 border-stone-200 hover:border-blue-900 transition-colors h-full">
@@ -545,7 +545,7 @@ export function B2BServiceTemplate() {
             </h3>
           </ScrollReveal>
 
-          <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="max-w-full mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
             {serviceData.clientLogos.map((client, index) => (
               <ScrollReveal key={index} delay={index * 0.05}>
                 <div className="flex items-center justify-center p-6 bg-white rounded-lg border border-stone-200">
@@ -565,13 +565,13 @@ export function B2BServiceTemplate() {
           <ScrollReveal>
             <div className="text-center mb-16">
               <h2 className="text-5xl font-bold mb-6">{serviceData.applicationProcess.title}</h2>
-              <p className="text-xl text-stone-600 max-w-3xl mx-auto">
+              <p className="text-xl text-stone-600 max-w-full mx-auto">
                 A rigorous, collaborative approach designed to deliver lasting impact.
               </p>
             </div>
           </ScrollReveal>
 
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-full mx-auto">
             {serviceData.applicationProcess.steps.map((step, index) => (
               <ScrollReveal key={step.number} delay={index * 0.1}>
                 <div className="flex gap-8 mb-12 last:mb-0">
@@ -593,9 +593,9 @@ export function B2BServiceTemplate() {
       <section className="py-32 bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 text-white">
         <div className="container mx-auto px-3 max-w-full">
           <ScrollReveal>
-            <div className="max-w-4xl mx-auto text-center">
+            <div className="max-w-full mx-auto text-center">
               <h2 className="text-5xl md:text-6xl font-bold mb-8">Ready to Transform?</h2>
-              <p className="text-xl mb-12 text-blue-100 max-w-2xl mx-auto">
+              <p className="text-xl mb-12 text-blue-100 max-w-full mx-auto">
                 Schedule a complimentary consultation to explore how we can help you achieve your
                 strategic objectives.
               </p>
