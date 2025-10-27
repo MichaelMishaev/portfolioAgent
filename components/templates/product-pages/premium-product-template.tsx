@@ -316,11 +316,11 @@ export function PremiumProductTemplate() {
 
             {/* Mobile Menu Button */}
             <button
-              className="md:hidden p-2 text-foreground hover:text-primary transition-colors"
+              className="md:hidden p-3 text-foreground hover:bg-accent rounded-md border border-border transition-colors"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label="Toggle menu"
             >
-              {mobileMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
+              {mobileMenuOpen ? <FiX size={28} /> : <FiMenu size={28} />}
             </button>
           </div>
         </div>
@@ -383,7 +383,7 @@ export function PremiumProductTemplate() {
           </FadeIn>
 
           <FadeIn delay={0.2}>
-            <h1 className="text-7xl md:text-9xl font-light mb-4 tracking-tight">
+            <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-9xl font-light mb-4 tracking-tight">
               {productData.name}
             </h1>
           </FadeIn>
@@ -851,7 +851,7 @@ export function PremiumProductTemplate() {
               <p className="text-sm text-gray-400 mb-10 uppercase tracking-widest">
                 {productData.finalCTA.urgency}
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col gap-4 sm:flex-row gap-4 justify-center">
                 <Button size="lg" className="bg-white text-black hover:bg-gray-200 px-12 py-6 text-sm tracking-wider">
                   Schedule Consultation
                   <FiArrowRight className="ml-2" />

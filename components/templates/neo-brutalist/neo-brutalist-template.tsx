@@ -103,7 +103,7 @@ return (
       <section className="py-20 px-4 border-b-4 border-black">
         <div className="max-w-5xl mx-auto">
           <div className="bg-red-600 text-white p-6 border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] mb-12 rotate-1">
-            <h2 className="text-4xl sm:text-5xl md:text-7xl font-black">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black">
               SKILLS
             </h2>
           </div>
@@ -133,7 +133,7 @@ return (
       <section className="py-20 px-4 border-b-4 border-black">
         <div className="max-w-5xl mx-auto">
           <div className="bg-blue-600 text-white p-6 border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] mb-12 -rotate-1">
-            <h2 className="text-4xl sm:text-5xl md:text-7xl font-black">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black">
               SELECTED WORK
             </h2>
           </div>
@@ -152,7 +152,7 @@ return (
                     {/* Header */}
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 pb-4 border-b-4 border-black">
                       <div className="flex items-baseline gap-4">
-                        <span className="text-4xl sm:text-5xl md:text-7xl font-black">
+                        <span className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black">
                           {project.id}
                         </span>
                         <div>
@@ -186,7 +186,7 @@ return (
       <section className="py-20 px-4 border-b-4 border-black bg-lime-300">
         <div className="max-w-5xl mx-auto">
           <div className="bg-black text-white p-6 border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] mb-12 rotate-1">
-            <h2 className="text-4xl sm:text-5xl md:text-7xl font-black">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black">
               HOW I WORK
             </h2>
           </div>
@@ -217,7 +217,7 @@ return (
       <section className="py-20 px-4 border-b-4 border-black">
         <div className="max-w-5xl mx-auto">
           <div className="bg-purple-600 text-white p-6 border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] mb-12 -rotate-1">
-            <h2 className="text-4xl sm:text-5xl md:text-7xl font-black">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black">
               WHAT THEY SAY
             </h2>
           </div>
@@ -277,7 +277,7 @@ return (
       <section id="contact" className="py-20 px-4 bg-lime-300">
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-black text-white p-12 border-4 border-black shadow-[12px_12px_0px_0px_rgba(0,0,0,1)]">
-            <h2 className="text-6xl md:text-8xl font-black mb-8 uppercase">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-black mb-8 uppercase">
               LET'S TALK
             </h2>
             <Button

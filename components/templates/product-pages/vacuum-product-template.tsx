@@ -223,11 +223,11 @@ export function VacuumProductTemplate() {
 
             {/* Mobile Menu Button */}
             <button
-              className="md:hidden p-2 text-foreground hover:text-primary transition-colors"
+              className="md:hidden p-3 text-foreground hover:bg-accent rounded-md border border-border transition-colors"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label="Toggle menu"
             >
-              {mobileMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
+              {mobileMenuOpen ? <FiX size={28} /> : <FiMenu size={28} />}
             </button>
           </div>
         </div>
@@ -664,7 +664,7 @@ export function VacuumProductTemplate() {
               <p className="text-2xl mb-12 opacity-90">
                 Free shipping and 30-day money-back guarantee.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col gap-4 sm:flex-row gap-4 justify-center">
                 <Button size="lg" variant="secondary" className="text-lg px-12">
                   Buy Now - ${productData.price.amount}
                 </Button>

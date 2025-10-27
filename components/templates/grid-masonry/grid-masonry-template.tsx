@@ -233,11 +233,11 @@ export function GridMasonryTemplate() {
 
             {/* Mobile Menu Button */}
             <button
-              className="md:hidden p-2 text-foreground hover:text-primary transition-colors"
+              className="md:hidden p-3 text-foreground hover:bg-accent rounded-md border border-border transition-colors"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label="Toggle menu"
             >
-              {mobileMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
+              {mobileMenuOpen ? <FiX size={28} /> : <FiMenu size={28} />}
             </button>
           </div>
         </div>
@@ -264,7 +264,7 @@ export function GridMasonryTemplate() {
       {/* Hero Section */}
       <section className="container mx-auto px-4 sm:px-6 pt-32 pb-16 text-center">
         <FadeIn>
-          <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-4">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-4">
             {portfolioData.name}
           </h1>
         </FadeIn>
@@ -386,7 +386,7 @@ export function GridMasonryTemplate() {
               Available for commissions, collaborations, and creative projects.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+            <div className="flex flex-col gap-4 sm:flex-row gap-4 justify-center mb-8">
               <Button size="lg">
                 <FiMail className="mr-2" />
                 Get in Touch

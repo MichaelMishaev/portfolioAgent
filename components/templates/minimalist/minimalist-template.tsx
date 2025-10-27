@@ -145,7 +145,7 @@ export function MinimalistTemplate() {
       <section className="container mx-auto px-4 sm:px-6 pt-40 pb-32">
         <div className="max-w-4xl">
           <FadeIn>
-            <h1 className="text-7xl md:text-9xl font-light mb-8 tracking-tighter leading-none">
+            <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-9xl font-light mb-8 tracking-tighter leading-none">
               {portfolioData.name}
             </h1>
           </FadeIn>

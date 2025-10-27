@@ -274,11 +274,11 @@ export function SplitScreenTemplate() {
 
             {/* Mobile Menu Button */}
             <button
-              className="md:hidden p-2 text-foreground hover:text-primary transition-colors"
+              className="md:hidden p-3 text-foreground hover:bg-accent rounded-md border border-border transition-colors"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label="Toggle menu"
             >
-              {mobileMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
+              {mobileMenuOpen ? <FiX size={28} /> : <FiMenu size={28} />}
             </button>
           </div>
         </div>
@@ -316,7 +316,7 @@ export function SplitScreenTemplate() {
             {/* Left Side - Text */}
             <div className="flex flex-col justify-center">
               <FadeIn>
-                <h1 className="text-6xl md:text-8xl font-bold mb-6 leading-tight">
+                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold mb-6 leading-tight">
                   {portfolioData.name}
                 </h1>
               </FadeIn>
@@ -792,7 +792,7 @@ export function SplitScreenTemplate() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Left Side */}
             <div>
-              <h2 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-6">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-6">
                 Let's Work
                 <br />
                 Together

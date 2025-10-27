@@ -270,11 +270,11 @@ export function CourseProductTemplate() {
 
             {/* Mobile Menu Button */}
             <button
-              className="md:hidden p-2 text-foreground hover:text-primary transition-colors"
+              className="md:hidden p-3 text-foreground hover:bg-accent rounded-md border border-border transition-colors"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label="Toggle menu"
             >
-              {mobileMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
+              {mobileMenuOpen ? <FiX size={28} /> : <FiMenu size={28} />}
             </button>
           </div>
         </div>
@@ -327,7 +327,7 @@ export function CourseProductTemplate() {
           </FadeIn>
 
           <FadeIn delay={0.3}>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <div className="flex flex-col gap-4 sm:flex-row gap-4 justify-center mb-12">
               <Button size="lg" className="text-lg px-8 bg-gradient-to-r from-blue-600 to-blue-700">
                 {courseData.cta.primary}
                 <FiArrowRight className="ml-2" />

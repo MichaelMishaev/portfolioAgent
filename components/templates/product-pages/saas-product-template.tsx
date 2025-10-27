@@ -183,11 +183,11 @@ export function SaaSProductTemplate() {
 
             {/* Mobile Menu Button */}
             <button
-              className="md:hidden p-2 text-foreground hover:text-primary transition-colors"
+              className="md:hidden p-3 text-foreground hover:bg-accent rounded-md border border-border transition-colors"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label="Toggle menu"
             >
-              {mobileMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
+              {mobileMenuOpen ? <FiX size={28} /> : <FiMenu size={28} />}
             </button>
           </div>
         </div>
@@ -228,7 +228,7 @@ export function SaaSProductTemplate() {
           </FadeIn>
 
           <FadeIn delay={0.1}>
-            <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-6 leading-tight bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-6 leading-tight bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
               {productData.tagline}
             </h1>
           </FadeIn>
@@ -240,12 +240,12 @@ export function SaaSProductTemplate() {
           </FadeIn>
 
           <FadeIn delay={0.3}>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Button size="lg" className="text-lg px-8 w-full sm:w-auto">
+            <div className="flex flex-col gap-4 justify-center mb-12 sm:flex-row">
+              <Button size="lg" className="text-lg px-8 w-full sm:w-auto min-h-[44px]">
                 {productData.cta.primary}
                 <FiArrowRight className="ml-2" />
               </Button>
-              <Button size="lg" variant="outline" className="text-lg px-8 w-full sm:w-auto">
+              <Button size="lg" variant="outline" className="text-lg px-8 w-full sm:w-auto min-h-[44px]">
                 <FiPlay className="mr-2" />
                 {productData.cta.secondary}
               </Button>
@@ -447,7 +447,7 @@ export function SaaSProductTemplate() {
               <p className="text-lg sm:text-xl mb-8 opacity-90">
                 {productData.finalCTA.description}
               </p>
-              <Button size="lg" variant="secondary" className="text-lg px-8 w-full sm:w-auto">
+              <Button size="lg" variant="secondary" className="text-lg px-8 w-full sm:w-auto min-h-[44px]">
                 {productData.cta.primary}
                 <FiArrowRight className="ml-2" />
               </Button>

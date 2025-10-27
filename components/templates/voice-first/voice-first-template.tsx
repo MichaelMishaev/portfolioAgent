@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ScrollReveal } from "@/components/animations/scroll-reveal";
@@ -14,7 +13,6 @@ import {
   FiMail,
   FiVolume2,
   FiCommand,
-,
   FiMenu,
   FiX,
 } from "react-icons/fi";
@@ -165,7 +163,7 @@ export function VoiceFirstTemplate() {
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              className="text-4xl sm:text-5xl md:text-7xl font-black mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent"
             >
               {portfolioData.name}
             </motion.h1>
@@ -416,7 +414,7 @@ export function VoiceFirstTemplate() {
           </ScrollReveal>
 
           <ScrollReveal delay={0.3}>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col gap-4 sm:flex-row gap-4 justify-center">
               <Button className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white border-0 text-lg px-8 py-6 h-auto">
                 <FiMail className="mr-2 w-5 h-5" />
                 voice@uxpro.com

@@ -182,12 +182,12 @@ export function SinglePageTemplate() {
             </p>
           </FadeIn>
           <FadeIn delay={0.3}>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="w-full sm:w-auto">
+            <div className="flex flex-col gap-4 sm:flex-row">
+              <Button size="lg" className="w-full sm:w-auto min-h-[44px]">
                 <FiMail className="mr-2" />
                 Get in Touch
               </Button>
-              <Button variant="outline" size="lg" className="w-full sm:w-auto">
+              <Button variant="outline" size="lg" className="w-full sm:w-auto min-h-[44px]">
                 View Projects
               </Button>
             </div>
@@ -198,7 +198,7 @@ export function SinglePageTemplate() {
       {/* About Section */}
       <section id="about" className="container mx-auto px-4 sm:px-6 py-20 scroll-mt-20">
         <ScrollReveal>
-          <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-8">About Me</h2>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-8">About Me</h2>
           <p className="text-lg sm:text-xl leading-relaxed text-foreground/80 max-w-3xl">
             {portfolioData.bio}
           </p>
@@ -226,7 +226,7 @@ export function SinglePageTemplate() {
       {/* Skills Section */}
       <section id="skills" className="container mx-auto px-4 sm:px-6 py-20 scroll-mt-20">
         <ScrollReveal>
-          <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-12">Skills & Technologies</h2>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-12">Skills & Technologies</h2>
         </ScrollReveal>
         <ScrollReveal delay={0.2}>
           <div className="flex flex-wrap gap-2 sm:gap-3 max-w-3xl">
@@ -242,7 +242,7 @@ export function SinglePageTemplate() {
       {/* Experience Timeline Section */}
       <section id="experience" className="container mx-auto px-4 sm:px-6 py-20 scroll-mt-20">
         <ScrollReveal>
-          <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-12">Experience</h2>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-12">Experience</h2>
         </ScrollReveal>
 
         <div className="max-w-3xl space-y-8">
@@ -270,7 +270,7 @@ export function SinglePageTemplate() {
       {/* Process Section */}
       <section className="container mx-auto px-4 sm:px-6 py-20 bg-accent/5">
         <ScrollReveal>
-          <h2 className="text-3xl md:text-5xl font-bold mb-12 text-center">How I Work</h2>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-12 text-center">How I Work</h2>
         </ScrollReveal>
 
         <div className="grid md:grid-cols-4 gap-8 max-w-5xl mx-auto">
@@ -295,7 +295,7 @@ export function SinglePageTemplate() {
       {/* Projects Section */}
       <section id="projects" className="container mx-auto px-4 sm:px-6 py-20 scroll-mt-20">
         <ScrollReveal>
-          <h2 className="text-3xl md:text-5xl font-bold mb-12">Recent Projects</h2>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-12">Recent Projects</h2>
         </ScrollReveal>
 
         <div className="space-y-16 max-w-5xl">
@@ -330,7 +330,7 @@ export function SinglePageTemplate() {
       {/* Testimonials Section */}
       <section className="container mx-auto px-4 sm:px-6 py-20 bg-accent/5">
         <ScrollReveal>
-          <h2 className="text-3xl md:text-5xl font-bold mb-12 text-center">What People Say</h2>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-12 text-center">What People Say</h2>
         </ScrollReveal>
 
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
@@ -361,15 +361,15 @@ export function SinglePageTemplate() {
       <section id="contact" className="container mx-auto px-4 sm:px-6 py-20 scroll-mt-20">
         <ScrollReveal>
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-4xl md:text-6xl font-bold mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
               Let's Work Together
             </h2>
             <p className="text-xl text-muted-foreground mb-12">
               I'm always open to discussing new projects and opportunities.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Button size="lg">
+            <div className="flex flex-col gap-4 justify-center mb-12 sm:flex-row">
+              <Button size="lg" className="w-full sm:w-auto min-h-[44px]">
                 <FiMail className="mr-2" />
                 {portfolioData.contact.email}
               </Button>

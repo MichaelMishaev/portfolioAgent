@@ -173,7 +173,7 @@ export function KineticTypographyTemplate() {
               className="border-b border-white/20 pb-8 cursor-pointer"
             >
               <motion.h3
-                className="text-6xl md:text-8xl font-black"
+                className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-black"
                 animate={{
                   textShadow: [
                     "0 0 0px rgba(255,255,255,0)",
@@ -241,7 +241,7 @@ export function KineticTypographyTemplate() {
       <section className="min-h-screen flex items-center justify-center px-6">
         <div className="space-y-16 max-w-6xl w-full">
           <motion.h2
-            className="text-6xl md:text-8xl font-black text-center mb-20"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-black text-center mb-20"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -283,7 +283,7 @@ export function KineticTypographyTemplate() {
       <section className="min-h-screen flex items-center justify-center px-6">
         <div className="max-w-6xl w-full">
           <motion.h2
-            className="text-6xl md:text-8xl font-black text-center mb-20"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-black text-center mb-20"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}

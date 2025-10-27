@@ -158,8 +158,8 @@ export function ARSpatialTemplate() {
   }, [mouseX, mouseY]);
 
   // Parallax effect based on cursor
-  const parallaxX = useTransform(cursorX, [0, window.innerWidth], [-20, 20]);
-  const parallaxY = useTransform(cursorY, [0, window.innerHeight], [-20, 20]);
+  const parallaxX = useTransform(cursorX, [0, typeof window !== 'undefined' ? window.innerWidth : 1920], [-20, 20]);
+  const parallaxY = useTransform(cursorY, [0, typeof window !== 'undefined' ? window.innerHeight : 1080], [-20, 20]);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-950 via-blue-950 to-purple-950 text-white overflow-hidden relative">
@@ -215,7 +215,7 @@ export function ARSpatialTemplate() {
           </FloatingLayer>
 
           <FloatingLayer depth={80} delay={0.2}>
-            <h1 className="text-6xl md:text-8xl font-black mb-6 bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-300 bg-clip-text text-transparent drop-shadow-[0_0_50px_rgba(6,182,212,0.3)]">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-black mb-6 bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-300 bg-clip-text text-transparent drop-shadow-[0_0_50px_rgba(6,182,212,0.3)]">
               {portfolioData.name}
             </h1>
           </FloatingLayer>
@@ -375,7 +375,7 @@ export function ARSpatialTemplate() {
           </ScrollReveal>
 
           <ScrollReveal delay={0.3}>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col gap-4 sm:flex-row gap-4 justify-center">
               <Button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white border-0 text-lg px-8 py-6 h-auto rounded-full shadow-[0_0_30px_rgba(6,182,212,0.5)]">
                 <FiMail className="mr-2 w-5 h-5" />
                 spatial@vision.ar

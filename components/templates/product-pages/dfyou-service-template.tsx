@@ -15,8 +15,6 @@ import {
   FiInbox,
   FiMessageCircle,
   FiPause,
-  FiX,
-,
   FiMenu,
   FiX,
 } from "react-icons/fi";
@@ -317,11 +315,11 @@ export function DFYouServiceTemplate() {
 
             {/* Mobile Menu Button */}
             <button
-              className="md:hidden p-2 text-foreground hover:text-primary transition-colors"
+              className="md:hidden p-3 text-foreground hover:bg-accent rounded-md border border-border transition-colors"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label="Toggle menu"
             >
-              {mobileMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
+              {mobileMenuOpen ? <FiX size={28} /> : <FiMenu size={28} />}
             </button>
           </div>
         </div>
@@ -367,7 +365,7 @@ export function DFYouServiceTemplate() {
               <Badge className="mb-6 bg-pink-500 text-white text-sm px-4 py-2">
                 {serviceData.speed}
               </Badge>
-              <h1 className="text-6xl md:text-8xl font-bold mb-6 tracking-tight">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold mb-6 tracking-tight">
                 {serviceData.name}
               </h1>
               <p className="text-3xl font-light mb-8 text-stone-700">{serviceData.tagline}</p>
@@ -375,7 +373,7 @@ export function DFYouServiceTemplate() {
                 {serviceData.description}
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+              <div className="flex flex-col gap-4 sm:flex-row gap-4 justify-center mb-16">
                 <Button
                   size="lg"
                   className="bg-gradient-to-r from-blue-600 to-pink-500 hover:opacity-90 text-white text-lg px-12 py-6"

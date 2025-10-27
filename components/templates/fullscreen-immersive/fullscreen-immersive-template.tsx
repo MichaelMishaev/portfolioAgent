@@ -108,7 +108,7 @@ const containerRef = useRef(null);
 
         <div className="relative z-10 text-center px-6">
           <FadeIn>
-            <h1 className="text-7xl md:text-9xl font-bold mb-6">
+            <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-9xl font-bold mb-6">
               {portfolioData.name}
             </h1>
           </FadeIn>
@@ -155,7 +155,7 @@ const containerRef = useRef(null);
               >
                 {section.subtitle}
               </span>
-              <h2 className="text-6xl md:text-8xl font-bold mb-6">
+              <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold mb-6">
                 {section.title}
               </h2>
               <p className="text-xl md:text-2xl text-gray-300 max-w-2xl mx-auto mb-4">
@@ -234,7 +234,7 @@ const containerRef = useRef(null);
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-4">
               My Process
             </h2>
             <p className="text-xl text-gray-400">
@@ -306,7 +306,7 @@ const containerRef = useRef(null);
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-12">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-12">
               My Gear
             </h2>
             <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
@@ -336,7 +336,7 @@ const containerRef = useRef(null);
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-6xl md:text-8xl font-bold mb-8">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold mb-8">
               Let's Create
             </h2>
             <p className="text-xl md:text-2xl text-gray-400 mb-12 max-w-2xl mx-auto">

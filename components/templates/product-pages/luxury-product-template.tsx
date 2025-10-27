@@ -202,11 +202,11 @@ export function LuxuryProductTemplate() {
 
             {/* Mobile Menu Button */}
             <button
-              className="md:hidden p-2 text-foreground hover:text-primary transition-colors"
+              className="md:hidden p-3 text-foreground hover:bg-accent rounded-md border border-border transition-colors"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label="Toggle menu"
             >
-              {mobileMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
+              {mobileMenuOpen ? <FiX size={28} /> : <FiMenu size={28} />}
             </button>
           </div>
         </div>
@@ -259,7 +259,7 @@ export function LuxuryProductTemplate() {
               <div className="text-sm tracking-[0.3em] text-amber-500 font-light">
                 {productData.collection}
               </div>
-              <h1 className="text-7xl md:text-9xl font-light tracking-tight">
+              <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-9xl font-light tracking-tight">
                 {productData.name}
               </h1>
               <p className="text-2xl md:text-3xl font-light text-neutral-400 max-w-2xl mx-auto">
@@ -525,7 +525,7 @@ export function LuxuryProductTemplate() {
                 Visit one of our exclusive boutiques for a private viewing. Our Master Watchmakers
                 will guide you through every detail.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col gap-4 sm:flex-row gap-4 justify-center">
                 <Button
                   size="lg"
                   className="bg-amber-600 hover:bg-amber-500 text-black text-lg px-12"

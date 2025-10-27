@@ -96,11 +96,11 @@ export function BoldTypographyTemplate() {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2 text-foreground hover:text-primary transition-colors"
+            className="md:hidden p-3 text-foreground hover:bg-accent rounded-md border border-border transition-colors"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
           >
-            {mobileMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
+            {mobileMenuOpen ? <FiX size={28} /> : <FiMenu size={28} />}
           </button>
         </div>
 
@@ -158,7 +158,7 @@ export function BoldTypographyTemplate() {
         <ScrollReveal>
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-6xl md:text-8xl font-black mb-6">
+              <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-black mb-6">
                 About
               </h2>
             </div>
@@ -192,7 +192,7 @@ export function BoldTypographyTemplate() {
       {/* Services Section */}
       <section id="services" className="container mx-auto px-4 sm:px-6 py-20 border-t">
         <ScrollReveal>
-          <h2 className="text-6xl md:text-8xl font-black mb-16">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-black mb-16">
             Services
           </h2>
         </ScrollReveal>
@@ -225,7 +225,7 @@ export function BoldTypographyTemplate() {
       {/* Process Section */}
       <section className="container mx-auto px-4 sm:px-6 py-20 border-t">
         <ScrollReveal>
-          <h2 className="text-6xl md:text-8xl font-black mb-16 text-center">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-black mb-16 text-center">
             Process
           </h2>
         </ScrollReveal>
@@ -252,7 +252,7 @@ export function BoldTypographyTemplate() {
       {/* Case Studies Section */}
       <section className="container mx-auto px-4 sm:px-6 py-20 border-t bg-accent/5">
         <ScrollReveal>
-          <h2 className="text-6xl md:text-8xl font-black mb-16">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-black mb-16">
             Case Studies
           </h2>
         </ScrollReveal>
@@ -309,7 +309,7 @@ export function BoldTypographyTemplate() {
       {/* Testimonials Section */}
       <section className="container mx-auto px-4 sm:px-6 py-20 border-t">
         <ScrollReveal>
-          <h2 className="text-6xl md:text-8xl font-black mb-16">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-black mb-16">
             Testimonials
           </h2>
         </ScrollReveal>
@@ -333,7 +333,7 @@ export function BoldTypographyTemplate() {
       {/* Clients Section */}
       <section className="container mx-auto px-4 sm:px-6 py-20 border-t">
         <ScrollReveal>
-          <h2 className="text-6xl md:text-8xl font-black mb-16">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-black mb-16">
             Clients
           </h2>
         </ScrollReveal>

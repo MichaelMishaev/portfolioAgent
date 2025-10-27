@@ -141,11 +141,11 @@ return (
 
             {/* Mobile Menu Button */}
             <button
-              className="md:hidden p-2 text-foreground hover:text-primary transition-colors"
+              className="md:hidden p-3 text-foreground hover:bg-accent rounded-md border border-border transition-colors"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label="Toggle menu"
             >
-              {mobileMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
+              {mobileMenuOpen ? <FiX size={28} /> : <FiMenu size={28} />}
             </button>
           </div>
         </div>
@@ -196,7 +196,7 @@ return (
           </FadeIn>
 
           <FadeIn delay={0.2}>
-            <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-clip-text text-transparent">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold mb-6 bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-clip-text text-transparent">
               {portfolioData.name}
             </h1>
           </FadeIn>
@@ -432,7 +432,7 @@ return (
             <div className="mb-8">
               <span className="text-8xl">💌</span>
             </div>
-            <h2 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-6">
               Let's Collaborate!
             </h2>
             <p className="text-xl text-muted-foreground mb-8">

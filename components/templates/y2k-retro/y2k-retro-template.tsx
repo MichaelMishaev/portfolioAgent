@@ -81,8 +81,8 @@ const portfolioData = {
 };
 
 export function Y2KRetroTemplate() {
-  const [cursorTrail, setCursorTrail] = useState<{ x: number;  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
- y: number; id: number }[]>([]);
+  const [cursorTrail, setCursorTrail] = useState<{ x: number; y: number; id: number }[]>([]);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const handleMouseMove = (e: React.MouseEvent) => {
     const newParticle = {
@@ -151,7 +151,7 @@ export function Y2KRetroTemplate() {
             initial={{ y: 50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6 }}
-            className="text-6xl md:text-8xl font-black mb-6 text-white drop-shadow-[4px_4px_0px_rgba(0,0,0,0.3)] [text-shadow:_3px_3px_0_rgb(255_0_255),_6px_6px_0_rgb(0_255_255)]"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-black mb-6 text-white drop-shadow-[4px_4px_0px_rgba(0,0,0,0.3)] [text-shadow:_3px_3px_0_rgb(255_0_255),_6px_6px_0_rgb(0_255_255)]"
             style={{ fontFamily: "'Comic Sans MS', cursive" }}
           >
             {portfolioData.name}

@@ -197,11 +197,11 @@ export function AudioProductTemplate() {
 
             {/* Mobile Menu Button */}
             <button
-              className="md:hidden p-2 text-foreground hover:text-primary transition-colors"
+              className="md:hidden p-3 text-foreground hover:bg-accent rounded-md border border-border transition-colors"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label="Toggle menu"
             >
-              {mobileMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
+              {mobileMenuOpen ? <FiX size={28} /> : <FiMenu size={28} />}
             </button>
           </div>
         </div>
@@ -247,7 +247,7 @@ export function AudioProductTemplate() {
               <Badge className="mb-4 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 border-blue-200 dark:border-blue-800">
                 New
               </Badge>
-              <h1 className="text-6xl md:text-8xl font-bold mb-6 tracking-tight">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold mb-6 tracking-tight">
                 {productData.name}
               </h1>
               <p className="text-2xl md:text-3xl text-muted-foreground mb-4 font-light">
@@ -307,7 +307,7 @@ export function AudioProductTemplate() {
 
           {/* CTA Buttons */}
           <FadeIn delay={0.4}>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col gap-4 sm:flex-row gap-4 justify-center">
               <Button size="lg" className="text-lg px-12">
                 Add to Cart
               </Button>
@@ -555,7 +555,7 @@ export function AudioProductTemplate() {
               <p className="text-2xl mb-12 opacity-90">
                 Order now and get free 2-day shipping.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col gap-4 sm:flex-row gap-4 justify-center">
                 <Button size="lg" variant="secondary" className="text-lg px-12">
                   Buy Now - ${productData.price.amount}
                 </Button>

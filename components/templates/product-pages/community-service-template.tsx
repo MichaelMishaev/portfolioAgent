@@ -16,7 +16,6 @@ import {
   FiCheck,
   FiStar,
   FiAward,
-,
   FiMenu,
   FiX,
 } from "react-icons/fi";
@@ -293,11 +292,11 @@ export function CommunityServiceTemplate() {
 
             {/* Mobile Menu Button */}
             <button
-              className="md:hidden p-2 text-foreground hover:text-primary transition-colors"
+              className="md:hidden p-3 text-foreground hover:bg-accent rounded-md border border-border transition-colors"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label="Toggle menu"
             >
-              {mobileMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
+              {mobileMenuOpen ? <FiX size={28} /> : <FiMenu size={28} />}
             </button>
           </div>
         </div>
@@ -347,7 +346,7 @@ export function CommunityServiceTemplate() {
               <p className="text-xl mb-12 text-stone-600 max-w-2xl mx-auto">
                 {platformData.description}
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+              <div className="flex flex-col gap-4 sm:flex-row gap-4 justify-center mb-16">
                 <Button
                   size="lg"
                   className="bg-gradient-to-r from-teal-500 to-purple-600 hover:opacity-90 text-white text-lg px-12"

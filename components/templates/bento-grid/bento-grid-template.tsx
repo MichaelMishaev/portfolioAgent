@@ -648,7 +648,7 @@ export function BentoGridTemplate() {
                 <p className="text-lg mb-6 opacity-90">
                   Let's create something amazing together
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <div className="flex flex-col gap-4 sm:flex-row gap-4 justify-center items-center">
                   <Button size="lg" variant="secondary">
                     <FiMail className="mr-2" />
                     hello@rileychen.com

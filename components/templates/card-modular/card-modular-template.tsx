@@ -311,11 +311,11 @@ return (
 
             {/* Mobile Menu Button */}
             <button
-              className="md:hidden p-2 text-foreground hover:text-primary transition-colors"
+              className="md:hidden p-3 text-foreground hover:bg-accent rounded-md border border-border transition-colors"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label="Toggle menu"
             >
-              {mobileMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
+              {mobileMenuOpen ? <FiX size={28} /> : <FiMenu size={28} />}
             </button>
           </div>
         </div>
@@ -802,7 +802,7 @@ return (
               <p className="text-lg text-muted-foreground mb-8">
                 Get design insights, tips, and updates delivered to your inbox monthly
               </p>
-              <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+              <div className="flex flex-col gap-4 sm:flex-row gap-3 max-w-md mx-auto">
                 <input
                   type="email"
                   placeholder="Enter your email"
@@ -833,12 +833,12 @@ return (
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-6">
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" className="w-full sm:w-auto">
+              <div className="flex flex-col gap-4 sm:flex-row gap-4 justify-center">
+                <Button size="lg" className="w-full sm:w-auto min-h-[44px]">
                   <FiMail className="mr-2" />
                   Email Me
                 </Button>
-                <Button variant="outline" size="lg" className="w-full sm:w-auto">
+                <Button variant="outline" size="lg" className="w-full sm:w-auto min-h-[44px]">
                   Download Resume
                 </Button>
               </div>

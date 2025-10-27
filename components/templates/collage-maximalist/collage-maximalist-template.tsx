@@ -116,7 +116,7 @@ return (
             <div className="bg-red-500 text-white px-4 py-1 inline-block transform -rotate-2 mb-4 border-2 border-black">
               <span className="text-sm font-bold">{portfolioData.location}</span>
             </div>
-            <h1 className="text-6xl md:text-8xl font-black mb-4 leading-none">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-black mb-4 leading-none">
               {portfolioData.name}
             </h1>
             <div className="h-1 w-32 bg-black mb-6" />
@@ -219,7 +219,7 @@ return (
       <section className="container mx-auto px-4 sm:px-6 py-20">
         <ScrollReveal>
           <div className="text-center mb-16">
-            <h2 className="text-4xl sm:text-5xl md:text-7xl font-black inline-block bg-blue-200 px-8 py-4 border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] transform -rotate-1">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black inline-block bg-blue-200 px-8 py-4 border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] transform -rotate-1">
               RECENT WORK
             </h2>
           </div>
@@ -363,7 +363,7 @@ return (
                 Available for commissions, collaborations, and creative projects that push boundaries.
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+              <div className="flex flex-col gap-4 sm:flex-row gap-4 justify-center items-center mb-8">
                 <Button className="bg-black hover:bg-gray-800 text-white font-bold text-lg px-8 py-6 h-auto border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all">
                   <FiMail className="mr-2 w-5 h-5" />
                   luna@collagelab.art

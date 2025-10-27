@@ -132,11 +132,11 @@ export function DarkModeTemplate() {
 
             {/* Mobile Menu Button */}
             <button
-              className="md:hidden p-2 text-foreground hover:text-primary transition-colors"
+              className="md:hidden p-3 text-white hover:bg-white/10 rounded-md border border-white/20 transition-colors"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label="Toggle menu"
             >
-              {mobileMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
+              {mobileMenuOpen ? <FiX size={28} /> : <FiMenu size={28} />}
             </button>
           </div>
         </div>
@@ -184,7 +184,7 @@ export function DarkModeTemplate() {
 
         <div className="relative z-10 text-center px-6">
           <FadeIn>
-            <h1 className="text-7xl md:text-9xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl lg:text-9xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
               {portfolioData.name}
             </h1>
           </FadeIn>
@@ -198,7 +198,7 @@ export function DarkModeTemplate() {
           <FadeIn delay={0.4}>
             <Button
               size="lg"
-              className="bg-cyan-500 hover:bg-cyan-600 text-black font-semibold"
+              className="bg-cyan-500 hover:bg-cyan-600 text-black font-semibold min-h-[44px] w-full sm:w-auto"
             >
               Explore My Work
             </Button>
@@ -365,7 +365,7 @@ export function DarkModeTemplate() {
       <section id="contact" className="container mx-auto px-4 sm:px-6 py-32">
         <div className="max-w-3xl mx-auto text-center">
           <ScrollReveal>
-            <h2 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-8">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-8">
               Let's Create Something{" "}
               <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
                 Amazing
@@ -382,7 +382,7 @@ export function DarkModeTemplate() {
           <ScrollReveal delay={0.3}>
             <Button
               size="lg"
-              className="bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white font-semibold text-lg px-8"
+              className="bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white font-semibold text-lg px-8 min-h-[44px] w-full sm:w-auto"
             >
               <FiMail className="mr-2" />
               Get in Touch

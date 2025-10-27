@@ -131,7 +131,7 @@ return (
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-rose-600 via-amber-600 to-teal-600 bg-clip-text text-transparent">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold mb-6 bg-gradient-to-r from-rose-600 via-amber-600 to-teal-600 bg-clip-text text-transparent">
               {portfolioData.name}
             </h1>
           </motion.div>
@@ -430,7 +430,7 @@ return (
 
         <div className="relative z-10 max-w-3xl mx-auto text-center">
           <ScrollReveal>
-            <h2 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-8 bg-gradient-to-r from-rose-600 to-teal-600 bg-clip-text text-transparent">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-8 bg-gradient-to-r from-rose-600 to-teal-600 bg-clip-text text-transparent">
               Let's Create
               <br />
               Together
