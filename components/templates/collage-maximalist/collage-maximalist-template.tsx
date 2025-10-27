@@ -1,9 +1,13 @@
 "use client";
 
+import { useState } from "react";
 import { ScrollReveal } from "@/components/animations/scroll-reveal";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { FiMail, FiInstagram, FiArrowRight } from "react-icons/fi";
+import { FiMail, FiInstagram, FiArrowRight ,
+  FiMenu,
+  FiX,
+} from "react-icons/fi";
 import Link from "next/link";
 
 const portfolioData = {
@@ -74,14 +78,15 @@ const portfolioData = {
 };
 
 export function CollageMaximalistTemplate() {
-  return (
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+return (
     <div className="min-h-screen bg-[#f5f3ef] relative overflow-hidden">
       {/* Background Texture */}
       <div className="fixed inset-0 opacity-10 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48cGF0dGVybiBpZD0iYSIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBwYXR0ZXJuVHJhbnNmb3JtPSJyb3RhdGUoNDUpIj48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJub25lIi8+PHBhdGggZD0iTTAgMTBoNDBNMCAzMGg0MCIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjYSkiLz48L3N2Zz4=')]" />
 
       {/* Navigation */}
       <nav className="sticky top-0 z-50 border-b-4 border-black bg-white/90 backdrop-blur-sm">
-        <div className="container mx-auto px-6 py-4 flex items-center justify-between">
+        <div className="container mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
           <Link
             href="/"
             className="text-sm font-bold hover:bg-black hover:text-white px-3 py-2 transition-colors border-2 border-black"
@@ -98,7 +103,7 @@ export function CollageMaximalistTemplate() {
       </nav>
 
       {/* Hero Section - Layered Collage Style */}
-      <section className="container mx-auto px-6 py-20 relative">
+      <section className="container mx-auto px-4 sm:px-6 py-20 relative">
         <div className="max-w-6xl mx-auto relative min-h-[600px] flex items-center">
           {/* Decorative Elements */}
           <div className="absolute top-0 right-20 w-32 h-32 bg-yellow-300 rounded-full border-4 border-black transform rotate-12 opacity-70" />
@@ -134,7 +139,7 @@ export function CollageMaximalistTemplate() {
       </section>
 
       {/* Stats Section - Chaotic Stamps */}
-      <section className="container mx-auto px-6 py-16 relative">
+      <section className="container mx-auto px-4 sm:px-6 py-16 relative">
         <div className="max-w-4xl mx-auto flex flex-wrap justify-center gap-8">
           {portfolioData.stats.map((stat, index) => (
             <ScrollReveal key={stat.label} delay={index * 0.1}>
@@ -157,7 +162,7 @@ export function CollageMaximalistTemplate() {
       </section>
 
       {/* About Section - Torn Paper Effect */}
-      <section className="container mx-auto px-6 py-20 relative">
+      <section className="container mx-auto px-4 sm:px-6 py-20 relative">
         <div className="max-w-5xl mx-auto relative">
           {/* Background Chaos */}
           <div className="absolute top-0 left-0 w-40 h-40 bg-blue-300 border-4 border-black transform -rotate-12 opacity-40" />
@@ -211,10 +216,10 @@ export function CollageMaximalistTemplate() {
       </section>
 
       {/* Projects Section - Scattered Polaroid Style */}
-      <section className="container mx-auto px-6 py-20">
+      <section className="container mx-auto px-4 sm:px-6 py-20">
         <ScrollReveal>
           <div className="text-center mb-16">
-            <h2 className="text-5xl md:text-7xl font-black inline-block bg-blue-200 px-8 py-4 border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] transform -rotate-1">
+            <h2 className="text-4xl sm:text-5xl md:text-7xl font-black inline-block bg-blue-200 px-8 py-4 border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] transform -rotate-1">
               RECENT WORK
             </h2>
           </div>
@@ -261,7 +266,7 @@ export function CollageMaximalistTemplate() {
       </section>
 
       {/* Process Section - Stamp Style */}
-      <section className="container mx-auto px-6 py-20 relative">
+      <section className="container mx-auto px-4 sm:px-6 py-20 relative">
         <div className="absolute top-0 left-0 w-full h-full opacity-5 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIgZmlsbD0iIzAwMCIvPjwvc3ZnPg==')]" />
 
         <ScrollReveal>
@@ -296,7 +301,7 @@ export function CollageMaximalistTemplate() {
       </section>
 
       {/* Testimonials Section - Polaroid Quotes */}
-      <section className="container mx-auto px-6 py-20 relative">
+      <section className="container mx-auto px-4 sm:px-6 py-20 relative">
         <div className="absolute -top-10 -right-10 w-64 h-64 bg-yellow-200 border-4 border-black transform rotate-45 opacity-20" />
         <div className="absolute -bottom-10 -left-10 w-56 h-56 bg-blue-200 rounded-full border-4 border-black opacity-20" />
 
@@ -334,7 +339,7 @@ export function CollageMaximalistTemplate() {
       </section>
 
       {/* Hand-drawn Arrow Decoration */}
-      <div className="container mx-auto px-6 py-12 text-center">
+      <div className="container mx-auto px-4 sm:px-6 py-12 text-center">
         <div className="text-8xl">↓</div>
         <p className="text-2xl font-bold mt-4 transform -rotate-2 inline-block bg-yellow-300 px-6 py-2 border-2 border-black">
           Let's collaborate!
@@ -342,7 +347,7 @@ export function CollageMaximalistTemplate() {
       </div>
 
       {/* Contact Section - Mixed Media Style */}
-      <section id="contact" className="container mx-auto px-6 py-20">
+      <section id="contact" className="container mx-auto px-4 sm:px-6 py-20">
         <div className="max-w-4xl mx-auto relative">
           {/* Background Shapes */}
           <div className="absolute -top-12 -right-12 w-64 h-64 bg-orange-200 border-4 border-black transform rotate-12 opacity-50" />
@@ -386,7 +391,7 @@ export function CollageMaximalistTemplate() {
 
       {/* Footer */}
       <footer className="border-t-4 border-black bg-white py-8">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <p className="text-center font-bold text-sm">
             © {new Date().getFullYear()} {portfolioData.name} // HANDCRAFTED WITH LOVE
           </p>

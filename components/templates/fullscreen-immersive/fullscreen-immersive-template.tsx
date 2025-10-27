@@ -1,10 +1,11 @@
 "use client";
 
+import { useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { FadeIn } from "@/components/animations/fade-in";
 import { ParallaxSection } from "@/components/animations/parallax-section";
 import { Button } from "@/components/ui/button";
-import { FiMail, FiArrowDown } from "react-icons/fi";
+import { FiMail, FiArrowDown , FiMenu, FiX } from "react-icons/fi";
 import Link from "next/link";
 import { useRef } from "react";
 
@@ -74,7 +75,8 @@ const portfolioData = {
 };
 
 export function FullscreenImmersiveTemplate() {
-  const containerRef = useRef(null);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+const containerRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
   });
@@ -86,7 +88,7 @@ export function FullscreenImmersiveTemplate() {
     <div ref={containerRef} className="bg-black text-white overflow-x-hidden max-w-full">
       {/* Fixed Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 mix-blend-difference">
-        <div className="container mx-auto px-6 py-6 flex items-center justify-between">
+        <div className="container mx-auto px-4 sm:px-6 py-6 flex items-center justify-between">
           <Link href="/" className="text-sm text-white hover:text-gray-300 transition-colors">
             ← Back
           </Link>
@@ -140,7 +142,7 @@ export function FullscreenImmersiveTemplate() {
           </ParallaxSection>
 
           {/* Content */}
-          <div className="relative z-10 container mx-auto px-6 text-center">
+          <div className="relative z-10 container mx-auto px-4 sm:px-6 text-center">
             <motion.div
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -179,7 +181,7 @@ export function FullscreenImmersiveTemplate() {
 
       {/* About Section - Split Screen */}
       <section className="min-h-screen flex items-center bg-gray-900">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Image Side */}
             <motion.div
@@ -224,7 +226,7 @@ export function FullscreenImmersiveTemplate() {
       <section className="min-h-screen flex items-center justify-center bg-black relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-emerald-900/20 to-teal-900/20" />
 
-        <div className="relative z-10 container mx-auto px-6">
+        <div className="relative z-10 container mx-auto px-4 sm:px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -232,7 +234,7 @@ export function FullscreenImmersiveTemplate() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-5xl md:text-7xl font-bold mb-4">
+            <h2 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-4">
               My Process
             </h2>
             <p className="text-xl text-gray-400">
@@ -263,7 +265,7 @@ export function FullscreenImmersiveTemplate() {
 
       {/* Services Section - Split Screen */}
       <section className="min-h-screen flex items-center bg-gray-900">
-        <div className="container mx-auto px-6 py-20">
+        <div className="container mx-auto px-4 sm:px-6 py-20">
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -297,14 +299,14 @@ export function FullscreenImmersiveTemplate() {
       <section className="min-h-screen flex items-center justify-center bg-black relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1606925797300-0b35e9d1794e?w=1920&h=1080&fit=crop')] bg-cover bg-center opacity-20" />
 
-        <div className="relative z-10 container mx-auto px-6 text-center">
+        <div className="relative z-10 container mx-auto px-4 sm:px-6 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-5xl md:text-7xl font-bold mb-12">
+            <h2 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-12">
               My Gear
             </h2>
             <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
@@ -327,7 +329,7 @@ export function FullscreenImmersiveTemplate() {
 
       {/* Contact Section */}
       <section id="contact" className="min-h-screen flex items-center justify-center relative bg-black">
-        <div className="container mx-auto px-6 text-center">
+        <div className="container mx-auto px-4 sm:px-6 text-center">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -353,7 +355,7 @@ export function FullscreenImmersiveTemplate() {
 
       {/* Footer */}
       <footer className="border-t border-white/10 bg-black py-8">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <p className="text-sm text-gray-500 text-center">
             © {new Date().getFullYear()} {portfolioData.name}. All rights reserved.
           </p>

@@ -68,14 +68,17 @@ export function TemplateGallery() {
   };
 
   return (
-    <div className="flex gap-8 relative">
+    <div className="relative">
       {/* Mobile Menu Toggle */}
       <button
         onClick={() => setIsSidebarOpen(!isSidebarOpen)}
-        className="lg:hidden fixed top-24 left-4 z-50 p-3 bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
+        className="lg:hidden fixed top-20 left-4 z-50 p-3 bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors touch-manipulation"
+        aria-label="Toggle categories menu"
       >
         {isSidebarOpen ? <FiX className="w-5 h-5" /> : <FiMenu className="w-5 h-5" />}
       </button>
+
+      <div className="flex flex-col lg:flex-row gap-4 lg:gap-8">
 
       {/* Overlay for mobile */}
       <AnimatePresence>
@@ -93,13 +96,14 @@ export function TemplateGallery() {
       {/* Sidebar */}
       <aside
         className={`
-          fixed lg:sticky top-24 left-0 h-[calc(100vh-8rem)]
-          w-72 flex-shrink-0 z-40
+          fixed lg:sticky top-20 lg:top-24 left-0
+          h-[calc(100vh-5rem)] lg:h-[calc(100vh-8rem)]
+          w-72 lg:w-64 xl:w-72 flex-shrink-0 z-40
           transition-transform duration-300 ease-out
           ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}
         `}
       >
-        <div className="h-full bg-white dark:bg-gray-900 rounded-2xl shadow-lg border border-gray-200 dark:border-gray-800 p-6 overflow-y-auto">
+        <div className="h-full bg-white dark:bg-gray-900 rounded-2xl shadow-lg border border-gray-200 dark:border-gray-800 p-4 lg:p-6 overflow-y-auto">
           <div className="mb-6">
             <h3 className="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-4">
               Категории
@@ -163,15 +167,15 @@ export function TemplateGallery() {
       </aside>
 
       {/* Main Content Area */}
-      <div className="flex-1 min-w-0">
+      <div className="flex-1 min-w-0 lg:ml-0 mt-4 lg:mt-0">
         {/* Header with current category info */}
         <motion.div
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
-          className="mb-8 flex items-center justify-between"
+          className="mb-6 lg:mb-8 px-4 lg:px-0"
         >
           <div>
-            <h3 className="text-2xl font-bold text-gray-900 dark:text-white capitalize">
+            <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white capitalize">
               {t.categories[filter as keyof typeof t.categories] || filter}
             </h3>
             <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
@@ -181,7 +185,7 @@ export function TemplateGallery() {
         </motion.div>
 
         {/* Template Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6 px-4 lg:px-0">
           {filteredTemplates.map((template, index) => (
             <motion.div
               key={template.id}
@@ -304,7 +308,7 @@ export function TemplateGallery() {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            className="text-center py-20"
+            className="text-center py-20 px-4"
           >
             <FiFolder className="w-16 h-16 mx-auto text-gray-300 dark:text-gray-700 mb-4" />
             <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
@@ -315,6 +319,7 @@ export function TemplateGallery() {
             </p>
           </motion.div>
         )}
+      </div>
       </div>
     </div>
   );

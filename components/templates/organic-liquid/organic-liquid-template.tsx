@@ -1,10 +1,14 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { ScrollReveal } from "@/components/animations/scroll-reveal";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { FiMail, FiHeart, FiSun, FiWind } from "react-icons/fi";
+import { FiMail, FiHeart, FiSun, FiWind ,
+  FiMenu,
+  FiX,
+} from "react-icons/fi";
 import Link from "next/link";
 
 const portfolioData = {
@@ -76,11 +80,12 @@ const portfolioData = {
 };
 
 export function OrganicLiquidTemplate() {
-  return (
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+return (
     <div className="min-h-screen bg-gradient-to-br from-amber-50 via-rose-50 to-teal-50 dark:from-gray-900 dark:via-purple-900 dark:to-gray-900 overflow-hidden">
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-white/60 dark:bg-gray-900/60 backdrop-blur-md">
-        <div className="container mx-auto px-6 py-4 flex items-center justify-between">
+        <div className="container mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
           <Link href="/" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
             ← Back
           </Link>
@@ -215,7 +220,7 @@ export function OrganicLiquidTemplate() {
       {/* Services with Liquid Cards */}
       <section className="py-20 px-6">
         <ScrollReveal>
-          <h2 className="text-4xl md:text-6xl font-bold text-center mb-16 bg-gradient-to-r from-rose-600 to-teal-600 bg-clip-text text-transparent">
+          <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold text-center mb-16 bg-gradient-to-r from-rose-600 to-teal-600 bg-clip-text text-transparent">
             What I Do
           </h2>
         </ScrollReveal>
@@ -260,7 +265,7 @@ export function OrganicLiquidTemplate() {
 
         <div className="max-w-6xl mx-auto relative z-10">
           <ScrollReveal>
-            <h2 className="text-4xl md:text-6xl font-bold text-center mb-16 bg-gradient-to-r from-rose-600 to-teal-600 bg-clip-text text-transparent">
+            <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold text-center mb-16 bg-gradient-to-r from-rose-600 to-teal-600 bg-clip-text text-transparent">
               Selected Work
             </h2>
           </ScrollReveal>
@@ -306,7 +311,7 @@ export function OrganicLiquidTemplate() {
       <section className="py-20 px-6">
         <div className="max-w-5xl mx-auto">
           <ScrollReveal>
-            <h2 className="text-4xl md:text-6xl font-bold text-center mb-16 bg-gradient-to-r from-rose-600 to-teal-600 bg-clip-text text-transparent">
+            <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold text-center mb-16 bg-gradient-to-r from-rose-600 to-teal-600 bg-clip-text text-transparent">
               My Process
             </h2>
           </ScrollReveal>
@@ -351,7 +356,7 @@ export function OrganicLiquidTemplate() {
 
         <div className="max-w-5xl mx-auto relative z-10">
           <ScrollReveal>
-            <h2 className="text-4xl md:text-6xl font-bold text-center mb-16 bg-gradient-to-r from-rose-600 to-teal-600 bg-clip-text text-transparent">
+            <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold text-center mb-16 bg-gradient-to-r from-rose-600 to-teal-600 bg-clip-text text-transparent">
               Kind Words
             </h2>
           </ScrollReveal>
@@ -425,7 +430,7 @@ export function OrganicLiquidTemplate() {
 
         <div className="relative z-10 max-w-3xl mx-auto text-center">
           <ScrollReveal>
-            <h2 className="text-5xl md:text-7xl font-bold mb-8 bg-gradient-to-r from-rose-600 to-teal-600 bg-clip-text text-transparent">
+            <h2 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-8 bg-gradient-to-r from-rose-600 to-teal-600 bg-clip-text text-transparent">
               Let's Create
               <br />
               Together
@@ -452,7 +457,7 @@ export function OrganicLiquidTemplate() {
 
       {/* Footer */}
       <footer className="border-t border-rose-200/50 dark:border-rose-800/50 bg-white/40 dark:bg-gray-900/40 backdrop-blur py-8">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <p className="text-sm text-muted-foreground text-center">
             © {new Date().getFullYear()} {portfolioData.name}. Designed with love and nature.
           </p>

@@ -122,7 +122,7 @@ export function MinimalistTemplate() {
     <div className="min-h-screen bg-background">
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm border-b">
-        <div className="container mx-auto px-6 py-4 flex items-center justify-between">
+        <div className="container mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
           <Link href="/" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
             ← Back to Gallery
           </Link>
@@ -142,7 +142,7 @@ export function MinimalistTemplate() {
       </nav>
 
       {/* Hero Section - Maximum Simplicity */}
-      <section className="container mx-auto px-6 pt-40 pb-32">
+      <section className="container mx-auto px-4 sm:px-6 pt-40 pb-32">
         <div className="max-w-4xl">
           <FadeIn>
             <h1 className="text-7xl md:text-9xl font-light mb-8 tracking-tighter leading-none">
@@ -168,7 +168,7 @@ export function MinimalistTemplate() {
       </section>
 
       {/* About Section - Minimal Typography */}
-      <section id="about" className="container mx-auto px-6 py-32">
+      <section id="about" className="container mx-auto px-4 sm:px-6 py-32">
         <div className="max-w-3xl mx-auto">
           <ScrollReveal>
             <h2 className="text-xs font-medium text-muted-foreground mb-16 uppercase tracking-widest">
@@ -182,7 +182,7 @@ export function MinimalistTemplate() {
       </section>
 
       {/* Philosophy Statement */}
-      <section className="container mx-auto px-6 py-32 border-t">
+      <section className="container mx-auto px-4 sm:px-6 py-32 border-t">
         <div className="max-w-4xl mx-auto">
           <ScrollReveal>
             <p className="text-4xl md:text-5xl font-light leading-tight tracking-tight text-center">
@@ -193,7 +193,7 @@ export function MinimalistTemplate() {
       </section>
 
       {/* Stats - Minimal Grid */}
-      <section className="container mx-auto px-6 py-20">
+      <section className="container mx-auto px-4 sm:px-6 py-20">
         <div className="max-w-4xl mx-auto">
           <div className="grid grid-cols-3 gap-12">
             {portfolioData.stats.map((stat, index) => (
@@ -213,7 +213,7 @@ export function MinimalistTemplate() {
       </section>
 
       {/* Skills Section - Minimal List */}
-      <section className="container mx-auto px-6 py-20 border-t">
+      <section className="container mx-auto px-4 sm:px-6 py-20 border-t">
         <div className="max-w-3xl mx-auto">
           <ScrollReveal>
             <h2 className="text-xs font-medium text-muted-foreground mb-12 uppercase tracking-widest">
@@ -231,7 +231,7 @@ export function MinimalistTemplate() {
       </section>
 
       {/* Work Section - Minimal List */}
-      <section id="work" className="container mx-auto px-6 py-32">
+      <section id="work" className="container mx-auto px-4 sm:px-6 py-32">
         <div className="max-w-4xl">
           <ScrollReveal>
             <h2 className="text-xs font-medium text-muted-foreground mb-16 uppercase tracking-widest">
@@ -267,7 +267,7 @@ export function MinimalistTemplate() {
       </section>
 
       {/* Services */}
-      <section className="container mx-auto px-6 py-32 border-t">
+      <section className="container mx-auto px-4 sm:px-6 py-32 border-t">
         <div className="max-w-3xl mx-auto">
           <ScrollReveal>
             <h2 className="text-xs font-medium text-muted-foreground mb-16 uppercase tracking-widest">
@@ -285,7 +285,7 @@ export function MinimalistTemplate() {
       </section>
 
       {/* Clients */}
-      <section className="container mx-auto px-6 py-32 border-t">
+      <section className="container mx-auto px-4 sm:px-6 py-32 border-t">
         <div className="max-w-4xl mx-auto">
           <ScrollReveal>
             <h2 className="text-xs font-medium text-muted-foreground mb-16 uppercase tracking-widest text-center">
@@ -303,7 +303,7 @@ export function MinimalistTemplate() {
       </section>
 
       {/* Contact Section - Minimal CTA */}
-      <section id="contact" className="container mx-auto px-6 py-40 border-t">
+      <section id="contact" className="container mx-auto px-4 sm:px-6 py-40 border-t">
         <div className="max-w-3xl mx-auto">
           <ScrollReveal>
             <h2 className="text-xs font-medium text-muted-foreground mb-16 uppercase tracking-widest">
@@ -359,7 +359,7 @@ export function MinimalistTemplate() {
 
       {/* Footer */}
       <footer className="border-t">
-        <div className="container mx-auto px-6 py-8">
+        <div className="container mx-auto px-4 sm:px-6 py-8">
           <p className="text-sm text-muted-foreground text-center">
             © {new Date().getFullYear()} {portfolioData.name}. All rights reserved.
           </p>

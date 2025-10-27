@@ -1,7 +1,8 @@
 "use client";
 
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { FiMail, FiArrowRight } from "react-icons/fi";
+import { FiMail, FiArrowRight , FiMenu, FiX } from "react-icons/fi";
 import Link from "next/link";
 
 const portfolioData = {
@@ -38,7 +39,8 @@ const portfolioData = {
 };
 
 export function NeoBrutalistTemplate() {
-  return (
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+return (
     <div className="min-h-screen bg-white text-black font-mono">
       {/* Navigation */}
       <nav className="border-b-4 border-black bg-yellow-400">
@@ -101,7 +103,7 @@ export function NeoBrutalistTemplate() {
       <section className="py-20 px-4 border-b-4 border-black">
         <div className="max-w-5xl mx-auto">
           <div className="bg-red-600 text-white p-6 border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] mb-12 rotate-1">
-            <h2 className="text-5xl md:text-7xl font-black">
+            <h2 className="text-4xl sm:text-5xl md:text-7xl font-black">
               SKILLS
             </h2>
           </div>
@@ -131,7 +133,7 @@ export function NeoBrutalistTemplate() {
       <section className="py-20 px-4 border-b-4 border-black">
         <div className="max-w-5xl mx-auto">
           <div className="bg-blue-600 text-white p-6 border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] mb-12 -rotate-1">
-            <h2 className="text-5xl md:text-7xl font-black">
+            <h2 className="text-4xl sm:text-5xl md:text-7xl font-black">
               SELECTED WORK
             </h2>
           </div>
@@ -150,7 +152,7 @@ export function NeoBrutalistTemplate() {
                     {/* Header */}
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 pb-4 border-b-4 border-black">
                       <div className="flex items-baseline gap-4">
-                        <span className="text-5xl md:text-7xl font-black">
+                        <span className="text-4xl sm:text-5xl md:text-7xl font-black">
                           {project.id}
                         </span>
                         <div>
@@ -184,7 +186,7 @@ export function NeoBrutalistTemplate() {
       <section className="py-20 px-4 border-b-4 border-black bg-lime-300">
         <div className="max-w-5xl mx-auto">
           <div className="bg-black text-white p-6 border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] mb-12 rotate-1">
-            <h2 className="text-5xl md:text-7xl font-black">
+            <h2 className="text-4xl sm:text-5xl md:text-7xl font-black">
               HOW I WORK
             </h2>
           </div>
@@ -215,7 +217,7 @@ export function NeoBrutalistTemplate() {
       <section className="py-20 px-4 border-b-4 border-black">
         <div className="max-w-5xl mx-auto">
           <div className="bg-purple-600 text-white p-6 border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] mb-12 -rotate-1">
-            <h2 className="text-5xl md:text-7xl font-black">
+            <h2 className="text-4xl sm:text-5xl md:text-7xl font-black">
               WHAT THEY SAY
             </h2>
           </div>

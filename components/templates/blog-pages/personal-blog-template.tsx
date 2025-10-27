@@ -109,7 +109,7 @@ export function PersonalBlogTemplate() {
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
       <header className="bg-white border-b sticky top-0 z-50">
-        <div className="container mx-auto px-6 py-4 flex items-center justify-between">
+        <div className="container mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
           <Link href="/" className="text-2xl font-bold">
             Sarah Mitchell
           </Link>
@@ -134,7 +134,7 @@ export function PersonalBlogTemplate() {
 
       {/* Hero / About Section */}
       <section className="bg-white py-16 border-b">
-        <div className="container mx-auto px-6 max-w-4xl">
+        <div className="container mx-auto px-4 sm:px-6 max-w-4xl">
           <FadeIn>
             <div className="flex flex-col md:flex-row items-center gap-8">
               <img
@@ -173,7 +173,7 @@ export function PersonalBlogTemplate() {
 
       {/* Featured Post */}
       <section className="py-16 bg-white">
-        <div className="container mx-auto px-6 max-w-5xl">
+        <div className="container mx-auto px-4 sm:px-6 max-w-5xl">
           <ScrollReveal>
             <Card className="overflow-hidden hover:shadow-xl transition-shadow border-0 shadow-lg">
               <div className="grid md:grid-cols-2 gap-0">
@@ -214,7 +214,7 @@ export function PersonalBlogTemplate() {
 
       {/* Category Filter */}
       <section id="blog" className="py-8 bg-gray-50 border-t">
-        <div className="container mx-auto px-6 max-w-5xl">
+        <div className="container mx-auto px-4 sm:px-6 max-w-5xl">
           <div className="flex items-center gap-3 overflow-x-auto pb-2">
             {blogData.categories.map((category) => (
               <Button
@@ -232,7 +232,7 @@ export function PersonalBlogTemplate() {
 
       {/* Blog Grid */}
       <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-6 max-w-5xl">
+        <div className="container mx-auto px-4 sm:px-6 max-w-5xl">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {blogData.posts.map((post, index) => (
               <ScrollReveal key={post.id} delay={index * 0.1}>
@@ -281,7 +281,7 @@ export function PersonalBlogTemplate() {
 
       {/* Newsletter Section */}
       <section id="newsletter" className="py-20 bg-gradient-to-br from-blue-600 to-purple-600">
-        <div className="container mx-auto px-6 max-w-3xl text-center">
+        <div className="container mx-auto px-4 sm:px-6 max-w-3xl text-center">
           <ScrollReveal>
             <FiMail className="w-16 h-16 mx-auto mb-6 text-white" />
             <h2 className="text-4xl font-bold text-white mb-4">Join the Newsletter</h2>
@@ -305,7 +305,7 @@ export function PersonalBlogTemplate() {
 
       {/* Footer */}
       <footer className="bg-white py-12 border-t">
-        <div className="container mx-auto px-6 max-w-5xl">
+        <div className="container mx-auto px-4 sm:px-6 max-w-5xl">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="text-center md:text-left">
               <p className="text-2xl font-bold mb-2">{blogData.author.name}</p>

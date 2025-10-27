@@ -5,7 +5,10 @@ import { motion } from "framer-motion";
 import { ScrollReveal } from "@/components/animations/scroll-reveal";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { FiMail, FiStar } from "react-icons/fi";
+import { FiMail, FiStar ,
+  FiMenu,
+  FiX,
+} from "react-icons/fi";
 import Link from "next/link";
 
 const portfolioData = {
@@ -78,7 +81,8 @@ const portfolioData = {
 };
 
 export function Y2KRetroTemplate() {
-  const [cursorTrail, setCursorTrail] = useState<{ x: number; y: number; id: number }[]>([]);
+  const [cursorTrail, setCursorTrail] = useState<{ x: number;  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+ y: number; id: number }[]>([]);
 
   const handleMouseMove = (e: React.MouseEvent) => {
     const newParticle = {
@@ -109,7 +113,7 @@ export function Y2KRetroTemplate() {
 
       {/* Navigation */}
       <nav className="border-b-4 border-white bg-pink-500/90 backdrop-blur-sm">
-        <div className="container mx-auto px-6 py-4 flex items-center justify-between">
+        <div className="container mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
           <Link
             href="/"
             className="text-white font-bold text-lg hover:scale-110 transition-transform inline-block"
@@ -185,7 +189,7 @@ export function Y2KRetroTemplate() {
 
       {/* Visitor Counter - Y2K Style */}
       <section className="py-8 bg-white/40 backdrop-blur-sm border-y-4 border-white">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <div className="flex flex-wrap items-center justify-center gap-6">
             <motion.div
               className="bg-black text-green-400 px-6 py-3 rounded-lg border-4 border-white font-mono text-xl font-bold shadow-[4px_4px_0px_0px_rgba(255,255,255,1)]"
@@ -422,7 +426,7 @@ export function Y2KRetroTemplate() {
 
       {/* Footer */}
       <footer className="border-t-4 border-white bg-purple-500/90 backdrop-blur-sm py-8">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <p className="text-center font-bold text-white text-lg">
             made with 💖 by pixel dreams © {new Date().getFullYear()} ✨
           </p>

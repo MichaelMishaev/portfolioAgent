@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { FadeIn } from "@/components/animations/fade-in";
 import { ScrollReveal } from "@/components/animations/scroll-reveal";
 import { Button } from "@/components/ui/button";
@@ -170,27 +171,74 @@ const serviceData = {
 };
 
 export function AgencyServiceTemplate() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   return (
     <div className="min-h-screen bg-white text-gray-900">
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur-lg border-b border-gray-200">
-        <div className="container mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
-          <Link href="/" className="text-2xl font-bold text-gray-900">
-            PIXEL<span className="text-blue-600">PERFECT</span>
-          </Link>
-          <div className="flex items-center gap-8">
-            <a href="#services" className="text-sm font-medium hover:text-blue-600 transition-colors">
-              Services
-            </a>
-            <a href="#portfolio" className="text-sm font-medium hover:text-blue-600 transition-colors">
-              Portfolio
-            </a>
-            <a href="#process" className="text-sm font-medium hover:text-blue-600 transition-colors">
-              Process
-            </a>
-            <Button className="bg-blue-600 hover:bg-blue-700">Start a Project</Button>
+        <div className="container mx-auto px-4 sm:px-6 py-4">
+          <div className="flex items-center justify-between">
+            <Link href="/" className="text-2xl font-bold text-gray-900">
+              PIXEL<span className="text-blue-600">PERFECT</span>
+            </Link>
+
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex items-center gap-8">
+              <a href="#services" className="text-sm font-medium hover:text-blue-600 transition-colors">
+                Services
+              </a>
+              <a href="#portfolio" className="text-sm font-medium hover:text-blue-600 transition-colors">
+                Portfolio
+              </a>
+              <a href="#process" className="text-sm font-medium hover:text-blue-600 transition-colors">
+                Process
+              </a>
+              <Button className="bg-blue-600 hover:bg-blue-700">Start a Project</Button>
+            </div>
+
+            {/* Mobile Menu Button */}
+            <button
+              className="md:hidden p-2 text-gray-900 hover:text-blue-600 transition-colors"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label="Toggle menu"
+            >
+              {mobileMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
+            </button>
           </div>
         </div>
+
+        {/* Mobile Menu */}
+        {mobileMenuOpen && (
+          <div className="md:hidden bg-white/95 backdrop-blur-sm border-t">
+            <div className="container mx-auto px-4 sm:px-6 py-4 flex flex-col gap-4">
+              <a
+                href="#services"
+                className="text-sm font-medium hover:text-blue-600 transition-colors py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Services
+              </a>
+              <a
+                href="#portfolio"
+                className="text-sm font-medium hover:text-blue-600 transition-colors py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Portfolio
+              </a>
+              <a
+                href="#process"
+                className="text-sm font-medium hover:text-blue-600 transition-colors py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Process
+              </a>
+              <Button className="bg-blue-600 hover:bg-blue-700 w-full" onClick={() => setMobileMenuOpen(false)}>
+                Start a Project
+              </Button>
+            </div>
+          </div>
+        )}
       </nav>
 
       {/* Hero Section */}

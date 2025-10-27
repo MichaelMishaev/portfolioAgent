@@ -1,11 +1,12 @@
 "use client";
 
+import { useState } from "react";
 import { FadeIn } from "@/components/animations/fade-in";
 import { ScrollReveal } from "@/components/animations/scroll-reveal";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { FiMail, FiGithub, FiLinkedin, FiExternalLink, FiCode, FiLayout, FiDatabase } from "react-icons/fi";
+import { FiMail, FiGithub, FiLinkedin, FiExternalLink, FiCode, FiLayout, FiDatabase , FiMenu, FiX } from "react-icons/fi";
 import Link from "next/link";
 
 const portfolioData = {
@@ -282,15 +283,20 @@ const portfolioData = {
 };
 
 export function CardModularTemplate() {
-  return (
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+return (
     <div className="min-h-screen bg-background">
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b">
-        <div className="container mx-auto px-6 py-4 flex items-center justify-between">
-          <Link href="/" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+        <div className="container mx-auto px-4 sm:px-6 py-4">
+          <div className="flex items-center justify-between">
+            <Link href="/" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
             ← Back
           </Link>
-          <div className="flex items-center gap-6">
+
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex items-center gap-6">
+
             <a href="#about" className="text-sm hover:text-primary transition-colors">
               About
             </a>
@@ -300,12 +306,55 @@ export function CardModularTemplate() {
             <a href="#contact" className="text-sm hover:text-primary transition-colors">
               Contact
             </a>
+          
+            </div>
+
+            {/* Mobile Menu Button */}
+            <button
+              className="md:hidden p-2 text-foreground hover:text-primary transition-colors"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label="Toggle menu"
+            >
+              {mobileMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
+            </button>
           </div>
         </div>
+
+        {/* Mobile Menu */}
+        {mobileMenuOpen && (
+          <div className="md:hidden bg-background/95 backdrop-blur-sm border-t">
+            <div className="container mx-auto px-4 sm:px-6 py-4 flex flex-col gap-4">
+              <a
+                href="#about"
+                className="text-sm hover:text-primary transition-colors py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                About
+              </a>
+              <a
+                href="#projects"
+                className="text-sm hover:text-primary transition-colors py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Projects
+              </a>
+              <a
+                href="#contact"
+                className="text-sm hover:text-primary transition-colors py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Contact
+              </a>
+              <Button size="sm" className="w-full" onClick={() => setMobileMenuOpen(false)}>
+                Get Started
+              </Button>
+            </div>
+          </div>
+        )}
       </nav>
 
       {/* Hero Card */}
-      <section className="container mx-auto px-6 pt-32 pb-12">
+      <section className="container mx-auto px-4 sm:px-6 pt-32 pb-12">
         <FadeIn>
           <Card className="max-w-4xl mx-auto">
             <CardHeader className="text-center pb-8">
@@ -333,7 +382,7 @@ export function CardModularTemplate() {
       </section>
 
       {/* Stats Cards */}
-      <section className="container mx-auto px-6 py-12">
+      <section className="container mx-auto px-4 sm:px-6 py-12">
         <div className="grid md:grid-cols-4 gap-6 max-w-6xl mx-auto">
           {portfolioData.stats.map((stat, index) => (
             <FadeIn key={stat.label} delay={index * 0.1}>
@@ -353,7 +402,7 @@ export function CardModularTemplate() {
       </section>
 
       {/* Skills Section */}
-      <section id="about" className="container mx-auto px-6 py-12">
+      <section id="about" className="container mx-auto px-4 sm:px-6 py-12">
         <ScrollReveal>
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
             Skills & Expertise
@@ -402,7 +451,7 @@ export function CardModularTemplate() {
       </section>
 
       {/* Projects Grid */}
-      <section id="projects" className="container mx-auto px-6 py-12">
+      <section id="projects" className="container mx-auto px-4 sm:px-6 py-12">
         <ScrollReveal>
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
             Featured Projects
@@ -468,7 +517,7 @@ export function CardModularTemplate() {
       </section>
 
       {/* Process Cards */}
-      <section className="container mx-auto px-6 py-20">
+      <section className="container mx-auto px-4 sm:px-6 py-20">
         <ScrollReveal>
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
             My Process
@@ -491,7 +540,7 @@ export function CardModularTemplate() {
       </section>
 
       {/* Awards Section */}
-      <section className="container mx-auto px-6 py-20 border-t">
+      <section className="container mx-auto px-4 sm:px-6 py-20 border-t">
         <ScrollReveal>
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
             Awards & Recognition
@@ -514,7 +563,7 @@ export function CardModularTemplate() {
       </section>
 
       {/* Services Section */}
-      <section className="container mx-auto px-6 py-20 border-t">
+      <section className="container mx-auto px-4 sm:px-6 py-20 border-t">
         <ScrollReveal>
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
             Services
@@ -550,7 +599,7 @@ export function CardModularTemplate() {
       </section>
 
       {/* Testimonials Cards */}
-      <section className="container mx-auto px-6 py-20 border-t">
+      <section className="container mx-auto px-4 sm:px-6 py-20 border-t">
         <ScrollReveal>
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
             What Clients Say
@@ -582,7 +631,7 @@ export function CardModularTemplate() {
       </section>
 
       {/* Experience Timeline Section */}
-      <section className="container mx-auto px-6 py-20 border-t">
+      <section className="container mx-auto px-4 sm:px-6 py-20 border-t">
         <ScrollReveal>
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
             Experience & Journey
@@ -623,7 +672,7 @@ export function CardModularTemplate() {
       </section>
 
       {/* Achievements Section */}
-      <section className="container mx-auto px-6 py-20 border-t bg-muted/20">
+      <section className="container mx-auto px-4 sm:px-6 py-20 border-t bg-muted/20">
         <ScrollReveal>
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
             Achievements & Impact
@@ -646,7 +695,7 @@ export function CardModularTemplate() {
       </section>
 
       {/* Clients Logo Grid */}
-      <section className="container mx-auto px-6 py-20 border-t">
+      <section className="container mx-auto px-4 sm:px-6 py-20 border-t">
         <ScrollReveal>
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
             Trusted By Leading Brands
@@ -672,7 +721,7 @@ export function CardModularTemplate() {
       </section>
 
       {/* Blog Posts Section */}
-      <section className="container mx-auto px-6 py-20 border-t bg-muted/20">
+      <section className="container mx-auto px-4 sm:px-6 py-20 border-t bg-muted/20">
         <ScrollReveal>
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
             Latest Insights
@@ -714,7 +763,7 @@ export function CardModularTemplate() {
       </section>
 
       {/* Tools & Technologies Section */}
-      <section className="container mx-auto px-6 py-20 border-t">
+      <section className="container mx-auto px-4 sm:px-6 py-20 border-t">
         <ScrollReveal>
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
             Tools & Technologies
@@ -744,7 +793,7 @@ export function CardModularTemplate() {
       </section>
 
       {/* Newsletter Signup Card */}
-      <section className="container mx-auto px-6 py-20 border-t bg-muted/20">
+      <section className="container mx-auto px-4 sm:px-6 py-20 border-t bg-muted/20">
         <ScrollReveal>
           <Card className="max-w-2xl mx-auto bg-gradient-to-br from-primary/10 to-purple-500/10 border-primary/20">
             <CardContent className="p-12 text-center">
@@ -772,7 +821,7 @@ export function CardModularTemplate() {
       </section>
 
       {/* Contact Card */}
-      <section id="contact" className="container mx-auto px-6 py-20">
+      <section id="contact" className="container mx-auto px-4 sm:px-6 py-20">
         <ScrollReveal>
           <Card className="max-w-2xl mx-auto">
             <CardHeader className="text-center">
@@ -809,7 +858,7 @@ export function CardModularTemplate() {
 
       {/* Footer */}
       <footer className="border-t bg-background py-8">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <p className="text-sm text-muted-foreground text-center">
             © {new Date().getFullYear()} {portfolioData.name}. All rights reserved.
           </p>

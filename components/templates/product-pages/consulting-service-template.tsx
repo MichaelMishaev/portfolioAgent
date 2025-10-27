@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { FadeIn } from "@/components/animations/fade-in";
 import { ScrollReveal } from "@/components/animations/scroll-reveal";
 import { Button } from "@/components/ui/button";
@@ -18,7 +19,10 @@ import {
   FiBriefcase,
   FiZap,
   FiGlobe,
-} , FiMenu, FiX } from "react-icons/fi";
+,
+  FiMenu,
+  FiX,
+} from "react-icons/fi";
 import Link from "next/link";
 
 const serviceData = {
@@ -234,15 +238,20 @@ const serviceData = {
 };
 
 export function ConsultingServiceTemplate() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   return (
     <div className="min-h-screen bg-white text-gray-900">
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-lg border-b border-gray-200 shadow-sm">
-        <div className="container mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
-          <Link href="/" className="text-2xl font-bold">
+        <div className="container mx-auto px-4 sm:px-6 py-4">
+          <div className="flex items-center justify-between">
+            <Link href="/" className="text-2xl font-bold">
             APEX<span className="text-emerald-600">CONSULTING</span>
           </Link>
-          <div className="flex items-center gap-8">
+
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex items-center gap-6">
             <a href="#services" className="text-sm font-medium hover:text-emerald-600 transition-colors">
               Services
             </a>
@@ -257,7 +266,56 @@ export function ConsultingServiceTemplate() {
             </a>
             <Button className="bg-emerald-600 hover:bg-emerald-700">Contact Us</Button>
           </div>
+
+            {/* Mobile Menu Button */}
+            <button
+              className="md:hidden p-2 text-foreground hover:text-primary transition-colors"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label="Toggle menu"
+            >
+              {mobileMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
+            </button>
+          </div>
         </div>
+
+        {/* Mobile Menu */}
+        {mobileMenuOpen && (
+          <div className="md:hidden bg-background/95 backdrop-blur-sm border-t">
+            <div className="container mx-auto px-4 sm:px-6 py-4 flex flex-col gap-4">
+              <a
+                href="#services"
+                className="text-sm hover:text-primary transition-colors py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Services
+              </a>
+              <a
+                href="#engagements"
+                className="text-sm hover:text-primary transition-colors py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Case Studies
+              </a>
+              <a
+                href="#team"
+                className="text-sm hover:text-primary transition-colors py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Our Team
+              </a>
+              <a
+                href="#insights"
+                className="text-sm hover:text-primary transition-colors py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Insights
+              </a>
+              <Button size="sm" className="w-full" onClick={() => setMobileMenuOpen(false)}>
+                Contact Us
+              </Button>
+            </div>
+          </div>
+        )}
       </nav>
 
       {/* Hero Section */}

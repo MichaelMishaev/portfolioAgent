@@ -6,7 +6,10 @@ import { ScrollReveal } from "@/components/animations/scroll-reveal";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { FiCheck, FiStar, FiZap, FiCpu, FiActivity, FiTrendingUp } , FiMenu, FiX } from "react-icons/fi";
+import { FiCheck, FiStar, FiZap, FiCpu, FiActivity, FiTrendingUp ,
+  FiMenu,
+  FiX,
+} from "react-icons/fi";
 import Link from "next/link";
 
 const productData = {
@@ -93,7 +96,8 @@ const productData = {
 };
 
 export function TechProductTemplate() {
-  const [selectedColor, setSelectedColor] = useState(productData.configuration.colors[0]);
+  const [selectedColor, setSelectedColor] = useState(productData.configuration.colors[0]);  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   const [selectedImage, setSelectedImage] = useState(0);
   const [showVideo, setShowVideo] = useState(true);
 
@@ -101,18 +105,58 @@ export function TechProductTemplate() {
     <div className="min-h-screen bg-black text-white">
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-black/90 backdrop-blur-lg border-b border-yellow-500/20">
-        <div className="container mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
-          <Link href="/" className="text-xl font-bold text-yellow-400">
+        <div className="container mx-auto px-4 sm:px-6 py-4">
+          <div className="flex items-center justify-between">
+<Link href="/" className="text-xl font-bold text-yellow-400">
             HYPERX
           </Link>
-          <div className="flex items-center gap-6">
-            <a href="#specs" className="text-sm hover:text-yellow-400 transition-colors uppercase tracking-wider">Specs</a>
+
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex items-center gap-6">
+<a href="#specs" className="text-sm hover:text-yellow-400 transition-colors uppercase tracking-wider">Specs</a>
             <a href="#reviews" className="text-sm hover:text-yellow-400 transition-colors uppercase tracking-wider">Reviews</a>
             <Button className="bg-yellow-400 text-black hover:bg-yellow-300 font-bold">
               ADD TO CART - ${productData.price}
             </Button>
+            </div>
+
+            {/* Mobile Menu Button */}
+            <button
+              className="md:hidden p-2 text-foreground hover:text-primary transition-colors"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label="Toggle menu"
+            >
+              {mobileMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
+            </button>
           </div>
         </div>
+
+        {/* Mobile Menu */}
+        {mobileMenuOpen && (
+          <div className="md:hidden bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm border-t">
+            <div className="container mx-auto px-4 sm:px-6 py-4 flex flex-col gap-4">
+              <a
+                href="#specs"
+                className="text-sm hover:text-primary transition-colors py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Specs
+              </a>
+              <a
+                href="#reviews"
+                className="text-sm hover:text-primary transition-colors py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Reviews
+              </a>
+              <Button size="sm" className="w-full" onClick={() => setMobileMenuOpen(false)}>
+                
+              ADD TO CART - ${productData.price}
+            
+              </Button>
+            </div>
+          </div>
+        )}
       </nav>
 
       {/* Hero Section */}

@@ -155,7 +155,7 @@ export function ThreeDImmersiveTemplate() {
     <div className="min-h-screen bg-black text-white overflow-hidden">
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-black/50 backdrop-blur-md border-b border-white/10">
-        <div className="container mx-auto px-6 py-4 flex items-center justify-between">
+        <div className="container mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
           <Link
             href="/"
             className="text-sm text-gray-400 hover:text-white transition-colors"
@@ -364,7 +364,7 @@ export function ThreeDImmersiveTemplate() {
 
       {/* Footer */}
       <footer className="border-t border-gray-800 bg-black py-8">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <p className="text-sm text-gray-500 text-center">
             © {new Date().getFullYear()} {portfolioData.name}. Powered by Three.js & WebGL.
           </p>

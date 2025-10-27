@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FadeIn } from "@/components/animations/fade-in";
 import { Button } from "@/components/ui/button";
-import { FiMail, FiArrowRight, FiChevronLeft, FiChevronRight } from "react-icons/fi";
+import { FiMail, FiArrowRight, FiChevronLeft, FiChevronRight , FiMenu, FiX } from "react-icons/fi";
 import Link from "next/link";
 
 const portfolioData = {
@@ -234,7 +234,8 @@ const portfolioData = {
 };
 
 export function SplitScreenTemplate() {
-  const [activeProject, setActiveProject] = useState(0);
+  const [activeProject, setActiveProject] = useState(0);  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   const [direction, setDirection] = useState(0);
 
   const nextProject = () => {
@@ -253,24 +254,64 @@ export function SplitScreenTemplate() {
     <div className="min-h-screen bg-background">
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b">
-        <div className="container mx-auto px-6 py-4 flex items-center justify-between">
-          <Link href="/" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+        <div className="container mx-auto px-4 sm:px-6 py-4">
+          <div className="flex items-center justify-between">
+            <Link href="/" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
             ← Back
           </Link>
-          <div className="flex items-center gap-6">
+
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex items-center gap-6">
+
             <a href="#work" className="text-sm hover:text-primary transition-colors">
               Work
             </a>
             <a href="#contact" className="text-sm hover:text-primary transition-colors">
               Contact
             </a>
+          
+            </div>
+
+            {/* Mobile Menu Button */}
+            <button
+              className="md:hidden p-2 text-foreground hover:text-primary transition-colors"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label="Toggle menu"
+            >
+              {mobileMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
+            </button>
           </div>
         </div>
+
+        {/* Mobile Menu */}
+        {mobileMenuOpen && (
+          <div className="md:hidden bg-background/95 backdrop-blur-sm border-t">
+            <div className="container mx-auto px-4 sm:px-6 py-4 flex flex-col gap-4">
+              <a
+                href="#work"
+                className="text-sm hover:text-primary transition-colors py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Work
+              </a>
+              <a
+                href="#contact"
+                className="text-sm hover:text-primary transition-colors py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Contact
+              </a>
+              <Button size="sm" className="w-full" onClick={() => setMobileMenuOpen(false)}>
+                Get Started
+              </Button>
+            </div>
+          </div>
+        )}
       </nav>
 
       {/* Hero Split Screen */}
       <section className="h-screen flex items-center pt-16">
-        <div className="container mx-auto px-6 h-full">
+        <div className="container mx-auto px-4 sm:px-6 h-full">
           <div className="grid md:grid-cols-2 h-full gap-8">
             {/* Left Side - Text */}
             <div className="flex flex-col justify-center">
@@ -315,7 +356,7 @@ export function SplitScreenTemplate() {
 
       {/* Stats Split Screen */}
       <section className="py-20 border-t">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-4xl font-bold mb-4">By The Numbers</h2>
@@ -343,7 +384,7 @@ export function SplitScreenTemplate() {
 
       {/* Skills Split Screen */}
       <section className="py-20 border-t">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="order-2 md:order-1">
               <div className="flex flex-wrap gap-3">
@@ -369,11 +410,11 @@ export function SplitScreenTemplate() {
 
       {/* Projects Split Screen */}
       <section id="work" className="min-h-screen py-20 border-t">
-        <div className="container mx-auto px-6 mb-12">
-          <h2 className="text-4xl md:text-6xl font-bold">Selected Work</h2>
+        <div className="container mx-auto px-4 sm:px-6 mb-12">
+          <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold">Selected Work</h2>
         </div>
 
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <div className="grid md:grid-cols-2 gap-8 min-h-[70vh]">
             {/* Left Side - Image */}
             <div className="relative overflow-hidden rounded-2xl">
@@ -421,7 +462,7 @@ export function SplitScreenTemplate() {
                     </span>
                   </div>
 
-                  <h3 className="text-4xl md:text-6xl font-bold mb-4">
+                  <h3 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4">
                     {currentProject.title}
                   </h3>
 
@@ -496,7 +537,7 @@ export function SplitScreenTemplate() {
 
       {/* Testimonials Split Screen */}
       <section className="py-20 border-t">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <div className="grid md:grid-cols-2 gap-12">
             <div>
               <h2 className="text-4xl font-bold mb-8">Client Feedback</h2>
@@ -532,7 +573,7 @@ export function SplitScreenTemplate() {
 
       {/* Awards Section */}
       <section className="py-20 border-t">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-4xl font-bold mb-4">Awards & Recognition</h2>
@@ -559,7 +600,7 @@ export function SplitScreenTemplate() {
 
       {/* Services Section */}
       <section className="py-20 border-t bg-muted/20">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">Services</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -592,7 +633,7 @@ export function SplitScreenTemplate() {
 
       {/* Process/Methodology Section */}
       <section className="py-20 border-t">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
             <div>
               <h2 className="text-4xl font-bold mb-4">My Process</h2>
@@ -621,7 +662,7 @@ export function SplitScreenTemplate() {
 
       {/* Expertise Section - Split Screen */}
       <section className="py-20 border-t bg-muted/20">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <div className="grid md:grid-cols-2 gap-12">
             <div className="flex flex-col justify-center">
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -651,7 +692,7 @@ export function SplitScreenTemplate() {
 
       {/* Case Studies Section - Split Screen */}
       <section className="py-20 border-t">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <div className="grid md:grid-cols-2 gap-12 mb-12">
             <div>
               <h2 className="text-4xl font-bold mb-4">Featured Case Studies</h2>
@@ -686,7 +727,7 @@ export function SplitScreenTemplate() {
 
       {/* Collaborators Section - Split Screen */}
       <section className="py-20 border-t bg-muted/20">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-4xl font-bold mb-4">
@@ -714,7 +755,7 @@ export function SplitScreenTemplate() {
 
       {/* Newsletter Section - Split Screen */}
       <section className="py-20 border-t">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <div className="text-5xl mb-4">📬</div>
@@ -747,11 +788,11 @@ export function SplitScreenTemplate() {
 
       {/* Contact Split Screen */}
       <section id="contact" className="min-h-screen flex items-center border-t">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Left Side */}
             <div>
-              <h2 className="text-5xl md:text-7xl font-bold mb-6">
+              <h2 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-6">
                 Let's Work
                 <br />
                 Together
@@ -779,7 +820,7 @@ export function SplitScreenTemplate() {
 
       {/* Footer */}
       <footer className="border-t bg-background py-8">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <p className="text-sm text-muted-foreground text-center">
             © {new Date().getFullYear()} {portfolioData.name}. All rights reserved.
           </p>

@@ -112,7 +112,7 @@ export function DataDashboardTemplate() {
     <div className="min-h-screen bg-gray-950 text-white">
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-gray-900/80 backdrop-blur-md border-b border-gray-800">
-        <div className="container mx-auto px-6 py-4 flex items-center justify-between">
+        <div className="container mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
           <Link
             href="/"
             className="text-sm text-gray-400 hover:text-white transition-colors"
@@ -414,7 +414,7 @@ export function DataDashboardTemplate() {
 
       {/* Footer */}
       <footer className="border-t border-gray-800 bg-gray-900 py-8">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <p className="text-sm text-gray-500 text-center">
             © {new Date().getFullYear()} {portfolioData.name}. Powered by Recharts & React.
           </p>

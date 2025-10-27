@@ -6,7 +6,7 @@ import { FadeIn } from "@/components/animations/fade-in";
 import { ScrollReveal } from "@/components/animations/scroll-reveal";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { FiMail, FiInstagram, FiTwitter, FiX } from "react-icons/fi";
+import { FiMail, FiInstagram, FiTwitter, FiX , FiMenu } from "react-icons/fi";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -203,7 +203,8 @@ const breakpointColumns = {
 };
 
 export function GridMasonryTemplate() {
-  const [selectedCategory, setSelectedCategory] = useState("All");
+  const [selectedCategory, setSelectedCategory] = useState("All");  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   const [selectedItem, setSelectedItem] = useState<typeof portfolioData.items[0] | null>(null);
 
   const filteredItems =
@@ -215,22 +216,55 @@ export function GridMasonryTemplate() {
     <div className="min-h-screen bg-background">
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-40 bg-background/95 backdrop-blur-sm border-b">
-        <div className="container mx-auto px-6 py-4 flex items-center justify-between">
-          <Link href="/" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+        <div className="container mx-auto px-4 sm:px-6 py-4">
+          <div className="flex items-center justify-between">
+            <Link href="/" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
             ← Back
           </Link>
-          <div className="flex items-center gap-6">
+
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex items-center gap-6">
+
             <a href="#contact" className="text-sm hover:text-primary transition-colors">
               Contact
             </a>
+          
+            </div>
+
+            {/* Mobile Menu Button */}
+            <button
+              className="md:hidden p-2 text-foreground hover:text-primary transition-colors"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label="Toggle menu"
+            >
+              {mobileMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
+            </button>
           </div>
         </div>
+
+        {/* Mobile Menu */}
+        {mobileMenuOpen && (
+          <div className="md:hidden bg-background/95 backdrop-blur-sm border-t">
+            <div className="container mx-auto px-4 sm:px-6 py-4 flex flex-col gap-4">
+              <a
+                href="#contact"
+                className="text-sm hover:text-primary transition-colors py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Contact
+              </a>
+              <Button size="sm" className="w-full" onClick={() => setMobileMenuOpen(false)}>
+                Get Started
+              </Button>
+            </div>
+          </div>
+        )}
       </nav>
 
       {/* Hero Section */}
-      <section className="container mx-auto px-6 pt-32 pb-16 text-center">
+      <section className="container mx-auto px-4 sm:px-6 pt-32 pb-16 text-center">
         <FadeIn>
-          <h1 className="text-5xl md:text-7xl font-bold mb-4">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-4">
             {portfolioData.name}
           </h1>
         </FadeIn>
@@ -249,7 +283,7 @@ export function GridMasonryTemplate() {
       </section>
 
       {/* Filter Categories */}
-      <section className="container mx-auto px-6 py-8">
+      <section className="container mx-auto px-4 sm:px-6 py-8">
         <div className="flex flex-wrap justify-center gap-3">
           {portfolioData.categories.map((category) => (
             <Button
@@ -265,7 +299,7 @@ export function GridMasonryTemplate() {
       </section>
 
       {/* Masonry Grid */}
-      <section className="container mx-auto px-6 py-8">
+      <section className="container mx-auto px-4 sm:px-6 py-8">
         <Masonry
           breakpointCols={breakpointColumns}
           className="flex -ml-6 w-auto"
@@ -305,7 +339,7 @@ export function GridMasonryTemplate() {
       </section>
 
       {/* Approach Section */}
-      <section className="container mx-auto px-6 py-20 border-t">
+      <section className="container mx-auto px-4 sm:px-6 py-20 border-t">
         <ScrollReveal>
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">My Approach</h2>
         </ScrollReveal>
@@ -322,7 +356,7 @@ export function GridMasonryTemplate() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="container mx-auto px-6 py-20 border-t">
+      <section className="container mx-auto px-4 sm:px-6 py-20 border-t">
         <ScrollReveal>
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Client Feedback</h2>
         </ScrollReveal>
@@ -342,7 +376,7 @@ export function GridMasonryTemplate() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="container mx-auto px-6 py-20 border-t">
+      <section id="contact" className="container mx-auto px-4 sm:px-6 py-20 border-t">
         <ScrollReveal>
           <div className="max-w-2xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -412,7 +446,7 @@ export function GridMasonryTemplate() {
 
       {/* Footer */}
       <footer className="border-t bg-background">
-        <div className="container mx-auto px-6 py-8">
+        <div className="container mx-auto px-4 sm:px-6 py-8">
           <p className="text-sm text-muted-foreground text-center">
             © {new Date().getFullYear()} {portfolioData.name}. All rights reserved.
           </p>

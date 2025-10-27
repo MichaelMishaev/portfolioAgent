@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
 import { FadeIn } from "@/components/animations/fade-in";
 import { ScrollReveal } from "@/components/animations/scroll-reveal";
@@ -19,7 +19,10 @@ import {
   FiPackage,
   FiGlobe,
   FiHeart
-} , FiMenu, FiX } from "react-icons/fi";
+,
+  FiMenu,
+  FiX,
+} from "react-icons/fi";
 import Link from "next/link";
 
 const productData = {
@@ -258,6 +261,8 @@ const productData = {
 };
 
 export function PremiumProductTemplate() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   const [selectedMaterial, setSelectedMaterial] = useState(0);
   const [selectedComplications, setSelectedComplications] = useState<number[]>([]);
   const [selectedStrap, setSelectedStrap] = useState(0);
@@ -293,11 +298,14 @@ export function PremiumProductTemplate() {
     <div className="min-h-screen bg-black text-white">
       {/* Elegant Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-black/60 backdrop-blur-xl border-b border-white/5">
-        <div className="container mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
-          <Link href="/" className="text-2xl font-light tracking-[0.2em] text-white">
+        <div className="container mx-auto px-4 sm:px-6 py-4">
+          <div className="flex items-center justify-between">
+            <Link href="/" className="text-2xl font-light tracking-[0.2em] text-white">
             CHRONOS
           </Link>
-          <div className="flex items-center gap-8">
+
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex items-center gap-6">
             <a href="#heritage" className="text-xs uppercase tracking-widest text-gray-300 hover:text-white transition-colors">Heritage</a>
             <a href="#configure" className="text-xs uppercase tracking-widest text-gray-300 hover:text-white transition-colors">Configure</a>
             <a href="#ownership" className="text-xs uppercase tracking-widest text-gray-300 hover:text-white transition-colors">Ownership</a>
@@ -305,7 +313,49 @@ export function PremiumProductTemplate() {
               Inquire
             </Button>
           </div>
+
+            {/* Mobile Menu Button */}
+            <button
+              className="md:hidden p-2 text-foreground hover:text-primary transition-colors"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label="Toggle menu"
+            >
+              {mobileMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
+            </button>
+          </div>
         </div>
+
+        {/* Mobile Menu */}
+        {mobileMenuOpen && (
+          <div className="md:hidden bg-background/95 backdrop-blur-sm border-t">
+            <div className="container mx-auto px-4 sm:px-6 py-4 flex flex-col gap-4">
+              <a
+                href="#heritage"
+                className="text-sm hover:text-primary transition-colors py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Heritage
+              </a>
+              <a
+                href="#configure"
+                className="text-sm hover:text-primary transition-colors py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Configure
+              </a>
+              <a
+                href="#ownership"
+                className="text-sm hover:text-primary transition-colors py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Ownership
+              </a>
+              <Button size="sm" className="w-full" onClick={() => setMobileMenuOpen(false)}>
+                Get Started
+              </Button>
+            </div>
+          </div>
+        )}
       </nav>
 
       {/* Cinematic Hero with Parallax */}

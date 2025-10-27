@@ -16,7 +16,10 @@ import {
   FiMessageCircle,
   FiPause,
   FiX,
-} , FiMenu, FiX } from "react-icons/fi";
+,
+  FiMenu,
+  FiX,
+} from "react-icons/fi";
 import Link from "next/link";
 
 const serviceData = {
@@ -271,6 +274,8 @@ const serviceData = {
 };
 
 export function DFYouServiceTemplate() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   const [selectedCategory, setSelectedCategory] = useState("All");
 
   const filteredProjects =
@@ -282,11 +287,14 @@ export function DFYouServiceTemplate() {
     <div className="min-h-screen bg-white text-stone-900">
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-stone-200">
-        <div className="container mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
-          <Link href="/" className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-pink-500 bg-clip-text text-transparent">
+        <div className="container mx-auto px-4 sm:px-6 py-4">
+          <div className="flex items-center justify-between">
+            <Link href="/" className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-pink-500 bg-clip-text text-transparent">
             DESIGN ON TAP
           </Link>
-          <div className="flex items-center gap-8">
+
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex items-center gap-6">
             <a
               href="#work"
               className="text-sm font-medium hover:text-blue-600 transition-colors"
@@ -306,7 +314,49 @@ export function DFYouServiceTemplate() {
               Subscribe Now
             </Button>
           </div>
+
+            {/* Mobile Menu Button */}
+            <button
+              className="md:hidden p-2 text-foreground hover:text-primary transition-colors"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label="Toggle menu"
+            >
+              {mobileMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
+            </button>
+          </div>
         </div>
+
+        {/* Mobile Menu */}
+        {mobileMenuOpen && (
+          <div className="md:hidden bg-background/95 backdrop-blur-sm border-t">
+            <div className="container mx-auto px-4 sm:px-6 py-4 flex flex-col gap-4">
+              <a
+                href="#work"
+                className="text-sm hover:text-primary transition-colors py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Work
+              </a>
+              <a
+                href="#pricing"
+                className="text-sm hover:text-primary transition-colors py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Pricing
+              </a>
+              <a
+                href="#faq"
+                className="text-sm hover:text-primary transition-colors py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                FAQ
+              </a>
+              <Button size="sm" className="w-full" onClick={() => setMobileMenuOpen(false)}>
+                Get Started
+              </Button>
+            </div>
+          </div>
+        )}
       </nav>
 
       {/* Hero Section */}

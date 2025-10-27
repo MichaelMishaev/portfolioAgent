@@ -14,6 +14,8 @@ import {
   FiGithub,
   FiMaximize,
   FiMove,
+  FiMenu,
+  FiX,
 } from "react-icons/fi";
 import Link from "next/link";
 
@@ -135,7 +137,8 @@ function FloatingLayer({
 }
 
 export function ARSpatialTemplate() {
-  const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
+  const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
 
@@ -176,7 +179,7 @@ export function ARSpatialTemplate() {
 
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-40 bg-black/20 backdrop-blur-xl border-b border-white/10">
-        <div className="container mx-auto px-6 py-4 flex items-center justify-between">
+        <div className="container mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
           <Link
             href="/"
             className="text-sm text-gray-400 hover:text-cyan-400 transition-colors"
@@ -391,7 +394,7 @@ export function ARSpatialTemplate() {
 
       {/* Footer */}
       <footer className="border-t border-white/10 bg-black/40 backdrop-blur-xl py-8">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <p className="text-sm text-gray-400 text-center">
             © {new Date().getFullYear()} {portfolioData.name}. Designed for the spatial web.
           </p>

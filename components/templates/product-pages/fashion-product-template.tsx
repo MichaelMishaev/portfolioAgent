@@ -6,7 +6,10 @@ import { ScrollReveal } from "@/components/animations/scroll-reveal";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { FiCheck, FiHeart, FiTruck, FiRefreshCw, FiPackage, FiFeather } , FiMenu, FiX } from "react-icons/fi";
+import { FiCheck, FiHeart, FiTruck, FiRefreshCw, FiPackage, FiFeather ,
+  FiMenu,
+  FiX,
+} from "react-icons/fi";
 import Link from "next/link";
 
 const productData = {
@@ -161,6 +164,8 @@ const productData = {
 };
 
 export function FashionProductTemplate() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   const [selectedColor, setSelectedColor] = useState(productData.colors[0]);
   const [selectedSize, setSelectedSize] = useState(productData.sizes[2]);
   const [isWishlisted, setIsWishlisted] = useState(false);
@@ -169,11 +174,14 @@ export function FashionProductTemplate() {
     <div className="min-h-screen bg-stone-50 text-stone-900">
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-stone-50/95 backdrop-blur-sm border-b border-stone-200">
-        <div className="container mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
-          <Link href="/" className="text-xl font-medium tracking-wide">
+        <div className="container mx-auto px-4 sm:px-6 py-4">
+          <div className="flex items-center justify-between">
+            <Link href="/" className="text-xl font-medium tracking-wide">
             URBAN STRIDE
           </Link>
-          <div className="flex items-center gap-8">
+
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex items-center gap-6">
             <a href="#features" className="text-sm hover:text-stone-600 transition-colors">
               Features
             </a>
@@ -189,7 +197,42 @@ export function FashionProductTemplate() {
               <FiHeart className={`w-5 h-5 ${isWishlisted ? "fill-current" : ""}`} />
             </Button>
           </div>
+
+            {/* Mobile Menu Button */}
+            <button
+              className="md:hidden p-2 text-foreground hover:text-primary transition-colors"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label="Toggle menu"
+            >
+              {mobileMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
+            </button>
+          </div>
         </div>
+
+        {/* Mobile Menu */}
+        {mobileMenuOpen && (
+          <div className="md:hidden bg-background/95 backdrop-blur-sm border-t">
+            <div className="container mx-auto px-4 sm:px-6 py-4 flex flex-col gap-4">
+              <a
+                href="#features"
+                className="text-sm hover:text-primary transition-colors py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Features
+              </a>
+              <a
+                href="#sustainability"
+                className="text-sm hover:text-primary transition-colors py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Sustainability
+              </a>
+              <Button size="sm" className="w-full" onClick={() => setMobileMenuOpen(false)}>
+                Get Started
+              </Button>
+            </div>
+          </div>
+        )}
       </nav>
 
       {/* Hero Section - Vertical Scrolling Gallery */}

@@ -1,9 +1,9 @@
 "use client";
 
-import { motion, useScroll, useTransform } from "framer-motion";
 import { useState, useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { FiMail } from "react-icons/fi";
+import { FiMail , FiMenu, FiX } from "react-icons/fi";
 import Link from "next/link";
 
 const portfolioData = {
@@ -30,7 +30,8 @@ const portfolioData = {
 };
 
 export function KineticTypographyTemplate() {
-  const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
+  const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   const containerRef = useRef(null);
   const { scrollYProgress } = useScroll();
 
@@ -54,7 +55,7 @@ export function KineticTypographyTemplate() {
     >
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 mix-blend-difference">
-        <div className="container mx-auto px-6 py-6 flex items-center justify-between">
+        <div className="container mx-auto px-4 sm:px-6 py-6 flex items-center justify-between">
           <Link href="/" className="text-sm text-white hover:text-gray-300 transition-colors">
             ← BACK
           </Link>
@@ -143,7 +144,7 @@ export function KineticTypographyTemplate() {
           viewport={{ once: true }}
         >
           <motion.p
-            className="text-4xl md:text-6xl font-light leading-tight"
+            className="text-3xl sm:text-4xl md:text-6xl font-light leading-tight"
             animate={{
               fontWeight: [300, 700, 300],
             }}
@@ -259,7 +260,7 @@ export function KineticTypographyTemplate() {
             >
               <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                 <motion.h3
-                  className="text-4xl md:text-6xl font-black"
+                  className="text-3xl sm:text-4xl md:text-6xl font-black"
                   whileHover={{
                     scaleX: 1.05,
                     letterSpacing: "0.05em",
@@ -406,7 +407,7 @@ export function KineticTypographyTemplate() {
 
       {/* Footer */}
       <footer className="border-t border-white/10 py-8">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <p className="text-sm text-gray-500 text-center">
             © {new Date().getFullYear()} MOTION STUDIO. ALL RIGHTS RESERVED.
           </p>

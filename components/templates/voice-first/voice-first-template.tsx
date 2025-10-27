@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ScrollReveal } from "@/components/animations/scroll-reveal";
@@ -13,6 +14,9 @@ import {
   FiMail,
   FiVolume2,
   FiCommand,
+,
+  FiMenu,
+  FiX,
 } from "react-icons/fi";
 import Link from "next/link";
 
@@ -111,7 +115,8 @@ function CommandChip({ text, onClick }: { text: string; onClick: () => void }) {
 }
 
 export function VoiceFirstTemplate() {
-  const [isListening, setIsListening] = useState(false);
+  const [isListening, setIsListening] = useState(false);  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   const [messages, setMessages] = useState(sampleConversation);
   const [showCommands, setShowCommands] = useState(true);
 
@@ -137,7 +142,7 @@ export function VoiceFirstTemplate() {
     <div className="min-h-screen bg-gradient-to-br from-gray-950 via-blue-950 to-gray-950 text-white overflow-x-hidden max-w-full">
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-gray-900/80 backdrop-blur-md border-b border-gray-800">
-        <div className="container mx-auto px-6 py-4 flex items-center justify-between">
+        <div className="container mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
           <Link
             href="/"
             className="text-sm text-gray-400 hover:text-white transition-colors"
@@ -160,7 +165,7 @@ export function VoiceFirstTemplate() {
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              className="text-5xl md:text-7xl font-black mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent"
+              className="text-4xl sm:text-5xl md:text-7xl font-black mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent"
             >
               {portfolioData.name}
             </motion.h1>
@@ -430,7 +435,7 @@ export function VoiceFirstTemplate() {
 
       {/* Footer */}
       <footer className="border-t border-gray-800 bg-gray-900/50 py-8">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <p className="text-sm text-gray-500 text-center">
             © {new Date().getFullYear()} {portfolioData.name}. Designed for voice-first experiences.
           </p>

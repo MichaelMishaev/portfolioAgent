@@ -6,7 +6,10 @@ import { ScrollReveal } from "@/components/animations/scroll-reveal";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { FiCheck, FiZap, FiWind, FiBattery, FiActivity, FiAward, FiTrendingUp, FiFilter } , FiMenu, FiX } from "react-icons/fi";
+import { FiCheck, FiZap, FiWind, FiBattery, FiActivity, FiAward, FiTrendingUp, FiFilter ,
+  FiMenu,
+  FiX,
+} from "react-icons/fi";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
@@ -196,24 +199,70 @@ const productData = {
 };
 
 export function VacuumProductTemplate() {
-  const [selectedMode, setSelectedMode] = useState(productData.modes[1]);
+  const [selectedMode, setSelectedMode] = useState(productData.modes[1]);  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   const [selectedColor, setSelectedColor] = useState(productData.colors[0]);
 
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900">
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-lg border-b">
-        <div className="container mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
-          <Link href="/" className="text-xl font-bold text-blue-600">
+        <div className="container mx-auto px-4 sm:px-6 py-4">
+          <div className="flex items-center justify-between">
+<Link href="/" className="text-xl font-bold text-blue-600">
             QUANTUM
           </Link>
-          <div className="flex items-center gap-6">
-            <a href="#features" className="text-sm hover:text-blue-600 transition-colors font-medium">Features</a>
+
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex items-center gap-6">
+<a href="#features" className="text-sm hover:text-blue-600 transition-colors font-medium">Features</a>
             <a href="#specs" className="text-sm hover:text-blue-600 transition-colors font-medium">Specs</a>
             <a href="#compare" className="text-sm hover:text-blue-600 transition-colors font-medium">Compare</a>
             <Button size="sm" className="bg-blue-600 hover:bg-blue-700">Buy Now</Button>
+            </div>
+
+            {/* Mobile Menu Button */}
+            <button
+              className="md:hidden p-2 text-foreground hover:text-primary transition-colors"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label="Toggle menu"
+            >
+              {mobileMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
+            </button>
           </div>
         </div>
+
+        {/* Mobile Menu */}
+        {mobileMenuOpen && (
+          <div className="md:hidden bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm border-t">
+            <div className="container mx-auto px-4 sm:px-6 py-4 flex flex-col gap-4">
+              <a
+                href="#features"
+                className="text-sm hover:text-primary transition-colors py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Features
+              </a>
+              <a
+                href="#specs"
+                className="text-sm hover:text-primary transition-colors py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Specs
+              </a>
+              <a
+                href="#compare"
+                className="text-sm hover:text-primary transition-colors py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Compare
+              </a>
+              <Button size="sm" className="w-full" onClick={() => setMobileMenuOpen(false)}>
+                Buy Now
+              </Button>
+            </div>
+          </div>
+        )}
       </nav>
 
       {/* Hero Section */}

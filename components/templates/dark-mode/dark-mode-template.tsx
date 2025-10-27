@@ -1,12 +1,12 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { FadeIn } from "@/components/animations/fade-in";
 import { ScrollReveal } from "@/components/animations/scroll-reveal";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { FiMail, FiGithub, FiLinkedin, FiInstagram, FiExternalLink } from "react-icons/fi";
+import { FiMail, FiGithub, FiLinkedin, FiInstagram, FiExternalLink , FiMenu, FiX } from "react-icons/fi";
 import Link from "next/link";
-import { useEffect, useState } from "react";
 
 const portfolioData = {
   name: "Sarah Chen",
@@ -84,7 +84,8 @@ const portfolioData = {
 };
 
 export function DarkModeTemplate() {
-  const [mounted, setMounted] = useState(false);
+  const [mounted, setMounted] = useState(false);  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
 
   useEffect(() => {
     setMounted(true);
@@ -96,14 +97,18 @@ export function DarkModeTemplate() {
     <div className="min-h-screen bg-black text-white">
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
-        <div className="container mx-auto px-6 py-4 flex items-center justify-between">
-          <Link
+        <div className="container mx-auto px-4 sm:px-6 py-4">
+          <div className="flex items-center justify-between">
+            <Link
             href="/"
             className="text-sm text-gray-400 hover:text-white transition-colors"
           >
             ← Back
           </Link>
-          <div className="flex items-center gap-8">
+
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex items-center gap-6">
+
             <a
               href="#work"
               className="text-sm hover:text-cyan-400 transition-colors"
@@ -122,8 +127,51 @@ export function DarkModeTemplate() {
             >
               Contact
             </a>
+          
+            </div>
+
+            {/* Mobile Menu Button */}
+            <button
+              className="md:hidden p-2 text-foreground hover:text-primary transition-colors"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label="Toggle menu"
+            >
+              {mobileMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
+            </button>
           </div>
         </div>
+
+        {/* Mobile Menu */}
+        {mobileMenuOpen && (
+          <div className="md:hidden bg-background/95 backdrop-blur-sm border-t">
+            <div className="container mx-auto px-4 sm:px-6 py-4 flex flex-col gap-4">
+              <a
+                href="#work"
+                className="text-sm hover:text-primary transition-colors py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Work
+              </a>
+              <a
+                href="#about"
+                className="text-sm hover:text-primary transition-colors py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                About
+              </a>
+              <a
+                href="#contact"
+                className="text-sm hover:text-primary transition-colors py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Contact
+              </a>
+              <Button size="sm" className="w-full" onClick={() => setMobileMenuOpen(false)}>
+                Get Started
+              </Button>
+            </div>
+          </div>
+        )}
       </nav>
 
       {/* Hero Section with Video Background Effect */}
@@ -166,7 +214,7 @@ export function DarkModeTemplate() {
       </section>
 
       {/* Stats Section */}
-      <section className="container mx-auto px-6 py-20 border-t border-white/10">
+      <section className="container mx-auto px-4 sm:px-6 py-20 border-t border-white/10">
         <div className="grid md:grid-cols-3 gap-12 max-w-5xl mx-auto">
           {portfolioData.stats.map((stat, index) => (
             <ScrollReveal key={stat.label} delay={index * 0.1}>
@@ -184,7 +232,7 @@ export function DarkModeTemplate() {
       </section>
 
       {/* Work Section */}
-      <section id="work" className="container mx-auto px-6 py-32">
+      <section id="work" className="container mx-auto px-4 sm:px-6 py-32">
         <ScrollReveal>
           <h2 className="text-sm font-semibold text-cyan-400 mb-12 uppercase tracking-wider">
             Selected Work
@@ -226,7 +274,7 @@ export function DarkModeTemplate() {
       </section>
 
       {/* Services Section */}
-      <section className="container mx-auto px-6 py-32 border-t border-white/10">
+      <section className="container mx-auto px-4 sm:px-6 py-32 border-t border-white/10">
         <ScrollReveal>
           <h2 className="text-sm font-semibold text-cyan-400 mb-12 uppercase tracking-wider text-center">
             What I Do
@@ -248,7 +296,7 @@ export function DarkModeTemplate() {
       <section id="about" className="relative py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-black via-gray-900/50 to-black" />
 
-        <div className="container mx-auto px-6 relative z-10">
+        <div className="container mx-auto px-4 sm:px-6 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             <ScrollReveal>
               <h2 className="text-sm font-semibold text-cyan-400 mb-8 uppercase tracking-wider">
@@ -289,7 +337,7 @@ export function DarkModeTemplate() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="container mx-auto px-6 py-32 border-t border-white/10">
+      <section className="container mx-auto px-4 sm:px-6 py-32 border-t border-white/10">
         <ScrollReveal>
           <h2 className="text-sm font-semibold text-cyan-400 mb-16 uppercase tracking-wider text-center">
             Client Testimonials
@@ -314,10 +362,10 @@ export function DarkModeTemplate() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="container mx-auto px-6 py-32">
+      <section id="contact" className="container mx-auto px-4 sm:px-6 py-32">
         <div className="max-w-3xl mx-auto text-center">
           <ScrollReveal>
-            <h2 className="text-5xl md:text-7xl font-bold mb-8">
+            <h2 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-8">
               Let's Create Something{" "}
               <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
                 Amazing
@@ -345,7 +393,7 @@ export function DarkModeTemplate() {
 
       {/* Footer */}
       <footer className="border-t border-white/10 bg-black">
-        <div className="container mx-auto px-6 py-8">
+        <div className="container mx-auto px-4 sm:px-6 py-8">
           <p className="text-sm text-gray-500 text-center">
             © {new Date().getFullYear()} {portfolioData.name}. All rights
             reserved.

@@ -195,7 +195,7 @@ export function TechBlogTemplate() {
 
       {/* Header */}
       <header className={`sticky top-0 z-50 ${darkMode ? 'bg-gray-900 border-gray-800' : 'bg-white border-gray-200'} border-b backdrop-blur-lg bg-opacity-90`}>
-        <div className="container mx-auto px-6 py-4">
+        <div className="container mx-auto px-4 sm:px-6 py-4">
           <div className="flex items-center justify-between">
             <Link href="/" className="text-2xl font-bold flex items-center gap-2">
               <FiCode className="w-7 h-7 text-blue-600" />
@@ -230,7 +230,7 @@ export function TechBlogTemplate() {
 
       {/* Hero Section */}
       <section className={`py-20 ${darkMode ? 'bg-gradient-to-br from-gray-900 via-blue-950 to-gray-900' : 'bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50'}`}>
-        <div className="container mx-auto px-6 max-w-5xl text-center">
+        <div className="container mx-auto px-4 sm:px-6 max-w-5xl text-center">
           <FadeIn>
             <Badge className="mb-6 bg-blue-600 text-white">
               <FiZap className="w-3 h-3 mr-1" />
@@ -264,7 +264,7 @@ export function TechBlogTemplate() {
 
       {/* Featured Article */}
       <section className={`py-16 ${darkMode ? 'bg-gray-900' : 'bg-white'}`}>
-        <div className="container mx-auto px-6 max-w-6xl">
+        <div className="container mx-auto px-4 sm:px-6 max-w-6xl">
           <div className="flex items-center gap-2 mb-8">
             <FiTrendingUp className="w-6 h-6 text-blue-600" />
             <h2 className="text-3xl font-bold">Featured Tutorial</h2>
@@ -362,7 +362,7 @@ export function TechBlogTemplate() {
 
       {/* Learning Series */}
       <section className={`py-16 ${darkMode ? 'bg-gray-800' : 'bg-gray-50'}`}>
-        <div className="container mx-auto px-6 max-w-6xl">
+        <div className="container mx-auto px-4 sm:px-6 max-w-6xl">
           <div className="flex items-center justify-between mb-8">
             <div>
               <h2 className="text-3xl font-bold mb-2">Learning Series</h2>
@@ -424,7 +424,7 @@ export function TechBlogTemplate() {
 
       {/* Latest Articles */}
       <section className={`py-16 ${darkMode ? 'bg-gray-900' : 'bg-white'}`}>
-        <div className="container mx-auto px-6 max-w-6xl">
+        <div className="container mx-auto px-4 sm:px-6 max-w-6xl">
           <div className="flex items-center justify-between mb-8">
             <h2 className="text-3xl font-bold">Latest Articles</h2>
             <div className="flex items-center gap-2">
@@ -526,7 +526,7 @@ export function TechBlogTemplate() {
 
       {/* Topics Grid */}
       <section className={`py-16 ${darkMode ? 'bg-gray-800' : 'bg-gray-50'}`}>
-        <div className="container mx-auto px-6 max-w-6xl">
+        <div className="container mx-auto px-4 sm:px-6 max-w-6xl">
           <h2 className="text-3xl font-bold mb-8">Explore Topics</h2>
           <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
             {techBlogData.topics.map((topic, index) => (
@@ -544,7 +544,7 @@ export function TechBlogTemplate() {
 
       {/* Newsletter */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
-        <div className="container mx-auto px-6 max-w-4xl text-center">
+        <div className="container mx-auto px-4 sm:px-6 max-w-4xl text-center">
           <ScrollReveal>
             <h2 className="text-4xl font-bold text-white mb-4">Join 50,000+ Developers</h2>
             <p className="text-xl text-blue-100 mb-8">
@@ -567,7 +567,7 @@ export function TechBlogTemplate() {
 
       {/* Footer */}
       <footer className={`py-12 ${darkMode ? 'bg-gray-900 border-gray-800' : 'bg-white border-gray-200'} border-t`}>
-        <div className="container mx-auto px-6 max-w-6xl">
+        <div className="container mx-auto px-4 sm:px-6 max-w-6xl">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
               <div className="flex items-center gap-2 text-xl font-bold mb-4">

@@ -6,7 +6,10 @@ import { ScrollReveal } from "@/components/animations/scroll-reveal";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { FiAward, FiMapPin, FiCalendar, FiClock, FiZap, FiShield } , FiMenu, FiX } from "react-icons/fi";
+import { FiAward, FiMapPin, FiCalendar, FiClock, FiZap, FiShield ,
+  FiMenu,
+  FiX,
+} from "react-icons/fi";
 import Link from "next/link";
 
 const productData = {
@@ -152,6 +155,8 @@ const productData = {
 };
 
 export function LuxuryProductTemplate() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   const [selectedMaterial, setSelectedMaterial] = useState(productData.configurator.materials[0]);
   const [selectedDial, setSelectedDial] = useState(productData.configurator.dials[0]);
   const [selectedStrap, setSelectedStrap] = useState(productData.configurator.straps[0]);
@@ -166,11 +171,14 @@ export function LuxuryProductTemplate() {
     <div className="min-h-screen bg-black text-white">
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-md border-b border-neutral-800">
-        <div className="container mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
-          <Link href="/" className="text-xl font-light tracking-[0.2em]">
+        <div className="container mx-auto px-4 sm:px-6 py-4">
+          <div className="flex items-center justify-between">
+            <Link href="/" className="text-xl font-light tracking-[0.2em]">
             CHRONOS
           </Link>
-          <div className="flex items-center gap-8">
+
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex items-center gap-6">
             <a
               href="#heritage"
               className="text-sm tracking-wider hover:text-amber-500 transition-colors"
@@ -191,7 +199,42 @@ export function LuxuryProductTemplate() {
               FIND BOUTIQUE
             </Button>
           </div>
+
+            {/* Mobile Menu Button */}
+            <button
+              className="md:hidden p-2 text-foreground hover:text-primary transition-colors"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label="Toggle menu"
+            >
+              {mobileMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
+            </button>
+          </div>
         </div>
+
+        {/* Mobile Menu */}
+        {mobileMenuOpen && (
+          <div className="md:hidden bg-background/95 backdrop-blur-sm border-t">
+            <div className="container mx-auto px-4 sm:px-6 py-4 flex flex-col gap-4">
+              <a
+                href="#heritage"
+                className="text-sm hover:text-primary transition-colors py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                HERITAGE
+              </a>
+              <a
+                href="#craftsmanship"
+                className="text-sm hover:text-primary transition-colors py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                CRAFTSMANSHIP
+              </a>
+              <Button size="sm" className="w-full" onClick={() => setMobileMenuOpen(false)}>
+                Get Started
+              </Button>
+            </div>
+          </div>
+        )}
       </nav>
 
       {/* Cinematic Video Hero */}

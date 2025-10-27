@@ -122,11 +122,11 @@ export function SinglePageTemplate() {
 
             {/* Mobile Menu Button */}
             <button
-              className="md:hidden p-2 text-foreground hover:text-primary transition-colors"
+              className="md:hidden p-3 text-foreground hover:bg-accent rounded-md border border-border transition-colors"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label="Toggle menu"
             >
-              {mobileMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
+              {mobileMenuOpen ? <FiX size={28} /> : <FiMenu size={28} />}
             </button>
           </div>
         </div>
@@ -172,7 +172,7 @@ export function SinglePageTemplate() {
       <section className="container mx-auto px-4 sm:px-6 pt-32 pb-20 min-h-screen flex items-center">
         <div className="max-w-3xl">
           <FadeIn>
-            <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-6">
               Hi, I'm {portfolioData.name}
             </h1>
           </FadeIn>

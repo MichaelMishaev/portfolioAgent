@@ -15,7 +15,10 @@ import {
   FiArrowRight,
   FiDownload,
   FiFileText,
-} , FiMenu, FiX } from "react-icons/fi";
+,
+  FiMenu,
+  FiX,
+} from "react-icons/fi";
 import Link from "next/link";
 
 const serviceData = {
@@ -238,17 +241,22 @@ const serviceData = {
 };
 
 export function B2BServiceTemplate() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   const [selectedIndustry, setSelectedIndustry] = useState<string | null>(null);
 
   return (
     <div className="min-h-screen bg-white text-stone-900">
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-stone-200">
-        <div className="container mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
-          <Link href="/" className="text-2xl font-bold text-blue-900">
+        <div className="container mx-auto px-4 sm:px-6 py-4">
+          <div className="flex items-center justify-between">
+            <Link href="/" className="text-2xl font-bold text-blue-900">
             STRATEX
           </Link>
-          <div className="flex items-center gap-8">
+
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex items-center gap-6">
             <a
               href="#capabilities"
               className="text-sm font-medium hover:text-red-600 transition-colors"
@@ -269,7 +277,49 @@ export function B2BServiceTemplate() {
             </a>
             <Button className="bg-red-600 hover:bg-red-700 text-white">Apply Now</Button>
           </div>
+
+            {/* Mobile Menu Button */}
+            <button
+              className="md:hidden p-2 text-foreground hover:text-primary transition-colors"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label="Toggle menu"
+            >
+              {mobileMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
+            </button>
+          </div>
         </div>
+
+        {/* Mobile Menu */}
+        {mobileMenuOpen && (
+          <div className="md:hidden bg-background/95 backdrop-blur-sm border-t">
+            <div className="container mx-auto px-4 sm:px-6 py-4 flex flex-col gap-4">
+              <a
+                href="#capabilities"
+                className="text-sm hover:text-primary transition-colors py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Capabilities
+              </a>
+              <a
+                href="#case-studies"
+                className="text-sm hover:text-primary transition-colors py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Case Studies
+              </a>
+              <a
+                href="#insights"
+                className="text-sm hover:text-primary transition-colors py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Insights
+              </a>
+              <Button size="sm" className="w-full" onClick={() => setMobileMenuOpen(false)}>
+                Apply Now
+              </Button>
+            </div>
+          </div>
+        )}
       </nav>
 
       {/* Hero Section */}

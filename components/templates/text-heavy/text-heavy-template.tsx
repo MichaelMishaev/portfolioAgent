@@ -1,10 +1,11 @@
 "use client";
 
+import { useState } from "react";
 import { FadeIn } from "@/components/animations/fade-in";
 import { ScrollReveal } from "@/components/animations/scroll-reveal";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { FiMail, FiCalendar, FiClock } from "react-icons/fi";
+import { FiMail, FiCalendar, FiClock , FiMenu, FiX } from "react-icons/fi";
 import Link from "next/link";
 
 const portfolioData = {
@@ -111,15 +112,20 @@ const portfolioData = {
 };
 
 export function TextHeavyTemplate() {
-  return (
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+return (
     <div className="min-h-screen bg-background">
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b">
-        <div className="container mx-auto px-6 py-4 flex items-center justify-between">
-          <Link href="/" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+        <div className="container mx-auto px-4 sm:px-6 py-4">
+          <div className="flex items-center justify-between">
+            <Link href="/" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
             ← Back to Gallery
           </Link>
-          <div className="flex items-center gap-6">
+
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex items-center gap-6">
+
             <a href="#about" className="text-sm hover:text-primary transition-colors">
               About
             </a>
@@ -132,14 +138,64 @@ export function TextHeavyTemplate() {
             <a href="#contact" className="text-sm hover:text-primary transition-colors">
               Contact
             </a>
+          
+            </div>
+
+            {/* Mobile Menu Button */}
+            <button
+              className="md:hidden p-2 text-foreground hover:text-primary transition-colors"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label="Toggle menu"
+            >
+              {mobileMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
+            </button>
           </div>
         </div>
+
+        {/* Mobile Menu */}
+        {mobileMenuOpen && (
+          <div className="md:hidden bg-background/95 backdrop-blur-sm border-t">
+            <div className="container mx-auto px-4 sm:px-6 py-4 flex flex-col gap-4">
+              <a
+                href="#about"
+                className="text-sm hover:text-primary transition-colors py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                About
+              </a>
+              <a
+                href="#articles"
+                className="text-sm hover:text-primary transition-colors py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Articles
+              </a>
+              <a
+                href="#case-studies"
+                className="text-sm hover:text-primary transition-colors py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Case Studies
+              </a>
+              <a
+                href="#contact"
+                className="text-sm hover:text-primary transition-colors py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Contact
+              </a>
+              <Button size="sm" className="w-full" onClick={() => setMobileMenuOpen(false)}>
+                Get Started
+              </Button>
+            </div>
+          </div>
+        )}
       </nav>
 
       {/* Hero Section */}
-      <section className="container mx-auto px-6 pt-32 pb-20 max-w-4xl">
+      <section className="container mx-auto px-4 sm:px-6 pt-32 pb-20 max-w-4xl">
         <FadeIn>
-          <h1 className="text-5xl md:text-7xl font-serif font-bold mb-6 leading-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-serif font-bold mb-6 leading-tight">
             {portfolioData.name}
           </h1>
         </FadeIn>
@@ -165,7 +221,7 @@ export function TextHeavyTemplate() {
       </section>
 
       {/* Stats Section */}
-      <section className="container mx-auto px-6 py-16 max-w-4xl border-y">
+      <section className="container mx-auto px-4 sm:px-6 py-16 max-w-4xl border-y">
         <ScrollReveal>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {portfolioData.stats.map((stat, index) => (
@@ -183,7 +239,7 @@ export function TextHeavyTemplate() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="container mx-auto px-6 py-20 max-w-4xl">
+      <section id="about" className="container mx-auto px-4 sm:px-6 py-20 max-w-4xl">
         <ScrollReveal>
           <h2 className="text-4xl md:text-5xl font-serif font-bold mb-8">
             About
@@ -207,7 +263,7 @@ export function TextHeavyTemplate() {
       </section>
 
       {/* Expertise Section */}
-      <section className="container mx-auto px-6 py-20 max-w-4xl bg-accent/5">
+      <section className="container mx-auto px-4 sm:px-6 py-20 max-w-4xl bg-accent/5">
         <ScrollReveal>
           <h2 className="text-4xl md:text-5xl font-serif font-bold mb-8">
             Writing Expertise
@@ -227,7 +283,7 @@ export function TextHeavyTemplate() {
       </section>
 
       {/* Articles Section */}
-      <section id="articles" className="container mx-auto px-6 py-20 max-w-4xl">
+      <section id="articles" className="container mx-auto px-4 sm:px-6 py-20 max-w-4xl">
         <ScrollReveal>
           <h2 className="text-4xl md:text-5xl font-serif font-bold mb-12">
             Recent Articles
@@ -275,7 +331,7 @@ export function TextHeavyTemplate() {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="container mx-auto px-6 py-20 max-w-4xl">
+      <section id="services" className="container mx-auto px-4 sm:px-6 py-20 max-w-4xl">
         <ScrollReveal>
           <h2 className="text-4xl md:text-5xl font-serif font-bold mb-12">
             Services
@@ -299,7 +355,7 @@ export function TextHeavyTemplate() {
       </section>
 
       {/* Case Studies Section */}
-      <section id="case-studies" className="container mx-auto px-6 py-20 max-w-4xl">
+      <section id="case-studies" className="container mx-auto px-4 sm:px-6 py-20 max-w-4xl">
         <ScrollReveal>
           <h2 className="text-4xl md:text-5xl font-serif font-bold mb-12">
             Case Studies
@@ -349,7 +405,7 @@ export function TextHeavyTemplate() {
       </section>
 
       {/* Process Section */}
-      <section className="container mx-auto px-6 py-20 max-w-4xl bg-accent/5">
+      <section className="container mx-auto px-4 sm:px-6 py-20 max-w-4xl bg-accent/5">
         <ScrollReveal>
           <h2 className="text-4xl md:text-5xl font-serif font-bold mb-12 text-center">
             My Process
@@ -376,7 +432,7 @@ export function TextHeavyTemplate() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="container mx-auto px-6 py-20 max-w-4xl">
+      <section className="container mx-auto px-4 sm:px-6 py-20 max-w-4xl">
         <ScrollReveal>
           <h2 className="text-4xl md:text-5xl font-serif font-bold mb-12">
             Client Testimonials
@@ -401,7 +457,7 @@ export function TextHeavyTemplate() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="container mx-auto px-6 py-20 max-w-4xl">
+      <section id="contact" className="container mx-auto px-4 sm:px-6 py-20 max-w-4xl">
         <ScrollReveal>
           <div className="border-t pt-12">
             <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6">
@@ -420,7 +476,7 @@ export function TextHeavyTemplate() {
 
       {/* Footer */}
       <footer className="border-t bg-background py-12">
-        <div className="container mx-auto px-6 max-w-4xl">
+        <div className="container mx-auto px-4 sm:px-6 max-w-4xl">
           <div className="text-center">
             <p className="text-sm text-muted-foreground mb-4">
               © {new Date().getFullYear()} {portfolioData.name}. All rights reserved.

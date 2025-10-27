@@ -6,7 +6,10 @@ import { ScrollReveal } from "@/components/animations/scroll-reveal";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { FiCheck, FiStar, FiTruck, FiShield, FiRefreshCw, FiBox } , FiMenu, FiX } from "react-icons/fi";
+import { FiCheck, FiStar, FiTruck, FiShield, FiRefreshCw, FiBox ,
+  FiMenu,
+  FiX,
+} from "react-icons/fi";
 import Link from "next/link";
 
 const productData = {
@@ -199,25 +202,66 @@ const productData = {
 };
 
 export function PhysicalProductTemplate() {
-  const [selectedColor, setSelectedColor] = useState(productData.colors[0]);
+  const [selectedColor, setSelectedColor] = useState(productData.colors[0]);  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   const [selectedImage, setSelectedImage] = useState(0);
 
   return (
     <div className="min-h-screen bg-white dark:bg-black text-black dark:text-white">
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-white/80 dark:bg-black/80 backdrop-blur-lg border-b border-gray-200 dark:border-gray-800">
-        <div className="container mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
-          <Link href="/" className="text-xl font-semibold">
+        <div className="container mx-auto px-4 sm:px-6 py-4">
+          <div className="flex items-center justify-between">
+<Link href="/" className="text-xl font-semibold">
             AirWave
           </Link>
-          <div className="flex items-center gap-6">
-            <a href="#features" className="text-sm hover:text-gray-600 dark:hover:text-gray-400 transition-colors">Features</a>
+
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex items-center gap-6">
+<a href="#features" className="text-sm hover:text-gray-600 dark:hover:text-gray-400 transition-colors">Features</a>
             <a href="#specs" className="text-sm hover:text-gray-600 dark:hover:text-gray-400 transition-colors">Specs</a>
             <Button size="sm" className="bg-black dark:bg-white text-white dark:text-black hover:bg-gray-800 dark:hover:bg-gray-200">
               Buy ${productData.price.amount}
             </Button>
+            </div>
+
+            {/* Mobile Menu Button */}
+            <button
+              className="md:hidden p-2 text-foreground hover:text-primary transition-colors"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label="Toggle menu"
+            >
+              {mobileMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
+            </button>
           </div>
         </div>
+
+        {/* Mobile Menu */}
+        {mobileMenuOpen && (
+          <div className="md:hidden bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm border-t">
+            <div className="container mx-auto px-4 sm:px-6 py-4 flex flex-col gap-4">
+              <a
+                href="#features"
+                className="text-sm hover:text-primary transition-colors py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Features
+              </a>
+              <a
+                href="#specs"
+                className="text-sm hover:text-primary transition-colors py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Specs
+              </a>
+              <Button size="sm" className="w-full" onClick={() => setMobileMenuOpen(false)}>
+                
+              Buy ${productData.price.amount}
+            
+              </Button>
+            </div>
+          </div>
+        )}
       </nav>
 
       {/* Hero Section */}

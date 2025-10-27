@@ -18,6 +18,8 @@ import {
   FiShare2,
   FiChevronRight,
   FiFilter,
+  FiMenu,
+  FiX
 } from "react-icons/fi";
 import Link from "next/link";
 
@@ -168,13 +170,14 @@ const magazineData = {
 };
 
 export function MagazineBlogTemplate() {
-  const [selectedCategory, setSelectedCategory] = useState("All");
+  const [selectedCategory, setSelectedCategory] = useState("All");  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
 
   return (
     <div className="min-h-screen bg-white">
       {/* Top Bar */}
       <div className="bg-gray-900 text-white py-2">
-        <div className="container mx-auto px-6 flex items-center justify-between text-sm">
+        <div className="container mx-auto px-4 sm:px-6 flex items-center justify-between text-sm">
           <div className="flex items-center gap-6">
             <span className="flex items-center gap-2">
               <FiTrendingUp className="w-4 h-4" />
@@ -191,7 +194,7 @@ export function MagazineBlogTemplate() {
 
       {/* Header */}
       <header className="bg-white border-b sticky top-0 z-50">
-        <div className="container mx-auto px-6 py-5">
+        <div className="container mx-auto px-4 sm:px-6 py-5">
           <div className="flex items-center justify-between mb-4">
             <Link href="/" className="text-3xl font-bold">
               CREATIVE<span className="text-blue-600">MAG</span>
@@ -224,7 +227,7 @@ export function MagazineBlogTemplate() {
 
       {/* Hero - Featured Articles */}
       <section className="py-12 bg-gray-50">
-        <div className="container mx-auto px-6 max-w-7xl">
+        <div className="container mx-auto px-4 sm:px-6 max-w-7xl">
           <div className="grid lg:grid-cols-2 gap-8">
             {/* Main Featured */}
             <FadeIn>
@@ -329,7 +332,7 @@ export function MagazineBlogTemplate() {
 
       {/* Category Filter */}
       <section className="py-8 bg-white border-y">
-        <div className="container mx-auto px-6 max-w-7xl">
+        <div className="container mx-auto px-4 sm:px-6 max-w-7xl">
           <div className="flex items-center justify-between flex-wrap gap-4">
             <div className="flex items-center gap-3 flex-wrap">
               {magazineData.categories.map((cat) => (
@@ -356,7 +359,7 @@ export function MagazineBlogTemplate() {
 
       {/* Latest Articles Grid */}
       <section className="py-16 bg-white">
-        <div className="container mx-auto px-6 max-w-7xl">
+        <div className="container mx-auto px-4 sm:px-6 max-w-7xl">
           <div className="flex items-center justify-between mb-8">
             <h2 className="text-3xl font-bold">Latest Articles</h2>
             <Button variant="ghost">
@@ -417,7 +420,7 @@ export function MagazineBlogTemplate() {
 
       {/* Editorial Team */}
       <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-6 max-w-7xl">
+        <div className="container mx-auto px-4 sm:px-6 max-w-7xl">
           <h2 className="text-3xl font-bold mb-8">Meet Our Editors</h2>
           <div className="grid md:grid-cols-3 gap-6">
             {magazineData.editors.map((editor, index) => (
@@ -440,7 +443,7 @@ export function MagazineBlogTemplate() {
 
       {/* Newsletter */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
-        <div className="container mx-auto px-6 max-w-4xl text-center">
+        <div className="container mx-auto px-4 sm:px-6 max-w-4xl text-center">
           <ScrollReveal>
             <h2 className="text-4xl font-bold text-white mb-4">Stay in the Loop</h2>
             <p className="text-xl text-blue-100 mb-8">
@@ -463,7 +466,7 @@ export function MagazineBlogTemplate() {
 
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-12">
-        <div className="container mx-auto px-6 max-w-7xl">
+        <div className="container mx-auto px-4 sm:px-6 max-w-7xl">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
               <h3 className="text-2xl font-bold mb-4">CREATIVE<span className="text-blue-500">MAG</span></h3>

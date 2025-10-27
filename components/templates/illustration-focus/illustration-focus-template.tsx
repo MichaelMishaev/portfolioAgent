@@ -1,11 +1,12 @@
 "use client";
 
+import { useState } from "react";
 import { FadeIn } from "@/components/animations/fade-in";
 import { ScrollReveal } from "@/components/animations/scroll-reveal";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { FiMail, FiHeart, FiStar, FiZap } from "react-icons/fi";
+import { FiMail, FiHeart, FiStar, FiZap , FiMenu, FiX } from "react-icons/fi";
 import Link from "next/link";
 
 const portfolioData = {
@@ -112,15 +113,20 @@ const portfolioData = {
 };
 
 export function IllustrationFocusTemplate() {
-  return (
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+return (
     <div className="min-h-screen bg-gradient-to-br from-pink-50 via-purple-50 to-blue-50 dark:from-gray-900 dark:via-purple-900 dark:to-gray-900">
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border-b">
-        <div className="container mx-auto px-6 py-4 flex items-center justify-between">
-          <Link href="/" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+        <div className="container mx-auto px-4 sm:px-6 py-4">
+          <div className="flex items-center justify-between">
+            <Link href="/" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
             ← Back
           </Link>
-          <div className="flex items-center gap-6">
+
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex items-center gap-6">
+
             <a href="#services" className="text-sm hover:text-primary transition-colors">
               Services
             </a>
@@ -130,12 +136,55 @@ export function IllustrationFocusTemplate() {
             <a href="#contact" className="text-sm hover:text-primary transition-colors">
               Contact
             </a>
+          
+            </div>
+
+            {/* Mobile Menu Button */}
+            <button
+              className="md:hidden p-2 text-foreground hover:text-primary transition-colors"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label="Toggle menu"
+            >
+              {mobileMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
+            </button>
           </div>
         </div>
+
+        {/* Mobile Menu */}
+        {mobileMenuOpen && (
+          <div className="md:hidden bg-background/95 backdrop-blur-sm border-t">
+            <div className="container mx-auto px-4 sm:px-6 py-4 flex flex-col gap-4">
+              <a
+                href="#services"
+                className="text-sm hover:text-primary transition-colors py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Services
+              </a>
+              <a
+                href="#work"
+                className="text-sm hover:text-primary transition-colors py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Work
+              </a>
+              <a
+                href="#contact"
+                className="text-sm hover:text-primary transition-colors py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Contact
+              </a>
+              <Button size="sm" className="w-full" onClick={() => setMobileMenuOpen(false)}>
+                Get Started
+              </Button>
+            </div>
+          </div>
+        )}
       </nav>
 
       {/* Hero Section */}
-      <section className="container mx-auto px-6 pt-32 pb-20">
+      <section className="container mx-auto px-4 sm:px-6 pt-32 pb-20">
         <div className="text-center max-w-4xl mx-auto">
           <FadeIn>
             {/* Decorative Illustration Placeholder */}
@@ -173,7 +222,7 @@ export function IllustrationFocusTemplate() {
       </section>
 
       {/* About Section */}
-      <section className="container mx-auto px-6 py-20">
+      <section className="container mx-auto px-4 sm:px-6 py-20">
         <ScrollReveal>
           <Card className="max-w-3xl mx-auto bg-white/60 dark:bg-gray-800/60 backdrop-blur border-2 border-purple-200 dark:border-purple-800">
             <CardContent className="p-8">
@@ -187,7 +236,7 @@ export function IllustrationFocusTemplate() {
       </section>
 
       {/* Stats Section */}
-      <section className="container mx-auto px-6 py-16">
+      <section className="container mx-auto px-4 sm:px-6 py-16">
         <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {portfolioData.stats.map((stat, index) => (
             <ScrollReveal key={stat.label} delay={index * 0.1}>
@@ -206,9 +255,9 @@ export function IllustrationFocusTemplate() {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="container mx-auto px-6 py-20">
+      <section id="services" className="container mx-auto px-4 sm:px-6 py-20">
         <ScrollReveal>
-          <h2 className="text-4xl md:text-6xl font-bold text-center mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold text-center mb-16">
             What I Do
           </h2>
         </ScrollReveal>
@@ -235,9 +284,9 @@ export function IllustrationFocusTemplate() {
       </section>
 
       {/* Projects Section */}
-      <section id="work" className="container mx-auto px-6 py-20">
+      <section id="work" className="container mx-auto px-4 sm:px-6 py-20">
         <ScrollReveal>
-          <h2 className="text-4xl md:text-6xl font-bold text-center mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold text-center mb-16">
             Recent Projects
           </h2>
         </ScrollReveal>
@@ -264,9 +313,9 @@ export function IllustrationFocusTemplate() {
       </section>
 
       {/* Process Section */}
-      <section className="container mx-auto px-6 py-20 bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-blue-950/30 dark:to-cyan-950/30">
+      <section className="container mx-auto px-4 sm:px-6 py-20 bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-blue-950/30 dark:to-cyan-950/30">
         <ScrollReveal>
-          <h2 className="text-4xl md:text-6xl font-bold text-center mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold text-center mb-16">
             My Creative Process
           </h2>
         </ScrollReveal>
@@ -290,9 +339,9 @@ export function IllustrationFocusTemplate() {
       </section>
 
       {/* Art Styles Section */}
-      <section className="container mx-auto px-6 py-20">
+      <section className="container mx-auto px-4 sm:px-6 py-20">
         <ScrollReveal>
-          <h2 className="text-4xl md:text-6xl font-bold text-center mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold text-center mb-6">
             Art Styles I Love
           </h2>
           <p className="text-lg text-center text-muted-foreground mb-16 max-w-2xl mx-auto">
@@ -315,9 +364,9 @@ export function IllustrationFocusTemplate() {
       </section>
 
       {/* Tools & Software Section */}
-      <section className="container mx-auto px-6 py-20 bg-gradient-to-br from-orange-50 to-yellow-50 dark:from-orange-950/30 dark:to-yellow-950/30">
+      <section className="container mx-auto px-4 sm:px-6 py-20 bg-gradient-to-br from-orange-50 to-yellow-50 dark:from-orange-950/30 dark:to-yellow-950/30">
         <ScrollReveal>
-          <h2 className="text-4xl md:text-6xl font-bold text-center mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold text-center mb-6">
             Tools I Use
           </h2>
           <p className="text-lg text-center text-muted-foreground mb-16 max-w-2xl mx-auto">
@@ -342,9 +391,9 @@ export function IllustrationFocusTemplate() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="container mx-auto px-6 py-20">
+      <section className="container mx-auto px-4 sm:px-6 py-20">
         <ScrollReveal>
-          <h2 className="text-4xl md:text-6xl font-bold text-center mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold text-center mb-6">
             Client Love
           </h2>
           <p className="text-lg text-center text-muted-foreground mb-16 max-w-2xl mx-auto">
@@ -377,13 +426,13 @@ export function IllustrationFocusTemplate() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="container mx-auto px-6 py-20">
+      <section id="contact" className="container mx-auto px-4 sm:px-6 py-20">
         <ScrollReveal>
           <div className="max-w-3xl mx-auto text-center">
             <div className="mb-8">
               <span className="text-8xl">💌</span>
             </div>
-            <h2 className="text-5xl md:text-7xl font-bold mb-6">
+            <h2 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-6">
               Let's Collaborate!
             </h2>
             <p className="text-xl text-muted-foreground mb-8">
@@ -399,7 +448,7 @@ export function IllustrationFocusTemplate() {
 
       {/* Footer */}
       <footer className="border-t bg-white/50 dark:bg-gray-900/50 backdrop-blur">
-        <div className="container mx-auto px-6 py-8">
+        <div className="container mx-auto px-4 sm:px-6 py-8">
           <p className="text-sm text-muted-foreground text-center">
             © {new Date().getFullYear()} {portfolioData.name}. Made with 💖
           </p>
