@@ -446,21 +446,23 @@ export function TemplateGallery() {
                   </div>
 
                   {/* Color Palette */}
-                  <div className="flex items-center space-x-2">
-                    <span className="text-xs text-muted-foreground">{t.ui.colors}:</span>
-                    <div className="flex space-x-1">
-                      {Object.values(template.colors).map((color, i) => (
-                        <motion.div
-                          key={i}
-                          whileHover={{ scale: 1.2, rotate: 15 }}
-                          whileTap={{ scale: 0.9 }}
-                          className="w-6 h-6 rounded-full border-2 border-background shadow-sm cursor-pointer"
-                          style={{ backgroundColor: color }}
-                          title={color}
-                        />
-                      ))}
+                  {template.colors && Object.keys(template.colors).length > 0 && (
+                    <div className="flex items-center space-x-2">
+                      <span className="text-xs text-muted-foreground">{t.ui.colors}:</span>
+                      <div className="flex space-x-1">
+                        {Object.values(template.colors).map((color, i) => (
+                          <motion.div
+                            key={i}
+                            whileHover={{ scale: 1.2, rotate: 15 }}
+                            whileTap={{ scale: 0.9 }}
+                            className="w-6 h-6 rounded-full border-2 border-background shadow-sm cursor-pointer"
+                            style={{ backgroundColor: color }}
+                            title={color}
+                          />
+                        ))}
+                      </div>
                     </div>
-                  </div>
+                  )}
 
                   {/* Best For */}
                   <ExpandableBestFor
