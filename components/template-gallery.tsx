@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { getTemplates } from "@/lib/template-registry";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
@@ -24,7 +24,9 @@ import {
   FiGrid,
   FiMessageCircle,
   FiTag,
-  FiTarget
+  FiTarget,
+  FiChevronDown,
+  FiChevronUp
 } from "react-icons/fi";
 import { useI18n } from "@/lib/i18n-context";
 
@@ -42,6 +44,122 @@ const categoryIcons: Record<string, any> = {
   Experimental: FiStar,
   "Online Business": FiTarget,
 };
+
+// Category badges/chips configuration
+const categoryBadges: Record<string, { label: string; color: string } | undefined> = {
+  "Online Business": { label: "🔥 Hot", color: "bg-red-500/10 text-red-600 dark:text-red-400 border-red-500/30" },
+  Service: { label: "⭐ Best Seller", color: "bg-yellow-500/10 text-yellow-600 dark:text-yellow-400 border-yellow-500/30" },
+  Product: { label: "💎 Premium", color: "bg-purple-500/10 text-purple-600 dark:text-purple-400 border-purple-500/30" },
+  Blog: { label: "✨ Popular", color: "bg-blue-500/10 text-blue-600 dark:text-blue-400 border-blue-500/30" },
+};
+
+// Priority order for categories
+const categoryOrder = [
+  "all",
+  "Online Business",
+  "Service",
+  "Product",
+  "Blog",
+  // Rest will be sorted alphabetically
+];
+
+// Component for expandable description
+function ExpandableDescription({ description, readMore, showLess }: { description: string; readMore: string; showLess: string }) {
+  const [isExpanded, setIsExpanded] = useState(false);
+  const [isOverflowing, setIsOverflowing] = useState(false);
+  const descriptionRef = useRef<HTMLParagraphElement>(null);
+
+  useEffect(() => {
+    if (descriptionRef.current) {
+      // Check if content is overflowing
+      const element = descriptionRef.current;
+      setIsOverflowing(element.scrollHeight > element.clientHeight);
+    }
+  }, [description]);
+
+  return (
+    <div className="relative">
+      <CardDescription
+        ref={descriptionRef}
+        className={`${isExpanded ? '' : 'line-clamp-3'} min-h-[4.5rem] transition-all duration-300`}
+      >
+        {description}
+      </CardDescription>
+      {isOverflowing && (
+        <button
+          onClick={() => setIsExpanded(!isExpanded)}
+          className="mt-2 text-xs font-medium text-primary hover:text-primary/80 transition-colors flex items-center gap-1 group"
+        >
+          {isExpanded ? (
+            <>
+              {showLess}
+              <FiChevronUp className="w-3 h-3 group-hover:-translate-y-0.5 transition-transform" />
+            </>
+          ) : (
+            <>
+              {readMore}
+              <FiChevronDown className="w-3 h-3 group-hover:translate-y-0.5 transition-transform" />
+            </>
+          )}
+        </button>
+      )}
+    </div>
+  );
+}
+
+// Component for expandable "Best For" section
+function ExpandableBestFor({
+  label,
+  items,
+  readMore,
+  showLess
+}: {
+  label: string;
+  items: string[];
+  readMore: string;
+  showLess: string;
+}) {
+  const [isExpanded, setIsExpanded] = useState(false);
+  const [isOverflowing, setIsOverflowing] = useState(false);
+  const textRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (textRef.current) {
+      // Check if content is overflowing
+      const element = textRef.current;
+      setIsOverflowing(element.scrollHeight > element.clientHeight);
+    }
+  }, [items]);
+
+  return (
+    <div className="relative">
+      <div
+        ref={textRef}
+        className={`text-xs text-muted-foreground ${isExpanded ? '' : 'line-clamp-2'} min-h-[2.5rem] transition-all duration-300`}
+      >
+        <span className="font-semibold">{label}:</span> {items.join(", ")}
+      </div>
+      {isOverflowing && (
+        <button
+          onClick={() => setIsExpanded(!isExpanded)}
+          className="mt-1 text-xs font-medium text-primary hover:text-primary/80 transition-colors flex items-center gap-1 group"
+        >
+          {isExpanded ? (
+            <>
+              {showLess}
+              <FiChevronUp className="w-3 h-3 group-hover:-translate-y-0.5 transition-transform" />
+            </>
+          ) : (
+            <>
+              {readMore}
+              <FiChevronDown className="w-3 h-3 group-hover:translate-y-0.5 transition-transform" />
+            </>
+          )}
+        </button>
+      )}
+    </div>
+  );
+}
 
 export function TemplateGallery() {
   const { language, t } = useI18n();
@@ -83,7 +201,22 @@ export function TemplateGallery() {
   };
 
   const templates = getTemplates(language);
-  const categories = ["all", ...Array.from(new Set(templates.map(t => t.category)))];
+
+  // Get all unique categories and sort them according to priority
+  const allCategories = ["all", ...Array.from(new Set(templates.map(t => t.category)))];
+  const categories = allCategories.sort((a, b) => {
+    const indexA = categoryOrder.indexOf(a);
+    const indexB = categoryOrder.indexOf(b);
+
+    // If both are in priority list, sort by priority
+    if (indexA !== -1 && indexB !== -1) return indexA - indexB;
+    // If only A is in priority, A comes first
+    if (indexA !== -1) return -1;
+    // If only B is in priority, B comes first
+    if (indexB !== -1) return 1;
+    // Otherwise sort alphabetically
+    return a.localeCompare(b);
+  });
 
   const filteredTemplates = filter === "all"
     ? templates
@@ -158,22 +291,35 @@ export function TemplateGallery() {
               const categoryName = t.categories[category as keyof typeof t.categories] || category;
               const count = category === "all" ? templates.length : templates.filter(t => t.category === category).length;
 
+              const badge = categoryBadges[category];
+
               return (
                 <button
                   key={category}
                   onClick={() => handleFilterChange(category)}
                   className={`
                     w-full flex items-center justify-between gap-3 px-4 py-3.5 rounded-xl text-sm font-medium
-                    transition-all duration-200 group
+                    transition-all duration-200 group relative
                     ${isActive
                       ? "bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-lg shadow-blue-500/25"
                       : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
                     }
                   `}
                 >
-                  <div className="flex items-center gap-3">
-                    <Icon className={`w-5 h-5 ${isActive ? "text-white" : "text-gray-500 dark:text-gray-400 group-hover:text-gray-700 dark:group-hover:text-gray-200"}`} />
-                    <span>{categoryName}</span>
+                  <div className="flex flex-col items-start gap-1.5 flex-1">
+                    <div className="flex items-center gap-3">
+                      <Icon className={`w-5 h-5 ${isActive ? "text-white" : "text-gray-500 dark:text-gray-400 group-hover:text-gray-700 dark:group-hover:text-gray-200"}`} />
+                      <span>{categoryName}</span>
+                    </div>
+                    {badge && (
+                      <span className={`text-[10px] font-semibold px-2 py-0.5 rounded-full border ml-8 ${
+                        isActive
+                          ? "bg-white/20 text-white border-white/30"
+                          : badge.color
+                      }`}>
+                        {badge.label}
+                      </span>
+                    )}
                   </div>
                   <Badge
                     variant="secondary"
@@ -254,7 +400,11 @@ export function TemplateGallery() {
                     </Badge>
                   </div>
 
-                  <CardDescription className="line-clamp-3 min-h-[4.5rem]">{template.description}</CardDescription>
+                  <ExpandableDescription
+                    description={template.description}
+                    readMore={t.ui?.readMore || "Read more"}
+                    showLess={t.ui?.showLess || "Show less"}
+                  />
                 </CardHeader>
 
                 <CardContent className="space-y-4 flex-grow">
@@ -313,9 +463,12 @@ export function TemplateGallery() {
                   </div>
 
                   {/* Best For */}
-                  <div className="text-xs text-muted-foreground line-clamp-2 min-h-[2.5rem]">
-                    <span className="font-semibold">{t.ui.bestFor}:</span> {template.bestFor.join(", ")}
-                  </div>
+                  <ExpandableBestFor
+                    label={t.ui.bestFor}
+                    items={template.bestFor}
+                    readMore={t.ui?.readMore || "Read more"}
+                    showLess={t.ui?.showLess || "Show less"}
+                  />
                 </CardContent>
 
                 <CardFooter className="flex gap-2 flex-shrink-0 mt-auto">

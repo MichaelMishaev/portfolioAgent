@@ -4,6 +4,14 @@
       "title": "Michael Mishayev",
       "subtitle": "Full-Stack Developer & Designer creating modern web experiences"
     },
+    "common": {
+      "about": "About",
+      "work": "Work",
+      "contact": "Contact",
+      "backToGallery": "← Back to Gallery",
+      "getInTouch": "Get in Touch",
+      "letsWorkTogether": "Let's Work Together"
+    },
     "homepage": {
       "hero": {
         "badge": "Full-Stack Developer & Designer",
@@ -80,7 +88,9 @@
       "bestFor": "Built for",
       "beginner": "simple",
       "intermediate": "moderate",
-      "advanced": "complex"
+      "advanced": "complex",
+      "readMore": "Read more",
+      "showLess": "Show less"
     },
     "templates": [
       {
@@ -464,6 +474,26 @@
         "bestFor": ["Tech Blogs", "Developer Communities", "Tutorial Sites"]
       },
       {
+        "id": "blog-archetypes-minimal",
+        "name": "Archetypes Explorer - Minimalist",
+        "description": "Modern minimalist conversion-focused page with 5-stage funnel: awareness hero, 7 archetype cards, audience targeting, testimonials, and pricing. Teal & purple gradient design with glassmorphism.",
+        "category": "Blog",
+        "difficulty": "intermediate",
+        "features": ["5-Stage Funnel", "Glassmorphism Cards", "Smooth Animations", "Conversion Optimized"],
+        "tags": ["conversion", "minimalist", "archetypes", "modern", "glassmorphism"],
+        "bestFor": ["Coaches", "Course Creators", "Personal Development", "Creative Professionals"]
+      },
+      {
+        "id": "blog-archetypes-editorial",
+        "name": "Archetypes Journal - Editorial",
+        "description": "Bold editorial magazine-style conversion page with 5-stage funnel: dramatic hero, 7 numbered archetype cards, qualification section, testimonials, and program pricing. Black/white design with electric blue accents and strong borders.",
+        "category": "Blog",
+        "difficulty": "intermediate",
+        "features": ["Bold Editorial Design", "5-Stage Funnel", "Magazine Layout", "Strong Visual Hierarchy", "Dramatic Typography"],
+        "tags": ["conversion", "editorial", "magazine", "bold", "archetypes", "premium"],
+        "bestFor": ["High-Ticket Coaches", "Premium Programs", "Transformation Programs", "Personal Brand"]
+      },
+      {
         "id": "online-business-coach",
         "name": "Life & Business Coach",
         "description": "Premium template for life coaches and business coaches. Features hero with CTA, multi-offer showcase (books/courses/coaching), testimonials, lead magnets, and multi-step forms.",
@@ -509,6 +539,14 @@
     "header": {
       "title": "Михаил Мишаев",
       "subtitle": "Full-Stack Разработчик и Дизайнер, создающий современные веб-приложения"
+    },
+    "common": {
+      "about": "О нас",
+      "work": "Работы",
+      "contact": "Контакт",
+      "backToGallery": "← Назад в Галерею",
+      "getInTouch": "Связаться",
+      "letsWorkTogether": "Давайте Работать Вместе"
     },
     "homepage": {
       "hero": {
@@ -586,7 +624,9 @@
       "bestFor": "Создано для",
       "beginner": "простой",
       "intermediate": "средний",
-      "advanced": "сложный"
+      "advanced": "сложный",
+      "readMore": "Читать далее",
+      "showLess": "Свернуть"
     },
     "templates": [
       {
@@ -968,6 +1008,26 @@
         "features": ["Темная Тема", "Примеры Кода", "Обучающие Серии", "Отслеживание Прогресса"],
         "tags": ["технологии", "разработчик", "интерактивный", "код"],
         "bestFor": ["Технические Блоги", "Сообщества Разработчиков", "Сайты с Туториалами"]
+      },
+      {
+        "id": "blog-archetypes-minimal",
+        "name": "Исследователь Архетипов - Минимализм",
+        "description": "Современная минималистичная страница с 5-этапной воронкой конверсии: героический баннер, 7 карт архетипов, таргетинг аудитории, отзывы и цены. Дизайн с градиентами бирюзового и фиолетового с эффектом глассморфизма.",
+        "category": "Blog",
+        "difficulty": "intermediate",
+        "features": ["5-Этапная Воронка", "Глассморфизм Карты", "Плавные Анимации", "Оптимизировано под Конверсию"],
+        "tags": ["конверсия", "минимализм", "архетипы", "современный", "глассморфизм"],
+        "bestFor": ["Коучи", "Создатели Курсов", "Личностное Развитие", "Творческие Профессионалы"]
+      },
+      {
+        "id": "blog-archetypes-editorial",
+        "name": "Журнал Архетипов - Редакционный",
+        "description": "Смелый редакционный журнальный стиль страницы конверсии с 5-этапной воронкой: драматичный баннер, 7 пронумерованных карт архетипов, раздел квалификации, отзывы и цены программы. Дизайн черный/белый с ярко-синими акцентами и сильными границами.",
+        "category": "Blog",
+        "difficulty": "intermediate",
+        "features": ["Смелый Редакционный Дизайн", "5-Этапная Воронка", "Журнальный Макет", "Сильная Визуальная Иерархия", "Драматичная Типографика"],
+        "tags": ["конверсия", "редакционный", "журнал", "смелый", "архетипы", "премиум"],
+        "bestFor": ["Премиум Коучи", "Дорогие Программы", "Трансформационные Программы", "Личный Бренд"]
       },
       {
         "id": "online-business-coach",
