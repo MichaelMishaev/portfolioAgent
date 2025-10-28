@@ -33,3 +33,35 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# test files and screenshots
+mobile-test-screenshots/
+mobile-deep-check-screenshots/
+tests/screenshots/
+playwright-report/
+mobile-test-report.json
+mobile-deep-check-report.json
+*.spec.ts.snap
+
+# dev scripts
+*.sh
+check-*.ts
+deep-check-*.ts
+test-*.ts
+screenshot-*.ts
+
+# auth files
+auth.json
+credentials.json
+
+# backup files
+*.bak
+*.bak2
+*.broken
+*.final
+*-backups/
+mobile-fix-backups/
+mobile-fix-backups-phase2/
+
+# analysis files
+*_ANALYSIS.md

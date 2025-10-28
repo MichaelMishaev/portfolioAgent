@@ -540,6 +540,42 @@
         "button": "Start Your Free 14-Day Trial"
       }
     },
+    "archetypesMinimal": {
+      "hero": {
+        "badge": "Transform Your Creative Journey",
+        "title": "Discover Your Creative Archetype",
+        "subtitle": "Unlock your true creative potential and learn to express yourself authentically",
+        "description": "Are you feeling stuck in your creative journey? Do you sense there's more to your creative identity than meets the eye? Your creative archetype holds the key to unlocking your authentic voice.",
+        "cta": "Discover Your Archetype"
+      },
+      "archetypes": {
+        "title": "The 7 Creative Archetypes",
+        "subtitle": "Each archetype represents a unique creative approach and set of strengths"
+      },
+      "targetAudience": {
+        "title": "Is This For You?",
+        "subtitle": "This program is designed for creative professionals who are ready to level up"
+      },
+      "testimonials": {
+        "title": "Success Stories",
+        "subtitle": "Join thousands who have discovered their creative archetype"
+      },
+      "program": {
+        "title": "The Archetypes Program",
+        "subtitle": "A comprehensive journey to discover and master your creative archetype",
+        "cta": "Start Your Journey",
+        "guarantee": "30-Day Money-Back Guarantee",
+        "pricing": {
+          "discount": "40% Launch Discount",
+          "oneTime": "One-time payment, lifetime access"
+        }
+      },
+      "finalCta": {
+        "title": "Ready to Transform Your Creative Journey?",
+        "subtitle": "Join thousands of creative professionals who have discovered their true archetype",
+        "cta": "Start Your Journey Now"
+      }
+    },
     "neoBrutalist": {
       "name": "ASH WOLF",
       "title": "ANTI-DESIGNER",
@@ -1181,6 +1217,195 @@
         "title": "Готовы трансформировать ваш рабочий процесс?",
         "subtitle": "Присоединяйтесь к тысячам команд, выпускающих лучшие продукты быстрее.",
         "button": "Начните бесплатный 14-дневный пробный период"
+      }
+    },
+    "archetypesMinimal": {
+      "hero": {
+        "badge": "Трансформируйте ваш творческий путь",
+        "title": "Откройте ваш творческий архетип",
+        "subtitle": "Раскройте ваш истинный творческий потенциал и научитесь выражать себя аутентично",
+        "description": "Вы чувствуете, что застряли в своем творческом пути? Вы чувствуете, что в вашей творческой идентичности есть нечто большее? Ваш творческий архетип — ключ к раскрытию вашего подлинного голоса.",
+        "cta": "Откройте ваш архетип"
+      },
+      "archetypes": {
+        "title": "7 творческих архетипов",
+        "subtitle": "Каждый архетип представляет уникальный творческий подход и набор сильных сторон"
+      },
+      "targetAudience": {
+        "title": "Это для вас?",
+        "subtitle": "Эта программа разработана для творческих профессионалов, готовых выйти на новый уровень"
+      },
+      "testimonials": {
+        "title": "Истории успеха",
+        "subtitle": "Присоединяйтесь к тысячам тех, кто открыл свой творческий архетип"
+      },
+      "program": {
+        "title": "Программа архетипов",
+        "subtitle": "Комплексный путь к открытию и освоению вашего творческого архетипа",
+        "cta": "Начните ваш путь",
+        "guarantee": "Гарантия возврата денег 30 дней",
+        "pricing": {
+          "discount": "Скидка 40% при запуске",
+          "oneTime": "Единоразовый платеж, пожизненный доступ"
+        }
+      },
+      "finalCta": {
+        "title": "Готовы трансформировать ваш творческий путь?",
+        "subtitle": "Присоединяйтесь к тысячам творческих профессионалов, открывших свой истинный архетип",
+        "cta": "Начните ваш путь сейчас"
+      }
+    },
+    "archetypesEditorial": {
+      "hero": {
+        "badge": "Программа трансформации личности",
+        "title": "Кем вы на самом деле",
+        "titleEnd": "должны быть?",
+        "subtitle": "Откройте свою истинную природу и раскройте свой полный потенциал через призму 7 универсальных архетипов",
+        "ctaPrimary": "Узнайте свой архетип",
+        "ctaSecondary": "Пройдите бесплатный тест",
+        "stats": {
+          "lives": "50 000+ жизней изменено",
+          "archetypes": "7 архетипов",
+          "success": "98% успеха"
+        }
+      },
+      "archetypes": {
+        "title": "7 архетипов мастерства",
+        "subtitle": "Каждый архетип представляет фундаментальный путь к личностной силе и влиянию",
+        "cta": "Начните бесплатную оценку",
+        "items": {
+          "leader": {
+            "title": "Лидер",
+            "subtitle": "Командуйте своим присутствием",
+            "description": "Прирожденные лидеры, которые вдохновляют других через видение и силу",
+            "traits": ["Авторитет", "Видение", "Влияние"]
+          },
+          "nurturer": {
+            "title": "Заботливый",
+            "subtitle": "Создавайте глубокие связи",
+            "description": "Эмпаты, которые исцеляют и поддерживают других через сострадание",
+            "traits": ["Сострадание", "Исцеление", "Поддержка"]
+          },
+          "innovator": {
+            "title": "Новатор",
+            "subtitle": "Разрушайте и трансформируйте",
+            "description": "Революционеры, которые видят возможности там, где другие видят ограничения",
+            "traits": ["Креативность", "Прорыв", "Видение"]
+          },
+          "protector": {
+            "title": "Защитник",
+            "subtitle": "Отстаивайте справедливость",
+            "description": "Воины за правое дело, защищающие слабых и борющиеся за правду",
+            "traits": ["Смелость", "Честность", "Защита"]
+          },
+          "explorer": {
+            "title": "Исследователь",
+            "subtitle": "Прокладывайте новые пути",
+            "description": "Искатели приключений, которые смело идут туда, куда другие боятся",
+            "traits": ["Свобода", "Открытие", "Независимость"]
+          },
+          "performer": {
+            "title": "Артист",
+            "subtitle": "Очаровывайте и вдохновляйте",
+            "description": "Харизматичные коммуникаторы, которые завораживают аудиторию",
+            "traits": ["Харизма", "Выражение", "Связь"]
+          },
+          "sage": {
+            "title": "Мудрец",
+            "subtitle": "Мудрость и мастерство",
+            "description": "Мыслители, которые ищут истину и делятся глубоким пониманием",
+            "traits": ["Мудрость", "Знание", "Понимание"]
+          }
+        }
+      },
+      "qualification": {
+        "title": "Эта программа",
+        "forYou": {
+          "title": "ДЛЯ ВАС, ЕСЛИ ВЫ:",
+          "items": [
+            "Чувствуете себя застрявшим на своем нынешнем пути",
+            "Знаете, что способны на большее",
+            "Готовы к глубокой внутренней работе",
+            "Хотите аутентичного самовыражения",
+            "Стремитесь к истинному влиянию",
+            "Готовы к трансформации"
+          ]
+        },
+        "notForYou": {
+          "title": "НЕ ДЛЯ ВАС, ЕСЛИ ВЫ:",
+          "items": [
+            "Ищете быстрые решения",
+            "Не готовы к переменам",
+            "Хотите поверхностных советов",
+            "Не готовы к самоанализу",
+            "Ожидаете результатов без усилий",
+            "Сопротивляетесь личностному росту"
+          ]
+        },
+        "cta": "Подать заявку - ограниченные места"
+      },
+      "testimonials": {
+        "title": "Истории трансформации",
+        "subtitle": "Реальные результаты от реальных людей, открывших свой архетип",
+        "stats": {
+          "rating": "Рейтинг 4.9/5",
+          "stories": "2 847 историй успеха",
+          "recommend": "98% рекомендуют"
+        }
+      },
+      "program": {
+        "title": "Программа мастерства архетипов",
+        "subtitle": "12-недельный путь трансформации",
+        "modules": {
+          "awakening": {
+            "title": "Модуль 1: Пробуждение",
+            "duration": "Недели 1-3",
+            "description": "Откройте свой основной архетип и поймите вашу истинную природу"
+          },
+          "integration": {
+            "title": "Модуль 2: Интеграция",
+            "duration": "Недели 4-6",
+            "description": "Интегрируйте архетипические качества в вашу повседневную жизнь"
+          },
+          "mastery": {
+            "title": "Модуль 3: Мастерство",
+            "duration": "Недели 7-9",
+            "description": "Овладейте вашим архетипом и разовьйте естественные сильные стороны"
+          },
+          "embodiment": {
+            "title": "Модуль 4: Воплощение",
+            "duration": "Недели 10-12",
+            "description": "Полностью воплотите ваш архетип и живите с подлинной силой"
+          }
+        },
+        "pricing": {
+          "title": "Инвестиция в вашу трансформацию",
+          "fullPayment": {
+            "title": "Полная оплата",
+            "price": "$3,997",
+            "save": "Сэкономьте $781"
+          },
+          "paymentPlan": {
+            "title": "План оплаты",
+            "price": "$397/месяц",
+            "duration": "× 12 месяцев"
+          },
+          "bonus": {
+            "title": "Бонус при полной оплате",
+            "description": "Получите эксклюзивный доступ к мастер-классу «Продвинутые архетипы» стоимостью $997"
+          },
+          "guarantee": {
+            "title": "100% гарантия удовлетворения",
+            "description": "Если вы не почувствуете глубокую трансформацию в первые 30 дней, мы полностью вернем деньги"
+          }
+        },
+        "cta": "Начните вашу трансформацию",
+        "urgency": "Осталось только 12 мест"
+      },
+      "finalCta": {
+        "title": "Ваша трансформация ждет",
+        "subtitle": "Присоединяйтесь к 50 000+ людей, открывших свой истинный архетип и живущих с целью и силой",
+        "cta": "Узнайте ваш архетип сейчас"
       }
     },
     "neoBrutalist": {

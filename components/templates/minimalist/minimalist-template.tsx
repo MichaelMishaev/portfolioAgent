@@ -1,17 +1,19 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
 import { FadeIn } from "@/components/animations/fade-in";
 import { ScrollReveal } from "@/components/animations/scroll-reveal";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { FiMail, FiGithub, FiLinkedin, FiTwitter, FiArrowRight } from "react-icons/fi";
+import { FiMail, FiGithub, FiLinkedin, FiTwitter, FiArrowRight, FiMenu, FiX } from "react-icons/fi";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { LanguageToggle } from "@/components/language-toggle";
 import Link from "next/link";
 import { useI18n } from "@/lib/i18n-context";
 
 export function MinimalistTemplate() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { tt } = useI18n();
   const portfolioData = tt.minimalist;
   return (
@@ -22,7 +24,9 @@ export function MinimalistTemplate() {
           <Link href="/" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
             {tt.common.backToGallery}
           </Link>
-          <div className="flex items-center gap-6">
+
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center gap-6">
             <a href="#about" className="text-sm hover:text-primary transition-colors">
               {tt.common.about}
             </a>
@@ -35,7 +39,45 @@ export function MinimalistTemplate() {
             <ThemeToggle />
             <LanguageToggle />
           </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            className="md:hidden p-3 text-foreground hover:bg-accent rounded-md border border-border transition-colors"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            {mobileMenuOpen ? <FiX size={28} /> : <FiMenu size={28} />}
+          </button>
         </div>
+
+        {/* Mobile Menu */}
+        {mobileMenuOpen && (
+          <div className="md:hidden bg-background/95 backdrop-blur-sm border-t">
+            <div className="container mx-auto px-3 max-w-full py-4 flex flex-col gap-4">
+              <a
+                href="#about"
+                className="text-sm hover:text-primary transition-colors py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                {tt.common.about}
+              </a>
+              <a
+                href="#work"
+                className="text-sm hover:text-primary transition-colors py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                {tt.common.work}
+              </a>
+              <a
+                href="#contact"
+                className="text-sm hover:text-primary transition-colors py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                {tt.common.contact}
+              </a>
+            </div>
+          </div>
+        )}
       </nav>
 
       {/* Hero Section - Maximum Simplicity */}

@@ -191,6 +191,14 @@ const staticTemplateData = {
     colors: { primary: "#6366F1", secondary: "#8B5CF6", accent: "#3B82F6" },
     fonts: { heading: "Inter", body: "Inter" },
   },
+  "blog-archetypes-minimal": {
+    colors: { primary: "#14B8A6", secondary: "#A855F7", accent: "#EC4899" },
+    fonts: { heading: "Inter", body: "Inter" },
+  },
+  "blog-archetypes-editorial": {
+    colors: { primary: "#0F172A", secondary: "#FFFFFF", accent: "#3B82F6" },
+    fonts: { heading: "Playfair Display", body: "Inter" },
+  },
 };
 
 export function getTemplates(language: "en" | "ru" = "en"): TemplateConfig[] {
