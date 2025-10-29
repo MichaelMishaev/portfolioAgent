@@ -221,7 +221,7 @@ export default function Home() {
 
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-10 sm:mb-12 px-4">
               <Button size="lg" className="text-base sm:text-lg px-6 sm:px-8 py-5 sm:py-6 h-auto min-h-[48px] touch-manipulation group" asChild>
-                <a href="mailto:contact@example.com">
+                <a href="mailto:345287biz@gmail.com">
                   <FiMail className="mr-2 w-5 h-5 group-hover:scale-110 transition-transform" />
                   Send Email
                 </a>
