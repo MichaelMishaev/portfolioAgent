@@ -84,6 +84,7 @@
     },
     "ui": {
       "viewDemo": "View Project",
+      "stylePreview": "Style Preview",
       "colors": "Colors",
       "bestFor": "Built for",
       "beginner": "simple",
@@ -91,6 +92,76 @@
       "advanced": "complex",
       "readMore": "Read more",
       "showLess": "Show less"
+    },
+    "stylePreview": {
+      "title": "Try Before You Choose",
+      "description": "Type your name below to see it styled in this template. Explore the colors, fonts, and design elements. When you're ready,",
+      "viewFullLink": "view the full template",
+      "viewFullEnd": "to see all features.",
+      "badge": "Style Preview",
+      "styleGuide": {
+        "title": "Style Guide",
+        "subtitle": "Explore the design elements that define this template",
+        "colors": "Colors",
+        "typography": "Typography",
+        "buttons": "Buttons",
+        "forms": "Form Elements",
+        "bestFor": "Best For",
+        "primary": "Primary",
+        "secondary": "Secondary",
+        "accent": "Accent",
+        "yourName": "Your Name",
+        "yourRole": "Your Role",
+        "bodyText": "This is body text that describes your work and experience.",
+        "primaryButton": "Primary Button",
+        "secondaryButton": "Secondary Button",
+        "textButton": "Text Button",
+        "primaryAction": "Primary action button",
+        "secondaryAction": "Secondary action button",
+        "tertiaryAction": "Tertiary action button",
+        "fullName": "Full Name",
+        "emailAddress": "Email Address",
+        "enterName": "Enter your name...",
+        "emailPlaceholder": "email@example.com"
+      },
+      "playground": {
+        "title": "Try It With Your Name",
+        "subtitle": "Type your information below to see how it looks in this template",
+        "yourInfo": "Your Information",
+        "firstName": "First Name",
+        "lastName": "Last Name",
+        "roleTitle": "Role / Title",
+        "livePreview": "Live Preview",
+        "updatesRealtime": "Updates in real-time as you type",
+        "defaultName": "Your Name",
+        "defaultTitle": "Your Role / Title",
+        "contactMe": "Contact Me",
+        "portfolio": "Portfolio",
+        "projects": "5 Projects",
+        "available": "Available",
+        "placeholders": {
+          "firstName": "Michael",
+          "lastName": "Mishayev",
+          "title": "Full-Stack Developer"
+        }
+      },
+      "colorPicker": {
+        "title": "Try Different Colors",
+        "reset": "Reset"
+      },
+      "cta": {
+        "ready": "Ready to use this template?",
+        "description": "See the full demo with all features and sections",
+        "viewFullDemo": "View Full Demo",
+        "chooseAnother": "Choose Another"
+      },
+      "header": {
+        "interactivePreview": "Interactive Preview",
+        "colors": "Colors",
+        "fonts": "Fonts",
+        "customizeColors": "Customize Colors",
+        "chooseFontStyle": "Choose Font Style"
+      }
     },
     "templates": [
       {
@@ -620,6 +691,7 @@
     },
     "ui": {
       "viewDemo": "Посмотреть Проект",
+      "stylePreview": "Предпросмотр Стиля",
       "colors": "Цвета",
       "bestFor": "Создано для",
       "beginner": "простой",
@@ -627,6 +699,76 @@
       "advanced": "сложный",
       "readMore": "Читать далее",
       "showLess": "Свернуть"
+    },
+    "stylePreview": {
+      "title": "Попробуйте Перед Выбором",
+      "description": "Введите ваше имя ниже, чтобы увидеть его в стиле этого шаблона. Изучите цвета, шрифты и элементы дизайна. Когда будете готовы,",
+      "viewFullLink": "посмотрите полный шаблон",
+      "viewFullEnd": "чтобы увидеть все возможности.",
+      "badge": "Предпросмотр Стиля",
+      "styleGuide": {
+        "title": "Гид по Стилю",
+        "subtitle": "Изучите элементы дизайна, определяющие этот шаблон",
+        "colors": "Цвета",
+        "typography": "Типографика",
+        "buttons": "Кнопки",
+        "forms": "Элементы Форм",
+        "bestFor": "Лучше всего для",
+        "primary": "Основной",
+        "secondary": "Вторичный",
+        "accent": "Акцентный",
+        "yourName": "Ваше Имя",
+        "yourRole": "Ваша Роль",
+        "bodyText": "Это текст, который описывает вашу работу и опыт.",
+        "primaryButton": "Основная Кнопка",
+        "secondaryButton": "Вторичная Кнопка",
+        "textButton": "Текстовая Кнопка",
+        "primaryAction": "Основное действие",
+        "secondaryAction": "Вторичное действие",
+        "tertiaryAction": "Третичное действие",
+        "fullName": "Полное Имя",
+        "emailAddress": "Email Адрес",
+        "enterName": "Введите ваше имя...",
+        "emailPlaceholder": "email@example.com"
+      },
+      "playground": {
+        "title": "Попробуйте с Вашим Именем",
+        "subtitle": "Введите вашу информацию ниже, чтобы увидеть, как это выглядит в этом шаблоне",
+        "yourInfo": "Ваша Информация",
+        "firstName": "Имя",
+        "lastName": "Фамилия",
+        "roleTitle": "Роль / Должность",
+        "livePreview": "Живой Предпросмотр",
+        "updatesRealtime": "Обновляется в реальном времени по мере ввода",
+        "defaultName": "Ваше Имя",
+        "defaultTitle": "Ваша Роль / Должность",
+        "contactMe": "Связаться",
+        "portfolio": "Портфолио",
+        "projects": "5 Проектов",
+        "available": "Доступен",
+        "placeholders": {
+          "firstName": "Михаил",
+          "lastName": "Мишаев",
+          "title": "Full-Stack Разработчик"
+        }
+      },
+      "colorPicker": {
+        "title": "Попробуйте Разные Цвета",
+        "reset": "Сбросить"
+      },
+      "cta": {
+        "ready": "Готовы использовать этот шаблон?",
+        "description": "Посмотрите полное демо со всеми функциями и секциями",
+        "viewFullDemo": "Посмотреть Полное Демо",
+        "chooseAnother": "Выбрать Другой"
+      },
+      "header": {
+        "interactivePreview": "Интерактивный Предпросмотр",
+        "colors": "Цвета",
+        "fonts": "Шрифты",
+        "customizeColors": "Настроить Цвета",
+        "chooseFontStyle": "Выбрать Стиль Шрифта"
+      }
     },
     "templates": [
       {

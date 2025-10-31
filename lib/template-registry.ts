@@ -52,7 +52,7 @@ const staticTemplateData = {
     fonts: { heading: "Poppins", body: "Inter" },
   },
   "single-page": {
-    colors: { primary: "#FFFFFF", secondary: "#F3F4F6", accent: "#3B82F6" },
+    colors: { primary: "#1F2937", secondary: "#F3F4F6", accent: "#3B82F6" },
     fonts: { heading: "Poppins", body: "Inter" },
   },
   "text-heavy": {
@@ -60,7 +60,7 @@ const staticTemplateData = {
     fonts: { heading: "Playfair Display", body: "Lora" },
   },
   "card-modular": {
-    colors: { primary: "#FFFFFF", secondary: "#F3F4F6", accent: "#10B981" },
+    colors: { primary: "#1F2937", secondary: "#F3F4F6", accent: "#10B981" },
     fonts: { heading: "Inter", body: "Inter" },
   },
   "kinetic-typography": {
@@ -68,7 +68,7 @@ const staticTemplateData = {
     fonts: { heading: "Space Grotesk", body: "Inter" },
   },
   "bento-grid": {
-    colors: { primary: "#FFFFFF", secondary: "#F3F4F6", accent: "#6366F1" },
+    colors: { primary: "#1F2937", secondary: "#F3F4F6", accent: "#6366F1" },
     fonts: { heading: "Inter", body: "Inter" },
   },
   "3d-immersive": {
