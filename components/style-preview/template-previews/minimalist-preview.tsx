@@ -13,6 +13,7 @@ interface MinimalistPreviewProps {
   lastName: string;
   title: string;
   accentColor: string;
+  avatarImage?: string | null;
 }
 
 export function MinimalistPreview({
@@ -21,6 +22,7 @@ export function MinimalistPreview({
   lastName,
   title,
   accentColor,
+  avatarImage,
 }: MinimalistPreviewProps) {
   const { t } = useI18n();
   const displayName = [firstName, lastName].filter(Boolean).join(" ") || t.stylePreview.playground.defaultName;
@@ -42,15 +44,23 @@ export function MinimalistPreview({
           animate={{ scale: 1, opacity: 1 }}
           transition={{ delay: 0.1, type: "spring" }}
         >
-          <div
-            className="w-16 h-16 md:w-20 md:h-20 rounded-full flex items-center justify-center text-white text-xl md:text-2xl font-light shadow-md"
-            style={{
-              backgroundColor: accentColor,
-              fontFamily: template.fonts.heading,
-            }}
-          >
-            {getInitials()}
-          </div>
+          {avatarImage ? (
+            <img
+              src={avatarImage}
+              alt={displayName}
+              className="w-16 h-16 md:w-20 md:h-20 rounded-full object-cover shadow-md"
+            />
+          ) : (
+            <div
+              className="w-16 h-16 md:w-20 md:h-20 rounded-full flex items-center justify-center text-white text-xl md:text-2xl font-light shadow-md"
+              style={{
+                backgroundColor: accentColor,
+                fontFamily: template.fonts.heading,
+              }}
+            >
+              {getInitials()}
+            </div>
+          )}
         </motion.div>
 
         {/* Name - minimalist style: left-aligned, huge, ultra-light */}

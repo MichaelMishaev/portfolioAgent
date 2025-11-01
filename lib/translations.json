@@ -149,6 +149,21 @@
         "title": "Try Different Colors",
         "reset": "Reset"
       },
+      "contentLibrary": {
+        "button": "Content Library",
+        "hint": "Browse 25+ pre-made examples"
+      },
+      "quickStyles": {
+        "button": "Quick Styles",
+        "hint": "Apply pre-designed color schemes instantly",
+        "description": "Apply pre-designed color schemes in one click"
+      },
+      "sharePreferences": {
+        "title": "Share & Export",
+        "shareButton": "Share Preview Link",
+        "description": "Generate a shareable URL with all your current customizations",
+        "copied": "Link Copied to Clipboard!"
+      },
       "cta": {
         "ready": "Ready to use this template?",
         "description": "See the full demo with all features and sections",
@@ -755,6 +770,21 @@
       "colorPicker": {
         "title": "Попробуйте Разные Цвета",
         "reset": "Сбросить"
+      },
+      "contentLibrary": {
+        "button": "Библиотека Контента",
+        "hint": "Просмотрите 25+ готовых примеров"
+      },
+      "quickStyles": {
+        "button": "Быстрые Стили",
+        "hint": "Мгновенно примените готовые цветовые схемы",
+        "description": "Применяйте готовые цветовые схемы в один клик"
+      },
+      "sharePreferences": {
+        "title": "Поделиться и Экспорт",
+        "shareButton": "Поделиться Ссылкой",
+        "description": "Создайте ссылку со всеми вашими настройками",
+        "copied": "Ссылка Скопирована в Буфер Обмена!"
       },
       "cta": {
         "ready": "Готовы использовать этот шаблон?",

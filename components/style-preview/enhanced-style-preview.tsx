@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { TemplateConfig } from "@/lib/template-registry";
 import { TryItPlayground } from "./try-it-playground";
 import { InteractiveColorPicker } from "./interactive-color-picker";
@@ -8,11 +8,17 @@ import { FontStyleSwitcher } from "./font-style-switcher";
 import { PreviewPageFAB } from "./floating-action-button";
 import { ShareModal } from "./share-modal";
 import { BottomSheet } from "./bottom-sheet";
+import { SaveLoadPreferences } from "./save-load-preferences";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { ArrowLeft, Eye, Sparkles, Droplet, Type } from "lucide-react";
 import { useI18n } from "@/lib/i18n-context";
 import { motion } from "framer-motion";
+import {
+  PreviewPreferences,
+  loadPreferences,
+  loadPreferencesFromURL,
+} from "@/lib/preview-preferences";
 
 interface EnhancedStylePreviewProps {
   template: TemplateConfig;
@@ -31,11 +37,39 @@ export function EnhancedStylePreview({ template: initialTemplate }: EnhancedStyl
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [title, setTitle] = useState("");
+  const [avatarImage, setAvatarImage] = useState<string | null>(null);
   const [customColors, setCustomColors] = useState(template.colors || {});
   const [customFont, setCustomFont] = useState("Inter, sans-serif");
   const [isShareOpen, setIsShareOpen] = useState(false);
   const [isColorPickerOpen, setIsColorPickerOpen] = useState(false);
   const [isFontPickerOpen, setIsFontPickerOpen] = useState(false);
+
+  // Load preferences on mount
+  useEffect(() => {
+    // Try loading from URL first (shared link)
+    const urlPreferences = loadPreferencesFromURL();
+    if (urlPreferences) {
+      applyPreferences(urlPreferences);
+      return;
+    }
+
+    // Fall back to localStorage
+    const savedPreferences = loadPreferences();
+    if (savedPreferences && savedPreferences.templateId === template.id) {
+      applyPreferences(savedPreferences);
+    }
+  }, [template.id]);
+
+  // Apply loaded preferences
+  const applyPreferences = (preferences: PreviewPreferences) => {
+    setFirstName(preferences.firstName);
+    setLastName(preferences.lastName);
+    setTitle(preferences.title);
+    setAvatarImage(preferences.avatarImage);
+    if (preferences.accentColor) {
+      setCustomColors(prev => ({ ...prev, accent: preferences.accentColor }));
+    }
+  };
 
   // Handlers
   const handleColorChange = (colorKey: string, newColor: string) => {
@@ -63,6 +97,10 @@ export function EnhancedStylePreview({ template: initialTemplate }: EnhancedStyl
   const handleDownload = () => {
     // Trigger download or redirect to full demo
     window.location.href = template.demoPath;
+  };
+
+  const handleLoadPreferences = (preferences: PreviewPreferences) => {
+    applyPreferences(preferences);
   };
 
   const currentUrl = typeof window !== "undefined" ? window.location.href : "";
@@ -137,16 +175,33 @@ export function EnhancedStylePreview({ template: initialTemplate }: EnhancedStyl
       </section>
 
       {/* Main Content */}
-      <div className="container mx-auto px-4 py-6 sm:py-8 md:py-12">
+      <div className="container mx-auto px-4 py-6 sm:py-8 md:py-12 space-y-6">
+        {/* Share Preferences */}
+        <div className="max-w-md mx-auto">
+          <SaveLoadPreferences
+            currentPreferences={{
+              firstName,
+              lastName,
+              title,
+              avatarImage,
+              accentColor: customColors.accent,
+              templateId: template.id,
+            }}
+            onLoadPreferences={handleLoadPreferences}
+          />
+        </div>
+
         {/* Try It Section - Single Static Preview */}
         <TryItPlayground
           template={{ ...template, colors: customColors }}
           firstName={firstName}
           lastName={lastName}
           title={title}
+          avatarImage={avatarImage}
           onFirstNameChange={setFirstName}
           onLastNameChange={setLastName}
           onTitleChange={setTitle}
+          onAvatarChange={setAvatarImage}
         />
       </div>
 

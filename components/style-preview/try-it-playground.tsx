@@ -6,6 +6,8 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Sparkles, Zap } from "lucide-react";
 import { EnhancedLivePreview } from "./enhanced-live-preview";
+import { DevicePreviewSwitcher } from "./device-preview-switcher";
+import { AvatarUpload } from "./avatar-upload";
 import { useI18n } from "@/lib/i18n-context";
 
 interface TryItPlaygroundProps {
@@ -13,9 +15,11 @@ interface TryItPlaygroundProps {
   firstName: string;
   lastName: string;
   title: string;
+  avatarImage: string | null;
   onFirstNameChange: (value: string) => void;
   onLastNameChange: (value: string) => void;
   onTitleChange: (value: string) => void;
+  onAvatarChange: (value: string | null) => void;
 }
 
 export function TryItPlayground({
@@ -23,9 +27,11 @@ export function TryItPlayground({
   firstName,
   lastName,
   title,
+  avatarImage,
   onFirstNameChange,
   onLastNameChange,
   onTitleChange,
+  onAvatarChange,
 }: TryItPlaygroundProps) {
   const { t } = useI18n();
 
@@ -44,9 +50,16 @@ export function TryItPlayground({
       {/* Input Form */}
       <Card>
         <CardHeader>
-          <CardTitle className="text-base">{t.stylePreview.playground.yourInfo}</CardTitle>
+          <CardTitle className="text-base">
+            {t.stylePreview.playground.yourInfo}
+          </CardTitle>
         </CardHeader>
         <CardContent className="space-y-4">
+          <AvatarUpload
+            currentImage={avatarImage}
+            onImageChange={onAvatarChange}
+          />
+
           <div className="space-y-2">
             <Label htmlFor="firstName">{t.stylePreview.playground.firstName}</Label>
             <Input
@@ -92,12 +105,15 @@ export function TryItPlayground({
           <h3 className="text-lg font-semibold">{t.stylePreview.playground.livePreview}</h3>
         </div>
 
-        <EnhancedLivePreview
-          template={template}
-          firstName={firstName}
-          lastName={lastName}
-          title={title}
-        />
+        <DevicePreviewSwitcher>
+          <EnhancedLivePreview
+            template={template}
+            firstName={firstName}
+            lastName={lastName}
+            title={title}
+            avatarImage={avatarImage}
+          />
+        </DevicePreviewSwitcher>
 
         <p className="text-xs text-center text-muted-foreground flex items-center justify-center gap-1">
           <Zap className="w-3 h-3" />

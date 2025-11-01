@@ -315,7 +315,7 @@ export function CourseProductTemplate() {
           </FadeIn>
 
           <FadeIn delay={0.1}>
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight bg-gradient-to-r from-blue-600 to-gold-500 bg-clip-text text-transparent">
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
               {courseData.tagline}
             </h1>
           </FadeIn>

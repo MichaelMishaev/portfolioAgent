@@ -7,18 +7,17 @@ import { Button } from "@/components/ui/button";
 import { Mail, RefreshCw, Sparkles, Palette } from "lucide-react";
 import { useI18n } from "@/lib/i18n-context";
 import { motion, AnimatePresence } from "framer-motion";
-import { MinimalistPreview } from "./template-previews/minimalist-preview";
-import { DarkModePreview } from "./template-previews/dark-mode-preview";
-import { DefaultPreview } from "./template-previews/default-preview";
+import { getPreviewComponent } from "@/lib/preview-registry";
 
 interface EnhancedLivePreviewProps {
   template: TemplateConfig;
   firstName: string;
   lastName: string;
   title: string;
+  avatarImage: string | null;
 }
 
-export function EnhancedLivePreview({ template, firstName, lastName, title }: EnhancedLivePreviewProps) {
+export function EnhancedLivePreview({ template, firstName, lastName, title, avatarImage }: EnhancedLivePreviewProps) {
   const { t } = useI18n();
   const [customAccentColor, setCustomAccentColor] = useState<string | null>(null);
   const [isAnimating, setIsAnimating] = useState(false);
@@ -37,7 +36,7 @@ export function EnhancedLivePreview({ template, firstName, lastName, title }: En
     setTimeout(() => setIsAnimating(false), 600);
   };
 
-  // Select the appropriate preview component based on template ID
+  // Select the appropriate preview component based on template ID using registry
   const renderPreview = () => {
     const props = {
       template,
@@ -45,16 +44,12 @@ export function EnhancedLivePreview({ template, firstName, lastName, title }: En
       lastName,
       title,
       accentColor,
+      avatarImage,
     };
 
-    switch (template.id) {
-      case "minimalist":
-        return <MinimalistPreview {...props} />;
-      case "dark-mode":
-        return <DarkModePreview {...props} />;
-      default:
-        return <DefaultPreview {...props} />;
-    }
+    // Get preview component from centralized registry
+    const PreviewComponent = getPreviewComponent(template.id);
+    return <PreviewComponent {...props} />;
   };
 
   const quickColors = [

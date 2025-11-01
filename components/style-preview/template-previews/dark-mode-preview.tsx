@@ -14,6 +14,7 @@ interface DarkModePreviewProps {
   lastName: string;
   title: string;
   accentColor: string;
+  avatarImage?: string | null;
 }
 
 export function DarkModePreview({
@@ -22,6 +23,7 @@ export function DarkModePreview({
   lastName,
   title,
   accentColor,
+  avatarImage,
 }: DarkModePreviewProps) {
   const { t } = useI18n();
   const displayName = [firstName, lastName].filter(Boolean).join(" ") || t.stylePreview.playground.defaultName;
@@ -51,14 +53,22 @@ export function DarkModePreview({
             transition={{ delay: 0.1, type: "spring" }}
           >
             <div className="p-1 rounded-full bg-gradient-to-r from-cyan-400 to-purple-500">
-              <div
-                className="w-20 h-20 md:w-24 md:h-24 rounded-full flex items-center justify-center bg-black text-white text-2xl md:text-3xl font-bold shadow-xl"
-                style={{
-                  fontFamily: template.fonts.heading,
-                }}
-              >
-                {getInitials()}
-              </div>
+              {avatarImage ? (
+                <img
+                  src={avatarImage}
+                  alt={displayName}
+                  className="w-20 h-20 md:w-24 md:h-24 rounded-full object-cover shadow-xl"
+                />
+              ) : (
+                <div
+                  className="w-20 h-20 md:w-24 md:h-24 rounded-full flex items-center justify-center bg-black text-white text-2xl md:text-3xl font-bold shadow-xl"
+                  style={{
+                    fontFamily: template.fonts.heading,
+                  }}
+                >
+                  {getInitials()}
+                </div>
+              )}
             </div>
           </motion.div>
 

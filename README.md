@@ -202,6 +202,87 @@ export const templates: TemplateConfig[] = [
 - **Fast loading times** (<2 seconds)
 - **Mobile-first** responsive design
 
+### 🌐 Internationalization (i18n)
+
+**⚠️ REQUIREMENT: All UI text MUST support both English (en) and Russian (ru) languages.**
+
+#### Translation System
+
+All user-facing text is managed through a centralized translation system:
+
+**Location:** `/lib/translations.json`
+
+**Structure:**
+```json
+{
+  "en": {
+    "common": { "backToGallery": "Back to Gallery" },
+    "stylePreview": {
+      "contentLibrary": {
+        "button": "Content Library",
+        "hint": "Browse 25+ pre-made examples"
+      }
+    }
+  },
+  "ru": {
+    "common": { "backToGallery": "Назад в Галерею" },
+    "stylePreview": {
+      "contentLibrary": {
+        "button": "Библиотека Контента",
+        "hint": "Просмотрите 25+ готовых примеров"
+      }
+    }
+  }
+}
+```
+
+#### Usage in Components
+
+Use the `useI18n` hook to access translations:
+
+```typescript
+import { useI18n } from "@/lib/i18n-context";
+
+export function MyComponent() {
+  const { t } = useI18n();
+
+  return (
+    <Button>
+      {t.stylePreview.contentLibrary?.button || "Fallback Text"}
+    </Button>
+  );
+}
+```
+
+#### Translation Guidelines
+
+1. **Always provide both languages** - Every new UI string must have both `en` and `ru` translations
+2. **Use optional chaining** - Access nested translations with `?.` to prevent errors
+3. **Provide fallbacks** - Always include English fallback text using `||` operator
+4. **Maintain structure** - Keep the same nested structure in both language objects
+5. **Test both languages** - Switch language in the app to verify translations display correctly
+
+#### Adding New Translations
+
+When adding new UI text:
+
+1. Open `/lib/translations.json`
+2. Add your text to both `en` and `ru` objects in the same nested location
+3. Use the translation in your component with optional chaining and fallback
+4. Test that both languages display correctly
+
+**Example:**
+```typescript
+// translations.json
+{
+  "en": { "myFeature": { "title": "My New Feature" } },
+  "ru": { "myFeature": { "title": "Моя Новая Функция" } }
+}
+
+// Component
+{t.myFeature?.title || "My New Feature"}
+```
+
 ## 🎨 Customization
 
 ### Tailwind Themes
