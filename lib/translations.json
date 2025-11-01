@@ -619,7 +619,163 @@
         "tags": ["saas", "product", "pricing", "b2b", "subscription"],
         "bestFor": ["SaaS Companies", "Software Products", "B2B Tools", "Productivity Apps"]
       }
-    ]
+    ],
+    "serviceMarketplace": {
+      "nav": {
+        "features": "Features",
+        "howItWorks": "How It Works",
+        "testimonials": "Testimonials",
+        "pricing": "Pricing"
+      },
+      "hero": {
+        "badge": "Trusted Marketplace",
+        "title": "Connect with Professional Service Providers",
+        "subtitle": "Buy and sell business services with confidence. Escrow protection, verified professionals, and seamless transactions.",
+        "ctaPrimary": "Get Started",
+        "ctaSecondary": "Learn More"
+      },
+      "stats": [
+        { "value": "10K+", "label": "Active Users" },
+        { "value": "50K+", "label": "Services Sold" },
+        { "value": "$2M+", "label": "In Transactions" },
+        { "value": "4.9/5", "label": "Avg Rating" }
+      ],
+      "features": {
+        "title": "Why Choose Our Platform",
+        "subtitle": "Everything you need for secure and successful service transactions",
+        "items": [
+          {
+            "title": "Escrow Protection",
+            "description": "Your money is safe. Funds are held securely until work is completed to your satisfaction."
+          },
+          {
+            "title": "Verified Professionals",
+            "description": "All service providers are thoroughly vetted and verified for quality and reliability."
+          },
+          {
+            "title": "Global Reach",
+            "description": "Connect with talented professionals from around the world, 24/7."
+          },
+          {
+            "title": "Transparent Pricing",
+            "description": "See exact costs upfront. No hidden fees, no surprises."
+          },
+          {
+            "title": "Quick Delivery",
+            "description": "Get your projects completed on time with milestone tracking and deadline management."
+          },
+          {
+            "title": "Quality Guarantee",
+            "description": "Request revisions until you're satisfied. Your success is our priority."
+          }
+        ]
+      },
+      "howItWorks": {
+        "title": "How It Works",
+        "subtitle": "Simple, secure, and straightforward process",
+        "steps": [
+          {
+            "title": "Post Your Project",
+            "description": "Describe what you need. Set your budget and timeline. It takes just minutes."
+          },
+          {
+            "title": "Review Proposals",
+            "description": "Receive proposals from qualified professionals. Compare rates, reviews, and portfolios."
+          },
+          {
+            "title": "Award & Pay Securely",
+            "description": "Choose the best fit and fund the escrow. Your payment is protected until work is complete."
+          },
+          {
+            "title": "Get Results",
+            "description": "Collaborate, review milestones, and approve the final work. Release payment when satisfied."
+          }
+        ]
+      },
+      "testimonials": {
+        "title": "What Our Users Say",
+        "subtitle": "Join thousands of satisfied clients and service providers",
+        "items": [
+          {
+            "name": "Sarah Chen",
+            "role": "Marketing Director",
+            "quote": "Found an amazing designer in 24 hours. The escrow system gave me complete peace of mind throughout the project."
+          },
+          {
+            "name": "Michael Torres",
+            "role": "Freelance Developer",
+            "quote": "As a service provider, I love the platform. Professional clients, fair pricing, and guaranteed payment. What more could I ask for?"
+          },
+          {
+            "name": "Emma Wilson",
+            "role": "Startup Founder",
+            "quote": "Hired 5 different specialists for our launch. The quality and professionalism exceeded expectations every time."
+          }
+        ]
+      },
+      "pricing": {
+        "title": "Simple, Transparent Pricing",
+        "subtitle": "Choose the plan that fits your needs",
+        "popularBadge": "Most Popular",
+        "plans": [
+          {
+            "name": "Free",
+            "description": "Perfect for trying out the platform",
+            "price": "$0",
+            "period": "forever",
+            "cta": "Get Started",
+            "featured": false,
+            "features": [
+              "3% transaction fee",
+              "Basic support",
+              "Access to all services",
+              "Standard processing",
+              "Community forum access"
+            ]
+          },
+          {
+            "name": "Professional",
+            "description": "For regular users and growing businesses",
+            "price": "$29",
+            "period": "month",
+            "cta": "Start Free Trial",
+            "featured": true,
+            "features": [
+              "1.5% transaction fee",
+              "Priority support",
+              "Advanced filters",
+              "Faster processing",
+              "Dedicated account manager",
+              "Custom proposals",
+              "Analytics dashboard"
+            ]
+          },
+          {
+            "name": "Enterprise",
+            "description": "For large teams and organizations",
+            "price": "Custom",
+            "period": null,
+            "cta": "Contact Sales",
+            "featured": false,
+            "features": [
+              "0.5% transaction fee",
+              "24/7 premium support",
+              "API access",
+              "White-label options",
+              "Custom integrations",
+              "Volume discounts",
+              "SLA guarantee",
+              "Training & onboarding"
+            ]
+          }
+        ]
+      },
+      "cta": {
+        "title": "Ready to Get Started?",
+        "subtitle": "Join thousands of businesses and professionals who trust our platform",
+        "button": "Create Free Account"
+      }
+    }
   },
   "ru": {
     "header": {
@@ -1241,6 +1397,162 @@
         "tags": ["saas", "продукт", "тарифы", "b2b", "подписка"],
         "bestFor": ["SaaS Компании", "Программные Продукты", "B2B Инструменты", "Приложения Продуктивности"]
       }
-    ]
+    ],
+    "serviceMarketplace": {
+      "nav": {
+        "features": "Возможности",
+        "howItWorks": "Как Это Работает",
+        "testimonials": "Отзывы",
+        "pricing": "Тарифы"
+      },
+      "hero": {
+        "badge": "Надежная Площадка",
+        "title": "Свяжитесь с Профессиональными Исполнителями",
+        "subtitle": "Покупайте и продавайте бизнес-услуги с уверенностью. Защита эскроу, проверенные специалисты и безопасные транзакции.",
+        "ctaPrimary": "Начать",
+        "ctaSecondary": "Узнать Больше"
+      },
+      "stats": [
+        { "value": "10K+", "label": "Активных Пользователей" },
+        { "value": "50K+", "label": "Продано Услуг" },
+        { "value": "$2M+", "label": "В Транзакциях" },
+        { "value": "4.9/5", "label": "Средний Рейтинг" }
+      ],
+      "features": {
+        "title": "Почему Выбирают Нашу Платформу",
+        "subtitle": "Всё необходимое для безопасных и успешных сделок",
+        "items": [
+          {
+            "title": "Защита Эскроу",
+            "description": "Ваши деньги в безопасности. Средства надежно хранятся до завершения работы."
+          },
+          {
+            "title": "Проверенные Специалисты",
+            "description": "Все исполнители тщательно проверены на качество и надежность."
+          },
+          {
+            "title": "Глобальный Охват",
+            "description": "Связывайтесь с талантливыми профессионалами со всего мира, 24/7."
+          },
+          {
+            "title": "Прозрачные Цены",
+            "description": "Точная стоимость заранее. Никаких скрытых платежей и сюрпризов."
+          },
+          {
+            "title": "Быстрая Доставка",
+            "description": "Завершайте проекты вовремя с отслеживанием этапов и управлением дедлайнами."
+          },
+          {
+            "title": "Гарантия Качества",
+            "description": "Запрашивайте доработки до полного удовлетворения. Ваш успех - наш приоритет."
+          }
+        ]
+      },
+      "howItWorks": {
+        "title": "Как Это Работает",
+        "subtitle": "Простой, безопасный и понятный процесс",
+        "steps": [
+          {
+            "title": "Опубликуйте Проект",
+            "description": "Опишите что вам нужно. Установите бюджет и сроки. Это займет всего несколько минут."
+          },
+          {
+            "title": "Просмотрите Предложения",
+            "description": "Получайте предложения от квалифицированных специалистов. Сравнивайте цены, отзывы и портфолио."
+          },
+          {
+            "title": "Выберите и Оплатите Безопасно",
+            "description": "Выберите лучшего исполнителя и внесите средства в эскроу. Ваш платеж защищен до завершения работы."
+          },
+          {
+            "title": "Получите Результат",
+            "description": "Сотрудничайте, проверяйте этапы и одобряйте финальную работу. Освободите оплату когда будете удовлетворены."
+          }
+        ]
+      },
+      "testimonials": {
+        "title": "Что Говорят Наши Пользователи",
+        "subtitle": "Присоединяйтесь к тысячам довольных клиентов и исполнителей",
+        "items": [
+          {
+            "name": "Сара Чен",
+            "role": "Директор по Маркетингу",
+            "quote": "Нашла потрясающего дизайнера за 24 часа. Система эскроу дала полное спокойствие на протяжении всего проекта."
+          },
+          {
+            "name": "Михаил Торрес",
+            "role": "Фриланс Разработчик",
+            "quote": "Как исполнитель, я обожаю эту платформу. Профессиональные клиенты, честные цены и гарантированная оплата. Что еще нужно?"
+          },
+          {
+            "name": "Эмма Уилсон",
+            "role": "Основатель Стартапа",
+            "quote": "Наняла 5 разных специалистов для нашего запуска. Качество и профессионализм превзошли ожидания каждый раз."
+          }
+        ]
+      },
+      "pricing": {
+        "title": "Простые, Прозрачные Тарифы",
+        "subtitle": "Выберите план который вам подходит",
+        "popularBadge": "Самый Популярный",
+        "plans": [
+          {
+            "name": "Бесплатный",
+            "description": "Идеально для знакомства с платформой",
+            "price": "$0",
+            "period": "навсегда",
+            "cta": "Начать",
+            "featured": false,
+            "features": [
+              "3% комиссия с транзакций",
+              "Базовая поддержка",
+              "Доступ ко всем услугам",
+              "Стандартная обработка",
+              "Доступ к форуму сообщества"
+            ]
+          },
+          {
+            "name": "Профессиональный",
+            "description": "Для постоянных пользователей и растущего бизнеса",
+            "price": "$29",
+            "period": "месяц",
+            "cta": "Начать Пробный Период",
+            "featured": true,
+            "features": [
+              "1.5% комиссия с транзакций",
+              "Приоритетная поддержка",
+              "Расширенные фильтры",
+              "Ускоренная обработка",
+              "Персональный менеджер",
+              "Кастомные предложения",
+              "Панель аналитики"
+            ]
+          },
+          {
+            "name": "Корпоративный",
+            "description": "Для больших команд и организаций",
+            "price": "По запросу",
+            "period": null,
+            "cta": "Связаться с Отделом Продаж",
+            "featured": false,
+            "features": [
+              "0.5% комиссия с транзакций",
+              "Премиум поддержка 24/7",
+              "Доступ к API",
+              "White-label опции",
+              "Кастомные интеграции",
+              "Скидки на объем",
+              "Гарантия SLA",
+              "Обучение и онбординг"
+            ]
+          }
+        ]
+      },
+      "cta": {
+        "title": "Готовы Начать?",
+        "subtitle": "Присоединяйтесь к тысячам компаний и профессионалов которые доверяют нашей платформе",
+        "button": "Создать Бесплатный Аккаунт"
+      }
+    }
   }
 }

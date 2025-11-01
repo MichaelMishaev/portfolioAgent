@@ -27,7 +27,7 @@ import { LanguageToggle } from "@/components/language-toggle";
 export function ServiceMarketplaceTemplate() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { tt } = useI18n();
-  const portfolioData = tt.serviceMarketplace;
+  const portfolioData = tt.serviceMarketplace || {};
 
   return (
     <div className="min-h-screen overflow-x-hidden max-w-full bg-slate-900 text-white">
@@ -38,22 +38,22 @@ export function ServiceMarketplaceTemplate() {
             href="/"
             className="text-sm text-slate-400 hover:text-white transition-colors"
           >
-            {tt.common.backToGallery}
+            {tt.common?.backToGallery || "← Back to Gallery"}
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-6">
             <a href="#features" className="text-sm hover:text-green-400 transition-colors">
-              {portfolioData.nav.features}
+              {portfolioData.nav?.features || "Features"}
             </a>
             <a href="#how-it-works" className="text-sm hover:text-green-400 transition-colors">
-              {portfolioData.nav.howItWorks}
+              {portfolioData.nav?.howItWorks || "How It Works"}
             </a>
             <a href="#testimonials" className="text-sm hover:text-green-400 transition-colors">
-              {portfolioData.nav.testimonials}
+              {portfolioData.nav?.testimonials || "Testimonials"}
             </a>
             <a href="#pricing" className="text-sm hover:text-green-400 transition-colors">
-              {portfolioData.nav.pricing}
+              {portfolioData.nav?.pricing || "Pricing"}
             </a>
             <ThemeToggle />
             <LanguageToggle />
@@ -88,28 +88,28 @@ export function ServiceMarketplaceTemplate() {
                 className="text-sm hover:text-green-400 transition-colors py-2"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                {portfolioData.nav.features}
+                {portfolioData.nav?.features || "Features"}
               </a>
               <a
                 href="#how-it-works"
                 className="text-sm hover:text-green-400 transition-colors py-2"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                {portfolioData.nav.howItWorks}
+                {portfolioData.nav?.howItWorks || "How It Works"}
               </a>
               <a
                 href="#testimonials"
                 className="text-sm hover:text-green-400 transition-colors py-2"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                {portfolioData.nav.testimonials}
+                {portfolioData.nav?.testimonials || "Testimonials"}
               </a>
               <a
                 href="#pricing"
                 className="text-sm hover:text-green-400 transition-colors py-2"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                {portfolioData.nav.pricing}
+                {portfolioData.nav?.pricing || "Pricing"}
               </a>
               <div className="flex items-center gap-4 pt-4 border-t border-slate-800">
                 <ThemeToggle />
@@ -125,34 +125,34 @@ export function ServiceMarketplaceTemplate() {
         <div className="max-w-5xl mx-auto text-center">
           <FadeIn>
             <Badge className="mb-6 bg-green-500/10 text-green-400 border-green-500/20 px-4 py-2">
-              {portfolioData.hero.badge}
+              {portfolioData.hero?.badge || "Trusted Marketplace"}
             </Badge>
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight break-words">
-              {portfolioData.hero.title}
+              {portfolioData.hero?.title || "Connect with Professional Service Providers"}
             </h1>
             <p className="text-lg sm:text-xl text-slate-400 mb-8 max-w-3xl mx-auto">
-              {portfolioData.hero.subtitle}
+              {portfolioData.hero?.subtitle || "Buy and sell business services with confidence"}
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Button
                 size="lg"
                 className="bg-green-500 hover:bg-green-600 text-white px-8 py-6 text-lg font-semibold w-full sm:w-auto"
               >
-                {portfolioData.hero.ctaPrimary} <FiArrowRight className="ml-2" />
+                {portfolioData.hero?.ctaPrimary || "Get Started"} <FiArrowRight className="ml-2" />
               </Button>
               <Button
                 size="lg"
                 variant="outline"
                 className="border-slate-700 text-white hover:bg-slate-800 px-8 py-6 text-lg w-full sm:w-auto"
               >
-                {portfolioData.hero.ctaSecondary}
+                {portfolioData.hero?.ctaSecondary || "Learn More"}
               </Button>
             </div>
           </FadeIn>
 
           {/* Stats */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 mt-16">
-            {portfolioData.stats.map((stat, idx) => (
+            {(portfolioData.stats || []).map((stat, idx) => (
               <ScrollReveal key={idx} delay={idx * 0.1}>
                 <div className="text-center">
                   <div className="text-3xl sm:text-4xl font-bold text-green-400 mb-2">
@@ -172,16 +172,16 @@ export function ServiceMarketplaceTemplate() {
           <div className="text-center mb-16">
             <FadeIn>
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
-                {portfolioData.features.title}
+                {portfolioData.features?.title || "Why Choose Our Platform"}
               </h2>
               <p className="text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto">
-                {portfolioData.features.subtitle}
+                {portfolioData.features?.subtitle || "Everything you need for secure transactions"}
               </p>
             </FadeIn>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            {portfolioData.features.items.map((feature, idx) => (
+            {(portfolioData.features?.items || []).map((feature, idx) => (
               <ScrollReveal key={idx} delay={idx * 0.1}>
                 <Card className="bg-slate-900 border-slate-700 hover:border-green-500/50 transition-colors">
                   <CardContent className="p-6">
@@ -209,16 +209,16 @@ export function ServiceMarketplaceTemplate() {
           <div className="text-center mb-16">
             <FadeIn>
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
-                {portfolioData.howItWorks.title}
+                {portfolioData.howItWorks?.title || "How It Works"}
               </h2>
               <p className="text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto">
-                {portfolioData.howItWorks.subtitle}
+                {portfolioData.howItWorks?.subtitle || "Simple, secure, and straightforward process"}
               </p>
             </FadeIn>
           </div>
 
           <div className="max-w-5xl mx-auto space-y-8">
-            {portfolioData.howItWorks.steps.map((step, idx) => (
+            {(portfolioData.howItWorks?.steps || []).map((step, idx) => (
               <ScrollReveal key={idx} delay={idx * 0.15}>
                 <div className="flex flex-col sm:flex-row gap-6 items-start">
                   <div className="flex-shrink-0 w-12 h-12 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-xl">
@@ -241,16 +241,16 @@ export function ServiceMarketplaceTemplate() {
           <div className="text-center mb-16">
             <FadeIn>
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
-                {portfolioData.testimonials.title}
+                {portfolioData.testimonials?.title || "What Our Users Say"}
               </h2>
               <p className="text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto">
-                {portfolioData.testimonials.subtitle}
+                {portfolioData.testimonials?.subtitle || "Join thousands of satisfied clients"}
               </p>
             </FadeIn>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            {portfolioData.testimonials.items.map((testimonial, idx) => (
+            {(portfolioData.testimonials?.items || []).map((testimonial, idx) => (
               <ScrollReveal key={idx} delay={idx * 0.1}>
                 <Card className="bg-slate-900 border-slate-700">
                   <CardContent className="p-6">
@@ -283,16 +283,16 @@ export function ServiceMarketplaceTemplate() {
           <div className="text-center mb-16">
             <FadeIn>
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
-                {portfolioData.pricing.title}
+                {portfolioData.pricing?.title || "Simple, Transparent Pricing"}
               </h2>
               <p className="text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto">
-                {portfolioData.pricing.subtitle}
+                {portfolioData.pricing?.subtitle || "Choose the plan that fits your needs"}
               </p>
             </FadeIn>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {portfolioData.pricing.plans.map((plan, idx) => (
+            {(portfolioData.pricing?.plans || []).map((plan, idx) => (
               <ScrollReveal key={idx} delay={idx * 0.15}>
                 <Card
                   className={`${
@@ -304,7 +304,7 @@ export function ServiceMarketplaceTemplate() {
                   {plan.featured && (
                     <div className="absolute -top-4 left-1/2 -translate-x-1/2">
                       <Badge className="bg-green-500 text-white px-4 py-1">
-                        {portfolioData.pricing.popularBadge}
+                        {portfolioData.pricing?.popularBadge || "Most Popular"}
                       </Badge>
                     </div>
                   )}
@@ -346,16 +346,16 @@ export function ServiceMarketplaceTemplate() {
           <div className="max-w-4xl mx-auto text-center">
             <FadeIn>
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
-                {portfolioData.cta.title}
+                {portfolioData.cta?.title || "Ready to Get Started?"}
               </h2>
               <p className="text-lg sm:text-xl text-green-50 mb-8">
-                {portfolioData.cta.subtitle}
+                {portfolioData.cta?.subtitle || "Join thousands of businesses and professionals"}
               </p>
               <Button
                 size="lg"
                 className="bg-white text-green-600 hover:bg-green-50 px-8 py-6 text-lg font-semibold"
               >
-                {portfolioData.cta.button} <FiArrowRight className="ml-2" />
+                {portfolioData.cta?.button || "Create Free Account"} <FiArrowRight className="ml-2" />
               </Button>
             </FadeIn>
           </div>
@@ -366,7 +366,7 @@ export function ServiceMarketplaceTemplate() {
       <footer className="border-t border-slate-800 py-8">
         <div className="container mx-auto px-3 max-w-full">
           <p className="text-sm text-slate-400 text-center">
-            © {new Date().getFullYear()} {portfolioData.hero.title}. All rights reserved.
+            © {new Date().getFullYear()} {portfolioData.hero?.title || "Service Marketplace"}. All rights reserved.
           </p>
         </div>
       </footer>
