@@ -1,0 +1,29 @@
+<svg width="1200" height="675" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="darkGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2a2a3e;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <rect width="1200" height="675" fill="url(#darkGrad)"/>
+  
+  <!-- Navigation Bar -->
+  <line x1="100" y1="100" x2="1100" y2="100" stroke="rgba(212,175,55,0.3)" stroke-width="1"/>
+  <text x="100" y="75" font-family="Georgia, serif" font-size="28" font-weight="600" fill="#d4af37">EXECUTIVE</text>
+  <text x="850" y="75" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#f5f5f5" letter-spacing="2">ABOUT</text>
+  <text x="940" y="75" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#f5f5f5" letter-spacing="2">SERVICES</text>
+  <text x="1050" y="75" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#f5f5f5" letter-spacing="2">CONTACT</text>
+  
+  <!-- Hero Content -->
+  <text x="100" y="240" font-family="Georgia, serif" font-size="68" font-weight="400" fill="#ffffff">Building</text>
+  <text x="100" y="320" font-family="Georgia, serif" font-size="68" font-weight="400" fill="#d4af37">Excellence</text>
+  <text x="100" y="400" font-family="Georgia, serif" font-size="68" font-weight="400" fill="#ffffff">Through Vision</text>
+  
+  <text x="100" y="470" font-family="Arial, sans-serif" font-size="20" fill="rgba(255,255,255,0.7)">Premium consulting services for enterprise clients.</text>
+  <text x="100" y="505" font-family="Arial, sans-serif" font-size="20" fill="rgba(255,255,255,0.7)">Strategic solutions that drive measurable results.</text>
+  
+  <!-- CTA Button -->
+  <rect x="100" y="540" width="280" height="55" rx="6" fill="#d4af37"/>
+  <text x="240" y="575" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="600" fill="#1a1a2e" letter-spacing="1.5">SCHEDULE CONSULTATION</text>
+</svg>

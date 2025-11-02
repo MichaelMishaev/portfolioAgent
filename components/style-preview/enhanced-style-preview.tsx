@@ -9,9 +9,15 @@ import { PreviewPageFAB } from "./floating-action-button";
 import { ShareModal } from "./share-modal";
 import { BottomSheet } from "./bottom-sheet";
 import { SaveLoadPreferences } from "./save-load-preferences";
+import { AvatarUpload } from "./avatar-upload";
+import { EnhancedLivePreview } from "./enhanced-live-preview";
+import { DevicePreviewSwitcher } from "./device-preview-switcher";
 import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 import Link from "next/link";
-import { ArrowLeft, Eye, Sparkles, Droplet, Type } from "lucide-react";
+import { ArrowLeft, Eye, Sparkles, Droplet, Type, Zap } from "lucide-react";
 import { useI18n } from "@/lib/i18n-context";
 import { motion } from "framer-motion";
 import {
@@ -175,34 +181,111 @@ export function EnhancedStylePreview({ template: initialTemplate }: EnhancedStyl
       </section>
 
       {/* Main Content */}
-      <div className="container mx-auto px-4 py-6 sm:py-8 md:py-12 space-y-6">
-        {/* Share Preferences */}
-        <div className="max-w-md mx-auto">
-          <SaveLoadPreferences
-            currentPreferences={{
-              firstName,
-              lastName,
-              title,
-              avatarImage,
-              accentColor: customColors.accent,
-              templateId: template.id,
-            }}
-            onLoadPreferences={handleLoadPreferences}
-          />
-        </div>
+      <div className="container mx-auto px-4 py-6 sm:py-8 md:py-12">
+        <div className="grid lg:grid-cols-[40%_60%] gap-6 lg:gap-8 max-w-7xl mx-auto">
+          {/* Left Column: Form Controls */}
+          <div className="lg:sticky lg:top-24 self-start space-y-6">
+            {/* Share Preferences */}
+            <SaveLoadPreferences
+              currentPreferences={{
+                firstName,
+                lastName,
+                title,
+                avatarImage,
+                accentColor: customColors.accent,
+                templateId: template.id,
+              }}
+              onLoadPreferences={handleLoadPreferences}
+            />
 
-        {/* Try It Section - Single Static Preview */}
-        <TryItPlayground
-          template={{ ...template, colors: customColors }}
-          firstName={firstName}
-          lastName={lastName}
-          title={title}
-          avatarImage={avatarImage}
-          onFirstNameChange={setFirstName}
-          onLastNameChange={setLastName}
-          onTitleChange={setTitle}
-          onAvatarChange={setAvatarImage}
-        />
+            {/* Input Form Header */}
+            <div>
+              <div className="flex items-center gap-2 mb-2">
+                <Sparkles className="w-5 h-5 text-primary" />
+                <h2 className="text-2xl font-bold">{t.stylePreview.playground.title}</h2>
+              </div>
+              <p className="text-sm text-muted-foreground">
+                {t.stylePreview.playground.subtitle}
+              </p>
+            </div>
+
+            {/* Input Form */}
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-base">
+                  {t.stylePreview.playground.yourInfo}
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <AvatarUpload
+                  currentImage={avatarImage}
+                  onImageChange={setAvatarImage}
+                />
+
+                <div className="space-y-2">
+                  <Label htmlFor="firstName">{t.stylePreview.playground.firstName}</Label>
+                  <Input
+                    id="firstName"
+                    type="text"
+                    placeholder={t.stylePreview.playground.placeholders.firstName}
+                    value={firstName}
+                    onChange={(e) => setFirstName(e.target.value)}
+                    className="text-base"
+                  />
+                </div>
+
+                <div className="space-y-2">
+                  <Label htmlFor="lastName">{t.stylePreview.playground.lastName}</Label>
+                  <Input
+                    id="lastName"
+                    type="text"
+                    placeholder={t.stylePreview.playground.placeholders.lastName}
+                    value={lastName}
+                    onChange={(e) => setLastName(e.target.value)}
+                    className="text-base"
+                  />
+                </div>
+
+                <div className="space-y-2">
+                  <Label htmlFor="title">{t.stylePreview.playground.roleTitle}</Label>
+                  <Input
+                    id="title"
+                    type="text"
+                    placeholder={t.stylePreview.playground.placeholders.title}
+                    value={title}
+                    onChange={(e) => setTitle(e.target.value)}
+                    className="text-base"
+                  />
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Right Column: Live Preview */}
+          <div className="space-y-3">
+            <div className="flex items-center gap-2">
+              <Zap className="w-4 h-4 text-primary" />
+              <h3 className="text-lg font-semibold">{t.stylePreview.playground.livePreview}</h3>
+            </div>
+
+            <div className="max-w-[1440px]">
+              <DevicePreviewSwitcher>
+                <EnhancedLivePreview
+                  template={{ ...template, colors: customColors }}
+                  firstName={firstName}
+                  lastName={lastName}
+                  title={title}
+                  avatarImage={avatarImage}
+                />
+              </DevicePreviewSwitcher>
+
+              <p className="text-xs text-center text-muted-foreground flex items-center justify-center gap-1 mt-3">
+                <Zap className="w-3 h-3" />
+                {t.stylePreview.playground.updatesRealtime}
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* CTA Footer */}

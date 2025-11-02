@@ -199,6 +199,18 @@ const staticTemplateData = {
     colors: { primary: "#0F172A", secondary: "#FFFFFF", accent: "#3B82F6" },
     fonts: { heading: "Playfair Display", body: "Inter" },
   },
+  "lin-portfolio-elegance": {
+    colors: { primary: "#C9A87C", secondary: "#FFFFFF", accent: "#2C2C2C" },
+    fonts: { heading: "Inter", body: "Inter" },
+  },
+  "lin-professional-authority": {
+    colors: { primary: "#1A1A2E", secondary: "#D4AF37", accent: "#F5F5F5" },
+    fonts: { heading: "Playfair Display", body: "Montserrat" },
+  },
+  "lin-tech-pioneer": {
+    colors: { primary: "#3B82F6", secondary: "#1E293B", accent: "#06B6D4" },
+    fonts: { heading: "Inter", body: "Inter" },
+  },
 };
 
 export function getTemplates(language: "en" | "ru" = "en"): TemplateConfig[] {

@@ -13,6 +13,8 @@ import {
   FiExternalLink,
   FiMessageCircle,
   FiEye,
+  FiFolder,
+  FiEdit3,
 } from "react-icons/fi";
 import { useI18n } from "@/lib/i18n-context";
 
@@ -145,9 +147,13 @@ export function TemplateGallery() {
                 <div className="aspect-video bg-gradient-to-br from-blue-100 to-purple-100 dark:from-blue-900 dark:to-purple-900 rounded-t-lg relative overflow-hidden">
                   <img
                     src={template.thumbnail}
-                    alt={template.name}
+                    alt={`${template.name} preview`}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     loading="lazy"
+                    onError={(e) => {
+                      // Fallback to gradient background if image fails to load
+                      e.currentTarget.style.display = 'none';
+                    }}
                   />
                 </div>
               </CardHeader>
@@ -179,41 +185,18 @@ export function TemplateGallery() {
                   ))}
                 </div>
 
-                {/* Actions */}
-                <div className="mt-auto space-y-2">
+                {/* Actions - Single Primary Button */}
+                <div className="mt-auto">
                   <Button
                     asChild
-                    className="w-full min-h-[44px] touch-manipulation font-semibold"
-                    size="default"
+                    className="w-full min-h-[48px] touch-manipulation font-semibold bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-base"
+                    size="lg"
                   >
-                    <Link href={`/templates/${template.id}/preview`}>
-                      <FiEye className="mr-2 h-4 w-4" />
-                      {t.ui.stylePreview}
+                    <Link href={`/templates/${template.id}/builder`} onClick={handleTemplateClick}>
+                      <FiEdit3 className="mr-2 h-5 w-5" />
+                      Customize & Build
                     </Link>
                   </Button>
-
-                  <div className="flex gap-2">
-                    <Button
-                      asChild
-                      variant="outline"
-                      className="flex-1 min-h-[44px] touch-manipulation text-sm"
-                    >
-                      <Link href={template.demoPath} onClick={handleTemplateClick}>
-                        <FiExternalLink className="mr-1.5 h-3.5 w-3.5" />
-                        {t.ui.viewDemo}
-                      </Link>
-                    </Button>
-                    <Button
-                      variant="outline"
-                      size="icon"
-                      className="min-h-[44px] min-w-[44px] touch-manipulation"
-                      asChild
-                    >
-                      <a href="#contact" aria-label="Contact about this template">
-                        <FiMessageCircle className="h-4 w-4" />
-                      </a>
-                    </Button>
-                  </div>
                 </div>
               </div>
             </Card>

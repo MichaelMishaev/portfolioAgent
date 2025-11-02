@@ -2,6 +2,7 @@
 
 import { Suspense } from "react";
 import { TemplateGallery } from "@/components/template-gallery";
+import { ErrorBoundary } from "@/components/error-boundary";
 import { Header } from "@/components/shared/header";
 import { Footer } from "@/components/shared/footer";
 import { MobileBottomNav } from "@/components/shared/mobile-bottom-nav";
@@ -61,9 +62,19 @@ export default function Home() {
 
       {/* Hero Section - Compact */}
       <section className="relative overflow-hidden">
-        {/* Gradient Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 dark:from-blue-950/20 dark:via-purple-950/20 dark:to-pink-950/20" />
-        <div className="absolute inset-0 bg-grid-pattern opacity-[0.02] dark:opacity-[0.05]" />
+        {/* Optimized Background Image - Local */}
+        <picture className="absolute inset-0">
+          <source srcSet="/hero-bg.webp" type="image/webp" />
+          <img
+            src="/hero-bg.png"
+            alt=""
+            className="absolute inset-0 w-full h-full object-cover"
+            loading="eager"
+            fetchPriority="high"
+          />
+        </picture>
+        {/* Overlay for better text readability */}
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/70 via-purple-900/70 to-pink-900/70 dark:from-blue-950/80 dark:via-purple-950/80 dark:to-pink-950/80" />
 
         <div className="relative container mx-auto px-4 sm:px-6 py-8 sm:py-12 md:py-16">
           <motion.div
@@ -76,21 +87,21 @@ export default function Home() {
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.4, delay: 0.1 }}
-              className="inline-flex items-center gap-2 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 px-3 py-1.5 rounded-full text-xs sm:text-sm font-medium mb-4"
+              className="inline-flex items-center gap-2 bg-blue-500/20 backdrop-blur-sm border border-blue-300/30 text-blue-100 px-3 py-1.5 rounded-full text-xs sm:text-sm font-medium mb-4"
             >
               <FiZap className="w-3.5 h-3.5" />
               {t.homepage.hero.badge}
             </motion.div>
 
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-3 sm:mb-4 leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-3 sm:mb-4 leading-tight text-white">
               {t.homepage.hero.title}{" "}
-              <span className="text-blue-600 dark:text-blue-400">
+              <span className="text-blue-300">
                 {t.homepage.hero.titleGradient}
               </span>
               {" "}{t.homepage.hero.titleEnd}
             </h1>
 
-            <p className="text-base sm:text-lg md:text-xl text-foreground/70 max-w-2xl mx-auto mb-6 sm:mb-8 leading-relaxed px-2">
+            <p className="text-base sm:text-lg md:text-xl text-white/90 max-w-2xl mx-auto mb-6 sm:mb-8 leading-relaxed px-2">
               {t.homepage.hero.subtitle}
             </p>
 
@@ -118,10 +129,10 @@ export default function Home() {
             >
               {stats.map((stat, index) => (
                 <div key={index} className="text-center">
-                  <div className="text-xl sm:text-2xl md:text-3xl font-bold text-blue-600 dark:text-blue-400 mb-0.5 sm:mb-1">
+                  <div className="text-xl sm:text-2xl md:text-3xl font-bold text-blue-300 mb-0.5 sm:mb-1">
                     {stat.value}
                   </div>
-                  <div className="text-[10px] sm:text-xs md:text-sm text-foreground/60 font-medium leading-tight">
+                  <div className="text-[10px] sm:text-xs md:text-sm text-white/70 font-medium leading-tight">
                     {stat.label}
                   </div>
                 </div>
@@ -152,9 +163,16 @@ export default function Home() {
             </p>
           </motion.div>
 
-          <Suspense fallback={<div className="text-center py-8">Loading templates...</div>}>
-            <TemplateGallery />
-          </Suspense>
+          <ErrorBoundary>
+            <Suspense fallback={
+              <div className="text-center py-12">
+                <div className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-blue-600 border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite]" />
+                <p className="mt-4 text-foreground/70">Loading templates...</p>
+              </div>
+            }>
+              <TemplateGallery />
+            </Suspense>
+          </ErrorBoundary>
         </div>
       </section>
 
@@ -227,48 +245,42 @@ export default function Home() {
                   Send Email
                 </a>
               </Button>
-              <Button size="lg" variant="outline" className="text-base px-6 py-6 h-auto min-h-[48px] touch-manipulation" asChild>
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer">
-                  <FiGithub className="mr-2 w-4 h-4" />
-                  View GitHub
-                </a>
+              <Button
+                size="lg"
+                variant="outline"
+                className="text-base px-6 py-6 h-auto min-h-[48px] touch-manipulation opacity-50 cursor-not-allowed"
+                disabled
+              >
+                <FiGithub className="mr-2 w-4 h-4" />
+                GitHub (Coming Soon)
               </Button>
             </div>
 
             <div className="flex justify-center gap-3 sm:gap-4">
-              <motion.a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}
-                className="w-12 h-12 min-h-[48px] min-w-[48px] rounded-full bg-card border flex items-center justify-center hover:bg-blue-100 dark:hover:bg-blue-900/30 transition-colors touch-manipulation"
-                aria-label="LinkedIn"
+              <motion.button
+                disabled
+                className="w-12 h-12 min-h-[48px] min-w-[48px] rounded-full bg-card border flex items-center justify-center opacity-50 cursor-not-allowed touch-manipulation"
+                aria-label="LinkedIn (Coming Soon)"
+                title="LinkedIn profile coming soon"
               >
                 <FiLinkedin className="w-5 h-5" />
-              </motion.a>
-              <motion.a
-                href="https://twitter.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}
-                className="w-12 h-12 min-h-[48px] min-w-[48px] rounded-full bg-card border flex items-center justify-center hover:bg-blue-100 dark:hover:bg-blue-900/30 transition-colors touch-manipulation"
-                aria-label="Twitter"
+              </motion.button>
+              <motion.button
+                disabled
+                className="w-12 h-12 min-h-[48px] min-w-[48px] rounded-full bg-card border flex items-center justify-center opacity-50 cursor-not-allowed touch-manipulation"
+                aria-label="Twitter (Coming Soon)"
+                title="Twitter profile coming soon"
               >
                 <FiTwitter className="w-5 h-5" />
-              </motion.a>
-              <motion.a
-                href="https://github.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}
-                className="w-12 h-12 min-h-[48px] min-w-[48px] rounded-full bg-card border flex items-center justify-center hover:bg-blue-100 dark:hover:bg-blue-900/30 transition-colors touch-manipulation"
-                aria-label="GitHub"
+              </motion.button>
+              <motion.button
+                disabled
+                className="w-12 h-12 min-h-[48px] min-w-[48px] rounded-full bg-card border flex items-center justify-center opacity-50 cursor-not-allowed touch-manipulation"
+                aria-label="GitHub (Coming Soon)"
+                title="GitHub profile coming soon"
               >
                 <FiGithub className="w-5 h-5" />
-              </motion.a>
+              </motion.button>
             </div>
           </motion.div>
         </div>

@@ -1,0 +1,706 @@
+[
+  {
+    "template": "minimalist",
+    "url": "/templates/minimalist",
+    "passed": false,
+    "issues": [
+      "⚠️  No language toggle button found",
+      "❌ NO CYRILLIC TEXT - Russian translation not working"
+    ],
+    "russianContent": {
+      "title": "",
+      "navLinks": [],
+      "buttons": [],
+      "hasUndefined": false,
+      "hasEnglishMixing": false
+    }
+  },
+  {
+    "template": "dark-mode",
+    "url": "/templates/dark-mode",
+    "passed": false,
+    "issues": [
+      "⚠️  No language toggle button found",
+      "❌ NO CYRILLIC TEXT - Russian translation not working"
+    ],
+    "russianContent": {
+      "title": "",
+      "navLinks": [],
+      "buttons": [],
+      "hasUndefined": false,
+      "hasEnglishMixing": false
+    }
+  },
+  {
+    "template": "bold-typography",
+    "url": "/templates/bold-typography",
+    "passed": false,
+    "issues": [
+      "⚠️  No language toggle button found",
+      "❌ NO CYRILLIC TEXT - Russian translation not working"
+    ],
+    "russianContent": {
+      "title": "",
+      "navLinks": [],
+      "buttons": [],
+      "hasUndefined": false,
+      "hasEnglishMixing": false
+    }
+  },
+  {
+    "template": "grid-masonry",
+    "url": "/templates/grid-masonry",
+    "passed": false,
+    "issues": [
+      "⚠️  No language toggle button found",
+      "❌ NO CYRILLIC TEXT - Russian translation not working"
+    ],
+    "russianContent": {
+      "title": "",
+      "navLinks": [],
+      "buttons": [],
+      "hasUndefined": false,
+      "hasEnglishMixing": false
+    }
+  },
+  {
+    "template": "fullscreen-immersive",
+    "url": "/templates/fullscreen-immersive",
+    "passed": false,
+    "issues": [
+      "⚠️  No language toggle button found",
+      "❌ NO CYRILLIC TEXT - Russian translation not working"
+    ],
+    "russianContent": {
+      "title": "",
+      "navLinks": [],
+      "buttons": [],
+      "hasUndefined": false,
+      "hasEnglishMixing": false
+    }
+  },
+  {
+    "template": "split-screen",
+    "url": "/templates/split-screen",
+    "passed": false,
+    "issues": [
+      "⚠️  No language toggle button found",
+      "❌ NO CYRILLIC TEXT - Russian translation not working"
+    ],
+    "russianContent": {
+      "title": "",
+      "navLinks": [],
+      "buttons": [],
+      "hasUndefined": false,
+      "hasEnglishMixing": false
+    }
+  },
+  {
+    "template": "illustration-focus",
+    "url": "/templates/illustration-focus",
+    "passed": false,
+    "issues": [
+      "⚠️  No language toggle button found",
+      "❌ NO CYRILLIC TEXT - Russian translation not working"
+    ],
+    "russianContent": {
+      "title": "",
+      "navLinks": [],
+      "buttons": [],
+      "hasUndefined": false,
+      "hasEnglishMixing": false
+    }
+  },
+  {
+    "template": "single-page",
+    "url": "/templates/single-page",
+    "passed": false,
+    "issues": [
+      "⚠️  No language toggle button found",
+      "❌ NO CYRILLIC TEXT - Russian translation not working"
+    ],
+    "russianContent": {
+      "title": "",
+      "navLinks": [],
+      "buttons": [],
+      "hasUndefined": false,
+      "hasEnglishMixing": false
+    }
+  },
+  {
+    "template": "text-heavy",
+    "url": "/templates/text-heavy",
+    "passed": false,
+    "issues": [
+      "⚠️  No language toggle button found",
+      "❌ NO CYRILLIC TEXT - Russian translation not working"
+    ],
+    "russianContent": {
+      "title": "",
+      "navLinks": [],
+      "buttons": [],
+      "hasUndefined": false,
+      "hasEnglishMixing": false
+    }
+  },
+  {
+    "template": "card-modular",
+    "url": "/templates/card-modular",
+    "passed": false,
+    "issues": [
+      "⚠️  No language toggle button found",
+      "❌ NO CYRILLIC TEXT - Russian translation not working"
+    ],
+    "russianContent": {
+      "title": "",
+      "navLinks": [],
+      "buttons": [],
+      "hasUndefined": false,
+      "hasEnglishMixing": false
+    }
+  },
+  {
+    "template": "kinetic-typography",
+    "url": "/templates/kinetic-typography",
+    "passed": false,
+    "issues": [
+      "⚠️  No language toggle button found",
+      "❌ NO CYRILLIC TEXT - Russian translation not working"
+    ],
+    "russianContent": {
+      "title": "",
+      "navLinks": [],
+      "buttons": [],
+      "hasUndefined": false,
+      "hasEnglishMixing": false
+    }
+  },
+  {
+    "template": "bento-grid",
+    "url": "/templates/bento-grid",
+    "passed": false,
+    "issues": [
+      "⚠️  No language toggle button found",
+      "❌ NO CYRILLIC TEXT - Russian translation not working"
+    ],
+    "russianContent": {
+      "title": "",
+      "navLinks": [],
+      "buttons": [],
+      "hasUndefined": false,
+      "hasEnglishMixing": false
+    }
+  },
+  {
+    "template": "3d-immersive",
+    "url": "/templates/3d-immersive",
+    "passed": false,
+    "issues": [
+      "⚠️  No language toggle button found",
+      "❌ NO CYRILLIC TEXT - Russian translation not working"
+    ],
+    "russianContent": {
+      "title": "",
+      "navLinks": [],
+      "buttons": [],
+      "hasUndefined": false,
+      "hasEnglishMixing": false
+    }
+  },
+  {
+    "template": "neo-brutalist",
+    "url": "/templates/neo-brutalist",
+    "passed": false,
+    "issues": [
+      "⚠️  No language toggle button found",
+      "❌ NO CYRILLIC TEXT - Russian translation not working"
+    ],
+    "russianContent": {
+      "title": "",
+      "navLinks": [],
+      "buttons": [],
+      "hasUndefined": false,
+      "hasEnglishMixing": false
+    }
+  },
+  {
+    "template": "organic-liquid",
+    "url": "/templates/organic-liquid",
+    "passed": false,
+    "issues": [
+      "⚠️  No language toggle button found",
+      "❌ NO CYRILLIC TEXT - Russian translation not working"
+    ],
+    "russianContent": {
+      "title": "",
+      "navLinks": [],
+      "buttons": [],
+      "hasUndefined": false,
+      "hasEnglishMixing": false
+    }
+  },
+  {
+    "template": "data-dashboard",
+    "url": "/templates/data-dashboard",
+    "passed": false,
+    "issues": [
+      "⚠️  No language toggle button found",
+      "❌ NO CYRILLIC TEXT - Russian translation not working"
+    ],
+    "russianContent": {
+      "title": "",
+      "navLinks": [],
+      "buttons": [],
+      "hasUndefined": false,
+      "hasEnglishMixing": false
+    }
+  },
+  {
+    "template": "y2k-retro",
+    "url": "/templates/y2k-retro",
+    "passed": false,
+    "issues": [
+      "⚠️  No language toggle button found",
+      "❌ NO CYRILLIC TEXT - Russian translation not working"
+    ],
+    "russianContent": {
+      "title": "",
+      "navLinks": [],
+      "buttons": [],
+      "hasUndefined": false,
+      "hasEnglishMixing": false
+    }
+  },
+  {
+    "template": "ar-spatial",
+    "url": "/templates/ar-spatial",
+    "passed": false,
+    "issues": [
+      "⚠️  No language toggle button found",
+      "❌ NO CYRILLIC TEXT - Russian translation not working"
+    ],
+    "russianContent": {
+      "title": "",
+      "navLinks": [],
+      "buttons": [],
+      "hasUndefined": false,
+      "hasEnglishMixing": false
+    }
+  },
+  {
+    "template": "collage-maximalist",
+    "url": "/templates/collage-maximalist",
+    "passed": false,
+    "issues": [
+      "⚠️  No language toggle button found",
+      "❌ NO CYRILLIC TEXT - Russian translation not working"
+    ],
+    "russianContent": {
+      "title": "",
+      "navLinks": [],
+      "buttons": [],
+      "hasUndefined": false,
+      "hasEnglishMixing": false
+    }
+  },
+  {
+    "template": "product-saas",
+    "url": "/templates/product-saas",
+    "passed": false,
+    "issues": [
+      "⚠️  No language toggle button found",
+      "❌ NO CYRILLIC TEXT - Russian translation not working"
+    ],
+    "russianContent": {
+      "title": "",
+      "navLinks": [],
+      "buttons": [],
+      "hasUndefined": false,
+      "hasEnglishMixing": false
+    }
+  },
+  {
+    "template": "product-course",
+    "url": "/templates/product-course",
+    "passed": false,
+    "issues": [
+      "⚠️  No language toggle button found",
+      "❌ NO CYRILLIC TEXT - Russian translation not working"
+    ],
+    "russianContent": {
+      "title": "",
+      "navLinks": [],
+      "buttons": [],
+      "hasUndefined": false,
+      "hasEnglishMixing": false
+    }
+  },
+  {
+    "template": "product-tech",
+    "url": "/templates/product-tech",
+    "passed": false,
+    "issues": [
+      "⚠️  No language toggle button found",
+      "❌ NO CYRILLIC TEXT - Russian translation not working"
+    ],
+    "russianContent": {
+      "title": "",
+      "navLinks": [],
+      "buttons": [],
+      "hasUndefined": false,
+      "hasEnglishMixing": false
+    }
+  },
+  {
+    "template": "product-physical",
+    "url": "/templates/product-physical",
+    "passed": false,
+    "issues": [
+      "⚠️  No language toggle button found",
+      "❌ NO CYRILLIC TEXT - Russian translation not working"
+    ],
+    "russianContent": {
+      "title": "",
+      "navLinks": [],
+      "buttons": [],
+      "hasUndefined": false,
+      "hasEnglishMixing": false
+    }
+  },
+  {
+    "template": "product-premium",
+    "url": "/templates/product-premium",
+    "passed": false,
+    "issues": [
+      "⚠️  No language toggle button found",
+      "❌ NO CYRILLIC TEXT - Russian translation not working"
+    ],
+    "russianContent": {
+      "title": "",
+      "navLinks": [],
+      "buttons": [],
+      "hasUndefined": false,
+      "hasEnglishMixing": false
+    }
+  },
+  {
+    "template": "voice-first",
+    "url": "/templates/voice-first",
+    "passed": false,
+    "issues": [
+      "⚠️  No language toggle button found",
+      "❌ NO CYRILLIC TEXT - Russian translation not working"
+    ],
+    "russianContent": {
+      "title": "",
+      "navLinks": [],
+      "buttons": [],
+      "hasUndefined": false,
+      "hasEnglishMixing": false
+    }
+  },
+  {
+    "template": "product-fashion",
+    "url": "/templates/product-fashion",
+    "passed": false,
+    "issues": [
+      "⚠️  No language toggle button found",
+      "❌ NO CYRILLIC TEXT - Russian translation not working"
+    ],
+    "russianContent": {
+      "title": "",
+      "navLinks": [],
+      "buttons": [],
+      "hasUndefined": false,
+      "hasEnglishMixing": false
+    }
+  },
+  {
+    "template": "product-luxury",
+    "url": "/templates/product-luxury",
+    "passed": false,
+    "issues": [
+      "⚠️  No language toggle button found",
+      "❌ NO CYRILLIC TEXT - Russian translation not working"
+    ],
+    "russianContent": {
+      "title": "",
+      "navLinks": [],
+      "buttons": [],
+      "hasUndefined": false,
+      "hasEnglishMixing": false
+    }
+  },
+  {
+    "template": "product-audio",
+    "url": "/templates/product-audio",
+    "passed": false,
+    "issues": [
+      "⚠️  No language toggle button found",
+      "❌ NO CYRILLIC TEXT - Russian translation not working"
+    ],
+    "russianContent": {
+      "title": "",
+      "navLinks": [],
+      "buttons": [],
+      "hasUndefined": false,
+      "hasEnglishMixing": false
+    }
+  },
+  {
+    "template": "product-vacuum",
+    "url": "/templates/product-vacuum",
+    "passed": false,
+    "issues": [
+      "⚠️  No language toggle button found",
+      "❌ NO CYRILLIC TEXT - Russian translation not working"
+    ],
+    "russianContent": {
+      "title": "",
+      "navLinks": [],
+      "buttons": [],
+      "hasUndefined": false,
+      "hasEnglishMixing": false
+    }
+  },
+  {
+    "template": "service-b2b",
+    "url": "/templates/service-b2b",
+    "passed": false,
+    "issues": [
+      "⚠️  No language toggle button found",
+      "❌ NO CYRILLIC TEXT - Russian translation not working"
+    ],
+    "russianContent": {
+      "title": "",
+      "navLinks": [],
+      "buttons": [],
+      "hasUndefined": false,
+      "hasEnglishMixing": false
+    }
+  },
+  {
+    "template": "service-community",
+    "url": "/templates/service-community",
+    "passed": false,
+    "issues": [
+      "⚠️  No language toggle button found",
+      "❌ NO CYRILLIC TEXT - Russian translation not working"
+    ],
+    "russianContent": {
+      "title": "",
+      "navLinks": [],
+      "buttons": [],
+      "hasUndefined": false,
+      "hasEnglishMixing": false
+    }
+  },
+  {
+    "template": "service-dfyou",
+    "url": "/templates/service-dfyou",
+    "passed": false,
+    "issues": [
+      "⚠️  No language toggle button found",
+      "❌ NO CYRILLIC TEXT - Russian translation not working"
+    ],
+    "russianContent": {
+      "title": "",
+      "navLinks": [],
+      "buttons": [],
+      "hasUndefined": false,
+      "hasEnglishMixing": false
+    }
+  },
+  {
+    "template": "service-agency",
+    "url": "/templates/service-agency",
+    "passed": false,
+    "issues": [
+      "⚠️  No language toggle button found",
+      "❌ NO CYRILLIC TEXT - Russian translation not working"
+    ],
+    "russianContent": {
+      "title": "",
+      "navLinks": [],
+      "buttons": [],
+      "hasUndefined": false,
+      "hasEnglishMixing": false
+    }
+  },
+  {
+    "template": "service-enterprise",
+    "url": "/templates/service-enterprise",
+    "passed": false,
+    "issues": [
+      "⚠️  No language toggle button found",
+      "❌ NO CYRILLIC TEXT - Russian translation not working"
+    ],
+    "russianContent": {
+      "title": "",
+      "navLinks": [],
+      "buttons": [],
+      "hasUndefined": false,
+      "hasEnglishMixing": false
+    }
+  },
+  {
+    "template": "service-consulting",
+    "url": "/templates/service-consulting",
+    "passed": false,
+    "issues": [
+      "⚠️  No language toggle button found",
+      "❌ NO CYRILLIC TEXT - Russian translation not working"
+    ],
+    "russianContent": {
+      "title": "",
+      "navLinks": [],
+      "buttons": [],
+      "hasUndefined": false,
+      "hasEnglishMixing": false
+    }
+  },
+  {
+    "template": "blog-personal",
+    "url": "/templates/blog-personal",
+    "passed": false,
+    "issues": [
+      "⚠️  No language toggle button found",
+      "❌ NO CYRILLIC TEXT - Russian translation not working"
+    ],
+    "russianContent": {
+      "title": "",
+      "navLinks": [],
+      "buttons": [],
+      "hasUndefined": false,
+      "hasEnglishMixing": false
+    }
+  },
+  {
+    "template": "blog-magazine",
+    "url": "/templates/blog-magazine",
+    "passed": false,
+    "issues": [
+      "⚠️  No language toggle button found",
+      "❌ NO CYRILLIC TEXT - Russian translation not working"
+    ],
+    "russianContent": {
+      "title": "",
+      "navLinks": [],
+      "buttons": [],
+      "hasUndefined": false,
+      "hasEnglishMixing": false
+    }
+  },
+  {
+    "template": "blog-tech",
+    "url": "/templates/blog-tech",
+    "passed": false,
+    "issues": [
+      "⚠️  No language toggle button found",
+      "❌ NO CYRILLIC TEXT - Russian translation not working"
+    ],
+    "russianContent": {
+      "title": "",
+      "navLinks": [],
+      "buttons": [],
+      "hasUndefined": false,
+      "hasEnglishMixing": false
+    }
+  },
+  {
+    "template": "blog-archetypes-minimal",
+    "url": "/templates/blog-archetypes-minimal",
+    "passed": false,
+    "issues": [
+      "⚠️  No language toggle button found",
+      "❌ NO CYRILLIC TEXT - Russian translation not working"
+    ],
+    "russianContent": {
+      "title": "",
+      "navLinks": [],
+      "buttons": [],
+      "hasUndefined": false,
+      "hasEnglishMixing": false
+    }
+  },
+  {
+    "template": "blog-archetypes-editorial",
+    "url": "/templates/blog-archetypes-editorial",
+    "passed": false,
+    "issues": [
+      "⚠️  No language toggle button found",
+      "❌ NO CYRILLIC TEXT - Russian translation not working"
+    ],
+    "russianContent": {
+      "title": "",
+      "navLinks": [],
+      "buttons": [],
+      "hasUndefined": false,
+      "hasEnglishMixing": false
+    }
+  },
+  {
+    "template": "online-business-coach",
+    "url": "/templates/online-business-coach",
+    "passed": false,
+    "issues": [
+      "⚠️  No language toggle button found",
+      "❌ NO CYRILLIC TEXT - Russian translation not working"
+    ],
+    "russianContent": {
+      "title": "",
+      "navLinks": [],
+      "buttons": [],
+      "hasUndefined": false,
+      "hasEnglishMixing": false
+    }
+  },
+  {
+    "template": "online-business-course",
+    "url": "/templates/online-business-course",
+    "passed": false,
+    "issues": [
+      "⚠️  No language toggle button found",
+      "❌ NO CYRILLIC TEXT - Russian translation not working"
+    ],
+    "russianContent": {
+      "title": "",
+      "navLinks": [],
+      "buttons": [],
+      "hasUndefined": false,
+      "hasEnglishMixing": false
+    }
+  },
+  {
+    "template": "online-business-agency",
+    "url": "/templates/online-business-agency",
+    "passed": false,
+    "issues": [
+      "⚠️  No language toggle button found",
+      "❌ NO CYRILLIC TEXT - Russian translation not working"
+    ],
+    "russianContent": {
+      "title": "",
+      "navLinks": [],
+      "buttons": [],
+      "hasUndefined": false,
+      "hasEnglishMixing": false
+    }
+  },
+  {
+    "template": "online-business-saas",
+    "url": "/templates/online-business-saas",
+    "passed": false,
+    "issues": [
+      "⚠️  No language toggle button found",
+      "❌ NO CYRILLIC TEXT - Russian translation not working"
+    ],
+    "russianContent": {
+      "title": "",
+      "navLinks": [],
+      "buttons": [],
+      "hasUndefined": false,
+      "hasEnglishMixing": false
+    }
+  }
+]

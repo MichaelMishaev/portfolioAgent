@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archetypes Explorer - Minimalist Preview</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 1200px;
+            height: 630px;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            overflow: hidden;
+        }
+
+        .container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            padding: 60px;
+        }
+
+        /* Gradient orbs */
+        .orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(60px);
+            opacity: 0.6;
+        }
+
+        .orb-1 {
+            width: 400px;
+            height: 400px;
+            background: linear-gradient(135deg, #14B8A6 0%, #0D9488 100%);
+            top: -100px;
+            left: -100px;
+        }
+
+        .orb-2 {
+            width: 350px;
+            height: 350px;
+            background: linear-gradient(135deg, #A855F7 0%, #7C3AED 100%);
+            bottom: -80px;
+            right: -80px;
+        }
+
+        .orb-3 {
+            width: 250px;
+            height: 250px;
+            background: linear-gradient(135deg, #14B8A6 0%, #A855F7 100%);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0.3;
+        }
+
+        /* Main card */
+        .card {
+            position: relative;
+            z-index: 10;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            border-radius: 32px;
+            padding: 80px;
+            box-shadow:
+                0 10px 40px rgba(0, 0, 0, 0.1),
+                0 0 0 1px rgba(255, 255, 255, 0.5);
+            text-align: center;
+            max-width: 900px;
+        }
+
+        .title {
+            font-size: 72px;
+            font-weight: 300;
+            letter-spacing: -2px;
+            background: linear-gradient(135deg, #14B8A6 0%, #A855F7 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 24px;
+            line-height: 1.1;
+        }
+
+        .subtitle {
+            font-size: 24px;
+            color: #64748b;
+            font-weight: 400;
+            margin-bottom: 40px;
+            letter-spacing: 0.5px;
+        }
+
+        .features {
+            display: flex;
+            gap: 24px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .feature {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(10px);
+            padding: 16px 32px;
+            border-radius: 100px;
+            font-size: 16px;
+            color: #475569;
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            font-weight: 500;
+        }
+
+        .gradient-accent {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200px;
+            height: 4px;
+            background: linear-gradient(90deg, #14B8A6 0%, #A855F7 100%);
+            border-radius: 2px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+
+        <div class="card">
+            <h1 class="title">Archetypes Explorer</h1>
+            <p class="subtitle">Modern Minimalist Blog Template</p>
+            <div class="features">
+                <span class="feature">Glassmorphism</span>
+                <span class="feature">Teal & Purple</span>
+                <span class="feature">Clean Design</span>
+            </div>
+            <div class="gradient-accent"></div>
+        </div>
+    </div>
+</body>
+</html>

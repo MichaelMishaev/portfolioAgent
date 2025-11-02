@@ -1,0 +1,954 @@
+{
+  "en": {
+    "header": {
+      "title": "Michael Mishayev",
+      "subtitle": "Full-Stack Developer & Designer creating modern web experiences"
+    },
+    "homepage": {
+      "hero": {
+        "badge": "Full-Stack Developer & Designer",
+        "title": "Crafting Digital",
+        "titleGradient": "Experiences",
+        "titleEnd": "That Matter",
+        "subtitle": "I create modern, responsive web applications and stunning user interfaces. From concept to deployment, I bring ideas to life with clean code and beautiful design.",
+        "ctaExplore": "View My Work",
+        "ctaDemo": "Contact Me"
+      },
+      "stats": {
+        "templates": "Projects",
+        "categories": "Technologies",
+        "responsive": "Happy Clients",
+        "openSource": "Years Experience"
+      },
+      "features": {
+        "title": "What I Bring to",
+        "titleGradient": "Your Project",
+        "subtitle": "Professional expertise with modern technologies and best practices",
+        "fast": {
+          "title": "Performance First",
+          "description": "Optimized code with Next.js and modern frameworks for lightning-fast experiences"
+        },
+        "modern": {
+          "title": "Modern Design",
+          "description": "Clean, professional interfaces following 2024-2025 design trends"
+        },
+        "production": {
+          "title": "Production Ready",
+          "description": "TypeScript, Tailwind CSS, and industry-standard tools for reliable solutions"
+        },
+        "responsive": {
+          "title": "Fully Responsive",
+          "description": "Beautiful experiences on every device - mobile, tablet, and desktop"
+        },
+        "seo": {
+          "title": "SEO Optimized",
+          "description": "Built-in search engine optimization and performance best practices"
+        },
+        "customize": {
+          "title": "Maintainable Code",
+          "description": "Clean, well-documented code that's easy to extend and maintain"
+        }
+      },
+      "categoriesSection": {
+        "title": "My",
+        "titleGradient": "Projects",
+        "subtitle": "From professional portfolios to product landing pages - explore diverse projects I've created",
+        "templatesLabel": "Projects"
+      },
+      "gallery": {
+        "title": "Portfolio",
+        "titleGradient": "",
+        "subtitle": "These templates can be edited to any direction, depending on your needs. Let's talk!"
+      }
+    },
+    "categories": {
+      "all": "all",
+      "Professional": "Professional",
+      "Creative": "Creative",
+      "Portfolio": "Portfolio",
+      "Modern": "Modern",
+      "Simple": "Simple",
+      "Blog": "Blog",
+      "Product": "Product",
+      "Service": "Service",
+      "Experimental": "Experimental",
+      "Online Business": "Online Business"
+    },
+    "ui": {
+      "viewDemo": "View Project",
+      "colors": "Colors",
+      "bestFor": "Built for",
+      "beginner": "simple",
+      "intermediate": "moderate",
+      "advanced": "complex"
+    },
+    "templates": [
+      {
+        "id": "minimalist",
+        "name": "Minimalist & Clean",
+        "description": "Focus on simplicity, whitespace, and clarity. Everything unnecessary is stripped away.",
+        "category": "Professional",
+        "difficulty": "beginner",
+        "features": ["Dark Mode", "Responsive", "SEO Optimized", "Contact Form"],
+        "tags": ["minimal", "clean", "professional", "modern"],
+        "bestFor": ["Designers", "Developers", "Consultants"]
+      },
+      {
+        "id": "dark-mode",
+        "name": "Dark Mode Cinematic",
+        "description": "Dark or near-black backgrounds with contrasting light text. Cinematic and sophisticated.",
+        "category": "Creative",
+        "difficulty": "intermediate",
+        "features": ["Video Background", "Smooth Animations", "Dark Theme", "Gallery"],
+        "tags": ["dark", "cinematic", "elegant", "premium"],
+        "bestFor": ["Photographers", "UI/UX Designers", "Creative Studios"]
+      },
+      {
+        "id": "bold-typography",
+        "name": "Bold Typography Hero",
+        "description": "Typography is the design itself — big, oversized type as the hero element.",
+        "category": "Creative",
+        "difficulty": "beginner",
+        "features": ["Large Typography", "Minimal Design", "Fast Loading", "Mobile First"],
+        "tags": ["typography", "bold", "minimal", "creative"],
+        "bestFor": ["Personal Brands", "Creative Freelancers"]
+      },
+      {
+        "id": "grid-masonry",
+        "name": "Grid & Masonry Layout",
+        "description": "Portfolio pieces displayed in visually consistent grid tiles. Perfect for visual content.",
+        "category": "Portfolio",
+        "difficulty": "intermediate",
+        "features": ["Masonry Grid", "Lightbox", "Filter Categories", "Lazy Loading"],
+        "tags": ["grid", "masonry", "portfolio", "gallery"],
+        "bestFor": ["Photographers", "Artists", "Agencies"]
+      },
+      {
+        "id": "fullscreen-immersive",
+        "name": "Full-Screen Immersive",
+        "description": "Hero image or video takes entire viewport. Minimal text, storytelling through visuals.",
+        "category": "Creative",
+        "difficulty": "advanced",
+        "features": ["Full-Screen Media", "Parallax", "Scroll Animations", "Video Support"],
+        "tags": ["immersive", "fullscreen", "cinematic", "video"],
+        "bestFor": ["Videographers", "Photographers", "Designers"]
+      },
+      {
+        "id": "split-screen",
+        "name": "Split-Screen Layout",
+        "description": "Screen divided vertically — one half for imagery, one for text content.",
+        "category": "Modern",
+        "difficulty": "intermediate",
+        "features": ["Split Layout", "Alternating Sections", "Smooth Scroll", "Responsive"],
+        "tags": ["split", "balanced", "modern", "structured"],
+        "bestFor": ["Agencies", "Designers"]
+      },
+      {
+        "id": "illustration-focus",
+        "name": "Illustration Focus",
+        "description": "Heavy use of hand-drawn, vector, or 3D illustrations with playful animations.",
+        "category": "Creative",
+        "difficulty": "advanced",
+        "features": ["Custom Illustrations", "Lottie Animations", "Bright Colors", "Playful UI"],
+        "tags": ["illustration", "playful", "creative", "animated"],
+        "bestFor": ["Illustrators", "Animators", "Creative Agencies"]
+      },
+      {
+        "id": "single-page",
+        "name": "Single-Page Scroll",
+        "description": "All content on one long page with smooth-scrolling navigation anchors.",
+        "category": "Simple",
+        "difficulty": "beginner",
+        "features": ["One Page", "Smooth Scroll", "Anchor Navigation", "Simple"],
+        "tags": ["simple", "one-page", "scroll", "personal"],
+        "bestFor": ["Freelancers", "Personal Sites", "Landing Pages"]
+      },
+      {
+        "id": "text-heavy",
+        "name": "Text-Heavy SEO",
+        "description": "Typography-driven layout with no images. Perfect for bloggers and writers.",
+        "category": "Blog",
+        "difficulty": "beginner",
+        "features": ["SEO Optimized", "Blog Ready", "Reading Time", "Tags"],
+        "tags": ["blog", "text", "seo", "editorial"],
+        "bestFor": ["Writers", "Bloggers", "Journalists"]
+      },
+      {
+        "id": "card-modular",
+        "name": "Card-Based Modular",
+        "description": "Modular grid cards that are easy to rearrange and customize.",
+        "category": "Modern",
+        "difficulty": "beginner",
+        "features": ["Card Layout", "Flexible Grid", "Hover Effects", "Modern"],
+        "tags": ["cards", "modular", "modern", "flexible"],
+        "bestFor": ["Agencies", "Product Designers", "Developers"]
+      },
+      {
+        "id": "kinetic-typography",
+        "name": "Kinetic Typography Motion",
+        "description": "Text that morphs, scales, and animates creating dynamic visual interest.",
+        "category": "Experimental",
+        "difficulty": "advanced",
+        "features": ["Text Animations", "Cursor Effects", "Dynamic Typography", "Motion Design"],
+        "tags": ["motion", "typography", "experimental", "dynamic"],
+        "bestFor": ["Motion Designers", "Creative Directors", "Digital Artists"]
+      },
+      {
+        "id": "bento-grid",
+        "name": "Bento Grid Modular",
+        "description": "Japanese bento-box inspired asymmetric grid layout with mixed-size blocks.",
+        "category": "Modern",
+        "difficulty": "intermediate",
+        "features": ["Asymmetric Grid", "Mixed Sizes", "Visual Hierarchy", "Modular"],
+        "tags": ["bento", "grid", "modern", "asymmetric"],
+        "bestFor": ["Product Designers", "Agencies", "Startups"]
+      },
+      {
+        "id": "3d-immersive",
+        "name": "3D Immersive WebGL",
+        "description": "Interactive 3D scene with Three.js, particles, and scroll-linked animations.",
+        "category": "Experimental",
+        "difficulty": "advanced",
+        "features": ["Three.js", "3D Graphics", "WebGL", "Particle Systems", "Interactive"],
+        "tags": ["3d", "webgl", "threejs", "immersive", "interactive"],
+        "bestFor": ["3D Artists", "Creative Technologists", "Game Developers"]
+      },
+      {
+        "id": "neo-brutalist",
+        "name": "Neo-Brutalist Chaos",
+        "description": "Raw, confrontational design with heavy borders, stark colors, and intentional chaos.",
+        "category": "Experimental",
+        "difficulty": "intermediate",
+        "features": ["Bold Borders", "Stark Colors", "Raw Design", "Confrontational"],
+        "tags": ["brutalism", "bold", "experimental", "edgy"],
+        "bestFor": ["Agencies", "Art Directors", "Rebellious Brands"]
+      },
+      {
+        "id": "organic-liquid",
+        "name": "Organic Liquid Morphing",
+        "description": "Fluid blob shapes with morphing animations and soft, nature-inspired gradients.",
+        "category": "Creative",
+        "difficulty": "advanced",
+        "features": ["Fluid Animations", "Morphing Blobs", "Organic Shapes", "Soft Gradients"],
+        "tags": ["organic", "fluid", "nature", "wellness"],
+        "bestFor": ["Wellness Brands", "Sustainable Businesses", "Lifestyle Coaches"]
+      },
+      {
+        "id": "data-dashboard",
+        "name": "Data Visualization Dashboard",
+        "description": "Interactive dashboard with charts, graphs, and real-time metrics visualization.",
+        "category": "Professional",
+        "difficulty": "advanced",
+        "features": ["Charts", "Graphs", "KPI Cards", "Data Visualization", "Analytics"],
+        "tags": ["dashboard", "data", "analytics", "professional"],
+        "bestFor": ["Data Analysts", "Business Intelligence", "Consultants"]
+      },
+      {
+        "id": "y2k-retro",
+        "name": "Y2K Retro Nostalgia",
+        "description": "Early 2000s aesthetic with bright colors, chunky typography, and playful elements.",
+        "category": "Creative",
+        "difficulty": "intermediate",
+        "features": ["Retro Design", "Bright Colors", "Cursor Effects", "Playful UI"],
+        "tags": ["y2k", "retro", "nostalgia", "playful", "colorful"],
+        "bestFor": ["Digital Artists", "Content Creators", "Youth Brands"]
+      },
+      {
+        "id": "ar-spatial",
+        "name": "AR/Spatial Computing",
+        "description": "Futuristic spatial computing interface with layered UI and gesture-inspired interactions.",
+        "category": "Experimental",
+        "difficulty": "advanced",
+        "features": ["Spatial UI", "Layered Design", "3D Depth", "Future Tech"],
+        "tags": ["ar", "spatial", "future", "3d", "experimental"],
+        "bestFor": ["AR/VR Developers", "Future Tech Companies", "Innovation Labs"]
+      },
+      {
+        "id": "collage-maximalist",
+        "name": "Collage Maximalist",
+        "description": "Scrapbook aesthetic with layered elements, mixed media, and intentional chaos.",
+        "category": "Creative",
+        "difficulty": "intermediate",
+        "features": ["Layered Design", "Mixed Media", "Rotated Elements", "Maximalist"],
+        "tags": ["collage", "maximalist", "artistic", "layered"],
+        "bestFor": ["Artists", "Mixed Media Designers", "Creative Studios"]
+      },
+      {
+        "id": "product-saas",
+        "name": "SaaS Product Landing Page",
+        "description": "Modern SaaS product landing page with features, pricing tiers, testimonials, and conversion optimization.",
+        "category": "Service",
+        "difficulty": "intermediate",
+        "features": ["Pricing Tables", "Feature Showcase", "Testimonials", "FAQ Section"],
+        "tags": ["saas", "product", "landing", "conversion"],
+        "bestFor": ["SaaS Products", "Web Apps", "Tech Startups"]
+      },
+      {
+        "id": "product-course",
+        "name": "Course/Educational Landing Page",
+        "description": "Educational course landing page with instructor credibility, curriculum, before/after transformations.",
+        "category": "Service",
+        "difficulty": "intermediate",
+        "features": ["Curriculum Breakdown", "Student Success Stories", "Job Guarantee", "Payment Plans"],
+        "tags": ["course", "education", "learning", "training"],
+        "bestFor": ["Course Creators", "Educators", "Online Schools"]
+      },
+      {
+        "id": "product-tech",
+        "name": "Tech/Gaming Product",
+        "description": "Dark tech/gaming product showcase with video hero, specs comparison table, and bento feature grid.",
+        "category": "Product",
+        "difficulty": "intermediate",
+        "features": ["Video Hero", "Specs Comparison", "Bento Grid", "Tech Reviews"],
+        "tags": ["tech", "gaming", "hardware", "electronics"],
+        "bestFor": ["Gaming Hardware", "Tech Products", "Electronics Brands"]
+      },
+      {
+        "id": "product-physical",
+        "name": "Physical Product Showcase",
+        "description": "Minimalist product showcase with color selector, 360° views, technical specs, and comparison table.",
+        "category": "Product",
+        "difficulty": "intermediate",
+        "features": ["Product Gallery", "Technical Specs", "Customer Reviews", "Comparison Table"],
+        "tags": ["ecommerce", "product", "physical", "minimalist"],
+        "bestFor": ["E-commerce", "Product Designers", "Brands"]
+      },
+      {
+        "id": "product-premium",
+        "name": "Premium/High-Ticket Service",
+        "description": "Luxury high-ticket service page with exclusive positioning, case studies, and application process.",
+        "category": "Service",
+        "difficulty": "advanced",
+        "features": ["Case Studies", "Application Process", "Income Guarantee", "Luxury Design"],
+        "tags": ["premium", "luxury", "high-ticket", "exclusive"],
+        "bestFor": ["Consulting", "Coaching", "Premium Services"]
+      },
+      {
+        "id": "voice-first",
+        "name": "Voice-First Conversational",
+        "description": "Voice-activated interface with conversational UI and speech interaction patterns.",
+        "category": "Experimental",
+        "difficulty": "advanced",
+        "features": ["Voice UI", "Conversational", "Speech Patterns", "Waveform"],
+        "tags": ["voice", "conversational", "ai", "future"],
+        "bestFor": ["Voice UX Designers", "Conversational AI", "Voice Assistants"]
+      },
+      {
+        "id": "product-fashion",
+        "name": "Fashion/Lifestyle Product",
+        "description": "Sustainable fashion product showcase with lifestyle photography, vertical scrolling gallery, and customer reviews.",
+        "category": "Product",
+        "difficulty": "intermediate",
+        "features": ["Lifestyle Photography", "Size/Color Selector", "Sustainability Focus", "Customer Photos"],
+        "tags": ["fashion", "sustainable", "lifestyle", "ecommerce"],
+        "bestFor": ["Fashion Brands", "Sustainable Products", "Lifestyle Brands"]
+      },
+      {
+        "id": "product-luxury",
+        "name": "Luxury/Premium Product",
+        "description": "Dark elegance luxury product page with heritage storytelling, craftsmanship details, and premium configurator.",
+        "category": "Product",
+        "difficulty": "advanced",
+        "features": ["Cinematic Video", "Heritage Timeline", "Premium Configurator", "Awards & Press"],
+        "tags": ["luxury", "premium", "heritage", "craftsmanship"],
+        "bestFor": ["Luxury Brands", "High-End Products", "Swiss Watches", "Premium Goods"]
+      },
+      {
+        "id": "product-audio",
+        "name": "Premium Audio Product",
+        "description": "High-end wireless headphones product page with 3D interactive viewer, spatial audio demo, technical specifications, and comparison table.",
+        "category": "Product",
+        "difficulty": "advanced",
+        "features": ["Interactive 3D Viewer", "Color Selector", "Spatial Audio Demo", "Specs Table", "Expert Reviews"],
+        "tags": ["audio", "headphones", "wireless", "premium", "tech"],
+        "bestFor": ["Audio Brands", "Consumer Electronics", "Premium Tech Products"]
+      },
+      {
+        "id": "product-vacuum",
+        "name": "Smart Vacuum Cleaner",
+        "description": "Cordless vacuum product page with performance metrics, laser dust detection, intelligent cleaning modes, and power comparison chart.",
+        "category": "Product",
+        "difficulty": "advanced",
+        "features": ["Performance Metrics", "Cleaning Modes", "Accessory Showcase", "Comparison Table", "Awards"],
+        "tags": ["appliance", "vacuum", "smart home", "cleaning", "cordless"],
+        "bestFor": ["Home Appliance Brands", "Smart Home Devices", "Premium Cleaning Tools"]
+      },
+      {
+        "id": "service-b2b",
+        "name": "B2B Professional Service",
+        "description": "Corporate B2B consulting service with extensive case studies, ROI metrics, and institutional credibility.",
+        "category": "Service",
+        "difficulty": "advanced",
+        "features": ["Case Studies with ROI", "Industry Expertise", "Thought Leadership", "Client Logos"],
+        "tags": ["b2b", "consulting", "professional", "enterprise"],
+        "bestFor": ["Consulting Firms", "B2B Services", "Enterprise Solutions"]
+      },
+      {
+        "id": "service-community",
+        "name": "Community/Membership Platform",
+        "description": "Dual value proposition platform for creators and members with transparent pricing and success metrics.",
+        "category": "Service",
+        "difficulty": "intermediate",
+        "features": ["Dual Audience", "Creator Showcase", "Pricing Tiers", "Success Stories"],
+        "tags": ["community", "membership", "platform", "creators"],
+        "bestFor": ["Community Platforms", "Membership Sites", "Creator Tools"]
+      },
+      {
+        "id": "service-dfyou",
+        "name": "Done-For-You Service",
+        "description": "Unlimited productized service with portfolio showcase, guarantee-heavy messaging, and FAQ section.",
+        "category": "Service",
+        "difficulty": "intermediate",
+        "features": ["Portfolio Filtering", "Unlimited Model", "Guarantees", "FAQ"],
+        "tags": ["service", "subscription", "unlimited", "design"],
+        "bestFor": ["Design Services", "Productized Services", "Subscription Services"]
+      },
+      {
+        "id": "service-agency",
+        "name": "Creative Agency Showcase",
+        "description": "Award-winning digital agency landing page with brand strategy, creative design, and performance marketing services.",
+        "category": "Service",
+        "difficulty": "advanced",
+        "features": ["Portfolio Showcase", "Team Profiles", "Service Offerings", "Process Workflow"],
+        "tags": ["agency", "creative", "branding", "marketing"],
+        "bestFor": ["Digital Agencies", "Creative Studios", "Marketing Firms"]
+      },
+      {
+        "id": "service-enterprise",
+        "name": "Enterprise Cloud Platform",
+        "description": "Enterprise-grade cloud solutions with security, compliance, and global scale for Fortune 500 companies.",
+        "category": "Service",
+        "difficulty": "advanced",
+        "features": ["SOC 2 Certified", "Enterprise Pricing", "Case Studies", "Integration Showcase"],
+        "tags": ["enterprise", "cloud", "security", "compliance"],
+        "bestFor": ["SaaS Companies", "Cloud Platforms", "Enterprise Solutions"]
+      },
+      {
+        "id": "service-consulting",
+        "name": "Strategic Consulting Firm",
+        "description": "Elite management consulting for CEOs and boards with corporate strategy, digital transformation, and performance improvement.",
+        "category": "Service",
+        "difficulty": "advanced",
+        "features": ["Client Engagements", "Partner Profiles", "Methodology Framework", "Thought Leadership"],
+        "tags": ["consulting", "strategy", "transformation", "executive"],
+        "bestFor": ["Consulting Firms", "Advisory Services", "Strategic Consulting"]
+      },
+      {
+        "id": "blog-personal",
+        "name": "Clean Personal Blog",
+        "description": "Minimalist personal blog with clean layout, featured posts, newsletter integration, and social sharing.",
+        "category": "Blog",
+        "difficulty": "intermediate",
+        "features": ["Featured Posts", "Category Filter", "Newsletter", "Social Links"],
+        "tags": ["blog", "personal", "minimalist", "clean"],
+        "bestFor": ["Writers", "Personal Brands", "Content Creators"]
+      },
+      {
+        "id": "blog-magazine",
+        "name": "Magazine Editorial Blog",
+        "description": "Professional magazine-style blog with advanced grid layouts, trending articles, editorial team, and multi-column layouts.",
+        "category": "Blog",
+        "difficulty": "advanced",
+        "features": ["Trending Articles", "Editorial Team", "Advanced Grids", "Category System"],
+        "tags": ["magazine", "editorial", "professional", "media"],
+        "bestFor": ["Online Magazines", "News Sites", "Editorial Teams"]
+      },
+      {
+        "id": "blog-tech",
+        "name": "Interactive Tech Blog",
+        "description": "Advanced developer blog with dark mode, code snippets, learning series, progress tracking, and interactive features.",
+        "category": "Blog",
+        "difficulty": "advanced",
+        "features": ["Dark Mode", "Code Snippets", "Learning Series", "Progress Tracking"],
+        "tags": ["tech", "developer", "interactive", "code"],
+        "bestFor": ["Tech Blogs", "Developer Communities", "Tutorial Sites"]
+      },
+      {
+        "id": "online-business",
+        "name": "Online Business & Coaching",
+        "description": "Premium template for coaches, consultants, and online course creators. Features multi-offer showcase, testimonials, lead magnets, and multi-step contact forms.",
+        "category": "Online Business",
+        "difficulty": "intermediate",
+        "features": ["Hero Section", "Offerings Showcase", "Testimonials", "Newsletter Signup", "Lead Magnets", "Multi-Step Forms"],
+        "tags": ["coaching", "courses", "consulting", "personal-brand", "expert"],
+        "bestFor": ["Coaches", "Consultants", "Course Creators", "Authors", "Speakers"]
+      }
+    ]
+  },
+  "ru": {
+    "header": {
+      "title": "Михаил Мишаев",
+      "subtitle": "Full-Stack Разработчик и Дизайнер, создающий современные веб-приложения"
+    },
+    "homepage": {
+      "hero": {
+        "badge": "Full-Stack Разработчик и Дизайнер",
+        "title": "Создаю Цифровые",
+        "titleGradient": "Решения",
+        "titleEnd": "Которые Важны",
+        "subtitle": "Я разрабатываю современные, отзывчивые веб-приложения и потрясающие пользовательские интерфейсы. От концепции до деплоя, я воплощаю идеи в жизнь с чистым кодом и красивым дизайном.",
+        "ctaExplore": "Посмотреть Работы",
+        "ctaDemo": "Связаться со Мной"
+      },
+      "stats": {
+        "templates": "Проектов",
+        "categories": "Технологий",
+        "responsive": "Довольных Клиентов",
+        "openSource": "Лет Опыта"
+      },
+      "features": {
+        "title": "Что Я Приношу в",
+        "titleGradient": "Ваш Проект",
+        "subtitle": "Профессиональный опыт с современными технологиями и лучшими практиками",
+        "fast": {
+          "title": "Производительность Прежде Всего",
+          "description": "Оптимизированный код с Next.js и современными фреймворками для молниеносного опыта"
+        },
+        "modern": {
+          "title": "Современный Дизайн",
+          "description": "Чистые, профессиональные интерфейсы, следующие трендам дизайна 2024-2025"
+        },
+        "production": {
+          "title": "Готово к Продакшену",
+          "description": "TypeScript, Tailwind CSS и стандартные инструменты для надежных решений"
+        },
+        "responsive": {
+          "title": "Полностью Адаптивный",
+          "description": "Красивый опыт на всех устройствах - мобильных, планшетах и десктопах"
+        },
+        "seo": {
+          "title": "SEO Оптимизировано",
+          "description": "Встроенная оптимизация для поисковых систем и лучшие практики производительности"
+        },
+        "customize": {
+          "title": "Поддерживаемый Код",
+          "description": "Чистый, хорошо документированный код, который легко расширять и поддерживать"
+        }
+      },
+      "categoriesSection": {
+        "title": "Мои",
+        "titleGradient": "Проекты",
+        "subtitle": "От профессиональных портфолио до лендингов продуктов - исследуйте разнообразные проекты, которые я создал",
+        "templatesLabel": "Проектов"
+      },
+      "gallery": {
+        "title": "Портфолио",
+        "titleGradient": "",
+        "subtitle": "Эти шаблоны можно адаптировать в любом направлении, в зависимости от ваших потребностей. Давайте обсудим!"
+      }
+    },
+    "categories": {
+      "all": "все",
+      "Professional": "Профессиональные",
+      "Creative": "Творческие",
+      "Portfolio": "Портфолио",
+      "Modern": "Современные",
+      "Simple": "Простые",
+      "Blog": "Блог",
+      "Product": "Продукты",
+      "Service": "Услуги",
+      "Experimental": "Экспериментальные",
+      "Online Business": "Онлайн Бизнес"
+    },
+    "ui": {
+      "viewDemo": "Посмотреть Проект",
+      "colors": "Цвета",
+      "bestFor": "Создано для",
+      "beginner": "простой",
+      "intermediate": "средний",
+      "advanced": "сложный"
+    },
+    "templates": [
+      {
+        "id": "minimalist",
+        "name": "Минималистичный и Чистый",
+        "description": "Фокус на простоте, пустом пространстве и ясности. Всё лишнее убрано.",
+        "category": "Professional",
+        "difficulty": "beginner",
+        "features": ["Тёмный Режим", "Адаптивный", "SEO Оптимизированный", "Форма Контактов"],
+        "tags": ["минимальный", "чистый", "профессиональный", "современный"],
+        "bestFor": ["Дизайнеры", "Разработчики", "Консультанты"]
+      },
+      {
+        "id": "dark-mode",
+        "name": "Тёмный Кинематографический",
+        "description": "Тёмные или почти чёрные фоны с контрастным светлым текстом. Кинематографично и изысканно.",
+        "category": "Creative",
+        "difficulty": "intermediate",
+        "features": ["Видео Фон", "Плавные Анимации", "Тёмная Тема", "Галерея"],
+        "tags": ["тёмный", "кинематографичный", "элегантный", "премиум"],
+        "bestFor": ["Фотографы", "UI/UX Дизайнеры", "Творческие Студии"]
+      },
+      {
+        "id": "bold-typography",
+        "name": "Жирная Типографика Герой",
+        "description": "Типографика сама по себе дизайн — большой, огромный шрифт как основной элемент.",
+        "category": "Creative",
+        "difficulty": "beginner",
+        "features": ["Крупная Типографика", "Минимальный Дизайн", "Быстрая Загрузка", "Mobile First"],
+        "tags": ["типографика", "жирный", "минимальный", "творческий"],
+        "bestFor": ["Личные Бренды", "Творческие Фрилансеры"]
+      },
+      {
+        "id": "grid-masonry",
+        "name": "Сетка и Каменная Кладка",
+        "description": "Работы портфолио отображаются в визуально согласованных плитках сетки. Идеально для визуального контента.",
+        "category": "Portfolio",
+        "difficulty": "intermediate",
+        "features": ["Сетка Каменной Кладки", "Лайтбокс", "Фильтр Категорий", "Отложенная Загрузка"],
+        "tags": ["сетка", "каменная кладка", "портфолио", "галерея"],
+        "bestFor": ["Фотографы", "Художники", "Агентства"]
+      },
+      {
+        "id": "fullscreen-immersive",
+        "name": "Полноэкранный Иммерсивный",
+        "description": "Изображение или видео героя занимает весь экран. Минимум текста, история через визуалы.",
+        "category": "Creative",
+        "difficulty": "advanced",
+        "features": ["Полноэкранные Медиа", "Параллакс", "Скролл Анимации", "Поддержка Видео"],
+        "tags": ["иммерсивный", "полноэкранный", "кинематографичный", "видео"],
+        "bestFor": ["Видеографы", "Фотографы", "Дизайнеры"]
+      },
+      {
+        "id": "split-screen",
+        "name": "Разделённый Экран",
+        "description": "Экран разделён вертикально — одна половина для изображений, одна для текстового контента.",
+        "category": "Modern",
+        "difficulty": "intermediate",
+        "features": ["Разделённая Раскладка", "Чередующиеся Секции", "Плавный Скролл", "Адаптивный"],
+        "tags": ["разделённый", "сбалансированный", "современный", "структурированный"],
+        "bestFor": ["Агентства", "Дизайнеры"]
+      },
+      {
+        "id": "illustration-focus",
+        "name": "Фокус на Иллюстрациях",
+        "description": "Активное использование рисованных, векторных или 3D иллюстраций с игривыми анимациями.",
+        "category": "Creative",
+        "difficulty": "advanced",
+        "features": ["Пользовательские Иллюстрации", "Lottie Анимации", "Яркие Цвета", "Игривый UI"],
+        "tags": ["иллюстрация", "игривый", "творческий", "анимированный"],
+        "bestFor": ["Иллюстраторы", "Аниматоры", "Творческие Агентства"]
+      },
+      {
+        "id": "single-page",
+        "name": "Одностраничный Скролл",
+        "description": "Весь контент на одной длинной странице с плавной прокруткой навигационных якорей.",
+        "category": "Simple",
+        "difficulty": "beginner",
+        "features": ["Одна Страница", "Плавный Скролл", "Навигация по Якорям", "Простой"],
+        "tags": ["простой", "одностраничный", "скролл", "личный"],
+        "bestFor": ["Фрилансеры", "Личные Сайты", "Целевые Страницы"]
+      },
+      {
+        "id": "text-heavy",
+        "name": "Текстовый SEO",
+        "description": "Раскладка, управляемая типографикой, без изображений. Идеально для блогеров и писателей.",
+        "category": "Blog",
+        "difficulty": "beginner",
+        "features": ["SEO Оптимизированный", "Готов для Блога", "Время Чтения", "Теги"],
+        "tags": ["блог", "текст", "seo", "редакционный"],
+        "bestFor": ["Писатели", "Блогеры", "Журналисты"]
+      },
+      {
+        "id": "card-modular",
+        "name": "Модульный на Основе Карточек",
+        "description": "Модульные карточки сетки, которые легко переставлять и настраивать.",
+        "category": "Modern",
+        "difficulty": "beginner",
+        "features": ["Раскладка Карточек", "Гибкая Сетка", "Эффекты при Наведении", "Современный"],
+        "tags": ["карточки", "модульный", "современный", "гибкий"],
+        "bestFor": ["Агентства", "Продуктовые Дизайнеры", "Разработчики"]
+      },
+      {
+        "id": "kinetic-typography",
+        "name": "Кинетическая Типографика в Движении",
+        "description": "Текст, который морфирует, масштабируется и анимируется, создавая динамический визуальный интерес.",
+        "category": "Experimental",
+        "difficulty": "advanced",
+        "features": ["Анимации Текста", "Эффекты Курсора", "Динамическая Типографика", "Моушн Дизайн"],
+        "tags": ["движение", "типографика", "экспериментальный", "динамичный"],
+        "bestFor": ["Моушн Дизайнеры", "Креативные Директора", "Цифровые Художники"]
+      },
+      {
+        "id": "bento-grid",
+        "name": "Модульная Сетка Бенто",
+        "description": "Вдохновлённая японской коробкой для бенто асимметричная сетка с блоками разного размера.",
+        "category": "Modern",
+        "difficulty": "intermediate",
+        "features": ["Асимметричная Сетка", "Смешанные Размеры", "Визуальная Иерархия", "Модульный"],
+        "tags": ["бенто", "сетка", "современный", "асимметричный"],
+        "bestFor": ["Продуктовые Дизайнеры", "Агентства", "Стартапы"]
+      },
+      {
+        "id": "3d-immersive",
+        "name": "3D Иммерсивный WebGL",
+        "description": "Интерактивная 3D сцена с Three.js, частицами и анимациями, привязанными к скроллу.",
+        "category": "Experimental",
+        "difficulty": "advanced",
+        "features": ["Three.js", "3D Графика", "WebGL", "Системы Частиц", "Интерактивный"],
+        "tags": ["3d", "webgl", "threejs", "иммерсивный", "интерактивный"],
+        "bestFor": ["3D Художники", "Креативные Технологи", "Разработчики Игр"]
+      },
+      {
+        "id": "neo-brutalist",
+        "name": "Нео-Бруталистский Хаос",
+        "description": "Сырой, конфронтационный дизайн с толстыми границами, резкими цветами и намеренным хаосом.",
+        "category": "Experimental",
+        "difficulty": "intermediate",
+        "features": ["Жирные Границы", "Резкие Цвета", "Сырой Дизайн", "Конфронтационный"],
+        "tags": ["бруталиэм", "жирный", "экспериментальный", "резкий"],
+        "bestFor": ["Агентства", "Арт-Директора", "Бунтарские Бренды"]
+      },
+      {
+        "id": "organic-liquid",
+        "name": "Органическая Жидкая Морфинг",
+        "description": "Плавные формы блобов с морфинг анимациями и мягкими, вдохновлёнными природой градиентами.",
+        "category": "Creative",
+        "difficulty": "advanced",
+        "features": ["Плавные Анимации", "Морфинг Блобов", "Органические Формы", "Мягкие Градиенты"],
+        "tags": ["органический", "плавный", "природа", "здоровье"],
+        "bestFor": ["Бренды Здоровья", "Устойчивый Бизнес", "Коучи по Образу Жизни"]
+      },
+      {
+        "id": "data-dashboard",
+        "name": "Дашборд Визуализации Данных",
+        "description": "Интерактивная панель с графиками, диаграммами и визуализацией метрик в реальном времени.",
+        "category": "Professional",
+        "difficulty": "advanced",
+        "features": ["Графики", "Диаграммы", "KPI Карточки", "Визуализация Данных", "Аналитика"],
+        "tags": ["дашборд", "данные", "аналитика", "профессиональный"],
+        "bestFor": ["Аналитики Данных", "Бизнес Аналитика", "Консультанты"]
+      },
+      {
+        "id": "y2k-retro",
+        "name": "Y2K Ретро Ностальгия",
+        "description": "Эстетика начала 2000-х с яркими цветами, массивной типографикой и игривыми элементами.",
+        "category": "Creative",
+        "difficulty": "intermediate",
+        "features": ["Ретро Дизайн", "Яркие Цвета", "Эффекты Курсора", "Игривый UI"],
+        "tags": ["y2k", "ретро", "ностальгия", "игривый", "цветной"],
+        "bestFor": ["Цифровые Художники", "Создатели Контента", "Молодёжные Бренды"]
+      },
+      {
+        "id": "ar-spatial",
+        "name": "AR/Пространственные Вычисления",
+        "description": "Футуристический интерфейс пространственных вычислений с многослойным UI и взаимодействиями, вдохновлёнными жестами.",
+        "category": "Experimental",
+        "difficulty": "advanced",
+        "features": ["Пространственный UI", "Многослойный Дизайн", "3D Глубина", "Технологии Будущего"],
+        "tags": ["ar", "пространственный", "будущее", "3d", "экспериментальный"],
+        "bestFor": ["AR/VR Разработчики", "Компании Будущих Технологий", "Лаборатории Инноваций"]
+      },
+      {
+        "id": "collage-maximalist",
+        "name": "Коллаж Максималист",
+        "description": "Эстетика скрапбука с многослойными элементами, смешанными медиа и намеренным хаосом.",
+        "category": "Creative",
+        "difficulty": "intermediate",
+        "features": ["Многослойный Дизайн", "Смешанные Медиа", "Повёрнутые Элементы", "Максималистский"],
+        "tags": ["коллаж", "максималистский", "художественный", "многослойный"],
+        "bestFor": ["Художники", "Дизайнеры Смешанных Медиа", "Творческие Студии"]
+      },
+      {
+        "id": "product-saas",
+        "name": "SaaS Продуктовая Страница",
+        "description": "Современная целевая страница SaaS продукта с функциями, ценовыми планами, отзывами и оптимизацией конверсии.",
+        "category": "Service",
+        "difficulty": "intermediate",
+        "features": ["Таблицы Цен", "Витрина Функций", "Отзывы", "FAQ Секция"],
+        "tags": ["saas", "продукт", "целевая", "конверсия"],
+        "bestFor": ["SaaS Продукты", "Веб Приложения", "Технологические Стартапы"]
+      },
+      {
+        "id": "product-course",
+        "name": "Образовательная Страница Курса",
+        "description": "Целевая страница образовательного курса с авторитетом инструктора, программой, трансформациями до/после.",
+        "category": "Service",
+        "difficulty": "intermediate",
+        "features": ["Разбивка Программы", "Истории Успеха Студентов", "Гарантия Трудоустройства", "Планы Оплаты"],
+        "tags": ["курс", "образование", "обучение", "тренинг"],
+        "bestFor": ["Создатели Курсов", "Педагоги", "Онлайн Школы"]
+      },
+      {
+        "id": "product-tech",
+        "name": "Технологичный/Игровой Продукт",
+        "description": "Темная витрина технологичного/игрового продукта с видео-героем, таблицей сравнения характеристик и бенто-сеткой.",
+        "category": "Product",
+        "difficulty": "intermediate",
+        "features": ["Видео Герой", "Сравнение Характеристик", "Бенто Сетка", "Технические Обзоры"],
+        "tags": ["технологии", "игры", "железо", "электроника"],
+        "bestFor": ["Игровое Оборудование", "Технологичные Продукты", "Электроника"]
+      },
+      {
+        "id": "product-physical",
+        "name": "Витрина Физического Продукта",
+        "description": "Минималистичная витрина продукта с выбором цвета, 360° видами, техническими характеристиками и таблицей сравнения.",
+        "category": "Product",
+        "difficulty": "intermediate",
+        "features": ["Галерея Продукта", "Технические Характеристики", "Отзывы Клиентов", "Таблица Сравнения"],
+        "tags": ["ecommerce", "продукт", "физический", "минималистичный"],
+        "bestFor": ["E-commerce", "Продуктовые Дизайнеры", "Бренды"]
+      },
+      {
+        "id": "product-premium",
+        "name": "Премиум/Высокооплачиваемая Услуга",
+        "description": "Роскошная страница дорогой услуги с эксклюзивным позиционированием, кейсами и процессом подачи заявки.",
+        "category": "Service",
+        "difficulty": "advanced",
+        "features": ["Кейсы", "Процесс Подачи Заявки", "Гарантия Дохода", "Роскошный Дизайн"],
+        "tags": ["премиум", "роскошь", "дорогой", "эксклюзивный"],
+        "bestFor": ["Консалтинг", "Коучинг", "Премиум Услуги"]
+      },
+      {
+        "id": "voice-first",
+        "name": "Голосовой Конверсационный",
+        "description": "Голосовой интерфейс с конверсационным UI и паттернами речевого взаимодействия.",
+        "category": "Experimental",
+        "difficulty": "advanced",
+        "features": ["Голосовой UI", "Конверсационный", "Речевые Паттерны", "Форма Волны"],
+        "tags": ["голос", "конверсационный", "ai", "будущее"],
+        "bestFor": ["Голосовые UX Дизайнеры", "Конверсационный AI", "Голосовые Ассистенты"]
+      },
+      {
+        "id": "product-fashion",
+        "name": "Модный/Лайфстайл Продукт",
+        "description": "Витрина экологичного модного продукта с лайфстайл фотографией, вертикальной галереей и отзывами клиентов.",
+        "category": "Product",
+        "difficulty": "intermediate",
+        "features": ["Лайфстайл Фотография", "Выбор Размера/Цвета", "Фокус на Экологичность", "Фото Клиентов"],
+        "tags": ["мода", "экологичный", "лайфстайл", "ecommerce"],
+        "bestFor": ["Модные Бренды", "Экологичные Продукты", "Лайфстайл Бренды"]
+      },
+      {
+        "id": "product-luxury",
+        "name": "Роскошный/Премиум Продукт",
+        "description": "Темная элегантная страница роскошного продукта с историей наследия, деталями мастерства и премиум конфигуратором.",
+        "category": "Product",
+        "difficulty": "advanced",
+        "features": ["Кинематографическое Видео", "Таймлайн Наследия", "Премиум Конфигуратор", "Награды и Пресса"],
+        "tags": ["роскошь", "премиум", "наследие", "мастерство"],
+        "bestFor": ["Роскошные Бренды", "Товары Класса Люкс", "Швейцарские Часы", "Премиум Товары"]
+      },
+      {
+        "id": "product-audio",
+        "name": "Премиум Аудио Продукт",
+        "description": "Страница беспроводных наушников премиум класса с интерактивным 3D просмотром, демо пространственного звука, техническими характеристиками и таблицей сравнения.",
+        "category": "Product",
+        "difficulty": "advanced",
+        "features": ["Интерактивный 3D Просмотр", "Выбор Цвета", "Демо Пространственного Звука", "Таблица Характеристик", "Отзывы Экспертов"],
+        "tags": ["аудио", "наушники", "беспроводные", "премиум", "технологии"],
+        "bestFor": ["Аудио Бренды", "Бытовая Электроника", "Премиум Технологии"]
+      },
+      {
+        "id": "product-vacuum",
+        "name": "Умный Пылесос",
+        "description": "Страница беспроводного пылесоса с показателями производительности, лазерным обнаружением пыли, интеллектуальными режимами уборки и графиком сравнения мощности.",
+        "category": "Product",
+        "difficulty": "advanced",
+        "features": ["Метрики Производительности", "Режимы Уборки", "Витрина Аксессуаров", "Таблица Сравнения", "Награды"],
+        "tags": ["бытовая техника", "пылесос", "умный дом", "уборка", "беспроводной"],
+        "bestFor": ["Бренды Бытовой Техники", "Устройства Умного Дома", "Премиум Уборочные Инструменты"]
+      },
+      {
+        "id": "service-b2b",
+        "name": "B2B Профессиональный Сервис",
+        "description": "Корпоративный B2B консалтинговый сервис с кейсами, метриками ROI и институциональным авторитетом.",
+        "category": "Service",
+        "difficulty": "advanced",
+        "features": ["Кейсы с ROI", "Отраслевая Экспертиза", "Мысленное Лидерство", "Логотипы Клиентов"],
+        "tags": ["b2b", "консалтинг", "профессиональный", "корпоративный"],
+        "bestFor": ["Консалтинговые Фирмы", "B2B Сервисы", "Корпоративные Решения"]
+      },
+      {
+        "id": "service-community",
+        "name": "Платформа Сообщества",
+        "description": "Платформа с двойным ценностным предложением для создателей и участников с прозрачным ценообразованием.",
+        "category": "Service",
+        "difficulty": "intermediate",
+        "features": ["Двойная Аудитория", "Витрина Создателей", "Ценовые Планы", "Истории Успеха"],
+        "tags": ["сообщество", "членство", "платформа", "создатели"],
+        "bestFor": ["Платформы Сообществ", "Сайты Членства", "Инструменты для Создателей"]
+      },
+      {
+        "id": "service-dfyou",
+        "name": "Сервис Под Ключ",
+        "description": "Безлимитный продуктизированный сервис с портфолио, гарантиями и разделом FAQ.",
+        "category": "Service",
+        "difficulty": "intermediate",
+        "features": ["Фильтрация Портфолио", "Безлимитная Модель", "Гарантии", "FAQ"],
+        "tags": ["сервис", "подписка", "безлимитный", "дизайн"],
+        "bestFor": ["Дизайн Сервисы", "Продуктизированные Сервисы", "Подписные Сервисы"]
+      },
+      {
+        "id": "service-agency",
+        "name": "Креативное Агентство",
+        "description": "Лендинг цифрового агентства с брендинговой стратегией, креативным дизайном и услугами производительного маркетинга.",
+        "category": "Service",
+        "difficulty": "advanced",
+        "features": ["Портфолио", "Профили Команды", "Услуги", "Рабочий Процесс"],
+        "tags": ["агентство", "креатив", "брендинг", "маркетинг"],
+        "bestFor": ["Цифровые Агентства", "Креативные Студии", "Маркетинговые Компании"]
+      },
+      {
+        "id": "service-enterprise",
+        "name": "Облачная Платформа Уровня Enterprise",
+        "description": "Корпоративные облачные решения с безопасностью, соблюдением норм и глобальным масштабом для компаний Fortune 500.",
+        "category": "Service",
+        "difficulty": "advanced",
+        "features": ["Сертификация SOC 2", "Корпоративные Цены", "Кейсы", "Интеграции"],
+        "tags": ["корпоративный", "облако", "безопасность", "соответствие"],
+        "bestFor": ["SaaS Компании", "Облачные Платформы", "Корпоративные Решения"]
+      },
+      {
+        "id": "service-consulting",
+        "name": "Стратегическая Консалтинговая Фирма",
+        "description": "Элитный управленческий консалтинг для CEO и советов директоров с корпоративной стратегией и цифровой трансформацией.",
+        "category": "Service",
+        "difficulty": "advanced",
+        "features": ["Клиентские Проекты", "Профили Партнеров", "Методология", "Экспертиза"],
+        "tags": ["консалтинг", "стратегия", "трансформация", "руководство"],
+        "bestFor": ["Консалтинговые Фирмы", "Консультационные Услуги", "Стратегический Консалтинг"]
+      },
+      {
+        "id": "blog-personal",
+        "name": "Чистый Личный Блог",
+        "description": "Минималистичный личный блог с чистым дизайном, избранными постами, подпиской на рассылку и социальными ссылками.",
+        "category": "Blog",
+        "difficulty": "intermediate",
+        "features": ["Избранные Посты", "Фильтр Категорий", "Рассылка", "Социальные Ссылки"],
+        "tags": ["блог", "личный", "минимализм", "чистый"],
+        "bestFor": ["Писатели", "Личные Бренды", "Создатели Контента"]
+      },
+      {
+        "id": "blog-magazine",
+        "name": "Журнальный Редакционный Блог",
+        "description": "Профессиональный блог в стиле журнала с продвинутыми сетками, трендовыми статьями, редакционной командой и многоколоночными макетами.",
+        "category": "Blog",
+        "difficulty": "advanced",
+        "features": ["Трендовые Статьи", "Редакционная Команда", "Продвинутые Сетки", "Система Категорий"],
+        "tags": ["журнал", "редакция", "профессиональный", "медиа"],
+        "bestFor": ["Онлайн Журналы", "Новостные Сайты", "Редакционные Команды"]
+      },
+      {
+        "id": "blog-tech",
+        "name": "Интерактивный Технический Блог",
+        "description": "Продвинутый блог для разработчиков с темной темой, примерами кода, обучающими сериями, отслеживанием прогресса и интерактивными функциями.",
+        "category": "Blog",
+        "difficulty": "advanced",
+        "features": ["Темная Тема", "Примеры Кода", "Обучающие Серии", "Отслеживание Прогресса"],
+        "tags": ["технологии", "разработчик", "интерактивный", "код"],
+        "bestFor": ["Технические Блоги", "Сообщества Разработчиков", "Сайты с Туториалами"]
+      },
+      {
+        "id": "online-business",
+        "name": "Онлайн Бизнес и Коучинг",
+        "description": "Премиум шаблон для коучей, консультантов и создателей онлайн-курсов. Включает витрину предложений, отзывы, лид-магниты и многошаговые формы связи.",
+        "category": "Online Business",
+        "difficulty": "intermediate",
+        "features": ["Главная Секция", "Витрина Предложений", "Отзывы", "Подписка на Рассылку", "Лид-магниты", "Многошаговые Формы"],
+        "tags": ["коучинг", "курсы", "консалтинг", "личный-бренд", "эксперт"],
+        "bestFor": ["Коучи", "Консультанты", "Создатели Курсов", "Авторы", "Спикеры"]
+      }
+    ]
+  }
+}

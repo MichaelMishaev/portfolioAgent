@@ -580,6 +580,36 @@
         "bestFor": ["High-Ticket Coaches", "Premium Programs", "Transformation Programs", "Personal Brand"]
       },
       {
+        "id": "lin-portfolio-elegance",
+        "name": "Portfolio Elegance",
+        "description": "Elegant portfolio template for designers and creatives. Gallery-focused design with warm gold accents, perfect for showcasing interior design work.",
+        "category": "Portfolio",
+        "difficulty": "intermediate",
+        "features": ["Image Gallery Grid", "Project Showcase", "Elegant Typography", "RTL Support"],
+        "tags": ["portfolio", "interior-design", "elegant", "gallery", "image-first"],
+        "bestFor": ["Interior Designers", "Photographers", "Artists", "Creative Portfolios"]
+      },
+      {
+        "id": "lin-professional-authority",
+        "name": "Professional Authority",
+        "description": "Premium template for accounting firms and professional services. Navy and gold color scheme conveys trust and luxury with service showcases and trust signals.",
+        "category": "Service",
+        "difficulty": "advanced",
+        "features": ["Service Showcase", "Trust Signals", "Team Section", "Professional Layout", "Contact Forms"],
+        "tags": ["accounting", "professional", "luxury", "trust", "services"],
+        "bestFor": ["Accounting Firms", "Law Firms", "Consulting", "Financial Services"]
+      },
+      {
+        "id": "lin-tech-pioneer",
+        "name": "Tech Pioneer",
+        "description": "Modern technology company template with electric blue gradients and Hebrew RTL support. Features tech stack display, code blocks, and product showcases.",
+        "category": "Product",
+        "difficulty": "advanced",
+        "features": ["Tech Stack Display", "Code Blocks", "Modern Gradients", "RTL Hebrew Support", "Product Showcases"],
+        "tags": ["technology", "software", "saas", "hebrew", "rtl", "modern"],
+        "bestFor": ["Software Companies", "SaaS Products", "Tech Startups", "Developers"]
+      },
+      {
         "id": "online-business-coach",
         "name": "Life & Business Coach",
         "description": "Premium template for life coaches and business coaches. Features hero with CTA, multi-offer showcase (books/courses/coaching), testimonials, lead magnets, and multi-step forms.",
@@ -1396,6 +1426,36 @@
         "features": ["Hero с CTA", "Сетка Функций", "Тарифные Планы", "Социальное Доказательство", "Основные Функции", "Бесплатный Пробный Период"],
         "tags": ["saas", "продукт", "тарифы", "b2b", "подписка"],
         "bestFor": ["SaaS Компании", "Программные Продукты", "B2B Инструменты", "Приложения Продуктивности"]
+      },
+      {
+        "id": "lin-portfolio-elegance",
+        "name": "Портфолио Элегантность",
+        "description": "Элегантный шаблон портфолио для дизайнеров и креативщиков. Дизайн галереи с акцентом на изображения и теплыми золотыми акцентами, идеально подходит для демонстрации работ по дизайну интерьера.",
+        "category": "Portfolio",
+        "difficulty": "intermediate",
+        "features": ["Сетка Галереи Изображений", "Витрина Проектов", "Элегантная Типографика", "Поддержка RTL"],
+        "tags": ["портфолио", "дизайн-интерьера", "элегантный", "галерея", "изображения-первым"],
+        "bestFor": ["Дизайнеры Интерьера", "Фотографы", "Художники", "Креативные Портфолио"]
+      },
+      {
+        "id": "lin-professional-authority",
+        "name": "Профессиональный Авторитет",
+        "description": "Премиальный шаблон для бухгалтерских фирм и профессиональных услуг. Цветовая схема темно-синий и золото передает доверие и роскошь с витринами услуг и знаками доверия.",
+        "category": "Service",
+        "difficulty": "advanced",
+        "features": ["Витрина Услуг", "Знаки Доверия", "Раздел Команды", "Профессиональная Раскладка", "Формы Контактов"],
+        "tags": ["бухгалтерия", "профессиональный", "роскошь", "доверие", "услуги"],
+        "bestFor": ["Бухгалтерские Фирмы", "Юридические Фирмы", "Консалтинг", "Финансовые Услуги"]
+      },
+      {
+        "id": "lin-tech-pioneer",
+        "name": "Технологический Пионер",
+        "description": "Современный шаблон технологической компании с электрическими синими градиентами и поддержкой RTL на иврите. Включает отображение технологического стека, блоки кода и витрины продуктов.",
+        "category": "Product",
+        "difficulty": "advanced",
+        "features": ["Отображение Технологий", "Блоки Кода", "Современные Градиенты", "Поддержка RTL Иврит", "Витрины Продуктов"],
+        "tags": ["технологии", "программное-обеспечение", "saas", "иврит", "rtl", "современный"],
+        "bestFor": ["Программные Компании", "SaaS Продукты", "Технологические Стартапы", "Разработчики"]
       }
     ],
     "serviceMarketplace": {

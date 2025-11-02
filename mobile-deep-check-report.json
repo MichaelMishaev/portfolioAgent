@@ -1,0 +1,4286 @@
+[
+  {
+    "template": "minimalist",
+    "url": "/templates/minimalist",
+    "passed": false,
+    "issues": [
+      "❌ No hamburger menu found on mobile",
+      "⚠️  2 button groups not stacking on mobile",
+      "⚠️  Translation issues: Found \"undefined\" in page text, Found unprocessed template syntax, Found unprocessed translation keys"
+    ],
+    "details": {
+      "hamburgerVisible": false,
+      "hasHorizontalScroll": false,
+      "navVisibleOnMobile": false,
+      "actualViewportWidth": 346,
+      "scrollWidth": 346,
+      "overflowingElements": [],
+      "buttonGroups": [
+        {
+          "selector": "div.container.mx-auto [0]",
+          "isStacking": false,
+          "buttonCount": 2
+        },
+        {
+          "selector": "div.flex.items-center [1]",
+          "isStacking": false,
+          "buttonCount": 2
+        }
+      ],
+      "translationIssues": [
+        "Found \"undefined\" in page text",
+        "Found unprocessed template syntax",
+        "Found unprocessed translation keys"
+      ],
+      "largeTextElements": [
+        {
+          "selector": "h1.text-4xl.sm:text-5xl [0]",
+          "hasBreakWords": true,
+          "width": 322
+        },
+        {
+          "selector": "p.text-4xl.md:text-5xl [4]",
+          "hasBreakWords": true,
+          "width": 322
+        },
+        {
+          "selector": "h3.text-3xl.font-medium [7]",
+          "hasBreakWords": false,
+          "width": 288
+        },
+        {
+          "selector": "h3.text-3xl.font-medium [9]",
+          "hasBreakWords": false,
+          "width": 288
+        },
+        {
+          "selector": "h3.text-3xl.font-medium [11]",
+          "hasBreakWords": false,
+          "width": 288
+        },
+        {
+          "selector": "h3.text-3xl.font-medium [13]",
+          "hasBreakWords": false,
+          "width": 288
+        },
+        {
+          "selector": "h3.text-3xl.font-medium [15]",
+          "hasBreakWords": false,
+          "width": 288
+        },
+        {
+          "selector": "h3.text-3xl.font-medium [17]",
+          "hasBreakWords": false,
+          "width": 288
+        },
+        {
+          "selector": "p.text-5xl.md:text-6xl [22]",
+          "hasBreakWords": true,
+          "width": 322
+        }
+      ]
+    },
+    "screenshotPath": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/mobile-deep-check-screenshots/minimalist.png"
+  },
+  {
+    "template": "dark-mode",
+    "url": "/templates/dark-mode",
+    "passed": true,
+    "issues": [
+      "⚠️  Translation issues: Found \"undefined\" in page text, Found unprocessed template syntax, Found unprocessed translation keys, Empty button found [1]"
+    ],
+    "details": {
+      "hamburgerVisible": true,
+      "hasHorizontalScroll": false,
+      "navVisibleOnMobile": false,
+      "actualViewportWidth": 346,
+      "scrollWidth": 346,
+      "overflowingElements": [],
+      "buttonGroups": [],
+      "translationIssues": [
+        "Found \"undefined\" in page text",
+        "Found unprocessed template syntax",
+        "Found unprocessed translation keys",
+        "Empty button found [1]"
+      ],
+      "largeTextElements": [
+        {
+          "selector": "h1.text-3xl.sm:text-4xl [0]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-3xl.sm:text-4xl [31]",
+          "hasBreakWords": false,
+          "width": 322
+        }
+      ]
+    },
+    "screenshotPath": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/mobile-deep-check-screenshots/dark-mode.png"
+  },
+  {
+    "template": "bold-typography",
+    "url": "/templates/bold-typography",
+    "passed": true,
+    "issues": [
+      "⚠️  3 elements wider than viewport",
+      "   → div.group.grid [93]: 370px",
+      "   → div.group.grid [101]: 370px",
+      "   → div.group.grid [109]: 370px",
+      "⚠️  3 large text elements missing break-words",
+      "⚠️  Translation issues: Found \"undefined\" in page text, Found unprocessed template syntax, Found unprocessed translation keys, Empty button found [1], Empty button found [4], Empty button found [5]"
+    ],
+    "details": {
+      "hamburgerVisible": true,
+      "hasHorizontalScroll": false,
+      "navVisibleOnMobile": false,
+      "actualViewportWidth": 346,
+      "scrollWidth": 346,
+      "overflowingElements": [
+        {
+          "selector": "div.group.grid [93]",
+          "width": 370,
+          "text": "01Brand StrategyComprehensive brand positioning an"
+        },
+        {
+          "selector": "div.group.grid [101]",
+          "width": 370,
+          "text": "02Visual IdentityLogo design, color systems, and t"
+        },
+        {
+          "selector": "div.group.grid [109]",
+          "width": 370,
+          "text": "03Creative DirectionEnd-to-end creative leadership"
+        }
+      ],
+      "buttonGroups": [
+        {
+          "selector": "div.flex.flex-col [10]",
+          "isStacking": true,
+          "buttonCount": 3
+        },
+        {
+          "selector": "div.flex.flex-col [11]",
+          "isStacking": true,
+          "buttonCount": 2
+        }
+      ],
+      "translationIssues": [
+        "Found \"undefined\" in page text",
+        "Found unprocessed template syntax",
+        "Found unprocessed translation keys",
+        "Empty button found [1]",
+        "Empty button found [4]",
+        "Empty button found [5]"
+      ],
+      "largeTextElements": [
+        {
+          "selector": "h1.text-[clamp(3rem,12vw,12rem)].font-black [0]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-4xl.sm:text-5xl [3]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-4xl.sm:text-5xl [9]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h3.text-3xl.md:text-4xl [10]",
+          "hasBreakWords": false,
+          "width": 346
+        },
+        {
+          "selector": "h3.text-3xl.md:text-4xl [12]",
+          "hasBreakWords": false,
+          "width": 346
+        },
+        {
+          "selector": "h3.text-3xl.md:text-4xl [14]",
+          "hasBreakWords": false,
+          "width": 346
+        },
+        {
+          "selector": "h2.text-4xl.sm:text-5xl [16]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-4xl.sm:text-5xl [25]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h3.text-5xl.md:text-6xl [26]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h3.text-5xl.md:text-6xl [32]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-4xl.sm:text-5xl [38]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-4xl.sm:text-5xl [43]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-[clamp(3rem,10vw,10rem)].font-black [44]",
+          "hasBreakWords": false,
+          "width": 322
+        }
+      ]
+    },
+    "screenshotPath": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/mobile-deep-check-screenshots/bold-typography.png"
+  },
+  {
+    "template": "grid-masonry",
+    "url": "/templates/grid-masonry",
+    "passed": true,
+    "issues": [
+      "⚠️  1 button groups not stacking on mobile",
+      "⚠️  Translation issues: Found \"undefined\" in page text, Found unprocessed template syntax, Found unprocessed translation keys, Empty button found [1], Empty button found [10], Empty button found [11]"
+    ],
+    "details": {
+      "hamburgerVisible": true,
+      "hasHorizontalScroll": false,
+      "navVisibleOnMobile": false,
+      "actualViewportWidth": 346,
+      "scrollWidth": 346,
+      "overflowingElements": [],
+      "buttonGroups": [
+        {
+          "selector": "div.flex.flex-wrap [2]",
+          "isStacking": false,
+          "buttonCount": 7
+        },
+        {
+          "selector": "div.flex.flex-col [44]",
+          "isStacking": true,
+          "buttonCount": 3
+        },
+        {
+          "selector": "div.flex.flex-col [45]",
+          "isStacking": true,
+          "buttonCount": 2
+        }
+      ],
+      "translationIssues": [
+        "Found \"undefined\" in page text",
+        "Found unprocessed template syntax",
+        "Found unprocessed translation keys",
+        "Empty button found [1]",
+        "Empty button found [10]",
+        "Empty button found [11]"
+      ],
+      "largeTextElements": [
+        {
+          "selector": "h1.text-3xl.sm:text-4xl [0]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-3xl.md:text-4xl [23]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-3xl.md:text-4xl [30]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-4xl.md:text-5xl [40]",
+          "hasBreakWords": false,
+          "width": 322
+        }
+      ]
+    },
+    "screenshotPath": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/mobile-deep-check-screenshots/grid-masonry.png"
+  },
+  {
+    "template": "fullscreen-immersive",
+    "url": "/templates/fullscreen-immersive",
+    "passed": false,
+    "issues": [
+      "❌ No hamburger menu found on mobile",
+      "⚠️  Translation issues: Found \"undefined\" in page text, Found unprocessed template syntax, Found unprocessed translation keys"
+    ],
+    "details": {
+      "hamburgerVisible": false,
+      "hasHorizontalScroll": false,
+      "navVisibleOnMobile": false,
+      "actualViewportWidth": 346,
+      "scrollWidth": 346,
+      "overflowingElements": [],
+      "buttonGroups": [],
+      "translationIssues": [
+        "Found \"undefined\" in page text",
+        "Found unprocessed template syntax",
+        "Found unprocessed translation keys"
+      ],
+      "largeTextElements": [
+        {
+          "selector": "h1.text-4xl.sm:text-5xl [0]",
+          "hasBreakWords": true,
+          "width": 269
+        },
+        {
+          "selector": "h2.text-4xl.sm:text-5xl [2]",
+          "hasBreakWords": true,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-4xl.sm:text-5xl [5]",
+          "hasBreakWords": true,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-4xl.sm:text-5xl [8]",
+          "hasBreakWords": true,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-4xl.sm:text-5xl [11]",
+          "hasBreakWords": true,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-5xl.md:text-6xl [14]",
+          "hasBreakWords": true,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-3xl.sm:text-4xl [16]",
+          "hasBreakWords": true,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-5xl.md:text-6xl [26]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h3.text-3xl.font-bold [27]",
+          "hasBreakWords": false,
+          "width": 256
+        },
+        {
+          "selector": "h3.text-3xl.font-bold [30]",
+          "hasBreakWords": false,
+          "width": 256
+        },
+        {
+          "selector": "h3.text-3xl.font-bold [33]",
+          "hasBreakWords": false,
+          "width": 256
+        },
+        {
+          "selector": "h3.text-3xl.font-bold [36]",
+          "hasBreakWords": false,
+          "width": 256
+        },
+        {
+          "selector": "h2.text-3xl.sm:text-4xl [39]",
+          "hasBreakWords": true,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-4xl.sm:text-5xl [40]",
+          "hasBreakWords": true,
+          "width": 322
+        }
+      ]
+    },
+    "screenshotPath": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/mobile-deep-check-screenshots/fullscreen-immersive.png"
+  },
+  {
+    "template": "split-screen",
+    "url": "/templates/split-screen",
+    "passed": true,
+    "issues": [
+      "⚠️  2 button groups not stacking on mobile",
+      "⚠️  Translation issues: Found \"undefined\" in page text, Found unprocessed template syntax, Found unprocessed translation keys, Empty button found [1], Empty button found [3], Empty button found [4]"
+    ],
+    "details": {
+      "hamburgerVisible": true,
+      "hasHorizontalScroll": false,
+      "navVisibleOnMobile": false,
+      "actualViewportWidth": 346,
+      "scrollWidth": 346,
+      "overflowingElements": [],
+      "buttonGroups": [
+        {
+          "selector": "div.flex.flex-col [7]",
+          "isStacking": false,
+          "buttonCount": 2
+        },
+        {
+          "selector": "div.flex.items-center [11]",
+          "isStacking": false,
+          "buttonCount": 2
+        }
+      ],
+      "translationIssues": [
+        "Found \"undefined\" in page text",
+        "Found unprocessed template syntax",
+        "Found unprocessed translation keys",
+        "Empty button found [1]",
+        "Empty button found [3]",
+        "Empty button found [4]"
+      ],
+      "largeTextElements": [
+        {
+          "selector": "h1.text-4xl.sm:text-5xl [0]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-4xl.font-bold [5]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-4xl.font-bold [7]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-3xl.sm:text-4xl [9]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h3.text-3xl.sm:text-4xl [10]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-4xl.font-bold [15]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-4xl.font-bold [29]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-4xl.font-bold [39]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-4xl.font-bold [47]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-4xl.md:text-5xl [61]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-4xl.font-bold [75]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-4xl.font-bold [86]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-4xl.font-bold [88]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-3xl.sm:text-4xl [91]",
+          "hasBreakWords": false,
+          "width": 322
+        }
+      ]
+    },
+    "screenshotPath": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/mobile-deep-check-screenshots/split-screen.png"
+  },
+  {
+    "template": "illustration-focus",
+    "url": "/templates/illustration-focus",
+    "passed": true,
+    "issues": [
+      "⚠️  Translation issues: Found \"undefined\" in page text, Found unprocessed template syntax, Found unprocessed translation keys, Empty button found [1]"
+    ],
+    "details": {
+      "hamburgerVisible": true,
+      "hasHorizontalScroll": false,
+      "navVisibleOnMobile": false,
+      "actualViewportWidth": 346,
+      "scrollWidth": 346,
+      "overflowingElements": [],
+      "buttonGroups": [],
+      "translationIssues": [
+        "Found \"undefined\" in page text",
+        "Found unprocessed template syntax",
+        "Found unprocessed translation keys",
+        "Empty button found [1]"
+      ],
+      "largeTextElements": [
+        {
+          "selector": "h1.text-4xl.sm:text-5xl [0]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-3xl.font-bold [3]",
+          "hasBreakWords": false,
+          "width": 254
+        },
+        {
+          "selector": "h2.text-3xl.sm:text-4xl [5]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-3xl.sm:text-4xl [12]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-3xl.sm:text-4xl [31]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-3xl.sm:text-4xl [40]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-3xl.sm:text-4xl [46]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-3xl.sm:text-4xl [48]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-3xl.sm:text-4xl [56]",
+          "hasBreakWords": false,
+          "width": 322
+        }
+      ]
+    },
+    "screenshotPath": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/mobile-deep-check-screenshots/illustration-focus.png"
+  },
+  {
+    "template": "single-page",
+    "url": "/templates/single-page",
+    "passed": true,
+    "issues": [
+      "⚠️  Translation issues: Found \"undefined\" in page text, Found unprocessed template syntax, Found unprocessed translation keys, Empty button found [1]"
+    ],
+    "details": {
+      "hamburgerVisible": true,
+      "hasHorizontalScroll": false,
+      "navVisibleOnMobile": false,
+      "actualViewportWidth": 346,
+      "scrollWidth": 346,
+      "overflowingElements": [],
+      "buttonGroups": [
+        {
+          "selector": "div.flex.flex-col [2]",
+          "isStacking": true,
+          "buttonCount": 2
+        }
+      ],
+      "translationIssues": [
+        "Found \"undefined\" in page text",
+        "Found unprocessed template syntax",
+        "Found unprocessed translation keys",
+        "Empty button found [1]"
+      ],
+      "largeTextElements": [
+        {
+          "selector": "h1.text-3xl.sm:text-4xl [0]",
+          "hasBreakWords": false,
+          "width": 267
+        },
+        {
+          "selector": "h3.text-3xl.font-bold [29]",
+          "hasBreakWords": false,
+          "width": 256
+        },
+        {
+          "selector": "h3.text-3xl.font-bold [32]",
+          "hasBreakWords": false,
+          "width": 256
+        },
+        {
+          "selector": "h3.text-3xl.font-bold [35]",
+          "hasBreakWords": false,
+          "width": 256
+        },
+        {
+          "selector": "h2.text-3xl.sm:text-4xl [45]",
+          "hasBreakWords": false,
+          "width": 322
+        }
+      ]
+    },
+    "screenshotPath": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/mobile-deep-check-screenshots/single-page.png"
+  },
+  {
+    "template": "text-heavy",
+    "url": "/templates/text-heavy",
+    "passed": true,
+    "issues": [
+      "⚠️  Translation issues: Found \"undefined\" in page text, Found unprocessed template syntax, Found unprocessed translation keys, Empty button found [1]"
+    ],
+    "details": {
+      "hamburgerVisible": true,
+      "hasHorizontalScroll": false,
+      "navVisibleOnMobile": false,
+      "actualViewportWidth": 346,
+      "scrollWidth": 346,
+      "overflowingElements": [],
+      "buttonGroups": [],
+      "translationIssues": [
+        "Found \"undefined\" in page text",
+        "Found unprocessed template syntax",
+        "Found unprocessed translation keys",
+        "Empty button found [1]"
+      ],
+      "largeTextElements": [
+        {
+          "selector": "h1.text-3xl.sm:text-4xl [0]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-4xl.md:text-5xl [7]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-4xl.md:text-5xl [10]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-4xl.md:text-5xl [16]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h3.text-3xl.md:text-4xl [17]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h3.text-3xl.md:text-4xl [19]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h3.text-3xl.md:text-4xl [21]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h3.text-3xl.md:text-4xl [23]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-4xl.md:text-5xl [25]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-4xl.md:text-5xl [32]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h3.text-3xl.font-bold [33]",
+          "hasBreakWords": false,
+          "width": 294
+        },
+        {
+          "selector": "h3.text-3xl.font-bold [40]",
+          "hasBreakWords": false,
+          "width": 294
+        },
+        {
+          "selector": "h2.text-4xl.md:text-5xl [47]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-4xl.md:text-5xl [56]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-4xl.md:text-5xl [63]",
+          "hasBreakWords": false,
+          "width": 322
+        }
+      ]
+    },
+    "screenshotPath": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/mobile-deep-check-screenshots/text-heavy.png"
+  },
+  {
+    "template": "card-modular",
+    "url": "/templates/card-modular",
+    "passed": true,
+    "issues": [
+      "⚠️  1 button groups not stacking on mobile",
+      "⚠️  Translation issues: Found \"undefined\" in page text, Found unprocessed template syntax, Found unprocessed translation keys, Empty button found [1], Empty button found [12], Empty button found [13]"
+    ],
+    "details": {
+      "hamburgerVisible": true,
+      "hasHorizontalScroll": false,
+      "navVisibleOnMobile": false,
+      "actualViewportWidth": 346,
+      "scrollWidth": 346,
+      "overflowingElements": [],
+      "buttonGroups": [
+        {
+          "selector": "div.flex.flex-col [204]",
+          "isStacking": true,
+          "buttonCount": 2
+        },
+        {
+          "selector": "div.flex.gap-4 [205]",
+          "isStacking": false,
+          "buttonCount": 2
+        }
+      ],
+      "translationIssues": [
+        "Found \"undefined\" in page text",
+        "Found unprocessed template syntax",
+        "Found unprocessed translation keys",
+        "Empty button found [1]",
+        "Empty button found [12]",
+        "Empty button found [13]"
+      ],
+      "largeTextElements": [
+        {
+          "selector": "h2.text-3xl.md:text-4xl [1]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-3xl.md:text-4xl [2]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-3xl.md:text-4xl [3]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-3xl.md:text-4xl [14]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-3xl.md:text-4xl [21]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-3xl.md:text-4xl [22]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-3xl.md:text-4xl [35]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-3xl.md:text-4xl [48]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-3xl.md:text-4xl [57]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-3xl.md:text-4xl [59]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-3xl.md:text-4xl [64]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-3xl.font-bold [65]",
+          "hasBreakWords": false,
+          "width": 224
+        }
+      ]
+    },
+    "screenshotPath": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/mobile-deep-check-screenshots/card-modular.png"
+  },
+  {
+    "template": "kinetic-typography",
+    "url": "/templates/kinetic-typography",
+    "passed": false,
+    "issues": [
+      "❌ No hamburger menu found on mobile",
+      "⚠️  Translation issues: Found \"undefined\" in page text, Found unprocessed template syntax, Found unprocessed translation keys"
+    ],
+    "details": {
+      "hamburgerVisible": false,
+      "hasHorizontalScroll": false,
+      "navVisibleOnMobile": false,
+      "actualViewportWidth": 346,
+      "scrollWidth": 346,
+      "overflowingElements": [],
+      "buttonGroups": [],
+      "translationIssues": [
+        "Found \"undefined\" in page text",
+        "Found unprocessed template syntax",
+        "Found unprocessed translation keys"
+      ],
+      "largeTextElements": [
+        {
+          "selector": "h1.text-[clamp(4rem,20vw,20rem)].font-black [0]",
+          "hasBreakWords": false,
+          "width": 263
+        },
+        {
+          "selector": "p.text-3xl.sm:text-4xl [1]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h3.text-4xl.sm:text-5xl [2]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h3.text-4xl.sm:text-5xl [3]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h3.text-4xl.sm:text-5xl [4]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-4xl.sm:text-5xl [5]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h3.text-3xl.sm:text-4xl [6]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h3.text-3xl.sm:text-4xl [7]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h3.text-3xl.sm:text-4xl [8]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h3.text-3xl.sm:text-4xl [9]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-4xl.sm:text-5xl [10]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h3.text-3xl.font-black [11]",
+          "hasBreakWords": false,
+          "width": 256
+        },
+        {
+          "selector": "h3.text-3xl.font-black [12]",
+          "hasBreakWords": false,
+          "width": 256
+        },
+        {
+          "selector": "h3.text-3xl.font-black [13]",
+          "hasBreakWords": false,
+          "width": 256
+        },
+        {
+          "selector": "h3.text-3xl.font-black [14]",
+          "hasBreakWords": false,
+          "width": 256
+        },
+        {
+          "selector": "h3.text-3xl.font-black [15]",
+          "hasBreakWords": false,
+          "width": 256
+        },
+        {
+          "selector": "h3.text-3xl.font-black [16]",
+          "hasBreakWords": false,
+          "width": 256
+        },
+        {
+          "selector": "p.text-4xl.md:text-5xl [17]",
+          "hasBreakWords": false,
+          "width": 224
+        },
+        {
+          "selector": "p.text-4xl.md:text-5xl [18]",
+          "hasBreakWords": false,
+          "width": 224
+        },
+        {
+          "selector": "h2.text-[clamp(3rem,12vw,12rem)].font-black [19]",
+          "hasBreakWords": false,
+          "width": 298
+        }
+      ]
+    },
+    "screenshotPath": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/mobile-deep-check-screenshots/kinetic-typography.png"
+  },
+  {
+    "template": "bento-grid",
+    "url": "/templates/bento-grid",
+    "passed": false,
+    "issues": [
+      "❌ No hamburger menu found on mobile",
+      "⚠️  Translation issues: Found \"undefined\" in page text, Found unprocessed template syntax, Found unprocessed translation keys, Empty button found [7], Empty button found [8]"
+    ],
+    "details": {
+      "hamburgerVisible": false,
+      "hasHorizontalScroll": false,
+      "navVisibleOnMobile": false,
+      "actualViewportWidth": 346,
+      "scrollWidth": 346,
+      "overflowingElements": [],
+      "buttonGroups": [
+        {
+          "selector": "div.flex.flex-col [65]",
+          "isStacking": true,
+          "buttonCount": 2
+        },
+        {
+          "selector": "div.flex.flex-col [66]",
+          "isStacking": true,
+          "buttonCount": 3
+        },
+        {
+          "selector": "div.flex.flex-col [67]",
+          "isStacking": true,
+          "buttonCount": 2
+        }
+      ],
+      "translationIssues": [
+        "Found \"undefined\" in page text",
+        "Found unprocessed template syntax",
+        "Found unprocessed translation keys",
+        "Empty button found [7]",
+        "Empty button found [8]"
+      ],
+      "largeTextElements": [
+        {
+          "selector": "h1.text-5xl.md:text-7xl [0]",
+          "hasBreakWords": true,
+          "width": 258
+        },
+        {
+          "selector": "h3.text-3xl.font-bold [29]",
+          "hasBreakWords": false,
+          "width": 258
+        }
+      ]
+    },
+    "screenshotPath": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/mobile-deep-check-screenshots/bento-grid.png"
+  },
+  {
+    "template": "3d-immersive",
+    "url": "/templates/3d-immersive",
+    "passed": false,
+    "issues": [
+      "❌ No hamburger menu found on mobile",
+      "⚠️  Translation issues: Found \"undefined\" in page text, Found unprocessed template syntax, Found unprocessed translation keys"
+    ],
+    "details": {
+      "hamburgerVisible": false,
+      "hasHorizontalScroll": false,
+      "navVisibleOnMobile": false,
+      "actualViewportWidth": 346,
+      "scrollWidth": 346,
+      "overflowingElements": [],
+      "buttonGroups": [
+        {
+          "selector": "div.flex.flex-col [15]",
+          "isStacking": true,
+          "buttonCount": 3
+        }
+      ],
+      "translationIssues": [
+        "Found \"undefined\" in page text",
+        "Found unprocessed template syntax",
+        "Found unprocessed translation keys"
+      ],
+      "largeTextElements": [
+        {
+          "selector": "h1.text-4xl.sm:text-5xl [0]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-5xl.md:text-6xl [3]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-4xl.md:text-5xl [12]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-5xl.md:text-6xl [13]",
+          "hasBreakWords": false,
+          "width": 322
+        }
+      ]
+    },
+    "screenshotPath": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/mobile-deep-check-screenshots/3d-immersive.png"
+  },
+  {
+    "template": "neo-brutalist",
+    "url": "/templates/neo-brutalist",
+    "passed": false,
+    "issues": [
+      "❌ No hamburger menu found on mobile",
+      "⚠️  Translation issues: Found \"undefined\" in page text, Found unprocessed template syntax, Found unprocessed translation keys"
+    ],
+    "details": {
+      "hamburgerVisible": false,
+      "hasHorizontalScroll": false,
+      "navVisibleOnMobile": false,
+      "actualViewportWidth": 346,
+      "scrollWidth": 346,
+      "overflowingElements": [],
+      "buttonGroups": [],
+      "translationIssues": [
+        "Found \"undefined\" in page text",
+        "Found unprocessed template syntax",
+        "Found unprocessed translation keys"
+      ],
+      "largeTextElements": [
+        {
+          "selector": "h1.text-6xl.md:text-9xl [0]",
+          "hasBreakWords": true,
+          "width": 242
+        },
+        {
+          "selector": "h2.text-4xl.md:text-5xl [3]",
+          "hasBreakWords": true,
+          "width": 267
+        },
+        {
+          "selector": "h2.text-3xl.sm:text-4xl [5]",
+          "hasBreakWords": true,
+          "width": 267
+        },
+        {
+          "selector": "h2.text-3xl.sm:text-4xl [18]",
+          "hasBreakWords": true,
+          "width": 267
+        },
+        {
+          "selector": "h3.text-3xl.md:text-4xl [19]",
+          "hasBreakWords": false,
+          "width": 199
+        },
+        {
+          "selector": "h3.text-3xl.md:text-4xl [22]",
+          "hasBreakWords": false,
+          "width": 199
+        },
+        {
+          "selector": "h3.text-3xl.md:text-4xl [25]",
+          "hasBreakWords": false,
+          "width": 200
+        },
+        {
+          "selector": "h3.text-3xl.md:text-4xl [28]",
+          "hasBreakWords": false,
+          "width": 199
+        },
+        {
+          "selector": "h2.text-3xl.sm:text-4xl [31]",
+          "hasBreakWords": true,
+          "width": 267
+        },
+        {
+          "selector": "h3.text-3xl.font-black [32]",
+          "hasBreakWords": false,
+          "width": 127
+        },
+        {
+          "selector": "h3.text-3xl.font-black [34]",
+          "hasBreakWords": false,
+          "width": 163
+        },
+        {
+          "selector": "h3.text-3xl.font-black [36]",
+          "hasBreakWords": false,
+          "width": 109
+        },
+        {
+          "selector": "h3.text-3xl.font-black [38]",
+          "hasBreakWords": false,
+          "width": 127
+        },
+        {
+          "selector": "h2.text-3xl.sm:text-4xl [40]",
+          "hasBreakWords": true,
+          "width": 267
+        },
+        {
+          "selector": "h2.text-4xl.sm:text-5xl [48]",
+          "hasBreakWords": true,
+          "width": 218
+        }
+      ]
+    },
+    "screenshotPath": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/mobile-deep-check-screenshots/neo-brutalist.png"
+  },
+  {
+    "template": "organic-liquid",
+    "url": "/templates/organic-liquid",
+    "passed": false,
+    "issues": [
+      "❌ No hamburger menu found on mobile",
+      "⚠️  5 elements wider than viewport",
+      "   → div.absolute.top-20 [47]: 438px",
+      "   → div.absolute.bottom-20 [48]: 368px",
+      "   → div.absolute.top-0 [57]: 412px",
+      "⚠️  Translation issues: Found \"undefined\" in page text, Found unprocessed template syntax, Found unprocessed translation keys"
+    ],
+    "details": {
+      "hamburgerVisible": false,
+      "hasHorizontalScroll": false,
+      "navVisibleOnMobile": false,
+      "actualViewportWidth": 346,
+      "scrollWidth": 346,
+      "overflowingElements": [
+        {
+          "selector": "div.absolute.top-20 [47]",
+          "width": 438,
+          "text": ""
+        },
+        {
+          "selector": "div.absolute.bottom-20 [48]",
+          "width": 368,
+          "text": ""
+        },
+        {
+          "selector": "div.absolute.top-0 [57]",
+          "width": 412,
+          "text": ""
+        },
+        {
+          "selector": "div.absolute.bottom-0 [110]",
+          "width": 411,
+          "text": ""
+        },
+        {
+          "selector": "div.absolute.top-20 [168]",
+          "width": 475,
+          "text": ""
+        }
+      ],
+      "buttonGroups": [],
+      "translationIssues": [
+        "Found \"undefined\" in page text",
+        "Found unprocessed template syntax",
+        "Found unprocessed translation keys"
+      ],
+      "largeTextElements": [
+        {
+          "selector": "h1.text-4xl.sm:text-5xl [0]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-4xl.md:text-5xl [3]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-3xl.sm:text-4xl [8]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-3xl.sm:text-4xl [15]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h3.text-3xl.font-bold [16]",
+          "hasBreakWords": false,
+          "width": 254
+        },
+        {
+          "selector": "h3.text-3xl.font-bold [18]",
+          "hasBreakWords": false,
+          "width": 254
+        },
+        {
+          "selector": "h3.text-3xl.font-bold [20]",
+          "hasBreakWords": false,
+          "width": 254
+        },
+        {
+          "selector": "h2.text-3xl.sm:text-4xl [22]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-3xl.sm:text-4xl [31]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h3.text-3xl.md:text-4xl [38]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-3xl.sm:text-4xl [39]",
+          "hasBreakWords": false,
+          "width": 322
+        }
+      ]
+    },
+    "screenshotPath": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/mobile-deep-check-screenshots/organic-liquid.png"
+  },
+  {
+    "template": "data-dashboard",
+    "url": "/templates/data-dashboard",
+    "passed": false,
+    "issues": [
+      "❌ No hamburger menu found on mobile",
+      "⚠️  2 elements wider than viewport",
+      "   → g [313]: 399px",
+      "   → g [323]: 399px",
+      "⚠️  Translation issues: Found \"undefined\" in page text, Found unprocessed template syntax, Found unprocessed translation keys"
+    ],
+    "details": {
+      "hamburgerVisible": false,
+      "hasHorizontalScroll": false,
+      "navVisibleOnMobile": false,
+      "actualViewportWidth": 346,
+      "scrollWidth": 346,
+      "overflowingElements": [
+        {
+          "selector": "g [313]",
+          "width": 399,
+          "text": "Completed: 45%In Progress: 30%Planning: 15%On Hold"
+        },
+        {
+          "selector": "g [323]",
+          "width": 399,
+          "text": "Completed: 45%In Progress: 30%Planning: 15%On Hold"
+        }
+      ],
+      "buttonGroups": [
+        {
+          "selector": "div.flex.flex-col [20]",
+          "isStacking": true,
+          "buttonCount": 3
+        }
+      ],
+      "translationIssues": [
+        "Found \"undefined\" in page text",
+        "Found unprocessed template syntax",
+        "Found unprocessed translation keys"
+      ],
+      "largeTextElements": [
+        {
+          "selector": "h1.text-5xl.md:text-7xl [0]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "p.text-3xl.font-bold [4]",
+          "hasBreakWords": false,
+          "width": 272
+        },
+        {
+          "selector": "p.text-3xl.font-bold [6]",
+          "hasBreakWords": false,
+          "width": 272
+        },
+        {
+          "selector": "p.text-3xl.font-bold [8]",
+          "hasBreakWords": false,
+          "width": 272
+        },
+        {
+          "selector": "p.text-3xl.font-bold [10]",
+          "hasBreakWords": false,
+          "width": 272
+        },
+        {
+          "selector": "h2.text-4xl.md:text-5xl [15]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-5xl.md:text-6xl [22]",
+          "hasBreakWords": false,
+          "width": 322
+        }
+      ]
+    },
+    "screenshotPath": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/mobile-deep-check-screenshots/data-dashboard.png"
+  },
+  {
+    "template": "y2k-retro",
+    "url": "/templates/y2k-retro",
+    "passed": false,
+    "issues": [
+      "❌ No hamburger menu found on mobile",
+      "⚠️  Translation issues: Found \"undefined\" in page text, Found unprocessed template syntax, Found unprocessed translation keys"
+    ],
+    "details": {
+      "hamburgerVisible": false,
+      "hasHorizontalScroll": false,
+      "navVisibleOnMobile": false,
+      "actualViewportWidth": 346,
+      "scrollWidth": 346,
+      "overflowingElements": [],
+      "buttonGroups": [],
+      "translationIssues": [
+        "Found \"undefined\" in page text",
+        "Found unprocessed template syntax",
+        "Found unprocessed translation keys"
+      ],
+      "largeTextElements": [
+        {
+          "selector": "h1.text-4xl.sm:text-5xl [0]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-4xl.md:text-5xl [3]",
+          "hasBreakWords": true,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-4xl.md:text-5xl [7]",
+          "hasBreakWords": true,
+          "width": 150
+        },
+        {
+          "selector": "h2.text-4xl.md:text-5xl [9]",
+          "hasBreakWords": true,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-5xl.md:text-6xl [10]",
+          "hasBreakWords": true,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-4xl.md:text-5xl [23]",
+          "hasBreakWords": true,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-5xl.md:text-6xl [28]",
+          "hasBreakWords": true,
+          "width": 322
+        },
+        {
+          "selector": "h3.text-4xl.font-black [35]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-5xl.md:text-6xl [36]",
+          "hasBreakWords": true,
+          "width": 210
+        }
+      ]
+    },
+    "screenshotPath": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/mobile-deep-check-screenshots/y2k-retro.png"
+  },
+  {
+    "template": "ar-spatial",
+    "url": "/templates/ar-spatial",
+    "passed": false,
+    "issues": [
+      "❌ No hamburger menu found on mobile",
+      "⚠️  8 elements wider than viewport",
+      "   → div.h-full [75]: 358px",
+      "   → div.p-8.h-full [77]: 356px",
+      "   → div.h-full [89]: 403px",
+      "⚠️  Translation issues: Found \"undefined\" in page text, Found unprocessed template syntax, Found unprocessed translation keys"
+    ],
+    "details": {
+      "hamburgerVisible": false,
+      "hasHorizontalScroll": false,
+      "navVisibleOnMobile": false,
+      "actualViewportWidth": 346,
+      "scrollWidth": 346,
+      "overflowingElements": [
+        {
+          "selector": "div.h-full [75]",
+          "width": 358,
+          "text": "Depth: 100pxMixed Reality ShoppingVirtual try-on e"
+        },
+        {
+          "selector": "div.p-8.h-full [77]",
+          "width": 356,
+          "text": "Depth: 100pxMixed Reality ShoppingVirtual try-on e"
+        },
+        {
+          "selector": "div.h-full [89]",
+          "width": 403,
+          "text": "Depth: 200pxSpatial CollaborationMulti-user 3D wor"
+        },
+        {
+          "selector": "div.p-8.h-full [91]",
+          "width": 400,
+          "text": "Depth: 200pxSpatial CollaborationMulti-user 3D wor"
+        },
+        {
+          "selector": "div.h-full [103]",
+          "width": 379,
+          "text": "Depth: 150pxAR Navigation SystemReal-world wayfind"
+        },
+        {
+          "selector": "div.p-8.h-full [105]",
+          "width": 376,
+          "text": "Depth: 150pxAR Navigation SystemReal-world wayfind"
+        },
+        {
+          "selector": "div.h-full [117]",
+          "width": 393,
+          "text": "Depth: 180pxVirtual ShowroomImmersive product exhi"
+        },
+        {
+          "selector": "div.p-8.h-full [119]",
+          "width": 390,
+          "text": "Depth: 180pxVirtual ShowroomImmersive product exhi"
+        }
+      ],
+      "buttonGroups": [
+        {
+          "selector": "div.flex.flex-col [19]",
+          "isStacking": true,
+          "buttonCount": 2
+        }
+      ],
+      "translationIssues": [
+        "Found \"undefined\" in page text",
+        "Found unprocessed template syntax",
+        "Found unprocessed translation keys"
+      ],
+      "largeTextElements": [
+        {
+          "selector": "h1.text-4xl.sm:text-5xl [0]",
+          "hasBreakWords": false,
+          "width": 316
+        },
+        {
+          "selector": "h2.text-5xl.md:text-6xl [3]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-4xl.md:text-5xl [12]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h3.text-3xl.font-bold [21]",
+          "hasBreakWords": false,
+          "width": 185
+        },
+        {
+          "selector": "h2.text-5xl.md:text-6xl [23]",
+          "hasBreakWords": false,
+          "width": 322
+        }
+      ]
+    },
+    "screenshotPath": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/mobile-deep-check-screenshots/ar-spatial.png"
+  },
+  {
+    "template": "collage-maximalist",
+    "url": "/templates/collage-maximalist",
+    "passed": false,
+    "issues": [
+      "❌ No hamburger menu found on mobile",
+      "⚠️  1 elements wider than viewport",
+      "   → div.absolute.-top-10 [203]: 362px",
+      "⚠️  2 large text elements missing break-words",
+      "⚠️  Translation issues: Found \"undefined\" in page text, Found unprocessed template syntax, Found unprocessed translation keys"
+    ],
+    "details": {
+      "hamburgerVisible": false,
+      "hasHorizontalScroll": false,
+      "navVisibleOnMobile": false,
+      "actualViewportWidth": 346,
+      "scrollWidth": 346,
+      "overflowingElements": [
+        {
+          "selector": "div.absolute.-top-10 [203]",
+          "width": 362,
+          "text": ""
+        }
+      ],
+      "buttonGroups": [
+        {
+          "selector": "div.flex.flex-col [41]",
+          "isStacking": true,
+          "buttonCount": 2
+        }
+      ],
+      "translationIssues": [
+        "Found \"undefined\" in page text",
+        "Found unprocessed template syntax",
+        "Found unprocessed translation keys"
+      ],
+      "largeTextElements": [
+        {
+          "selector": "h1.text-4xl.sm:text-5xl [0]",
+          "hasBreakWords": false,
+          "width": 251
+        },
+        {
+          "selector": "h2.text-3xl.sm:text-4xl [8]",
+          "hasBreakWords": false,
+          "width": 293
+        },
+        {
+          "selector": "h2.text-5xl.md:text-6xl [21]",
+          "hasBreakWords": false,
+          "width": 327
+        },
+        {
+          "selector": "h2.text-5xl.md:text-6xl [30]",
+          "hasBreakWords": false,
+          "width": 324
+        },
+        {
+          "selector": "h2.text-5xl.md:text-6xl [38]",
+          "hasBreakWords": false,
+          "width": 220
+        }
+      ]
+    },
+    "screenshotPath": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/mobile-deep-check-screenshots/collage-maximalist.png"
+  },
+  {
+    "template": "product-saas",
+    "url": "/templates/product-saas",
+    "passed": true,
+    "issues": [
+      "⚠️  Translation issues: Found \"undefined\" in page text, Found unprocessed template syntax, Found unprocessed translation keys, Empty button found [2]"
+    ],
+    "details": {
+      "hamburgerVisible": true,
+      "hasHorizontalScroll": false,
+      "navVisibleOnMobile": false,
+      "actualViewportWidth": 346,
+      "scrollWidth": 346,
+      "overflowingElements": [],
+      "buttonGroups": [
+        {
+          "selector": "div.flex.items-center [0]",
+          "isStacking": true,
+          "buttonCount": 2
+        },
+        {
+          "selector": "div.flex.flex-col [3]",
+          "isStacking": true,
+          "buttonCount": 2
+        }
+      ],
+      "translationIssues": [
+        "Found \"undefined\" in page text",
+        "Found unprocessed template syntax",
+        "Found unprocessed translation keys",
+        "Empty button found [2]"
+      ],
+      "largeTextElements": [
+        {
+          "selector": "h1.text-3xl.sm:text-4xl [0]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-3xl.sm:text-4xl [3]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-3xl.sm:text-4xl [5]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-3xl.sm:text-4xl [10]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-3xl.sm:text-4xl [12]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-3xl.sm:text-4xl [13]",
+          "hasBreakWords": false,
+          "width": 258
+        }
+      ]
+    },
+    "screenshotPath": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/mobile-deep-check-screenshots/product-saas.png"
+  },
+  {
+    "template": "product-course",
+    "url": "/templates/product-course",
+    "passed": true,
+    "issues": [
+      "⚠️  Translation issues: Found \"undefined\" in page text, Found unprocessed template syntax, Found unprocessed translation keys, Empty button found [2]"
+    ],
+    "details": {
+      "hamburgerVisible": true,
+      "hasHorizontalScroll": false,
+      "navVisibleOnMobile": false,
+      "actualViewportWidth": 346,
+      "scrollWidth": 346,
+      "overflowingElements": [],
+      "buttonGroups": [
+        {
+          "selector": "div.flex.items-center [0]",
+          "isStacking": true,
+          "buttonCount": 2
+        },
+        {
+          "selector": "div.flex.flex-col [3]",
+          "isStacking": true,
+          "buttonCount": 2
+        }
+      ],
+      "translationIssues": [
+        "Found \"undefined\" in page text",
+        "Found unprocessed template syntax",
+        "Found unprocessed translation keys",
+        "Empty button found [2]"
+      ],
+      "largeTextElements": [
+        {
+          "selector": "h1.text-5xl.md:text-7xl [0]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-3xl.font-bold [2]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-4xl.md:text-5xl [5]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-4xl.md:text-5xl [7]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-4xl.md:text-5xl [9]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-4xl.md:text-5xl [10]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-4xl.md:text-5xl [15]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-4xl.md:text-5xl [19]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-4xl.md:text-5xl [20]",
+          "hasBreakWords": false,
+          "width": 226
+        }
+      ]
+    },
+    "screenshotPath": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/mobile-deep-check-screenshots/product-course.png"
+  },
+  {
+    "template": "product-tech",
+    "url": "/templates/product-tech",
+    "passed": true,
+    "issues": [
+      "⚠️  9 elements wider than viewport",
+      "   → table.w-full [215]: 431px",
+      "   → thead [216]: 431px",
+      "   → tr.border-b-2.border-yellow-500 [217]: 431px",
+      "⚠️  Translation issues: Found \"undefined\" in page text, Found unprocessed template syntax, Found unprocessed translation keys, Empty button found [2], Empty button found [4], Empty button found [5], Empty button found [6], Empty button found [7]"
+    ],
+    "details": {
+      "hamburgerVisible": true,
+      "hasHorizontalScroll": false,
+      "navVisibleOnMobile": false,
+      "actualViewportWidth": 346,
+      "scrollWidth": 346,
+      "overflowingElements": [
+        {
+          "selector": "table.w-full [215]",
+          "width": 431,
+          "text": "FeatureHyperX UltraCompetitor ACompetitor BPrice$1"
+        },
+        {
+          "selector": "thead [216]",
+          "width": 431,
+          "text": "FeatureHyperX UltraCompetitor ACompetitor B"
+        },
+        {
+          "selector": "tr.border-b-2.border-yellow-500 [217]",
+          "width": 431,
+          "text": "FeatureHyperX UltraCompetitor ACompetitor B"
+        },
+        {
+          "selector": "tbody [222]",
+          "width": 431,
+          "text": "Price$199 ✓$249 $179 Battery Life50h ✓40h 30h Late"
+        },
+        {
+          "selector": "tr.border-b.border-gray-800 [223]",
+          "width": 431,
+          "text": "Price$199 ✓$249 $179 "
+        },
+        {
+          "selector": "tr.border-b.border-gray-800 [228]",
+          "width": 431,
+          "text": "Battery Life50h ✓40h 30h "
+        },
+        {
+          "selector": "tr.border-b.border-gray-800 [233]",
+          "width": 431,
+          "text": "Latency<5ms ✓7ms 10ms "
+        },
+        {
+          "selector": "tr.border-b.border-gray-800 [238]",
+          "width": 431,
+          "text": "Surround Sound7.1 ✓7.1 Stereo "
+        },
+        {
+          "selector": "tr.border-b.border-gray-800 [243]",
+          "width": 431,
+          "text": "Weight285g 320g 275g ✓"
+        }
+      ],
+      "buttonGroups": [
+        {
+          "selector": "div.flex.items-center [0]",
+          "isStacking": true,
+          "buttonCount": 2
+        },
+        {
+          "selector": "div.flex.flex-col [3]",
+          "isStacking": true,
+          "buttonCount": 4
+        }
+      ],
+      "translationIssues": [
+        "Found \"undefined\" in page text",
+        "Found unprocessed template syntax",
+        "Found unprocessed translation keys",
+        "Empty button found [2]",
+        "Empty button found [4]",
+        "Empty button found [5]",
+        "Empty button found [6]",
+        "Empty button found [7]"
+      ],
+      "largeTextElements": [
+        {
+          "selector": "h1.text-5xl.md:text-6xl [0]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-4xl.font-black [12]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-4xl.font-black [13]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-4xl.font-black [14]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-4xl.md:text-5xl [18]",
+          "hasBreakWords": false,
+          "width": 226
+        }
+      ]
+    },
+    "screenshotPath": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/mobile-deep-check-screenshots/product-tech.png"
+  },
+  {
+    "template": "product-physical",
+    "url": "/templates/product-physical",
+    "passed": true,
+    "issues": [
+      "⚠️  8 elements wider than viewport",
+      "   → table.w-full [350]: 562px",
+      "   → thead [351]: 562px",
+      "   → tr.border-b-2.border-gray-200 [352]: 562px",
+      "⚠️  1 button groups not stacking on mobile",
+      "⚠️  Translation issues: Found \"undefined\" in page text, Found unprocessed template syntax, Found unprocessed translation keys, Empty button found [2], Empty button found [3], Empty button found [4], Empty button found [5], Empty button found [6], Empty button found [8], Empty button found [9], Empty button found [10], Empty button found [11]"
+    ],
+    "details": {
+      "hamburgerVisible": true,
+      "hasHorizontalScroll": false,
+      "navVisibleOnMobile": false,
+      "actualViewportWidth": 346,
+      "scrollWidth": 346,
+      "overflowingElements": [
+        {
+          "selector": "table.w-full [350]",
+          "width": 562,
+          "text": "BrandPriceBatteryANCMulti-DeviceWeightWarrantyAirW"
+        },
+        {
+          "selector": "thead [351]",
+          "width": 562,
+          "text": "BrandPriceBatteryANCMulti-DeviceWeightWarranty"
+        },
+        {
+          "selector": "tr.border-b-2.border-gray-200 [352]",
+          "width": 562,
+          "text": "BrandPriceBatteryANCMulti-DeviceWeightWarranty"
+        },
+        {
+          "selector": "tbody [360]",
+          "width": 562,
+          "text": "AirWave Pro$34940h260g2 yearsCompetitor A$39930h—2"
+        },
+        {
+          "selector": "tr.border-b.border-gray-100 [361]",
+          "width": 562,
+          "text": "AirWave Pro$34940h260g2 years"
+        },
+        {
+          "selector": "tr.border-b.border-gray-100 [373]",
+          "width": 562,
+          "text": "Competitor A$39930h—290g1 year"
+        },
+        {
+          "selector": "tr.border-b.border-gray-100 [383]",
+          "width": 562,
+          "text": "Competitor B$32925h—280g1 year"
+        },
+        {
+          "selector": "tr.border-b.border-gray-100 [393]",
+          "width": 562,
+          "text": "Competitor C$29920h——270g1 year"
+        }
+      ],
+      "buttonGroups": [
+        {
+          "selector": "div.flex.items-center [0]",
+          "isStacking": true,
+          "buttonCount": 2
+        },
+        {
+          "selector": "div.flex.justify-center [2]",
+          "isStacking": false,
+          "buttonCount": 4
+        }
+      ],
+      "translationIssues": [
+        "Found \"undefined\" in page text",
+        "Found unprocessed template syntax",
+        "Found unprocessed translation keys",
+        "Empty button found [2]",
+        "Empty button found [3]",
+        "Empty button found [4]",
+        "Empty button found [5]",
+        "Empty button found [6]",
+        "Empty button found [8]",
+        "Empty button found [9]",
+        "Empty button found [10]",
+        "Empty button found [11]"
+      ],
+      "largeTextElements": [
+        {
+          "selector": "h1.text-4xl.sm:text-5xl [0]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-4xl.md:text-5xl [3]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-4xl.md:text-5xl [5]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-4xl.md:text-5xl [7]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-4xl.md:text-5xl [9]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-4xl.md:text-5xl [11]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-4xl.md:text-5xl [12]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-4xl.md:text-5xl [19]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-4xl.md:text-5xl [25]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-5xl.md:text-6xl [26]",
+          "hasBreakWords": false,
+          "width": 322
+        }
+      ]
+    },
+    "screenshotPath": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/mobile-deep-check-screenshots/product-physical.png"
+  },
+  {
+    "template": "product-premium",
+    "url": "/templates/product-premium",
+    "passed": true,
+    "issues": [
+      "⚠️  Translation issues: Found \"undefined\" in page text, Found unprocessed template syntax, Found unprocessed translation keys, Empty button found [2]"
+    ],
+    "details": {
+      "hamburgerVisible": true,
+      "hasHorizontalScroll": false,
+      "navVisibleOnMobile": false,
+      "actualViewportWidth": 346,
+      "scrollWidth": 346,
+      "overflowingElements": [],
+      "buttonGroups": [
+        {
+          "selector": "div.flex.items-center [0]",
+          "isStacking": true,
+          "buttonCount": 2
+        },
+        {
+          "selector": "div.flex.flex-col [44]",
+          "isStacking": true,
+          "buttonCount": 2
+        }
+      ],
+      "translationIssues": [
+        "Found \"undefined\" in page text",
+        "Found unprocessed template syntax",
+        "Found unprocessed translation keys",
+        "Empty button found [2]"
+      ],
+      "largeTextElements": [
+        {
+          "selector": "h1.text-4xl.sm:text-5xl [0]",
+          "hasBreakWords": false,
+          "width": 253
+        },
+        {
+          "selector": "h2.text-6xl.md:text-7xl [4]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-6xl.md:text-7xl [10]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h3.text-4xl.font-light [12]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h3.text-4xl.font-light [14]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h3.text-4xl.font-light [16]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h3.text-4xl.font-light [18]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-6xl.md:text-7xl [20]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h3.text-3xl.font-light [22]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h3.text-3xl.font-light [29]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h3.text-3xl.font-light [33]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-6xl.md:text-7xl [46]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-6xl.md:text-7xl [60]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-6xl.md:text-7xl [61]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-6xl.md:text-7xl [75]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-5xl.md:text-6xl [79]",
+          "hasBreakWords": false,
+          "width": 192
+        }
+      ]
+    },
+    "screenshotPath": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/mobile-deep-check-screenshots/product-premium.png"
+  },
+  {
+    "template": "voice-first",
+    "url": "/templates/voice-first",
+    "passed": false,
+    "issues": [
+      "❌ No hamburger menu found on mobile",
+      "⚠️  Translation issues: Found \"undefined\" in page text, Found unprocessed template syntax, Found unprocessed translation keys, Empty button found [1]"
+    ],
+    "details": {
+      "hamburgerVisible": false,
+      "hasHorizontalScroll": false,
+      "navVisibleOnMobile": false,
+      "actualViewportWidth": 346,
+      "scrollWidth": 346,
+      "overflowingElements": [],
+      "buttonGroups": [
+        {
+          "selector": "div.flex.flex-wrap [3]",
+          "isStacking": true,
+          "buttonCount": 4
+        },
+        {
+          "selector": "div.flex.flex-col [16]",
+          "isStacking": true,
+          "buttonCount": 2
+        }
+      ],
+      "translationIssues": [
+        "Found \"undefined\" in page text",
+        "Found unprocessed template syntax",
+        "Found unprocessed translation keys",
+        "Empty button found [1]"
+      ],
+      "largeTextElements": [
+        {
+          "selector": "h1.text-3xl.sm:text-4xl [0]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-4xl.md:text-5xl [5]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-4xl.md:text-5xl [10]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-4xl.md:text-5xl [19]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-5xl.md:text-6xl [26]",
+          "hasBreakWords": false,
+          "width": 322
+        }
+      ]
+    },
+    "screenshotPath": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/mobile-deep-check-screenshots/voice-first.png"
+  },
+  {
+    "template": "product-fashion",
+    "url": "/templates/product-fashion",
+    "passed": true,
+    "issues": [
+      "⚠️  Translation issues: Found \"undefined\" in page text, Found unprocessed template syntax, Found unprocessed translation keys, Empty button found [1], Empty button found [2], Empty button found [3], Empty button found [4], Empty button found [5]"
+    ],
+    "details": {
+      "hamburgerVisible": true,
+      "hasHorizontalScroll": false,
+      "navVisibleOnMobile": false,
+      "actualViewportWidth": 346,
+      "scrollWidth": 346,
+      "overflowingElements": [],
+      "buttonGroups": [
+        {
+          "selector": "div.flex.items-center [0]",
+          "isStacking": true,
+          "buttonCount": 2
+        },
+        {
+          "selector": "div.flex.flex-col [3]",
+          "isStacking": true,
+          "buttonCount": 3
+        }
+      ],
+      "translationIssues": [
+        "Found \"undefined\" in page text",
+        "Found unprocessed template syntax",
+        "Found unprocessed translation keys",
+        "Empty button found [1]",
+        "Empty button found [2]",
+        "Empty button found [3]",
+        "Empty button found [4]",
+        "Empty button found [5]"
+      ],
+      "largeTextElements": [
+        {
+          "selector": "h1.text-4xl.md:text-5xl [0]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-4xl.md:text-5xl [3]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h3.text-3xl.md:text-4xl [11]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h3.text-3xl.md:text-4xl [13]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h3.text-3xl.md:text-4xl [15]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-4xl.md:text-5xl [17]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-4xl.font-bold [21]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-4xl.font-bold [25]",
+          "hasBreakWords": false,
+          "width": 322
+        }
+      ]
+    },
+    "screenshotPath": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/mobile-deep-check-screenshots/product-fashion.png"
+  },
+  {
+    "template": "product-luxury",
+    "url": "/templates/product-luxury",
+    "passed": true,
+    "issues": [
+      "⚠️  Translation issues: Found \"undefined\" in page text, Found unprocessed template syntax, Found unprocessed translation keys, Empty button found [2]"
+    ],
+    "details": {
+      "hamburgerVisible": true,
+      "hasHorizontalScroll": false,
+      "navVisibleOnMobile": false,
+      "actualViewportWidth": 346,
+      "scrollWidth": 346,
+      "overflowingElements": [],
+      "buttonGroups": [
+        {
+          "selector": "div.flex.items-center [0]",
+          "isStacking": true,
+          "buttonCount": 2
+        },
+        {
+          "selector": "div.flex.flex-col [12]",
+          "isStacking": true,
+          "buttonCount": 2
+        }
+      ],
+      "translationIssues": [
+        "Found \"undefined\" in page text",
+        "Found unprocessed template syntax",
+        "Found unprocessed translation keys",
+        "Empty button found [2]"
+      ],
+      "largeTextElements": [
+        {
+          "selector": "h1.text-4xl.sm:text-5xl [0]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-5xl.md:text-6xl [3]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h3.text-3xl.font-light [5]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h3.text-3xl.font-light [7]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h3.text-3xl.font-light [9]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h3.text-3xl.font-light [11]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-5xl.md:text-6xl [13]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h3.text-4xl.font-light [14]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h3.text-4xl.font-light [16]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h3.text-4xl.font-light [18]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-5xl.md:text-6xl [20]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-5xl.md:text-6xl [21]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-5xl.font-light [22]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-5xl.md:text-6xl [25]",
+          "hasBreakWords": false,
+          "width": 322
+        }
+      ]
+    },
+    "screenshotPath": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/mobile-deep-check-screenshots/product-luxury.png"
+  },
+  {
+    "template": "product-audio",
+    "url": "/templates/product-audio",
+    "passed": true,
+    "issues": [
+      "⚠️  10 elements wider than viewport",
+      "   → table.w-full.border-collapse [246]: 452px",
+      "   → thead [247]: 452px",
+      "   → tr.border-b-2.border-gray-300 [248]: 452px",
+      "⚠️  Translation issues: Found \"undefined\" in page text, Found unprocessed template syntax, Found unprocessed translation keys, Empty button found [2], Empty button found [3], Empty button found [4], Empty button found [5], Empty button found [6], Empty button found [7]"
+    ],
+    "details": {
+      "hamburgerVisible": true,
+      "hasHorizontalScroll": false,
+      "navVisibleOnMobile": false,
+      "actualViewportWidth": 346,
+      "scrollWidth": 346,
+      "overflowingElements": [
+        {
+          "selector": "table.w-full.border-collapse [246]",
+          "width": 452,
+          "text": "FeatureAurora ProNewCompetitor ACompetitor BPrice$"
+        },
+        {
+          "selector": "thead [247]",
+          "width": 452,
+          "text": "FeatureAurora ProNewCompetitor ACompetitor B"
+        },
+        {
+          "selector": "tr.border-b-2.border-gray-300 [248]",
+          "width": 452,
+          "text": "FeatureAurora ProNewCompetitor ACompetitor B"
+        },
+        {
+          "selector": "tbody [254]",
+          "width": 452,
+          "text": "Price$549$399$449ANC Performance40dB30dB35dBBatter"
+        },
+        {
+          "selector": "tr.border-b.border-gray-200 [255]",
+          "width": 452,
+          "text": "Price$549$399$449"
+        },
+        {
+          "selector": "tr.border-b.border-gray-200 [260]",
+          "width": 452,
+          "text": "ANC Performance40dB30dB35dB"
+        },
+        {
+          "selector": "tr.border-b.border-gray-200 [265]",
+          "width": 452,
+          "text": "Battery Life20h18h22h"
+        },
+        {
+          "selector": "tr.border-b.border-gray-200 [270]",
+          "width": 452,
+          "text": "Spatial Audio—"
+        },
+        {
+          "selector": "tr.border-b.border-gray-200 [280]",
+          "width": 452,
+          "text": "Weight385g410g395g"
+        },
+        {
+          "selector": "tr [285]",
+          "width": 452,
+          "text": "CodecsAAC, LDAC, aptX HDAAC, SBCAAC, LDAC"
+        }
+      ],
+      "buttonGroups": [
+        {
+          "selector": "div.flex.items-center [0]",
+          "isStacking": true,
+          "buttonCount": 2
+        },
+        {
+          "selector": "div.flex.flex-col [4]",
+          "isStacking": true,
+          "buttonCount": 5
+        },
+        {
+          "selector": "div.flex.flex-col [5]",
+          "isStacking": true,
+          "buttonCount": 5
+        },
+        {
+          "selector": "div.flex.flex-col [6]",
+          "isStacking": true,
+          "buttonCount": 2
+        },
+        {
+          "selector": "div.flex.flex-col [39]",
+          "isStacking": true,
+          "buttonCount": 2
+        }
+      ],
+      "translationIssues": [
+        "Found \"undefined\" in page text",
+        "Found unprocessed template syntax",
+        "Found unprocessed translation keys",
+        "Empty button found [2]",
+        "Empty button found [3]",
+        "Empty button found [4]",
+        "Empty button found [5]",
+        "Empty button found [6]",
+        "Empty button found [7]"
+      ],
+      "largeTextElements": [
+        {
+          "selector": "h1.text-4xl.sm:text-5xl [0]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-5xl.md:text-6xl [4]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h3.text-3xl.font-bold [6]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h3.text-3xl.font-bold [9]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h3.text-3xl.font-bold [12]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h3.text-3xl.font-bold [15]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-5xl.md:text-6xl [18]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-5xl.md:text-6xl [20]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-5xl.md:text-6xl [21]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-4xl.md:text-5xl [28]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-5xl.md:text-6xl [29]",
+          "hasBreakWords": false,
+          "width": 322
+        }
+      ]
+    },
+    "screenshotPath": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/mobile-deep-check-screenshots/product-audio.png"
+  },
+  {
+    "template": "product-vacuum",
+    "url": "/templates/product-vacuum",
+    "passed": true,
+    "issues": [
+      "⚠️  10 elements wider than viewport",
+      "   → thead.bg-gray-100.dark:bg-gray-800 [356]: 442px",
+      "   → tr [357]: 442px",
+      "   → tbody [366]: 442px",
+      "⚠️  1 button groups not stacking on mobile",
+      "⚠️  Translation issues: Found \"undefined\" in page text, Found unprocessed template syntax, Found unprocessed translation keys, Empty button found [2], Empty button found [5], Empty button found [6], Empty button found [7]"
+    ],
+    "details": {
+      "hamburgerVisible": true,
+      "hasHorizontalScroll": false,
+      "navVisibleOnMobile": false,
+      "actualViewportWidth": 346,
+      "scrollWidth": 346,
+      "overflowingElements": [
+        {
+          "selector": "thead.bg-gray-100.dark:bg-gray-800 [356]",
+          "width": 442,
+          "text": "FeatureV20 QuantumOur PickCompetitor XCompetitor Y"
+        },
+        {
+          "selector": "tr [357]",
+          "width": 442,
+          "text": "FeatureV20 QuantumOur PickCompetitor XCompetitor Y"
+        },
+        {
+          "selector": "tbody [366]",
+          "width": 442,
+          "text": "Price$699$649$599Suction Power240 AW200 AW185 AWRu"
+        },
+        {
+          "selector": "tr.border-b.border-gray-200 [367]",
+          "width": 442,
+          "text": "Price$699$649$599"
+        },
+        {
+          "selector": "tr.border-b.border-gray-200 [372]",
+          "width": 442,
+          "text": "Suction Power240 AW200 AW185 AW"
+        },
+        {
+          "selector": "tr.border-b.border-gray-200 [377]",
+          "width": 442,
+          "text": "Runtime (Eco Mode)120 min90 min100 min"
+        },
+        {
+          "selector": "tr.border-b.border-gray-200 [382]",
+          "width": 442,
+          "text": "Dust Capacity0.76 L0.6 L0.5 L"
+        },
+        {
+          "selector": "tr.border-b.border-gray-200 [387]",
+          "width": 442,
+          "text": "Laser Detection——"
+        },
+        {
+          "selector": "tr.border-b.border-gray-200 [396]",
+          "width": 442,
+          "text": "Auto De-Tangle—"
+        },
+        {
+          "selector": "tr [406]",
+          "width": 442,
+          "text": "HEPA Filtration—"
+        }
+      ],
+      "buttonGroups": [
+        {
+          "selector": "div.flex.items-center [0]",
+          "isStacking": true,
+          "buttonCount": 2
+        },
+        {
+          "selector": "div.flex.gap-4 [3]",
+          "isStacking": false,
+          "buttonCount": 2
+        },
+        {
+          "selector": "div.flex.flex-col [4]",
+          "isStacking": true,
+          "buttonCount": 3
+        },
+        {
+          "selector": "div.flex.flex-col [5]",
+          "isStacking": true,
+          "buttonCount": 3
+        },
+        {
+          "selector": "div.flex.flex-col [54]",
+          "isStacking": true,
+          "buttonCount": 2
+        }
+      ],
+      "translationIssues": [
+        "Found \"undefined\" in page text",
+        "Found unprocessed template syntax",
+        "Found unprocessed translation keys",
+        "Empty button found [2]",
+        "Empty button found [5]",
+        "Empty button found [6]",
+        "Empty button found [7]"
+      ],
+      "largeTextElements": [
+        {
+          "selector": "h1.text-6xl.md:text-7xl [0]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-5xl.md:text-6xl [3]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h3.text-4xl.font-bold [5]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h3.text-4xl.font-bold [8]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h3.text-4xl.font-bold [11]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h3.text-4xl.font-bold [14]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-5xl.md:text-6xl [17]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-5xl.md:text-6xl [19]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-5xl.md:text-6xl [20]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-5xl.md:text-6xl [34]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-4xl.md:text-5xl [35]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-5xl.md:text-6xl [36]",
+          "hasBreakWords": false,
+          "width": 322
+        }
+      ]
+    },
+    "screenshotPath": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/mobile-deep-check-screenshots/product-vacuum.png"
+  },
+  {
+    "template": "service-b2b",
+    "url": "/templates/service-b2b",
+    "passed": true,
+    "issues": [
+      "⚠️  Translation issues: Found \"undefined\" in page text, Found unprocessed template syntax, Found unprocessed translation keys, Empty button found [2]"
+    ],
+    "details": {
+      "hamburgerVisible": true,
+      "hasHorizontalScroll": false,
+      "navVisibleOnMobile": false,
+      "actualViewportWidth": 346,
+      "scrollWidth": 346,
+      "overflowingElements": [],
+      "buttonGroups": [
+        {
+          "selector": "div.flex.items-center [0]",
+          "isStacking": true,
+          "buttonCount": 2
+        }
+      ],
+      "translationIssues": [
+        "Found \"undefined\" in page text",
+        "Found unprocessed template syntax",
+        "Found unprocessed translation keys",
+        "Empty button found [2]"
+      ],
+      "largeTextElements": [
+        {
+          "selector": "h1.text-6xl.md:text-7xl [0]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "p.text-3xl.font-light [1]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-5xl.font-bold [3]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-5xl.font-bold [9]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h3.text-3xl.font-bold [11]",
+          "hasBreakWords": false,
+          "width": 254
+        },
+        {
+          "selector": "h3.text-3xl.font-bold [14]",
+          "hasBreakWords": false,
+          "width": 254
+        },
+        {
+          "selector": "h3.text-3xl.font-bold [17]",
+          "hasBreakWords": false,
+          "width": 254
+        },
+        {
+          "selector": "h2.text-5xl.font-bold [20]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-5xl.font-bold [22]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-5xl.font-bold [31]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-5xl.md:text-6xl [41]",
+          "hasBreakWords": false,
+          "width": 322
+        }
+      ]
+    },
+    "screenshotPath": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/mobile-deep-check-screenshots/service-b2b.png"
+  },
+  {
+    "template": "service-community",
+    "url": "/templates/service-community",
+    "passed": true,
+    "issues": [
+      "⚠️  Translation issues: Found \"undefined\" in page text, Found unprocessed template syntax, Found unprocessed translation keys, Empty button found [2]"
+    ],
+    "details": {
+      "hamburgerVisible": true,
+      "hasHorizontalScroll": false,
+      "navVisibleOnMobile": false,
+      "actualViewportWidth": 346,
+      "scrollWidth": 346,
+      "overflowingElements": [],
+      "buttonGroups": [
+        {
+          "selector": "div.flex.items-center [0]",
+          "isStacking": true,
+          "buttonCount": 2
+        },
+        {
+          "selector": "div.flex.flex-col [2]",
+          "isStacking": true,
+          "buttonCount": 2
+        },
+        {
+          "selector": "div.flex.flex-col [9]",
+          "isStacking": true,
+          "buttonCount": 2
+        }
+      ],
+      "translationIssues": [
+        "Found \"undefined\" in page text",
+        "Found unprocessed template syntax",
+        "Found unprocessed translation keys",
+        "Empty button found [2]"
+      ],
+      "largeTextElements": [
+        {
+          "selector": "h1.text-6xl.md:text-7xl [0]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "p.text-3xl.font-light [1]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-5xl.font-bold [3]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-5xl.font-bold [12]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-5xl.font-bold [21]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-5xl.font-bold [29]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-5xl.font-bold [40]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-5xl.md:text-6xl [49]",
+          "hasBreakWords": false,
+          "width": 322
+        }
+      ]
+    },
+    "screenshotPath": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/mobile-deep-check-screenshots/service-community.png"
+  },
+  {
+    "template": "service-dfyou",
+    "url": "/templates/service-dfyou",
+    "passed": true,
+    "issues": [
+      "⚠️  1 button groups not stacking on mobile",
+      "⚠️  Translation issues: Found \"undefined\" in page text, Found unprocessed template syntax, Found unprocessed translation keys, Empty button found [2]"
+    ],
+    "details": {
+      "hamburgerVisible": true,
+      "hasHorizontalScroll": false,
+      "navVisibleOnMobile": false,
+      "actualViewportWidth": 346,
+      "scrollWidth": 346,
+      "overflowingElements": [],
+      "buttonGroups": [
+        {
+          "selector": "div.flex.items-center [0]",
+          "isStacking": true,
+          "buttonCount": 2
+        },
+        {
+          "selector": "div.flex.flex-col [3]",
+          "isStacking": true,
+          "buttonCount": 2
+        },
+        {
+          "selector": "div.flex.flex-wrap [11]",
+          "isStacking": false,
+          "buttonCount": 5
+        }
+      ],
+      "translationIssues": [
+        "Found \"undefined\" in page text",
+        "Found unprocessed template syntax",
+        "Found unprocessed translation keys",
+        "Empty button found [2]"
+      ],
+      "largeTextElements": [
+        {
+          "selector": "h1.text-4xl.sm:text-5xl [0]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "p.text-3xl.font-light [1]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-5xl.font-bold [3]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-5xl.font-bold [10]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-5xl.font-bold [36]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-5xl.font-bold [39]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-5xl.font-bold [48]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-5xl.font-bold [52]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-5xl.md:text-6xl [61]",
+          "hasBreakWords": false,
+          "width": 322
+        }
+      ]
+    },
+    "screenshotPath": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/mobile-deep-check-screenshots/service-dfyou.png"
+  },
+  {
+    "template": "service-agency",
+    "url": "/templates/service-agency",
+    "passed": true,
+    "issues": [
+      "⚠️  Translation issues: Found \"undefined\" in page text, Found unprocessed template syntax, Found unprocessed translation keys, Empty button found [2]"
+    ],
+    "details": {
+      "hamburgerVisible": true,
+      "hasHorizontalScroll": false,
+      "navVisibleOnMobile": false,
+      "actualViewportWidth": 346,
+      "scrollWidth": 346,
+      "overflowingElements": [],
+      "buttonGroups": [
+        {
+          "selector": "div.flex.items-center [0]",
+          "isStacking": true,
+          "buttonCount": 2
+        },
+        {
+          "selector": "div.flex.flex-col [3]",
+          "isStacking": true,
+          "buttonCount": 2
+        },
+        {
+          "selector": "div.flex.flex-col [64]",
+          "isStacking": true,
+          "buttonCount": 2
+        }
+      ],
+      "translationIssues": [
+        "Found \"undefined\" in page text",
+        "Found unprocessed template syntax",
+        "Found unprocessed translation keys",
+        "Empty button found [2]"
+      ],
+      "largeTextElements": [
+        {
+          "selector": "h1.text-6xl.md:text-7xl [0]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-5xl.font-bold [2]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-5xl.font-bold [10]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-5xl.font-bold [18]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-5xl.font-bold [29]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-5xl.font-bold [39]",
+          "hasBreakWords": false,
+          "width": 322
+        }
+      ]
+    },
+    "screenshotPath": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/mobile-deep-check-screenshots/service-agency.png"
+  },
+  {
+    "template": "service-enterprise",
+    "url": "/templates/service-enterprise",
+    "passed": true,
+    "issues": [
+      "⚠️  1 elements wider than viewport",
+      "   → div.flex.items-center [535]: 361px",
+      "⚠️  Translation issues: Found \"undefined\" in page text, Found unprocessed template syntax, Found unprocessed translation keys, Empty button found [2]"
+    ],
+    "details": {
+      "hamburgerVisible": true,
+      "hasHorizontalScroll": false,
+      "navVisibleOnMobile": false,
+      "actualViewportWidth": 346,
+      "scrollWidth": 346,
+      "overflowingElements": [
+        {
+          "selector": "div.flex.items-center [535]",
+          "width": 361,
+          "text": "SOC 2 Type IIISO 27001GDPR CompliantHIPAA Certifie"
+        }
+      ],
+      "buttonGroups": [
+        {
+          "selector": "div.flex.items-center [0]",
+          "isStacking": true,
+          "buttonCount": 2
+        },
+        {
+          "selector": "div.flex.flex-col [7]",
+          "isStacking": true,
+          "buttonCount": 2
+        },
+        {
+          "selector": "div.flex.flex-col [72]",
+          "isStacking": true,
+          "buttonCount": 2
+        }
+      ],
+      "translationIssues": [
+        "Found \"undefined\" in page text",
+        "Found unprocessed template syntax",
+        "Found unprocessed translation keys",
+        "Empty button found [2]"
+      ],
+      "largeTextElements": [
+        {
+          "selector": "h1.text-6xl.md:text-7xl [0]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-5xl.font-bold [2]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-5xl.font-bold [10]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-5xl.font-bold [12]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h3.text-3xl.font-bold [14]",
+          "hasBreakWords": false,
+          "width": 256
+        },
+        {
+          "selector": "h3.text-3xl.font-bold [17]",
+          "hasBreakWords": false,
+          "width": 256
+        },
+        {
+          "selector": "h2.text-5xl.font-bold [20]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-5xl.font-bold [30]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-5xl.font-bold [38]",
+          "hasBreakWords": false,
+          "width": 322
+        }
+      ]
+    },
+    "screenshotPath": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/mobile-deep-check-screenshots/service-enterprise.png"
+  },
+  {
+    "template": "service-consulting",
+    "url": "/templates/service-consulting",
+    "passed": true,
+    "issues": [
+      "⚠️  Translation issues: Found \"undefined\" in page text, Found unprocessed template syntax, Found unprocessed translation keys, Empty button found [2]"
+    ],
+    "details": {
+      "hamburgerVisible": true,
+      "hasHorizontalScroll": false,
+      "navVisibleOnMobile": false,
+      "actualViewportWidth": 346,
+      "scrollWidth": 346,
+      "overflowingElements": [],
+      "buttonGroups": [
+        {
+          "selector": "div.flex.items-center [0]",
+          "isStacking": true,
+          "buttonCount": 2
+        },
+        {
+          "selector": "div.flex.flex-col [3]",
+          "isStacking": true,
+          "buttonCount": 2
+        },
+        {
+          "selector": "div.flex.flex-col [88]",
+          "isStacking": true,
+          "buttonCount": 2
+        }
+      ],
+      "translationIssues": [
+        "Found \"undefined\" in page text",
+        "Found unprocessed template syntax",
+        "Found unprocessed translation keys",
+        "Empty button found [2]"
+      ],
+      "largeTextElements": [
+        {
+          "selector": "h1.text-7xl.md:text-8xl [0]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-5xl.font-bold [2]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h3.text-3xl.font-bold [4]",
+          "hasBreakWords": false,
+          "width": 254
+        },
+        {
+          "selector": "h3.text-3xl.font-bold [7]",
+          "hasBreakWords": false,
+          "width": 254
+        },
+        {
+          "selector": "h3.text-3xl.font-bold [10]",
+          "hasBreakWords": false,
+          "width": 254
+        },
+        {
+          "selector": "h2.text-5xl.font-bold [13]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h3.text-3xl.font-bold [15]",
+          "hasBreakWords": false,
+          "width": 256
+        },
+        {
+          "selector": "h3.text-3xl.font-bold [18]",
+          "hasBreakWords": false,
+          "width": 256
+        },
+        {
+          "selector": "h2.text-5xl.font-bold [21]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-5xl.font-bold [35]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-5xl.font-bold [45]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-5xl.font-bold [53]",
+          "hasBreakWords": false,
+          "width": 322
+        }
+      ]
+    },
+    "screenshotPath": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/mobile-deep-check-screenshots/service-consulting.png"
+  },
+  {
+    "template": "blog-personal",
+    "url": "/templates/blog-personal",
+    "passed": false,
+    "issues": [
+      "❌ No hamburger menu found on mobile",
+      "⚠️  1 button groups not stacking on mobile",
+      "⚠️  Translation issues: Found \"undefined\" in page text, Found unprocessed template syntax, Found unprocessed translation keys, Empty button found [1], Empty button found [8], Empty button found [9], Empty button found [10], Empty button found [11], Empty button found [12], Empty button found [13], Empty button found [14], Empty button found [15], Empty button found [16], Empty button found [17], Empty button found [18], Empty button found [19]"
+    ],
+    "details": {
+      "hamburgerVisible": false,
+      "hasHorizontalScroll": false,
+      "navVisibleOnMobile": false,
+      "actualViewportWidth": 346,
+      "scrollWidth": 346,
+      "overflowingElements": [],
+      "buttonGroups": [
+        {
+          "selector": "div.flex.items-center [10]",
+          "isStacking": false,
+          "buttonCount": 5
+        }
+      ],
+      "translationIssues": [
+        "Found \"undefined\" in page text",
+        "Found unprocessed template syntax",
+        "Found unprocessed translation keys",
+        "Empty button found [1]",
+        "Empty button found [8]",
+        "Empty button found [9]",
+        "Empty button found [10]",
+        "Empty button found [11]",
+        "Empty button found [12]",
+        "Empty button found [13]",
+        "Empty button found [14]",
+        "Empty button found [15]",
+        "Empty button found [16]",
+        "Empty button found [17]",
+        "Empty button found [18]",
+        "Empty button found [19]"
+      ],
+      "largeTextElements": [
+        {
+          "selector": "h1.text-4xl.md:text-5xl [0]",
+          "hasBreakWords": true,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-3xl.font-bold [2]",
+          "hasBreakWords": false,
+          "width": 258
+        },
+        {
+          "selector": "h2.text-4xl.font-bold [32]",
+          "hasBreakWords": true,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-4xl.font-bold [37]",
+          "hasBreakWords": true,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-4xl.font-bold [45]",
+          "hasBreakWords": true,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-4xl.font-bold [47]",
+          "hasBreakWords": true,
+          "width": 322
+        }
+      ]
+    },
+    "screenshotPath": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/mobile-deep-check-screenshots/blog-personal.png"
+  },
+  {
+    "template": "blog-magazine",
+    "url": "/templates/blog-magazine",
+    "passed": true,
+    "issues": [
+      "⚠️  37 button groups not stacking on mobile",
+      "⚠️  Translation issues: Found \"undefined\" in page text, Found unprocessed template syntax, Found unprocessed translation keys, Empty button found [2], Empty button found [11], Empty button found [12], Empty button found [13], Empty button found [14], Empty button found [15], Empty button found [16], Empty button found [17], Empty button found [18], Empty button found [19], Empty button found [20], Empty button found [21], Empty button found [22], Empty button found [23], Empty button found [24], Empty button found [25], Empty button found [26], Empty button found [27], Empty button found [28], Empty button found [29], Empty button found [30], Empty button found [31], Empty button found [32]"
+    ],
+    "details": {
+      "hamburgerVisible": true,
+      "hasHorizontalScroll": false,
+      "navVisibleOnMobile": false,
+      "actualViewportWidth": 346,
+      "scrollWidth": 346,
+      "overflowingElements": [],
+      "buttonGroups": [
+        {
+          "selector": "div.flex.items-center [3]",
+          "isStacking": true,
+          "buttonCount": 2
+        },
+        {
+          "selector": "div.flex.items-center [4]",
+          "isStacking": true,
+          "buttonCount": 2
+        },
+        {
+          "selector": "div.flex.items-center [28]",
+          "isStacking": false,
+          "buttonCount": 7
+        },
+        {
+          "selector": "div.flex.items-center [29]",
+          "isStacking": false,
+          "buttonCount": 6
+        },
+        {
+          "selector": "div.flex.flex-col [31]",
+          "isStacking": false,
+          "buttonCount": 2
+        },
+        {
+          "selector": "div.p-6.flex-1 [33]",
+          "isStacking": false,
+          "buttonCount": 2
+        },
+        {
+          "selector": "div.flex.items-center [35]",
+          "isStacking": false,
+          "buttonCount": 2
+        },
+        {
+          "selector": "div.flex.items-center [37]",
+          "isStacking": false,
+          "buttonCount": 2
+        },
+        {
+          "selector": "div.flex.flex-col [38]",
+          "isStacking": false,
+          "buttonCount": 2
+        },
+        {
+          "selector": "div.p-6.flex-1 [40]",
+          "isStacking": false,
+          "buttonCount": 2
+        },
+        {
+          "selector": "div.flex.items-center [42]",
+          "isStacking": false,
+          "buttonCount": 2
+        },
+        {
+          "selector": "div.flex.items-center [44]",
+          "isStacking": false,
+          "buttonCount": 2
+        },
+        {
+          "selector": "div.flex.flex-col [45]",
+          "isStacking": false,
+          "buttonCount": 2
+        },
+        {
+          "selector": "div.p-6.flex-1 [47]",
+          "isStacking": false,
+          "buttonCount": 2
+        },
+        {
+          "selector": "div.flex.items-center [49]",
+          "isStacking": false,
+          "buttonCount": 2
+        },
+        {
+          "selector": "div.flex.items-center [51]",
+          "isStacking": false,
+          "buttonCount": 2
+        },
+        {
+          "selector": "div.flex.flex-col [52]",
+          "isStacking": false,
+          "buttonCount": 2
+        },
+        {
+          "selector": "div.p-6.flex-1 [54]",
+          "isStacking": false,
+          "buttonCount": 2
+        },
+        {
+          "selector": "div.flex.items-center [56]",
+          "isStacking": false,
+          "buttonCount": 2
+        },
+        {
+          "selector": "div.flex.items-center [58]",
+          "isStacking": false,
+          "buttonCount": 2
+        },
+        {
+          "selector": "div.flex.flex-col [59]",
+          "isStacking": false,
+          "buttonCount": 2
+        },
+        {
+          "selector": "div.p-6.flex-1 [61]",
+          "isStacking": false,
+          "buttonCount": 2
+        },
+        {
+          "selector": "div.flex.items-center [63]",
+          "isStacking": false,
+          "buttonCount": 2
+        },
+        {
+          "selector": "div.flex.items-center [65]",
+          "isStacking": false,
+          "buttonCount": 2
+        },
+        {
+          "selector": "div.flex.flex-col [66]",
+          "isStacking": false,
+          "buttonCount": 2
+        },
+        {
+          "selector": "div.p-6.flex-1 [68]",
+          "isStacking": false,
+          "buttonCount": 2
+        },
+        {
+          "selector": "div.flex.items-center [70]",
+          "isStacking": false,
+          "buttonCount": 2
+        },
+        {
+          "selector": "div.flex.items-center [72]",
+          "isStacking": false,
+          "buttonCount": 2
+        },
+        {
+          "selector": "div.flex.flex-col [73]",
+          "isStacking": false,
+          "buttonCount": 2
+        },
+        {
+          "selector": "div.p-6.flex-1 [75]",
+          "isStacking": false,
+          "buttonCount": 2
+        },
+        {
+          "selector": "div.flex.items-center [77]",
+          "isStacking": false,
+          "buttonCount": 2
+        },
+        {
+          "selector": "div.flex.items-center [79]",
+          "isStacking": false,
+          "buttonCount": 2
+        },
+        {
+          "selector": "div.flex.flex-col [80]",
+          "isStacking": false,
+          "buttonCount": 2
+        },
+        {
+          "selector": "div.p-6.flex-1 [82]",
+          "isStacking": false,
+          "buttonCount": 2
+        },
+        {
+          "selector": "div.flex.items-center [84]",
+          "isStacking": false,
+          "buttonCount": 2
+        },
+        {
+          "selector": "div.flex.items-center [86]",
+          "isStacking": false,
+          "buttonCount": 2
+        },
+        {
+          "selector": "div.flex.justify-center [108]",
+          "isStacking": false,
+          "buttonCount": 2
+        },
+        {
+          "selector": "div.flex.justify-center [110]",
+          "isStacking": false,
+          "buttonCount": 2
+        },
+        {
+          "selector": "div.flex.justify-center [112]",
+          "isStacking": false,
+          "buttonCount": 2
+        }
+      ],
+      "translationIssues": [
+        "Found \"undefined\" in page text",
+        "Found unprocessed template syntax",
+        "Found unprocessed translation keys",
+        "Empty button found [2]",
+        "Empty button found [11]",
+        "Empty button found [12]",
+        "Empty button found [13]",
+        "Empty button found [14]",
+        "Empty button found [15]",
+        "Empty button found [16]",
+        "Empty button found [17]",
+        "Empty button found [18]",
+        "Empty button found [19]",
+        "Empty button found [20]",
+        "Empty button found [21]",
+        "Empty button found [22]",
+        "Empty button found [23]",
+        "Empty button found [24]",
+        "Empty button found [25]",
+        "Empty button found [26]",
+        "Empty button found [27]",
+        "Empty button found [28]",
+        "Empty button found [29]",
+        "Empty button found [30]",
+        "Empty button found [31]",
+        "Empty button found [32]"
+      ],
+      "largeTextElements": [
+        {
+          "selector": "h2.text-3xl.font-bold [0]",
+          "hasBreakWords": false,
+          "width": 258
+        },
+        {
+          "selector": "h2.text-3xl.font-bold [4]",
+          "hasBreakWords": false,
+          "width": 204
+        },
+        {
+          "selector": "h2.text-3xl.font-bold [37]",
+          "hasBreakWords": false,
+          "width": 189
+        },
+        {
+          "selector": "h2.text-3xl.font-bold [42]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-3xl.font-bold [53]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-4xl.font-bold [56]",
+          "hasBreakWords": false,
+          "width": 322
+        }
+      ]
+    },
+    "screenshotPath": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/mobile-deep-check-screenshots/blog-magazine.png"
+  },
+  {
+    "template": "blog-tech",
+    "url": "/templates/blog-tech",
+    "passed": false,
+    "issues": [
+      "❌ No hamburger menu found on mobile",
+      "⚠️  Translation issues: Found \"undefined\" in page text, Found unprocessed template syntax, Found unprocessed translation keys, Empty button found [1], Empty button found [2], Empty button found [7], Empty button found [8]"
+    ],
+    "details": {
+      "hamburgerVisible": false,
+      "hasHorizontalScroll": false,
+      "navVisibleOnMobile": false,
+      "actualViewportWidth": 346,
+      "scrollWidth": 346,
+      "overflowingElements": [],
+      "buttonGroups": [
+        {
+          "selector": "div.flex.items-center [0]",
+          "isStacking": true,
+          "buttonCount": 3
+        },
+        {
+          "selector": "div.flex.flex-col [1]",
+          "isStacking": true,
+          "buttonCount": 3
+        },
+        {
+          "selector": "div.flex.flex-col [3]",
+          "isStacking": true,
+          "buttonCount": 2
+        },
+        {
+          "selector": "div.p-8.lg:p-10 [9]",
+          "isStacking": true,
+          "buttonCount": 3
+        },
+        {
+          "selector": "div.flex.flex-col [17]",
+          "isStacking": true,
+          "buttonCount": 3
+        },
+        {
+          "selector": "div.flex.items-start [29]",
+          "isStacking": true,
+          "buttonCount": 3
+        },
+        {
+          "selector": "div.flex-1 [30]",
+          "isStacking": true,
+          "buttonCount": 3
+        },
+        {
+          "selector": "div.flex.items-center [39]",
+          "isStacking": true,
+          "buttonCount": 3
+        },
+        {
+          "selector": "div.flex.flex-col [42]",
+          "isStacking": true,
+          "buttonCount": 3
+        },
+        {
+          "selector": "div.flex.items-start [43]",
+          "isStacking": true,
+          "buttonCount": 3
+        },
+        {
+          "selector": "div.flex-1 [44]",
+          "isStacking": true,
+          "buttonCount": 3
+        },
+        {
+          "selector": "div.flex.items-center [53]",
+          "isStacking": true,
+          "buttonCount": 3
+        },
+        {
+          "selector": "div.flex.flex-col [56]",
+          "isStacking": true,
+          "buttonCount": 3
+        },
+        {
+          "selector": "div.flex.items-start [57]",
+          "isStacking": true,
+          "buttonCount": 3
+        },
+        {
+          "selector": "div.flex-1 [58]",
+          "isStacking": true,
+          "buttonCount": 3
+        },
+        {
+          "selector": "div.flex.items-center [67]",
+          "isStacking": true,
+          "buttonCount": 3
+        },
+        {
+          "selector": "div.flex.flex-col [70]",
+          "isStacking": true,
+          "buttonCount": 3
+        },
+        {
+          "selector": "div.flex.items-start [71]",
+          "isStacking": true,
+          "buttonCount": 3
+        },
+        {
+          "selector": "div.flex-1 [72]",
+          "isStacking": true,
+          "buttonCount": 3
+        },
+        {
+          "selector": "div.flex.items-center [80]",
+          "isStacking": true,
+          "buttonCount": 3
+        },
+        {
+          "selector": "div.flex.flex-col [83]",
+          "isStacking": true,
+          "buttonCount": 3
+        },
+        {
+          "selector": "div.flex.items-start [84]",
+          "isStacking": true,
+          "buttonCount": 3
+        },
+        {
+          "selector": "div.flex-1 [85]",
+          "isStacking": true,
+          "buttonCount": 3
+        },
+        {
+          "selector": "div.flex.items-center [94]",
+          "isStacking": true,
+          "buttonCount": 3
+        },
+        {
+          "selector": "div.flex.flex-col [97]",
+          "isStacking": true,
+          "buttonCount": 3
+        },
+        {
+          "selector": "div.flex.items-start [98]",
+          "isStacking": true,
+          "buttonCount": 3
+        },
+        {
+          "selector": "div.flex-1 [99]",
+          "isStacking": true,
+          "buttonCount": 3
+        },
+        {
+          "selector": "div.flex.items-center [108]",
+          "isStacking": true,
+          "buttonCount": 3
+        },
+        {
+          "selector": "div.flex.flex-col [111]",
+          "isStacking": true,
+          "buttonCount": 3
+        },
+        {
+          "selector": "div.flex.items-start [112]",
+          "isStacking": true,
+          "buttonCount": 3
+        },
+        {
+          "selector": "div.flex-1 [113]",
+          "isStacking": true,
+          "buttonCount": 3
+        },
+        {
+          "selector": "div.flex.items-center [122]",
+          "isStacking": true,
+          "buttonCount": 3
+        },
+        {
+          "selector": "div.flex.flex-col [125]",
+          "isStacking": true,
+          "buttonCount": 3
+        },
+        {
+          "selector": "div.flex.items-start [126]",
+          "isStacking": true,
+          "buttonCount": 3
+        },
+        {
+          "selector": "div.flex-1 [127]",
+          "isStacking": true,
+          "buttonCount": 3
+        },
+        {
+          "selector": "div.flex.items-center [136]",
+          "isStacking": true,
+          "buttonCount": 3
+        },
+        {
+          "selector": "div.flex.flex-col [139]",
+          "isStacking": true,
+          "buttonCount": 3
+        }
+      ],
+      "translationIssues": [
+        "Found \"undefined\" in page text",
+        "Found unprocessed template syntax",
+        "Found unprocessed translation keys",
+        "Empty button found [1]",
+        "Empty button found [2]",
+        "Empty button found [7]",
+        "Empty button found [8]"
+      ],
+      "largeTextElements": [
+        {
+          "selector": "h1.text-5xl.md:text-6xl [0]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-3xl.font-bold [2]",
+          "hasBreakWords": false,
+          "width": 237
+        },
+        {
+          "selector": "h3.text-3xl.font-bold [3]",
+          "hasBreakWords": false,
+          "width": 258
+        },
+        {
+          "selector": "h2.text-3xl.font-bold [7]",
+          "hasBreakWords": false,
+          "width": 238
+        },
+        {
+          "selector": "h2.text-3xl.font-bold [12]",
+          "hasBreakWords": false,
+          "width": 204
+        },
+        {
+          "selector": "h2.text-3xl.font-bold [51]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-4xl.font-bold [62]",
+          "hasBreakWords": false,
+          "width": 322
+        }
+      ]
+    },
+    "screenshotPath": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/mobile-deep-check-screenshots/blog-tech.png"
+  },
+  {
+    "template": "blog-archetypes-minimal",
+    "url": "/templates/blog-archetypes-minimal",
+    "passed": false,
+    "issues": [
+      "❌ No hamburger menu found on mobile",
+      "⚠️  2 button groups not stacking on mobile",
+      "⚠️  Translation issues: Found \"undefined\" in page text, Found unprocessed template syntax, Found unprocessed translation keys"
+    ],
+    "details": {
+      "hamburgerVisible": false,
+      "hasHorizontalScroll": false,
+      "navVisibleOnMobile": false,
+      "actualViewportWidth": 346,
+      "scrollWidth": 346,
+      "overflowingElements": [],
+      "buttonGroups": [
+        {
+          "selector": "div.container.mx-auto [0]",
+          "isStacking": false,
+          "buttonCount": 2
+        },
+        {
+          "selector": "div.flex.items-center [1]",
+          "isStacking": false,
+          "buttonCount": 2
+        }
+      ],
+      "translationIssues": [
+        "Found \"undefined\" in page text",
+        "Found unprocessed template syntax",
+        "Found unprocessed translation keys"
+      ],
+      "largeTextElements": [
+        {
+          "selector": "h1.text-4xl.sm:text-5xl [0]",
+          "hasBreakWords": false,
+          "width": 314
+        },
+        {
+          "selector": "h2.text-3xl.sm:text-4xl [3]",
+          "hasBreakWords": false,
+          "width": 314
+        },
+        {
+          "selector": "h2.text-3xl.sm:text-4xl [19]",
+          "hasBreakWords": false,
+          "width": 314
+        },
+        {
+          "selector": "h2.text-3xl.sm:text-4xl [27]",
+          "hasBreakWords": false,
+          "width": 314
+        },
+        {
+          "selector": "h2.text-3xl.sm:text-4xl [32]",
+          "hasBreakWords": false,
+          "width": 314
+        },
+        {
+          "selector": "h2.text-3xl.sm:text-4xl [37]",
+          "hasBreakWords": false,
+          "width": 314
+        }
+      ]
+    },
+    "screenshotPath": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/mobile-deep-check-screenshots/blog-archetypes-minimal.png"
+  },
+  {
+    "template": "blog-archetypes-editorial",
+    "url": "/templates/blog-archetypes-editorial",
+    "passed": false,
+    "issues": [
+      "❌ No hamburger menu found on mobile",
+      "⚠️  3 button groups not stacking on mobile",
+      "⚠️  Translation issues: Found \"undefined\" in page text, Found unprocessed template syntax, Found unprocessed translation keys"
+    ],
+    "details": {
+      "hamburgerVisible": false,
+      "hasHorizontalScroll": false,
+      "navVisibleOnMobile": false,
+      "actualViewportWidth": 346,
+      "scrollWidth": 346,
+      "overflowingElements": [],
+      "buttonGroups": [
+        {
+          "selector": "div.flex.items-center [0]",
+          "isStacking": false,
+          "buttonCount": 2
+        },
+        {
+          "selector": "div.flex.items-center [1]",
+          "isStacking": false,
+          "buttonCount": 2
+        },
+        {
+          "selector": "div.hidden.sm:flex [2]",
+          "isStacking": false,
+          "buttonCount": 2
+        },
+        {
+          "selector": "div.flex.flex-col [5]",
+          "isStacking": true,
+          "buttonCount": 2
+        }
+      ],
+      "translationIssues": [
+        "Found \"undefined\" in page text",
+        "Found unprocessed template syntax",
+        "Found unprocessed translation keys"
+      ],
+      "largeTextElements": [
+        {
+          "selector": "h1.font-playfair.text-3xl [0]",
+          "hasBreakWords": false,
+          "width": 314
+        },
+        {
+          "selector": "h2.font-playfair.text-3xl [2]",
+          "hasBreakWords": false,
+          "width": 314
+        },
+        {
+          "selector": "h2.font-playfair.text-3xl [27]",
+          "hasBreakWords": false,
+          "width": 314
+        },
+        {
+          "selector": "h2.font-playfair.text-3xl [31]",
+          "hasBreakWords": false,
+          "width": 314
+        },
+        {
+          "selector": "h2.font-playfair.text-3xl [37]",
+          "hasBreakWords": false,
+          "width": 314
+        },
+        {
+          "selector": "h3.font-playfair.text-3xl [47]",
+          "hasBreakWords": false,
+          "width": 234
+        }
+      ]
+    },
+    "screenshotPath": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/mobile-deep-check-screenshots/blog-archetypes-editorial.png"
+  },
+  {
+    "template": "online-business-coach",
+    "url": "/templates/online-business-coach",
+    "passed": false,
+    "issues": [
+      "❌ No hamburger menu found on mobile",
+      "⚠️  1 elements wider than viewport",
+      "   → div.absolute.-inset-4 [83]: 354px",
+      "⚠️  2 button groups not stacking on mobile",
+      "⚠️  Translation issues: Found \"undefined\" in page text, Found unprocessed template syntax, Found unprocessed translation keys"
+    ],
+    "details": {
+      "hamburgerVisible": false,
+      "hasHorizontalScroll": false,
+      "navVisibleOnMobile": false,
+      "actualViewportWidth": 346,
+      "scrollWidth": 346,
+      "overflowingElements": [
+        {
+          "selector": "div.absolute.-inset-4 [83]",
+          "width": 354,
+          "text": ""
+        }
+      ],
+      "buttonGroups": [
+        {
+          "selector": "div.container.mx-auto [0]",
+          "isStacking": false,
+          "buttonCount": 2
+        },
+        {
+          "selector": "div.flex.items-center [1]",
+          "isStacking": false,
+          "buttonCount": 2
+        },
+        {
+          "selector": "div.flex.flex-col [3]",
+          "isStacking": true,
+          "buttonCount": 2
+        }
+      ],
+      "translationIssues": [
+        "Found \"undefined\" in page text",
+        "Found unprocessed template syntax",
+        "Found unprocessed translation keys"
+      ],
+      "largeTextElements": [
+        {
+          "selector": "h1.text-4xl.sm:text-5xl [0]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-3xl.md:text-5xl [3]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-3xl.md:text-5xl [5]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-3xl.md:text-5xl [17]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-3xl.md:text-4xl [22]",
+          "hasBreakWords": false,
+          "width": 258
+        },
+        {
+          "selector": "h2.text-3xl.md:text-5xl [25]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-3xl.md:text-4xl [33]",
+          "hasBreakWords": false,
+          "width": 256
+        }
+      ]
+    },
+    "screenshotPath": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/mobile-deep-check-screenshots/online-business-coach.png"
+  },
+  {
+    "template": "online-business-course",
+    "url": "/templates/online-business-course",
+    "passed": false,
+    "issues": [
+      "❌ No hamburger menu found on mobile",
+      "⚠️  2 button groups not stacking on mobile",
+      "⚠️  Translation issues: Found \"undefined\" in page text, Found unprocessed template syntax, Found unprocessed translation keys"
+    ],
+    "details": {
+      "hamburgerVisible": false,
+      "hasHorizontalScroll": false,
+      "navVisibleOnMobile": false,
+      "actualViewportWidth": 346,
+      "scrollWidth": 346,
+      "overflowingElements": [],
+      "buttonGroups": [
+        {
+          "selector": "div.container.mx-auto [0]",
+          "isStacking": false,
+          "buttonCount": 2
+        },
+        {
+          "selector": "div.flex.items-center [1]",
+          "isStacking": false,
+          "buttonCount": 2
+        },
+        {
+          "selector": "div.flex.flex-col [3]",
+          "isStacking": true,
+          "buttonCount": 2
+        }
+      ],
+      "translationIssues": [
+        "Found \"undefined\" in page text",
+        "Found unprocessed template syntax",
+        "Found unprocessed translation keys"
+      ],
+      "largeTextElements": [
+        {
+          "selector": "h1.text-3xl.sm:text-4xl [0]",
+          "hasBreakWords": true,
+          "width": 314
+        }
+      ]
+    },
+    "screenshotPath": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/mobile-deep-check-screenshots/online-business-course.png"
+  },
+  {
+    "template": "online-business-agency",
+    "url": "/templates/online-business-agency",
+    "passed": false,
+    "issues": [
+      "❌ No hamburger menu found on mobile",
+      "⚠️  2 button groups not stacking on mobile",
+      "⚠️  Translation issues: Found \"undefined\" in page text, Found unprocessed template syntax, Found unprocessed translation keys"
+    ],
+    "details": {
+      "hamburgerVisible": false,
+      "hasHorizontalScroll": false,
+      "navVisibleOnMobile": false,
+      "actualViewportWidth": 346,
+      "scrollWidth": 346,
+      "overflowingElements": [],
+      "buttonGroups": [
+        {
+          "selector": "div.container.mx-auto [0]",
+          "isStacking": false,
+          "buttonCount": 2
+        },
+        {
+          "selector": "div.flex.items-center [1]",
+          "isStacking": false,
+          "buttonCount": 2
+        },
+        {
+          "selector": "div.flex.flex-col [3]",
+          "isStacking": true,
+          "buttonCount": 2
+        }
+      ],
+      "translationIssues": [
+        "Found \"undefined\" in page text",
+        "Found unprocessed template syntax",
+        "Found unprocessed translation keys"
+      ],
+      "largeTextElements": [
+        {
+          "selector": "h1.text-4xl.sm:text-5xl [0]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-3xl.md:text-5xl [2]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-3xl.md:text-5xl [10]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-3xl.md:text-5xl [20]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-3xl.md:text-5xl [30]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-3xl.md:text-4xl [34]",
+          "hasBreakWords": false,
+          "width": 258
+        }
+      ]
+    },
+    "screenshotPath": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/mobile-deep-check-screenshots/online-business-agency.png"
+  },
+  {
+    "template": "online-business-saas",
+    "url": "/templates/online-business-saas",
+    "passed": false,
+    "issues": [
+      "❌ No hamburger menu found on mobile",
+      "⚠️  2 button groups not stacking on mobile",
+      "⚠️  Translation issues: Found \"undefined\" in page text, Found unprocessed template syntax, Found unprocessed translation keys"
+    ],
+    "details": {
+      "hamburgerVisible": false,
+      "hasHorizontalScroll": false,
+      "navVisibleOnMobile": false,
+      "actualViewportWidth": 346,
+      "scrollWidth": 346,
+      "overflowingElements": [],
+      "buttonGroups": [
+        {
+          "selector": "div.container.mx-auto [0]",
+          "isStacking": false,
+          "buttonCount": 2
+        },
+        {
+          "selector": "div.flex.items-center [1]",
+          "isStacking": false,
+          "buttonCount": 2
+        },
+        {
+          "selector": "div.flex.gap-4 [3]",
+          "isStacking": true,
+          "buttonCount": 2
+        }
+      ],
+      "translationIssues": [
+        "Found \"undefined\" in page text",
+        "Found unprocessed template syntax",
+        "Found unprocessed translation keys"
+      ],
+      "largeTextElements": [
+        {
+          "selector": "h1.text-5xl.md:text-7xl [0]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-4xl.font-bold [2]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-4xl.font-bold [11]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-3xl.md:text-4xl [16]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-4xl.font-bold [21]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-4xl.font-bold [26]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-4xl.font-bold [34]",
+          "hasBreakWords": false,
+          "width": 322
+        },
+        {
+          "selector": "h2.text-3xl.md:text-5xl [45]",
+          "hasBreakWords": false,
+          "width": 224
+        }
+      ]
+    },
+    "screenshotPath": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/mobile-deep-check-screenshots/online-business-saas.png"
+  }
+]
