@@ -1059,7 +1059,7 @@ TestimonialsComponent.craft = {
 interface GalleryProps {
   title: string;
   titleRu: string;
-  images: Array<{ url: string; title: string }>;
+  images: Array<{ url: string; title: string; titleRu: string }>;
   columns: number;
   language?: 'en' | 'ru';
 }
@@ -1120,7 +1120,7 @@ const GalleryComponent = ({ title, titleRu, images, columns, language = 'en' }: 
                 <ImageIcon className="w-16 h-16 text-gray-400" />
               </div>
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
-                <p className="text-white font-medium">{image.title}</p>
+                <p className="text-white font-medium">{language === 'ru' ? image.titleRu : image.title}</p>
               </div>
             </div>
           ))}
@@ -1136,12 +1136,12 @@ GalleryComponent.craft = {
     title: "Gallery",
     titleRu: "Галерея",
     images: [
-      { url: "", title: "Project 1" },
-      { url: "", title: "Project 2" },
-      { url: "", title: "Project 3" },
-      { url: "", title: "Project 4" },
-      { url: "", title: "Project 5" },
-      { url: "", title: "Project 6" },
+      { url: "", title: "Project 1", titleRu: "Изображение 1" },
+      { url: "", title: "Project 2", titleRu: "Изображение 2" },
+      { url: "", title: "Project 3", titleRu: "Изображение 3" },
+      { url: "", title: "Project 4", titleRu: "Изображение 4" },
+      { url: "", title: "Project 5", titleRu: "Изображение 5" },
+      { url: "", title: "Project 6", titleRu: "Изображение 6" },
     ],
     columns: 3,
     language: 'en' as 'en' | 'ru',
@@ -2802,8 +2802,8 @@ export function CraftJSTemplateBuilder({ template }: { template: TemplateConfig 
             }}
           >
             {/* Mobile Preview Mode Toggle - Floating button */}
-            {isMobileDevice && mobileView === 'canvas' && (
-              <div className="md:hidden absolute top-4 left-1/2 transform -translate-x-1/2 z-50">
+            {mobileView === 'canvas' && (
+              <div className="md:hidden absolute top-4 left-1/2 transform -translate-x-1/2 z-[999] pointer-events-auto">
                 <button
                   onClick={() => setIsPreviewMode(!isPreviewMode)}
                   className={`${
@@ -2838,10 +2838,10 @@ export function CraftJSTemplateBuilder({ template }: { template: TemplateConfig 
             <div
               className="transition-transform duration-300 origin-top"
               style={{
-                transform: isMobileDevice && isPreviewMode ? 'scale(0.35)' : 'scale(1)',
+                transform: isPreviewMode ? 'scale(0.35)' : 'scale(1)',
                 transformOrigin: 'top center',
-                width: isMobileDevice && isPreviewMode ? '285%' : '100%',
-                pointerEvents: isMobileDevice && isPreviewMode ? 'none' : 'auto',
+                width: isPreviewMode ? '285%' : '100%',
+                pointerEvents: isPreviewMode ? 'none' : 'auto',
               }}
             >
               <Frame key={language}>
