@@ -12,9 +12,59 @@ import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { FiGrid, FiZap, FiLayers, FiCode, FiTrendingUp, FiCheck, FiMail, FiGithub, FiLinkedin, FiTwitter } from "react-icons/fi";
 import Link from "next/link";
+import { HowItWorksModal } from "@/components/how-it-works-modal";
+import { HelpCenter } from "@/components/help-center";
+import { OnboardingTour, TourStep } from "@/components/onboarding-tour";
+
+function HowItWorksModalWrapper() {
+  const { language } = useI18n();
+  return <HowItWorksModal language={language} />;
+}
 
 export default function Home() {
-  const { t } = useI18n();
+  const { t, language } = useI18n();
+
+  // Onboarding tour steps
+  const tourSteps: TourStep[] = [
+    {
+      title: "Welcome to Portfolio Builder!",
+      titleRu: "Добро пожаловать в Portfolio Builder!",
+      content: "Create professional portfolio websites in minutes. Let's take a quick tour to show you around!",
+      contentRu: "Создавайте профессиональные портфолио за минуты. Давайте быстро покажем вам основные возможности!",
+      position: "center",
+    },
+    {
+      target: "#templates",
+      title: "Browse Templates",
+      titleRu: "Просмотр шаблонов",
+      content: "Explore our collection of 39+ professional templates. Filter by category or search for specific features.",
+      contentRu: "Изучите нашу коллекцию из 39+ профессиональных шаблонов. Фильтруйте по категориям или ищите конкретные функции.",
+      position: "top",
+    },
+    {
+      target: ".category-menu-button",
+      title: "Filter by Category",
+      titleRu: "Фильтр по категориям",
+      content: "Use categories to quickly find templates for your specific industry: Online Business, Services, Products, and more.",
+      contentRu: "Используйте категории для быстрого поиска шаблонов для вашей отрасли: Онлайн-бизнес, Услуги, Продукты и другие.",
+      position: "bottom",
+    },
+    {
+      target: "input[type='text']",
+      title: "Smart Search",
+      titleRu: "Умный поиск",
+      content: "Search templates by name, description, features, or tags. The search is instant and very powerful!",
+      contentRu: "Ищите шаблоны по названию, описанию, функциям или тегам. Поиск мгновенный и очень мощный!",
+      position: "bottom",
+    },
+    {
+      title: "Start Building!",
+      titleRu: "Начните создавать!",
+      content: "Click on any template to customize it with our drag-and-drop builder. No coding required!",
+      contentRu: "Нажмите на любой шаблон, чтобы настроить его с помощью нашего конструктора drag-and-drop. Программирование не требуется!",
+      position: "center",
+    },
+  ];
 
   const stats = [
     { value: "39+", label: t.homepage.stats.templates },
@@ -105,7 +155,7 @@ export default function Home() {
               {t.homepage.hero.subtitle}
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-3 justify-center mb-8 sm:mb-10 px-4">
+            <div className="flex flex-col sm:flex-row gap-3 justify-center items-center mb-4 sm:mb-6 px-4">
               <Button size="lg" className="text-base px-6 py-6 h-auto min-h-[48px] touch-manipulation shadow-lg hover:shadow-xl" asChild>
                 <a href="#templates">
                   {t.homepage.hero.ctaExplore}
@@ -119,6 +169,16 @@ export default function Home() {
                 </a>
               </Button>
             </div>
+
+            {/* How It Works Button */}
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="flex justify-center mb-8 sm:mb-10 px-4"
+            >
+              <HowItWorksModalWrapper />
+            </motion.div>
 
             {/* Stats - Compact */}
             <motion.div
@@ -139,6 +199,301 @@ export default function Home() {
               ))}
             </motion.div>
           </motion.div>
+        </div>
+      </section>
+
+      {/* How It Works - Visual Flow Section */}
+      <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 dark:from-blue-950/20 dark:via-purple-950/20 dark:to-pink-950/20">
+        <div className="container mx-auto px-4 sm:px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="text-center mb-8 sm:mb-12"
+          >
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 sm:mb-3 px-2">
+              {language === 'en' ? 'How It ' : 'Как это '}
+              <span className="text-blue-600 dark:text-blue-400">
+                {language === 'en' ? 'Works' : 'работает'}
+              </span>
+            </h2>
+            <p className="text-sm sm:text-base md:text-lg text-foreground/70 max-w-2xl mx-auto px-2">
+              {language === 'en'
+                ? 'Create your professional portfolio website in 4 simple steps'
+                : 'Создайте свой профессиональный портфолио за 4 простых шага'}
+            </p>
+          </motion.div>
+
+          {/* Visual Workflow */}
+          <div className="max-w-5xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+              {/* Step 1 */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: 0.1 }}
+                className="relative"
+              >
+                <div className="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-2 border-2 border-blue-200 dark:border-blue-800">
+                  {/* Step Number */}
+                  <div className="absolute -top-4 -left-4 w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">
+                    1
+                  </div>
+                  {/* Icon */}
+                  <div className="text-6xl mb-4 text-center">🎨</div>
+                  {/* Title */}
+                  <h3 className="text-lg font-bold mb-2 text-center">
+                    {language === 'en' ? 'Browse Templates' : 'Выберите шаблон'}
+                  </h3>
+                  {/* Description */}
+                  <p className="text-sm text-foreground/70 text-center">
+                    {language === 'en'
+                      ? 'Explore 39+ professional templates for various industries'
+                      : 'Изучите 39+ профессиональных шаблонов для разных отраслей'}
+                  </p>
+                </div>
+                {/* Arrow (Desktop only) */}
+                <div className="hidden lg:block absolute top-1/2 -right-6 transform -translate-y-1/2 text-blue-400 text-4xl z-10">
+                  →
+                </div>
+              </motion.div>
+
+              {/* Step 2 - REDESIGNED WITH VISUAL EXAMPLE */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: 0.2 }}
+                className="relative"
+              >
+                <div className="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-2 border-2 border-purple-200 dark:border-purple-800">
+                  {/* Step Number */}
+                  <div className="absolute -top-4 -left-4 w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">
+                    2
+                  </div>
+
+                  {/* Title (Simplified) */}
+                  <h3 className="text-lg font-bold mb-3 text-center">
+                    {language === 'en' ? 'Arrange Your Sections' : 'Расставьте секции'}
+                  </h3>
+
+                  {/* Visual Mini-Diagram */}
+                  <div className="bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 rounded-xl p-4 mb-4">
+                    <div className="flex items-center justify-center gap-3 sm:gap-4">
+                      {/* BEFORE */}
+                      <div className="flex flex-col gap-1.5 sm:gap-2">
+                        <div className="text-[10px] font-semibold text-center text-purple-600 dark:text-purple-400 mb-1">
+                          {language === 'en' ? 'Before' : 'До'}
+                        </div>
+                        <div className="flex items-center gap-1 sm:gap-1.5 bg-white dark:bg-gray-700 rounded px-1.5 sm:px-2 py-1 sm:py-1.5 text-[9px] sm:text-[10px] shadow-sm">
+                          <span className="text-gray-400">⋮⋮</span>
+                          <span className="font-medium">Hero</span>
+                        </div>
+                        <div className="flex items-center gap-1 sm:gap-1.5 bg-white dark:bg-gray-700 rounded px-1.5 sm:px-2 py-1 sm:py-1.5 text-[9px] sm:text-[10px] shadow-sm">
+                          <span className="text-gray-400">⋮⋮</span>
+                          <span className="font-medium">{language === 'en' ? 'About' : 'О нас'}</span>
+                        </div>
+                        <div className="flex items-center gap-1 sm:gap-1.5 bg-yellow-100 dark:bg-yellow-900/30 rounded px-1.5 sm:px-2 py-1 sm:py-1.5 text-[9px] sm:text-[10px] shadow-sm border-2 border-yellow-400">
+                          <span className="text-gray-400">⋮⋮</span>
+                          <span className="font-medium">{language === 'en' ? 'Pricing' : 'Цены'}</span>
+                        </div>
+                        <div className="flex items-center gap-1 sm:gap-1.5 bg-white dark:bg-gray-700 rounded px-1.5 sm:px-2 py-1 sm:py-1.5 text-[9px] sm:text-[10px] shadow-sm">
+                          <span className="text-gray-400">⋮⋮</span>
+                          <span className="font-medium">FAQ</span>
+                        </div>
+                      </div>
+
+                      {/* ARROW */}
+                      <div className="text-xl sm:text-2xl text-purple-500 font-bold">→</div>
+
+                      {/* AFTER */}
+                      <div className="flex flex-col gap-1.5 sm:gap-2">
+                        <div className="text-[10px] font-semibold text-center text-purple-600 dark:text-purple-400 mb-1">
+                          {language === 'en' ? 'After' : 'После'}
+                        </div>
+                        <div className="flex items-center gap-1 sm:gap-1.5 bg-white dark:bg-gray-700 rounded px-1.5 sm:px-2 py-1 sm:py-1.5 text-[9px] sm:text-[10px] shadow-sm">
+                          <span className="text-gray-400">⋮⋮</span>
+                          <span className="font-medium">Hero</span>
+                        </div>
+                        <div className="flex items-center gap-1 sm:gap-1.5 bg-green-100 dark:bg-green-900/30 rounded px-1.5 sm:px-2 py-1 sm:py-1.5 text-[9px] sm:text-[10px] shadow-sm border-2 border-green-400">
+                          <span className="text-gray-400">⋮⋮</span>
+                          <span className="font-medium">{language === 'en' ? 'Pricing' : 'Цены'}</span>
+                          <span className="text-green-600 text-sm">⬆</span>
+                        </div>
+                        <div className="flex items-center gap-1 sm:gap-1.5 bg-white dark:bg-gray-700 rounded px-1.5 sm:px-2 py-1 sm:py-1.5 text-[9px] sm:text-[10px] shadow-sm">
+                          <span className="text-gray-400">⋮⋮</span>
+                          <span className="font-medium">{language === 'en' ? 'About' : 'О нас'}</span>
+                        </div>
+                        <div className="flex items-center gap-1 sm:gap-1.5 bg-white dark:bg-gray-700 rounded px-1.5 sm:px-2 py-1 sm:py-1.5 text-[9px] sm:text-[10px] shadow-sm">
+                          <span className="text-gray-400">⋮⋮</span>
+                          <span className="font-medium">FAQ</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Simple Description */}
+                  <p className="text-xs sm:text-sm text-foreground/70 text-center leading-relaxed">
+                    {language === 'en'
+                      ? 'Drag sections up & down. Put pricing after hero, FAQ at bottom - your choice!'
+                      : 'Перетаскивайте секции вверх и вниз. Цены после hero, FAQ внизу - ваш выбор!'}
+                  </p>
+                </div>
+                {/* Arrow (Desktop only) */}
+                <div className="hidden lg:block absolute top-1/2 -right-6 transform -translate-y-1/2 text-purple-400 text-4xl z-10">
+                  →
+                </div>
+              </motion.div>
+
+              {/* Step 3 */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: 0.3 }}
+                className="relative"
+              >
+                <div className="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-2 border-2 border-pink-200 dark:border-pink-800">
+                  {/* Step Number */}
+                  <div className="absolute -top-4 -left-4 w-12 h-12 bg-gradient-to-br from-pink-500 to-pink-600 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">
+                    3
+                  </div>
+                  {/* Icon */}
+                  <div className="text-6xl mb-4 text-center">📱</div>
+                  {/* Title */}
+                  <h3 className="text-lg font-bold mb-2 text-center">
+                    {language === 'en' ? 'Send via Telegram' : 'Отправьте в Telegram'}
+                  </h3>
+                  {/* Description */}
+                  <p className="text-sm text-foreground/70 text-center">
+                    {language === 'en'
+                      ? 'Save your design and send it to us via Telegram - simple and instant'
+                      : 'Сохраните дизайн и отправьте нам через Telegram - просто и мгновенно'}
+                  </p>
+                </div>
+                {/* Arrow (Desktop only) */}
+                <div className="hidden lg:block absolute top-1/2 -right-6 transform -translate-y-1/2 text-pink-400 text-4xl z-10">
+                  →
+                </div>
+              </motion.div>
+
+              {/* Step 4 */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: 0.4 }}
+              >
+                <div className="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-2 border-2 border-green-200 dark:border-green-800">
+                  {/* Step Number */}
+                  <div className="absolute -top-4 -left-4 w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">
+                    4
+                  </div>
+                  {/* Icon */}
+                  <div className="text-6xl mb-4 text-center">🚀</div>
+                  {/* Title */}
+                  <h3 className="text-lg font-bold mb-2 text-center">
+                    {language === 'en' ? 'Get Your Site ASAP' : 'Получите сайт быстро'}
+                  </h3>
+                  {/* Description */}
+                  <p className="text-sm text-foreground/70 text-center">
+                    {language === 'en'
+                      ? 'We build your professional site based on your design and deliver it ready to launch'
+                      : 'Мы создадим профессиональный сайт по вашему дизайну и доставим готовым к запуску'}
+                  </p>
+                </div>
+              </motion.div>
+            </div>
+
+            {/* Detailed Explanation */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+              className="mt-12 bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border-2 border-blue-200 dark:border-blue-800"
+            >
+              <div className="flex items-start gap-4 mb-4">
+                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <span className="text-2xl">💡</span>
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold mb-2">
+                    {language === 'en' ? 'What does "Build Your Flow" mean?' : 'Что значит "Создайте структуру"?'}
+                  </h3>
+                  <p className="text-foreground/70 mb-4">
+                    {language === 'en'
+                      ? 'In the builder, you don\'t write code - you decide the structure of your website:'
+                      : 'В конструкторе вы не пишете код - вы определяете структуру вашего сайта:'}
+                  </p>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+                    <div className="flex items-start gap-2">
+                      <span className="text-lg">📍</span>
+                      <div>
+                        <strong>{language === 'en' ? 'Reorder sections:' : 'Переставьте секции:'}</strong>
+                        <p className="text-foreground/60">
+                          {language === 'en'
+                            ? 'Want pricing after hero? Or FAQ at the end? You decide!'
+                            : 'Хотите цены после hero? Или FAQ в конце? Вы решаете!'}
+                        </p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-2">
+                      <span className="text-lg">➕</span>
+                      <div>
+                        <strong>{language === 'en' ? 'Add/Remove:' : 'Добавить/Удалить:'}</strong>
+                        <p className="text-foreground/60">
+                          {language === 'en'
+                            ? 'Need testimonials? Gallery? Skills section? Add them!'
+                            : 'Нужны отзывы? Галерея? Секция навыков? Добавьте их!'}
+                        </p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-2">
+                      <span className="text-lg">🎯</span>
+                      <div>
+                        <strong>{language === 'en' ? 'Your order:' : 'Ваш порядок:'}</strong>
+                        <p className="text-foreground/60">
+                          {language === 'en'
+                            ? 'Hero → About → Pricing → FAQ or Hero → Pricing → Gallery → Contact'
+                            : 'Hero → О нас → Цены → FAQ или Hero → Цены → Галерея → Контакты'}
+                        </p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-2">
+                      <span className="text-lg">🎨</span>
+                      <div>
+                        <strong>{language === 'en' ? 'We handle:' : 'Мы обработаем:'}</strong>
+                        <p className="text-foreground/60">
+                          {language === 'en'
+                            ? 'Design, code, optimization - you just decide the flow!'
+                            : 'Дизайн, код, оптимизацию - вы просто определяете структуру!'}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* CTA Button */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.6 }}
+              className="text-center mt-10"
+            >
+              <Button size="lg" className="text-base px-8 py-6 h-auto shadow-xl hover:shadow-2xl bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700" asChild>
+                <a href="#templates">
+                  {language === 'en' ? 'Start Building Now' : 'Начать создавать'}
+                  <FiZap className="ml-2 w-5 h-5" />
+                </a>
+              </Button>
+            </motion.div>
+          </div>
         </div>
       </section>
 
@@ -289,6 +644,18 @@ export default function Home() {
       <Footer />
       <MobileBottomNav />
       <ScrollToTop />
+
+      {/* Help Center - Floating Button */}
+      <HelpCenter language={language} />
+
+      {/* Onboarding Tour */}
+      <OnboardingTour
+        steps={tourSteps}
+        tourKey="homepage-tour"
+        language={language}
+        autoStart={true}
+        showProgress={true}
+      />
     </main>
   );
 }

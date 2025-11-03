@@ -20,6 +20,7 @@ import {
   FiX,
 } from "react-icons/fi";
 import { useI18n } from "@/lib/i18n-context";
+import { TooltipHint } from "@/components/ui/tooltip-hint";
 
 // Priority order for categories
 const categoryOrder = [
@@ -40,35 +41,66 @@ export function TemplateGallery() {
   const [searchQuery, setSearchQuery] = useState(searchParams.get("search") || "");
   const [selectedTag, setSelectedTag] = useState<string | null>(searchParams.get("tag") || null);
 
-  // Restore scroll position when returning from template detail page
+  // Restore scroll position and all filters when returning from template detail page
   useEffect(() => {
     const savedScrollPosition = sessionStorage.getItem('gallery-scroll-position');
     const savedCategory = sessionStorage.getItem('gallery-category');
+    const savedSearch = sessionStorage.getItem('gallery-search');
+    const savedTag = sessionStorage.getItem('gallery-tag');
 
-    if (savedScrollPosition) {
-      // Restore scroll position
-      window.scrollTo(0, parseInt(savedScrollPosition, 10));
-      // Clean up
-      sessionStorage.removeItem('gallery-scroll-position');
-    }
+    // Restore filters first
+    const needsRestore = savedCategory || savedSearch || savedTag;
+    if (needsRestore) {
+      const params = new URLSearchParams();
 
-    // Restore category filter if it was saved
-    if (savedCategory && savedCategory !== filter) {
-      const params = new URLSearchParams(searchParams);
-      if (savedCategory === "all") {
-        params.delete("category");
-      } else {
+      // Restore category
+      if (savedCategory && savedCategory !== "all") {
         params.set("category", savedCategory);
       }
+
+      // Restore search query
+      if (savedSearch) {
+        params.set("search", savedSearch);
+        setSearchQuery(savedSearch);
+      }
+
+      // Restore selected tag
+      if (savedTag) {
+        params.set("tag", savedTag);
+        setSelectedTag(savedTag);
+      }
+
       router.replace(`/?${params.toString()}`, { scroll: false });
+
+      // Clean up
       sessionStorage.removeItem('gallery-category');
+      sessionStorage.removeItem('gallery-search');
+      sessionStorage.removeItem('gallery-tag');
+    }
+
+    // Restore scroll position after a short delay to ensure content is rendered
+    if (savedScrollPosition) {
+      setTimeout(() => {
+        window.scrollTo(0, parseInt(savedScrollPosition, 10));
+        sessionStorage.removeItem('gallery-scroll-position');
+      }, 100);
     }
   }, []);
 
-  // Save scroll position before navigating to template
+  // Save all filter states before navigating to template
   const handleTemplateClick = (e: React.MouseEvent) => {
     sessionStorage.setItem('gallery-scroll-position', window.scrollY.toString());
     sessionStorage.setItem('gallery-category', filter);
+
+    // Save search query if present
+    if (searchQuery) {
+      sessionStorage.setItem('gallery-search', searchQuery);
+    }
+
+    // Save selected tag if present
+    if (selectedTag) {
+      sessionStorage.setItem('gallery-tag', selectedTag);
+    }
   };
 
   const templates = getTemplates(language);
@@ -192,6 +224,16 @@ export function TemplateGallery() {
             onChange={handleSearchChange}
             className="pl-12 pr-12 py-6 text-base rounded-full border-2 focus:border-primary"
           />
+          <div className="absolute right-12 top-1/2 transform -translate-y-1/2">
+            <TooltipHint
+              content="Search by template name, description, features, or tags. Try searching for 'modern', 'portfolio', or 'business'."
+              contentRu="Поиск по названию, описанию, функциям или тегам шаблона. Попробуйте искать 'современный', 'портфолио' или 'бизнес'."
+              title="Smart Search"
+              titleRu="Умный поиск"
+              position="bottom"
+              language={language}
+            />
+          </div>
           {searchQuery && (
             <button
               onClick={clearSearch}
@@ -288,27 +330,20 @@ export function TemplateGallery() {
                   {template.description}
                 </CardDescription>
 
-                {/* Tags - Clickable Chips */}
+                {/* Best For - Clickable Chips (Who this site is good for) */}
                 <div className="flex flex-wrap gap-1.5 mb-3">
-                  {template.tags.slice(0, 6).map((tag) => (
+                  <span className="text-xs text-muted-foreground mr-1">
+                    {language === 'en' ? 'Best for:' : 'Подходит для:'}
+                  </span>
+                  {template.bestFor.map((audience) => (
                     <Badge
-                      key={tag}
-                      variant={selectedTag === tag ? "default" : "secondary"}
-                      className="text-xs cursor-pointer hover:bg-primary/80 hover:text-primary-foreground transition-colors"
-                      onClick={(e) => {
-                        e.preventDefault();
-                        e.stopPropagation();
-                        handleTagClick(tag);
-                      }}
+                      key={audience}
+                      variant="default"
+                      className="text-xs bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 cursor-default"
                     >
-                      {tag}
+                      {audience}
                     </Badge>
                   ))}
-                  {template.tags.length > 6 && (
-                    <Badge variant="outline" className="text-xs">
-                      +{template.tags.length - 6}
-                    </Badge>
-                  )}
                 </div>
 
                 {/* Actions - Single Primary Button */}
@@ -318,7 +353,7 @@ export function TemplateGallery() {
                     className="w-full min-h-[48px] touch-manipulation font-semibold bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-base"
                     size="lg"
                   >
-                    <Link href={`/templates/${template.id}/builder`} onClick={handleTemplateClick}>
+                    <Link href={`/templates/${template.id}`} onClick={handleTemplateClick}>
                       <FiEdit3 className="mr-2 h-5 w-5" />
                       Customize & Build
                     </Link>

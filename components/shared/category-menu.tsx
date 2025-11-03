@@ -90,7 +90,7 @@ export function CategoryMenu({
       {/* Hamburger Button - Sticky */}
       <motion.button
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed top-20 left-4 z-50 flex items-center gap-2 px-4 py-3 bg-foreground text-background rounded-full shadow-lg min-h-[48px] min-w-[48px] touch-manipulation"
+        className="category-menu-button fixed top-20 left-4 z-50 flex items-center gap-2 px-4 py-3 bg-foreground text-background rounded-full shadow-lg min-h-[48px] min-w-[48px] touch-manipulation"
         whileTap={{ scale: 0.95 }}
         aria-label="Open categories menu"
       >
