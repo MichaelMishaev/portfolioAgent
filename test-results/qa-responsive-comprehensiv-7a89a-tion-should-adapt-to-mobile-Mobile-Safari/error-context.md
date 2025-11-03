@@ -1,0 +1,1037 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - main [ref=e2]:
+    - generic [ref=e4]:
+      - link "PortfolioHub" [ref=e5]:
+        - /url: /
+        - generic [ref=e6]: PortfolioHub
+      - navigation [ref=e7]:
+        - link "Templates" [ref=e8]:
+          - /url: /#templates
+        - link "Contact" [ref=e9]:
+          - /url: /#contact
+        - generic [ref=e10]:
+          - button "EN" [ref=e11] [cursor=pointer]
+          - button "RU" [ref=e12] [cursor=pointer]
+        - button "Toggle theme" [ref=e13] [cursor=pointer]:
+          - img
+          - generic [ref=e14]: Toggle theme
+    - generic [ref=e19]:
+      - generic [ref=e20]:
+        - img [ref=e21]
+        - text: Full-Stack Developer & Designer
+      - heading "Crafting Digital Experiences That Matter" [level=1] [ref=e23]
+      - paragraph [ref=e24]: I create custom websites adjusted for each specific purpose and business need. From concept to deployment, every project is tailored to achieve your unique goals with clean code and beautiful design.
+      - generic [ref=e25]:
+        - link "View My Work" [ref=e26]:
+          - /url: "#templates"
+          - text: View My Work
+          - img
+        - link "Contact Me" [ref=e27]:
+          - /url: "#contact"
+          - text: Contact Me
+          - img
+      - button "How It Works?" [ref=e29] [cursor=pointer]:
+        - generic [ref=e30]:
+          - img
+          - text: How It Works?
+      - generic [ref=e31]:
+        - generic [ref=e32]:
+          - generic [ref=e33]: 39+
+          - generic [ref=e34]: Projects
+        - generic [ref=e35]:
+          - generic [ref=e36]: "9"
+          - generic [ref=e37]: Technologies
+        - generic [ref=e38]:
+          - generic [ref=e39]: 100%
+          - generic [ref=e40]: Happy Clients
+        - generic [ref=e41]:
+          - generic [ref=e42]: Free
+          - generic [ref=e43]: Years Experience
+    - generic [ref=e45]:
+      - generic [ref=e46]:
+        - heading "How It Works" [level=2] [ref=e47]
+        - paragraph [ref=e48]: Create your professional portfolio website in 4 simple steps
+      - generic [ref=e49]:
+        - generic [ref=e50]:
+          - generic [ref=e51]:
+            - generic [ref=e52]:
+              - generic [ref=e53]: "1"
+              - generic [ref=e54]: 🎨
+              - heading "Browse Templates" [level=3] [ref=e55]
+              - paragraph [ref=e56]: Explore 39+ professional templates for various industries
+            - generic [ref=e57]: →
+          - generic [ref=e58]:
+            - generic [ref=e59]:
+              - generic [ref=e60]: "2"
+              - heading "Arrange Your Sections" [level=3] [ref=e61]
+              - generic [ref=e63]:
+                - generic [ref=e64]:
+                  - generic [ref=e65]: Before
+                  - generic [ref=e66]:
+                    - generic [ref=e67]: ⋮⋮
+                    - generic [ref=e68]: Hero
+                  - generic [ref=e69]:
+                    - generic [ref=e70]: ⋮⋮
+                    - generic [ref=e71]: About
+                  - generic [ref=e72]:
+                    - generic [ref=e73]: ⋮⋮
+                    - generic [ref=e74]: Pricing
+                  - generic [ref=e75]:
+                    - generic [ref=e76]: ⋮⋮
+                    - generic [ref=e77]: FAQ
+                - generic [ref=e78]: →
+                - generic [ref=e79]:
+                  - generic [ref=e80]: After
+                  - generic [ref=e81]:
+                    - generic [ref=e82]: ⋮⋮
+                    - generic [ref=e83]: Hero
+                  - generic [ref=e84]:
+                    - generic [ref=e85]: ⋮⋮
+                    - generic [ref=e86]: Pricing
+                    - generic [ref=e87]: ⬆
+                  - generic [ref=e88]:
+                    - generic [ref=e89]: ⋮⋮
+                    - generic [ref=e90]: About
+                  - generic [ref=e91]:
+                    - generic [ref=e92]: ⋮⋮
+                    - generic [ref=e93]: FAQ
+              - paragraph [ref=e94]: Drag sections up & down. Put pricing after hero, FAQ at bottom - your choice!
+            - generic [ref=e95]: →
+          - generic [ref=e96]:
+            - generic [ref=e97]:
+              - generic [ref=e98]: "3"
+              - generic [ref=e99]: 📱
+              - heading "Send via Telegram" [level=3] [ref=e100]
+              - paragraph [ref=e101]: Save your design and send it to us via Telegram - simple and instant
+            - generic [ref=e102]: →
+          - generic [ref=e104]:
+            - generic [ref=e105]: "4"
+            - generic [ref=e106]: 🚀
+            - heading "Get Your Site ASAP" [level=3] [ref=e107]
+            - paragraph [ref=e108]: We build your professional site based on your design and deliver it ready to launch
+        - generic [ref=e110]:
+          - generic [ref=e112]: 💡
+          - generic [ref=e113]:
+            - heading "What does \"Build Your Flow\" mean?" [level=3] [ref=e114]
+            - paragraph [ref=e115]: "In the builder, you don't write code - you decide the structure of your website:"
+            - generic [ref=e116]:
+              - generic [ref=e117]:
+                - generic [ref=e118]: 📍
+                - generic [ref=e119]:
+                  - strong [ref=e120]: "Reorder sections:"
+                  - paragraph [ref=e121]: Want pricing after hero? Or FAQ at the end? You decide!
+              - generic [ref=e122]:
+                - generic [ref=e123]: ➕
+                - generic [ref=e124]:
+                  - strong [ref=e125]: "Add/Remove:"
+                  - paragraph [ref=e126]: Need testimonials? Gallery? Skills section? Add them!
+              - generic [ref=e127]:
+                - generic [ref=e128]: 🎯
+                - generic [ref=e129]:
+                  - strong [ref=e130]: "Your order:"
+                  - paragraph [ref=e131]: Hero → About → Pricing → FAQ or Hero → Pricing → Gallery → Contact
+              - generic [ref=e132]:
+                - generic [ref=e133]: 🎨
+                - generic [ref=e134]:
+                  - strong [ref=e135]: "We handle:"
+                  - paragraph [ref=e136]: Design, code, optimization - you just decide the flow!
+        - link "Start Building Now" [ref=e138]:
+          - /url: "#templates"
+          - text: Start Building Now
+          - img
+    - generic [ref=e140]:
+      - generic [ref=e141]:
+        - heading "Portfolio" [level=2] [ref=e142]: Portfolio
+        - paragraph [ref=e143]: Every website is custom-designed and adjusted to fit your specific business goals and audience. Let's discuss your project!
+      - generic [ref=e144]:
+        - generic [ref=e146]:
+          - img [ref=e147]
+          - textbox "Search templates by name, description, or tags..." [ref=e150]
+          - button "Smart Search" [ref=e153]:
+            - img [ref=e154]
+        - button "Open categories menu" [ref=e156] [cursor=pointer]:
+          - generic [ref=e161]: all (47)
+        - paragraph [ref=e163]: 47 projects
+        - generic [ref=e164]:
+          - generic [ref=e166]:
+            - img "Minimalist & Clean preview" [ref=e169]
+            - generic [ref=e170]:
+              - generic [ref=e171]:
+                - generic [ref=e172]: Minimalist & Clean
+                - generic [ref=e173]: simple
+              - generic [ref=e174]: Focus on simplicity, whitespace, and clarity. Everything unnecessary is stripped away.
+              - generic [ref=e175]:
+                - generic [ref=e176]: "Best for:"
+                - generic [ref=e177]: Designers
+                - generic [ref=e178]: Developers
+                - generic [ref=e179]: Consultants
+              - link "Customize & Build" [ref=e181]:
+                - /url: /templates/minimalist
+                - img
+                - text: Customize & Build
+          - generic [ref=e183]:
+            - img "Dark Mode Cinematic preview" [ref=e186]
+            - generic [ref=e187]:
+              - generic [ref=e188]:
+                - generic [ref=e189]: Dark Mode Cinematic
+                - generic [ref=e190]: moderate
+              - generic [ref=e191]: Dark or near-black backgrounds with contrasting light text. Cinematic and sophisticated.
+              - generic [ref=e192]:
+                - generic [ref=e193]: "Best for:"
+                - generic [ref=e194]: Photographers
+                - generic [ref=e195]: UI/UX Designers
+                - generic [ref=e196]: Creative Studios
+              - link "Customize & Build" [ref=e198]:
+                - /url: /templates/dark-mode
+                - img
+                - text: Customize & Build
+          - generic [ref=e200]:
+            - img "Bold Typography Hero preview" [ref=e203]
+            - generic [ref=e204]:
+              - generic [ref=e205]:
+                - generic [ref=e206]: Bold Typography Hero
+                - generic [ref=e207]: simple
+              - generic [ref=e208]: Typography is the design itself — big, oversized type as the hero element.
+              - generic [ref=e209]:
+                - generic [ref=e210]: "Best for:"
+                - generic [ref=e211]: Personal Brands
+                - generic [ref=e212]: Creative Freelancers
+              - link "Customize & Build" [ref=e214]:
+                - /url: /templates/bold-typography
+                - img
+                - text: Customize & Build
+          - generic [ref=e216]:
+            - img "Grid & Masonry Layout preview" [ref=e219]
+            - generic [ref=e220]:
+              - generic [ref=e221]:
+                - generic [ref=e222]: Grid & Masonry Layout
+                - generic [ref=e223]: moderate
+              - generic [ref=e224]: Portfolio pieces displayed in visually consistent grid tiles. Perfect for visual content.
+              - generic [ref=e225]:
+                - generic [ref=e226]: "Best for:"
+                - generic [ref=e227]: Photographers
+                - generic [ref=e228]: Artists
+                - generic [ref=e229]: Agencies
+              - link "Customize & Build" [ref=e231]:
+                - /url: /templates/grid-masonry
+                - img
+                - text: Customize & Build
+          - generic [ref=e233]:
+            - img "Full-Screen Immersive preview" [ref=e236]
+            - generic [ref=e237]:
+              - generic [ref=e238]:
+                - generic [ref=e239]: Full-Screen Immersive
+                - generic [ref=e240]: complex
+              - generic [ref=e241]: Hero image or video takes entire viewport. Minimal text, storytelling through visuals.
+              - generic [ref=e242]:
+                - generic [ref=e243]: "Best for:"
+                - generic [ref=e244]: Videographers
+                - generic [ref=e245]: Photographers
+                - generic [ref=e246]: Designers
+              - link "Customize & Build" [ref=e248]:
+                - /url: /templates/fullscreen-immersive
+                - img
+                - text: Customize & Build
+          - generic [ref=e250]:
+            - img "Split-Screen Layout preview" [ref=e253]
+            - generic [ref=e254]:
+              - generic [ref=e255]:
+                - generic [ref=e256]: Split-Screen Layout
+                - generic [ref=e257]: moderate
+              - generic [ref=e258]: Screen divided vertically — one half for imagery, one for text content.
+              - generic [ref=e259]:
+                - generic [ref=e260]: "Best for:"
+                - generic [ref=e261]: Agencies
+                - generic [ref=e262]: Designers
+              - link "Customize & Build" [ref=e264]:
+                - /url: /templates/split-screen
+                - img
+                - text: Customize & Build
+          - generic [ref=e266]:
+            - img "Illustration Focus preview" [ref=e269]
+            - generic [ref=e270]:
+              - generic [ref=e271]:
+                - generic [ref=e272]: Illustration Focus
+                - generic [ref=e273]: complex
+              - generic [ref=e274]: Heavy use of hand-drawn, vector, or 3D illustrations with playful animations.
+              - generic [ref=e275]:
+                - generic [ref=e276]: "Best for:"
+                - generic [ref=e277]: Illustrators
+                - generic [ref=e278]: Animators
+                - generic [ref=e279]: Creative Agencies
+              - link "Customize & Build" [ref=e281]:
+                - /url: /templates/illustration-focus
+                - img
+                - text: Customize & Build
+          - generic [ref=e283]:
+            - img "Single-Page Scroll preview" [ref=e286]
+            - generic [ref=e287]:
+              - generic [ref=e288]:
+                - generic [ref=e289]: Single-Page Scroll
+                - generic [ref=e290]: simple
+              - generic [ref=e291]: All content on one long page with smooth-scrolling navigation anchors.
+              - generic [ref=e292]:
+                - generic [ref=e293]: "Best for:"
+                - generic [ref=e294]: Freelancers
+                - generic [ref=e295]: Personal Sites
+                - generic [ref=e296]: Landing Pages
+              - link "Customize & Build" [ref=e298]:
+                - /url: /templates/single-page
+                - img
+                - text: Customize & Build
+          - generic [ref=e300]:
+            - img "Text-Heavy SEO preview" [ref=e303]
+            - generic [ref=e304]:
+              - generic [ref=e305]:
+                - generic [ref=e306]: Text-Heavy SEO
+                - generic [ref=e307]: simple
+              - generic [ref=e308]: Typography-driven layout with no images. Perfect for bloggers and writers.
+              - generic [ref=e309]:
+                - generic [ref=e310]: "Best for:"
+                - generic [ref=e311]: Writers
+                - generic [ref=e312]: Bloggers
+                - generic [ref=e313]: Journalists
+              - link "Customize & Build" [ref=e315]:
+                - /url: /templates/text-heavy
+                - img
+                - text: Customize & Build
+          - generic [ref=e317]:
+            - img "Card-Based Modular preview" [ref=e320]
+            - generic [ref=e321]:
+              - generic [ref=e322]:
+                - generic [ref=e323]: Card-Based Modular
+                - generic [ref=e324]: simple
+              - generic [ref=e325]: Modular grid cards that are easy to rearrange and customize.
+              - generic [ref=e326]:
+                - generic [ref=e327]: "Best for:"
+                - generic [ref=e328]: Agencies
+                - generic [ref=e329]: Product Designers
+                - generic [ref=e330]: Developers
+              - link "Customize & Build" [ref=e332]:
+                - /url: /templates/card-modular
+                - img
+                - text: Customize & Build
+          - generic [ref=e334]:
+            - img "Kinetic Typography Motion preview" [ref=e337]
+            - generic [ref=e338]:
+              - generic [ref=e339]:
+                - generic [ref=e340]: Kinetic Typography Motion
+                - generic [ref=e341]: complex
+              - generic [ref=e342]: Text that morphs, scales, and animates creating dynamic visual interest.
+              - generic [ref=e343]:
+                - generic [ref=e344]: "Best for:"
+                - generic [ref=e345]: Motion Designers
+                - generic [ref=e346]: Creative Directors
+                - generic [ref=e347]: Digital Artists
+              - link "Customize & Build" [ref=e349]:
+                - /url: /templates/kinetic-typography
+                - img
+                - text: Customize & Build
+          - generic [ref=e351]:
+            - img "Bento Grid Modular preview" [ref=e354]
+            - generic [ref=e355]:
+              - generic [ref=e356]:
+                - generic [ref=e357]: Bento Grid Modular
+                - generic [ref=e358]: moderate
+              - generic [ref=e359]: Japanese bento-box inspired asymmetric grid layout with mixed-size blocks.
+              - generic [ref=e360]:
+                - generic [ref=e361]: "Best for:"
+                - generic [ref=e362]: Product Designers
+                - generic [ref=e363]: Agencies
+                - generic [ref=e364]: Startups
+              - link "Customize & Build" [ref=e366]:
+                - /url: /templates/bento-grid
+                - img
+                - text: Customize & Build
+          - generic [ref=e368]:
+            - img "3D Immersive WebGL preview" [ref=e371]
+            - generic [ref=e372]:
+              - generic [ref=e373]:
+                - generic [ref=e374]: 3D Immersive WebGL
+                - generic [ref=e375]: complex
+              - generic [ref=e376]: Interactive 3D scene with Three.js, particles, and scroll-linked animations.
+              - generic [ref=e377]:
+                - generic [ref=e378]: "Best for:"
+                - generic [ref=e379]: 3D Artists
+                - generic [ref=e380]: Creative Technologists
+                - generic [ref=e381]: Game Developers
+              - link "Customize & Build" [ref=e383]:
+                - /url: /templates/3d-immersive
+                - img
+                - text: Customize & Build
+          - generic [ref=e385]:
+            - img "Neo-Brutalist Chaos preview" [ref=e388]
+            - generic [ref=e389]:
+              - generic [ref=e390]:
+                - generic [ref=e391]: Neo-Brutalist Chaos
+                - generic [ref=e392]: moderate
+              - generic [ref=e393]: Raw, confrontational design with heavy borders, stark colors, and intentional chaos.
+              - generic [ref=e394]:
+                - generic [ref=e395]: "Best for:"
+                - generic [ref=e396]: Agencies
+                - generic [ref=e397]: Art Directors
+                - generic [ref=e398]: Rebellious Brands
+              - link "Customize & Build" [ref=e400]:
+                - /url: /templates/neo-brutalist
+                - img
+                - text: Customize & Build
+          - generic [ref=e402]:
+            - img "Organic Liquid Morphing preview" [ref=e405]
+            - generic [ref=e406]:
+              - generic [ref=e407]:
+                - generic [ref=e408]: Organic Liquid Morphing
+                - generic [ref=e409]: complex
+              - generic [ref=e410]: Fluid blob shapes with morphing animations and soft, nature-inspired gradients.
+              - generic [ref=e411]:
+                - generic [ref=e412]: "Best for:"
+                - generic [ref=e413]: Wellness Brands
+                - generic [ref=e414]: Sustainable Businesses
+                - generic [ref=e415]: Lifestyle Coaches
+              - link "Customize & Build" [ref=e417]:
+                - /url: /templates/organic-liquid
+                - img
+                - text: Customize & Build
+          - generic [ref=e419]:
+            - img "Data Visualization Dashboard preview" [ref=e422]
+            - generic [ref=e423]:
+              - generic [ref=e424]:
+                - generic [ref=e425]: Data Visualization Dashboard
+                - generic [ref=e426]: complex
+              - generic [ref=e427]: Interactive dashboard with charts, graphs, and real-time metrics visualization.
+              - generic [ref=e428]:
+                - generic [ref=e429]: "Best for:"
+                - generic [ref=e430]: Data Analysts
+                - generic [ref=e431]: Business Intelligence
+                - generic [ref=e432]: Consultants
+              - link "Customize & Build" [ref=e434]:
+                - /url: /templates/data-dashboard
+                - img
+                - text: Customize & Build
+          - generic [ref=e436]:
+            - img "Y2K Retro Nostalgia preview" [ref=e439]
+            - generic [ref=e440]:
+              - generic [ref=e441]:
+                - generic [ref=e442]: Y2K Retro Nostalgia
+                - generic [ref=e443]: moderate
+              - generic [ref=e444]: Early 2000s aesthetic with bright colors, chunky typography, and playful elements.
+              - generic [ref=e445]:
+                - generic [ref=e446]: "Best for:"
+                - generic [ref=e447]: Digital Artists
+                - generic [ref=e448]: Content Creators
+                - generic [ref=e449]: Youth Brands
+              - link "Customize & Build" [ref=e451]:
+                - /url: /templates/y2k-retro
+                - img
+                - text: Customize & Build
+          - generic [ref=e453]:
+            - img "AR/Spatial Computing preview" [ref=e456]
+            - generic [ref=e457]:
+              - generic [ref=e458]:
+                - generic [ref=e459]: AR/Spatial Computing
+                - generic [ref=e460]: complex
+              - generic [ref=e461]: Futuristic spatial computing interface with layered UI and gesture-inspired interactions.
+              - generic [ref=e462]:
+                - generic [ref=e463]: "Best for:"
+                - generic [ref=e464]: AR/VR Developers
+                - generic [ref=e465]: Future Tech Companies
+                - generic [ref=e466]: Innovation Labs
+              - link "Customize & Build" [ref=e468]:
+                - /url: /templates/ar-spatial
+                - img
+                - text: Customize & Build
+          - generic [ref=e470]:
+            - img "Collage Maximalist preview" [ref=e473]
+            - generic [ref=e474]:
+              - generic [ref=e475]:
+                - generic [ref=e476]: Collage Maximalist
+                - generic [ref=e477]: moderate
+              - generic [ref=e478]: Scrapbook aesthetic with layered elements, mixed media, and intentional chaos.
+              - generic [ref=e479]:
+                - generic [ref=e480]: "Best for:"
+                - generic [ref=e481]: Artists
+                - generic [ref=e482]: Mixed Media Designers
+                - generic [ref=e483]: Creative Studios
+              - link "Customize & Build" [ref=e485]:
+                - /url: /templates/collage-maximalist
+                - img
+                - text: Customize & Build
+          - generic [ref=e487]:
+            - img "SaaS Product Landing Page preview" [ref=e490]
+            - generic [ref=e491]:
+              - generic [ref=e492]:
+                - generic [ref=e493]: SaaS Product Landing Page
+                - generic [ref=e494]: moderate
+              - generic [ref=e495]: Modern SaaS product landing page with features, pricing tiers, testimonials, and conversion optimization.
+              - generic [ref=e496]:
+                - generic [ref=e497]: "Best for:"
+                - generic [ref=e498]: SaaS Products
+                - generic [ref=e499]: Web Apps
+                - generic [ref=e500]: Tech Startups
+              - link "Customize & Build" [ref=e502]:
+                - /url: /templates/product-saas
+                - img
+                - text: Customize & Build
+          - generic [ref=e504]:
+            - img "Course/Educational Landing Page preview" [ref=e507]
+            - generic [ref=e508]:
+              - generic [ref=e509]:
+                - generic [ref=e510]: Course/Educational Landing Page
+                - generic [ref=e511]: moderate
+              - generic [ref=e512]: Educational course landing page with instructor credibility, curriculum, before/after transformations.
+              - generic [ref=e513]:
+                - generic [ref=e514]: "Best for:"
+                - generic [ref=e515]: Course Creators
+                - generic [ref=e516]: Educators
+                - generic [ref=e517]: Online Schools
+              - link "Customize & Build" [ref=e519]:
+                - /url: /templates/product-course
+                - img
+                - text: Customize & Build
+          - generic [ref=e521]:
+            - img "Tech/Gaming Product preview" [ref=e524]
+            - generic [ref=e525]:
+              - generic [ref=e526]:
+                - generic [ref=e527]: Tech/Gaming Product
+                - generic [ref=e528]: moderate
+              - generic [ref=e529]: Dark tech/gaming product showcase with video hero, specs comparison table, and bento feature grid.
+              - generic [ref=e530]:
+                - generic [ref=e531]: "Best for:"
+                - generic [ref=e532]: Gaming Hardware
+                - generic [ref=e533]: Tech Products
+                - generic [ref=e534]: Electronics Brands
+              - link "Customize & Build" [ref=e536]:
+                - /url: /templates/product-tech
+                - img
+                - text: Customize & Build
+          - generic [ref=e538]:
+            - img "Physical Product Showcase preview" [ref=e541]
+            - generic [ref=e542]:
+              - generic [ref=e543]:
+                - generic [ref=e544]: Physical Product Showcase
+                - generic [ref=e545]: moderate
+              - generic [ref=e546]: Minimalist product showcase with color selector, 360° views, technical specs, and comparison table.
+              - generic [ref=e547]:
+                - generic [ref=e548]: "Best for:"
+                - generic [ref=e549]: E-commerce
+                - generic [ref=e550]: Product Designers
+                - generic [ref=e551]: Brands
+              - link "Customize & Build" [ref=e553]:
+                - /url: /templates/product-physical
+                - img
+                - text: Customize & Build
+          - generic [ref=e555]:
+            - img "Premium/High-Ticket Service preview" [ref=e558]
+            - generic [ref=e559]:
+              - generic [ref=e560]:
+                - generic [ref=e561]: Premium/High-Ticket Service
+                - generic [ref=e562]: complex
+              - generic [ref=e563]: Luxury high-ticket service page with exclusive positioning, case studies, and application process.
+              - generic [ref=e564]:
+                - generic [ref=e565]: "Best for:"
+                - generic [ref=e566]: Consulting
+                - generic [ref=e567]: Coaching
+                - generic [ref=e568]: Premium Services
+              - link "Customize & Build" [ref=e570]:
+                - /url: /templates/product-premium
+                - img
+                - text: Customize & Build
+          - generic [ref=e572]:
+            - img "Voice-First Conversational preview" [ref=e575]
+            - generic [ref=e576]:
+              - generic [ref=e577]:
+                - generic [ref=e578]: Voice-First Conversational
+                - generic [ref=e579]: complex
+              - generic [ref=e580]: Voice-activated interface with conversational UI and speech interaction patterns.
+              - generic [ref=e581]:
+                - generic [ref=e582]: "Best for:"
+                - generic [ref=e583]: Voice UX Designers
+                - generic [ref=e584]: Conversational AI
+                - generic [ref=e585]: Voice Assistants
+              - link "Customize & Build" [ref=e587]:
+                - /url: /templates/voice-first
+                - img
+                - text: Customize & Build
+          - generic [ref=e589]:
+            - img "Fashion/Lifestyle Product preview" [ref=e592]
+            - generic [ref=e593]:
+              - generic [ref=e594]:
+                - generic [ref=e595]: Fashion/Lifestyle Product
+                - generic [ref=e596]: moderate
+              - generic [ref=e597]: Sustainable fashion product showcase with lifestyle photography, vertical scrolling gallery, and customer reviews.
+              - generic [ref=e598]:
+                - generic [ref=e599]: "Best for:"
+                - generic [ref=e600]: Fashion Brands
+                - generic [ref=e601]: Sustainable Products
+                - generic [ref=e602]: Lifestyle Brands
+              - link "Customize & Build" [ref=e604]:
+                - /url: /templates/product-fashion
+                - img
+                - text: Customize & Build
+          - generic [ref=e606]:
+            - img "Luxury/Premium Product preview" [ref=e609]
+            - generic [ref=e610]:
+              - generic [ref=e611]:
+                - generic [ref=e612]: Luxury/Premium Product
+                - generic [ref=e613]: complex
+              - generic [ref=e614]: Dark elegance luxury product page with heritage storytelling, craftsmanship details, and premium configurator.
+              - generic [ref=e615]:
+                - generic [ref=e616]: "Best for:"
+                - generic [ref=e617]: Luxury Brands
+                - generic [ref=e618]: High-End Products
+                - generic [ref=e619]: Swiss Watches
+                - generic [ref=e620]: Premium Goods
+              - link "Customize & Build" [ref=e622]:
+                - /url: /templates/product-luxury
+                - img
+                - text: Customize & Build
+          - generic [ref=e624]:
+            - img "Premium Audio Product preview" [ref=e627]
+            - generic [ref=e628]:
+              - generic [ref=e629]:
+                - generic [ref=e630]: Premium Audio Product
+                - generic [ref=e631]: complex
+              - generic [ref=e632]: High-end wireless headphones product page with 3D interactive viewer, spatial audio demo, technical specifications, and comparison table.
+              - generic [ref=e633]:
+                - generic [ref=e634]: "Best for:"
+                - generic [ref=e635]: Audio Brands
+                - generic [ref=e636]: Consumer Electronics
+                - generic [ref=e637]: Premium Tech Products
+              - link "Customize & Build" [ref=e639]:
+                - /url: /templates/product-audio
+                - img
+                - text: Customize & Build
+          - generic [ref=e641]:
+            - img "Smart Vacuum Cleaner preview" [ref=e644]
+            - generic [ref=e645]:
+              - generic [ref=e646]:
+                - generic [ref=e647]: Smart Vacuum Cleaner
+                - generic [ref=e648]: complex
+              - generic [ref=e649]: Cordless vacuum product page with performance metrics, laser dust detection, intelligent cleaning modes, and power comparison chart.
+              - generic [ref=e650]:
+                - generic [ref=e651]: "Best for:"
+                - generic [ref=e652]: Home Appliance Brands
+                - generic [ref=e653]: Smart Home Devices
+                - generic [ref=e654]: Premium Cleaning Tools
+              - link "Customize & Build" [ref=e656]:
+                - /url: /templates/product-vacuum
+                - img
+                - text: Customize & Build
+          - generic [ref=e658]:
+            - img "B2B Professional Service preview" [ref=e661]
+            - generic [ref=e662]:
+              - generic [ref=e663]:
+                - generic [ref=e664]: B2B Professional Service
+                - generic [ref=e665]: complex
+              - generic [ref=e666]: Corporate B2B consulting service with extensive case studies, ROI metrics, and institutional credibility.
+              - generic [ref=e667]:
+                - generic [ref=e668]: "Best for:"
+                - generic [ref=e669]: Consulting Firms
+                - generic [ref=e670]: B2B Services
+                - generic [ref=e671]: Enterprise Solutions
+              - link "Customize & Build" [ref=e673]:
+                - /url: /templates/service-b2b
+                - img
+                - text: Customize & Build
+          - generic [ref=e675]:
+            - img "Community/Membership Platform preview" [ref=e678]
+            - generic [ref=e679]:
+              - generic [ref=e680]:
+                - generic [ref=e681]: Community/Membership Platform
+                - generic [ref=e682]: moderate
+              - generic [ref=e683]: Dual value proposition platform for creators and members with transparent pricing and success metrics.
+              - generic [ref=e684]:
+                - generic [ref=e685]: "Best for:"
+                - generic [ref=e686]: Community Platforms
+                - generic [ref=e687]: Membership Sites
+                - generic [ref=e688]: Creator Tools
+              - link "Customize & Build" [ref=e690]:
+                - /url: /templates/service-community
+                - img
+                - text: Customize & Build
+          - generic [ref=e692]:
+            - img "Done-For-You Service preview" [ref=e695]
+            - generic [ref=e696]:
+              - generic [ref=e697]:
+                - generic [ref=e698]: Done-For-You Service
+                - generic [ref=e699]: moderate
+              - generic [ref=e700]: Unlimited productized service with portfolio showcase, guarantee-heavy messaging, and FAQ section.
+              - generic [ref=e701]:
+                - generic [ref=e702]: "Best for:"
+                - generic [ref=e703]: Design Services
+                - generic [ref=e704]: Productized Services
+                - generic [ref=e705]: Subscription Services
+              - link "Customize & Build" [ref=e707]:
+                - /url: /templates/service-dfyou
+                - img
+                - text: Customize & Build
+          - generic [ref=e709]:
+            - img "Creative Agency Showcase preview" [ref=e712]
+            - generic [ref=e713]:
+              - generic [ref=e714]:
+                - generic [ref=e715]: Creative Agency Showcase
+                - generic [ref=e716]: complex
+              - generic [ref=e717]: Award-winning digital agency landing page with brand strategy, creative design, and performance marketing services.
+              - generic [ref=e718]:
+                - generic [ref=e719]: "Best for:"
+                - generic [ref=e720]: Digital Agencies
+                - generic [ref=e721]: Creative Studios
+                - generic [ref=e722]: Marketing Firms
+              - link "Customize & Build" [ref=e724]:
+                - /url: /templates/service-agency
+                - img
+                - text: Customize & Build
+          - generic [ref=e726]:
+            - img "Enterprise Cloud Platform preview" [ref=e729]
+            - generic [ref=e730]:
+              - generic [ref=e731]:
+                - generic [ref=e732]: Enterprise Cloud Platform
+                - generic [ref=e733]: complex
+              - generic [ref=e734]: Enterprise-grade cloud solutions with security, compliance, and global scale for Fortune 500 companies.
+              - generic [ref=e735]:
+                - generic [ref=e736]: "Best for:"
+                - generic [ref=e737]: SaaS Companies
+                - generic [ref=e738]: Cloud Platforms
+                - generic [ref=e739]: Enterprise Solutions
+              - link "Customize & Build" [ref=e741]:
+                - /url: /templates/service-enterprise
+                - img
+                - text: Customize & Build
+          - generic [ref=e743]:
+            - img "Strategic Consulting Firm preview" [ref=e746]
+            - generic [ref=e747]:
+              - generic [ref=e748]:
+                - generic [ref=e749]: Strategic Consulting Firm
+                - generic [ref=e750]: complex
+              - generic [ref=e751]: Elite management consulting for CEOs and boards with corporate strategy, digital transformation, and performance improvement.
+              - generic [ref=e752]:
+                - generic [ref=e753]: "Best for:"
+                - generic [ref=e754]: Consulting Firms
+                - generic [ref=e755]: Advisory Services
+                - generic [ref=e756]: Strategic Consulting
+              - link "Customize & Build" [ref=e758]:
+                - /url: /templates/service-consulting
+                - img
+                - text: Customize & Build
+          - generic [ref=e760]:
+            - img "Clean Personal Blog preview" [ref=e763]
+            - generic [ref=e764]:
+              - generic [ref=e765]:
+                - generic [ref=e766]: Clean Personal Blog
+                - generic [ref=e767]: moderate
+              - generic [ref=e768]: Minimalist personal blog with clean layout, featured posts, newsletter integration, and social sharing.
+              - generic [ref=e769]:
+                - generic [ref=e770]: "Best for:"
+                - generic [ref=e771]: Writers
+                - generic [ref=e772]: Personal Brands
+                - generic [ref=e773]: Content Creators
+              - link "Customize & Build" [ref=e775]:
+                - /url: /templates/blog-personal
+                - img
+                - text: Customize & Build
+          - generic [ref=e777]:
+            - img "Magazine Editorial Blog preview" [ref=e780]
+            - generic [ref=e781]:
+              - generic [ref=e782]:
+                - generic [ref=e783]: Magazine Editorial Blog
+                - generic [ref=e784]: complex
+              - generic [ref=e785]: Professional magazine-style blog with advanced grid layouts, trending articles, editorial team, and multi-column layouts.
+              - generic [ref=e786]:
+                - generic [ref=e787]: "Best for:"
+                - generic [ref=e788]: Online Magazines
+                - generic [ref=e789]: News Sites
+                - generic [ref=e790]: Editorial Teams
+              - link "Customize & Build" [ref=e792]:
+                - /url: /templates/blog-magazine
+                - img
+                - text: Customize & Build
+          - generic [ref=e794]:
+            - img "Interactive Tech Blog preview" [ref=e797]
+            - generic [ref=e798]:
+              - generic [ref=e799]:
+                - generic [ref=e800]: Interactive Tech Blog
+                - generic [ref=e801]: complex
+              - generic [ref=e802]: Advanced developer blog with dark mode, code snippets, learning series, progress tracking, and interactive features.
+              - generic [ref=e803]:
+                - generic [ref=e804]: "Best for:"
+                - generic [ref=e805]: Tech Blogs
+                - generic [ref=e806]: Developer Communities
+                - generic [ref=e807]: Tutorial Sites
+              - link "Customize & Build" [ref=e809]:
+                - /url: /templates/blog-tech
+                - img
+                - text: Customize & Build
+          - generic [ref=e811]:
+            - img "Archetypes Explorer - Minimalist preview" [ref=e814]
+            - generic [ref=e815]:
+              - generic [ref=e816]:
+                - generic [ref=e817]: Archetypes Explorer - Minimalist
+                - generic [ref=e818]: moderate
+              - generic [ref=e819]: "Modern minimalist conversion-focused page with 5-stage funnel: awareness hero, 7 archetype cards, audience targeting, testimonials, and pricing. Teal & purple gradient design with glassmorphism."
+              - generic [ref=e820]:
+                - generic [ref=e821]: "Best for:"
+                - generic [ref=e822]: Coaches
+                - generic [ref=e823]: Course Creators
+                - generic [ref=e824]: Personal Development
+                - generic [ref=e825]: Creative Professionals
+              - link "Customize & Build" [ref=e827]:
+                - /url: /templates/blog-archetypes-minimal
+                - img
+                - text: Customize & Build
+          - generic [ref=e829]:
+            - img "Archetypes Journal - Editorial preview" [ref=e832]
+            - generic [ref=e833]:
+              - generic [ref=e834]:
+                - generic [ref=e835]: Archetypes Journal - Editorial
+                - generic [ref=e836]: moderate
+              - generic [ref=e837]: "Bold editorial magazine-style conversion page with 5-stage funnel: dramatic hero, 7 numbered archetype cards, qualification section, testimonials, and program pricing. Black/white design with electric blue accents and strong borders."
+              - generic [ref=e838]:
+                - generic [ref=e839]: "Best for:"
+                - generic [ref=e840]: High-Ticket Coaches
+                - generic [ref=e841]: Premium Programs
+                - generic [ref=e842]: Transformation Programs
+                - generic [ref=e843]: Personal Brand
+              - link "Customize & Build" [ref=e845]:
+                - /url: /templates/blog-archetypes-editorial
+                - img
+                - text: Customize & Build
+          - generic [ref=e847]:
+            - img "Portfolio Elegance preview" [ref=e850]
+            - generic [ref=e851]:
+              - generic [ref=e852]:
+                - generic [ref=e853]: Portfolio Elegance
+                - generic [ref=e854]: moderate
+              - generic [ref=e855]: Elegant portfolio template for designers and creatives. Gallery-focused design with warm gold accents, perfect for showcasing interior design work.
+              - generic [ref=e856]:
+                - generic [ref=e857]: "Best for:"
+                - generic [ref=e858]: Interior Designers
+                - generic [ref=e859]: Photographers
+                - generic [ref=e860]: Artists
+                - generic [ref=e861]: Creative Portfolios
+              - link "Customize & Build" [ref=e863]:
+                - /url: /templates/lin-portfolio-elegance
+                - img
+                - text: Customize & Build
+          - generic [ref=e865]:
+            - img "Professional Authority preview" [ref=e868]
+            - generic [ref=e869]:
+              - generic [ref=e870]:
+                - generic [ref=e871]: Professional Authority
+                - generic [ref=e872]: complex
+              - generic [ref=e873]: Premium template for accounting firms and professional services. Navy and gold color scheme conveys trust and luxury with service showcases and trust signals.
+              - generic [ref=e874]:
+                - generic [ref=e875]: "Best for:"
+                - generic [ref=e876]: Accounting Firms
+                - generic [ref=e877]: Law Firms
+                - generic [ref=e878]: Consulting
+                - generic [ref=e879]: Financial Services
+              - link "Customize & Build" [ref=e881]:
+                - /url: /templates/lin-professional-authority
+                - img
+                - text: Customize & Build
+          - generic [ref=e883]:
+            - img "Tech Pioneer preview" [ref=e886]
+            - generic [ref=e887]:
+              - generic [ref=e888]:
+                - generic [ref=e889]: Tech Pioneer
+                - generic [ref=e890]: complex
+              - generic [ref=e891]: Modern technology company template with electric blue gradients and Hebrew RTL support. Features tech stack display, code blocks, and product showcases.
+              - generic [ref=e892]:
+                - generic [ref=e893]: "Best for:"
+                - generic [ref=e894]: Software Companies
+                - generic [ref=e895]: SaaS Products
+                - generic [ref=e896]: Tech Startups
+                - generic [ref=e897]: Developers
+              - link "Customize & Build" [ref=e899]:
+                - /url: /templates/lin-tech-pioneer
+                - img
+                - text: Customize & Build
+          - generic [ref=e901]:
+            - img "Life & Business Coach preview" [ref=e904]
+            - generic [ref=e905]:
+              - generic [ref=e906]:
+                - generic [ref=e907]: Life & Business Coach
+                - generic [ref=e908]: moderate
+              - generic [ref=e909]: Premium template for life coaches and business coaches. Features hero with CTA, multi-offer showcase (books/courses/coaching), testimonials, lead magnets, and multi-step forms.
+              - generic [ref=e910]:
+                - generic [ref=e911]: "Best for:"
+                - generic [ref=e912]: Life Coaches
+                - generic [ref=e913]: Business Coaches
+                - generic [ref=e914]: Consultants
+                - generic [ref=e915]: Authors
+                - generic [ref=e916]: Speakers
+              - link "Customize & Build" [ref=e918]:
+                - /url: /templates/online-business-coach
+                - img
+                - text: Customize & Build
+          - generic [ref=e920]:
+            - img "Online Course Platform preview" [ref=e923]
+            - generic [ref=e924]:
+              - generic [ref=e925]:
+                - generic [ref=e926]: Online Course Platform
+                - generic [ref=e927]: moderate
+              - generic [ref=e928]: Course creator template with video preview, curriculum showcase, pricing tiers, student testimonials, and enrollment system. Perfect for digital educators.
+              - generic [ref=e929]:
+                - generic [ref=e930]: "Best for:"
+                - generic [ref=e931]: Course Creators
+                - generic [ref=e932]: Educators
+                - generic [ref=e933]: Digital Product Sellers
+                - generic [ref=e934]: Training Platforms
+              - link "Customize & Build" [ref=e936]:
+                - /url: /templates/online-business-course
+                - img
+                - text: Customize & Build
+          - generic [ref=e938]:
+            - img "Digital Agency preview" [ref=e941]
+            - generic [ref=e942]:
+              - generic [ref=e943]:
+                - generic [ref=e944]: Digital Agency
+                - generic [ref=e945]: complex
+              - generic [ref=e946]: Professional B2B agency template with services showcase, case studies, process timeline, team profiles, and client testimonials. Data-driven approach.
+              - generic [ref=e947]:
+                - generic [ref=e948]: "Best for:"
+                - generic [ref=e949]: Digital Agencies
+                - generic [ref=e950]: Marketing Agencies
+                - generic [ref=e951]: Development Studios
+                - generic [ref=e952]: Consulting Firms
+              - link "Customize & Build" [ref=e954]:
+                - /url: /templates/online-business-agency
+                - img
+                - text: Customize & Build
+          - generic [ref=e956]:
+            - img "SaaS Product Platform preview" [ref=e959]
+            - generic [ref=e960]:
+              - generic [ref=e961]:
+                - generic [ref=e962]: SaaS Product Platform
+                - generic [ref=e963]: moderate
+              - generic [ref=e964]: Modern SaaS landing page with AI-powered features showcase, transparent pricing, feature comparison, and free trial CTA. Built for modern product teams.
+              - generic [ref=e965]:
+                - generic [ref=e966]: "Best for:"
+                - generic [ref=e967]: SaaS Companies
+                - generic [ref=e968]: Software Products
+                - generic [ref=e969]: B2B Tools
+                - generic [ref=e970]: Productivity Apps
+              - link "Customize & Build" [ref=e972]:
+                - /url: /templates/online-business-saas
+                - img
+                - text: Customize & Build
+    - generic [ref=e974]:
+      - generic [ref=e975]:
+        - heading "What I Bring to Your Project" [level=2] [ref=e976]
+        - paragraph [ref=e977]: Professional expertise with modern technologies and best practices
+      - generic [ref=e978]:
+        - generic [ref=e979]:
+          - img [ref=e981]
+          - heading "Performance First" [level=3] [ref=e983]
+          - paragraph [ref=e984]: Optimized code with Next.js and modern frameworks for lightning-fast experiences
+        - generic [ref=e985]:
+          - img [ref=e987]
+          - heading "Modern Design" [level=3] [ref=e991]
+          - paragraph [ref=e992]: Clean, professional interfaces following 2024-2025 design trends
+        - generic [ref=e993]:
+          - img [ref=e995]
+          - heading "Production Ready" [level=3] [ref=e998]
+          - paragraph [ref=e999]: TypeScript, Tailwind CSS, and industry-standard tools for reliable solutions
+        - generic [ref=e1000]:
+          - img [ref=e1002]
+          - heading "Fully Responsive" [level=3] [ref=e1007]
+          - paragraph [ref=e1008]: Beautiful experiences on every device - mobile, tablet, and desktop
+        - generic [ref=e1009]:
+          - img [ref=e1011]
+          - heading "SEO Optimized" [level=3] [ref=e1014]
+          - paragraph [ref=e1015]: Built-in search engine optimization and performance best practices
+        - generic [ref=e1016]:
+          - img [ref=e1018]
+          - heading "Custom Solutions" [level=3] [ref=e1020]
+          - paragraph [ref=e1021]: Every website is tailored to your specific needs, industry, and target audience
+    - generic [ref=e1024]:
+      - heading "Let's Work Together" [level=2] [ref=e1025]
+      - paragraph [ref=e1026]: Have a project in mind? I'm always open to discussing new opportunities, creative ideas, or partnership possibilities.
+      - generic [ref=e1027]:
+        - link "Send Email" [ref=e1028]:
+          - /url: mailto:345287biz@gmail.com
+          - img
+          - text: Send Email
+        - button "GitHub (Coming Soon)" [disabled]:
+          - img
+          - text: GitHub (Coming Soon)
+      - generic [ref=e1029]:
+        - button "LinkedIn (Coming Soon)" [disabled] [ref=e1030]:
+          - img [ref=e1031]
+        - button "Twitter (Coming Soon)" [disabled] [ref=e1035]:
+          - img [ref=e1036]
+        - button "GitHub (Coming Soon)" [disabled] [ref=e1038]:
+          - img [ref=e1039]
+    - generic [ref=e1042]:
+      - generic [ref=e1043]:
+        - generic [ref=e1044]:
+          - heading "PortfolioHub" [level=3] [ref=e1045]
+          - paragraph [ref=e1046]: Professional portfolio templates for creators, bloggers, and professionals.
+        - generic [ref=e1047]:
+          - heading "Templates" [level=4] [ref=e1048]
+          - list [ref=e1049]:
+            - listitem [ref=e1050]:
+              - link "All Templates" [ref=e1051]:
+                - /url: "#"
+            - listitem [ref=e1052]:
+              - link "Professional" [ref=e1053]:
+                - /url: "#"
+            - listitem [ref=e1054]:
+              - link "Creative" [ref=e1055]:
+                - /url: "#"
+            - listitem [ref=e1056]:
+              - link "Modern" [ref=e1057]:
+                - /url: "#"
+        - generic [ref=e1058]:
+          - heading "Resources" [level=4] [ref=e1059]
+          - list [ref=e1060]:
+            - listitem [ref=e1061]:
+              - link "Documentation" [ref=e1062]:
+                - /url: "#"
+            - listitem [ref=e1063]:
+              - link "Guides" [ref=e1064]:
+                - /url: "#"
+            - listitem [ref=e1065]:
+              - link "Support" [ref=e1066]:
+                - /url: "#"
+            - listitem [ref=e1067]:
+              - link "FAQ" [ref=e1068]:
+                - /url: "#"
+        - generic [ref=e1069]:
+          - heading "Connect" [level=4] [ref=e1070]
+          - generic [ref=e1071]:
+            - link [ref=e1072]:
+              - /url: "#"
+              - img [ref=e1073]
+            - link [ref=e1075]:
+              - /url: "#"
+              - img [ref=e1076]
+            - link [ref=e1078]:
+              - /url: "#"
+              - img [ref=e1079]
+      - paragraph [ref=e1082]: © 2025 PortfolioHub. All rights reserved.
+    - button "Help Center" [ref=e1083] [cursor=pointer]:
+      - img [ref=e1084]
+    - generic [ref=e1089]:
+      - generic [ref=e1090]:
+        - heading "Welcome to Portfolio Builder!" [level=3] [ref=e1091]
+        - button "Close tour" [ref=e1092] [cursor=pointer]:
+          - img [ref=e1093]
+      - paragraph [ref=e1096]: Create professional portfolio websites in minutes. Let's take a quick tour to show you around!
+      - generic [ref=e1098]:
+        - generic [ref=e1099]: Step 1 of 5
+        - generic [ref=e1100]: 20%
+      - generic [ref=e1103]:
+        - button "Back" [disabled]:
+          - img
+          - text: Back
+        - button "Skip tour" [ref=e1104] [cursor=pointer]
+        - button "Next" [ref=e1105] [cursor=pointer]:
+          - text: Next
+          - img
+  - button "Open Next.js Dev Tools" [ref=e1111] [cursor=pointer]:
+    - img [ref=e1112]
+  - alert [ref=e1117]
+```

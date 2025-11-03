@@ -1,11 +1,23 @@
 "use client";
 
 import { Editor, Frame, Element, useNode, useEditor } from "@craftjs/core";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
+import { Badge } from "@/components/ui/badge";
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger
+} from "@/components/ui/alert-dialog";
 import Link from "next/link";
-import { ArrowLeft, Eye, Trash2, Settings, ImageIcon, Send } from "lucide-react";
+import { ArrowLeft, Eye, Trash2, Settings, ImageIcon, Send, Plus } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 import type { TemplateConfig } from "@/lib/template-registry";
 import { TooltipHint } from "@/components/ui/tooltip-hint";
@@ -13,11 +25,12 @@ import { OnboardingTour, TourStep } from "@/components/onboarding-tour";
 import { SendToTelegramModal } from "@/components/send-to-telegram-modal";
 import { SendToWhatsAppModal } from "@/components/send-to-whatsapp-modal";
 import { useI18n } from "@/lib/i18n-context";
+import { BuilderTutorialAnimation, ShowTutorialButton } from "@/components/builder-tutorial-animation";
 
 // Import touch polyfill for mobile drag & drop support
 import "drag-drop-touch";
 
-// Import Split-Screen editable components
+// Import Split-Screen editable components (LEGACY - kept for backward compatibility)
 import {
   SplitScreenHero,
   SplitScreenStats,
@@ -25,13 +38,22 @@ import {
   SplitScreenContact,
 } from "@/components/builder/split-screen-components";
 
+// Import NEW UNIFIED COMPONENTS
+import {
+  Hero,
+  Stats,
+  Skills,
+} from "@/components/builder/unified";
+
 // ============================================
 // CRAFT.JS USER COMPONENTS
 // ============================================
 
 interface HeroProps {
   name: string;
+  nameRu: string;
   title: string;
+  titleRu: string;
   imageUrl?: string;
   backgroundColor: string;
   gradientFrom: string;
@@ -46,7 +68,9 @@ interface HeroProps {
 
 const HeroComponent = ({
   name,
+  nameRu,
   title,
+  titleRu,
   imageUrl,
   backgroundColor = "#667eea",
   gradientFrom = "#667eea",
@@ -56,6 +80,7 @@ const HeroComponent = ({
   padding = 80,
   fontSize = 48,
   subtitleSize = 24,
+  language = 'en',
 }: HeroProps) => {
   const {
     connectors: { connect, drag },
@@ -83,13 +108,37 @@ const HeroComponent = ({
     >
       {selected && (
         <div className="absolute top-2 right-2 z-20 flex gap-2">
-          <button
-            onClick={() => editorActions.delete(id)}
-            className="px-3 py-1 bg-red-500 text-white rounded hover:bg-red-600 flex items-center gap-1 shadow-lg"
-          >
-            <Trash2 className="w-4 h-4" />
-            Delete
-          </button>
+          <AlertDialog>
+            <AlertDialogTrigger asChild>
+              <button
+                className="px-3 py-1 bg-red-500 text-white rounded hover:bg-red-600 flex items-center gap-1 shadow-lg"
+                aria-label={language === 'ru' ? 'Удалить компонент' : 'Delete component'}
+              >
+                <Trash2 className="w-4 h-4" />
+                {language === 'ru' ? 'Удалить' : 'Delete'}
+              </button>
+            </AlertDialogTrigger>
+            <AlertDialogContent>
+              <AlertDialogHeader>
+                <AlertDialogTitle>
+                  {language === 'ru' ? 'Удалить компонент?' : 'Delete component?'}
+                </AlertDialogTitle>
+                <AlertDialogDescription>
+                  {language === 'ru'
+                    ? 'Это действие нельзя отменить. Компонент будет удален навсегда.'
+                    : 'This action cannot be undone. The component will be permanently deleted.'}
+                </AlertDialogDescription>
+              </AlertDialogHeader>
+              <AlertDialogFooter>
+                <AlertDialogCancel>
+                  {language === 'ru' ? 'Отмена' : 'Cancel'}
+                </AlertDialogCancel>
+                <AlertDialogAction onClick={() => editorActions.delete(id)} className="bg-red-500 hover:bg-red-600">
+                  {language === 'ru' ? 'Удалить' : 'Delete'}
+                </AlertDialogAction>
+              </AlertDialogFooter>
+            </AlertDialogContent>
+          </AlertDialog>
         </div>
       )}
       <div className="relative z-10 max-w-4xl mx-auto">
@@ -100,7 +149,7 @@ const HeroComponent = ({
             fontSize: `${fontSize}px`,
           }}
         >
-          {name}
+          {language === 'ru' ? nameRu : name}
         </h1>
         <p
           style={{
@@ -109,7 +158,7 @@ const HeroComponent = ({
             opacity: 0.9,
           }}
         >
-          {title}
+          {language === 'ru' ? titleRu : title}
         </p>
       </div>
     </div>
@@ -120,7 +169,9 @@ HeroComponent.craft = {
   displayName: "Hero",
   props: {
     name: "John Doe",
+    nameRu: "Джон Доу",
     title: "Full Stack Developer & Designer",
+    titleRu: "Фулстек разработчик и дизайнер",
     imageUrl: "",
     backgroundColor: "#1E293B",
     gradientFrom: "#1E293B",
@@ -190,31 +241,75 @@ function HeroSettings() {
       <div className="space-y-4">
         <h4 className="font-semibold text-sm text-gray-700 uppercase tracking-wide">{t.content}</h4>
         <div>
-          <Label className="text-sm font-medium">{t.name}</Label>
+          <Label htmlFor="hero-name-en" className="text-sm font-medium">
+            {t.name} (EN) <span className="text-red-500">*</span>
+          </Label>
           <input
+            id="hero-name-en"
             type="text"
             value={props.name}
             onChange={(e) => setProp((props: HeroProps) => (props.name = e.target.value))}
             className="w-full mt-1 px-3 py-2 border rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+            required
+            aria-required="true"
+            aria-label={language === 'en' ? 'Name (English)' : 'Имя (Английский)'}
           />
         </div>
         <div>
-          <Label className="text-sm font-medium">{t.title}</Label>
+          <Label htmlFor="hero-name-ru" className="text-sm font-medium">
+            {t.name} (RU) <span className="text-red-500">*</span>
+          </Label>
           <input
+            id="hero-name-ru"
+            type="text"
+            value={props.nameRu}
+            onChange={(e) => setProp((props: HeroProps) => (props.nameRu = e.target.value))}
+            className="w-full mt-1 px-3 py-2 border rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+            required
+            aria-required="true"
+            aria-label={language === 'en' ? 'Name (Russian)' : 'Имя (Русский)'}
+          />
+        </div>
+        <div>
+          <Label htmlFor="hero-title-en" className="text-sm font-medium">
+            {t.title} (EN) <span className="text-red-500">*</span>
+          </Label>
+          <input
+            id="hero-title-en"
             type="text"
             value={props.title}
             onChange={(e) => setProp((props: HeroProps) => (props.title = e.target.value))}
             className="w-full mt-1 px-3 py-2 border rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+            required
+            aria-required="true"
+            aria-label={language === 'en' ? 'Title (English)' : 'Заголовок (Английский)'}
           />
         </div>
         <div>
-          <Label className="text-sm font-medium">{t.bgImage}</Label>
+          <Label htmlFor="hero-title-ru" className="text-sm font-medium">
+            {t.title} (RU) <span className="text-red-500">*</span>
+          </Label>
           <input
+            id="hero-title-ru"
+            type="text"
+            value={props.titleRu}
+            onChange={(e) => setProp((props: HeroProps) => (props.titleRu = e.target.value))}
+            className="w-full mt-1 px-3 py-2 border rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+            required
+            aria-required="true"
+            aria-label={language === 'en' ? 'Title (Russian)' : 'Заголовок (Русский)'}
+          />
+        </div>
+        <div>
+          <Label htmlFor="hero-bg-image" className="text-sm font-medium">{t.bgImage}</Label>
+          <input
+            id="hero-bg-image"
             type="text"
             value={props.imageUrl || ""}
             onChange={(e) => setProp((props: HeroProps) => (props.imageUrl = e.target.value))}
             className="w-full mt-1 px-3 py-2 border rounded-md text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
             placeholder="https://..."
+            aria-label={language === 'en' ? 'Background image URL (optional)' : 'URL фонового изображения (опционально)'}
           />
         </div>
       </div>
@@ -224,70 +319,82 @@ function HeroSettings() {
         <h4 className="font-semibold text-sm text-gray-700 uppercase tracking-wide">{t.colors}</h4>
         <div className="grid grid-cols-2 gap-3">
           <div>
-            <Label className="text-sm font-medium">{t.gradientFrom}</Label>
+            <Label htmlFor="hero-gradient-from" className="text-sm font-medium">{t.gradientFrom}</Label>
             <div className="flex gap-2 mt-1">
               <input
+                id="hero-gradient-from"
                 type="color"
                 value={props.gradientFrom}
                 onChange={(e) => setProp((props: HeroProps) => (props.gradientFrom = e.target.value))}
                 className="w-12 h-10 rounded border cursor-pointer"
+                aria-label={t.gradientFrom}
               />
               <input
                 type="text"
                 value={props.gradientFrom}
                 onChange={(e) => setProp((props: HeroProps) => (props.gradientFrom = e.target.value))}
                 className="flex-1 px-2 py-1 border rounded text-sm"
+                aria-label={`${t.gradientFrom} hex value`}
               />
             </div>
           </div>
           <div>
-            <Label className="text-sm font-medium">{t.gradientTo}</Label>
+            <Label htmlFor="hero-gradient-to" className="text-sm font-medium">{t.gradientTo}</Label>
             <div className="flex gap-2 mt-1">
               <input
+                id="hero-gradient-to"
                 type="color"
                 value={props.gradientTo}
                 onChange={(e) => setProp((props: HeroProps) => (props.gradientTo = e.target.value))}
                 className="w-12 h-10 rounded border cursor-pointer"
+                aria-label={t.gradientTo}
               />
               <input
                 type="text"
                 value={props.gradientTo}
                 onChange={(e) => setProp((props: HeroProps) => (props.gradientTo = e.target.value))}
                 className="flex-1 px-2 py-1 border rounded text-sm"
+                aria-label={`${t.gradientTo} hex value`}
               />
             </div>
           </div>
           <div>
-            <Label className="text-sm font-medium">{t.textColor}</Label>
+            <Label htmlFor="hero-text-color" className="text-sm font-medium">{t.textColor}</Label>
             <div className="flex gap-2 mt-1">
               <input
+                id="hero-text-color"
                 type="color"
                 value={props.textColor}
                 onChange={(e) => setProp((props: HeroProps) => (props.textColor = e.target.value))}
                 className="w-12 h-10 rounded border cursor-pointer"
+                aria-label={t.textColor}
               />
               <input
                 type="text"
                 value={props.textColor}
                 onChange={(e) => setProp((props: HeroProps) => (props.textColor = e.target.value))}
                 className="flex-1 px-2 py-1 border rounded text-sm"
+                aria-label={`${t.textColor} hex value`}
               />
             </div>
           </div>
           <div>
-            <Label className="text-sm font-medium">{t.subtitleColor}</Label>
+            <Label htmlFor="hero-subtitle-color" className="text-sm font-medium">{t.subtitleColor}</Label>
             <div className="flex gap-2 mt-1">
               <input
+                id="hero-subtitle-color"
                 type="color"
                 value={props.subtitleColor}
                 onChange={(e) => setProp((props: HeroProps) => (props.subtitleColor = e.target.value))}
                 className="w-12 h-10 rounded border cursor-pointer"
+                aria-label={t.subtitleColor}
               />
               <input
                 type="text"
                 value={props.subtitleColor}
                 onChange={(e) => setProp((props: HeroProps) => (props.subtitleColor = e.target.value))}
                 className="flex-1 px-2 py-1 border rounded text-sm"
+                aria-label={`${t.subtitleColor} hex value`}
               />
             </div>
           </div>
@@ -298,25 +405,29 @@ function HeroSettings() {
       <div className="space-y-4 pt-4 border-t">
         <h4 className="font-semibold text-sm text-gray-700 uppercase tracking-wide">{t.typography}</h4>
         <div>
-          <Label className="text-sm font-medium">{t.nameFontSize}: {props.fontSize}px</Label>
+          <Label htmlFor="hero-font-size" className="text-sm font-medium">{t.nameFontSize}: {props.fontSize}px</Label>
           <input
+            id="hero-font-size"
             type="range"
             min="24"
             max="96"
             value={props.fontSize}
             onChange={(e) => setProp((props: HeroProps) => (props.fontSize = parseInt(e.target.value)))}
             className="w-full mt-2"
+            aria-label={`${t.nameFontSize}: ${props.fontSize} pixels`}
           />
         </div>
         <div>
-          <Label className="text-sm font-medium">{t.subtitleFontSize}: {props.subtitleSize}px</Label>
+          <Label htmlFor="hero-subtitle-size" className="text-sm font-medium">{t.subtitleFontSize}: {props.subtitleSize}px</Label>
           <input
+            id="hero-subtitle-size"
             type="range"
             min="14"
             max="48"
             value={props.subtitleSize}
             onChange={(e) => setProp((props: HeroProps) => (props.subtitleSize = parseInt(e.target.value)))}
             className="w-full mt-2"
+            aria-label={`${t.subtitleFontSize}: ${props.subtitleSize} pixels`}
           />
         </div>
       </div>
@@ -325,14 +436,16 @@ function HeroSettings() {
       <div className="space-y-4 pt-4 border-t">
         <h4 className="font-semibold text-sm text-gray-700 uppercase tracking-wide">{t.layout}</h4>
         <div>
-          <Label className="text-sm font-medium">{t.padding}: {props.padding}px</Label>
+          <Label htmlFor="hero-padding" className="text-sm font-medium">{t.padding}: {props.padding}px</Label>
           <input
+            id="hero-padding"
             type="range"
             min="20"
             max="200"
             value={props.padding}
             onChange={(e) => setProp((props: HeroProps) => (props.padding = parseInt(e.target.value)))}
             className="w-full mt-2"
+            aria-label={`${t.padding}: ${props.padding} pixels`}
           />
         </div>
       </div>
@@ -341,12 +454,15 @@ function HeroSettings() {
 }
 
 interface AboutProps {
+  title: string;
+  titleRu: string;
   text: string;
+  textRu: string;
   imageUrl?: string;
   language?: 'en' | 'ru';
 }
 
-const AboutComponent = ({ text, imageUrl }: AboutProps) => {
+const AboutComponent = ({ title, titleRu, text, textRu, imageUrl, language = 'en' }: AboutProps) => {
   const {
     connectors: { connect, drag },
     selected,
@@ -360,17 +476,41 @@ const AboutComponent = ({ text, imageUrl }: AboutProps) => {
   return (
     <div
       ref={(ref) => ref && connect(drag(ref))}
-      className={`relative p-12 border-2 ${selected ? 'border-blue-500' : 'border-transparent'}`}
+      className={`relative p-6 md:p-12 lg:p-16 border-2 ${selected ? 'border-blue-500' : 'border-transparent'}`}
     >
       {selected && (
         <div className="absolute top-2 right-2 z-20 flex gap-2">
-          <button
-            onClick={() => editorActions.delete(id)}
-            className="px-3 py-1 bg-red-500 text-white rounded hover:bg-red-600 flex items-center gap-1"
-          >
-            <Trash2 className="w-4 h-4" />
-            Delete
-          </button>
+          <AlertDialog>
+            <AlertDialogTrigger asChild>
+              <button
+                className="px-3 py-1 bg-red-500 text-white rounded hover:bg-red-600 flex items-center gap-1"
+                aria-label={language === 'ru' ? 'Удалить компонент' : 'Delete component'}
+              >
+                <Trash2 className="w-4 h-4" />
+                {language === 'ru' ? 'Удалить' : 'Delete'}
+              </button>
+            </AlertDialogTrigger>
+            <AlertDialogContent>
+              <AlertDialogHeader>
+                <AlertDialogTitle>
+                  {language === 'ru' ? 'Удалить компонент?' : 'Delete component?'}
+                </AlertDialogTitle>
+                <AlertDialogDescription>
+                  {language === 'ru'
+                    ? 'Это действие нельзя отменить. Компонент будет удален навсегда.'
+                    : 'This action cannot be undone. The component will be permanently deleted.'}
+                </AlertDialogDescription>
+              </AlertDialogHeader>
+              <AlertDialogFooter>
+                <AlertDialogCancel>
+                  {language === 'ru' ? 'Отмена' : 'Cancel'}
+                </AlertDialogCancel>
+                <AlertDialogAction onClick={() => editorActions.delete(id)} className="bg-red-500 hover:bg-red-600">
+                  {language === 'ru' ? 'Удалить' : 'Delete'}
+                </AlertDialogAction>
+              </AlertDialogFooter>
+            </AlertDialogContent>
+          </AlertDialog>
         </div>
       )}
       <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8 items-center">
@@ -378,8 +518,8 @@ const AboutComponent = ({ text, imageUrl }: AboutProps) => {
           <img src={imageUrl} alt="About" className="rounded-lg w-full h-64 object-cover" />
         )}
         <div>
-          <h2 className="text-3xl font-bold mb-4">About Me</h2>
-          <p className="text-lg leading-relaxed">{text}</p>
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">{language === 'ru' ? titleRu : title}</h2>
+          <p className="text-lg leading-relaxed">{language === 'ru' ? textRu : text}</p>
         </div>
       </div>
     </div>
@@ -389,9 +529,12 @@ const AboutComponent = ({ text, imageUrl }: AboutProps) => {
 AboutComponent.craft = {
   displayName: "About",
   props: {
+    title: "About Me",
+    titleRu: "Обо мне",
     text: "I'm a passionate developer with 5 years of experience building amazing web applications.",
+    textRu: "Я увлеченный разработчик с 5-летним опытом создания потрясающих веб-приложений.",
     imageUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=600&fit=crop",
-    language: 'en',
+    language: 'en' as 'en' | 'ru',
   },
   related: {
     settings: AboutSettings,
@@ -410,9 +553,11 @@ function AboutSettings() {
 
   const labels = {
     en: {
+      title: 'Title',
       aboutText: 'About Text',
     },
     ru: {
+      title: 'Заголовок',
       aboutText: 'Текст о нас',
     },
   };
@@ -422,10 +567,37 @@ function AboutSettings() {
   return (
     <div className="space-y-4 p-4">
       <div>
-        <Label>{t.aboutText}</Label>
+        <Label>{t.title} (EN)</Label>
+        <input
+          type="text"
+          value={props.title}
+          onChange={(e) => setProp((props: AboutProps) => (props.title = e.target.value))}
+          className="w-full px-3 py-2 border rounded-md"
+        />
+      </div>
+      <div>
+        <Label>{t.title} (RU)</Label>
+        <input
+          type="text"
+          value={props.titleRu}
+          onChange={(e) => setProp((props: AboutProps) => (props.titleRu = e.target.value))}
+          className="w-full px-3 py-2 border rounded-md"
+        />
+      </div>
+      <div>
+        <Label>{t.aboutText} (EN)</Label>
         <textarea
           value={props.text}
           onChange={(e) => setProp((props: AboutProps) => (props.text = e.target.value))}
+          className="w-full px-3 py-2 border rounded-md"
+          rows={4}
+        />
+      </div>
+      <div>
+        <Label>{t.aboutText} (RU)</Label>
+        <textarea
+          value={props.textRu}
+          onChange={(e) => setProp((props: AboutProps) => (props.textRu = e.target.value))}
           className="w-full px-3 py-2 border rounded-md"
           rows={4}
         />
@@ -435,11 +607,13 @@ function AboutSettings() {
 }
 
 interface SkillsProps {
+  title: string;
+  titleRu: string;
   skills: string[];
   language?: 'en' | 'ru';
 }
 
-const SkillsComponent = ({ skills }: SkillsProps) => {
+const SkillsComponent = ({ title, titleRu, skills, language = 'en' }: SkillsProps) => {
   const {
     connectors: { connect, drag },
     selected,
@@ -453,21 +627,45 @@ const SkillsComponent = ({ skills }: SkillsProps) => {
   return (
     <div
       ref={(ref) => ref && connect(drag(ref))}
-      className={`relative p-12 bg-gray-50 border-2 ${selected ? 'border-blue-500' : 'border-transparent'}`}
+      className={`relative p-6 md:p-12 lg:p-16 bg-gray-50 border-2 ${selected ? 'border-blue-500' : 'border-transparent'}`}
     >
       {selected && (
         <div className="absolute top-2 right-2 z-20 flex gap-2">
-          <button
-            onClick={() => editorActions.delete(id)}
-            className="px-3 py-1 bg-red-500 text-white rounded hover:bg-red-600 flex items-center gap-1"
-          >
-            <Trash2 className="w-4 h-4" />
-            Delete
-          </button>
+          <AlertDialog>
+            <AlertDialogTrigger asChild>
+              <button
+                className="px-3 py-1 bg-red-500 text-white rounded hover:bg-red-600 flex items-center gap-1"
+                aria-label={language === 'ru' ? 'Удалить компонент' : 'Delete component'}
+              >
+                <Trash2 className="w-4 h-4" />
+                {language === 'ru' ? 'Удалить' : 'Delete'}
+              </button>
+            </AlertDialogTrigger>
+            <AlertDialogContent>
+              <AlertDialogHeader>
+                <AlertDialogTitle>
+                  {language === 'ru' ? 'Удалить компонент?' : 'Delete component?'}
+                </AlertDialogTitle>
+                <AlertDialogDescription>
+                  {language === 'ru'
+                    ? 'Это действие нельзя отменить. Компонент будет удален навсегда.'
+                    : 'This action cannot be undone. The component will be permanently deleted.'}
+                </AlertDialogDescription>
+              </AlertDialogHeader>
+              <AlertDialogFooter>
+                <AlertDialogCancel>
+                  {language === 'ru' ? 'Отмена' : 'Cancel'}
+                </AlertDialogCancel>
+                <AlertDialogAction onClick={() => editorActions.delete(id)} className="bg-red-500 hover:bg-red-600">
+                  {language === 'ru' ? 'Удалить' : 'Delete'}
+                </AlertDialogAction>
+              </AlertDialogFooter>
+            </AlertDialogContent>
+          </AlertDialog>
         </div>
       )}
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl font-bold mb-8 text-center">Skills & Expertise</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-8 text-center">{language === 'ru' ? titleRu : title}</h2>
         <div className="flex flex-wrap gap-3 justify-center">
           {skills.map((skill, index) => (
             <span
@@ -486,17 +684,21 @@ const SkillsComponent = ({ skills }: SkillsProps) => {
 SkillsComponent.craft = {
   displayName: "Skills",
   props: {
+    title: "Skills & Expertise",
+    titleRu: "Навыки и Экспертиза",
     skills: ["React", "TypeScript", "Node.js", "Python", "UI/UX Design", "GraphQL", "AWS", "Docker"],
-    language: 'en',
+    language: 'en' as 'en' | 'ru',
   },
 };
 
 interface ProjectsProps {
-  projects: Array<{ title: string; description: string; imageUrl?: string }>;
+  title: string;
+  titleRu: string;
+  projects: Array<{ title: string; titleRu: string; description: string; descriptionRu: string; imageUrl?: string }>;
   language?: 'en' | 'ru';
 }
 
-const ProjectsComponent = ({ projects }: ProjectsProps) => {
+const ProjectsComponent = ({ title, titleRu, projects, language = 'en' }: ProjectsProps) => {
   const {
     connectors: { connect, drag },
     selected,
@@ -510,33 +712,57 @@ const ProjectsComponent = ({ projects }: ProjectsProps) => {
   return (
     <div
       ref={(ref) => ref && connect(drag(ref))}
-      className={`relative p-12 border-2 ${selected ? 'border-blue-500' : 'border-transparent'}`}
+      className={`relative p-6 md:p-12 lg:p-16 border-2 ${selected ? 'border-blue-500' : 'border-transparent'}`}
     >
       {selected && (
         <div className="absolute top-2 right-2 z-20 flex gap-2">
-          <button
-            onClick={() => editorActions.delete(id)}
-            className="px-3 py-1 bg-red-500 text-white rounded hover:bg-red-600 flex items-center gap-1"
-          >
-            <Trash2 className="w-4 h-4" />
-            Delete
-          </button>
+          <AlertDialog>
+            <AlertDialogTrigger asChild>
+              <button
+                className="px-3 py-1 bg-red-500 text-white rounded hover:bg-red-600 flex items-center gap-1"
+                aria-label={language === 'ru' ? 'Удалить компонент' : 'Delete component'}
+              >
+                <Trash2 className="w-4 h-4" />
+                {language === 'ru' ? 'Удалить' : 'Delete'}
+              </button>
+            </AlertDialogTrigger>
+            <AlertDialogContent>
+              <AlertDialogHeader>
+                <AlertDialogTitle>
+                  {language === 'ru' ? 'Удалить компонент?' : 'Delete component?'}
+                </AlertDialogTitle>
+                <AlertDialogDescription>
+                  {language === 'ru'
+                    ? 'Это действие нельзя отменить. Компонент будет удален навсегда.'
+                    : 'This action cannot be undone. The component will be permanently deleted.'}
+                </AlertDialogDescription>
+              </AlertDialogHeader>
+              <AlertDialogFooter>
+                <AlertDialogCancel>
+                  {language === 'ru' ? 'Отмена' : 'Cancel'}
+                </AlertDialogCancel>
+                <AlertDialogAction onClick={() => editorActions.delete(id)} className="bg-red-500 hover:bg-red-600">
+                  {language === 'ru' ? 'Удалить' : 'Delete'}
+                </AlertDialogAction>
+              </AlertDialogFooter>
+            </AlertDialogContent>
+          </AlertDialog>
         </div>
       )}
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl font-bold mb-8 text-center">Projects</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-8 text-center">{language === 'ru' ? titleRu : title}</h2>
         <div className="grid md:grid-cols-2 gap-6">
           {projects.map((project, index) => (
             <div key={index} className="bg-white p-6 rounded-lg shadow-md">
               {project.imageUrl && (
                 <img
                   src={project.imageUrl}
-                  alt={project.title}
+                  alt={language === 'ru' ? project.titleRu : project.title}
                   className="w-full h-48 object-cover rounded-lg mb-4"
                 />
               )}
-              <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-              <p className="text-gray-600">{project.description}</p>
+              <h3 className="text-xl font-bold mb-2">{language === 'ru' ? project.titleRu : project.title}</h3>
+              <p className="text-gray-600">{language === 'ru' ? project.descriptionRu : project.description}</p>
             </div>
           ))}
         </div>
@@ -548,30 +774,57 @@ const ProjectsComponent = ({ projects }: ProjectsProps) => {
 ProjectsComponent.craft = {
   displayName: "Projects",
   props: {
+    title: "Projects",
+    titleRu: "Проекты",
     projects: [
       {
         title: "E-Commerce Platform",
+        titleRu: "Платформа электронной коммерции",
         description: "Built a full-stack e-commerce platform with React and Node.js",
+        descriptionRu: "Создана полнофункциональная платформа электронной коммерции на React и Node.js",
         imageUrl: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
       },
       {
         title: "Mobile App",
+        titleRu: "Мобильное приложение",
         description: "Developed a cross-platform mobile app using React Native",
+        descriptionRu: "Разработано кроссплатформенное мобильное приложение на React Native",
         imageUrl: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=600&fit=crop",
       },
     ],
-    language: 'en',
+    language: 'en' as 'en' | 'ru',
   },
 };
 
 interface ContactProps {
+  title: string;
+  titleRu: string;
+  emailLabel: string;
+  emailLabelRu: string;
+  phoneLabel: string;
+  phoneLabelRu: string;
+  locationLabel: string;
+  locationLabelRu: string;
   email: string;
   phone: string;
   location: string;
   language?: 'en' | 'ru';
 }
 
-const ContactComponent = ({ email, phone, location }: ContactProps) => {
+const ContactComponent = ({
+  title,
+  titleRu,
+  emailLabel,
+  emailLabelRu,
+  phoneLabel,
+  phoneLabelRu,
+  locationLabel,
+  locationLabelRu,
+  email,
+  phone,
+  location,
+  language = 'en'
+}: ContactProps) => {
   const {
     connectors: { connect, drag },
     selected,
@@ -585,32 +838,56 @@ const ContactComponent = ({ email, phone, location }: ContactProps) => {
   return (
     <div
       ref={(ref) => ref && connect(drag(ref))}
-      className={`relative p-12 bg-gray-50 border-2 ${selected ? 'border-blue-500' : 'border-transparent'}`}
+      className={`relative p-6 md:p-12 lg:p-16 bg-gray-50 border-2 ${selected ? 'border-blue-500' : 'border-transparent'}`}
     >
       {selected && (
         <div className="absolute top-2 right-2 z-20 flex gap-2">
-          <button
-            onClick={() => editorActions.delete(id)}
-            className="px-3 py-1 bg-red-500 text-white rounded hover:bg-red-600 flex items-center gap-1"
-          >
-            <Trash2 className="w-4 h-4" />
-            Delete
-          </button>
+          <AlertDialog>
+            <AlertDialogTrigger asChild>
+              <button
+                className="px-3 py-1 bg-red-500 text-white rounded hover:bg-red-600 flex items-center gap-1"
+                aria-label={language === 'ru' ? 'Удалить компонент' : 'Delete component'}
+              >
+                <Trash2 className="w-4 h-4" />
+                {language === 'ru' ? 'Удалить' : 'Delete'}
+              </button>
+            </AlertDialogTrigger>
+            <AlertDialogContent>
+              <AlertDialogHeader>
+                <AlertDialogTitle>
+                  {language === 'ru' ? 'Удалить компонент?' : 'Delete component?'}
+                </AlertDialogTitle>
+                <AlertDialogDescription>
+                  {language === 'ru'
+                    ? 'Это действие нельзя отменить. Компонент будет удален навсегда.'
+                    : 'This action cannot be undone. The component will be permanently deleted.'}
+                </AlertDialogDescription>
+              </AlertDialogHeader>
+              <AlertDialogFooter>
+                <AlertDialogCancel>
+                  {language === 'ru' ? 'Отмена' : 'Cancel'}
+                </AlertDialogCancel>
+                <AlertDialogAction onClick={() => editorActions.delete(id)} className="bg-red-500 hover:bg-red-600">
+                  {language === 'ru' ? 'Удалить' : 'Delete'}
+                </AlertDialogAction>
+              </AlertDialogFooter>
+            </AlertDialogContent>
+          </AlertDialog>
         </div>
       )}
       <div className="max-w-4xl mx-auto text-center">
-        <h2 className="text-3xl font-bold mb-8">Get In Touch</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-8">{language === 'ru' ? titleRu : title}</h2>
         <div className="space-y-4">
           <div>
-            <p className="text-gray-600 mb-1">Email</p>
+            <p className="text-gray-600 mb-1">{language === 'ru' ? emailLabelRu : emailLabel}</p>
             <p className="text-lg font-medium">{email}</p>
           </div>
           <div>
-            <p className="text-gray-600 mb-1">Phone</p>
+            <p className="text-gray-600 mb-1">{language === 'ru' ? phoneLabelRu : phoneLabel}</p>
             <p className="text-lg font-medium">{phone}</p>
           </div>
           <div>
-            <p className="text-gray-600 mb-1">Location</p>
+            <p className="text-gray-600 mb-1">{language === 'ru' ? locationLabelRu : locationLabel}</p>
             <p className="text-lg font-medium">{location}</p>
           </div>
         </div>
@@ -622,19 +899,29 @@ const ContactComponent = ({ email, phone, location }: ContactProps) => {
 ContactComponent.craft = {
   displayName: "Contact",
   props: {
+    title: "Get In Touch",
+    titleRu: "Свяжитесь с нами",
+    emailLabel: "Email",
+    emailLabelRu: "Электронная почта",
+    phoneLabel: "Phone",
+    phoneLabelRu: "Телефон",
+    locationLabel: "Location",
+    locationLabelRu: "Местоположение",
     email: "john@example.com",
     phone: "+1 (555) 123-4567",
     location: "San Francisco, CA",
-    language: 'en',
+    language: 'en' as 'en' | 'ru',
   },
 };
 
 interface PricingProps {
-  plans: Array<{ name: string; price: string; features: string[] }>;
+  title: string;
+  titleRu: string;
+  plans: Array<{ name: string; nameRu: string; price: string; priceRu: string; features: string[]; featuresRu: string[] }>;
   language?: 'en' | 'ru';
 }
 
-const PricingComponent = ({ plans }: PricingProps) => {
+const PricingComponent = ({ title, titleRu, plans, language = 'en' }: PricingProps) => {
   const {
     connectors: { connect, drag },
     selected,
@@ -648,28 +935,52 @@ const PricingComponent = ({ plans }: PricingProps) => {
   return (
     <div
       ref={(ref) => ref && connect(drag(ref))}
-      className={`relative p-12 border-2 ${selected ? 'border-blue-500' : 'border-transparent'}`}
+      className={`relative p-6 md:p-12 lg:p-16 border-2 ${selected ? 'border-blue-500' : 'border-transparent'}`}
     >
       {selected && (
         <div className="absolute top-2 right-2 z-20 flex gap-2">
-          <button
-            onClick={() => editorActions.delete(id)}
-            className="px-3 py-1 bg-red-500 text-white rounded hover:bg-red-600 flex items-center gap-1"
-          >
-            <Trash2 className="w-4 h-4" />
-            Delete
-          </button>
+          <AlertDialog>
+            <AlertDialogTrigger asChild>
+              <button
+                className="px-3 py-1 bg-red-500 text-white rounded hover:bg-red-600 flex items-center gap-1"
+                aria-label={language === 'ru' ? 'Удалить компонент' : 'Delete component'}
+              >
+                <Trash2 className="w-4 h-4" />
+                {language === 'ru' ? 'Удалить' : 'Delete'}
+              </button>
+            </AlertDialogTrigger>
+            <AlertDialogContent>
+              <AlertDialogHeader>
+                <AlertDialogTitle>
+                  {language === 'ru' ? 'Удалить компонент?' : 'Delete component?'}
+                </AlertDialogTitle>
+                <AlertDialogDescription>
+                  {language === 'ru'
+                    ? 'Это действие нельзя отменить. Компонент будет удален навсегда.'
+                    : 'This action cannot be undone. The component will be permanently deleted.'}
+                </AlertDialogDescription>
+              </AlertDialogHeader>
+              <AlertDialogFooter>
+                <AlertDialogCancel>
+                  {language === 'ru' ? 'Отмена' : 'Cancel'}
+                </AlertDialogCancel>
+                <AlertDialogAction onClick={() => editorActions.delete(id)} className="bg-red-500 hover:bg-red-600">
+                  {language === 'ru' ? 'Удалить' : 'Delete'}
+                </AlertDialogAction>
+              </AlertDialogFooter>
+            </AlertDialogContent>
+          </AlertDialog>
         </div>
       )}
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl font-bold mb-8 text-center">Pricing Plans</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-8 text-center">{language === 'ru' ? titleRu : title}</h2>
         <div className="grid md:grid-cols-3 gap-6">
           {plans.map((plan, index) => (
             <div key={index} className="bg-white p-6 rounded-lg shadow-md border-2 border-gray-200">
-              <h3 className="text-xl font-bold mb-2">{plan.name}</h3>
-              <p className="text-3xl font-bold text-blue-600 mb-4">{plan.price}</p>
+              <h3 className="text-xl font-bold mb-2">{language === 'ru' ? plan.nameRu : plan.name}</h3>
+              <p className="text-3xl font-bold text-blue-600 mb-4">{language === 'ru' ? plan.priceRu : plan.price}</p>
               <ul className="space-y-2">
-                {plan.features.map((feature, featureIndex) => (
+                {(language === 'ru' ? plan.featuresRu : plan.features).map((feature, featureIndex) => (
                   <li key={featureIndex} className="text-gray-600">
                     • {feature}
                   </li>
@@ -686,34 +997,47 @@ const PricingComponent = ({ plans }: PricingProps) => {
 PricingComponent.craft = {
   displayName: "Pricing",
   props: {
+    title: "Pricing Plans",
+    titleRu: "Тарифные планы",
     plans: [
       {
         name: "Basic",
+        nameRu: "Базовый",
         price: "$99/mo",
+        priceRu: "99$/мес",
         features: ["5 Projects", "10GB Storage", "Basic Support"],
+        featuresRu: ["5 проектов", "10ГБ хранилища", "Базовая поддержка"],
       },
       {
         name: "Pro",
+        nameRu: "Профессиональный",
         price: "$199/mo",
+        priceRu: "199$/мес",
         features: ["Unlimited Projects", "100GB Storage", "Priority Support", "Advanced Analytics"],
+        featuresRu: ["Неограниченные проекты", "100ГБ хранилища", "Приоритетная поддержка", "Расширенная аналитика"],
       },
       {
         name: "Enterprise",
+        nameRu: "Корпоративный",
         price: "$499/mo",
+        priceRu: "499$/мес",
         features: ["Unlimited Everything", "Custom Solutions", "24/7 Support", "Dedicated Manager"],
+        featuresRu: ["Всё без ограничений", "Индивидуальные решения", "Поддержка 24/7", "Персональный менеджер"],
       },
     ],
-    language: 'en',
+    language: 'en' as 'en' | 'ru',
   },
 };
 
 // Testimonials Component
 interface TestimonialsProps {
-  testimonials: Array<{ name: string; role: string; text: string; avatar?: string }>;
+  title: string;
+  titleRu: string;
+  testimonials: Array<{ name: string; nameRu: string; role: string; roleRu: string; text: string; textRu: string; avatar?: string }>;
   language?: 'en' | 'ru';
 }
 
-const TestimonialsComponent = ({ testimonials }: TestimonialsProps) => {
+const TestimonialsComponent = ({ title, titleRu, testimonials, language = 'en' }: TestimonialsProps) => {
   const {
     connectors: { connect, drag },
     selected,
@@ -727,34 +1051,58 @@ const TestimonialsComponent = ({ testimonials }: TestimonialsProps) => {
   return (
     <div
       ref={(ref) => ref && connect(drag(ref))}
-      className={`relative p-12 bg-gray-50 border-2 ${selected ? 'border-blue-500' : 'border-transparent'}`}
+      className={`relative p-6 md:p-12 lg:p-16 bg-gray-50 border-2 ${selected ? 'border-blue-500' : 'border-transparent'}`}
     >
       {selected && (
         <div className="absolute top-2 right-2 z-20 flex gap-2">
-          <button
-            onClick={() => editorActions.delete(id)}
-            className="px-3 py-1 bg-red-500 text-white rounded hover:bg-red-600 flex items-center gap-1"
-          >
-            <Trash2 className="w-4 h-4" />
-            Delete
-          </button>
+          <AlertDialog>
+            <AlertDialogTrigger asChild>
+              <button
+                className="px-3 py-1 bg-red-500 text-white rounded hover:bg-red-600 flex items-center gap-1"
+                aria-label={language === 'ru' ? 'Удалить компонент' : 'Delete component'}
+              >
+                <Trash2 className="w-4 h-4" />
+                {language === 'ru' ? 'Удалить' : 'Delete'}
+              </button>
+            </AlertDialogTrigger>
+            <AlertDialogContent>
+              <AlertDialogHeader>
+                <AlertDialogTitle>
+                  {language === 'ru' ? 'Удалить компонент?' : 'Delete component?'}
+                </AlertDialogTitle>
+                <AlertDialogDescription>
+                  {language === 'ru'
+                    ? 'Это действие нельзя отменить. Компонент будет удален навсегда.'
+                    : 'This action cannot be undone. The component will be permanently deleted.'}
+                </AlertDialogDescription>
+              </AlertDialogHeader>
+              <AlertDialogFooter>
+                <AlertDialogCancel>
+                  {language === 'ru' ? 'Отмена' : 'Cancel'}
+                </AlertDialogCancel>
+                <AlertDialogAction onClick={() => editorActions.delete(id)} className="bg-red-500 hover:bg-red-600">
+                  {language === 'ru' ? 'Удалить' : 'Delete'}
+                </AlertDialogAction>
+              </AlertDialogFooter>
+            </AlertDialogContent>
+          </AlertDialog>
         </div>
       )}
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl font-bold mb-12 text-center">What Clients Say</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-12 text-center">{language === 'ru' ? titleRu : title}</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {testimonials.map((testimonial, index) => (
             <div key={index} className="bg-white p-6 rounded-lg shadow-md">
               <div className="flex items-center gap-4 mb-4">
                 <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-bold">
-                  {testimonial.name.charAt(0)}
+                  {(language === 'ru' ? testimonial.nameRu : testimonial.name).charAt(0)}
                 </div>
                 <div>
-                  <h4 className="font-bold">{testimonial.name}</h4>
-                  <p className="text-sm text-gray-600">{testimonial.role}</p>
+                  <h4 className="font-bold">{language === 'ru' ? testimonial.nameRu : testimonial.name}</h4>
+                  <p className="text-sm text-gray-600">{language === 'ru' ? testimonial.roleRu : testimonial.role}</p>
                 </div>
               </div>
-              <p className="text-gray-700 italic">"{testimonial.text}"</p>
+              <p className="text-gray-700 italic">"{language === 'ru' ? testimonial.textRu : testimonial.text}"</p>
             </div>
           ))}
         </div>
@@ -766,23 +1114,27 @@ const TestimonialsComponent = ({ testimonials }: TestimonialsProps) => {
 TestimonialsComponent.craft = {
   displayName: "Testimonials",
   props: {
+    title: "What Clients Say",
+    titleRu: "Отзывы клиентов",
     testimonials: [
-      { name: "Sarah Johnson", role: "CEO, TechCorp", text: "Amazing work! Exceeded all expectations." },
-      { name: "Mike Chen", role: "Designer, Creative Co", text: "Professional, creative, and on time." },
-      { name: "Emma Davis", role: "Founder, StartupXYZ", text: "Best decision we made for our brand." },
+      { name: "Sarah Johnson", nameRu: "Сара Джонсон", role: "CEO, TechCorp", roleRu: "Генеральный директор, TechCorp", text: "Amazing work! Exceeded all expectations.", textRu: "Потрясающая работа! Превзошли все ожидания." },
+      { name: "Mike Chen", nameRu: "Майк Чен", role: "Designer, Creative Co", roleRu: "Дизайнер, Creative Co", text: "Professional, creative, and on time.", textRu: "Профессионально, креативно и вовремя." },
+      { name: "Emma Davis", nameRu: "Эмма Дэвис", role: "Founder, StartupXYZ", roleRu: "Основатель, StartupXYZ", text: "Best decision we made for our brand.", textRu: "Лучшее решение для нашего бренда." },
     ],
-    language: 'en',
+    language: 'en' as 'en' | 'ru',
   },
 };
 
 // Gallery Component
 interface GalleryProps {
+  title: string;
+  titleRu: string;
   images: Array<{ url: string; title: string }>;
   columns: number;
   language?: 'en' | 'ru';
 }
 
-const GalleryComponent = ({ images, columns }: GalleryProps) => {
+const GalleryComponent = ({ title, titleRu, images, columns, language = 'en' }: GalleryProps) => {
   const {
     connectors: { connect, drag },
     selected,
@@ -802,21 +1154,45 @@ const GalleryComponent = ({ images, columns }: GalleryProps) => {
   return (
     <div
       ref={(ref) => ref && connect(drag(ref))}
-      className={`relative p-12 border-2 ${selected ? 'border-blue-500' : 'border-transparent'}`}
+      className={`relative p-6 md:p-12 lg:p-16 border-2 ${selected ? 'border-blue-500' : 'border-transparent'}`}
     >
       {selected && (
         <div className="absolute top-2 right-2 z-20 flex gap-2">
-          <button
-            onClick={() => editorActions.delete(id)}
-            className="px-3 py-1 bg-red-500 text-white rounded hover:bg-red-600 flex items-center gap-1"
-          >
-            <Trash2 className="w-4 h-4" />
-            Delete
-          </button>
+          <AlertDialog>
+            <AlertDialogTrigger asChild>
+              <button
+                className="px-3 py-1 bg-red-500 text-white rounded hover:bg-red-600 flex items-center gap-1"
+                aria-label={language === 'ru' ? 'Удалить компонент' : 'Delete component'}
+              >
+                <Trash2 className="w-4 h-4" />
+                {language === 'ru' ? 'Удалить' : 'Delete'}
+              </button>
+            </AlertDialogTrigger>
+            <AlertDialogContent>
+              <AlertDialogHeader>
+                <AlertDialogTitle>
+                  {language === 'ru' ? 'Удалить компонент?' : 'Delete component?'}
+                </AlertDialogTitle>
+                <AlertDialogDescription>
+                  {language === 'ru'
+                    ? 'Это действие нельзя отменить. Компонент будет удален навсегда.'
+                    : 'This action cannot be undone. The component will be permanently deleted.'}
+                </AlertDialogDescription>
+              </AlertDialogHeader>
+              <AlertDialogFooter>
+                <AlertDialogCancel>
+                  {language === 'ru' ? 'Отмена' : 'Cancel'}
+                </AlertDialogCancel>
+                <AlertDialogAction onClick={() => editorActions.delete(id)} className="bg-red-500 hover:bg-red-600">
+                  {language === 'ru' ? 'Удалить' : 'Delete'}
+                </AlertDialogAction>
+              </AlertDialogFooter>
+            </AlertDialogContent>
+          </AlertDialog>
         </div>
       )}
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl font-bold mb-8 text-center">Gallery</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-8 text-center">{language === 'ru' ? titleRu : title}</h2>
         <div className={`grid ${gridClass} gap-4`}>
           {images.map((image, index) => (
             <div key={index} className="relative group overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow">
@@ -837,6 +1213,8 @@ const GalleryComponent = ({ images, columns }: GalleryProps) => {
 GalleryComponent.craft = {
   displayName: "Gallery",
   props: {
+    title: "Gallery",
+    titleRu: "Галерея",
     images: [
       { url: "", title: "Project 1" },
       { url: "", title: "Project 2" },
@@ -846,21 +1224,34 @@ GalleryComponent.craft = {
       { url: "", title: "Project 6" },
     ],
     columns: 3,
-    language: 'en',
+    language: 'en' as 'en' | 'ru',
   },
 };
 
 // CTA Component
 interface CTAProps {
   title: string;
+  titleRu: string;
   description: string;
+  descriptionRu: string;
   buttonText: string;
+  buttonTextRu: string;
   backgroundColor: string;
   textColor: string;
   language?: 'en' | 'ru';
 }
 
-const CTAComponent = ({ title, description, buttonText, backgroundColor, textColor }: CTAProps) => {
+const CTAComponent = ({
+  title,
+  titleRu,
+  description,
+  descriptionRu,
+  buttonText,
+  buttonTextRu,
+  backgroundColor,
+  textColor,
+  language = 'en'
+}: CTAProps) => {
   const {
     connectors: { connect, drag },
     selected,
@@ -879,24 +1270,48 @@ const CTAComponent = ({ title, description, buttonText, backgroundColor, textCol
     >
       {selected && (
         <div className="absolute top-2 right-2 z-20 flex gap-2">
-          <button
-            onClick={() => editorActions.delete(id)}
-            className="px-3 py-1 bg-red-500 text-white rounded hover:bg-red-600 flex items-center gap-1"
-          >
-            <Trash2 className="w-4 h-4" />
-            Delete
-          </button>
+          <AlertDialog>
+            <AlertDialogTrigger asChild>
+              <button
+                className="px-3 py-1 bg-red-500 text-white rounded hover:bg-red-600 flex items-center gap-1"
+                aria-label={language === 'ru' ? 'Удалить компонент' : 'Delete component'}
+              >
+                <Trash2 className="w-4 h-4" />
+                {language === 'ru' ? 'Удалить' : 'Delete'}
+              </button>
+            </AlertDialogTrigger>
+            <AlertDialogContent>
+              <AlertDialogHeader>
+                <AlertDialogTitle>
+                  {language === 'ru' ? 'Удалить компонент?' : 'Delete component?'}
+                </AlertDialogTitle>
+                <AlertDialogDescription>
+                  {language === 'ru'
+                    ? 'Это действие нельзя отменить. Компонент будет удален навсегда.'
+                    : 'This action cannot be undone. The component will be permanently deleted.'}
+                </AlertDialogDescription>
+              </AlertDialogHeader>
+              <AlertDialogFooter>
+                <AlertDialogCancel>
+                  {language === 'ru' ? 'Отмена' : 'Cancel'}
+                </AlertDialogCancel>
+                <AlertDialogAction onClick={() => editorActions.delete(id)} className="bg-red-500 hover:bg-red-600">
+                  {language === 'ru' ? 'Удалить' : 'Delete'}
+                </AlertDialogAction>
+              </AlertDialogFooter>
+            </AlertDialogContent>
+          </AlertDialog>
         </div>
       )}
       <div className="max-w-4xl mx-auto text-center">
         <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{ color: textColor }}>
-          {title}
+          {language === 'ru' ? titleRu : title}
         </h2>
         <p className="text-xl mb-8" style={{ color: textColor, opacity: 0.9 }}>
-          {description}
+          {language === 'ru' ? descriptionRu : description}
         </p>
         <button className="px-8 py-4 bg-white text-gray-900 rounded-lg font-semibold hover:scale-105 transition-transform shadow-lg">
-          {buttonText}
+          {language === 'ru' ? buttonTextRu : buttonText}
         </button>
       </div>
     </div>
@@ -907,21 +1322,26 @@ CTAComponent.craft = {
   displayName: "Call to Action",
   props: {
     title: "Ready to Get Started?",
+    titleRu: "Готовы начать?",
     description: "Join thousands of satisfied customers today",
+    descriptionRu: "Присоединяйтесь к тысячам довольных клиентов сегодня",
     buttonText: "Get Started Now",
+    buttonTextRu: "Начать сейчас",
     backgroundColor: "#667eea",
     textColor: "#ffffff",
-    language: 'en',
+    language: 'en' as 'en' | 'ru',
   },
 };
 
 // Timeline Component
 interface TimelineProps {
-  steps: Array<{ year: string; title: string; description: string }>;
+  title: string;
+  titleRu: string;
+  steps: Array<{ year: string; title: string; titleRu: string; description: string; descriptionRu: string }>;
   language?: 'en' | 'ru';
 }
 
-const TimelineComponent = ({ steps }: TimelineProps) => {
+const TimelineComponent = ({ title, titleRu, steps, language = 'en' }: TimelineProps) => {
   const {
     connectors: { connect, drag },
     selected,
@@ -935,21 +1355,45 @@ const TimelineComponent = ({ steps }: TimelineProps) => {
   return (
     <div
       ref={(ref) => ref && connect(drag(ref))}
-      className={`relative p-12 border-2 ${selected ? 'border-blue-500' : 'border-transparent'}`}
+      className={`relative p-6 md:p-12 lg:p-16 border-2 ${selected ? 'border-blue-500' : 'border-transparent'}`}
     >
       {selected && (
         <div className="absolute top-2 right-2 z-20 flex gap-2">
-          <button
-            onClick={() => editorActions.delete(id)}
-            className="px-3 py-1 bg-red-500 text-white rounded hover:bg-red-600 flex items-center gap-1"
-          >
-            <Trash2 className="w-4 h-4" />
-            Delete
-          </button>
+          <AlertDialog>
+            <AlertDialogTrigger asChild>
+              <button
+                className="px-3 py-1 bg-red-500 text-white rounded hover:bg-red-600 flex items-center gap-1"
+                aria-label={language === 'ru' ? 'Удалить компонент' : 'Delete component'}
+              >
+                <Trash2 className="w-4 h-4" />
+                {language === 'ru' ? 'Удалить' : 'Delete'}
+              </button>
+            </AlertDialogTrigger>
+            <AlertDialogContent>
+              <AlertDialogHeader>
+                <AlertDialogTitle>
+                  {language === 'ru' ? 'Удалить компонент?' : 'Delete component?'}
+                </AlertDialogTitle>
+                <AlertDialogDescription>
+                  {language === 'ru'
+                    ? 'Это действие нельзя отменить. Компонент будет удален навсегда.'
+                    : 'This action cannot be undone. The component will be permanently deleted.'}
+                </AlertDialogDescription>
+              </AlertDialogHeader>
+              <AlertDialogFooter>
+                <AlertDialogCancel>
+                  {language === 'ru' ? 'Отмена' : 'Cancel'}
+                </AlertDialogCancel>
+                <AlertDialogAction onClick={() => editorActions.delete(id)} className="bg-red-500 hover:bg-red-600">
+                  {language === 'ru' ? 'Удалить' : 'Delete'}
+                </AlertDialogAction>
+              </AlertDialogFooter>
+            </AlertDialogContent>
+          </AlertDialog>
         </div>
       )}
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl font-bold mb-12 text-center">Our Journey</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-12 text-center">{language === 'ru' ? titleRu : title}</h2>
         <div className="space-y-8">
           {steps.map((step, index) => (
             <div key={index} className="flex gap-6">
@@ -961,8 +1405,8 @@ const TimelineComponent = ({ steps }: TimelineProps) => {
               </div>
               <div className="flex-1 pb-8">
                 <div className="text-sm text-blue-600 font-semibold mb-1">{step.year}</div>
-                <h3 className="text-xl font-bold mb-2">{step.title}</h3>
-                <p className="text-gray-600">{step.description}</p>
+                <h3 className="text-xl font-bold mb-2">{language === 'ru' ? step.titleRu : step.title}</h3>
+                <p className="text-gray-600">{language === 'ru' ? step.descriptionRu : step.description}</p>
               </div>
             </div>
           ))}
@@ -975,23 +1419,27 @@ const TimelineComponent = ({ steps }: TimelineProps) => {
 TimelineComponent.craft = {
   displayName: "Timeline",
   props: {
+    title: "Our Journey",
+    titleRu: "Наш путь",
     steps: [
-      { year: "2020", title: "Company Founded", description: "Started with a vision to change the industry" },
-      { year: "2021", title: "First Major Client", description: "Landed our first enterprise customer" },
-      { year: "2022", title: "Team Expansion", description: "Grew to 50+ team members" },
-      { year: "2023", title: "Global Reach", description: "Expanded to 10+ countries worldwide" },
+      { year: "2020", title: "Company Founded", titleRu: "Основание компании", description: "Started with a vision to change the industry", descriptionRu: "Начали с видения изменить индустрию" },
+      { year: "2021", title: "First Major Client", titleRu: "Первый крупный клиент", description: "Landed our first enterprise customer", descriptionRu: "Получили первого корпоративного клиента" },
+      { year: "2022", title: "Team Expansion", titleRu: "Расширение команды", description: "Grew to 50+ team members", descriptionRu: "Выросли до 50+ членов команды" },
+      { year: "2023", title: "Global Reach", titleRu: "Глобальное присутствие", description: "Expanded to 10+ countries worldwide", descriptionRu: "Расширились на 10+ стран по всему миру" },
     ],
-    language: 'en',
+    language: 'en' as 'en' | 'ru',
   },
 };
 
 // FAQ Component
 interface FAQProps {
-  faqs: Array<{ question: string; answer: string }>;
+  title: string;
+  titleRu: string;
+  faqs: Array<{ question: string; questionRu: string; answer: string; answerRu: string }>;
   language?: 'en' | 'ru';
 }
 
-const FAQComponent = ({ faqs }: FAQProps) => {
+const FAQComponent = ({ title, titleRu, faqs, language = 'en' }: FAQProps) => {
   const {
     connectors: { connect, drag },
     selected,
@@ -1001,32 +1449,61 @@ const FAQComponent = ({ faqs }: FAQProps) => {
   }));
 
   const { actions: editorActions } = useEditor();
+  const displayTitle = language === 'ru' ? titleRu : title;
 
   return (
     <div
       ref={(ref) => ref && connect(drag(ref))}
-      className={`relative p-12 bg-gray-50 border-2 ${selected ? 'border-blue-500' : 'border-transparent'}`}
+      className={`relative p-6 md:p-12 lg:p-16 bg-gray-50 border-2 ${selected ? 'border-blue-500' : 'border-transparent'}`}
     >
       {selected && (
         <div className="absolute top-2 right-2 z-20 flex gap-2">
-          <button
-            onClick={() => editorActions.delete(id)}
-            className="px-3 py-1 bg-red-500 text-white rounded hover:bg-red-600 flex items-center gap-1"
-          >
-            <Trash2 className="w-4 h-4" />
-            Delete
-          </button>
+          <AlertDialog>
+            <AlertDialogTrigger asChild>
+              <button
+                className="px-3 py-1 bg-red-500 text-white rounded hover:bg-red-600 flex items-center gap-1"
+                aria-label={language === 'ru' ? 'Удалить компонент' : 'Delete component'}
+              >
+                <Trash2 className="w-4 h-4" />
+                {language === 'ru' ? 'Удалить' : 'Delete'}
+              </button>
+            </AlertDialogTrigger>
+            <AlertDialogContent>
+              <AlertDialogHeader>
+                <AlertDialogTitle>
+                  {language === 'ru' ? 'Удалить компонент?' : 'Delete component?'}
+                </AlertDialogTitle>
+                <AlertDialogDescription>
+                  {language === 'ru'
+                    ? 'Это действие нельзя отменить. Компонент будет удален навсегда.'
+                    : 'This action cannot be undone. The component will be permanently deleted.'}
+                </AlertDialogDescription>
+              </AlertDialogHeader>
+              <AlertDialogFooter>
+                <AlertDialogCancel>
+                  {language === 'ru' ? 'Отмена' : 'Cancel'}
+                </AlertDialogCancel>
+                <AlertDialogAction onClick={() => editorActions.delete(id)} className="bg-red-500 hover:bg-red-600">
+                  {language === 'ru' ? 'Удалить' : 'Delete'}
+                </AlertDialogAction>
+              </AlertDialogFooter>
+            </AlertDialogContent>
+          </AlertDialog>
         </div>
       )}
       <div className="max-w-3xl mx-auto">
-        <h2 className="text-3xl font-bold mb-12 text-center">Frequently Asked Questions</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-12 text-center">{displayTitle}</h2>
         <div className="space-y-4">
-          {faqs.map((faq, index) => (
-            <div key={index} className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="text-lg font-bold mb-2">{faq.question}</h3>
-              <p className="text-gray-600">{faq.answer}</p>
-            </div>
-          ))}
+          {faqs.map((faq, index) => {
+            const displayQuestion = language === 'ru' ? faq.questionRu : faq.question;
+            const displayAnswer = language === 'ru' ? faq.answerRu : faq.answer;
+            return (
+              <div key={index} className="bg-white p-6 rounded-lg shadow-sm">
+                <h3 className="text-lg font-bold mb-2">{displayQuestion}</h3>
+                <p className="text-gray-600">{displayAnswer}</p>
+              </div>
+            );
+          })}
         </div>
       </div>
     </div>
@@ -1036,12 +1513,29 @@ const FAQComponent = ({ faqs }: FAQProps) => {
 FAQComponent.craft = {
   displayName: "FAQ",
   props: {
+    title: "Frequently Asked Questions",
+    titleRu: "Часто задаваемые вопросы",
     faqs: [
-      { question: "How does it work?", answer: "It's simple and straightforward. Just sign up and get started in minutes." },
-      { question: "What's included?", answer: "All features are included in every plan with no hidden fees." },
-      { question: "Can I cancel anytime?", answer: "Yes, you can cancel your subscription at any time with no penalties." },
+      {
+        question: "How does it work?",
+        questionRu: "Как это работает?",
+        answer: "It's simple and straightforward. Just sign up and get started in minutes.",
+        answerRu: "Всё просто и понятно. Просто зарегистрируйтесь и начните работу за считанные минуты."
+      },
+      {
+        question: "What's included?",
+        questionRu: "Что входит в комплект?",
+        answer: "All features are included in every plan with no hidden fees.",
+        answerRu: "Все функции включены в каждый тариф без скрытых платежей."
+      },
+      {
+        question: "Can I cancel anytime?",
+        questionRu: "Могу ли я отменить подписку в любое время?",
+        answer: "Yes, you can cancel your subscription at any time with no penalties.",
+        answerRu: "Да, вы можете отменить подписку в любое время без штрафов."
+      },
     ],
-    language: 'en',
+    language: 'en' as 'en' | 'ru',
   },
 };
 
@@ -1049,11 +1543,13 @@ FAQComponent.craft = {
 interface VideoProps {
   videoUrl: string;
   title: string;
+  titleRu: string;
   description: string;
+  descriptionRu: string;
   language?: 'en' | 'ru';
 }
 
-const VideoComponent = ({ videoUrl, title, description }: VideoProps) => {
+const VideoComponent = ({ videoUrl, title, titleRu, description, descriptionRu, language = 'en' }: VideoProps) => {
   const {
     connectors: { connect, drag },
     selected,
@@ -1067,29 +1563,53 @@ const VideoComponent = ({ videoUrl, title, description }: VideoProps) => {
   return (
     <div
       ref={(ref) => ref && connect(drag(ref))}
-      className={`relative p-12 border-2 ${selected ? 'border-blue-500' : 'border-transparent'}`}
+      className={`relative p-6 md:p-12 lg:p-16 border-2 ${selected ? 'border-blue-500' : 'border-transparent'}`}
     >
       {selected && (
         <div className="absolute top-2 right-2 z-20 flex gap-2">
-          <button
-            onClick={() => editorActions.delete(id)}
-            className="px-3 py-1 bg-red-500 text-white rounded hover:bg-red-600 flex items-center gap-1"
-          >
-            <Trash2 className="w-4 h-4" />
-            Delete
-          </button>
+          <AlertDialog>
+            <AlertDialogTrigger asChild>
+              <button
+                className="px-3 py-1 bg-red-500 text-white rounded hover:bg-red-600 flex items-center gap-1"
+                aria-label={language === 'ru' ? 'Удалить компонент' : 'Delete component'}
+              >
+                <Trash2 className="w-4 h-4" />
+                {language === 'ru' ? 'Удалить' : 'Delete'}
+              </button>
+            </AlertDialogTrigger>
+            <AlertDialogContent>
+              <AlertDialogHeader>
+                <AlertDialogTitle>
+                  {language === 'ru' ? 'Удалить компонент?' : 'Delete component?'}
+                </AlertDialogTitle>
+                <AlertDialogDescription>
+                  {language === 'ru'
+                    ? 'Это действие нельзя отменить. Компонент будет удален навсегда.'
+                    : 'This action cannot be undone. The component will be permanently deleted.'}
+                </AlertDialogDescription>
+              </AlertDialogHeader>
+              <AlertDialogFooter>
+                <AlertDialogCancel>
+                  {language === 'ru' ? 'Отмена' : 'Cancel'}
+                </AlertDialogCancel>
+                <AlertDialogAction onClick={() => editorActions.delete(id)} className="bg-red-500 hover:bg-red-600">
+                  {language === 'ru' ? 'Удалить' : 'Delete'}
+                </AlertDialogAction>
+              </AlertDialogFooter>
+            </AlertDialogContent>
+          </AlertDialog>
         </div>
       )}
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl font-bold mb-4 text-center">{title}</h2>
-        <p className="text-center text-gray-600 mb-8">{description}</p>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 text-center">{language === 'ru' ? titleRu : title}</h2>
+        <p className="text-center text-gray-600 mb-8">{language === 'ru' ? descriptionRu : description}</p>
         <div className="aspect-video bg-gray-900 rounded-lg overflow-hidden flex items-center justify-center">
           <div className="text-center">
             <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-white/20 flex items-center justify-center">
               <div className="w-0 h-0 border-l-[20px] border-l-white border-t-[12px] border-t-transparent border-b-[12px] border-b-transparent ml-1"></div>
             </div>
-            <p className="text-white">Video Player Placeholder</p>
-            <p className="text-white/60 text-sm mt-2">{videoUrl || "Add video URL"}</p>
+            <p className="text-white">{language === 'ru' ? 'Видеоплеер' : 'Video Player Placeholder'}</p>
+            <p className="text-white/60 text-sm mt-2">{videoUrl || (language === 'ru' ? 'Добавьте URL видео' : 'Add video URL')}</p>
           </div>
         </div>
       </div>
@@ -1102,18 +1622,22 @@ VideoComponent.craft = {
   props: {
     videoUrl: "https://www.youtube.com/watch?v=example",
     title: "Watch Our Story",
+    titleRu: "Смотрите нашу историю",
     description: "See how we're making a difference",
-    language: 'en',
+    descriptionRu: "Узнайте, как мы меняем мир к лучшему",
+    language: 'en' as 'en' | 'ru',
   },
 };
 
 // Social Media Links Component
 interface SocialLinksProps {
+  title: string;
+  titleRu: string;
   links: Array<{ platform: string; url: string }>;
   language?: 'en' | 'ru';
 }
 
-const SocialLinksComponent = ({ links }: SocialLinksProps) => {
+const SocialLinksComponent = ({ title, titleRu, links, language = 'en' }: SocialLinksProps) => {
   const {
     connectors: { connect, drag },
     selected,
@@ -1127,21 +1651,45 @@ const SocialLinksComponent = ({ links }: SocialLinksProps) => {
   return (
     <div
       ref={(ref) => ref && connect(drag(ref))}
-      className={`relative p-12 border-2 ${selected ? 'border-blue-500' : 'border-transparent'}`}
+      className={`relative p-6 md:p-12 lg:p-16 border-2 ${selected ? 'border-blue-500' : 'border-transparent'}`}
     >
       {selected && (
         <div className="absolute top-2 right-2 z-20 flex gap-2">
-          <button
-            onClick={() => editorActions.delete(id)}
-            className="px-3 py-1 bg-red-500 text-white rounded hover:bg-red-600 flex items-center gap-1"
-          >
-            <Trash2 className="w-4 h-4" />
-            Delete
-          </button>
+          <AlertDialog>
+            <AlertDialogTrigger asChild>
+              <button
+                className="px-3 py-1 bg-red-500 text-white rounded hover:bg-red-600 flex items-center gap-1"
+                aria-label={language === 'ru' ? 'Удалить компонент' : 'Delete component'}
+              >
+                <Trash2 className="w-4 h-4" />
+                {language === 'ru' ? 'Удалить' : 'Delete'}
+              </button>
+            </AlertDialogTrigger>
+            <AlertDialogContent>
+              <AlertDialogHeader>
+                <AlertDialogTitle>
+                  {language === 'ru' ? 'Удалить компонент?' : 'Delete component?'}
+                </AlertDialogTitle>
+                <AlertDialogDescription>
+                  {language === 'ru'
+                    ? 'Это действие нельзя отменить. Компонент будет удален навсегда.'
+                    : 'This action cannot be undone. The component will be permanently deleted.'}
+                </AlertDialogDescription>
+              </AlertDialogHeader>
+              <AlertDialogFooter>
+                <AlertDialogCancel>
+                  {language === 'ru' ? 'Отмена' : 'Cancel'}
+                </AlertDialogCancel>
+                <AlertDialogAction onClick={() => editorActions.delete(id)} className="bg-red-500 hover:bg-red-600">
+                  {language === 'ru' ? 'Удалить' : 'Delete'}
+                </AlertDialogAction>
+              </AlertDialogFooter>
+            </AlertDialogContent>
+          </AlertDialog>
         </div>
       )}
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl font-bold mb-8 text-center">Connect With Us</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-8 text-center">{language === 'ru' ? titleRu : title}</h2>
         <div className="flex justify-center gap-4 flex-wrap">
           {links.map((link, index) => (
             <a
@@ -1163,13 +1711,15 @@ const SocialLinksComponent = ({ links }: SocialLinksProps) => {
 SocialLinksComponent.craft = {
   displayName: "Social Links",
   props: {
+    title: "Connect With Us",
+    titleRu: "Свяжитесь с нами",
     links: [
       { platform: "Facebook", url: "https://facebook.com" },
       { platform: "Twitter", url: "https://twitter.com" },
       { platform: "Instagram", url: "https://instagram.com" },
       { platform: "LinkedIn", url: "https://linkedin.com" },
     ],
-    language: 'en',
+    language: 'en' as 'en' | 'ru',
   },
 };
 
@@ -1256,6 +1806,61 @@ const EmptyCanvas = ({ language = 'en' }: { language?: 'en' | 'ru' }) => {
         <p className="text-base sm:text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
           {text.subtitle}
         </p>
+
+        {/* Component Preview Cards */}
+        <div className="mb-8">
+          <div className="text-sm font-semibold text-gray-700 mb-4 uppercase tracking-wide">
+            {language === 'ru' ? 'Популярные компоненты' : 'Popular Components'}
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 max-w-3xl mx-auto">
+            {/* Hero Component */}
+            <div className="relative group">
+              <div className="bg-gradient-to-br from-blue-50 to-blue-100 border-2 border-blue-200 p-4 rounded-xl shadow-sm hover:shadow-lg transition-all hover:scale-105 cursor-pointer">
+                <Badge className="absolute top-2 right-2 bg-blue-600 text-white text-[10px] px-2 py-0.5">
+                  {language === 'ru' ? 'Популярно' : 'Popular'}
+                </Badge>
+                <div className="text-3xl mb-2">👤</div>
+                <div className="font-bold text-sm text-blue-900 mb-1">Hero</div>
+                <div className="text-xs text-blue-700">{language === 'ru' ? 'Главный баннер' : 'Main banner'}</div>
+              </div>
+            </div>
+
+            {/* About Component */}
+            <div className="relative group">
+              <div className="bg-gradient-to-br from-purple-50 to-purple-100 border-2 border-purple-200 p-4 rounded-xl shadow-sm hover:shadow-lg transition-all hover:scale-105 cursor-pointer">
+                <Badge className="absolute top-2 right-2 bg-purple-600 text-white text-[10px] px-2 py-0.5">
+                  {language === 'ru' ? 'Популярно' : 'Popular'}
+                </Badge>
+                <div className="text-3xl mb-2">📝</div>
+                <div className="font-bold text-sm text-purple-900 mb-1">About</div>
+                <div className="text-xs text-purple-700">{language === 'ru' ? 'О компании' : 'About section'}</div>
+              </div>
+            </div>
+
+            {/* Contact Component */}
+            <div className="relative group">
+              <div className="bg-gradient-to-br from-pink-50 to-pink-100 border-2 border-pink-200 p-4 rounded-xl shadow-sm hover:shadow-lg transition-all hover:scale-105 cursor-pointer">
+                <Badge className="absolute top-2 right-2 bg-pink-600 text-white text-[10px] px-2 py-0.5">
+                  {language === 'ru' ? 'Популярно' : 'Popular'}
+                </Badge>
+                <div className="text-3xl mb-2">📧</div>
+                <div className="font-bold text-sm text-pink-900 mb-1">Contact</div>
+                <div className="text-xs text-pink-700">{language === 'ru' ? 'Контакты' : 'Contact form'}</div>
+              </div>
+            </div>
+
+            {/* More Components */}
+            <div className="relative group">
+              <div className="bg-gradient-to-br from-green-50 to-green-100 border-2 border-green-200 p-4 rounded-xl shadow-sm hover:shadow-lg transition-all hover:scale-105 cursor-pointer">
+                <div className="text-3xl mb-2">✨</div>
+                <div className="font-bold text-sm text-green-900 mb-1">
+                  {language === 'ru' ? '+9 еще' : '+9 more'}
+                </div>
+                <div className="text-xs text-green-700">{language === 'ru' ? 'Больше опций' : 'More options'}</div>
+              </div>
+            </div>
+          </div>
+        </div>
 
         {/* Visual Flowchart */}
         <div className="mb-8">
@@ -1528,19 +2133,16 @@ const Toolbox = ({ language, setMobileView }: { language: 'en' | 'ru'; setMobile
   const labels = {
     en: {
       components: 'Components',
-      splitScreen: 'Split-Screen',
-      generic: 'Generic',
+      unified: '⭐ Unified',
+      unifiedHero: 'Hero',
+      unifiedHeroDesc: 'Flexible hero with variants',
+      unifiedStats: 'Stats',
+      unifiedStatsDesc: 'Statistics grid',
+      unifiedSkills: 'Skills',
+      unifiedSkillsDesc: 'Skills tags',
       content: 'Content',
-      splitHero: 'Split Hero',
-      splitHeroDesc: 'Split-screen hero section',
-      stats: 'Stats',
-      statsDesc: 'Statistics showcase',
-      skills: 'Skills',
-      skillsDesc: 'Skills tags section',
       contact: 'Contact',
-      contactDesc: 'Contact split section',
-      hero: 'Hero',
-      heroDesc: 'Header section',
+      contactDesc: 'Contact section',
       about: 'About',
       aboutDesc: 'About section',
       projects: 'Projects',
@@ -1564,19 +2166,16 @@ const Toolbox = ({ language, setMobileView }: { language: 'en' | 'ru'; setMobile
     },
     ru: {
       components: 'Компоненты',
-      splitScreen: 'Разделённый экран',
-      generic: 'Общие',
+      unified: '⭐ Унифицированные',
+      unifiedHero: 'Главная секция',
+      unifiedHeroDesc: 'Гибкая главная секция с вариантами',
+      unifiedStats: 'Статистика',
+      unifiedStatsDesc: 'Сетка статистики',
+      unifiedSkills: 'Навыки',
+      unifiedSkillsDesc: 'Теги навыков',
       content: 'Контент',
-      splitHero: 'Главный баннер',
-      splitHeroDesc: 'Секция главного баннера с разделённым экраном',
-      stats: 'Статистика',
-      statsDesc: 'Витрина статистики',
-      skills: 'Навыки',
-      skillsDesc: 'Секция навыков',
       contact: 'Контакты',
-      contactDesc: 'Секция контактов с разделённым экраном',
-      hero: 'Баннер',
-      heroDesc: 'Секция заголовка',
+      contactDesc: 'Секция контактов',
       about: 'О нас',
       aboutDesc: 'Секция о нас',
       projects: 'Проекты',
@@ -1606,72 +2205,91 @@ const Toolbox = ({ language, setMobileView }: { language: 'en' | 'ru'; setMobile
     <div className="w-full md:w-64 bg-white border-r h-full overflow-y-auto">
       <div className="p-3 sm:p-4 border-b bg-gray-50">
         <h3 className="font-bold text-base sm:text-lg">{t.components}</h3>
-        <p className="text-xs text-gray-600 mt-1">{isMobile ? (language === 'ru' ? 'Нажмите для добавления' : 'Tap to add components') : 'Drag to canvas'}</p>
+        <p className="text-sm md:text-xs text-gray-700 mt-1 font-medium">{isMobile ? (language === 'ru' ? 'Нажмите для добавления' : 'Tap to add components') : 'Drag to canvas'}</p>
       </div>
       <div className="p-3 sm:p-4 space-y-3">
-        <div className="text-xs font-bold text-gray-700 uppercase tracking-wide mb-2 flex items-center gap-2">
-          <div className="w-1 h-4 bg-blue-500 rounded"></div>
-          {t.splitScreen}
+        {/* NEW UNIFIED COMPONENTS SECTION */}
+        <div className="text-xs font-bold text-purple-700 uppercase tracking-wide mb-2 flex items-center gap-2">
+          <div className="w-1 h-4 bg-gradient-to-b from-purple-500 to-pink-500 rounded"></div>
+          {t.unified}
         </div>
-        <button
-          ref={(ref) => {
-            if (ref) {
-              if (!isMobile) {
-                // Desktop: drag to add
-                connectors.create(ref, <Element is={SplitScreenHero} language={language} canvas />);
-              }
-            }
-          }}
-          onClick={isMobile ? () => {
-            handleMobileAdd(
-              <Element is={SplitScreenHero} language={language} canvas />,
-              () => setMobileView && setMobileView('canvas')
-            );
-          } : undefined}
-          className="w-full p-3 text-left border-2 border-gray-200 rounded-lg hover:border-blue-400 hover:bg-blue-50 transition-all active:scale-95 cursor-pointer shadow-sm hover:shadow"
-          style={{ touchAction: isMobile ? 'auto' : 'none' }}
-        >
-          <div className="font-semibold text-sm">{t.splitHero}</div>
-          <div className="text-xs text-gray-500 mt-1">
-            {isMobile ? (language === 'ru' ? '👆 Нажмите чтобы добавить' : '👆 Tap to add') : t.splitHeroDesc}
-          </div>
-        </button>
+
+        {/* Unified Hero */}
         <button
           ref={(ref) => {
             if (ref && !isMobile) {
-              connectors.create(ref, <Element is={SplitScreenStats} language={language} canvas />);
+              connectors.create(ref, <Element is={Hero} language={language} variant="centered" canvas />);
             }
           }}
           onClick={isMobile ? () => handleMobileAdd(
-            <Element is={SplitScreenStats} language={language} canvas />,
+            <Element is={Hero} language={language} variant="centered" canvas />,
             () => setMobileView && setMobileView('canvas')
           ) : undefined}
-          className="w-full p-3 text-left border-2 border-gray-200 rounded-lg hover:border-blue-400 hover:bg-blue-50 transition-all active:scale-95 cursor-pointer shadow-sm hover:shadow"
+          className="w-full p-3 text-left border-2 border-purple-200 bg-gradient-to-r from-purple-50 to-pink-50 rounded-lg hover:border-purple-400 hover:shadow-md transition-all active:scale-95 cursor-pointer"
           style={{ touchAction: isMobile ? 'auto' : 'none' }}
         >
-          <div className="font-semibold text-sm">{t.stats}</div>
-          <div className="text-xs text-gray-500 mt-1">
-            {isMobile ? (language === 'ru' ? '👆 Нажмите чтобы добавить' : '👆 Tap to add') : t.statsDesc}
+          <div className="font-semibold text-base md:text-sm flex items-center gap-2">
+            <span className="text-purple-600 text-xl">✨</span>
+            {t.unifiedHero}
+          </div>
+          <div className="text-sm md:text-xs text-gray-700 mt-1 font-medium">
+            {isMobile ? (language === 'ru' ? '👆 Нажмите чтобы добавить' : '👆 Tap to add') : t.unifiedHeroDesc}
           </div>
         </button>
+
+        {/* Unified Stats */}
         <button
           ref={(ref) => {
             if (ref && !isMobile) {
-              connectors.create(ref, <Element is={SplitScreenSkills} language={language} canvas />);
+              connectors.create(ref, <Element is={Stats} language={language} canvas />);
             }
           }}
           onClick={isMobile ? () => handleMobileAdd(
-            <Element is={SplitScreenSkills} language={language} canvas />,
+            <Element is={Stats} language={language} canvas />,
             () => setMobileView && setMobileView('canvas')
           ) : undefined}
-          className="w-full p-3 text-left border-2 border-gray-200 rounded-lg hover:border-blue-400 hover:bg-blue-50 transition-all active:scale-95 cursor-pointer shadow-sm hover:shadow"
+          className="w-full p-3 text-left border-2 border-purple-200 bg-gradient-to-r from-purple-50 to-pink-50 rounded-lg hover:border-purple-400 hover:shadow-md transition-all active:scale-95 cursor-pointer"
           style={{ touchAction: isMobile ? 'auto' : 'none' }}
         >
-          <div className="font-semibold text-sm">{t.skills}</div>
-          <div className="text-xs text-gray-500 mt-1">
-            {isMobile ? (language === 'ru' ? '👆 Нажмите чтобы добавить' : '👆 Tap to add') : t.skillsDesc}
+          <div className="font-semibold text-base md:text-sm flex items-center gap-2">
+            <span className="text-purple-600 text-xl">✨</span>
+            {t.unifiedStats}
+          </div>
+          <div className="text-sm md:text-xs text-gray-700 mt-1 font-medium">
+            {isMobile ? (language === 'ru' ? '👆 Нажмите чтобы добавить' : '👆 Tap to add') : t.unifiedStatsDesc}
           </div>
         </button>
+
+        {/* Unified Skills */}
+        <button
+          ref={(ref) => {
+            if (ref && !isMobile) {
+              connectors.create(ref, <Element is={Skills} language={language} canvas />);
+            }
+          }}
+          onClick={isMobile ? () => handleMobileAdd(
+            <Element is={Skills} language={language} canvas />,
+            () => setMobileView && setMobileView('canvas')
+          ) : undefined}
+          className="w-full p-3 text-left border-2 border-purple-200 bg-gradient-to-r from-purple-50 to-pink-50 rounded-lg hover:border-purple-400 hover:shadow-md transition-all active:scale-95 cursor-pointer"
+          style={{ touchAction: isMobile ? 'auto' : 'none' }}
+        >
+          <div className="font-semibold text-base md:text-sm flex items-center gap-2">
+            <span className="text-purple-600 text-xl">✨</span>
+            {t.unifiedSkills}
+          </div>
+          <div className="text-sm md:text-xs text-gray-700 mt-1 font-medium">
+            {isMobile ? (language === 'ru' ? '👆 Нажмите чтобы добавить' : '👆 Tap to add') : t.unifiedSkillsDesc}
+          </div>
+        </button>
+
+        {/* OTHER COMPONENTS SECTION */}
+        <div className="text-xs font-bold text-gray-700 uppercase tracking-wide mb-2 mt-6 flex items-center gap-2">
+          <div className="w-1 h-4 bg-green-500 rounded"></div>
+          {t.content}
+        </div>
+
+        {/* Contact (Split-Screen style - kept until unified replacement) */}
         <button
           ref={(ref) => {
             if (ref && !isMobile) {
@@ -1685,32 +2303,29 @@ const Toolbox = ({ language, setMobileView }: { language: 'en' | 'ru'; setMobile
           className="w-full p-3 text-left border-2 border-gray-200 rounded-lg hover:border-blue-400 hover:bg-blue-50 transition-all active:scale-95 cursor-pointer shadow-sm hover:shadow"
           style={{ touchAction: isMobile ? 'auto' : 'none' }}
         >
-          <div className="font-semibold text-sm">{t.contact}</div>
-          <div className="text-xs text-gray-500 mt-1">
+          <div className="font-semibold text-base md:text-sm">{t.contact}</div>
+          <div className="text-sm md:text-xs text-gray-700 mt-1 font-medium">
             {isMobile ? (language === 'ru' ? '👆 Нажмите чтобы добавить' : '👆 Tap to add') : t.contactDesc}
           </div>
         </button>
 
-        <div className="text-xs font-bold text-gray-700 uppercase tracking-wide mb-2 mt-6 flex items-center gap-2">
-          <div className="w-1 h-4 bg-green-500 rounded"></div>
-          {t.generic}
-        </div>
+        {/* Other content components */}
         <button
           ref={(ref) => {
             if (ref && !isMobile) {
-              connectors.create(ref, <Element is={HeroComponent} language={language} canvas />);
+              connectors.create(ref, <Element is={AboutComponent} language={language} canvas />);
             }
           }}
           onClick={isMobile ? () => handleMobileAdd(
-            <Element is={HeroComponent} language={language} canvas />,
+            <Element is={AboutComponent} language={language} canvas />,
             () => setMobileView && setMobileView('canvas')
           ) : undefined}
           className="w-full p-3 text-left border-2 border-gray-200 rounded-lg hover:border-blue-400 hover:bg-blue-50 transition-all active:scale-95 cursor-pointer shadow-sm hover:shadow"
           style={{ touchAction: isMobile ? 'auto' : 'none' }}
         >
-          <div className="font-semibold text-sm">{t.hero}</div>
-          <div className="text-xs text-gray-500 mt-1">
-            {isMobile ? (language === 'ru' ? '👆 Нажмите чтобы добавить' : '👆 Tap to add') : t.heroDesc}
+          <div className="font-semibold text-base md:text-sm">{t.about}</div>
+          <div className="text-sm md:text-xs text-gray-700 mt-1 font-medium">
+            {isMobile ? (language === 'ru' ? '👆 Нажмите чтобы добавить' : '👆 Tap to add') : t.aboutDesc}
           </div>
         </button>
         <button
@@ -1726,8 +2341,8 @@ const Toolbox = ({ language, setMobileView }: { language: 'en' | 'ru'; setMobile
           className="w-full p-3 text-left border-2 border-gray-200 rounded-lg hover:border-blue-400 hover:bg-blue-50 transition-all active:scale-95 cursor-pointer shadow-sm hover:shadow"
           style={{ touchAction: isMobile ? 'auto' : 'none' }}
         >
-          <div className="font-semibold text-sm">{t.about}</div>
-          <div className="text-xs text-gray-500 mt-1">
+          <div className="font-semibold text-base md:text-sm">{t.about}</div>
+          <div className="text-sm md:text-xs text-gray-700 mt-1 font-medium">
             {isMobile ? (language === 'ru' ? '👆 Нажмите чтобы добавить' : '👆 Tap to add') : t.aboutDesc}
           </div>
         </button>
@@ -1744,8 +2359,8 @@ const Toolbox = ({ language, setMobileView }: { language: 'en' | 'ru'; setMobile
           className="w-full p-3 text-left border-2 border-gray-200 rounded-lg hover:border-blue-400 hover:bg-blue-50 transition-all active:scale-95 cursor-pointer shadow-sm hover:shadow"
           style={{ touchAction: isMobile ? 'auto' : 'none' }}
         >
-          <div className="font-semibold text-sm">{t.projects}</div>
-          <div className="text-xs text-gray-500 mt-1">
+          <div className="font-semibold text-base md:text-sm">{t.projects}</div>
+          <div className="text-sm md:text-xs text-gray-700 mt-1 font-medium">
             {isMobile ? (language === 'ru' ? '👆 Нажмите чтобы добавить' : '👆 Tap to add') : t.projectsDesc}
           </div>
         </button>
@@ -1767,8 +2382,8 @@ const Toolbox = ({ language, setMobileView }: { language: 'en' | 'ru'; setMobile
           className="w-full p-3 text-left border-2 border-gray-200 rounded-lg hover:border-blue-400 hover:bg-blue-50 transition-all active:scale-95 cursor-pointer shadow-sm hover:shadow"
           style={{ touchAction: isMobile ? 'auto' : 'none' }}
         >
-          <div className="font-semibold text-sm">{t.pricing}</div>
-          <div className="text-xs text-gray-500 mt-1">
+          <div className="font-semibold text-base md:text-sm">{t.pricing}</div>
+          <div className="text-sm md:text-xs text-gray-700 mt-1 font-medium">
             {isMobile ? (language === 'ru' ? '👆 Нажмите чтобы добавить' : '👆 Tap to add') : t.pricingDesc}
           </div>
         </button>
@@ -1785,8 +2400,8 @@ const Toolbox = ({ language, setMobileView }: { language: 'en' | 'ru'; setMobile
           className="w-full p-3 text-left border-2 border-gray-200 rounded-lg hover:border-blue-400 hover:bg-blue-50 transition-all active:scale-95 cursor-pointer shadow-sm hover:shadow"
           style={{ touchAction: isMobile ? 'auto' : 'none' }}
         >
-          <div className="font-semibold text-sm">{t.testimonials}</div>
-          <div className="text-xs text-gray-500 mt-1">
+          <div className="font-semibold text-base md:text-sm">{t.testimonials}</div>
+          <div className="text-sm md:text-xs text-gray-700 mt-1 font-medium">
             {isMobile ? (language === 'ru' ? '👆 Нажмите чтобы добавить' : '👆 Tap to add') : t.testimonialsDesc}
           </div>
         </button>
@@ -1803,8 +2418,8 @@ const Toolbox = ({ language, setMobileView }: { language: 'en' | 'ru'; setMobile
           className="w-full p-3 text-left border-2 border-gray-200 rounded-lg hover:border-blue-400 hover:bg-blue-50 transition-all active:scale-95 cursor-pointer shadow-sm hover:shadow"
           style={{ touchAction: isMobile ? 'auto' : 'none' }}
         >
-          <div className="font-semibold text-sm">{t.gallery}</div>
-          <div className="text-xs text-gray-500 mt-1">
+          <div className="font-semibold text-base md:text-sm">{t.gallery}</div>
+          <div className="text-sm md:text-xs text-gray-700 mt-1 font-medium">
             {isMobile ? (language === 'ru' ? '👆 Нажмите чтобы добавить' : '👆 Tap to add') : t.galleryDesc}
           </div>
         </button>
@@ -1821,8 +2436,8 @@ const Toolbox = ({ language, setMobileView }: { language: 'en' | 'ru'; setMobile
           className="w-full p-3 text-left border-2 border-gray-200 rounded-lg hover:border-blue-400 hover:bg-blue-50 transition-all active:scale-95 cursor-pointer shadow-sm hover:shadow"
           style={{ touchAction: isMobile ? 'auto' : 'none' }}
         >
-          <div className="font-semibold text-sm">{t.cta}</div>
-          <div className="text-xs text-gray-500 mt-1">
+          <div className="font-semibold text-base md:text-sm">{t.cta}</div>
+          <div className="text-sm md:text-xs text-gray-700 mt-1 font-medium">
             {isMobile ? (language === 'ru' ? '👆 Нажмите чтобы добавить' : '👆 Tap to add') : t.ctaDesc}
           </div>
         </button>
@@ -1839,8 +2454,8 @@ const Toolbox = ({ language, setMobileView }: { language: 'en' | 'ru'; setMobile
           className="w-full p-3 text-left border-2 border-gray-200 rounded-lg hover:border-blue-400 hover:bg-blue-50 transition-all active:scale-95 cursor-pointer shadow-sm hover:shadow"
           style={{ touchAction: isMobile ? 'auto' : 'none' }}
         >
-          <div className="font-semibold text-sm">{t.timeline}</div>
-          <div className="text-xs text-gray-500 mt-1">
+          <div className="font-semibold text-base md:text-sm">{t.timeline}</div>
+          <div className="text-sm md:text-xs text-gray-700 mt-1 font-medium">
             {isMobile ? (language === 'ru' ? '👆 Нажмите чтобы добавить' : '👆 Tap to add') : t.timelineDesc}
           </div>
         </button>
@@ -1857,8 +2472,8 @@ const Toolbox = ({ language, setMobileView }: { language: 'en' | 'ru'; setMobile
           className="w-full p-3 text-left border-2 border-gray-200 rounded-lg hover:border-blue-400 hover:bg-blue-50 transition-all active:scale-95 cursor-pointer shadow-sm hover:shadow"
           style={{ touchAction: isMobile ? 'auto' : 'none' }}
         >
-          <div className="font-semibold text-sm">{t.faq}</div>
-          <div className="text-xs text-gray-500 mt-1">
+          <div className="font-semibold text-base md:text-sm">{t.faq}</div>
+          <div className="text-sm md:text-xs text-gray-700 mt-1 font-medium">
             {isMobile ? (language === 'ru' ? '👆 Нажмите чтобы добавить' : '👆 Tap to add') : t.faqDesc}
           </div>
         </button>
@@ -1875,8 +2490,8 @@ const Toolbox = ({ language, setMobileView }: { language: 'en' | 'ru'; setMobile
           className="w-full p-3 text-left border-2 border-gray-200 rounded-lg hover:border-blue-400 hover:bg-blue-50 transition-all active:scale-95 cursor-pointer shadow-sm hover:shadow"
           style={{ touchAction: isMobile ? 'auto' : 'none' }}
         >
-          <div className="font-semibold text-sm">{t.video}</div>
-          <div className="text-xs text-gray-500 mt-1">
+          <div className="font-semibold text-base md:text-sm">{t.video}</div>
+          <div className="text-sm md:text-xs text-gray-700 mt-1 font-medium">
             {isMobile ? (language === 'ru' ? '👆 Нажмите чтобы добавить' : '👆 Tap to add') : t.videoDesc}
           </div>
         </button>
@@ -1893,8 +2508,8 @@ const Toolbox = ({ language, setMobileView }: { language: 'en' | 'ru'; setMobile
           className="w-full p-3 text-left border-2 border-gray-200 rounded-lg hover:border-blue-400 hover:bg-blue-50 transition-all active:scale-95 cursor-pointer shadow-sm hover:shadow"
           style={{ touchAction: isMobile ? 'auto' : 'none' }}
         >
-          <div className="font-semibold text-sm">{t.social}</div>
-          <div className="text-xs text-gray-500 mt-1">
+          <div className="font-semibold text-base md:text-sm">{t.social}</div>
+          <div className="text-sm md:text-xs text-gray-700 mt-1 font-medium">
             {isMobile ? (language === 'ru' ? '👆 Нажмите чтобы добавить' : '👆 Tap to add') : t.socialDesc}
           </div>
         </button>
@@ -1933,6 +2548,74 @@ export function CraftJSTemplateBuilder({ template }: { template: TemplateConfig 
   const [showSuccessToast, setShowSuccessToast] = React.useState(false);
   const [showTelegramModal, setShowTelegramModal] = React.useState(false);
   const [showWhatsAppModal, setShowWhatsAppModal] = React.useState(false);
+
+  // Keyboard Navigation
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      // Don't trigger shortcuts if user is typing in an input/textarea
+      if (
+        (e.target as HTMLElement)?.tagName === 'INPUT' ||
+        (e.target as HTMLElement)?.tagName === 'TEXTAREA'
+      ) {
+        return;
+      }
+
+      // Delete key - delete selected component
+      if (e.key === 'Delete' && editorActions?.query) {
+        try {
+          const selectedNodes = editorActions.query.getEvent('selected').all();
+          if (selectedNodes.length > 0) {
+            e.preventDefault();
+            editorActions.delete(selectedNodes[0]);
+          }
+        } catch (err) {
+          console.error('Error deleting component:', err);
+        }
+      }
+
+      // Escape key - deselect component
+      if (e.key === 'Escape' && editorActions) {
+        e.preventDefault();
+        editorActions.selectNode('');
+      }
+
+      // Ctrl/Cmd + S - save
+      if ((e.metaKey || e.ctrlKey) && e.key === 's') {
+        e.preventDefault();
+        handleSave();
+      }
+
+      // Ctrl/Cmd + Z - undo (if history is implemented)
+      if ((e.metaKey || e.ctrlKey) && e.key === 'z' && editorActions?.history) {
+        e.preventDefault();
+        try {
+          editorActions.history.undo();
+        } catch (err) {
+          console.log('Undo not available yet');
+        }
+      }
+
+      // Ctrl/Cmd + Y or Ctrl/Cmd + Shift + Z - redo (if history is implemented)
+      if (
+        ((e.metaKey || e.ctrlKey) && e.key === 'y') ||
+        ((e.metaKey || e.ctrlKey) && e.shiftKey && e.key === 'z')
+      ) {
+        if (editorActions?.history) {
+          e.preventDefault();
+          try {
+            editorActions.history.redo();
+          } catch (err) {
+            console.log('Redo not available yet');
+          }
+        }
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [editorActions]);
 
   const handleSave = () => {
     setIsSaving(true);
@@ -2053,7 +2736,7 @@ export function CraftJSTemplateBuilder({ template }: { template: TemplateConfig 
   const currentText = infoText[language];
 
   return (
-    <div className="h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col">
       {/* Header */}
       <div className="bg-white border-b shadow-sm px-4 sm:px-8 py-4 sm:py-5 flex items-center justify-between flex-shrink-0">
         <div className="flex items-center gap-3 sm:gap-6 min-w-0 flex-1">
@@ -2185,6 +2868,11 @@ export function CraftJSTemplateBuilder({ template }: { template: TemplateConfig 
       {/* Editor */}
       <Editor
         resolver={{
+          // NEW UNIFIED COMPONENTS (Recommended)
+          Hero,
+          Stats,
+          Skills,
+          // LEGACY COMPONENTS (Backward compatibility)
           SplitScreenHero,
           SplitScreenStats,
           SplitScreenSkills,
@@ -2207,7 +2895,7 @@ export function CraftJSTemplateBuilder({ template }: { template: TemplateConfig 
         }}
       >
         <EditorActionsCapturer setActions={setEditorActions} />
-        <div className="flex-1 flex overflow-hidden relative">
+        <div className="flex-1 flex relative min-h-0">
           {/* Toolbox - Hidden on mobile unless active */}
           <div className={`toolbox-container ${mobileView === 'components' ? 'block' : 'hidden'} md:block absolute md:relative inset-0 md:inset-auto z-20 md:z-auto`}>
             <Toolbox language={language} setMobileView={setMobileView} />

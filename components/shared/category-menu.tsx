@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FiX } from "react-icons/fi";
 import { Badge } from "@/components/ui/badge";
+import { useI18n } from "@/lib/i18n-context";
 import {
   FiBriefcase,
   FiZap,
@@ -55,6 +56,7 @@ export function CategoryMenu({
   categoryCounts
 }: CategoryMenuProps) {
   const [isOpen, setIsOpen] = useState(false);
+  const { language } = useI18n();
 
   // Close on escape key
   useEffect(() => {
@@ -149,7 +151,7 @@ export function CategoryMenu({
           >
             {/* Header */}
             <div className="sticky top-0 bg-background border-b border-border p-4 flex items-center justify-between">
-              <h2 className="text-lg font-semibold">Категории</h2>
+              <h2 className="text-lg font-semibold">{language === 'ru' ? 'Категории' : 'Categories'}</h2>
               <button
                 onClick={() => setIsOpen(false)}
                 className="p-2 rounded-full hover:bg-muted touch-manipulation min-h-[44px] min-w-[44px] flex items-center justify-center"

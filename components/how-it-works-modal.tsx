@@ -110,7 +110,7 @@ export function HowItWorksModal({ language = 'en' }: HowItWorksModalProps) {
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 20 }}
               transition={{ type: "spring", duration: 0.5 }}
-              className="relative w-full max-w-5xl max-h-[95vh] h-full sm:h-auto mx-2 sm:mx-4 bg-white dark:bg-gray-900 rounded-xl sm:rounded-2xl shadow-2xl overflow-hidden flex flex-col"
+              className="relative w-full max-w-xs sm:max-w-lg md:max-w-5xl max-h-[95vh] h-full sm:h-auto mx-2 sm:mx-4 bg-white dark:bg-gray-900 rounded-xl sm:rounded-2xl shadow-2xl overflow-hidden flex flex-col"
             >
               {/* Header */}
               <div className="relative bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 px-4 sm:px-6 md:px-8 py-4 sm:py-6 md:py-8">
@@ -156,7 +156,7 @@ export function HowItWorksModal({ language = 'en' }: HowItWorksModalProps) {
                         {/* Icon & Number */}
                         <div className="flex-shrink-0 mx-auto lg:mx-0">
                           <div className="relative">
-                            <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 rounded-xl sm:rounded-2xl bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 flex items-center justify-center text-white shadow-lg">
+                            <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-xl sm:rounded-2xl bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 flex items-center justify-center text-white shadow-lg">
                               <div className="scale-75 sm:scale-90 md:scale-100">
                                 {step.icon}
                               </div>

@@ -217,10 +217,10 @@ export function HelpCenter({ language = "en", onClose, defaultArticleId }: HelpC
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 50 }}
-              className="fixed inset-4 md:inset-auto md:top-1/2 md:left-1/2 md:transform md:-translate-x-1/2 md:-translate-y-1/2 md:w-[90vw] md:max-w-4xl md:h-[85vh] bg-background rounded-2xl shadow-2xl z-[101] flex flex-col overflow-hidden"
+              className="fixed inset-2 sm:inset-4 md:inset-auto md:top-1/2 md:left-1/2 md:transform md:-translate-x-1/2 md:-translate-y-1/2 md:w-[90vw] md:max-w-4xl md:h-[85vh] bg-background rounded-2xl shadow-2xl z-[101] flex flex-col overflow-hidden"
             >
               {/* Header */}
-              <div className="bg-gradient-to-br from-blue-600 to-purple-600 p-6 text-white flex-shrink-0">
+              <div className="bg-gradient-to-br from-blue-600 to-purple-600 p-4 sm:p-6 text-white flex-shrink-0">
                 <div className="flex items-start justify-between mb-4">
                   <div>
                     <h2 className="text-2xl font-bold mb-1">

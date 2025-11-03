@@ -186,14 +186,14 @@ export function OnboardingTour({
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.9 }}
-            className="fixed z-[9999] w-[90vw] sm:w-96 max-w-md"
+            className="fixed z-[9999] w-[calc(100vw-32px)] sm:w-96 max-w-md"
             style={getTooltipPosition()}
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl shadow-2xl p-6 text-white">
+            <div className="bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl shadow-2xl p-4 sm:p-6 text-white">
               {/* Header */}
               <div className="flex items-start justify-between mb-3">
-                <h3 className="text-xl font-bold flex-1 pr-2">{displayTitle}</h3>
+                <h3 className="text-lg sm:text-xl font-bold flex-1 pr-2">{displayTitle}</h3>
                 <button
                   onClick={handleSkip}
                   className="flex-shrink-0 hover:bg-white/20 rounded-full p-1.5 transition-colors"
