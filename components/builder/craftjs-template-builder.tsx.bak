@@ -25,7 +25,7 @@ import { OnboardingTour, TourStep } from "@/components/onboarding-tour";
 import { SendToTelegramModal } from "@/components/send-to-telegram-modal";
 import { SendToWhatsAppModal } from "@/components/send-to-whatsapp-modal";
 import { useI18n } from "@/lib/i18n-context";
-import { BuilderTutorialAnimation } from "@/components/builder-tutorial-animation";
+import { BuilderTutorialAnimation, ShowTutorialButton } from "@/components/builder-tutorial-animation";
 
 // Import touch polyfill for mobile drag & drop support
 import "drag-drop-touch";
@@ -2205,7 +2205,7 @@ const Toolbox = ({ language, setMobileView }: { language: 'en' | 'ru'; setMobile
     <div className="w-full md:w-64 bg-white border-r h-full overflow-y-auto">
       <div className="p-3 sm:p-4 border-b bg-gray-50">
         <h3 className="font-bold text-base sm:text-lg">{t.components}</h3>
-        <p className="text-sm md:text-xs text-gray-900 mt-1 font-bold">{isMobile ? (language === 'ru' ? 'Нажмите для добавления' : 'Tap to add components') : 'Drag to canvas'}</p>
+        <p className="text-sm md:text-xs text-gray-700 mt-1 font-medium">{isMobile ? (language === 'ru' ? 'Нажмите для добавления' : 'Tap to add components') : 'Drag to canvas'}</p>
       </div>
       <div className="p-3 sm:p-4 space-y-3">
         {/* NEW UNIFIED COMPONENTS SECTION */}
@@ -2232,7 +2232,7 @@ const Toolbox = ({ language, setMobileView }: { language: 'en' | 'ru'; setMobile
             <span className="text-purple-600 text-xl">✨</span>
             {t.unifiedHero}
           </div>
-          <div className="text-sm md:text-xs text-gray-900 mt-1 font-bold">
+          <div className="text-sm md:text-xs text-gray-700 mt-1 font-medium">
             {isMobile ? (language === 'ru' ? '👆 Нажмите чтобы добавить' : '👆 Tap to add') : t.unifiedHeroDesc}
           </div>
         </button>
@@ -2255,7 +2255,7 @@ const Toolbox = ({ language, setMobileView }: { language: 'en' | 'ru'; setMobile
             <span className="text-purple-600 text-xl">✨</span>
             {t.unifiedStats}
           </div>
-          <div className="text-sm md:text-xs text-gray-900 mt-1 font-bold">
+          <div className="text-sm md:text-xs text-gray-700 mt-1 font-medium">
             {isMobile ? (language === 'ru' ? '👆 Нажмите чтобы добавить' : '👆 Tap to add') : t.unifiedStatsDesc}
           </div>
         </button>
@@ -2278,7 +2278,7 @@ const Toolbox = ({ language, setMobileView }: { language: 'en' | 'ru'; setMobile
             <span className="text-purple-600 text-xl">✨</span>
             {t.unifiedSkills}
           </div>
-          <div className="text-sm md:text-xs text-gray-900 mt-1 font-bold">
+          <div className="text-sm md:text-xs text-gray-700 mt-1 font-medium">
             {isMobile ? (language === 'ru' ? '👆 Нажмите чтобы добавить' : '👆 Tap to add') : t.unifiedSkillsDesc}
           </div>
         </button>
@@ -2304,7 +2304,7 @@ const Toolbox = ({ language, setMobileView }: { language: 'en' | 'ru'; setMobile
           style={{ touchAction: isMobile ? 'auto' : 'none' }}
         >
           <div className="font-semibold text-base md:text-sm">{t.contact}</div>
-          <div className="text-sm md:text-xs text-gray-900 mt-1 font-bold">
+          <div className="text-sm md:text-xs text-gray-700 mt-1 font-medium">
             {isMobile ? (language === 'ru' ? '👆 Нажмите чтобы добавить' : '👆 Tap to add') : t.contactDesc}
           </div>
         </button>
@@ -2324,7 +2324,7 @@ const Toolbox = ({ language, setMobileView }: { language: 'en' | 'ru'; setMobile
           style={{ touchAction: isMobile ? 'auto' : 'none' }}
         >
           <div className="font-semibold text-base md:text-sm">{t.about}</div>
-          <div className="text-sm md:text-xs text-gray-900 mt-1 font-bold">
+          <div className="text-sm md:text-xs text-gray-700 mt-1 font-medium">
             {isMobile ? (language === 'ru' ? '👆 Нажмите чтобы добавить' : '👆 Tap to add') : t.aboutDesc}
           </div>
         </button>
@@ -2342,7 +2342,7 @@ const Toolbox = ({ language, setMobileView }: { language: 'en' | 'ru'; setMobile
           style={{ touchAction: isMobile ? 'auto' : 'none' }}
         >
           <div className="font-semibold text-base md:text-sm">{t.about}</div>
-          <div className="text-sm md:text-xs text-gray-900 mt-1 font-bold">
+          <div className="text-sm md:text-xs text-gray-700 mt-1 font-medium">
             {isMobile ? (language === 'ru' ? '👆 Нажмите чтобы добавить' : '👆 Tap to add') : t.aboutDesc}
           </div>
         </button>
@@ -2360,7 +2360,7 @@ const Toolbox = ({ language, setMobileView }: { language: 'en' | 'ru'; setMobile
           style={{ touchAction: isMobile ? 'auto' : 'none' }}
         >
           <div className="font-semibold text-base md:text-sm">{t.projects}</div>
-          <div className="text-sm md:text-xs text-gray-900 mt-1 font-bold">
+          <div className="text-sm md:text-xs text-gray-700 mt-1 font-medium">
             {isMobile ? (language === 'ru' ? '👆 Нажмите чтобы добавить' : '👆 Tap to add') : t.projectsDesc}
           </div>
         </button>
@@ -2383,7 +2383,7 @@ const Toolbox = ({ language, setMobileView }: { language: 'en' | 'ru'; setMobile
           style={{ touchAction: isMobile ? 'auto' : 'none' }}
         >
           <div className="font-semibold text-base md:text-sm">{t.pricing}</div>
-          <div className="text-sm md:text-xs text-gray-900 mt-1 font-bold">
+          <div className="text-sm md:text-xs text-gray-700 mt-1 font-medium">
             {isMobile ? (language === 'ru' ? '👆 Нажмите чтобы добавить' : '👆 Tap to add') : t.pricingDesc}
           </div>
         </button>
@@ -2401,7 +2401,7 @@ const Toolbox = ({ language, setMobileView }: { language: 'en' | 'ru'; setMobile
           style={{ touchAction: isMobile ? 'auto' : 'none' }}
         >
           <div className="font-semibold text-base md:text-sm">{t.testimonials}</div>
-          <div className="text-sm md:text-xs text-gray-900 mt-1 font-bold">
+          <div className="text-sm md:text-xs text-gray-700 mt-1 font-medium">
             {isMobile ? (language === 'ru' ? '👆 Нажмите чтобы добавить' : '👆 Tap to add') : t.testimonialsDesc}
           </div>
         </button>
@@ -2419,7 +2419,7 @@ const Toolbox = ({ language, setMobileView }: { language: 'en' | 'ru'; setMobile
           style={{ touchAction: isMobile ? 'auto' : 'none' }}
         >
           <div className="font-semibold text-base md:text-sm">{t.gallery}</div>
-          <div className="text-sm md:text-xs text-gray-900 mt-1 font-bold">
+          <div className="text-sm md:text-xs text-gray-700 mt-1 font-medium">
             {isMobile ? (language === 'ru' ? '👆 Нажмите чтобы добавить' : '👆 Tap to add') : t.galleryDesc}
           </div>
         </button>
@@ -2437,7 +2437,7 @@ const Toolbox = ({ language, setMobileView }: { language: 'en' | 'ru'; setMobile
           style={{ touchAction: isMobile ? 'auto' : 'none' }}
         >
           <div className="font-semibold text-base md:text-sm">{t.cta}</div>
-          <div className="text-sm md:text-xs text-gray-900 mt-1 font-bold">
+          <div className="text-sm md:text-xs text-gray-700 mt-1 font-medium">
             {isMobile ? (language === 'ru' ? '👆 Нажмите чтобы добавить' : '👆 Tap to add') : t.ctaDesc}
           </div>
         </button>
@@ -2455,7 +2455,7 @@ const Toolbox = ({ language, setMobileView }: { language: 'en' | 'ru'; setMobile
           style={{ touchAction: isMobile ? 'auto' : 'none' }}
         >
           <div className="font-semibold text-base md:text-sm">{t.timeline}</div>
-          <div className="text-sm md:text-xs text-gray-900 mt-1 font-bold">
+          <div className="text-sm md:text-xs text-gray-700 mt-1 font-medium">
             {isMobile ? (language === 'ru' ? '👆 Нажмите чтобы добавить' : '👆 Tap to add') : t.timelineDesc}
           </div>
         </button>
@@ -2473,7 +2473,7 @@ const Toolbox = ({ language, setMobileView }: { language: 'en' | 'ru'; setMobile
           style={{ touchAction: isMobile ? 'auto' : 'none' }}
         >
           <div className="font-semibold text-base md:text-sm">{t.faq}</div>
-          <div className="text-sm md:text-xs text-gray-900 mt-1 font-bold">
+          <div className="text-sm md:text-xs text-gray-700 mt-1 font-medium">
             {isMobile ? (language === 'ru' ? '👆 Нажмите чтобы добавить' : '👆 Tap to add') : t.faqDesc}
           </div>
         </button>
@@ -2491,7 +2491,7 @@ const Toolbox = ({ language, setMobileView }: { language: 'en' | 'ru'; setMobile
           style={{ touchAction: isMobile ? 'auto' : 'none' }}
         >
           <div className="font-semibold text-base md:text-sm">{t.video}</div>
-          <div className="text-sm md:text-xs text-gray-900 mt-1 font-bold">
+          <div className="text-sm md:text-xs text-gray-700 mt-1 font-medium">
             {isMobile ? (language === 'ru' ? '👆 Нажмите чтобы добавить' : '👆 Tap to add') : t.videoDesc}
           </div>
         </button>
@@ -2509,7 +2509,7 @@ const Toolbox = ({ language, setMobileView }: { language: 'en' | 'ru'; setMobile
           style={{ touchAction: isMobile ? 'auto' : 'none' }}
         >
           <div className="font-semibold text-base md:text-sm">{t.social}</div>
-          <div className="text-sm md:text-xs text-gray-900 mt-1 font-bold">
+          <div className="text-sm md:text-xs text-gray-700 mt-1 font-medium">
             {isMobile ? (language === 'ru' ? '👆 Нажмите чтобы добавить' : '👆 Tap to add') : t.socialDesc}
           </div>
         </button>
@@ -2549,11 +2549,20 @@ export function CraftJSTemplateBuilder({ template }: { template: TemplateConfig 
   const [showTelegramModal, setShowTelegramModal] = React.useState(false);
   const [showWhatsAppModal, setShowWhatsAppModal] = React.useState(false);
 
-  // Tutorial state - user clicks button to show
-  const [showTutorial, setShowTutorial] = React.useState(false);
+  // Tutorial state - shows on first visit
+  const [showTutorial, setShowTutorial] = React.useState(() => {
+    if (typeof window !== "undefined") {
+      const hasSeenTutorial = localStorage.getItem("hasSeenBuilderTutorial");
+      return !hasSeenTutorial;
+    }
+    return false;
+  });
 
   const handleCloseTutorial = () => {
     setShowTutorial(false);
+    if (typeof window !== "undefined") {
+      localStorage.setItem("hasSeenBuilderTutorial", "true");
+    }
   };
 
   // Keyboard Navigation
@@ -2744,21 +2753,6 @@ export function CraftJSTemplateBuilder({ template }: { template: TemplateConfig 
 
   return (
     <div className="min-h-screen flex flex-col">
-      {/* Mobile Touch Scroll Fix - Disable drag on touch devices, enable scroll */}
-      <style jsx global>{`
-        @media (pointer: coarse) {
-          /* On touch devices, prevent drag interference with scrolling */
-          [data-craftjs-node] {
-            pointer-events: auto !important;
-            touch-action: pan-y !important;
-          }
-          /* Allow scrolling in canvas */
-          .craftjs-renderer {
-            -webkit-overflow-scrolling: touch !important;
-            touch-action: pan-y !important;
-          }
-        }
-      `}</style>
       {/* Header */}
       <div className="bg-white border-b shadow-sm px-4 sm:px-8 py-4 sm:py-5 flex items-center justify-between flex-shrink-0">
         <div className="flex items-center gap-3 sm:gap-6 min-w-0 flex-1">
@@ -2931,9 +2925,7 @@ export function CraftJSTemplateBuilder({ template }: { template: TemplateConfig 
               userSelect: 'none',
               WebkitUserSelect: 'none',
               MozUserSelect: 'none',
-              msUserSelect: 'none',
-              touchAction: 'pan-y',
-              WebkitOverflowScrolling: 'touch'
+              msUserSelect: 'none'
             }}
           >
             <Frame key={language}>
@@ -3083,6 +3075,12 @@ export function CraftJSTemplateBuilder({ template }: { template: TemplateConfig 
           autoPlay={true}
         />
       )}
+
+      {/* Show Tutorial Button */}
+      <ShowTutorialButton
+        onClick={() => setShowTutorial(true)}
+        language={language}
+      />
     </div>
   );
 }
