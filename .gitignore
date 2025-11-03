@@ -37,3 +37,68 @@ next-env.d.ts
 # test and dev files (specific paths only)
 mobile-fix-backups/
 mobile-fix-backups-phase2/
+
+# Documentation and reports
+*.md
+!README.md
+!CLAUDE.md
+
+# Screenshots and images
+*.png
+*.jpg
+*.jpeg
+*.gif
+!public/**/*.png
+!public/**/*.jpg
+!public/**/*.jpeg
+
+# Test files and scripts
+*.test.ts
+*.test.js
+*.spec.ts
+*.spec.js
+test-*.ts
+test-*.js
+check-*.ts
+check-*.js
+audit-*.ts
+audit-*.js
+debug-*.ts
+debug-*.js
+screenshot-*.ts
+*-inspect.ts
+*-inspect.png
+generate-*.ts
+generate-*.js
+
+# Build and temporary files
+*.log
+*.tsbuildinfo
+yarn.lock
+playwright-report/
+test-results/
+test-screenshots/
+mobile-test-screenshots/
+mobile-deep-check-screenshots/
+screenshots/
+
+# Scripts
+*.sh
+*.py
+fix-*.js
+fix-*.ts
+
+# HTML files (except in public)
+*.html
+!public/**/*.html
+
+# Vercel and deployment
+.vercel/
+
+# Test configuration backups
+mobile-fix-backups*/
+
+# Design and research
+design-analysis/
+design-research/
+research/
