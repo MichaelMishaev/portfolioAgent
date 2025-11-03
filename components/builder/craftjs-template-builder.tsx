@@ -2656,47 +2656,6 @@ export function CraftJSTemplateBuilder({ template }: { template: TemplateConfig 
     return null;
   };
 
-  // Builder tour steps
-  const builderTourSteps: TourStep[] = [
-    {
-      title: language === 'en' ? "Welcome to the Builder!" : "Добро пожаловать в конструктор!",
-      content: language === 'en'
-        ? "Let's quickly show you how to customize your template. This tour will only take 30 seconds!"
-        : "Давайте быстро покажем, как настроить ваш шаблон. Этот тур займет всего 30 секунд!",
-      position: "center",
-    },
-    {
-      target: ".toolbox-container",
-      title: language === 'en' ? "Add Components" : "Добавить компоненты",
-      content: language === 'en'
-        ? "Click these buttons to add new sections to your page. Try adding a Hero, About, or Contact section!"
-        : "Нажмите эти кнопки, чтобы добавить новые секции на вашу страницу. Попробуйте добавить Hero, О нас или Контакты!",
-      position: "right",
-    },
-    {
-      target: ".craftjs-renderer",
-      title: language === 'en' ? "Click to Edit" : "Нажмите для редактирования",
-      content: language === 'en'
-        ? "Click on any component in the preview to select it. On mobile, tap components to select them."
-        : "Нажмите на любой компонент в предварительном просмотре, чтобы выбрать его. На мобильных устройствах нажмите, чтобы выбрать.",
-      position: "left",
-    },
-    {
-      target: ".settings-panel-container",
-      title: language === 'en' ? "Customize Settings" : "Настройка параметров",
-      content: language === 'en'
-        ? "After selecting a component, change its colors, text, images, and more here. Changes appear instantly!"
-        : "После выбора компонента измените его цвета, текст, изображения и многое другое здесь. Изменения появляются мгновенно!",
-      position: "left",
-    },
-    {
-      title: language === 'en' ? "You're Ready!" : "Вы готовы!",
-      content: language === 'en'
-        ? "That's it! Click components to edit, drag to rearrange, and save when done. Have fun building!"
-        : "Вот и все! Нажимайте компоненты для редактирования, перетаскивайте для перестановки и сохраняйте, когда закончите. Удачи!",
-      position: "center",
-    },
-  ];
 
   // Update all components when language changes
   React.useEffect(() => {
@@ -3025,14 +2984,6 @@ export function CraftJSTemplateBuilder({ template }: { template: TemplateConfig 
         </div>
       )}
 
-      {/* Builder Tour */}
-      <OnboardingTour
-        steps={builderTourSteps}
-        tourKey="builder-tour"
-        language={language}
-        autoStart={true}
-        showProgress={true}
-      />
 
       {/* Send to Telegram Modal */}
       <SendToTelegramModal
