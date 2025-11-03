@@ -185,9 +185,41 @@
         "description": "Focus on simplicity, whitespace, and clarity. Everything unnecessary is stripped away.",
         "category": "Professional",
         "difficulty": "beginner",
-        "features": ["Dark Mode", "Responsive", "SEO Optimized", "Contact Form"],
-        "tags": ["minimal", "clean", "professional", "modern"],
-        "bestFor": ["Designers", "Developers", "Consultants"]
+        "features": [
+          "Dark Mode",
+          "Responsive",
+          "SEO Optimized",
+          "Contact Form"
+        ],
+        "tags": [
+          "minimal",
+          "clean",
+          "professional",
+          "modern",
+          "simple",
+          "whitespace",
+          "elegant",
+          "dark-mode",
+          "responsive",
+          "seo",
+          "contact-form",
+          "designers",
+          "developers",
+          "consultants",
+          "seo-optimized",
+          "focus",
+          "simplicity",
+          "clarity",
+          "everything",
+          "minimalist",
+          "easy",
+          "simple-setup"
+        ],
+        "bestFor": [
+          "Designers",
+          "Developers",
+          "Consultants"
+        ]
       },
       {
         "id": "dark-mode",
@@ -195,9 +227,38 @@
         "description": "Dark or near-black backgrounds with contrasting light text. Cinematic and sophisticated.",
         "category": "Creative",
         "difficulty": "intermediate",
-        "features": ["Video Background", "Smooth Animations", "Dark Theme", "Gallery"],
-        "tags": ["dark", "cinematic", "elegant", "premium"],
-        "bestFor": ["Photographers", "UI/UX Designers", "Creative Studios"]
+        "features": [
+          "Video Background",
+          "Smooth Animations",
+          "Dark Theme",
+          "Gallery"
+        ],
+        "tags": [
+          "dark",
+          "cinematic",
+          "elegant",
+          "premium",
+          "video-background",
+          "smooth-animations",
+          "gallery",
+          "photographers",
+          "ui-ux-designers",
+          "creative",
+          "sophisticated",
+          "contrasting",
+          "dark-theme",
+          "creative-studios",
+          "near-black",
+          "backgrounds",
+          "light",
+          "mode",
+          "light-theme"
+        ],
+        "bestFor": [
+          "Photographers",
+          "UI/UX Designers",
+          "Creative Studios"
+        ]
       },
       {
         "id": "bold-typography",
@@ -205,9 +266,39 @@
         "description": "Typography is the design itself — big, oversized type as the hero element.",
         "category": "Creative",
         "difficulty": "beginner",
-        "features": ["Large Typography", "Minimal Design", "Fast Loading", "Mobile First"],
-        "tags": ["typography", "bold", "minimal", "creative"],
-        "bestFor": ["Personal Brands", "Creative Freelancers"]
+        "features": [
+          "Large Typography",
+          "Minimal Design",
+          "Fast Loading",
+          "Mobile First"
+        ],
+        "tags": [
+          "typography",
+          "bold",
+          "minimal",
+          "creative",
+          "large-typography",
+          "oversized-text",
+          "fast-loading",
+          "mobile-first",
+          "personal-brand",
+          "freelancer",
+          "simple",
+          "minimal-design",
+          "personal-brands",
+          "creative-freelancers",
+          "design",
+          "itself",
+          "oversized",
+          "type",
+          "hero",
+          "easy",
+          "simple-setup"
+        ],
+        "bestFor": [
+          "Personal Brands",
+          "Creative Freelancers"
+        ]
       },
       {
         "id": "grid-masonry",
@@ -215,9 +306,39 @@
         "description": "Portfolio pieces displayed in visually consistent grid tiles. Perfect for visual content.",
         "category": "Portfolio",
         "difficulty": "intermediate",
-        "features": ["Masonry Grid", "Lightbox", "Filter Categories", "Lazy Loading"],
-        "tags": ["grid", "masonry", "portfolio", "gallery"],
-        "bestFor": ["Photographers", "Artists", "Agencies"]
+        "features": [
+          "Masonry Grid",
+          "Lightbox",
+          "Filter Categories",
+          "Lazy Loading"
+        ],
+        "tags": [
+          "grid",
+          "masonry",
+          "portfolio",
+          "gallery",
+          "masonry-grid",
+          "lightbox",
+          "filter-categories",
+          "lazy-loading",
+          "photographers",
+          "artists",
+          "visual-content",
+          "image-gallery",
+          "agencies",
+          "pieces",
+          "displayed",
+          "visually",
+          "consistent",
+          "layout",
+          "grid-layout",
+          "showcase"
+        ],
+        "bestFor": [
+          "Photographers",
+          "Artists",
+          "Agencies"
+        ]
       },
       {
         "id": "fullscreen-immersive",
@@ -225,9 +346,41 @@
         "description": "Hero image or video takes entire viewport. Minimal text, storytelling through visuals.",
         "category": "Creative",
         "difficulty": "advanced",
-        "features": ["Full-Screen Media", "Parallax", "Scroll Animations", "Video Support"],
-        "tags": ["immersive", "fullscreen", "cinematic", "video"],
-        "bestFor": ["Videographers", "Photographers", "Designers"]
+        "features": [
+          "Full-Screen Media",
+          "Parallax",
+          "Scroll Animations",
+          "Video Support"
+        ],
+        "tags": [
+          "immersive",
+          "fullscreen",
+          "cinematic",
+          "video",
+          "parallax",
+          "scroll-animations",
+          "video-support",
+          "storytelling",
+          "visual-first",
+          "videographers",
+          "photographers",
+          "full-screen-media",
+          "designers",
+          "creative",
+          "hero",
+          "image",
+          "takes",
+          "entire",
+          "full-screen",
+          "minimalist",
+          "advanced-features",
+          "complex"
+        ],
+        "bestFor": [
+          "Videographers",
+          "Photographers",
+          "Designers"
+        ]
       },
       {
         "id": "split-screen",
@@ -235,9 +388,36 @@
         "description": "Screen divided vertically — one half for imagery, one for text content.",
         "category": "Modern",
         "difficulty": "intermediate",
-        "features": ["Split Layout", "Alternating Sections", "Smooth Scroll", "Responsive"],
-        "tags": ["split", "balanced", "modern", "structured"],
-        "bestFor": ["Agencies", "Designers"]
+        "features": [
+          "Split Layout",
+          "Alternating Sections",
+          "Smooth Scroll",
+          "Responsive"
+        ],
+        "tags": [
+          "split",
+          "balanced",
+          "modern",
+          "structured",
+          "split-layout",
+          "alternating-sections",
+          "smooth-scroll",
+          "responsive",
+          "two-column",
+          "agencies",
+          "designers",
+          "screen",
+          "divided",
+          "vertically",
+          "half",
+          "imagery",
+          "split-screen",
+          "layout"
+        ],
+        "bestFor": [
+          "Agencies",
+          "Designers"
+        ]
       },
       {
         "id": "illustration-focus",
@@ -245,9 +425,38 @@
         "description": "Heavy use of hand-drawn, vector, or 3D illustrations with playful animations.",
         "category": "Creative",
         "difficulty": "advanced",
-        "features": ["Custom Illustrations", "Lottie Animations", "Bright Colors", "Playful UI"],
-        "tags": ["illustration", "playful", "creative", "animated"],
-        "bestFor": ["Illustrators", "Animators", "Creative Agencies"]
+        "features": [
+          "Custom Illustrations",
+          "Lottie Animations",
+          "Bright Colors",
+          "Playful UI"
+        ],
+        "tags": [
+          "illustration",
+          "playful",
+          "creative",
+          "animated",
+          "custom-illustrations",
+          "lottie-animations",
+          "bright-colors",
+          "playful-ui",
+          "illustrators",
+          "animators",
+          "creative-agencies",
+          "heavy",
+          "hand-drawn",
+          "vector",
+          "illustrations",
+          "focus",
+          "animations",
+          "advanced-features",
+          "complex"
+        ],
+        "bestFor": [
+          "Illustrators",
+          "Animators",
+          "Creative Agencies"
+        ]
       },
       {
         "id": "single-page",
@@ -255,9 +464,36 @@
         "description": "All content on one long page with smooth-scrolling navigation anchors.",
         "category": "Simple",
         "difficulty": "beginner",
-        "features": ["One Page", "Smooth Scroll", "Anchor Navigation", "Simple"],
-        "tags": ["simple", "one-page", "scroll", "personal"],
-        "bestFor": ["Freelancers", "Personal Sites", "Landing Pages"]
+        "features": [
+          "One Page",
+          "Smooth Scroll",
+          "Anchor Navigation",
+          "Simple"
+        ],
+        "tags": [
+          "simple",
+          "one-page",
+          "scroll",
+          "personal",
+          "smooth-scroll",
+          "anchor-navigation",
+          "freelancers",
+          "personal-sites",
+          "landing-pages",
+          "content",
+          "long",
+          "page",
+          "smooth-scrolling",
+          "navigation",
+          "single-page",
+          "easy",
+          "simple-setup"
+        ],
+        "bestFor": [
+          "Freelancers",
+          "Personal Sites",
+          "Landing Pages"
+        ]
       },
       {
         "id": "text-heavy",
@@ -265,9 +501,38 @@
         "description": "Typography-driven layout with no images. Perfect for bloggers and writers.",
         "category": "Blog",
         "difficulty": "beginner",
-        "features": ["SEO Optimized", "Blog Ready", "Reading Time", "Tags"],
-        "tags": ["blog", "text", "seo", "editorial"],
-        "bestFor": ["Writers", "Bloggers", "Journalists"]
+        "features": [
+          "SEO Optimized",
+          "Blog Ready",
+          "Reading Time",
+          "Tags"
+        ],
+        "tags": [
+          "blog",
+          "text",
+          "seo",
+          "editorial",
+          "seo-optimized",
+          "blog-ready",
+          "reading-time",
+          "tags",
+          "writers",
+          "bloggers",
+          "journalists",
+          "typography-driven",
+          "layout",
+          "images",
+          "perfect",
+          "text-heavy",
+          "blog-design",
+          "easy",
+          "simple-setup"
+        ],
+        "bestFor": [
+          "Writers",
+          "Bloggers",
+          "Journalists"
+        ]
       },
       {
         "id": "card-modular",
@@ -275,9 +540,35 @@
         "description": "Modular grid cards that are easy to rearrange and customize.",
         "category": "Modern",
         "difficulty": "beginner",
-        "features": ["Card Layout", "Flexible Grid", "Hover Effects", "Modern"],
-        "tags": ["cards", "modular", "modern", "flexible"],
-        "bestFor": ["Agencies", "Product Designers", "Developers"]
+        "features": [
+          "Card Layout",
+          "Flexible Grid",
+          "Hover Effects",
+          "Modern"
+        ],
+        "tags": [
+          "cards",
+          "modular",
+          "modern",
+          "flexible",
+          "card-layout",
+          "flexible-grid",
+          "hover-effects",
+          "agencies",
+          "product-designers",
+          "developers",
+          "grid",
+          "easy",
+          "rearrange",
+          "card-based",
+          "grid-layout",
+          "simple-setup"
+        ],
+        "bestFor": [
+          "Agencies",
+          "Product Designers",
+          "Developers"
+        ]
       },
       {
         "id": "kinetic-typography",
@@ -285,9 +576,38 @@
         "description": "Text that morphs, scales, and animates creating dynamic visual interest.",
         "category": "Experimental",
         "difficulty": "advanced",
-        "features": ["Text Animations", "Cursor Effects", "Dynamic Typography", "Motion Design"],
-        "tags": ["motion", "typography", "experimental", "dynamic"],
-        "bestFor": ["Motion Designers", "Creative Directors", "Digital Artists"]
+        "features": [
+          "Text Animations",
+          "Cursor Effects",
+          "Dynamic Typography",
+          "Motion Design"
+        ],
+        "tags": [
+          "motion",
+          "typography",
+          "experimental",
+          "dynamic",
+          "text-animations",
+          "cursor-effects",
+          "dynamic-typography",
+          "motion-design",
+          "motion-designers",
+          "creative-directors",
+          "digital-artists",
+          "text",
+          "morphs",
+          "scales",
+          "animates",
+          "creating",
+          "kinetic",
+          "advanced-features",
+          "complex"
+        ],
+        "bestFor": [
+          "Motion Designers",
+          "Creative Directors",
+          "Digital Artists"
+        ]
       },
       {
         "id": "bento-grid",
@@ -295,9 +615,34 @@
         "description": "Japanese bento-box inspired asymmetric grid layout with mixed-size blocks.",
         "category": "Modern",
         "difficulty": "intermediate",
-        "features": ["Asymmetric Grid", "Mixed Sizes", "Visual Hierarchy", "Modular"],
-        "tags": ["bento", "grid", "modern", "asymmetric"],
-        "bestFor": ["Product Designers", "Agencies", "Startups"]
+        "features": [
+          "Asymmetric Grid",
+          "Mixed Sizes",
+          "Visual Hierarchy",
+          "Modular"
+        ],
+        "tags": [
+          "bento",
+          "grid",
+          "modern",
+          "asymmetric",
+          "asymmetric-grid",
+          "mixed-sizes",
+          "visual-hierarchy",
+          "modular",
+          "product-designers",
+          "agencies",
+          "startups",
+          "japanese",
+          "bento-box",
+          "inspired",
+          "grid-layout"
+        ],
+        "bestFor": [
+          "Product Designers",
+          "Agencies",
+          "Startups"
+        ]
       },
       {
         "id": "3d-immersive",
@@ -305,9 +650,39 @@
         "description": "Interactive 3D scene with Three.js, particles, and scroll-linked animations.",
         "category": "Experimental",
         "difficulty": "advanced",
-        "features": ["Three.js", "3D Graphics", "WebGL", "Particle Systems", "Interactive"],
-        "tags": ["3d", "webgl", "threejs", "immersive", "interactive"],
-        "bestFor": ["3D Artists", "Creative Technologists", "Game Developers"]
+        "features": [
+          "Three.js",
+          "3D Graphics",
+          "WebGL",
+          "Particle Systems",
+          "Interactive"
+        ],
+        "tags": [
+          "3d",
+          "webgl",
+          "threejs",
+          "immersive",
+          "interactive",
+          "three.js",
+          "3d-graphics",
+          "particle-systems",
+          "3d-artists",
+          "creative-technologists",
+          "game-developers",
+          "experimental",
+          "scene",
+          "three",
+          "particles",
+          "scroll-linked",
+          "animations",
+          "advanced-features",
+          "complex"
+        ],
+        "bestFor": [
+          "3D Artists",
+          "Creative Technologists",
+          "Game Developers"
+        ]
       },
       {
         "id": "neo-brutalist",
@@ -315,9 +690,36 @@
         "description": "Raw, confrontational design with heavy borders, stark colors, and intentional chaos.",
         "category": "Experimental",
         "difficulty": "intermediate",
-        "features": ["Bold Borders", "Stark Colors", "Raw Design", "Confrontational"],
-        "tags": ["brutalism", "bold", "experimental", "edgy"],
-        "bestFor": ["Agencies", "Art Directors", "Rebellious Brands"]
+        "features": [
+          "Bold Borders",
+          "Stark Colors",
+          "Raw Design",
+          "Confrontational"
+        ],
+        "tags": [
+          "brutalism",
+          "bold",
+          "experimental",
+          "edgy",
+          "bold-borders",
+          "stark-colors",
+          "raw-design",
+          "confrontational",
+          "agencies",
+          "art-directors",
+          "rebellious-brands",
+          "design",
+          "heavy",
+          "borders",
+          "stark",
+          "neo-brutalist",
+          "chaos"
+        ],
+        "bestFor": [
+          "Agencies",
+          "Art Directors",
+          "Rebellious Brands"
+        ]
       },
       {
         "id": "organic-liquid",
@@ -325,9 +727,38 @@
         "description": "Fluid blob shapes with morphing animations and soft, nature-inspired gradients.",
         "category": "Creative",
         "difficulty": "advanced",
-        "features": ["Fluid Animations", "Morphing Blobs", "Organic Shapes", "Soft Gradients"],
-        "tags": ["organic", "fluid", "nature", "wellness"],
-        "bestFor": ["Wellness Brands", "Sustainable Businesses", "Lifestyle Coaches"]
+        "features": [
+          "Fluid Animations",
+          "Morphing Blobs",
+          "Organic Shapes",
+          "Soft Gradients"
+        ],
+        "tags": [
+          "organic",
+          "fluid",
+          "nature",
+          "wellness",
+          "fluid-animations",
+          "morphing-blobs",
+          "organic-shapes",
+          "soft-gradients",
+          "wellness-brands",
+          "sustainable-businesses",
+          "lifestyle-coaches",
+          "creative",
+          "blob",
+          "shapes",
+          "morphing",
+          "animations",
+          "liquid",
+          "advanced-features",
+          "complex"
+        ],
+        "bestFor": [
+          "Wellness Brands",
+          "Sustainable Businesses",
+          "Lifestyle Coaches"
+        ]
       },
       {
         "id": "data-dashboard",
@@ -335,9 +766,36 @@
         "description": "Interactive dashboard with charts, graphs, and real-time metrics visualization.",
         "category": "Professional",
         "difficulty": "advanced",
-        "features": ["Charts", "Graphs", "KPI Cards", "Data Visualization", "Analytics"],
-        "tags": ["dashboard", "data", "analytics", "professional"],
-        "bestFor": ["Data Analysts", "Business Intelligence", "Consultants"]
+        "features": [
+          "Charts",
+          "Graphs",
+          "KPI Cards",
+          "Data Visualization",
+          "Analytics"
+        ],
+        "tags": [
+          "dashboard",
+          "data",
+          "analytics",
+          "professional",
+          "charts",
+          "graphs",
+          "kpi-cards",
+          "data-visualization",
+          "data-analysts",
+          "business-intelligence",
+          "consultants",
+          "interactive",
+          "real-time",
+          "visualization",
+          "advanced-features",
+          "complex"
+        ],
+        "bestFor": [
+          "Data Analysts",
+          "Business Intelligence",
+          "Consultants"
+        ]
       },
       {
         "id": "y2k-retro",
@@ -345,9 +803,37 @@
         "description": "Early 2000s aesthetic with bright colors, chunky typography, and playful elements.",
         "category": "Creative",
         "difficulty": "intermediate",
-        "features": ["Retro Design", "Bright Colors", "Cursor Effects", "Playful UI"],
-        "tags": ["y2k", "retro", "nostalgia", "playful", "colorful"],
-        "bestFor": ["Digital Artists", "Content Creators", "Youth Brands"]
+        "features": [
+          "Retro Design",
+          "Bright Colors",
+          "Cursor Effects",
+          "Playful UI"
+        ],
+        "tags": [
+          "y2k",
+          "retro",
+          "nostalgia",
+          "playful",
+          "colorful",
+          "retro-design",
+          "bright-colors",
+          "cursor-effects",
+          "playful-ui",
+          "digital-artists",
+          "content-creators",
+          "youth-brands",
+          "creative",
+          "early",
+          "2000s",
+          "aesthetic",
+          "bright",
+          "colors"
+        ],
+        "bestFor": [
+          "Digital Artists",
+          "Content Creators",
+          "Youth Brands"
+        ]
       },
       {
         "id": "ar-spatial",
@@ -355,9 +841,37 @@
         "description": "Futuristic spatial computing interface with layered UI and gesture-inspired interactions.",
         "category": "Experimental",
         "difficulty": "advanced",
-        "features": ["Spatial UI", "Layered Design", "3D Depth", "Future Tech"],
-        "tags": ["ar", "spatial", "future", "3d", "experimental"],
-        "bestFor": ["AR/VR Developers", "Future Tech Companies", "Innovation Labs"]
+        "features": [
+          "Spatial UI",
+          "Layered Design",
+          "3D Depth",
+          "Future Tech"
+        ],
+        "tags": [
+          "ar",
+          "spatial",
+          "future",
+          "3d",
+          "experimental",
+          "spatial-ui",
+          "layered-design",
+          "3d-depth",
+          "future-tech",
+          "ar-vr-developers",
+          "future-tech-companies",
+          "innovation-labs",
+          "futuristic",
+          "computing",
+          "interface",
+          "layered",
+          "advanced-features",
+          "complex"
+        ],
+        "bestFor": [
+          "AR/VR Developers",
+          "Future Tech Companies",
+          "Innovation Labs"
+        ]
       },
       {
         "id": "collage-maximalist",
@@ -365,9 +879,34 @@
         "description": "Scrapbook aesthetic with layered elements, mixed media, and intentional chaos.",
         "category": "Creative",
         "difficulty": "intermediate",
-        "features": ["Layered Design", "Mixed Media", "Rotated Elements", "Maximalist"],
-        "tags": ["collage", "maximalist", "artistic", "layered"],
-        "bestFor": ["Artists", "Mixed Media Designers", "Creative Studios"]
+        "features": [
+          "Layered Design",
+          "Mixed Media",
+          "Rotated Elements",
+          "Maximalist"
+        ],
+        "tags": [
+          "collage",
+          "maximalist",
+          "artistic",
+          "layered",
+          "layered-design",
+          "mixed-media",
+          "rotated-elements",
+          "artists",
+          "mixed-media-designers",
+          "creative-studios",
+          "creative",
+          "scrapbook",
+          "aesthetic",
+          "elements",
+          "mixed"
+        ],
+        "bestFor": [
+          "Artists",
+          "Mixed Media Designers",
+          "Creative Studios"
+        ]
       },
       {
         "id": "product-saas",
@@ -375,9 +914,37 @@
         "description": "Modern SaaS product landing page with features, pricing tiers, testimonials, and conversion optimization.",
         "category": "Service",
         "difficulty": "intermediate",
-        "features": ["Pricing Tables", "Feature Showcase", "Testimonials", "FAQ Section"],
-        "tags": ["saas", "product", "landing", "conversion"],
-        "bestFor": ["SaaS Products", "Web Apps", "Tech Startups"]
+        "features": [
+          "Pricing Tables",
+          "Feature Showcase",
+          "Testimonials",
+          "FAQ Section"
+        ],
+        "tags": [
+          "saas",
+          "product",
+          "landing",
+          "conversion",
+          "pricing-tables",
+          "feature-showcase",
+          "testimonials",
+          "faq-section",
+          "saas-products",
+          "web-apps",
+          "tech-startups",
+          "service",
+          "modern",
+          "page",
+          "modern-design",
+          "landing-page",
+          "product-page",
+          "software"
+        ],
+        "bestFor": [
+          "SaaS Products",
+          "Web Apps",
+          "Tech Startups"
+        ]
       },
       {
         "id": "product-course",
@@ -385,9 +952,36 @@
         "description": "Educational course landing page with instructor credibility, curriculum, before/after transformations.",
         "category": "Service",
         "difficulty": "intermediate",
-        "features": ["Curriculum Breakdown", "Student Success Stories", "Job Guarantee", "Payment Plans"],
-        "tags": ["course", "education", "learning", "training"],
-        "bestFor": ["Course Creators", "Educators", "Online Schools"]
+        "features": [
+          "Curriculum Breakdown",
+          "Student Success Stories",
+          "Job Guarantee",
+          "Payment Plans"
+        ],
+        "tags": [
+          "course",
+          "education",
+          "learning",
+          "training",
+          "curriculum-breakdown",
+          "student-success-stories",
+          "job-guarantee",
+          "payment-plans",
+          "course-creators",
+          "educators",
+          "online-schools",
+          "service",
+          "educational",
+          "landing",
+          "page",
+          "instructor",
+          "landing-page"
+        ],
+        "bestFor": [
+          "Course Creators",
+          "Educators",
+          "Online Schools"
+        ]
       },
       {
         "id": "product-tech",
@@ -395,9 +989,36 @@
         "description": "Dark tech/gaming product showcase with video hero, specs comparison table, and bento feature grid.",
         "category": "Product",
         "difficulty": "intermediate",
-        "features": ["Video Hero", "Specs Comparison", "Bento Grid", "Tech Reviews"],
-        "tags": ["tech", "gaming", "hardware", "electronics"],
-        "bestFor": ["Gaming Hardware", "Tech Products", "Electronics Brands"]
+        "features": [
+          "Video Hero",
+          "Specs Comparison",
+          "Bento Grid",
+          "Tech Reviews"
+        ],
+        "tags": [
+          "tech",
+          "gaming",
+          "hardware",
+          "electronics",
+          "video-hero",
+          "specs-comparison",
+          "bento-grid",
+          "tech-reviews",
+          "gaming-hardware",
+          "tech-products",
+          "electronics-brands",
+          "product",
+          "dark",
+          "showcase",
+          "grid-layout",
+          "dark-theme",
+          "product-page"
+        ],
+        "bestFor": [
+          "Gaming Hardware",
+          "Tech Products",
+          "Electronics Brands"
+        ]
       },
       {
         "id": "product-physical",
@@ -405,9 +1026,34 @@
         "description": "Minimalist product showcase with color selector, 360° views, technical specs, and comparison table.",
         "category": "Product",
         "difficulty": "intermediate",
-        "features": ["Product Gallery", "Technical Specs", "Customer Reviews", "Comparison Table"],
-        "tags": ["ecommerce", "product", "physical", "minimalist"],
-        "bestFor": ["E-commerce", "Product Designers", "Brands"]
+        "features": [
+          "Product Gallery",
+          "Technical Specs",
+          "Customer Reviews",
+          "Comparison Table"
+        ],
+        "tags": [
+          "ecommerce",
+          "product",
+          "physical",
+          "minimalist",
+          "product-gallery",
+          "technical-specs",
+          "customer-reviews",
+          "comparison-table",
+          "e-commerce",
+          "product-designers",
+          "brands",
+          "showcase",
+          "color",
+          "selector",
+          "product-page"
+        ],
+        "bestFor": [
+          "E-commerce",
+          "Product Designers",
+          "Brands"
+        ]
       },
       {
         "id": "product-premium",
@@ -415,9 +1061,35 @@
         "description": "Luxury high-ticket service page with exclusive positioning, case studies, and application process.",
         "category": "Service",
         "difficulty": "advanced",
-        "features": ["Case Studies", "Application Process", "Income Guarantee", "Luxury Design"],
-        "tags": ["premium", "luxury", "high-ticket", "exclusive"],
-        "bestFor": ["Consulting", "Coaching", "Premium Services"]
+        "features": [
+          "Case Studies",
+          "Application Process",
+          "Income Guarantee",
+          "Luxury Design"
+        ],
+        "tags": [
+          "premium",
+          "luxury",
+          "high-ticket",
+          "exclusive",
+          "case-studies",
+          "application-process",
+          "income-guarantee",
+          "luxury-design",
+          "consulting",
+          "coaching",
+          "premium-services",
+          "service",
+          "page",
+          "service-page",
+          "advanced-features",
+          "complex"
+        ],
+        "bestFor": [
+          "Consulting",
+          "Coaching",
+          "Premium Services"
+        ]
       },
       {
         "id": "voice-first",
@@ -425,9 +1097,37 @@
         "description": "Voice-activated interface with conversational UI and speech interaction patterns.",
         "category": "Experimental",
         "difficulty": "advanced",
-        "features": ["Voice UI", "Conversational", "Speech Patterns", "Waveform"],
-        "tags": ["voice", "conversational", "ai", "future"],
-        "bestFor": ["Voice UX Designers", "Conversational AI", "Voice Assistants"]
+        "features": [
+          "Voice UI",
+          "Conversational",
+          "Speech Patterns",
+          "Waveform"
+        ],
+        "tags": [
+          "voice",
+          "conversational",
+          "ai",
+          "future",
+          "voice-ui",
+          "speech-patterns",
+          "waveform",
+          "voice-ux-designers",
+          "conversational-ai",
+          "voice-assistants",
+          "experimental",
+          "voice-activated",
+          "interface",
+          "speech",
+          "interaction",
+          "voice-first",
+          "advanced-features",
+          "complex"
+        ],
+        "bestFor": [
+          "Voice UX Designers",
+          "Conversational AI",
+          "Voice Assistants"
+        ]
       },
       {
         "id": "product-fashion",
@@ -435,9 +1135,33 @@
         "description": "Sustainable fashion product showcase with lifestyle photography, vertical scrolling gallery, and customer reviews.",
         "category": "Product",
         "difficulty": "intermediate",
-        "features": ["Lifestyle Photography", "Size/Color Selector", "Sustainability Focus", "Customer Photos"],
-        "tags": ["fashion", "sustainable", "lifestyle", "ecommerce"],
-        "bestFor": ["Fashion Brands", "Sustainable Products", "Lifestyle Brands"]
+        "features": [
+          "Lifestyle Photography",
+          "Size/Color Selector",
+          "Sustainability Focus",
+          "Customer Photos"
+        ],
+        "tags": [
+          "fashion",
+          "sustainable",
+          "lifestyle",
+          "ecommerce",
+          "lifestyle-photography",
+          "size/color-selector",
+          "sustainability-focus",
+          "customer-photos",
+          "fashion-brands",
+          "sustainable-products",
+          "lifestyle-brands",
+          "product",
+          "showcase",
+          "product-page"
+        ],
+        "bestFor": [
+          "Fashion Brands",
+          "Sustainable Products",
+          "Lifestyle Brands"
+        ]
       },
       {
         "id": "product-luxury",
@@ -445,9 +1169,40 @@
         "description": "Dark elegance luxury product page with heritage storytelling, craftsmanship details, and premium configurator.",
         "category": "Product",
         "difficulty": "advanced",
-        "features": ["Cinematic Video", "Heritage Timeline", "Premium Configurator", "Awards & Press"],
-        "tags": ["luxury", "premium", "heritage", "craftsmanship"],
-        "bestFor": ["Luxury Brands", "High-End Products", "Swiss Watches", "Premium Goods"]
+        "features": [
+          "Cinematic Video",
+          "Heritage Timeline",
+          "Premium Configurator",
+          "Awards & Press"
+        ],
+        "tags": [
+          "luxury",
+          "premium",
+          "heritage",
+          "craftsmanship",
+          "cinematic-video",
+          "heritage-timeline",
+          "premium-configurator",
+          "awards-&-press",
+          "luxury-brands",
+          "high-end-products",
+          "swiss-watches",
+          "premium-goods",
+          "product",
+          "dark",
+          "elegance",
+          "page",
+          "dark-theme",
+          "product-page",
+          "advanced-features",
+          "complex"
+        ],
+        "bestFor": [
+          "Luxury Brands",
+          "High-End Products",
+          "Swiss Watches",
+          "Premium Goods"
+        ]
       },
       {
         "id": "product-audio",
@@ -455,9 +1210,39 @@
         "description": "High-end wireless headphones product page with 3D interactive viewer, spatial audio demo, technical specifications, and comparison table.",
         "category": "Product",
         "difficulty": "advanced",
-        "features": ["Interactive 3D Viewer", "Color Selector", "Spatial Audio Demo", "Specs Table", "Expert Reviews"],
-        "tags": ["audio", "headphones", "wireless", "premium", "tech"],
-        "bestFor": ["Audio Brands", "Consumer Electronics", "Premium Tech Products"]
+        "features": [
+          "Interactive 3D Viewer",
+          "Color Selector",
+          "Spatial Audio Demo",
+          "Specs Table",
+          "Expert Reviews"
+        ],
+        "tags": [
+          "audio",
+          "headphones",
+          "wireless",
+          "premium",
+          "tech",
+          "interactive-3d-viewer",
+          "color-selector",
+          "spatial-audio-demo",
+          "specs-table",
+          "expert-reviews",
+          "audio-brands",
+          "consumer-electronics",
+          "premium-tech-products",
+          "product",
+          "high-end",
+          "page",
+          "product-page",
+          "advanced-features",
+          "complex"
+        ],
+        "bestFor": [
+          "Audio Brands",
+          "Consumer Electronics",
+          "Premium Tech Products"
+        ]
       },
       {
         "id": "product-vacuum",
@@ -465,9 +1250,41 @@
         "description": "Cordless vacuum product page with performance metrics, laser dust detection, intelligent cleaning modes, and power comparison chart.",
         "category": "Product",
         "difficulty": "advanced",
-        "features": ["Performance Metrics", "Cleaning Modes", "Accessory Showcase", "Comparison Table", "Awards"],
-        "tags": ["appliance", "vacuum", "smart home", "cleaning", "cordless"],
-        "bestFor": ["Home Appliance Brands", "Smart Home Devices", "Premium Cleaning Tools"]
+        "features": [
+          "Performance Metrics",
+          "Cleaning Modes",
+          "Accessory Showcase",
+          "Comparison Table",
+          "Awards"
+        ],
+        "tags": [
+          "appliance",
+          "vacuum",
+          "smart home",
+          "cleaning",
+          "cordless",
+          "performance-metrics",
+          "cleaning-modes",
+          "accessory-showcase",
+          "comparison-table",
+          "awards",
+          "home-appliance-brands",
+          "smart-home-devices",
+          "premium-cleaning-tools",
+          "product",
+          "page",
+          "performance",
+          "smart",
+          "cleaner",
+          "product-page",
+          "advanced-features",
+          "complex"
+        ],
+        "bestFor": [
+          "Home Appliance Brands",
+          "Smart Home Devices",
+          "Premium Cleaning Tools"
+        ]
       },
       {
         "id": "service-b2b",
@@ -475,9 +1292,39 @@
         "description": "Corporate B2B consulting service with extensive case studies, ROI metrics, and institutional credibility.",
         "category": "Service",
         "difficulty": "advanced",
-        "features": ["Case Studies with ROI", "Industry Expertise", "Thought Leadership", "Client Logos"],
-        "tags": ["b2b", "consulting", "professional", "enterprise"],
-        "bestFor": ["Consulting Firms", "B2B Services", "Enterprise Solutions"]
+        "features": [
+          "Case Studies with ROI",
+          "Industry Expertise",
+          "Thought Leadership",
+          "Client Logos"
+        ],
+        "tags": [
+          "b2b",
+          "consulting",
+          "professional",
+          "enterprise",
+          "case-studies-with-roi",
+          "industry-expertise",
+          "thought-leadership",
+          "client-logos",
+          "consulting-firms",
+          "b2b-services",
+          "enterprise-solutions",
+          "service",
+          "corporate",
+          "extensive",
+          "case",
+          "business",
+          "consultant",
+          "service-page",
+          "advanced-features",
+          "complex"
+        ],
+        "bestFor": [
+          "Consulting Firms",
+          "B2B Services",
+          "Enterprise Solutions"
+        ]
       },
       {
         "id": "service-community",
@@ -485,9 +1332,34 @@
         "description": "Dual value proposition platform for creators and members with transparent pricing and success metrics.",
         "category": "Service",
         "difficulty": "intermediate",
-        "features": ["Dual Audience", "Creator Showcase", "Pricing Tiers", "Success Stories"],
-        "tags": ["community", "membership", "platform", "creators"],
-        "bestFor": ["Community Platforms", "Membership Sites", "Creator Tools"]
+        "features": [
+          "Dual Audience",
+          "Creator Showcase",
+          "Pricing Tiers",
+          "Success Stories"
+        ],
+        "tags": [
+          "community",
+          "membership",
+          "platform",
+          "creators",
+          "dual-audience",
+          "creator-showcase",
+          "pricing-tiers",
+          "success-stories",
+          "community-platforms",
+          "membership-sites",
+          "creator-tools",
+          "service",
+          "dual",
+          "value",
+          "proposition"
+        ],
+        "bestFor": [
+          "Community Platforms",
+          "Membership Sites",
+          "Creator Tools"
+        ]
       },
       {
         "id": "service-dfyou",
@@ -495,9 +1367,36 @@
         "description": "Unlimited productized service with portfolio showcase, guarantee-heavy messaging, and FAQ section.",
         "category": "Service",
         "difficulty": "intermediate",
-        "features": ["Portfolio Filtering", "Unlimited Model", "Guarantees", "FAQ"],
-        "tags": ["service", "subscription", "unlimited", "design"],
-        "bestFor": ["Design Services", "Productized Services", "Subscription Services"]
+        "features": [
+          "Portfolio Filtering",
+          "Unlimited Model",
+          "Guarantees",
+          "FAQ"
+        ],
+        "tags": [
+          "service",
+          "subscription",
+          "unlimited",
+          "design",
+          "portfolio-filtering",
+          "unlimited-model",
+          "guarantees",
+          "faq",
+          "design-services",
+          "productized-services",
+          "subscription-services",
+          "productized",
+          "portfolio",
+          "showcase",
+          "done-for-you",
+          "product-page",
+          "service-page"
+        ],
+        "bestFor": [
+          "Design Services",
+          "Productized Services",
+          "Subscription Services"
+        ]
       },
       {
         "id": "service-agency",
@@ -505,9 +1404,42 @@
         "description": "Award-winning digital agency landing page with brand strategy, creative design, and performance marketing services.",
         "category": "Service",
         "difficulty": "advanced",
-        "features": ["Portfolio Showcase", "Team Profiles", "Service Offerings", "Process Workflow"],
-        "tags": ["agency", "creative", "branding", "marketing"],
-        "bestFor": ["Digital Agencies", "Creative Studios", "Marketing Firms"]
+        "features": [
+          "Portfolio Showcase",
+          "Team Profiles",
+          "Service Offerings",
+          "Process Workflow"
+        ],
+        "tags": [
+          "agency",
+          "creative",
+          "branding",
+          "marketing",
+          "portfolio-showcase",
+          "team-profiles",
+          "service-offerings",
+          "process-workflow",
+          "digital-agencies",
+          "creative-studios",
+          "marketing-firms",
+          "service",
+          "award-winning",
+          "digital",
+          "landing",
+          "page",
+          "showcase",
+          "artistic",
+          "landing-page",
+          "agency-portfolio",
+          "service-page",
+          "advanced-features",
+          "complex"
+        ],
+        "bestFor": [
+          "Digital Agencies",
+          "Creative Studios",
+          "Marketing Firms"
+        ]
       },
       {
         "id": "service-enterprise",
@@ -515,9 +1447,37 @@
         "description": "Enterprise-grade cloud solutions with security, compliance, and global scale for Fortune 500 companies.",
         "category": "Service",
         "difficulty": "advanced",
-        "features": ["SOC 2 Certified", "Enterprise Pricing", "Case Studies", "Integration Showcase"],
-        "tags": ["enterprise", "cloud", "security", "compliance"],
-        "bestFor": ["SaaS Companies", "Cloud Platforms", "Enterprise Solutions"]
+        "features": [
+          "SOC 2 Certified",
+          "Enterprise Pricing",
+          "Case Studies",
+          "Integration Showcase"
+        ],
+        "tags": [
+          "enterprise",
+          "cloud",
+          "security",
+          "compliance",
+          "soc-2-certified",
+          "enterprise-pricing",
+          "case-studies",
+          "integration-showcase",
+          "saas-companies",
+          "cloud-platforms",
+          "enterprise-solutions",
+          "service",
+          "enterprise-grade",
+          "solutions",
+          "platform",
+          "b2b",
+          "advanced-features",
+          "complex"
+        ],
+        "bestFor": [
+          "SaaS Companies",
+          "Cloud Platforms",
+          "Enterprise Solutions"
+        ]
       },
       {
         "id": "service-consulting",
@@ -525,9 +1485,40 @@
         "description": "Elite management consulting for CEOs and boards with corporate strategy, digital transformation, and performance improvement.",
         "category": "Service",
         "difficulty": "advanced",
-        "features": ["Client Engagements", "Partner Profiles", "Methodology Framework", "Thought Leadership"],
-        "tags": ["consulting", "strategy", "transformation", "executive"],
-        "bestFor": ["Consulting Firms", "Advisory Services", "Strategic Consulting"]
+        "features": [
+          "Client Engagements",
+          "Partner Profiles",
+          "Methodology Framework",
+          "Thought Leadership"
+        ],
+        "tags": [
+          "consulting",
+          "strategy",
+          "transformation",
+          "executive",
+          "client-engagements",
+          "partner-profiles",
+          "methodology-framework",
+          "thought-leadership",
+          "consulting-firms",
+          "advisory-services",
+          "strategic-consulting",
+          "service",
+          "elite",
+          "management",
+          "ceos",
+          "boards",
+          "strategic",
+          "firm",
+          "consultant",
+          "advanced-features",
+          "complex"
+        ],
+        "bestFor": [
+          "Consulting Firms",
+          "Advisory Services",
+          "Strategic Consulting"
+        ]
       },
       {
         "id": "blog-personal",
@@ -535,9 +1526,32 @@
         "description": "Minimalist personal blog with clean layout, featured posts, newsletter integration, and social sharing.",
         "category": "Blog",
         "difficulty": "intermediate",
-        "features": ["Featured Posts", "Category Filter", "Newsletter", "Social Links"],
-        "tags": ["blog", "personal", "minimalist", "clean"],
-        "bestFor": ["Writers", "Personal Brands", "Content Creators"]
+        "features": [
+          "Featured Posts",
+          "Category Filter",
+          "Newsletter",
+          "Social Links"
+        ],
+        "tags": [
+          "blog",
+          "personal",
+          "minimalist",
+          "clean",
+          "featured-posts",
+          "category-filter",
+          "newsletter",
+          "social-links",
+          "writers",
+          "personal-brands",
+          "content-creators",
+          "layout",
+          "blog-design"
+        ],
+        "bestFor": [
+          "Writers",
+          "Personal Brands",
+          "Content Creators"
+        ]
       },
       {
         "id": "blog-magazine",
@@ -545,9 +1559,39 @@
         "description": "Professional magazine-style blog with advanced grid layouts, trending articles, editorial team, and multi-column layouts.",
         "category": "Blog",
         "difficulty": "advanced",
-        "features": ["Trending Articles", "Editorial Team", "Advanced Grids", "Category System"],
-        "tags": ["magazine", "editorial", "professional", "media"],
-        "bestFor": ["Online Magazines", "News Sites", "Editorial Teams"]
+        "features": [
+          "Trending Articles",
+          "Editorial Team",
+          "Advanced Grids",
+          "Category System"
+        ],
+        "tags": [
+          "magazine",
+          "editorial",
+          "professional",
+          "media",
+          "trending-articles",
+          "editorial-team",
+          "advanced-grids",
+          "category-system",
+          "online-magazines",
+          "news-sites",
+          "editorial-teams",
+          "blog",
+          "magazine-style",
+          "advanced",
+          "grid",
+          "grid-layout",
+          "business",
+          "blog-design",
+          "advanced-features",
+          "complex"
+        ],
+        "bestFor": [
+          "Online Magazines",
+          "News Sites",
+          "Editorial Teams"
+        ]
       },
       {
         "id": "blog-tech",
@@ -555,9 +1599,38 @@
         "description": "Advanced developer blog with dark mode, code snippets, learning series, progress tracking, and interactive features.",
         "category": "Blog",
         "difficulty": "advanced",
-        "features": ["Dark Mode", "Code Snippets", "Learning Series", "Progress Tracking"],
-        "tags": ["tech", "developer", "interactive", "code"],
-        "bestFor": ["Tech Blogs", "Developer Communities", "Tutorial Sites"]
+        "features": [
+          "Dark Mode",
+          "Code Snippets",
+          "Learning Series",
+          "Progress Tracking"
+        ],
+        "tags": [
+          "tech",
+          "developer",
+          "interactive",
+          "code",
+          "dark-mode",
+          "code-snippets",
+          "learning-series",
+          "progress-tracking",
+          "tech-blogs",
+          "developer-communities",
+          "tutorial-sites",
+          "blog",
+          "advanced",
+          "dark",
+          "mode",
+          "dark-theme",
+          "blog-design",
+          "advanced-features",
+          "complex"
+        ],
+        "bestFor": [
+          "Tech Blogs",
+          "Developer Communities",
+          "Tutorial Sites"
+        ]
       },
       {
         "id": "blog-archetypes-minimal",
@@ -565,9 +1638,40 @@
         "description": "Modern minimalist conversion-focused page with 5-stage funnel: awareness hero, 7 archetype cards, audience targeting, testimonials, and pricing. Teal & purple gradient design with glassmorphism.",
         "category": "Blog",
         "difficulty": "intermediate",
-        "features": ["5-Stage Funnel", "Glassmorphism Cards", "Smooth Animations", "Conversion Optimized"],
-        "tags": ["conversion", "minimalist", "archetypes", "modern", "glassmorphism"],
-        "bestFor": ["Coaches", "Course Creators", "Personal Development", "Creative Professionals"]
+        "features": [
+          "5-Stage Funnel",
+          "Glassmorphism Cards",
+          "Smooth Animations",
+          "Conversion Optimized"
+        ],
+        "tags": [
+          "conversion",
+          "minimalist",
+          "archetypes",
+          "modern",
+          "glassmorphism",
+          "5-stage-funnel",
+          "glassmorphism-cards",
+          "smooth-animations",
+          "conversion-optimized",
+          "coaches",
+          "course-creators",
+          "personal-development",
+          "creative-professionals",
+          "blog",
+          "conversion-focused",
+          "page",
+          "5-stage",
+          "explorer",
+          "card-layout",
+          "modern-design"
+        ],
+        "bestFor": [
+          "Coaches",
+          "Course Creators",
+          "Personal Development",
+          "Creative Professionals"
+        ]
       },
       {
         "id": "blog-archetypes-editorial",
@@ -575,9 +1679,41 @@
         "description": "Bold editorial magazine-style conversion page with 5-stage funnel: dramatic hero, 7 numbered archetype cards, qualification section, testimonials, and program pricing. Black/white design with electric blue accents and strong borders.",
         "category": "Blog",
         "difficulty": "intermediate",
-        "features": ["Bold Editorial Design", "5-Stage Funnel", "Magazine Layout", "Strong Visual Hierarchy", "Dramatic Typography"],
-        "tags": ["conversion", "editorial", "magazine", "bold", "archetypes", "premium"],
-        "bestFor": ["High-Ticket Coaches", "Premium Programs", "Transformation Programs", "Personal Brand"]
+        "features": [
+          "Bold Editorial Design",
+          "5-Stage Funnel",
+          "Magazine Layout",
+          "Strong Visual Hierarchy",
+          "Dramatic Typography"
+        ],
+        "tags": [
+          "conversion",
+          "editorial",
+          "magazine",
+          "bold",
+          "archetypes",
+          "premium",
+          "bold-editorial-design",
+          "5-stage-funnel",
+          "magazine-layout",
+          "strong-visual-hierarchy",
+          "dramatic-typography",
+          "high-ticket-coaches",
+          "premium-programs",
+          "transformation-programs",
+          "personal-brand",
+          "blog",
+          "magazine-style",
+          "page",
+          "journal",
+          "card-layout"
+        ],
+        "bestFor": [
+          "High-Ticket Coaches",
+          "Premium Programs",
+          "Transformation Programs",
+          "Personal Brand"
+        ]
       },
       {
         "id": "lin-portfolio-elegance",
@@ -585,9 +1721,40 @@
         "description": "Elegant portfolio template for designers and creatives. Gallery-focused design with warm gold accents, perfect for showcasing interior design work.",
         "category": "Portfolio",
         "difficulty": "intermediate",
-        "features": ["Image Gallery Grid", "Project Showcase", "Elegant Typography", "RTL Support"],
-        "tags": ["portfolio", "interior-design", "elegant", "gallery", "image-first"],
-        "bestFor": ["Interior Designers", "Photographers", "Artists", "Creative Portfolios"]
+        "features": [
+          "Image Gallery Grid",
+          "Project Showcase",
+          "Elegant Typography",
+          "RTL Support"
+        ],
+        "tags": [
+          "portfolio",
+          "interior-design",
+          "elegant",
+          "gallery",
+          "image-first",
+          "image-gallery-grid",
+          "project-showcase",
+          "elegant-typography",
+          "rtl-support",
+          "interior-designers",
+          "photographers",
+          "artists",
+          "creative-portfolios",
+          "template",
+          "designers",
+          "creatives",
+          "elegance",
+          "elegant-design",
+          "artistic",
+          "showcase"
+        ],
+        "bestFor": [
+          "Interior Designers",
+          "Photographers",
+          "Artists",
+          "Creative Portfolios"
+        ]
       },
       {
         "id": "lin-professional-authority",
@@ -595,9 +1762,44 @@
         "description": "Premium template for accounting firms and professional services. Navy and gold color scheme conveys trust and luxury with service showcases and trust signals.",
         "category": "Service",
         "difficulty": "advanced",
-        "features": ["Service Showcase", "Trust Signals", "Team Section", "Professional Layout", "Contact Forms"],
-        "tags": ["accounting", "professional", "luxury", "trust", "services"],
-        "bestFor": ["Accounting Firms", "Law Firms", "Consulting", "Financial Services"]
+        "features": [
+          "Service Showcase",
+          "Trust Signals",
+          "Team Section",
+          "Professional Layout",
+          "Contact Forms"
+        ],
+        "tags": [
+          "accounting",
+          "professional",
+          "luxury",
+          "trust",
+          "services",
+          "service-showcase",
+          "trust-signals",
+          "team-section",
+          "professional-layout",
+          "contact-forms",
+          "accounting-firms",
+          "law-firms",
+          "consulting",
+          "financial-services",
+          "service",
+          "premium",
+          "template",
+          "firms",
+          "authority",
+          "business",
+          "service-page",
+          "advanced-features",
+          "complex"
+        ],
+        "bestFor": [
+          "Accounting Firms",
+          "Law Firms",
+          "Consulting",
+          "Financial Services"
+        ]
       },
       {
         "id": "lin-tech-pioneer",
@@ -605,9 +1807,46 @@
         "description": "Modern technology company template with electric blue gradients and Hebrew RTL support. Features tech stack display, code blocks, and product showcases.",
         "category": "Product",
         "difficulty": "advanced",
-        "features": ["Tech Stack Display", "Code Blocks", "Modern Gradients", "RTL Hebrew Support", "Product Showcases"],
-        "tags": ["technology", "software", "saas", "hebrew", "rtl", "modern"],
-        "bestFor": ["Software Companies", "SaaS Products", "Tech Startups", "Developers"]
+        "features": [
+          "Tech Stack Display",
+          "Code Blocks",
+          "Modern Gradients",
+          "RTL Hebrew Support",
+          "Product Showcases"
+        ],
+        "tags": [
+          "technology",
+          "software",
+          "saas",
+          "hebrew",
+          "rtl",
+          "modern",
+          "tech-stack-display",
+          "code-blocks",
+          "modern-gradients",
+          "rtl-hebrew-support",
+          "product-showcases",
+          "software-companies",
+          "saas-products",
+          "tech-startups",
+          "developers",
+          "product",
+          "company",
+          "template",
+          "electric",
+          "tech",
+          "pioneer",
+          "modern-design",
+          "product-page",
+          "advanced-features",
+          "complex"
+        ],
+        "bestFor": [
+          "Software Companies",
+          "SaaS Products",
+          "Tech Startups",
+          "Developers"
+        ]
       },
       {
         "id": "online-business-coach",
@@ -615,9 +1854,46 @@
         "description": "Premium template for life coaches and business coaches. Features hero with CTA, multi-offer showcase (books/courses/coaching), testimonials, lead magnets, and multi-step forms.",
         "category": "Online Business",
         "difficulty": "intermediate",
-        "features": ["Hero Section", "Offerings Showcase", "Testimonials", "Newsletter Signup", "Lead Magnets", "Multi-Step Forms"],
-        "tags": ["coaching", "life-coach", "business-coach", "consulting", "personal-brand"],
-        "bestFor": ["Life Coaches", "Business Coaches", "Consultants", "Authors", "Speakers"]
+        "features": [
+          "Hero Section",
+          "Offerings Showcase",
+          "Testimonials",
+          "Newsletter Signup",
+          "Lead Magnets",
+          "Multi-Step Forms"
+        ],
+        "tags": [
+          "coaching",
+          "life-coach",
+          "business-coach",
+          "consulting",
+          "personal-brand",
+          "hero-section",
+          "offerings-showcase",
+          "testimonials",
+          "newsletter-signup",
+          "lead-magnets",
+          "multi-step-forms",
+          "life-coaches",
+          "business-coaches",
+          "consultants",
+          "authors",
+          "speakers",
+          "online business",
+          "premium",
+          "template",
+          "life",
+          "coaches",
+          "business",
+          "coach"
+        ],
+        "bestFor": [
+          "Life Coaches",
+          "Business Coaches",
+          "Consultants",
+          "Authors",
+          "Speakers"
+        ]
       },
       {
         "id": "online-business-course",
@@ -625,9 +1901,45 @@
         "description": "Course creator template with video preview, curriculum showcase, pricing tiers, student testimonials, and enrollment system. Perfect for digital educators.",
         "category": "Online Business",
         "difficulty": "intermediate",
-        "features": ["Video Preview", "Curriculum Modules", "Pricing Tiers", "Student Reviews", "Certificate Badges", "CTA Sections"],
-        "tags": ["courses", "education", "e-learning", "digital-products", "teaching"],
-        "bestFor": ["Course Creators", "Educators", "Digital Product Sellers", "Training Platforms"]
+        "features": [
+          "Video Preview",
+          "Curriculum Modules",
+          "Pricing Tiers",
+          "Student Reviews",
+          "Certificate Badges",
+          "CTA Sections"
+        ],
+        "tags": [
+          "courses",
+          "education",
+          "e-learning",
+          "digital-products",
+          "teaching",
+          "video-preview",
+          "curriculum-modules",
+          "pricing-tiers",
+          "student-reviews",
+          "certificate-badges",
+          "cta-sections",
+          "course-creators",
+          "educators",
+          "digital-product-sellers",
+          "training-platforms",
+          "online business",
+          "course",
+          "creator",
+          "template",
+          "video",
+          "preview",
+          "online",
+          "platform"
+        ],
+        "bestFor": [
+          "Course Creators",
+          "Educators",
+          "Digital Product Sellers",
+          "Training Platforms"
+        ]
       },
       {
         "id": "online-business-agency",
@@ -635,9 +1947,46 @@
         "description": "Professional B2B agency template with services showcase, case studies, process timeline, team profiles, and client testimonials. Data-driven approach.",
         "category": "Online Business",
         "difficulty": "advanced",
-        "features": ["Services Grid", "Case Studies", "Process Timeline", "Stats Dashboard", "Client Logos", "Project Form"],
-        "tags": ["agency", "b2b", "services", "portfolio", "professional"],
-        "bestFor": ["Digital Agencies", "Marketing Agencies", "Development Studios", "Consulting Firms"]
+        "features": [
+          "Services Grid",
+          "Case Studies",
+          "Process Timeline",
+          "Stats Dashboard",
+          "Client Logos",
+          "Project Form"
+        ],
+        "tags": [
+          "agency",
+          "b2b",
+          "services",
+          "portfolio",
+          "professional",
+          "services-grid",
+          "case-studies",
+          "process-timeline",
+          "stats-dashboard",
+          "client-logos",
+          "project-form",
+          "digital-agencies",
+          "marketing-agencies",
+          "development-studios",
+          "consulting-firms",
+          "online business",
+          "template",
+          "showcase",
+          "digital",
+          "business",
+          "agency-portfolio",
+          "service-page",
+          "advanced-features",
+          "complex"
+        ],
+        "bestFor": [
+          "Digital Agencies",
+          "Marketing Agencies",
+          "Development Studios",
+          "Consulting Firms"
+        ]
       },
       {
         "id": "online-business-saas",
@@ -645,9 +1994,47 @@
         "description": "Modern SaaS landing page with AI-powered features showcase, transparent pricing, feature comparison, and free trial CTA. Built for modern product teams.",
         "category": "Online Business",
         "difficulty": "intermediate",
-        "features": ["Hero with CTA", "Features Grid", "Pricing Plans", "Social Proof", "Feature Highlights", "Free Trial"],
-        "tags": ["saas", "product", "pricing", "b2b", "subscription"],
-        "bestFor": ["SaaS Companies", "Software Products", "B2B Tools", "Productivity Apps"]
+        "features": [
+          "Hero with CTA",
+          "Features Grid",
+          "Pricing Plans",
+          "Social Proof",
+          "Feature Highlights",
+          "Free Trial"
+        ],
+        "tags": [
+          "saas",
+          "product",
+          "pricing",
+          "b2b",
+          "subscription",
+          "hero-with-cta",
+          "features-grid",
+          "pricing-plans",
+          "social-proof",
+          "feature-highlights",
+          "free-trial",
+          "saas-companies",
+          "software-products",
+          "b2b-tools",
+          "productivity-apps",
+          "online business",
+          "modern",
+          "landing",
+          "page",
+          "ai-powered",
+          "platform",
+          "modern-design",
+          "landing-page",
+          "product-page",
+          "software"
+        ],
+        "bestFor": [
+          "SaaS Companies",
+          "Software Products",
+          "B2B Tools",
+          "Productivity Apps"
+        ]
       }
     ],
     "serviceMarketplace": {
@@ -665,10 +2052,22 @@
         "ctaSecondary": "Learn More"
       },
       "stats": [
-        { "value": "10K+", "label": "Active Users" },
-        { "value": "50K+", "label": "Services Sold" },
-        { "value": "$2M+", "label": "In Transactions" },
-        { "value": "4.9/5", "label": "Avg Rating" }
+        {
+          "value": "10K+",
+          "label": "Active Users"
+        },
+        {
+          "value": "50K+",
+          "label": "Services Sold"
+        },
+        {
+          "value": "$2M+",
+          "label": "In Transactions"
+        },
+        {
+          "value": "4.9/5",
+          "label": "Avg Rating"
+        }
       ],
       "features": {
         "title": "Why Choose Our Platform",
@@ -993,9 +2392,33 @@
         "description": "Фокус на простоте, пустом пространстве и ясности. Всё лишнее убрано.",
         "category": "Professional",
         "difficulty": "beginner",
-        "features": ["Тёмный Режим", "Адаптивный", "SEO Оптимизированный", "Форма Контактов"],
-        "tags": ["минимальный", "чистый", "профессиональный", "современный"],
-        "bestFor": ["Дизайнеры", "Разработчики", "Консультанты"]
+        "features": [
+          "Тёмный Режим",
+          "Адаптивный",
+          "SEO Оптимизированный",
+          "Форма Контактов"
+        ],
+        "tags": [
+          "минимальный",
+          "чистый",
+          "профессиональный",
+          "современный",
+          "тёмный-режим",
+          "адаптивный",
+          "seo-оптимизированный",
+          "форма-контактов",
+          "дизайнеры",
+          "разработчики",
+          "консультанты",
+          "professional",
+          "easy",
+          "simple-setup"
+        ],
+        "bestFor": [
+          "Дизайнеры",
+          "Разработчики",
+          "Консультанты"
+        ]
       },
       {
         "id": "dark-mode",
@@ -1003,9 +2426,31 @@
         "description": "Тёмные или почти чёрные фоны с контрастным светлым текстом. Кинематографично и изысканно.",
         "category": "Creative",
         "difficulty": "intermediate",
-        "features": ["Видео Фон", "Плавные Анимации", "Тёмная Тема", "Галерея"],
-        "tags": ["тёмный", "кинематографичный", "элегантный", "премиум"],
-        "bestFor": ["Фотографы", "UI/UX Дизайнеры", "Творческие Студии"]
+        "features": [
+          "Видео Фон",
+          "Плавные Анимации",
+          "Тёмная Тема",
+          "Галерея"
+        ],
+        "tags": [
+          "тёмный",
+          "кинематографичный",
+          "элегантный",
+          "премиум",
+          "видео-фон",
+          "плавные-анимации",
+          "тёмная-тема",
+          "галерея",
+          "фотографы",
+          "ui-ux-дизайнеры",
+          "творческие-студии",
+          "creative"
+        ],
+        "bestFor": [
+          "Фотографы",
+          "UI/UX Дизайнеры",
+          "Творческие Студии"
+        ]
       },
       {
         "id": "bold-typography",
@@ -1013,9 +2458,31 @@
         "description": "Типографика сама по себе дизайн — большой, огромный шрифт как основной элемент.",
         "category": "Creative",
         "difficulty": "beginner",
-        "features": ["Крупная Типографика", "Минимальный Дизайн", "Быстрая Загрузка", "Mobile First"],
-        "tags": ["типографика", "жирный", "минимальный", "творческий"],
-        "bestFor": ["Личные Бренды", "Творческие Фрилансеры"]
+        "features": [
+          "Крупная Типографика",
+          "Минимальный Дизайн",
+          "Быстрая Загрузка",
+          "Mobile First"
+        ],
+        "tags": [
+          "типографика",
+          "жирный",
+          "минимальный",
+          "творческий",
+          "крупная-типографика",
+          "минимальный-дизайн",
+          "быстрая-загрузка",
+          "mobile-first",
+          "личные-бренды",
+          "творческие-фрилансеры",
+          "creative",
+          "easy",
+          "simple-setup"
+        ],
+        "bestFor": [
+          "Личные Бренды",
+          "Творческие Фрилансеры"
+        ]
       },
       {
         "id": "grid-masonry",
@@ -1023,9 +2490,31 @@
         "description": "Работы портфолио отображаются в визуально согласованных плитках сетки. Идеально для визуального контента.",
         "category": "Portfolio",
         "difficulty": "intermediate",
-        "features": ["Сетка Каменной Кладки", "Лайтбокс", "Фильтр Категорий", "Отложенная Загрузка"],
-        "tags": ["сетка", "каменная кладка", "портфолио", "галерея"],
-        "bestFor": ["Фотографы", "Художники", "Агентства"]
+        "features": [
+          "Сетка Каменной Кладки",
+          "Лайтбокс",
+          "Фильтр Категорий",
+          "Отложенная Загрузка"
+        ],
+        "tags": [
+          "сетка",
+          "каменная кладка",
+          "портфолио",
+          "галерея",
+          "сетка-каменной-кладки",
+          "лайтбокс",
+          "фильтр-категорий",
+          "отложенная-загрузка",
+          "фотографы",
+          "художники",
+          "агентства",
+          "portfolio"
+        ],
+        "bestFor": [
+          "Фотографы",
+          "Художники",
+          "Агентства"
+        ]
       },
       {
         "id": "fullscreen-immersive",
@@ -1033,9 +2522,33 @@
         "description": "Изображение или видео героя занимает весь экран. Минимум текста, история через визуалы.",
         "category": "Creative",
         "difficulty": "advanced",
-        "features": ["Полноэкранные Медиа", "Параллакс", "Скролл Анимации", "Поддержка Видео"],
-        "tags": ["иммерсивный", "полноэкранный", "кинематографичный", "видео"],
-        "bestFor": ["Видеографы", "Фотографы", "Дизайнеры"]
+        "features": [
+          "Полноэкранные Медиа",
+          "Параллакс",
+          "Скролл Анимации",
+          "Поддержка Видео"
+        ],
+        "tags": [
+          "иммерсивный",
+          "полноэкранный",
+          "кинематографичный",
+          "видео",
+          "полноэкранные-медиа",
+          "параллакс",
+          "скролл-анимации",
+          "поддержка-видео",
+          "видеографы",
+          "фотографы",
+          "дизайнеры",
+          "creative",
+          "advanced-features",
+          "complex"
+        ],
+        "bestFor": [
+          "Видеографы",
+          "Фотографы",
+          "Дизайнеры"
+        ]
       },
       {
         "id": "split-screen",
@@ -1043,9 +2556,29 @@
         "description": "Экран разделён вертикально — одна половина для изображений, одна для текстового контента.",
         "category": "Modern",
         "difficulty": "intermediate",
-        "features": ["Разделённая Раскладка", "Чередующиеся Секции", "Плавный Скролл", "Адаптивный"],
-        "tags": ["разделённый", "сбалансированный", "современный", "структурированный"],
-        "bestFor": ["Агентства", "Дизайнеры"]
+        "features": [
+          "Разделённая Раскладка",
+          "Чередующиеся Секции",
+          "Плавный Скролл",
+          "Адаптивный"
+        ],
+        "tags": [
+          "разделённый",
+          "сбалансированный",
+          "современный",
+          "структурированный",
+          "разделённая-раскладка",
+          "чередующиеся-секции",
+          "плавный-скролл",
+          "адаптивный",
+          "агентства",
+          "дизайнеры",
+          "modern"
+        ],
+        "bestFor": [
+          "Агентства",
+          "Дизайнеры"
+        ]
       },
       {
         "id": "illustration-focus",
@@ -1053,9 +2586,33 @@
         "description": "Активное использование рисованных, векторных или 3D иллюстраций с игривыми анимациями.",
         "category": "Creative",
         "difficulty": "advanced",
-        "features": ["Пользовательские Иллюстрации", "Lottie Анимации", "Яркие Цвета", "Игривый UI"],
-        "tags": ["иллюстрация", "игривый", "творческий", "анимированный"],
-        "bestFor": ["Иллюстраторы", "Аниматоры", "Творческие Агентства"]
+        "features": [
+          "Пользовательские Иллюстрации",
+          "Lottie Анимации",
+          "Яркие Цвета",
+          "Игривый UI"
+        ],
+        "tags": [
+          "иллюстрация",
+          "игривый",
+          "творческий",
+          "анимированный",
+          "пользовательские-иллюстрации",
+          "lottie-анимации",
+          "яркие-цвета",
+          "игривый-ui",
+          "иллюстраторы",
+          "аниматоры",
+          "творческие-агентства",
+          "creative",
+          "advanced-features",
+          "complex"
+        ],
+        "bestFor": [
+          "Иллюстраторы",
+          "Аниматоры",
+          "Творческие Агентства"
+        ]
       },
       {
         "id": "single-page",
@@ -1063,9 +2620,32 @@
         "description": "Весь контент на одной длинной странице с плавной прокруткой навигационных якорей.",
         "category": "Simple",
         "difficulty": "beginner",
-        "features": ["Одна Страница", "Плавный Скролл", "Навигация по Якорям", "Простой"],
-        "tags": ["простой", "одностраничный", "скролл", "личный"],
-        "bestFor": ["Фрилансеры", "Личные Сайты", "Целевые Страницы"]
+        "features": [
+          "Одна Страница",
+          "Плавный Скролл",
+          "Навигация по Якорям",
+          "Простой"
+        ],
+        "tags": [
+          "простой",
+          "одностраничный",
+          "скролл",
+          "личный",
+          "одна-страница",
+          "плавный-скролл",
+          "навигация-по-якорям",
+          "фрилансеры",
+          "личные-сайты",
+          "целевые-страницы",
+          "simple",
+          "easy",
+          "simple-setup"
+        ],
+        "bestFor": [
+          "Фрилансеры",
+          "Личные Сайты",
+          "Целевые Страницы"
+        ]
       },
       {
         "id": "text-heavy",
@@ -1073,9 +2653,33 @@
         "description": "Раскладка, управляемая типографикой, без изображений. Идеально для блогеров и писателей.",
         "category": "Blog",
         "difficulty": "beginner",
-        "features": ["SEO Оптимизированный", "Готов для Блога", "Время Чтения", "Теги"],
-        "tags": ["блог", "текст", "seo", "редакционный"],
-        "bestFor": ["Писатели", "Блогеры", "Журналисты"]
+        "features": [
+          "SEO Оптимизированный",
+          "Готов для Блога",
+          "Время Чтения",
+          "Теги"
+        ],
+        "tags": [
+          "блог",
+          "текст",
+          "seo",
+          "редакционный",
+          "seo-оптимизированный",
+          "готов-для-блога",
+          "время-чтения",
+          "теги",
+          "писатели",
+          "блогеры",
+          "журналисты",
+          "blog",
+          "easy",
+          "simple-setup"
+        ],
+        "bestFor": [
+          "Писатели",
+          "Блогеры",
+          "Журналисты"
+        ]
       },
       {
         "id": "card-modular",
@@ -1083,9 +2687,32 @@
         "description": "Модульные карточки сетки, которые легко переставлять и настраивать.",
         "category": "Modern",
         "difficulty": "beginner",
-        "features": ["Раскладка Карточек", "Гибкая Сетка", "Эффекты при Наведении", "Современный"],
-        "tags": ["карточки", "модульный", "современный", "гибкий"],
-        "bestFor": ["Агентства", "Продуктовые Дизайнеры", "Разработчики"]
+        "features": [
+          "Раскладка Карточек",
+          "Гибкая Сетка",
+          "Эффекты при Наведении",
+          "Современный"
+        ],
+        "tags": [
+          "карточки",
+          "модульный",
+          "современный",
+          "гибкий",
+          "раскладка-карточек",
+          "гибкая-сетка",
+          "эффекты-при-наведении",
+          "агентства",
+          "продуктовые-дизайнеры",
+          "разработчики",
+          "modern",
+          "easy",
+          "simple-setup"
+        ],
+        "bestFor": [
+          "Агентства",
+          "Продуктовые Дизайнеры",
+          "Разработчики"
+        ]
       },
       {
         "id": "kinetic-typography",
@@ -1093,9 +2720,33 @@
         "description": "Текст, который морфирует, масштабируется и анимируется, создавая динамический визуальный интерес.",
         "category": "Experimental",
         "difficulty": "advanced",
-        "features": ["Анимации Текста", "Эффекты Курсора", "Динамическая Типографика", "Моушн Дизайн"],
-        "tags": ["движение", "типографика", "экспериментальный", "динамичный"],
-        "bestFor": ["Моушн Дизайнеры", "Креативные Директора", "Цифровые Художники"]
+        "features": [
+          "Анимации Текста",
+          "Эффекты Курсора",
+          "Динамическая Типографика",
+          "Моушн Дизайн"
+        ],
+        "tags": [
+          "движение",
+          "типографика",
+          "экспериментальный",
+          "динамичный",
+          "анимации-текста",
+          "эффекты-курсора",
+          "динамическая-типографика",
+          "моушн-дизайн",
+          "моушн-дизайнеры",
+          "креативные-директора",
+          "цифровые-художники",
+          "experimental",
+          "advanced-features",
+          "complex"
+        ],
+        "bestFor": [
+          "Моушн Дизайнеры",
+          "Креативные Директора",
+          "Цифровые Художники"
+        ]
       },
       {
         "id": "bento-grid",
@@ -1103,9 +2754,31 @@
         "description": "Вдохновлённая японской коробкой для бенто асимметричная сетка с блоками разного размера.",
         "category": "Modern",
         "difficulty": "intermediate",
-        "features": ["Асимметричная Сетка", "Смешанные Размеры", "Визуальная Иерархия", "Модульный"],
-        "tags": ["бенто", "сетка", "современный", "асимметричный"],
-        "bestFor": ["Продуктовые Дизайнеры", "Агентства", "Стартапы"]
+        "features": [
+          "Асимметричная Сетка",
+          "Смешанные Размеры",
+          "Визуальная Иерархия",
+          "Модульный"
+        ],
+        "tags": [
+          "бенто",
+          "сетка",
+          "современный",
+          "асимметричный",
+          "асимметричная-сетка",
+          "смешанные-размеры",
+          "визуальная-иерархия",
+          "модульный",
+          "продуктовые-дизайнеры",
+          "агентства",
+          "стартапы",
+          "modern"
+        ],
+        "bestFor": [
+          "Продуктовые Дизайнеры",
+          "Агентства",
+          "Стартапы"
+        ]
       },
       {
         "id": "3d-immersive",
@@ -1113,9 +2786,35 @@
         "description": "Интерактивная 3D сцена с Three.js, частицами и анимациями, привязанными к скроллу.",
         "category": "Experimental",
         "difficulty": "advanced",
-        "features": ["Three.js", "3D Графика", "WebGL", "Системы Частиц", "Интерактивный"],
-        "tags": ["3d", "webgl", "threejs", "иммерсивный", "интерактивный"],
-        "bestFor": ["3D Художники", "Креативные Технологи", "Разработчики Игр"]
+        "features": [
+          "Three.js",
+          "3D Графика",
+          "WebGL",
+          "Системы Частиц",
+          "Интерактивный"
+        ],
+        "tags": [
+          "3d",
+          "webgl",
+          "threejs",
+          "иммерсивный",
+          "интерактивный",
+          "three.js",
+          "3d-графика",
+          "системы-частиц",
+          "3d-художники",
+          "креативные-технологи",
+          "разработчики-игр",
+          "experimental",
+          "three",
+          "advanced-features",
+          "complex"
+        ],
+        "bestFor": [
+          "3D Художники",
+          "Креативные Технологи",
+          "Разработчики Игр"
+        ]
       },
       {
         "id": "neo-brutalist",
@@ -1123,9 +2822,31 @@
         "description": "Сырой, конфронтационный дизайн с толстыми границами, резкими цветами и намеренным хаосом.",
         "category": "Experimental",
         "difficulty": "intermediate",
-        "features": ["Жирные Границы", "Резкие Цвета", "Сырой Дизайн", "Конфронтационный"],
-        "tags": ["бруталиэм", "жирный", "экспериментальный", "резкий"],
-        "bestFor": ["Агентства", "Арт-Директора", "Бунтарские Бренды"]
+        "features": [
+          "Жирные Границы",
+          "Резкие Цвета",
+          "Сырой Дизайн",
+          "Конфронтационный"
+        ],
+        "tags": [
+          "бруталиэм",
+          "жирный",
+          "экспериментальный",
+          "резкий",
+          "жирные-границы",
+          "резкие-цвета",
+          "сырой-дизайн",
+          "конфронтационный",
+          "агентства",
+          "арт-директора",
+          "бунтарские-бренды",
+          "experimental"
+        ],
+        "bestFor": [
+          "Агентства",
+          "Арт-Директора",
+          "Бунтарские Бренды"
+        ]
       },
       {
         "id": "organic-liquid",
@@ -1133,9 +2854,33 @@
         "description": "Плавные формы блобов с морфинг анимациями и мягкими, вдохновлёнными природой градиентами.",
         "category": "Creative",
         "difficulty": "advanced",
-        "features": ["Плавные Анимации", "Морфинг Блобов", "Органические Формы", "Мягкие Градиенты"],
-        "tags": ["органический", "плавный", "природа", "здоровье"],
-        "bestFor": ["Бренды Здоровья", "Устойчивый Бизнес", "Коучи по Образу Жизни"]
+        "features": [
+          "Плавные Анимации",
+          "Морфинг Блобов",
+          "Органические Формы",
+          "Мягкие Градиенты"
+        ],
+        "tags": [
+          "органический",
+          "плавный",
+          "природа",
+          "здоровье",
+          "плавные-анимации",
+          "морфинг-блобов",
+          "органические-формы",
+          "мягкие-градиенты",
+          "бренды-здоровья",
+          "устойчивый-бизнес",
+          "коучи-по-образу-жизни",
+          "creative",
+          "advanced-features",
+          "complex"
+        ],
+        "bestFor": [
+          "Бренды Здоровья",
+          "Устойчивый Бизнес",
+          "Коучи по Образу Жизни"
+        ]
       },
       {
         "id": "data-dashboard",
@@ -1143,9 +2888,34 @@
         "description": "Интерактивная панель с графиками, диаграммами и визуализацией метрик в реальном времени.",
         "category": "Professional",
         "difficulty": "advanced",
-        "features": ["Графики", "Диаграммы", "KPI Карточки", "Визуализация Данных", "Аналитика"],
-        "tags": ["дашборд", "данные", "аналитика", "профессиональный"],
-        "bestFor": ["Аналитики Данных", "Бизнес Аналитика", "Консультанты"]
+        "features": [
+          "Графики",
+          "Диаграммы",
+          "KPI Карточки",
+          "Визуализация Данных",
+          "Аналитика"
+        ],
+        "tags": [
+          "дашборд",
+          "данные",
+          "аналитика",
+          "профессиональный",
+          "графики",
+          "диаграммы",
+          "kpi-карточки",
+          "визуализация-данных",
+          "аналитики-данных",
+          "бизнес-аналитика",
+          "консультанты",
+          "professional",
+          "advanced-features",
+          "complex"
+        ],
+        "bestFor": [
+          "Аналитики Данных",
+          "Бизнес Аналитика",
+          "Консультанты"
+        ]
       },
       {
         "id": "y2k-retro",
@@ -1153,9 +2923,33 @@
         "description": "Эстетика начала 2000-х с яркими цветами, массивной типографикой и игривыми элементами.",
         "category": "Creative",
         "difficulty": "intermediate",
-        "features": ["Ретро Дизайн", "Яркие Цвета", "Эффекты Курсора", "Игривый UI"],
-        "tags": ["y2k", "ретро", "ностальгия", "игривый", "цветной"],
-        "bestFor": ["Цифровые Художники", "Создатели Контента", "Молодёжные Бренды"]
+        "features": [
+          "Ретро Дизайн",
+          "Яркие Цвета",
+          "Эффекты Курсора",
+          "Игривый UI"
+        ],
+        "tags": [
+          "y2k",
+          "ретро",
+          "ностальгия",
+          "игривый",
+          "цветной",
+          "ретро-дизайн",
+          "яркие-цвета",
+          "эффекты-курсора",
+          "игривый-ui",
+          "цифровые-художники",
+          "создатели-контента",
+          "молодёжные-бренды",
+          "creative",
+          "2000-"
+        ],
+        "bestFor": [
+          "Цифровые Художники",
+          "Создатели Контента",
+          "Молодёжные Бренды"
+        ]
       },
       {
         "id": "ar-spatial",
@@ -1163,9 +2957,34 @@
         "description": "Футуристический интерфейс пространственных вычислений с многослойным UI и взаимодействиями, вдохновлёнными жестами.",
         "category": "Experimental",
         "difficulty": "advanced",
-        "features": ["Пространственный UI", "Многослойный Дизайн", "3D Глубина", "Технологии Будущего"],
-        "tags": ["ar", "пространственный", "будущее", "3d", "экспериментальный"],
-        "bestFor": ["AR/VR Разработчики", "Компании Будущих Технологий", "Лаборатории Инноваций"]
+        "features": [
+          "Пространственный UI",
+          "Многослойный Дизайн",
+          "3D Глубина",
+          "Технологии Будущего"
+        ],
+        "tags": [
+          "ar",
+          "пространственный",
+          "будущее",
+          "3d",
+          "экспериментальный",
+          "пространственный-ui",
+          "многослойный-дизайн",
+          "3d-глубина",
+          "технологии-будущего",
+          "ar-vr-разработчики",
+          "компании-будущих-технологий",
+          "лаборатории-инноваций",
+          "experimental",
+          "advanced-features",
+          "complex"
+        ],
+        "bestFor": [
+          "AR/VR Разработчики",
+          "Компании Будущих Технологий",
+          "Лаборатории Инноваций"
+        ]
       },
       {
         "id": "collage-maximalist",
@@ -1173,9 +2992,30 @@
         "description": "Эстетика скрапбука с многослойными элементами, смешанными медиа и намеренным хаосом.",
         "category": "Creative",
         "difficulty": "intermediate",
-        "features": ["Многослойный Дизайн", "Смешанные Медиа", "Повёрнутые Элементы", "Максималистский"],
-        "tags": ["коллаж", "максималистский", "художественный", "многослойный"],
-        "bestFor": ["Художники", "Дизайнеры Смешанных Медиа", "Творческие Студии"]
+        "features": [
+          "Многослойный Дизайн",
+          "Смешанные Медиа",
+          "Повёрнутые Элементы",
+          "Максималистский"
+        ],
+        "tags": [
+          "коллаж",
+          "максималистский",
+          "художественный",
+          "многослойный",
+          "многослойный-дизайн",
+          "смешанные-медиа",
+          "повёрнутые-элементы",
+          "художники",
+          "дизайнеры-смешанных-медиа",
+          "творческие-студии",
+          "creative"
+        ],
+        "bestFor": [
+          "Художники",
+          "Дизайнеры Смешанных Медиа",
+          "Творческие Студии"
+        ]
       },
       {
         "id": "product-saas",
@@ -1183,9 +3023,32 @@
         "description": "Современная целевая страница SaaS продукта с функциями, ценовыми планами, отзывами и оптимизацией конверсии.",
         "category": "Service",
         "difficulty": "intermediate",
-        "features": ["Таблицы Цен", "Витрина Функций", "Отзывы", "FAQ Секция"],
-        "tags": ["saas", "продукт", "целевая", "конверсия"],
-        "bestFor": ["SaaS Продукты", "Веб Приложения", "Технологические Стартапы"]
+        "features": [
+          "Таблицы Цен",
+          "Витрина Функций",
+          "Отзывы",
+          "FAQ Секция"
+        ],
+        "tags": [
+          "saas",
+          "продукт",
+          "целевая",
+          "конверсия",
+          "таблицы-цен",
+          "витрина-функций",
+          "отзывы",
+          "faq-секция",
+          "saas-продукты",
+          "веб-приложения",
+          "технологические-стартапы",
+          "service",
+          "software"
+        ],
+        "bestFor": [
+          "SaaS Продукты",
+          "Веб Приложения",
+          "Технологические Стартапы"
+        ]
       },
       {
         "id": "product-course",
@@ -1193,9 +3056,31 @@
         "description": "Целевая страница образовательного курса с авторитетом инструктора, программой, трансформациями до/после.",
         "category": "Service",
         "difficulty": "intermediate",
-        "features": ["Разбивка Программы", "Истории Успеха Студентов", "Гарантия Трудоустройства", "Планы Оплаты"],
-        "tags": ["курс", "образование", "обучение", "тренинг"],
-        "bestFor": ["Создатели Курсов", "Педагоги", "Онлайн Школы"]
+        "features": [
+          "Разбивка Программы",
+          "Истории Успеха Студентов",
+          "Гарантия Трудоустройства",
+          "Планы Оплаты"
+        ],
+        "tags": [
+          "курс",
+          "образование",
+          "обучение",
+          "тренинг",
+          "разбивка-программы",
+          "истории-успеха-студентов",
+          "гарантия-трудоустройства",
+          "планы-оплаты",
+          "создатели-курсов",
+          "педагоги",
+          "онлайн-школы",
+          "service"
+        ],
+        "bestFor": [
+          "Создатели Курсов",
+          "Педагоги",
+          "Онлайн Школы"
+        ]
       },
       {
         "id": "product-tech",
@@ -1203,9 +3088,30 @@
         "description": "Темная витрина технологичного/игрового продукта с видео-героем, таблицей сравнения характеристик и бенто-сеткой.",
         "category": "Product",
         "difficulty": "intermediate",
-        "features": ["Видео Герой", "Сравнение Характеристик", "Бенто Сетка", "Технические Обзоры"],
-        "tags": ["технологии", "игры", "железо", "электроника"],
-        "bestFor": ["Игровое Оборудование", "Технологичные Продукты", "Электроника"]
+        "features": [
+          "Видео Герой",
+          "Сравнение Характеристик",
+          "Бенто Сетка",
+          "Технические Обзоры"
+        ],
+        "tags": [
+          "технологии",
+          "игры",
+          "железо",
+          "электроника",
+          "видео-герой",
+          "сравнение-характеристик",
+          "бенто-сетка",
+          "технические-обзоры",
+          "игровое-оборудование",
+          "технологичные-продукты",
+          "product"
+        ],
+        "bestFor": [
+          "Игровое Оборудование",
+          "Технологичные Продукты",
+          "Электроника"
+        ]
       },
       {
         "id": "product-physical",
@@ -1213,9 +3119,31 @@
         "description": "Минималистичная витрина продукта с выбором цвета, 360° видами, техническими характеристиками и таблицей сравнения.",
         "category": "Product",
         "difficulty": "intermediate",
-        "features": ["Галерея Продукта", "Технические Характеристики", "Отзывы Клиентов", "Таблица Сравнения"],
-        "tags": ["ecommerce", "продукт", "физический", "минималистичный"],
-        "bestFor": ["E-commerce", "Продуктовые Дизайнеры", "Бренды"]
+        "features": [
+          "Галерея Продукта",
+          "Технические Характеристики",
+          "Отзывы Клиентов",
+          "Таблица Сравнения"
+        ],
+        "tags": [
+          "ecommerce",
+          "продукт",
+          "физический",
+          "минималистичный",
+          "галерея-продукта",
+          "технические-характеристики",
+          "отзывы-клиентов",
+          "таблица-сравнения",
+          "e-commerce",
+          "продуктовые-дизайнеры",
+          "бренды",
+          "product"
+        ],
+        "bestFor": [
+          "E-commerce",
+          "Продуктовые Дизайнеры",
+          "Бренды"
+        ]
       },
       {
         "id": "product-premium",
@@ -1223,9 +3151,33 @@
         "description": "Роскошная страница дорогой услуги с эксклюзивным позиционированием, кейсами и процессом подачи заявки.",
         "category": "Service",
         "difficulty": "advanced",
-        "features": ["Кейсы", "Процесс Подачи Заявки", "Гарантия Дохода", "Роскошный Дизайн"],
-        "tags": ["премиум", "роскошь", "дорогой", "эксклюзивный"],
-        "bestFor": ["Консалтинг", "Коучинг", "Премиум Услуги"]
+        "features": [
+          "Кейсы",
+          "Процесс Подачи Заявки",
+          "Гарантия Дохода",
+          "Роскошный Дизайн"
+        ],
+        "tags": [
+          "премиум",
+          "роскошь",
+          "дорогой",
+          "эксклюзивный",
+          "кейсы",
+          "процесс-подачи-заявки",
+          "гарантия-дохода",
+          "роскошный-дизайн",
+          "консалтинг",
+          "коучинг",
+          "премиум-услуги",
+          "service",
+          "advanced-features",
+          "complex"
+        ],
+        "bestFor": [
+          "Консалтинг",
+          "Коучинг",
+          "Премиум Услуги"
+        ]
       },
       {
         "id": "voice-first",
@@ -1233,9 +3185,32 @@
         "description": "Голосовой интерфейс с конверсационным UI и паттернами речевого взаимодействия.",
         "category": "Experimental",
         "difficulty": "advanced",
-        "features": ["Голосовой UI", "Конверсационный", "Речевые Паттерны", "Форма Волны"],
-        "tags": ["голос", "конверсационный", "ai", "будущее"],
-        "bestFor": ["Голосовые UX Дизайнеры", "Конверсационный AI", "Голосовые Ассистенты"]
+        "features": [
+          "Голосовой UI",
+          "Конверсационный",
+          "Речевые Паттерны",
+          "Форма Волны"
+        ],
+        "tags": [
+          "голос",
+          "конверсационный",
+          "ai",
+          "будущее",
+          "голосовой-ui",
+          "речевые-паттерны",
+          "форма-волны",
+          "голосовые-ux-дизайнеры",
+          "конверсационный-ai",
+          "голосовые-ассистенты",
+          "experimental",
+          "advanced-features",
+          "complex"
+        ],
+        "bestFor": [
+          "Голосовые UX Дизайнеры",
+          "Конверсационный AI",
+          "Голосовые Ассистенты"
+        ]
       },
       {
         "id": "product-fashion",
@@ -1243,9 +3218,31 @@
         "description": "Витрина экологичного модного продукта с лайфстайл фотографией, вертикальной галереей и отзывами клиентов.",
         "category": "Product",
         "difficulty": "intermediate",
-        "features": ["Лайфстайл Фотография", "Выбор Размера/Цвета", "Фокус на Экологичность", "Фото Клиентов"],
-        "tags": ["мода", "экологичный", "лайфстайл", "ecommerce"],
-        "bestFor": ["Модные Бренды", "Экологичные Продукты", "Лайфстайл Бренды"]
+        "features": [
+          "Лайфстайл Фотография",
+          "Выбор Размера/Цвета",
+          "Фокус на Экологичность",
+          "Фото Клиентов"
+        ],
+        "tags": [
+          "мода",
+          "экологичный",
+          "лайфстайл",
+          "ecommerce",
+          "лайфстайл-фотография",
+          "выбор-размера/цвета",
+          "фокус-на-экологичность",
+          "фото-клиентов",
+          "модные-бренды",
+          "экологичные-продукты",
+          "лайфстайл-бренды",
+          "product"
+        ],
+        "bestFor": [
+          "Модные Бренды",
+          "Экологичные Продукты",
+          "Лайфстайл Бренды"
+        ]
       },
       {
         "id": "product-luxury",
@@ -1253,9 +3250,35 @@
         "description": "Темная элегантная страница роскошного продукта с историей наследия, деталями мастерства и премиум конфигуратором.",
         "category": "Product",
         "difficulty": "advanced",
-        "features": ["Кинематографическое Видео", "Таймлайн Наследия", "Премиум Конфигуратор", "Награды и Пресса"],
-        "tags": ["роскошь", "премиум", "наследие", "мастерство"],
-        "bestFor": ["Роскошные Бренды", "Товары Класса Люкс", "Швейцарские Часы", "Премиум Товары"]
+        "features": [
+          "Кинематографическое Видео",
+          "Таймлайн Наследия",
+          "Премиум Конфигуратор",
+          "Награды и Пресса"
+        ],
+        "tags": [
+          "роскошь",
+          "премиум",
+          "наследие",
+          "мастерство",
+          "кинематографическое-видео",
+          "таймлайн-наследия",
+          "премиум-конфигуратор",
+          "награды-и-пресса",
+          "роскошные-бренды",
+          "товары-класса-люкс",
+          "швейцарские-часы",
+          "премиум-товары",
+          "product",
+          "advanced-features",
+          "complex"
+        ],
+        "bestFor": [
+          "Роскошные Бренды",
+          "Товары Класса Люкс",
+          "Швейцарские Часы",
+          "Премиум Товары"
+        ]
       },
       {
         "id": "product-audio",
@@ -1263,9 +3286,36 @@
         "description": "Страница беспроводных наушников премиум класса с интерактивным 3D просмотром, демо пространственного звука, техническими характеристиками и таблицей сравнения.",
         "category": "Product",
         "difficulty": "advanced",
-        "features": ["Интерактивный 3D Просмотр", "Выбор Цвета", "Демо Пространственного Звука", "Таблица Характеристик", "Отзывы Экспертов"],
-        "tags": ["аудио", "наушники", "беспроводные", "премиум", "технологии"],
-        "bestFor": ["Аудио Бренды", "Бытовая Электроника", "Премиум Технологии"]
+        "features": [
+          "Интерактивный 3D Просмотр",
+          "Выбор Цвета",
+          "Демо Пространственного Звука",
+          "Таблица Характеристик",
+          "Отзывы Экспертов"
+        ],
+        "tags": [
+          "аудио",
+          "наушники",
+          "беспроводные",
+          "премиум",
+          "технологии",
+          "интерактивный-3d-просмотр",
+          "выбор-цвета",
+          "демо-пространственного-звука",
+          "таблица-характеристик",
+          "отзывы-экспертов",
+          "аудио-бренды",
+          "бытовая-электроника",
+          "премиум-технологии",
+          "product",
+          "advanced-features",
+          "complex"
+        ],
+        "bestFor": [
+          "Аудио Бренды",
+          "Бытовая Электроника",
+          "Премиум Технологии"
+        ]
       },
       {
         "id": "product-vacuum",
@@ -1273,9 +3323,36 @@
         "description": "Страница беспроводного пылесоса с показателями производительности, лазерным обнаружением пыли, интеллектуальными режимами уборки и графиком сравнения мощности.",
         "category": "Product",
         "difficulty": "advanced",
-        "features": ["Метрики Производительности", "Режимы Уборки", "Витрина Аксессуаров", "Таблица Сравнения", "Награды"],
-        "tags": ["бытовая техника", "пылесос", "умный дом", "уборка", "беспроводной"],
-        "bestFor": ["Бренды Бытовой Техники", "Устройства Умного Дома", "Премиум Уборочные Инструменты"]
+        "features": [
+          "Метрики Производительности",
+          "Режимы Уборки",
+          "Витрина Аксессуаров",
+          "Таблица Сравнения",
+          "Награды"
+        ],
+        "tags": [
+          "бытовая техника",
+          "пылесос",
+          "умный дом",
+          "уборка",
+          "беспроводной",
+          "метрики-производительности",
+          "режимы-уборки",
+          "витрина-аксессуаров",
+          "таблица-сравнения",
+          "награды",
+          "бренды-бытовой-техники",
+          "устройства-умного-дома",
+          "премиум-уборочные-инструменты",
+          "product",
+          "advanced-features",
+          "complex"
+        ],
+        "bestFor": [
+          "Бренды Бытовой Техники",
+          "Устройства Умного Дома",
+          "Премиум Уборочные Инструменты"
+        ]
       },
       {
         "id": "service-b2b",
@@ -1283,9 +3360,33 @@
         "description": "Корпоративный B2B консалтинговый сервис с кейсами, метриками ROI и институциональным авторитетом.",
         "category": "Service",
         "difficulty": "advanced",
-        "features": ["Кейсы с ROI", "Отраслевая Экспертиза", "Мысленное Лидерство", "Логотипы Клиентов"],
-        "tags": ["b2b", "консалтинг", "профессиональный", "корпоративный"],
-        "bestFor": ["Консалтинговые Фирмы", "B2B Сервисы", "Корпоративные Решения"]
+        "features": [
+          "Кейсы с ROI",
+          "Отраслевая Экспертиза",
+          "Мысленное Лидерство",
+          "Логотипы Клиентов"
+        ],
+        "tags": [
+          "b2b",
+          "консалтинг",
+          "профессиональный",
+          "корпоративный",
+          "кейсы-с-roi",
+          "отраслевая-экспертиза",
+          "мысленное-лидерство",
+          "логотипы-клиентов",
+          "консалтинговые-фирмы",
+          "b2b-сервисы",
+          "корпоративные-решения",
+          "service",
+          "advanced-features",
+          "complex"
+        ],
+        "bestFor": [
+          "Консалтинговые Фирмы",
+          "B2B Сервисы",
+          "Корпоративные Решения"
+        ]
       },
       {
         "id": "service-community",
@@ -1293,9 +3394,31 @@
         "description": "Платформа с двойным ценностным предложением для создателей и участников с прозрачным ценообразованием.",
         "category": "Service",
         "difficulty": "intermediate",
-        "features": ["Двойная Аудитория", "Витрина Создателей", "Ценовые Планы", "Истории Успеха"],
-        "tags": ["сообщество", "членство", "платформа", "создатели"],
-        "bestFor": ["Платформы Сообществ", "Сайты Членства", "Инструменты для Создателей"]
+        "features": [
+          "Двойная Аудитория",
+          "Витрина Создателей",
+          "Ценовые Планы",
+          "Истории Успеха"
+        ],
+        "tags": [
+          "сообщество",
+          "членство",
+          "платформа",
+          "создатели",
+          "двойная-аудитория",
+          "витрина-создателей",
+          "ценовые-планы",
+          "истории-успеха",
+          "платформы-сообществ",
+          "сайты-членства",
+          "инструменты-для-создателей",
+          "service"
+        ],
+        "bestFor": [
+          "Платформы Сообществ",
+          "Сайты Членства",
+          "Инструменты для Создателей"
+        ]
       },
       {
         "id": "service-dfyou",
@@ -1303,9 +3426,31 @@
         "description": "Безлимитный продуктизированный сервис с портфолио, гарантиями и разделом FAQ.",
         "category": "Service",
         "difficulty": "intermediate",
-        "features": ["Фильтрация Портфолио", "Безлимитная Модель", "Гарантии", "FAQ"],
-        "tags": ["сервис", "подписка", "безлимитный", "дизайн"],
-        "bestFor": ["Дизайн Сервисы", "Продуктизированные Сервисы", "Подписные Сервисы"]
+        "features": [
+          "Фильтрация Портфолио",
+          "Безлимитная Модель",
+          "Гарантии",
+          "FAQ"
+        ],
+        "tags": [
+          "сервис",
+          "подписка",
+          "безлимитный",
+          "дизайн",
+          "фильтрация-портфолио",
+          "безлимитная-модель",
+          "гарантии",
+          "faq",
+          "дизайн-сервисы",
+          "продуктизированные-сервисы",
+          "подписные-сервисы",
+          "service"
+        ],
+        "bestFor": [
+          "Дизайн Сервисы",
+          "Продуктизированные Сервисы",
+          "Подписные Сервисы"
+        ]
       },
       {
         "id": "service-agency",
@@ -1313,9 +3458,33 @@
         "description": "Лендинг цифрового агентства с брендинговой стратегией, креативным дизайном и услугами производительного маркетинга.",
         "category": "Service",
         "difficulty": "advanced",
-        "features": ["Портфолио", "Профили Команды", "Услуги", "Рабочий Процесс"],
-        "tags": ["агентство", "креатив", "брендинг", "маркетинг"],
-        "bestFor": ["Цифровые Агентства", "Креативные Студии", "Маркетинговые Компании"]
+        "features": [
+          "Портфолио",
+          "Профили Команды",
+          "Услуги",
+          "Рабочий Процесс"
+        ],
+        "tags": [
+          "агентство",
+          "креатив",
+          "брендинг",
+          "маркетинг",
+          "портфолио",
+          "профили-команды",
+          "услуги",
+          "рабочий-процесс",
+          "цифровые-агентства",
+          "креативные-студии",
+          "маркетинговые-компании",
+          "service",
+          "advanced-features",
+          "complex"
+        ],
+        "bestFor": [
+          "Цифровые Агентства",
+          "Креативные Студии",
+          "Маркетинговые Компании"
+        ]
       },
       {
         "id": "service-enterprise",
@@ -1323,9 +3492,36 @@
         "description": "Корпоративные облачные решения с безопасностью, соблюдением норм и глобальным масштабом для компаний Fortune 500.",
         "category": "Service",
         "difficulty": "advanced",
-        "features": ["Сертификация SOC 2", "Корпоративные Цены", "Кейсы", "Интеграции"],
-        "tags": ["корпоративный", "облако", "безопасность", "соответствие"],
-        "bestFor": ["SaaS Компании", "Облачные Платформы", "Корпоративные Решения"]
+        "features": [
+          "Сертификация SOC 2",
+          "Корпоративные Цены",
+          "Кейсы",
+          "Интеграции"
+        ],
+        "tags": [
+          "корпоративный",
+          "облако",
+          "безопасность",
+          "соответствие",
+          "сертификация-soc-2",
+          "корпоративные-цены",
+          "кейсы",
+          "интеграции",
+          "saas-компании",
+          "облачные-платформы",
+          "корпоративные-решения",
+          "service",
+          "fortune",
+          "enterprise",
+          "b2b",
+          "advanced-features",
+          "complex"
+        ],
+        "bestFor": [
+          "SaaS Компании",
+          "Облачные Платформы",
+          "Корпоративные Решения"
+        ]
       },
       {
         "id": "service-consulting",
@@ -1333,9 +3529,33 @@
         "description": "Элитный управленческий консалтинг для CEO и советов директоров с корпоративной стратегией и цифровой трансформацией.",
         "category": "Service",
         "difficulty": "advanced",
-        "features": ["Клиентские Проекты", "Профили Партнеров", "Методология", "Экспертиза"],
-        "tags": ["консалтинг", "стратегия", "трансформация", "руководство"],
-        "bestFor": ["Консалтинговые Фирмы", "Консультационные Услуги", "Стратегический Консалтинг"]
+        "features": [
+          "Клиентские Проекты",
+          "Профили Партнеров",
+          "Методология",
+          "Экспертиза"
+        ],
+        "tags": [
+          "консалтинг",
+          "стратегия",
+          "трансформация",
+          "руководство",
+          "клиентские-проекты",
+          "профили-партнеров",
+          "методология",
+          "экспертиза",
+          "консалтинговые-фирмы",
+          "консультационные-услуги",
+          "стратегический-консалтинг",
+          "service",
+          "advanced-features",
+          "complex"
+        ],
+        "bestFor": [
+          "Консалтинговые Фирмы",
+          "Консультационные Услуги",
+          "Стратегический Консалтинг"
+        ]
       },
       {
         "id": "blog-personal",
@@ -1343,9 +3563,31 @@
         "description": "Минималистичный личный блог с чистым дизайном, избранными постами, подпиской на рассылку и социальными ссылками.",
         "category": "Blog",
         "difficulty": "intermediate",
-        "features": ["Избранные Посты", "Фильтр Категорий", "Рассылка", "Социальные Ссылки"],
-        "tags": ["блог", "личный", "минимализм", "чистый"],
-        "bestFor": ["Писатели", "Личные Бренды", "Создатели Контента"]
+        "features": [
+          "Избранные Посты",
+          "Фильтр Категорий",
+          "Рассылка",
+          "Социальные Ссылки"
+        ],
+        "tags": [
+          "блог",
+          "личный",
+          "минимализм",
+          "чистый",
+          "избранные-посты",
+          "фильтр-категорий",
+          "рассылка",
+          "социальные-ссылки",
+          "писатели",
+          "личные-бренды",
+          "создатели-контента",
+          "blog"
+        ],
+        "bestFor": [
+          "Писатели",
+          "Личные Бренды",
+          "Создатели Контента"
+        ]
       },
       {
         "id": "blog-magazine",
@@ -1353,9 +3595,33 @@
         "description": "Профессиональный блог в стиле журнала с продвинутыми сетками, трендовыми статьями, редакционной командой и многоколоночными макетами.",
         "category": "Blog",
         "difficulty": "advanced",
-        "features": ["Трендовые Статьи", "Редакционная Команда", "Продвинутые Сетки", "Система Категорий"],
-        "tags": ["журнал", "редакция", "профессиональный", "медиа"],
-        "bestFor": ["Онлайн Журналы", "Новостные Сайты", "Редакционные Команды"]
+        "features": [
+          "Трендовые Статьи",
+          "Редакционная Команда",
+          "Продвинутые Сетки",
+          "Система Категорий"
+        ],
+        "tags": [
+          "журнал",
+          "редакция",
+          "профессиональный",
+          "медиа",
+          "трендовые-статьи",
+          "редакционная-команда",
+          "продвинутые-сетки",
+          "система-категорий",
+          "онлайн-журналы",
+          "новостные-сайты",
+          "редакционные-команды",
+          "blog",
+          "advanced-features",
+          "complex"
+        ],
+        "bestFor": [
+          "Онлайн Журналы",
+          "Новостные Сайты",
+          "Редакционные Команды"
+        ]
       },
       {
         "id": "blog-tech",
@@ -1363,9 +3629,33 @@
         "description": "Продвинутый блог для разработчиков с темной темой, примерами кода, обучающими сериями, отслеживанием прогресса и интерактивными функциями.",
         "category": "Blog",
         "difficulty": "advanced",
-        "features": ["Темная Тема", "Примеры Кода", "Обучающие Серии", "Отслеживание Прогресса"],
-        "tags": ["технологии", "разработчик", "интерактивный", "код"],
-        "bestFor": ["Технические Блоги", "Сообщества Разработчиков", "Сайты с Туториалами"]
+        "features": [
+          "Темная Тема",
+          "Примеры Кода",
+          "Обучающие Серии",
+          "Отслеживание Прогресса"
+        ],
+        "tags": [
+          "технологии",
+          "разработчик",
+          "интерактивный",
+          "код",
+          "темная-тема",
+          "примеры-кода",
+          "обучающие-серии",
+          "отслеживание-прогресса",
+          "технические-блоги",
+          "сообщества-разработчиков",
+          "сайты-с-туториалами",
+          "blog",
+          "advanced-features",
+          "complex"
+        ],
+        "bestFor": [
+          "Технические Блоги",
+          "Сообщества Разработчиков",
+          "Сайты с Туториалами"
+        ]
       },
       {
         "id": "blog-archetypes-minimal",
@@ -1373,9 +3663,34 @@
         "description": "Современная минималистичная страница с 5-этапной воронкой конверсии: героический баннер, 7 карт архетипов, таргетинг аудитории, отзывы и цены. Дизайн с градиентами бирюзового и фиолетового с эффектом глассморфизма.",
         "category": "Blog",
         "difficulty": "intermediate",
-        "features": ["5-Этапная Воронка", "Глассморфизм Карты", "Плавные Анимации", "Оптимизировано под Конверсию"],
-        "tags": ["конверсия", "минимализм", "архетипы", "современный", "глассморфизм"],
-        "bestFor": ["Коучи", "Создатели Курсов", "Личностное Развитие", "Творческие Профессионалы"]
+        "features": [
+          "5-Этапная Воронка",
+          "Глассморфизм Карты",
+          "Плавные Анимации",
+          "Оптимизировано под Конверсию"
+        ],
+        "tags": [
+          "конверсия",
+          "минимализм",
+          "архетипы",
+          "современный",
+          "глассморфизм",
+          "5-этапная-воронка",
+          "глассморфизм-карты",
+          "плавные-анимации",
+          "оптимизировано-под-конверсию",
+          "коучи",
+          "создатели-курсов",
+          "личностное-развитие",
+          "творческие-профессионалы",
+          "blog"
+        ],
+        "bestFor": [
+          "Коучи",
+          "Создатели Курсов",
+          "Личностное Развитие",
+          "Творческие Профессионалы"
+        ]
       },
       {
         "id": "blog-archetypes-editorial",
@@ -1383,9 +3698,37 @@
         "description": "Смелый редакционный журнальный стиль страницы конверсии с 5-этапной воронкой: драматичный баннер, 7 пронумерованных карт архетипов, раздел квалификации, отзывы и цены программы. Дизайн черный/белый с ярко-синими акцентами и сильными границами.",
         "category": "Blog",
         "difficulty": "intermediate",
-        "features": ["Смелый Редакционный Дизайн", "5-Этапная Воронка", "Журнальный Макет", "Сильная Визуальная Иерархия", "Драматичная Типографика"],
-        "tags": ["конверсия", "редакционный", "журнал", "смелый", "архетипы", "премиум"],
-        "bestFor": ["Премиум Коучи", "Дорогие Программы", "Трансформационные Программы", "Личный Бренд"]
+        "features": [
+          "Смелый Редакционный Дизайн",
+          "5-Этапная Воронка",
+          "Журнальный Макет",
+          "Сильная Визуальная Иерархия",
+          "Драматичная Типографика"
+        ],
+        "tags": [
+          "конверсия",
+          "редакционный",
+          "журнал",
+          "смелый",
+          "архетипы",
+          "премиум",
+          "смелый-редакционный-дизайн",
+          "5-этапная-воронка",
+          "журнальный-макет",
+          "сильная-визуальная-иерархия",
+          "драматичная-типографика",
+          "премиум-коучи",
+          "дорогие-программы",
+          "трансформационные-программы",
+          "личный-бренд",
+          "blog"
+        ],
+        "bestFor": [
+          "Премиум Коучи",
+          "Дорогие Программы",
+          "Трансформационные Программы",
+          "Личный Бренд"
+        ]
       },
       {
         "id": "online-business-coach",
@@ -1393,9 +3736,41 @@
         "description": "Премиум шаблон для лайф-коучей и бизнес-коучей. Включает hero с призывом к действию, витрину предложений (книги/курсы/коучинг), отзывы, лид-магниты и многошаговые формы.",
         "category": "Online Business",
         "difficulty": "intermediate",
-        "features": ["Главная Секция", "Витрина Предложений", "Отзывы", "Подписка на Рассылку", "Лид-магниты", "Многошаговые Формы"],
-        "tags": ["коучинг", "лайф-коуч", "бизнес-коуч", "консалтинг", "личный-бренд"],
-        "bestFor": ["Лайф-коучи", "Бизнес-коучи", "Консультанты", "Авторы", "Спикеры"]
+        "features": [
+          "Главная Секция",
+          "Витрина Предложений",
+          "Отзывы",
+          "Подписка на Рассылку",
+          "Лид-магниты",
+          "Многошаговые Формы"
+        ],
+        "tags": [
+          "коучинг",
+          "лайф-коуч",
+          "бизнес-коуч",
+          "консалтинг",
+          "личный-бренд",
+          "главная-секция",
+          "витрина-предложений",
+          "отзывы",
+          "подписка-на-рассылку",
+          "лид-магниты",
+          "многошаговые-формы",
+          "лайф-коучи",
+          "бизнес-коучи",
+          "консультанты",
+          "авторы",
+          "спикеры",
+          "online business",
+          "hero"
+        ],
+        "bestFor": [
+          "Лайф-коучи",
+          "Бизнес-коучи",
+          "Консультанты",
+          "Авторы",
+          "Спикеры"
+        ]
       },
       {
         "id": "online-business-course",
@@ -1403,9 +3778,38 @@
         "description": "Шаблон для создателей курсов с видео-превью, витриной учебного плана, тарифными планами, отзывами студентов и системой регистрации. Идеально для цифрового образования.",
         "category": "Online Business",
         "difficulty": "intermediate",
-        "features": ["Видео Превью", "Модули Курса", "Тарифные Планы", "Отзывы Студентов", "Сертификаты", "CTA Секции"],
-        "tags": ["курсы", "образование", "онлайн-обучение", "цифровые-продукты", "преподавание"],
-        "bestFor": ["Создатели Курсов", "Преподаватели", "Продавцы Цифровых Продуктов", "Обучающие Платформы"]
+        "features": [
+          "Видео Превью",
+          "Модули Курса",
+          "Тарифные Планы",
+          "Отзывы Студентов",
+          "Сертификаты",
+          "CTA Секции"
+        ],
+        "tags": [
+          "курсы",
+          "образование",
+          "онлайн-обучение",
+          "цифровые-продукты",
+          "преподавание",
+          "видео-превью",
+          "модули-курса",
+          "тарифные-планы",
+          "отзывы-студентов",
+          "сертификаты",
+          "cta-секции",
+          "создатели-курсов",
+          "преподаватели",
+          "продавцы-цифровых-продуктов",
+          "обучающие-платформы",
+          "online business"
+        ],
+        "bestFor": [
+          "Создатели Курсов",
+          "Преподаватели",
+          "Продавцы Цифровых Продуктов",
+          "Обучающие Платформы"
+        ]
       },
       {
         "id": "online-business-agency",
@@ -1413,9 +3817,40 @@
         "description": "Профессиональный B2B шаблон агентства с витриной услуг, кейс-стади, временной линией процесса, профилями команды и отзывами клиентов. Ориентирован на данные.",
         "category": "Online Business",
         "difficulty": "advanced",
-        "features": ["Сетка Услуг", "Кейс-стади", "Временная Линия", "Панель Статистики", "Логотипы Клиентов", "Форма Проекта"],
-        "tags": ["агентство", "b2b", "услуги", "портфолио", "профессионально"],
-        "bestFor": ["Цифровые Агентства", "Маркетинговые Агентства", "Студии Разработки", "Консалтинговые Фирмы"]
+        "features": [
+          "Сетка Услуг",
+          "Кейс-стади",
+          "Временная Линия",
+          "Панель Статистики",
+          "Логотипы Клиентов",
+          "Форма Проекта"
+        ],
+        "tags": [
+          "агентство",
+          "b2b",
+          "услуги",
+          "портфолио",
+          "профессионально",
+          "сетка-услуг",
+          "кейс-стади",
+          "временная-линия",
+          "панель-статистики",
+          "логотипы-клиентов",
+          "форма-проекта",
+          "цифровые-агентства",
+          "маркетинговые-агентства",
+          "студии-разработки",
+          "консалтинговые-фирмы",
+          "online business",
+          "advanced-features",
+          "complex"
+        ],
+        "bestFor": [
+          "Цифровые Агентства",
+          "Маркетинговые Агентства",
+          "Студии Разработки",
+          "Консалтинговые Фирмы"
+        ]
       },
       {
         "id": "online-business-saas",
@@ -1423,9 +3858,39 @@
         "description": "Современная SaaS лендинг страница с AI-функциями, прозрачными тарифами, сравнением функций и призывом к бесплатному пробному периоду. Создан для современных продуктовых команд.",
         "category": "Online Business",
         "difficulty": "intermediate",
-        "features": ["Hero с CTA", "Сетка Функций", "Тарифные Планы", "Социальное Доказательство", "Основные Функции", "Бесплатный Пробный Период"],
-        "tags": ["saas", "продукт", "тарифы", "b2b", "подписка"],
-        "bestFor": ["SaaS Компании", "Программные Продукты", "B2B Инструменты", "Приложения Продуктивности"]
+        "features": [
+          "Hero с CTA",
+          "Сетка Функций",
+          "Тарифные Планы",
+          "Социальное Доказательство",
+          "Основные Функции",
+          "Бесплатный Пробный Период"
+        ],
+        "tags": [
+          "saas",
+          "продукт",
+          "тарифы",
+          "b2b",
+          "подписка",
+          "hero-с-cta",
+          "сетка-функций",
+          "тарифные-планы",
+          "социальное-доказательство",
+          "основные-функции",
+          "бесплатный-пробный-период",
+          "saas-компании",
+          "программные-продукты",
+          "b2b-инструменты",
+          "приложения-продуктивности",
+          "online business",
+          "software"
+        ],
+        "bestFor": [
+          "SaaS Компании",
+          "Программные Продукты",
+          "B2B Инструменты",
+          "Приложения Продуктивности"
+        ]
       },
       {
         "id": "lin-portfolio-elegance",
@@ -1433,9 +3898,34 @@
         "description": "Элегантный шаблон портфолио для дизайнеров и креативщиков. Дизайн галереи с акцентом на изображения и теплыми золотыми акцентами, идеально подходит для демонстрации работ по дизайну интерьера.",
         "category": "Portfolio",
         "difficulty": "intermediate",
-        "features": ["Сетка Галереи Изображений", "Витрина Проектов", "Элегантная Типографика", "Поддержка RTL"],
-        "tags": ["портфолио", "дизайн-интерьера", "элегантный", "галерея", "изображения-первым"],
-        "bestFor": ["Дизайнеры Интерьера", "Фотографы", "Художники", "Креативные Портфолио"]
+        "features": [
+          "Сетка Галереи Изображений",
+          "Витрина Проектов",
+          "Элегантная Типографика",
+          "Поддержка RTL"
+        ],
+        "tags": [
+          "портфолио",
+          "дизайн-интерьера",
+          "элегантный",
+          "галерея",
+          "изображения-первым",
+          "сетка-галереи-изображений",
+          "витрина-проектов",
+          "элегантная-типографика",
+          "поддержка-rtl",
+          "дизайнеры-интерьера",
+          "фотографы",
+          "художники",
+          "креативные-портфолио",
+          "portfolio"
+        ],
+        "bestFor": [
+          "Дизайнеры Интерьера",
+          "Фотографы",
+          "Художники",
+          "Креативные Портфолио"
+        ]
       },
       {
         "id": "lin-professional-authority",
@@ -1443,9 +3933,38 @@
         "description": "Премиальный шаблон для бухгалтерских фирм и профессиональных услуг. Цветовая схема темно-синий и золото передает доверие и роскошь с витринами услуг и знаками доверия.",
         "category": "Service",
         "difficulty": "advanced",
-        "features": ["Витрина Услуг", "Знаки Доверия", "Раздел Команды", "Профессиональная Раскладка", "Формы Контактов"],
-        "tags": ["бухгалтерия", "профессиональный", "роскошь", "доверие", "услуги"],
-        "bestFor": ["Бухгалтерские Фирмы", "Юридические Фирмы", "Консалтинг", "Финансовые Услуги"]
+        "features": [
+          "Витрина Услуг",
+          "Знаки Доверия",
+          "Раздел Команды",
+          "Профессиональная Раскладка",
+          "Формы Контактов"
+        ],
+        "tags": [
+          "бухгалтерия",
+          "профессиональный",
+          "роскошь",
+          "доверие",
+          "услуги",
+          "витрина-услуг",
+          "знаки-доверия",
+          "раздел-команды",
+          "профессиональная-раскладка",
+          "формы-контактов",
+          "бухгалтерские-фирмы",
+          "юридические-фирмы",
+          "консалтинг",
+          "финансовые-услуги",
+          "service",
+          "advanced-features",
+          "complex"
+        ],
+        "bestFor": [
+          "Бухгалтерские Фирмы",
+          "Юридические Фирмы",
+          "Консалтинг",
+          "Финансовые Услуги"
+        ]
       },
       {
         "id": "lin-tech-pioneer",
@@ -1453,9 +3972,39 @@
         "description": "Современный шаблон технологической компании с электрическими синими градиентами и поддержкой RTL на иврите. Включает отображение технологического стека, блоки кода и витрины продуктов.",
         "category": "Product",
         "difficulty": "advanced",
-        "features": ["Отображение Технологий", "Блоки Кода", "Современные Градиенты", "Поддержка RTL Иврит", "Витрины Продуктов"],
-        "tags": ["технологии", "программное-обеспечение", "saas", "иврит", "rtl", "современный"],
-        "bestFor": ["Программные Компании", "SaaS Продукты", "Технологические Стартапы", "Разработчики"]
+        "features": [
+          "Отображение Технологий",
+          "Блоки Кода",
+          "Современные Градиенты",
+          "Поддержка RTL Иврит",
+          "Витрины Продуктов"
+        ],
+        "tags": [
+          "технологии",
+          "программное-обеспечение",
+          "saas",
+          "иврит",
+          "rtl",
+          "современный",
+          "отображение-технологий",
+          "блоки-кода",
+          "современные-градиенты",
+          "поддержка-rtl-иврит",
+          "витрины-продуктов",
+          "программные-компании",
+          "saas-продукты",
+          "технологические-стартапы",
+          "разработчики",
+          "product",
+          "advanced-features",
+          "complex"
+        ],
+        "bestFor": [
+          "Программные Компании",
+          "SaaS Продукты",
+          "Технологические Стартапы",
+          "Разработчики"
+        ]
       }
     ],
     "serviceMarketplace": {
@@ -1473,10 +4022,22 @@
         "ctaSecondary": "Узнать Больше"
       },
       "stats": [
-        { "value": "10K+", "label": "Активных Пользователей" },
-        { "value": "50K+", "label": "Продано Услуг" },
-        { "value": "$2M+", "label": "В Транзакциях" },
-        { "value": "4.9/5", "label": "Средний Рейтинг" }
+        {
+          "value": "10K+",
+          "label": "Активных Пользователей"
+        },
+        {
+          "value": "50K+",
+          "label": "Продано Услуг"
+        },
+        {
+          "value": "$2M+",
+          "label": "В Транзакциях"
+        },
+        {
+          "value": "4.9/5",
+          "label": "Средний Рейтинг"
+        }
       ],
       "features": {
         "title": "Почему Выбирают Нашу Платформу",

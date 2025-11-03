@@ -2,19 +2,22 @@
 
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { getTemplates } from "@/lib/template-registry";
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { CategoryMenu } from "@/components/shared/category-menu";
+import { Input } from "@/components/ui/input";
 import {
   FiExternalLink,
   FiMessageCircle,
   FiEye,
   FiFolder,
   FiEdit3,
+  FiSearch,
+  FiX,
 } from "react-icons/fi";
 import { useI18n } from "@/lib/i18n-context";
 
@@ -34,6 +37,8 @@ export function TemplateGallery() {
   const searchParams = useSearchParams();
 
   const filter = searchParams.get("category") || "all";
+  const [searchQuery, setSearchQuery] = useState(searchParams.get("search") || "");
+  const [selectedTag, setSelectedTag] = useState<string | null>(searchParams.get("tag") || null);
 
   // Restore scroll position when returning from template detail page
   useEffect(() => {
@@ -84,9 +89,23 @@ export function TemplateGallery() {
     return a.localeCompare(b);
   });
 
-  const filteredTemplates = filter === "all"
-    ? templates
-    : templates.filter(temp => temp.category === filter);
+  // Combined filtering: category + search + tag
+  const filteredTemplates = templates.filter(template => {
+    // Category filter
+    const matchesCategory = filter === "all" || template.category === filter;
+
+    // Text search filter (search in name, description, and tags)
+    const matchesSearch = !searchQuery ||
+      template.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      template.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      template.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+
+    // Tag filter (exact match or contains)
+    const matchesTag = !selectedTag ||
+      template.tags.some(tag => tag.toLowerCase() === selectedTag.toLowerCase());
+
+    return matchesCategory && matchesSearch && matchesTag;
+  });
 
   const handleFilterChange = (category: string) => {
     const params = new URLSearchParams(searchParams);
@@ -95,6 +114,52 @@ export function TemplateGallery() {
     } else {
       params.set("category", category);
     }
+    // Preserve search and tag params
+    if (searchQuery) params.set("search", searchQuery);
+    if (selectedTag) params.set("tag", selectedTag);
+    router.push(`/?${params.toString()}`, { scroll: false });
+  };
+
+  const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value;
+    setSearchQuery(value);
+
+    // Update URL params
+    const params = new URLSearchParams(searchParams);
+    if (value) {
+      params.set("search", value);
+    } else {
+      params.delete("search");
+    }
+    // Preserve category and tag params
+    if (filter !== "all") params.set("category", filter);
+    if (selectedTag) params.set("tag", selectedTag);
+    router.push(`/?${params.toString()}`, { scroll: false });
+  };
+
+  const clearSearch = () => {
+    setSearchQuery("");
+    const params = new URLSearchParams(searchParams);
+    params.delete("search");
+    if (filter !== "all") params.set("category", filter);
+    if (selectedTag) params.set("tag", selectedTag);
+    router.push(`/?${params.toString()}`, { scroll: false });
+  };
+
+  const handleTagClick = (tag: string) => {
+    const newTag = selectedTag === tag ? null : tag;
+    setSelectedTag(newTag);
+
+    // Update URL params
+    const params = new URLSearchParams(searchParams);
+    if (newTag) {
+      params.set("tag", newTag);
+    } else {
+      params.delete("tag");
+    }
+    // Preserve search and category params
+    if (searchQuery) params.set("search", searchQuery);
+    if (filter !== "all") params.set("category", filter);
     router.push(`/?${params.toString()}`, { scroll: false });
   };
 
@@ -112,6 +177,57 @@ export function TemplateGallery() {
 
   return (
     <div className="relative">
+      {/* Search Input */}
+      <motion.div
+        initial={{ opacity: 0, y: -10 }}
+        animate={{ opacity: 1, y: 0 }}
+        className="mb-4 sm:mb-6"
+      >
+        <div className="relative max-w-2xl mx-auto">
+          <FiSearch className="absolute left-4 top-1/2 transform -translate-y-1/2 text-muted-foreground w-5 h-5" />
+          <Input
+            type="text"
+            placeholder={language === 'en' ? "Search templates by name, description, or tags..." : "Поиск по названию, описанию или тегам..."}
+            value={searchQuery}
+            onChange={handleSearchChange}
+            className="pl-12 pr-12 py-6 text-base rounded-full border-2 focus:border-primary"
+          />
+          {searchQuery && (
+            <button
+              onClick={clearSearch}
+              className="absolute right-4 top-1/2 transform -translate-y-1/2 text-muted-foreground hover:text-foreground transition-colors"
+              aria-label="Clear search"
+            >
+              <FiX className="w-5 h-5" />
+            </button>
+          )}
+        </div>
+
+        {/* Active Filters */}
+        {(selectedTag || searchQuery) && (
+          <div className="flex flex-wrap gap-2 justify-center mt-4">
+            {searchQuery && (
+              <Badge
+                variant="secondary"
+                className="px-3 py-1.5 text-sm cursor-pointer hover:bg-destructive/10"
+                onClick={clearSearch}
+              >
+                Search: "{searchQuery}" <FiX className="ml-1 w-3 h-3" />
+              </Badge>
+            )}
+            {selectedTag && (
+              <Badge
+                variant="secondary"
+                className="px-3 py-1.5 text-sm cursor-pointer hover:bg-destructive/10"
+                onClick={() => handleTagClick(selectedTag)}
+              >
+                Tag: {selectedTag} <FiX className="ml-1 w-3 h-3" />
+              </Badge>
+            )}
+          </div>
+        )}
+      </motion.div>
+
       {/* Hamburger Category Menu */}
       <CategoryMenu
         categories={categories}
@@ -172,17 +288,27 @@ export function TemplateGallery() {
                   {template.description}
                 </CardDescription>
 
-                {/* Features - Simplified */}
-                <div className="flex flex-wrap gap-1.5 mb-4">
-                  {template.features.slice(0, 3).map((feature) => (
+                {/* Tags - Clickable Chips */}
+                <div className="flex flex-wrap gap-1.5 mb-3">
+                  {template.tags.slice(0, 6).map((tag) => (
                     <Badge
-                      key={feature}
-                      variant="outline"
-                      className="text-xs"
+                      key={tag}
+                      variant={selectedTag === tag ? "default" : "secondary"}
+                      className="text-xs cursor-pointer hover:bg-primary/80 hover:text-primary-foreground transition-colors"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        handleTagClick(tag);
+                      }}
                     >
-                      {feature}
+                      {tag}
                     </Badge>
                   ))}
+                  {template.tags.length > 6 && (
+                    <Badge variant="outline" className="text-xs">
+                      +{template.tags.length - 6}
+                    </Badge>
+                  )}
                 </div>
 
                 {/* Actions - Single Primary Button */}

@@ -876,7 +876,7 @@ const SettingsPanel = () => {
   const t = labels[language] || labels.en;
 
   return (
-    <div className="w-80 bg-white border-l h-full overflow-y-auto">
+    <div className="w-full md:w-80 bg-white border-l h-full overflow-y-auto">
       <div className="p-4 border-b">
         <h3 className="font-semibold text-lg">{t.settings}</h3>
       </div>
@@ -932,19 +932,44 @@ const Toolbox = ({ language, setMobileView }: { language: 'en' | 'ru'; setMobile
       try {
         // On mobile, directly add to canvas instead of drag-drop
         const tree = query.getSerializedNodes();
-        const containerNodeId = Object.keys(tree).find(
-          id => tree[id].type.resolvedName === 'Container'
+
+        // Look for Container node first
+        let containerNodeId = Object.keys(tree).find(
+          id => tree[id] && tree[id].type && tree[id].type.resolvedName === 'Container'
         );
+
+        // If Container not found, look for the first canvas-enabled node
+        if (!containerNodeId) {
+          containerNodeId = Object.keys(tree).find(
+            id => tree[id] && tree[id].data && tree[id].data.props && tree[id].data.props.canvas
+          );
+        }
+
+        // Final fallback to ROOT
+        if (!containerNodeId && tree['ROOT']) {
+          containerNodeId = 'ROOT';
+        }
 
         if (containerNodeId) {
           const componentNodeTree = query.parseReactElement(component).toNodeTree();
+
+          // Check if EmptyCanvas exists and remove it when adding first real component
+          const emptyCanvasNode = Object.keys(tree).find(
+            id => tree[id] && tree[id].type && tree[id].type.resolvedName === 'EmptyCanvas'
+          );
+
+          if (emptyCanvasNode) {
+            actions.delete(emptyCanvasNode);
+          }
+
           actions.addNodeTree(componentNodeTree, containerNodeId);
+
           // Call success callback if provided
           if (onSuccess) {
-            onSuccess();
+            setTimeout(() => {
+              onSuccess();
+            }, 300);
           }
-        } else {
-          console.error('Container node not found');
         }
       } catch (error) {
         console.error('Error adding component:', error);
@@ -996,7 +1021,7 @@ const Toolbox = ({ language, setMobileView }: { language: 'en' | 'ru'; setMobile
   const t = labels[language];
 
   return (
-    <div className="w-64 bg-white border-r h-full overflow-y-auto">
+    <div className="w-full md:w-64 bg-white border-r h-full overflow-y-auto">
       <div className="p-4 border-b">
         <h3 className="font-semibold text-lg">{t.components}</h3>
       </div>
@@ -1005,19 +1030,19 @@ const Toolbox = ({ language, setMobileView }: { language: 'en' | 'ru'; setMobile
         <button
           ref={(ref) => {
             if (ref) {
-              if (isMobile) {
-                // Mobile: tap to add
-                ref.onclick = () => handleMobileAdd(
-                  <Element is={SplitScreenHero} language={language} canvas />,
-                  () => setMobileView && setMobileView('canvas')
-                );
-              } else {
+              if (!isMobile) {
                 // Desktop: drag to add
                 connectors.create(ref, <Element is={SplitScreenHero} language={language} canvas />);
               }
             }
           }}
-          className="w-full p-3 text-left border rounded hover:bg-gray-50 transition-colors active:bg-blue-50"
+          onClick={isMobile ? () => {
+            handleMobileAdd(
+              <Element is={SplitScreenHero} language={language} canvas />,
+              () => setMobileView && setMobileView('canvas')
+            );
+          } : undefined}
+          className="w-full p-3 text-left border rounded hover:bg-gray-50 transition-colors active:bg-blue-50 cursor-pointer"
           style={{ touchAction: isMobile ? 'auto' : 'none' }}
         >
           <div className="font-medium">{t.splitHero}</div>
@@ -1027,18 +1052,15 @@ const Toolbox = ({ language, setMobileView }: { language: 'en' | 'ru'; setMobile
         </button>
         <button
           ref={(ref) => {
-            if (ref) {
-              if (isMobile) {
-                ref.onclick = () => handleMobileAdd(
-                  <Element is={SplitScreenStats} language={language} canvas />,
-                  () => setMobileView && setMobileView('canvas')
-                );
-              } else {
-                connectors.create(ref, <Element is={SplitScreenStats} language={language} canvas />);
-              }
+            if (ref && !isMobile) {
+              connectors.create(ref, <Element is={SplitScreenStats} language={language} canvas />);
             }
           }}
-          className="w-full p-3 text-left border rounded hover:bg-gray-50 transition-colors active:bg-blue-50"
+          onClick={isMobile ? () => handleMobileAdd(
+            <Element is={SplitScreenStats} language={language} canvas />,
+            () => setMobileView && setMobileView('canvas')
+          ) : undefined}
+          className="w-full p-3 text-left border rounded hover:bg-gray-50 transition-colors active:bg-blue-50 cursor-pointer"
           style={{ touchAction: isMobile ? 'auto' : 'none' }}
         >
           <div className="font-medium">{t.stats}</div>
@@ -1048,18 +1070,15 @@ const Toolbox = ({ language, setMobileView }: { language: 'en' | 'ru'; setMobile
         </button>
         <button
           ref={(ref) => {
-            if (ref) {
-              if (isMobile) {
-                ref.onclick = () => handleMobileAdd(
-                  <Element is={SplitScreenSkills} language={language} canvas />,
-                  () => setMobileView && setMobileView('canvas')
-                );
-              } else {
-                connectors.create(ref, <Element is={SplitScreenSkills} language={language} canvas />);
-              }
+            if (ref && !isMobile) {
+              connectors.create(ref, <Element is={SplitScreenSkills} language={language} canvas />);
             }
           }}
-          className="w-full p-3 text-left border rounded hover:bg-gray-50 transition-colors active:bg-blue-50"
+          onClick={isMobile ? () => handleMobileAdd(
+            <Element is={SplitScreenSkills} language={language} canvas />,
+            () => setMobileView && setMobileView('canvas')
+          ) : undefined}
+          className="w-full p-3 text-left border rounded hover:bg-gray-50 transition-colors active:bg-blue-50 cursor-pointer"
           style={{ touchAction: isMobile ? 'auto' : 'none' }}
         >
           <div className="font-medium">{t.skills}</div>
@@ -1069,18 +1088,15 @@ const Toolbox = ({ language, setMobileView }: { language: 'en' | 'ru'; setMobile
         </button>
         <button
           ref={(ref) => {
-            if (ref) {
-              if (isMobile) {
-                ref.onclick = () => handleMobileAdd(
-                  <Element is={SplitScreenContact} language={language} canvas />,
-                  () => setMobileView && setMobileView('canvas')
-                );
-              } else {
-                connectors.create(ref, <Element is={SplitScreenContact} language={language} canvas />);
-              }
+            if (ref && !isMobile) {
+              connectors.create(ref, <Element is={SplitScreenContact} language={language} canvas />);
             }
           }}
-          className="w-full p-3 text-left border rounded hover:bg-gray-50 transition-colors active:bg-blue-50"
+          onClick={isMobile ? () => handleMobileAdd(
+            <Element is={SplitScreenContact} language={language} canvas />,
+            () => setMobileView && setMobileView('canvas')
+          ) : undefined}
+          className="w-full p-3 text-left border rounded hover:bg-gray-50 transition-colors active:bg-blue-50 cursor-pointer"
           style={{ touchAction: isMobile ? 'auto' : 'none' }}
         >
           <div className="font-medium">{t.contact}</div>
@@ -1092,18 +1108,15 @@ const Toolbox = ({ language, setMobileView }: { language: 'en' | 'ru'; setMobile
         <div className="text-xs font-semibold text-gray-500 uppercase mb-2 mt-6">{t.generic}</div>
         <button
           ref={(ref) => {
-            if (ref) {
-              if (isMobile) {
-                ref.onclick = () => handleMobileAdd(
-                  <Element is={HeroComponent} language={language} canvas />,
-                  () => setMobileView && setMobileView('canvas')
-                );
-              } else {
-                connectors.create(ref, <Element is={HeroComponent} language={language} canvas />);
-              }
+            if (ref && !isMobile) {
+              connectors.create(ref, <Element is={HeroComponent} language={language} canvas />);
             }
           }}
-          className="w-full p-3 text-left border rounded hover:bg-gray-50 transition-colors active:bg-blue-50"
+          onClick={isMobile ? () => handleMobileAdd(
+            <Element is={HeroComponent} language={language} canvas />,
+            () => setMobileView && setMobileView('canvas')
+          ) : undefined}
+          className="w-full p-3 text-left border rounded hover:bg-gray-50 transition-colors active:bg-blue-50 cursor-pointer"
           style={{ touchAction: isMobile ? 'auto' : 'none' }}
         >
           <div className="font-medium">{t.hero}</div>
@@ -1113,18 +1126,15 @@ const Toolbox = ({ language, setMobileView }: { language: 'en' | 'ru'; setMobile
         </button>
         <button
           ref={(ref) => {
-            if (ref) {
-              if (isMobile) {
-                ref.onclick = () => handleMobileAdd(
-                  <Element is={AboutComponent} language={language} canvas />,
-                  () => setMobileView && setMobileView('canvas')
-                );
-              } else {
-                connectors.create(ref, <Element is={AboutComponent} language={language} canvas />);
-              }
+            if (ref && !isMobile) {
+              connectors.create(ref, <Element is={AboutComponent} language={language} canvas />);
             }
           }}
-          className="w-full p-3 text-left border rounded hover:bg-gray-50 transition-colors active:bg-blue-50"
+          onClick={isMobile ? () => handleMobileAdd(
+            <Element is={AboutComponent} language={language} canvas />,
+            () => setMobileView && setMobileView('canvas')
+          ) : undefined}
+          className="w-full p-3 text-left border rounded hover:bg-gray-50 transition-colors active:bg-blue-50 cursor-pointer"
           style={{ touchAction: isMobile ? 'auto' : 'none' }}
         >
           <div className="font-medium">{t.about}</div>
@@ -1134,18 +1144,15 @@ const Toolbox = ({ language, setMobileView }: { language: 'en' | 'ru'; setMobile
         </button>
         <button
           ref={(ref) => {
-            if (ref) {
-              if (isMobile) {
-                ref.onclick = () => handleMobileAdd(
-                  <Element is={ProjectsComponent} language={language} canvas />,
-                  () => setMobileView && setMobileView('canvas')
-                );
-              } else {
-                connectors.create(ref, <Element is={ProjectsComponent} language={language} canvas />);
-              }
+            if (ref && !isMobile) {
+              connectors.create(ref, <Element is={ProjectsComponent} language={language} canvas />);
             }
           }}
-          className="w-full p-3 text-left border rounded hover:bg-gray-50 transition-colors active:bg-blue-50"
+          onClick={isMobile ? () => handleMobileAdd(
+            <Element is={ProjectsComponent} language={language} canvas />,
+            () => setMobileView && setMobileView('canvas')
+          ) : undefined}
+          className="w-full p-3 text-left border rounded hover:bg-gray-50 transition-colors active:bg-blue-50 cursor-pointer"
           style={{ touchAction: isMobile ? 'auto' : 'none' }}
         >
           <div className="font-medium">{t.projects}</div>
@@ -1366,7 +1373,7 @@ export function CraftJSTemplateBuilder({ template }: { template: TemplateConfig 
         </div>
 
         {/* Mobile Navigation Bar */}
-        <div className="md:hidden bg-white border-t flex items-center justify-around py-2 safe-area-inset-bottom">
+        <div className="md:hidden bg-white border-t flex items-center justify-around py-3 sticky bottom-0 z-30 shadow-lg">
           <button
             onClick={() => setMobileView('components')}
             className={`flex flex-col items-center gap-1 px-4 py-2 rounded-md transition-colors ${
