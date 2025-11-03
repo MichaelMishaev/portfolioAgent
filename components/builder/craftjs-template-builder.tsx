@@ -2551,6 +2551,20 @@ export function CraftJSTemplateBuilder({ template }: { template: TemplateConfig 
   const [showSubmitDropdown, setShowSubmitDropdown] = React.useState(false);
   const [showScrollHint, setShowScrollHint] = React.useState(true);
 
+  // Detect if device is mobile/touch
+  const [isMobileDevice, setIsMobileDevice] = React.useState(false);
+
+  React.useEffect(() => {
+    const checkMobile = () => {
+      const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+      const isSmallScreen = window.innerWidth < 768;
+      setIsMobileDevice(isTouchDevice && isSmallScreen);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
   // Tutorial state - user clicks button to show
   const [showTutorial, setShowTutorial] = React.useState(false);
 
@@ -2707,26 +2721,37 @@ export function CraftJSTemplateBuilder({ template }: { template: TemplateConfig 
     <div className="min-h-screen flex flex-col">
       {/* Mobile Touch Scroll Fix - Disable drag on touch devices, enable scroll */}
       <style jsx global>{`
-        @media (pointer: coarse) {
-          /* On touch devices, prevent drag interference with scrolling */
+        /* MOBILE: Disable drag completely, enable natural scrolling */
+        @media (max-width: 768px) and (pointer: coarse) {
+          /* Disable all drag handles on mobile */
+          [data-cy="drag-handle"],
+          [draggable="true"] {
+            pointer-events: none !important;
+            cursor: default !important;
+          }
+
+          /* Allow tap-to-select but no drag */
           [data-craftjs-node] {
+            -webkit-user-drag: none !important;
+            -webkit-user-select: none !important;
+            user-select: none !important;
+            touch-action: pan-y pan-x !important;
             pointer-events: auto !important;
-            touch-action: pan-y !important;
           }
-          /* Allow scrolling in canvas */
-          .craftjs-renderer {
+
+          /* Enable smooth scrolling in canvas */
+          .craftjs-renderer,
+          .craftjs-renderer > * {
             -webkit-overflow-scrolling: touch !important;
-            touch-action: pan-y !important;
             overflow-y: auto !important;
+            touch-action: pan-y pan-x !important;
+            overscroll-behavior: contain !important;
           }
-          /* Prevent body scroll when touching canvas */
+
+          /* Prevent body scroll interference */
           body {
             overscroll-behavior: contain;
-          }
-          /* Make canvas scrollable */
-          .craftjs-renderer > div {
-            overflow-y: auto !important;
-            -webkit-overflow-scrolling: touch !important;
+            -webkit-overflow-scrolling: touch;
           }
         }
       `}</style>
@@ -2884,12 +2909,11 @@ export function CraftJSTemplateBuilder({ template }: { template: TemplateConfig 
           <div
             className={`${mobileView === 'canvas' ? 'block' : 'hidden'} md:block flex-1 overflow-auto bg-gray-100 absolute md:relative inset-0 md:inset-auto pb-20 md:pb-0`}
             style={{
-              userSelect: 'none',
-              WebkitUserSelect: 'none',
-              MozUserSelect: 'none',
-              msUserSelect: 'none',
-              touchAction: 'pan-y',
-              WebkitOverflowScrolling: 'touch'
+              // Mobile: Enable scrolling, disable drag
+              touchAction: isMobileDevice ? 'pan-y pan-x' : 'none',
+              WebkitOverflowScrolling: 'touch',
+              overflowY: 'auto',
+              overscrollBehavior: 'contain'
             }}
           >
             <Frame key={language}>
@@ -2897,8 +2921,20 @@ export function CraftJSTemplateBuilder({ template }: { template: TemplateConfig 
                 <Element is={EmptyCanvas} language={language} />
               </Element>
             </Frame>
+            {/* Mobile info banner */}
+            {isMobileDevice && (
+              <div className="md:hidden fixed top-20 left-1/2 transform -translate-x-1/2 z-10 max-w-xs">
+                <div className="bg-blue-600 text-white px-3 py-2 rounded-lg shadow-lg text-center">
+                  <span className="text-xs font-semibold">
+                    {language === 'ru'
+                      ? '📱 Нажмите для выбора • Прокрутка включена'
+                      : '📱 Tap to select • Scroll enabled'}
+                  </span>
+                </div>
+              </div>
+            )}
             {/* Scroll indicator for mobile - shows there's more content */}
-            {showScrollHint && (
+            {showScrollHint && !isMobileDevice && (
               <div
                 className="md:hidden fixed bottom-20 left-1/2 transform -translate-x-1/2 z-10 pointer-events-none"
                 style={{ animation: 'bounce 2s infinite' }}
