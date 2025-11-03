@@ -1,0 +1,91 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e4]:
+        - link "Back to Gallery" [ref=e5] [cursor=pointer]:
+          - /url: /
+          - img [ref=e6]
+          - generic [ref=e9]: Back to Gallery
+        - generic [ref=e10]: "Building: Split-Screen Layout"
+      - generic [ref=e11]:
+        - generic [ref=e12]:
+          - button "EN" [ref=e13] [cursor=pointer]
+          - button "RU" [ref=e14] [cursor=pointer]
+        - link "View Demo" [ref=e15] [cursor=pointer]:
+          - /url: /templates/split-screen
+          - img [ref=e16]
+          - text: View Demo
+        - button "Save Template" [ref=e19] [cursor=pointer]:
+          - img
+          - text: Save Template
+    - generic [ref=e21]:
+      - heading "ℹ️ How It Works" [level=3] [ref=e22]:
+        - generic [ref=e23]: ℹ️
+        - text: How It Works
+      - generic [ref=e24]:
+        - generic [ref=e25]:
+          - generic [ref=e26]: 1. Design your site structure
+          - generic [ref=e27]: Customize sections, add content, and arrange your layout using the builder
+        - generic [ref=e28]:
+          - generic [ref=e29]: 2. Submit your design
+          - generic [ref=e30]: Click 'Save Template' to send us your configuration
+        - generic [ref=e31]:
+          - generic [ref=e32]: 3. We create your site
+          - generic [ref=e33]: Our team will build a professional, optimized website based on your design
+    - generic [ref=e34]:
+      - generic [ref=e35]:
+        - heading "Components" [level=3] [ref=e37]
+        - generic [ref=e38]:
+          - generic [ref=e39]: Split-Screen
+          - button "Split Hero Split-screen hero section" [active] [ref=e40]:
+            - generic [ref=e41]: Split Hero
+            - generic [ref=e42]: Split-screen hero section
+          - button "Stats Statistics showcase" [ref=e43]:
+            - generic [ref=e44]: Stats
+            - generic [ref=e45]: Statistics showcase
+          - button "Skills Skills tags section" [ref=e46]:
+            - generic [ref=e47]: Skills
+            - generic [ref=e48]: Skills tags section
+          - button "Contact Contact split section" [ref=e49]:
+            - generic [ref=e50]: Contact
+            - generic [ref=e51]: Contact split section
+          - generic [ref=e52]: Generic
+          - button "Hero Header section" [ref=e53]:
+            - generic [ref=e54]: Hero
+            - generic [ref=e55]: Header section
+          - button "About About section" [ref=e56]:
+            - generic [ref=e57]: About
+            - generic [ref=e58]: About section
+          - button "Projects Project showcase" [ref=e59]:
+            - generic [ref=e60]: Projects
+            - generic [ref=e61]: Project showcase
+      - generic [ref=e63]:
+        - generic [ref=e66]:
+          - generic [ref=e67]:
+            - heading "David Kim" [level=1] [ref=e69]
+            - paragraph [ref=e71]: Digital Designer
+            - paragraph [ref=e73]: Crafting experiences that matter through thoughtful design, strategic thinking, and pixel-perfect execution
+            - generic [ref=e75]:
+              - paragraph [ref=e76]: 📍 Seoul, South Korea
+              - paragraph [ref=e77]: ✓ Available for select projects
+            - button "View Projects" [ref=e79] [cursor=pointer]:
+              - text: View Projects
+              - img
+          - generic [ref=e82]: DK
+        - generic [ref=e84]:
+          - generic [ref=e85]: 🎨
+          - heading "Start Building Your Site" [level=2] [ref=e86]
+          - paragraph [ref=e87]: Drag widgets from the left panel and create your site's flow.
+          - generic [ref=e88]:
+            - generic [ref=e89]: 👈
+            - generic [ref=e90]: Choose components from the panel to begin
+      - generic [ref=e91]:
+        - heading "Settings" [level=3] [ref=e93]
+        - paragraph [ref=e95]: Select a component to edit
+  - button "Open Next.js Dev Tools" [ref=e101] [cursor=pointer]:
+    - img [ref=e102]
+  - alert [ref=e106]
+```
