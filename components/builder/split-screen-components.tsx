@@ -24,6 +24,14 @@ interface SplitScreenHeroProps {
   backgroundColor: string;
   gradientFrom: string;
   gradientTo: string;
+  language?: 'en' | 'ru';
+  nameRu?: string;
+  titleRu?: string;
+  taglineRu?: string;
+  locationRu?: string;
+  availabilityRu?: string;
+  buttonText?: string;
+  buttonTextRu?: string;
 }
 
 export const SplitScreenHero = ({
@@ -36,6 +44,14 @@ export const SplitScreenHero = ({
   backgroundColor = "#6366f1",
   gradientFrom = "#6366f1",
   gradientTo = "#a855f7",
+  language = 'en',
+  nameRu = "Дэвид Ким",
+  titleRu = "Цифровой дизайнер",
+  taglineRu = "Создаю важные решения через продуманный дизайн, стратегическое мышление и идеальное исполнение",
+  locationRu = "Сеул, Южная Корея",
+  availabilityRu = "Доступен для избранных проектов",
+  buttonText = "View Projects",
+  buttonTextRu = "Смотреть проекты",
 }: SplitScreenHeroProps) => {
   const {
     connectors: { connect, drag },
@@ -43,6 +59,13 @@ export const SplitScreenHero = ({
   } = useNode((state) => ({
     selected: state.events.selected,
   }));
+
+  const displayName = language === 'ru' ? nameRu : name;
+  const displayTitle = language === 'ru' ? titleRu : title;
+  const displayTagline = language === 'ru' ? taglineRu : tagline;
+  const displayLocation = language === 'ru' ? locationRu : location;
+  const displayAvailability = language === 'ru' ? availabilityRu : availability;
+  const displayButton = language === 'ru' ? buttonTextRu : buttonText;
 
   return (
     <section
@@ -55,28 +78,28 @@ export const SplitScreenHero = ({
           <div className="flex flex-col justify-center">
             <FadeIn>
               <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold mb-6 leading-tight">
-                {name}
+                {displayName}
               </h1>
             </FadeIn>
             <FadeIn delay={0.2}>
               <p className="text-2xl md:text-3xl text-muted-foreground mb-4">
-                {title}
+                {displayTitle}
               </p>
             </FadeIn>
             <FadeIn delay={0.3}>
               <p className="text-lg text-muted-foreground mb-4 max-w-lg">
-                {tagline}
+                {displayTagline}
               </p>
             </FadeIn>
             <FadeIn delay={0.35}>
               <div className="flex flex-col gap-2 mb-8 text-sm text-muted-foreground">
-                <p>📍 {location}</p>
-                <p>✓ {availability}</p>
+                <p>📍 {displayLocation}</p>
+                <p>✓ {displayAvailability}</p>
               </div>
             </FadeIn>
             <FadeIn delay={0.4}>
               <Button size="lg" className="w-fit">
-                View Projects <FiArrowRight className="ml-2" />
+                {displayButton} <FiArrowRight className="ml-2" />
               </Button>
             </FadeIn>
           </div>
@@ -109,55 +132,116 @@ const SplitScreenHeroSettings = () => {
     props: node.data.props,
   }));
 
+  const language = props.language || 'en';
+
+  const labels = {
+    en: {
+      content: 'CONTENT',
+      name: 'Name',
+      title: 'Title',
+      tagline: 'Tagline',
+      location: 'Location',
+      availability: 'Availability',
+      visual: 'VISUAL',
+      initials: 'Initials',
+      gradientStart: 'Gradient Start Color',
+      gradientEnd: 'Gradient End Color',
+    },
+    ru: {
+      content: 'СОДЕРЖАНИЕ',
+      name: 'Имя',
+      title: 'Должность',
+      tagline: 'Слоган',
+      location: 'Местоположение',
+      availability: 'Доступность',
+      visual: 'ВИЗУАЛ',
+      initials: 'Инициалы',
+      gradientStart: 'Начальный цвет градиента',
+      gradientEnd: 'Конечный цвет градиента',
+    },
+  };
+
+  const t = labels[language];
+
   return (
     <div className="space-y-4">
-      <div className="text-sm font-medium">CONTENT</div>
+      <div className="text-sm font-medium">{t.content}</div>
 
       <div>
-        <Label>Name</Label>
+        <Label>{t.name}</Label>
         <Input
-          value={props.name}
-          onChange={(e) => setProp((props: any) => (props.name = e.target.value))}
+          value={language === 'ru' ? props.nameRu : props.name}
+          onChange={(e) => setProp((props: any) => {
+            if (language === 'ru') {
+              props.nameRu = e.target.value;
+            } else {
+              props.name = e.target.value;
+            }
+          })}
         />
       </div>
 
       <div>
-        <Label>Title</Label>
+        <Label>{t.title}</Label>
         <Input
-          value={props.title}
-          onChange={(e) => setProp((props: any) => (props.title = e.target.value))}
+          value={language === 'ru' ? props.titleRu : props.title}
+          onChange={(e) => setProp((props: any) => {
+            if (language === 'ru') {
+              props.titleRu = e.target.value;
+            } else {
+              props.title = e.target.value;
+            }
+          })}
         />
       </div>
 
       <div>
-        <Label>Tagline</Label>
+        <Label>{t.tagline}</Label>
         <Textarea
-          value={props.tagline}
-          onChange={(e) => setProp((props: any) => (props.tagline = e.target.value))}
+          value={language === 'ru' ? props.taglineRu : props.tagline}
+          onChange={(e) => setProp((props: any) => {
+            if (language === 'ru') {
+              props.taglineRu = e.target.value;
+            } else {
+              props.tagline = e.target.value;
+            }
+          })}
           rows={3}
         />
       </div>
 
       <div>
-        <Label>Location</Label>
+        <Label>{t.location}</Label>
         <Input
-          value={props.location}
-          onChange={(e) => setProp((props: any) => (props.location = e.target.value))}
+          value={language === 'ru' ? props.locationRu : props.location}
+          onChange={(e) => setProp((props: any) => {
+            if (language === 'ru') {
+              props.locationRu = e.target.value;
+            } else {
+              props.location = e.target.value;
+            }
+          })}
         />
       </div>
 
       <div>
-        <Label>Availability</Label>
+        <Label>{t.availability}</Label>
         <Input
-          value={props.availability}
-          onChange={(e) => setProp((props: any) => (props.availability = e.target.value))}
+          value={language === 'ru' ? props.availabilityRu : props.availability}
+          onChange={(e) => setProp((props: any) => {
+            if (language === 'ru') {
+              props.availabilityRu = e.target.value;
+            } else {
+              props.availability = e.target.value;
+            }
+          })}
         />
       </div>
 
-      <div className="text-sm font-medium mt-6">VISUAL</div>
+      <div className="text-sm font-medium mt-6">{t.visual}</div>
 
       <div>
-        <Label>Initials</Label>
+        <Label>{t.initials}</Label>
         <Input
           value={props.initials}
           onChange={(e) => setProp((props: any) => (props.initials = e.target.value))}
@@ -166,7 +250,7 @@ const SplitScreenHeroSettings = () => {
       </div>
 
       <div>
-        <Label>Gradient Start Color</Label>
+        <Label>{t.gradientStart}</Label>
         <Input
           type="color"
           value={props.gradientFrom}
@@ -175,7 +259,7 @@ const SplitScreenHeroSettings = () => {
       </div>
 
       <div>
-        <Label>Gradient End Color</Label>
+        <Label>{t.gradientEnd}</Label>
         <Input
           type="color"
           value={props.gradientTo}
@@ -199,6 +283,14 @@ SplitScreenHero.craft = {
     backgroundColor: "#6366f1",
     gradientFrom: "#6366f1",
     gradientTo: "#a855f7",
+    language: 'en',
+    nameRu: "Дэвид Ким",
+    titleRu: "Цифровой дизайнер",
+    taglineRu: "Создаю важные решения через продуманный дизайн, стратегическое мышление и идеальное исполнение",
+    locationRu: "Сеул, Южная Корея",
+    availabilityRu: "Доступен для избранных проектов",
+    buttonText: "View Projects",
+    buttonTextRu: "Смотреть проекты",
   },
   related: {
     settings: SplitScreenHeroSettings,
@@ -210,16 +302,18 @@ SplitScreenHero.craft = {
 // ============================================
 
 interface StatsProps {
-  stats: Array<{ value: string; label: string }>;
+  stats: Array<{ value: string; label: string; labelRu?: string }>;
+  language?: 'en' | 'ru';
 }
 
 export const SplitScreenStats = ({
   stats = [
-    { value: "150+", label: "Projects Completed" },
-    { value: "50+", label: "Happy Clients" },
-    { value: "8+", label: "Years Experience" },
-    { value: "15+", label: "Awards Won" },
+    { value: "150+", label: "Projects Completed", labelRu: "Завершенных проектов" },
+    { value: "50+", label: "Happy Clients", labelRu: "Довольных клиентов" },
+    { value: "8+", label: "Years Experience", labelRu: "Лет опыта" },
+    { value: "15+", label: "Awards Won", labelRu: "Наград получено" },
   ],
+  language = 'en',
 }: StatsProps) => {
   const {
     connectors: { connect, drag },
@@ -235,14 +329,17 @@ export const SplitScreenStats = ({
     >
       <div className="container mx-auto px-3 sm:px-3">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-          {stats.map((stat, index) => (
-            <FadeIn key={index} delay={index * 0.1}>
-              <div className="text-center">
-                <div className="text-4xl md:text-5xl font-bold mb-2">{stat.value}</div>
-                <div className="text-sm text-muted-foreground">{stat.label}</div>
-              </div>
-            </FadeIn>
-          ))}
+          {stats.map((stat, index) => {
+            const displayLabel = language === 'ru' && stat.labelRu ? stat.labelRu : stat.label;
+            return (
+              <FadeIn key={index} delay={index * 0.1}>
+                <div className="text-center">
+                  <div className="text-4xl md:text-5xl font-bold mb-2">{stat.value}</div>
+                  <div className="text-sm text-muted-foreground">{displayLabel}</div>
+                </div>
+              </FadeIn>
+            );
+          })}
         </div>
       </div>
     </section>
@@ -258,13 +355,32 @@ const SplitScreenStatsSettings = () => {
     props: node.data.props,
   }));
 
+  const language = props.language || 'en';
+
+  const labels = {
+    en: {
+      stats: 'STATS',
+      stat: 'Stat',
+      value: 'Value',
+      label: 'Label',
+    },
+    ru: {
+      stats: 'СТАТИСТИКА',
+      stat: 'Показатель',
+      value: 'Значение',
+      label: 'Подпись',
+    },
+  };
+
+  const t = labels[language];
+
   return (
     <div className="space-y-4">
-      <div className="text-sm font-medium">STATS</div>
+      <div className="text-sm font-medium">{t.stats}</div>
 
       {props.stats.map((stat: any, index: number) => (
         <div key={index} className="p-3 border rounded">
-          <Label>Stat {index + 1} - Value</Label>
+          <Label>{t.stat} {index + 1} - {t.value}</Label>
           <Input
             value={stat.value}
             onChange={(e) =>
@@ -274,7 +390,7 @@ const SplitScreenStatsSettings = () => {
             }
             className="mb-2"
           />
-          <Label>Stat {index + 1} - Label</Label>
+          <Label>{t.stat} {index + 1} - {t.label}</Label>
           <Input
             value={stat.label}
             onChange={(e) =>
@@ -294,11 +410,12 @@ SplitScreenStats.craft = {
   displayName: "Stats Section",
   props: {
     stats: [
-      { value: "150+", label: "Projects Completed" },
-      { value: "50+", label: "Happy Clients" },
-      { value: "8+", label: "Years Experience" },
-      { value: "15+", label: "Awards Won" },
+      { value: "150+", label: "Projects Completed", labelRu: "Завершенных проектов" },
+      { value: "50+", label: "Happy Clients", labelRu: "Довольных клиентов" },
+      { value: "8+", label: "Years Experience", labelRu: "Лет опыта" },
+      { value: "15+", label: "Awards Won", labelRu: "Наград получено" },
     ],
+    language: 'en',
   },
   related: {
     settings: SplitScreenStatsSettings,
@@ -312,6 +429,8 @@ SplitScreenStats.craft = {
 interface SkillsProps {
   title: string;
   skills: string[];
+  language?: 'en' | 'ru';
+  titleRu?: string;
 }
 
 export const SplitScreenSkills = ({
@@ -330,6 +449,8 @@ export const SplitScreenSkills = ({
     "3D Design",
     "Art Direction",
   ],
+  language = 'en',
+  titleRu = "Навыки и экспертиза",
 }: SkillsProps) => {
   const {
     connectors: { connect, drag },
@@ -338,13 +459,15 @@ export const SplitScreenSkills = ({
     selected: state.events.selected,
   }));
 
+  const displayTitle = language === 'ru' ? titleRu : title;
+
   return (
     <section
       ref={(ref) => ref && connect(drag(ref))}
       className={`py-20 border-t ${selected ? "ring-2 ring-blue-500" : ""}`}
     >
       <div className="container mx-auto px-3 sm:px-3">
-        <h2 className="text-3xl md:text-4xl font-bold mb-12">{title}</h2>
+        <h2 className="text-3xl md:text-4xl font-bold mb-12">{displayTitle}</h2>
         <div className="flex flex-wrap gap-3">
           {skills.map((skill, index) => (
             <FadeIn key={index} delay={index * 0.05}>
@@ -366,20 +489,43 @@ const SplitScreenSkillsSettings = () => {
     props: node.data.props,
   }));
 
+  const language = props.language || 'en';
+
+  const labels = {
+    en: {
+      content: 'CONTENT',
+      sectionTitle: 'Section Title',
+      skills: 'Skills (one per line)',
+    },
+    ru: {
+      content: 'СОДЕРЖАНИЕ',
+      sectionTitle: 'Заголовок секции',
+      skills: 'Навыки (по одному на строку)',
+    },
+  };
+
+  const t = labels[language];
+
   return (
     <div className="space-y-4">
-      <div className="text-sm font-medium">CONTENT</div>
+      <div className="text-sm font-medium">{t.content}</div>
 
       <div>
-        <Label>Section Title</Label>
+        <Label>{t.sectionTitle}</Label>
         <Input
-          value={props.title}
-          onChange={(e) => setProp((props: any) => (props.title = e.target.value))}
+          value={language === 'ru' ? props.titleRu : props.title}
+          onChange={(e) => setProp((props: any) => {
+            if (language === 'ru') {
+              props.titleRu = e.target.value;
+            } else {
+              props.title = e.target.value;
+            }
+          })}
         />
       </div>
 
       <div>
-        <Label>Skills (one per line)</Label>
+        <Label>{t.skills}</Label>
         <Textarea
           value={props.skills.join('\n')}
           onChange={(e) =>
@@ -397,6 +543,7 @@ SplitScreenSkills.craft = {
   displayName: "Skills Section",
   props: {
     title: "Skills & Expertise",
+    titleRu: "Навыки и экспертиза",
     skills: [
       "UI/UX Design",
       "Prototyping",
@@ -411,6 +558,7 @@ SplitScreenSkills.craft = {
       "3D Design",
       "Art Direction",
     ],
+    language: 'en',
   },
   related: {
     settings: SplitScreenSkillsSettings,
@@ -427,6 +575,11 @@ interface ContactProps {
   email: string;
   location: string;
   availability: string;
+  language?: 'en' | 'ru';
+  titleRu?: string;
+  subtitleRu?: string;
+  locationRu?: string;
+  availabilityRu?: string;
 }
 
 export const SplitScreenContact = ({
@@ -435,6 +588,11 @@ export const SplitScreenContact = ({
   email = "hello@davidkim.com",
   location = "Seoul, South Korea",
   availability = "Available worldwide remotely",
+  language = 'en',
+  titleRu = "Давайте работать вместе",
+  subtitleRu = "Есть проект? Давайте создадим что-то удивительное.",
+  locationRu = "Сеул, Южная Корея",
+  availabilityRu = "Доступен для работы по всему миру удаленно",
 }: ContactProps) => {
   const {
     connectors: { connect, drag },
@@ -442,6 +600,11 @@ export const SplitScreenContact = ({
   } = useNode((state) => ({
     selected: state.events.selected,
   }));
+
+  const displayTitle = language === 'ru' ? titleRu : title;
+  const displaySubtitle = language === 'ru' ? subtitleRu : subtitle;
+  const displayLocation = language === 'ru' ? locationRu : location;
+  const displayAvailability = language === 'ru' ? availabilityRu : availability;
 
   return (
     <section
@@ -453,10 +616,10 @@ export const SplitScreenContact = ({
           {/* Left Side */}
           <div>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              {title}
+              {displayTitle}
             </h2>
             <p className="text-xl text-muted-foreground mb-8">
-              {subtitle}
+              {displaySubtitle}
             </p>
           </div>
 
@@ -467,9 +630,9 @@ export const SplitScreenContact = ({
               {email}
             </Button>
             <div className="text-center text-sm text-muted-foreground">
-              Based in {location}
+              {language === 'ru' ? 'Базируется в' : 'Based in'} {displayLocation}
               <br />
-              {availability}
+              {displayAvailability}
             </div>
           </div>
         </div>
@@ -487,29 +650,64 @@ const SplitScreenContactSettings = () => {
     props: node.data.props,
   }));
 
+  const language = props.language || 'en';
+
+  const labels = {
+    en: {
+      content: 'CONTENT',
+      title: 'Title',
+      subtitle: 'Subtitle',
+      email: 'Email',
+      location: 'Location',
+      availability: 'Availability',
+    },
+    ru: {
+      content: 'СОДЕРЖАНИЕ',
+      title: 'Заголовок',
+      subtitle: 'Подзаголовок',
+      email: 'Электронная почта',
+      location: 'Местоположение',
+      availability: 'Доступность',
+    },
+  };
+
+  const t = labels[language];
+
   return (
     <div className="space-y-4">
-      <div className="text-sm font-medium">CONTENT</div>
+      <div className="text-sm font-medium">{t.content}</div>
 
       <div>
-        <Label>Title</Label>
+        <Label>{t.title}</Label>
         <Input
-          value={props.title}
-          onChange={(e) => setProp((props: any) => (props.title = e.target.value))}
+          value={language === 'ru' ? props.titleRu : props.title}
+          onChange={(e) => setProp((props: any) => {
+            if (language === 'ru') {
+              props.titleRu = e.target.value;
+            } else {
+              props.title = e.target.value;
+            }
+          })}
         />
       </div>
 
       <div>
-        <Label>Subtitle</Label>
+        <Label>{t.subtitle}</Label>
         <Textarea
-          value={props.subtitle}
-          onChange={(e) => setProp((props: any) => (props.subtitle = e.target.value))}
+          value={language === 'ru' ? props.subtitleRu : props.subtitle}
+          onChange={(e) => setProp((props: any) => {
+            if (language === 'ru') {
+              props.subtitleRu = e.target.value;
+            } else {
+              props.subtitle = e.target.value;
+            }
+          })}
           rows={2}
         />
       </div>
 
       <div>
-        <Label>Email</Label>
+        <Label>{t.email}</Label>
         <Input
           value={props.email}
           onChange={(e) => setProp((props: any) => (props.email = e.target.value))}
@@ -518,18 +716,30 @@ const SplitScreenContactSettings = () => {
       </div>
 
       <div>
-        <Label>Location</Label>
+        <Label>{t.location}</Label>
         <Input
-          value={props.location}
-          onChange={(e) => setProp((props: any) => (props.location = e.target.value))}
+          value={language === 'ru' ? props.locationRu : props.location}
+          onChange={(e) => setProp((props: any) => {
+            if (language === 'ru') {
+              props.locationRu = e.target.value;
+            } else {
+              props.location = e.target.value;
+            }
+          })}
         />
       </div>
 
       <div>
-        <Label>Availability</Label>
+        <Label>{t.availability}</Label>
         <Input
-          value={props.availability}
-          onChange={(e) => setProp((props: any) => (props.availability = e.target.value))}
+          value={language === 'ru' ? props.availabilityRu : props.availability}
+          onChange={(e) => setProp((props: any) => {
+            if (language === 'ru') {
+              props.availabilityRu = e.target.value;
+            } else {
+              props.availability = e.target.value;
+            }
+          })}
         />
       </div>
     </div>
@@ -545,6 +755,11 @@ SplitScreenContact.craft = {
     email: "hello@davidkim.com",
     location: "Seoul, South Korea",
     availability: "Available worldwide remotely",
+    language: 'en',
+    titleRu: "Давайте работать вместе",
+    subtitleRu: "Есть проект? Давайте создадим что-то удивительное.",
+    locationRu: "Сеул, Южная Корея",
+    availabilityRu: "Доступен для работы по всему миру удаленно",
   },
   related: {
     settings: SplitScreenContactSettings,

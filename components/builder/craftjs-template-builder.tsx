@@ -8,6 +8,9 @@ import Link from "next/link";
 import { ArrowLeft, Eye, Trash2, Settings } from "lucide-react";
 import type { TemplateConfig } from "@/lib/template-registry";
 
+// Import touch polyfill for mobile drag & drop support
+import "drag-drop-touch";
+
 // Import Split-Screen editable components
 import {
   SplitScreenHero,
@@ -32,6 +35,7 @@ interface HeroProps {
   padding: number;
   fontSize: number;
   subtitleSize: number;
+  language?: 'en' | 'ru';
 }
 
 const HeroComponent = ({
@@ -120,6 +124,7 @@ HeroComponent.craft = {
     padding: 80,
     fontSize: 48,
     subtitleSize: 24,
+    language: 'en',
   },
   related: {
     settings: HeroSettings,
@@ -134,13 +139,52 @@ function HeroSettings() {
     props: node.data.props,
   }));
 
+  const language = props.language || 'en';
+
+  const labels = {
+    en: {
+      content: 'Content',
+      name: 'Name',
+      title: 'Title',
+      bgImage: 'Background Image URL (optional)',
+      colors: 'Colors',
+      gradientFrom: 'Gradient From',
+      gradientTo: 'Gradient To',
+      textColor: 'Text Color',
+      subtitleColor: 'Subtitle Color',
+      typography: 'Typography',
+      nameFontSize: 'Name Font Size',
+      subtitleFontSize: 'Subtitle Font Size',
+      layout: 'Layout',
+      padding: 'Padding',
+    },
+    ru: {
+      content: 'Содержание',
+      name: 'Имя',
+      title: 'Заголовок',
+      bgImage: 'URL фонового изображения (опционально)',
+      colors: 'Цвета',
+      gradientFrom: 'Градиент от',
+      gradientTo: 'Градиент до',
+      textColor: 'Цвет текста',
+      subtitleColor: 'Цвет подзаголовка',
+      typography: 'Типографика',
+      nameFontSize: 'Размер шрифта имени',
+      subtitleFontSize: 'Размер шрифта подзаголовка',
+      layout: 'Макет',
+      padding: 'Отступы',
+    },
+  };
+
+  const t = labels[language];
+
   return (
     <div className="space-y-6 p-4 max-h-[calc(100vh-200px)] overflow-y-auto">
       {/* Content Section */}
       <div className="space-y-4">
-        <h4 className="font-semibold text-sm text-gray-700 uppercase tracking-wide">Content</h4>
+        <h4 className="font-semibold text-sm text-gray-700 uppercase tracking-wide">{t.content}</h4>
         <div>
-          <Label className="text-sm font-medium">Name</Label>
+          <Label className="text-sm font-medium">{t.name}</Label>
           <input
             type="text"
             value={props.name}
@@ -149,7 +193,7 @@ function HeroSettings() {
           />
         </div>
         <div>
-          <Label className="text-sm font-medium">Title</Label>
+          <Label className="text-sm font-medium">{t.title}</Label>
           <input
             type="text"
             value={props.title}
@@ -158,7 +202,7 @@ function HeroSettings() {
           />
         </div>
         <div>
-          <Label className="text-sm font-medium">Background Image URL (optional)</Label>
+          <Label className="text-sm font-medium">{t.bgImage}</Label>
           <input
             type="text"
             value={props.imageUrl || ""}
@@ -171,10 +215,10 @@ function HeroSettings() {
 
       {/* Colors Section */}
       <div className="space-y-4 pt-4 border-t">
-        <h4 className="font-semibold text-sm text-gray-700 uppercase tracking-wide">Colors</h4>
+        <h4 className="font-semibold text-sm text-gray-700 uppercase tracking-wide">{t.colors}</h4>
         <div className="grid grid-cols-2 gap-3">
           <div>
-            <Label className="text-sm font-medium">Gradient From</Label>
+            <Label className="text-sm font-medium">{t.gradientFrom}</Label>
             <div className="flex gap-2 mt-1">
               <input
                 type="color"
@@ -191,7 +235,7 @@ function HeroSettings() {
             </div>
           </div>
           <div>
-            <Label className="text-sm font-medium">Gradient To</Label>
+            <Label className="text-sm font-medium">{t.gradientTo}</Label>
             <div className="flex gap-2 mt-1">
               <input
                 type="color"
@@ -208,7 +252,7 @@ function HeroSettings() {
             </div>
           </div>
           <div>
-            <Label className="text-sm font-medium">Text Color</Label>
+            <Label className="text-sm font-medium">{t.textColor}</Label>
             <div className="flex gap-2 mt-1">
               <input
                 type="color"
@@ -225,7 +269,7 @@ function HeroSettings() {
             </div>
           </div>
           <div>
-            <Label className="text-sm font-medium">Subtitle Color</Label>
+            <Label className="text-sm font-medium">{t.subtitleColor}</Label>
             <div className="flex gap-2 mt-1">
               <input
                 type="color"
@@ -246,9 +290,9 @@ function HeroSettings() {
 
       {/* Typography Section */}
       <div className="space-y-4 pt-4 border-t">
-        <h4 className="font-semibold text-sm text-gray-700 uppercase tracking-wide">Typography</h4>
+        <h4 className="font-semibold text-sm text-gray-700 uppercase tracking-wide">{t.typography}</h4>
         <div>
-          <Label className="text-sm font-medium">Name Font Size: {props.fontSize}px</Label>
+          <Label className="text-sm font-medium">{t.nameFontSize}: {props.fontSize}px</Label>
           <input
             type="range"
             min="24"
@@ -259,7 +303,7 @@ function HeroSettings() {
           />
         </div>
         <div>
-          <Label className="text-sm font-medium">Subtitle Font Size: {props.subtitleSize}px</Label>
+          <Label className="text-sm font-medium">{t.subtitleFontSize}: {props.subtitleSize}px</Label>
           <input
             type="range"
             min="14"
@@ -273,9 +317,9 @@ function HeroSettings() {
 
       {/* Layout Section */}
       <div className="space-y-4 pt-4 border-t">
-        <h4 className="font-semibold text-sm text-gray-700 uppercase tracking-wide">Layout</h4>
+        <h4 className="font-semibold text-sm text-gray-700 uppercase tracking-wide">{t.layout}</h4>
         <div>
-          <Label className="text-sm font-medium">Padding: {props.padding}px</Label>
+          <Label className="text-sm font-medium">{t.padding}: {props.padding}px</Label>
           <input
             type="range"
             min="20"
@@ -293,6 +337,7 @@ function HeroSettings() {
 interface AboutProps {
   text: string;
   imageUrl?: string;
+  language?: 'en' | 'ru';
 }
 
 const AboutComponent = ({ text, imageUrl }: AboutProps) => {
@@ -340,6 +385,7 @@ AboutComponent.craft = {
   props: {
     text: "I'm a passionate developer with 5 years of experience building amazing web applications.",
     imageUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=600&fit=crop",
+    language: 'en',
   },
   related: {
     settings: AboutSettings,
@@ -349,17 +395,30 @@ AboutComponent.craft = {
 function AboutSettings() {
   const {
     actions: { setProp },
-    text,
+    props,
   } = useNode((node) => ({
-    text: node.data.props.text,
+    props: node.data.props,
   }));
+
+  const language = props.language || 'en';
+
+  const labels = {
+    en: {
+      aboutText: 'About Text',
+    },
+    ru: {
+      aboutText: 'Текст о нас',
+    },
+  };
+
+  const t = labels[language];
 
   return (
     <div className="space-y-4 p-4">
       <div>
-        <Label>About Text</Label>
+        <Label>{t.aboutText}</Label>
         <textarea
-          value={text}
+          value={props.text}
           onChange={(e) => setProp((props: AboutProps) => (props.text = e.target.value))}
           className="w-full px-3 py-2 border rounded-md"
           rows={4}
@@ -371,6 +430,7 @@ function AboutSettings() {
 
 interface SkillsProps {
   skills: string[];
+  language?: 'en' | 'ru';
 }
 
 const SkillsComponent = ({ skills }: SkillsProps) => {
@@ -421,11 +481,13 @@ SkillsComponent.craft = {
   displayName: "Skills",
   props: {
     skills: ["React", "TypeScript", "Node.js", "Python", "UI/UX Design", "GraphQL", "AWS", "Docker"],
+    language: 'en',
   },
 };
 
 interface ProjectsProps {
   projects: Array<{ title: string; description: string; imageUrl?: string }>;
+  language?: 'en' | 'ru';
 }
 
 const ProjectsComponent = ({ projects }: ProjectsProps) => {
@@ -492,6 +554,7 @@ ProjectsComponent.craft = {
         imageUrl: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=600&fit=crop",
       },
     ],
+    language: 'en',
   },
 };
 
@@ -499,6 +562,7 @@ interface ContactProps {
   email: string;
   phone: string;
   location: string;
+  language?: 'en' | 'ru';
 }
 
 const ContactComponent = ({ email, phone, location }: ContactProps) => {
@@ -555,11 +619,13 @@ ContactComponent.craft = {
     email: "john@example.com",
     phone: "+1 (555) 123-4567",
     location: "San Francisco, CA",
+    language: 'en',
   },
 };
 
 interface PricingProps {
   plans: Array<{ name: string; price: string; features: string[] }>;
+  language?: 'en' | 'ru';
 }
 
 const PricingComponent = ({ plans }: PricingProps) => {
@@ -631,6 +697,7 @@ PricingComponent.craft = {
         features: ["Unlimited Everything", "Custom Solutions", "24/7 Support", "Dedicated Manager"],
       },
     ],
+    language: 'en',
   },
 };
 
@@ -651,12 +718,77 @@ Container.craft = {
   displayName: "Container",
 };
 
+// Empty Canvas component with instructions
+const EmptyCanvas = ({ language = 'en' }: { language?: 'en' | 'ru' }) => {
+  const {
+    connectors: { connect, drag },
+  } = useNode();
+
+  return (
+    <div
+      ref={(ref) => ref && connect(drag(ref))}
+      className="min-h-[600px] flex items-center justify-center text-center p-8"
+    >
+      <div className="max-w-2xl">
+        <div className="text-6xl mb-6">🎨</div>
+        {language === 'en' ? (
+          <>
+            <h2 className="text-3xl font-bold text-gray-800 mb-4">
+              Start Building Your Site
+            </h2>
+            <p className="text-lg text-gray-600 mb-6">
+              Drag widgets from the left panel and create your site's flow.
+            </p>
+            <div className="inline-flex items-center gap-3 px-6 py-3 bg-blue-50 rounded-lg border-2 border-blue-200">
+              <span className="text-2xl">👈</span>
+              <span className="text-sm font-medium text-blue-800">
+                Choose components from the panel to begin
+              </span>
+            </div>
+          </>
+        ) : (
+          <>
+            <h2 className="text-3xl font-bold text-gray-800 mb-4">
+              Начните создавать свой сайт
+            </h2>
+            <p className="text-lg text-gray-600 mb-6">
+              Перетащите виджеты из левой панели и создайте структуру вашего сайта.
+            </p>
+            <div className="inline-flex items-center gap-3 px-6 py-3 bg-blue-50 rounded-lg border-2 border-blue-200">
+              <span className="text-2xl">👈</span>
+              <span className="text-sm font-medium text-blue-800">
+                Выберите компоненты из панели, чтобы начать
+              </span>
+            </div>
+          </>
+        )}
+      </div>
+    </div>
+  );
+};
+
+EmptyCanvas.craft = {
+  displayName: "Empty Canvas",
+  props: {
+    language: 'en',
+  },
+  rules: {
+    canDrag: () => false,
+    canDrop: () => true,
+    canMoveIn: () => false,
+    canMoveOut: () => false,
+  },
+  custom: {
+    isDeletable: false,
+  },
+};
+
 // ============================================
 // SETTINGS PANEL
 // ============================================
 
 const SettingsPanel = () => {
-  const { currentNodeId, settings, displayName, actions } = useEditor((state) => {
+  const { currentNodeId, settings, displayName, isDeletable, actions } = useEditor((state) => {
     // Get the selected node ID - it's a Set, so we need to get the first item
     const selectedNodeIds = state.events.selected;
     const currentNodeId = selectedNodeIds && selectedNodeIds.size > 0
@@ -672,10 +804,14 @@ const SettingsPanel = () => {
       // Get display name from various sources
       const displayName = node.data.displayName || node.data.name || 'Component';
 
+      // Check if component is deletable (default true if not specified)
+      const isDeletable = node.data.custom?.isDeletable !== false;
+
       return {
         currentNodeId,
         settings,
         displayName,
+        isDeletable,
       };
     }
 
@@ -683,13 +819,43 @@ const SettingsPanel = () => {
       currentNodeId: null,
       settings: null,
       displayName: '',
+      isDeletable: true,
     };
   });
+
+  const language: 'en' | 'ru' = useEditor((state) => {
+    // Try to get language from any selected node
+    const selectedNodeIds = state.events.selected;
+    if (selectedNodeIds && selectedNodeIds.size > 0) {
+      const nodeId = Array.from(selectedNodeIds)[0];
+      const node = state.nodes[nodeId];
+      const lang = node?.data?.props?.language;
+      if (lang === 'ru' || lang === 'en') {
+        return lang;
+      }
+    }
+    return 'en';
+  }) as 'en' | 'ru';
+
+  const labels = {
+    en: {
+      settings: 'Settings',
+      deleteComponent: 'Delete Component',
+      selectComponent: 'Select a component to edit',
+    },
+    ru: {
+      settings: 'Настройки',
+      deleteComponent: 'Удалить компонент',
+      selectComponent: 'Выберите компонент для редактирования',
+    },
+  };
+
+  const t = labels[language] || labels.en;
 
   return (
     <div className="w-80 bg-white border-l h-full overflow-y-auto">
       <div className="p-4 border-b">
-        <h3 className="font-semibold text-lg">Settings</h3>
+        <h3 className="font-semibold text-lg">{t.settings}</h3>
       </div>
       {currentNodeId ? (
         <div>
@@ -697,20 +863,22 @@ const SettingsPanel = () => {
             <p className="text-sm font-medium">{displayName}</p>
           </div>
           {settings && React.createElement(settings)}
-          <div className="p-4">
-            <Button
-              variant="destructive"
-              className="w-full"
-              onClick={() => actions.delete(currentNodeId)}
-            >
-              <Trash2 className="w-4 h-4 mr-2" />
-              Delete Component
-            </Button>
-          </div>
+          {isDeletable && (
+            <div className="p-4">
+              <Button
+                variant="destructive"
+                className="w-full"
+                onClick={() => actions.delete(currentNodeId)}
+              >
+                <Trash2 className="w-4 h-4 mr-2" />
+                {t.deleteComponent}
+              </Button>
+            </div>
+          )}
         </div>
       ) : (
         <div className="p-4 text-center text-gray-500">
-          <p>Select a component to edit</p>
+          <p>{t.selectComponent}</p>
         </div>
       )}
     </div>
@@ -721,70 +889,136 @@ const SettingsPanel = () => {
 // TOOLBOX
 // ============================================
 
-const Toolbox = () => {
+const Toolbox = ({ language }: { language: 'en' | 'ru' }) => {
   const { connectors } = useEditor();
+
+  const labels = {
+    en: {
+      components: 'Components',
+      splitScreen: 'Split-Screen',
+      generic: 'Generic',
+      splitHero: 'Split Hero',
+      splitHeroDesc: 'Split-screen hero section',
+      stats: 'Stats',
+      statsDesc: 'Statistics showcase',
+      skills: 'Skills',
+      skillsDesc: 'Skills tags section',
+      contact: 'Contact',
+      contactDesc: 'Contact split section',
+      hero: 'Hero',
+      heroDesc: 'Header section',
+      about: 'About',
+      aboutDesc: 'About section',
+      projects: 'Projects',
+      projectsDesc: 'Project showcase',
+    },
+    ru: {
+      components: 'Компоненты',
+      splitScreen: 'Разделённый экран',
+      generic: 'Общие',
+      splitHero: 'Главный баннер',
+      splitHeroDesc: 'Секция главного баннера с разделённым экраном',
+      stats: 'Статистика',
+      statsDesc: 'Витрина статистики',
+      skills: 'Навыки',
+      skillsDesc: 'Секция навыков',
+      contact: 'Контакты',
+      contactDesc: 'Секция контактов с разделённым экраном',
+      hero: 'Баннер',
+      heroDesc: 'Секция заголовка',
+      about: 'О нас',
+      aboutDesc: 'Секция о нас',
+      projects: 'Проекты',
+      projectsDesc: 'Витрина проектов',
+    },
+  };
+
+  const t = labels[language];
 
   return (
     <div className="w-64 bg-white border-r h-full overflow-y-auto">
       <div className="p-4 border-b">
-        <h3 className="font-semibold text-lg">Components</h3>
+        <h3 className="font-semibold text-lg">{t.components}</h3>
       </div>
       <div className="p-4 space-y-2">
-        <div className="text-xs font-semibold text-gray-500 uppercase mb-2">Split-Screen</div>
+        <div className="text-xs font-semibold text-gray-500 uppercase mb-2">{t.splitScreen}</div>
         <button
-          ref={(ref) => ref && connectors.create(ref, <Element is={SplitScreenHero} canvas />)}
-          className="w-full p-3 text-left border rounded hover:bg-gray-50 transition-colors"
+          ref={(ref) => ref && connectors.create(ref, <Element is={SplitScreenHero} language={language} canvas />)}
+          className="w-full p-3 text-left border rounded hover:bg-gray-50 transition-colors cursor-move active:opacity-50"
+          style={{ touchAction: 'none' }}
         >
-          <div className="font-medium">Split Hero</div>
-          <div className="text-xs text-gray-500">Split-screen hero section</div>
+          <div className="font-medium">{t.splitHero}</div>
+          <div className="text-xs text-gray-500">{t.splitHeroDesc}</div>
         </button>
         <button
-          ref={(ref) => ref && connectors.create(ref, <Element is={SplitScreenStats} canvas />)}
-          className="w-full p-3 text-left border rounded hover:bg-gray-50 transition-colors"
+          ref={(ref) => ref && connectors.create(ref, <Element is={SplitScreenStats} language={language} canvas />)}
+          className="w-full p-3 text-left border rounded hover:bg-gray-50 transition-colors cursor-move active:opacity-50"
+          style={{ touchAction: 'none' }}
         >
-          <div className="font-medium">Stats</div>
-          <div className="text-xs text-gray-500">Statistics showcase</div>
+          <div className="font-medium">{t.stats}</div>
+          <div className="text-xs text-gray-500">{t.statsDesc}</div>
         </button>
         <button
-          ref={(ref) => ref && connectors.create(ref, <Element is={SplitScreenSkills} canvas />)}
-          className="w-full p-3 text-left border rounded hover:bg-gray-50 transition-colors"
+          ref={(ref) => ref && connectors.create(ref, <Element is={SplitScreenSkills} language={language} canvas />)}
+          className="w-full p-3 text-left border rounded hover:bg-gray-50 transition-colors cursor-move active:opacity-50"
+          style={{ touchAction: 'none' }}
         >
-          <div className="font-medium">Skills</div>
-          <div className="text-xs text-gray-500">Skills tags section</div>
+          <div className="font-medium">{t.skills}</div>
+          <div className="text-xs text-gray-500">{t.skillsDesc}</div>
         </button>
         <button
-          ref={(ref) => ref && connectors.create(ref, <Element is={SplitScreenContact} canvas />)}
-          className="w-full p-3 text-left border rounded hover:bg-gray-50 transition-colors"
+          ref={(ref) => ref && connectors.create(ref, <Element is={SplitScreenContact} language={language} canvas />)}
+          className="w-full p-3 text-left border rounded hover:bg-gray-50 transition-colors cursor-move active:opacity-50"
+          style={{ touchAction: 'none' }}
         >
-          <div className="font-medium">Contact</div>
-          <div className="text-xs text-gray-500">Contact split section</div>
+          <div className="font-medium">{t.contact}</div>
+          <div className="text-xs text-gray-500">{t.contactDesc}</div>
         </button>
 
-        <div className="text-xs font-semibold text-gray-500 uppercase mb-2 mt-6">Generic</div>
+        <div className="text-xs font-semibold text-gray-500 uppercase mb-2 mt-6">{t.generic}</div>
         <button
-          ref={(ref) => ref && connectors.create(ref, <Element is={HeroComponent} canvas />)}
-          className="w-full p-3 text-left border rounded hover:bg-gray-50 transition-colors"
+          ref={(ref) => ref && connectors.create(ref, <Element is={HeroComponent} language={language} canvas />)}
+          className="w-full p-3 text-left border rounded hover:bg-gray-50 transition-colors cursor-move active:opacity-50"
+          style={{ touchAction: 'none' }}
         >
-          <div className="font-medium">Hero</div>
-          <div className="text-xs text-gray-500">Header section</div>
+          <div className="font-medium">{t.hero}</div>
+          <div className="text-xs text-gray-500">{t.heroDesc}</div>
         </button>
         <button
-          ref={(ref) => ref && connectors.create(ref, <Element is={AboutComponent} canvas />)}
-          className="w-full p-3 text-left border rounded hover:bg-gray-50 transition-colors"
+          ref={(ref) => ref && connectors.create(ref, <Element is={AboutComponent} language={language} canvas />)}
+          className="w-full p-3 text-left border rounded hover:bg-gray-50 transition-colors cursor-move active:opacity-50"
+          style={{ touchAction: 'none' }}
         >
-          <div className="font-medium">About</div>
-          <div className="text-xs text-gray-500">About section</div>
+          <div className="font-medium">{t.about}</div>
+          <div className="text-xs text-gray-500">{t.aboutDesc}</div>
         </button>
         <button
-          ref={(ref) => ref && connectors.create(ref, <Element is={ProjectsComponent} canvas />)}
-          className="w-full p-3 text-left border rounded hover:bg-gray-50 transition-colors"
+          ref={(ref) => ref && connectors.create(ref, <Element is={ProjectsComponent} language={language} canvas />)}
+          className="w-full p-3 text-left border rounded hover:bg-gray-50 transition-colors cursor-move active:opacity-50"
+          style={{ touchAction: 'none' }}
         >
-          <div className="font-medium">Projects</div>
-          <div className="text-xs text-gray-500">Project showcase</div>
+          <div className="font-medium">{t.projects}</div>
+          <div className="text-xs text-gray-500">{t.projectsDesc}</div>
         </button>
       </div>
     </div>
   );
+};
+
+// ============================================
+// EDITOR ACTIONS CAPTOR
+// ============================================
+
+const EditorActionsCapturer = ({ setActions }: { setActions: (actions: any) => void }) => {
+  const { actions, query } = useEditor((state) => ({}), (query) => query);
+  const actionsRef = React.useRef({ actions, query });
+
+  React.useEffect(() => {
+    actionsRef.current = { actions, query };
+    setActions(actionsRef.current);
+  }, []); // Only run once on mount
+
+  return null;
 };
 
 // ============================================
@@ -793,6 +1027,8 @@ const Toolbox = () => {
 
 export function CraftJSTemplateBuilder({ template }: { template: TemplateConfig }) {
   const [isSaving, setIsSaving] = React.useState(false);
+  const [language, setLanguage] = React.useState<'en' | 'ru'>('en');
+  const [editorActions, setEditorActions] = React.useState<any>(null);
 
   const handleSave = () => {
     setIsSaving(true);
@@ -803,6 +1039,44 @@ export function CraftJSTemplateBuilder({ template }: { template: TemplateConfig 
       alert("Template customization saved! (Submit functionality coming soon)");
     }, 1000);
   };
+
+  // Update all components when language changes
+  React.useEffect(() => {
+    if (editorActions && editorActions.query) {
+      const serializedNodes = editorActions.query.getSerializedNodes();
+      const nodeIds = Object.keys(serializedNodes);
+      nodeIds.forEach((nodeId) => {
+        editorActions.actions.setProp(nodeId, (props: any) => {
+          if (props.hasOwnProperty('language')) {
+            props.language = language;
+          }
+        });
+      });
+    }
+  }, [language, editorActions]);
+
+  const infoText = {
+    en: {
+      title: "How It Works",
+      step1: "1. Design your site structure",
+      step1desc: "Customize sections, add content, and arrange your layout using the builder",
+      step2: "2. Submit your design",
+      step2desc: "Click 'Save Template' to send us your configuration",
+      step3: "3. We create your site",
+      step3desc: "Our team will build a professional, optimized website based on your design",
+    },
+    ru: {
+      title: "Как это работает",
+      step1: "1. Создайте структуру сайта",
+      step1desc: "Настройте секции, добавьте контент и организуйте макет в конструкторе",
+      step2: "2. Отправьте дизайн",
+      step2desc: "Нажмите 'Сохранить шаблон' чтобы отправить нам конфигурацию",
+      step3: "3. Мы создадим ваш сайт",
+      step3desc: "Наша команда создаст профессиональный оптимизированный сайт по вашему дизайну",
+    },
+  };
+
+  const currentText = infoText[language];
 
   return (
     <div className="h-screen flex flex-col">
@@ -816,6 +1090,24 @@ export function CraftJSTemplateBuilder({ template }: { template: TemplateConfig 
           <div className="text-lg font-semibold">Building: {template.name}</div>
         </div>
         <div className="flex gap-2">
+          <div className="flex items-center gap-2 border rounded-md overflow-hidden">
+            <button
+              onClick={() => setLanguage('en')}
+              className={`px-3 py-2 text-sm font-medium transition-colors ${
+                language === 'en' ? 'bg-blue-600 text-white' : 'bg-white text-gray-600 hover:bg-gray-50'
+              }`}
+            >
+              EN
+            </button>
+            <button
+              onClick={() => setLanguage('ru')}
+              className={`px-3 py-2 text-sm font-medium transition-colors ${
+                language === 'ru' ? 'bg-blue-600 text-white' : 'bg-white text-gray-600 hover:bg-gray-50'
+              }`}
+            >
+              RU
+            </button>
+          </div>
           <Link
             href={`/templates/${template.id}`}
             target="_blank"
@@ -835,6 +1127,30 @@ export function CraftJSTemplateBuilder({ template }: { template: TemplateConfig 
         </div>
       </div>
 
+      {/* Info Banner */}
+      <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border-b border-blue-200 px-6 py-4">
+        <div className="max-w-6xl mx-auto">
+          <h3 className="text-lg font-bold text-gray-900 mb-3 flex items-center gap-2">
+            <span className="text-blue-600">ℹ️</span>
+            {currentText.title}
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="bg-white rounded-lg p-4 shadow-sm">
+              <div className="font-semibold text-blue-600 mb-1">{currentText.step1}</div>
+              <div className="text-sm text-gray-600">{currentText.step1desc}</div>
+            </div>
+            <div className="bg-white rounded-lg p-4 shadow-sm">
+              <div className="font-semibold text-blue-600 mb-1">{currentText.step2}</div>
+              <div className="text-sm text-gray-600">{currentText.step2desc}</div>
+            </div>
+            <div className="bg-white rounded-lg p-4 shadow-sm">
+              <div className="font-semibold text-green-600 mb-1">{currentText.step3}</div>
+              <div className="text-sm text-gray-600">{currentText.step3desc}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Editor */}
       <Editor
         resolver={{
@@ -849,17 +1165,24 @@ export function CraftJSTemplateBuilder({ template }: { template: TemplateConfig 
           ContactComponent,
           PricingComponent,
           Container,
+          EmptyCanvas,
         }}
       >
+        <EditorActionsCapturer setActions={setEditorActions} />
         <div className="flex-1 flex overflow-hidden">
-          <Toolbox />
-          <div className="flex-1 overflow-auto bg-gray-100">
-            <Frame>
+          <Toolbox language={language} />
+          <div
+            className="flex-1 overflow-auto bg-gray-100"
+            style={{
+              userSelect: 'none',
+              WebkitUserSelect: 'none',
+              MozUserSelect: 'none',
+              msUserSelect: 'none'
+            }}
+          >
+            <Frame key={language}>
               <Element is={Container} canvas>
-                <Element is={SplitScreenHero} />
-                <Element is={SplitScreenStats} />
-                <Element is={SplitScreenSkills} />
-                <Element is={SplitScreenContact} />
+                <Element is={EmptyCanvas} language={language} />
               </Element>
             </Frame>
           </div>

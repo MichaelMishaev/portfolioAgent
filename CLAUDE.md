@@ -1,1 +1,2 @@
 - use clean and simple -proffesional code,
+- when create content always must be english and  russian
