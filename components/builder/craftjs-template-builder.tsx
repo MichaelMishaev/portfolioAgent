@@ -2228,7 +2228,7 @@ const Toolbox = ({ language, setMobileView }: { language: 'en' | 'ru'; setMobile
           className="w-full p-3 text-left border-2 border-purple-200 bg-gradient-to-r from-purple-50 to-pink-50 rounded-lg hover:border-purple-400 hover:shadow-md transition-all active:scale-95 cursor-pointer"
           style={{ touchAction: isMobile ? 'auto' : 'none' }}
         >
-          <div className="font-semibold text-base md:text-sm flex items-center gap-2">
+          <div className="font-semibold text-base md:text-sm flex items-center gap-2 text-gray-900">
             <span className="text-purple-600 text-xl">✨</span>
             {t.unifiedHero}
           </div>
@@ -2251,7 +2251,7 @@ const Toolbox = ({ language, setMobileView }: { language: 'en' | 'ru'; setMobile
           className="w-full p-3 text-left border-2 border-purple-200 bg-gradient-to-r from-purple-50 to-pink-50 rounded-lg hover:border-purple-400 hover:shadow-md transition-all active:scale-95 cursor-pointer"
           style={{ touchAction: isMobile ? 'auto' : 'none' }}
         >
-          <div className="font-semibold text-base md:text-sm flex items-center gap-2">
+          <div className="font-semibold text-base md:text-sm flex items-center gap-2 text-gray-900">
             <span className="text-purple-600 text-xl">✨</span>
             {t.unifiedStats}
           </div>
@@ -2274,7 +2274,7 @@ const Toolbox = ({ language, setMobileView }: { language: 'en' | 'ru'; setMobile
           className="w-full p-3 text-left border-2 border-purple-200 bg-gradient-to-r from-purple-50 to-pink-50 rounded-lg hover:border-purple-400 hover:shadow-md transition-all active:scale-95 cursor-pointer"
           style={{ touchAction: isMobile ? 'auto' : 'none' }}
         >
-          <div className="font-semibold text-base md:text-sm flex items-center gap-2">
+          <div className="font-semibold text-base md:text-sm flex items-center gap-2 text-gray-900">
             <span className="text-purple-600 text-xl">✨</span>
             {t.unifiedSkills}
           </div>
@@ -2303,7 +2303,7 @@ const Toolbox = ({ language, setMobileView }: { language: 'en' | 'ru'; setMobile
           className="w-full p-3 text-left border-2 border-gray-200 rounded-lg hover:border-blue-400 hover:bg-blue-50 transition-all active:scale-95 cursor-pointer shadow-sm hover:shadow"
           style={{ touchAction: isMobile ? 'auto' : 'none' }}
         >
-          <div className="font-semibold text-base md:text-sm">{t.contact}</div>
+          <div className="font-semibold text-base md:text-sm text-gray-900">{t.contact}</div>
           <div className="text-sm md:text-xs text-gray-900 mt-1 font-bold">
             {isMobile ? (language === 'ru' ? '👆 Нажмите чтобы добавить' : '👆 Tap to add') : t.contactDesc}
           </div>
@@ -2323,7 +2323,7 @@ const Toolbox = ({ language, setMobileView }: { language: 'en' | 'ru'; setMobile
           className="w-full p-3 text-left border-2 border-gray-200 rounded-lg hover:border-blue-400 hover:bg-blue-50 transition-all active:scale-95 cursor-pointer shadow-sm hover:shadow"
           style={{ touchAction: isMobile ? 'auto' : 'none' }}
         >
-          <div className="font-semibold text-base md:text-sm">{t.about}</div>
+          <div className="font-semibold text-base md:text-sm text-gray-900">{t.about}</div>
           <div className="text-sm md:text-xs text-gray-900 mt-1 font-bold">
             {isMobile ? (language === 'ru' ? '👆 Нажмите чтобы добавить' : '👆 Tap to add') : t.aboutDesc}
           </div>
@@ -2341,7 +2341,7 @@ const Toolbox = ({ language, setMobileView }: { language: 'en' | 'ru'; setMobile
           className="w-full p-3 text-left border-2 border-gray-200 rounded-lg hover:border-blue-400 hover:bg-blue-50 transition-all active:scale-95 cursor-pointer shadow-sm hover:shadow"
           style={{ touchAction: isMobile ? 'auto' : 'none' }}
         >
-          <div className="font-semibold text-base md:text-sm">{t.about}</div>
+          <div className="font-semibold text-base md:text-sm text-gray-900">{t.about}</div>
           <div className="text-sm md:text-xs text-gray-900 mt-1 font-bold">
             {isMobile ? (language === 'ru' ? '👆 Нажмите чтобы добавить' : '👆 Tap to add') : t.aboutDesc}
           </div>
@@ -2359,7 +2359,7 @@ const Toolbox = ({ language, setMobileView }: { language: 'en' | 'ru'; setMobile
           className="w-full p-3 text-left border-2 border-gray-200 rounded-lg hover:border-blue-400 hover:bg-blue-50 transition-all active:scale-95 cursor-pointer shadow-sm hover:shadow"
           style={{ touchAction: isMobile ? 'auto' : 'none' }}
         >
-          <div className="font-semibold text-base md:text-sm">{t.projects}</div>
+          <div className="font-semibold text-base md:text-sm text-gray-900">{t.projects}</div>
           <div className="text-sm md:text-xs text-gray-900 mt-1 font-bold">
             {isMobile ? (language === 'ru' ? '👆 Нажмите чтобы добавить' : '👆 Tap to add') : t.projectsDesc}
           </div>
@@ -2382,7 +2382,7 @@ const Toolbox = ({ language, setMobileView }: { language: 'en' | 'ru'; setMobile
           className="w-full p-3 text-left border-2 border-gray-200 rounded-lg hover:border-blue-400 hover:bg-blue-50 transition-all active:scale-95 cursor-pointer shadow-sm hover:shadow"
           style={{ touchAction: isMobile ? 'auto' : 'none' }}
         >
-          <div className="font-semibold text-base md:text-sm">{t.pricing}</div>
+          <div className="font-semibold text-base md:text-sm text-gray-900">{t.pricing}</div>
           <div className="text-sm md:text-xs text-gray-900 mt-1 font-bold">
             {isMobile ? (language === 'ru' ? '👆 Нажмите чтобы добавить' : '👆 Tap to add') : t.pricingDesc}
           </div>
@@ -2400,7 +2400,7 @@ const Toolbox = ({ language, setMobileView }: { language: 'en' | 'ru'; setMobile
           className="w-full p-3 text-left border-2 border-gray-200 rounded-lg hover:border-blue-400 hover:bg-blue-50 transition-all active:scale-95 cursor-pointer shadow-sm hover:shadow"
           style={{ touchAction: isMobile ? 'auto' : 'none' }}
         >
-          <div className="font-semibold text-base md:text-sm">{t.testimonials}</div>
+          <div className="font-semibold text-base md:text-sm text-gray-900">{t.testimonials}</div>
           <div className="text-sm md:text-xs text-gray-900 mt-1 font-bold">
             {isMobile ? (language === 'ru' ? '👆 Нажмите чтобы добавить' : '👆 Tap to add') : t.testimonialsDesc}
           </div>
@@ -2418,7 +2418,7 @@ const Toolbox = ({ language, setMobileView }: { language: 'en' | 'ru'; setMobile
           className="w-full p-3 text-left border-2 border-gray-200 rounded-lg hover:border-blue-400 hover:bg-blue-50 transition-all active:scale-95 cursor-pointer shadow-sm hover:shadow"
           style={{ touchAction: isMobile ? 'auto' : 'none' }}
         >
-          <div className="font-semibold text-base md:text-sm">{t.gallery}</div>
+          <div className="font-semibold text-base md:text-sm text-gray-900">{t.gallery}</div>
           <div className="text-sm md:text-xs text-gray-900 mt-1 font-bold">
             {isMobile ? (language === 'ru' ? '👆 Нажмите чтобы добавить' : '👆 Tap to add') : t.galleryDesc}
           </div>
@@ -2436,7 +2436,7 @@ const Toolbox = ({ language, setMobileView }: { language: 'en' | 'ru'; setMobile
           className="w-full p-3 text-left border-2 border-gray-200 rounded-lg hover:border-blue-400 hover:bg-blue-50 transition-all active:scale-95 cursor-pointer shadow-sm hover:shadow"
           style={{ touchAction: isMobile ? 'auto' : 'none' }}
         >
-          <div className="font-semibold text-base md:text-sm">{t.cta}</div>
+          <div className="font-semibold text-base md:text-sm text-gray-900">{t.cta}</div>
           <div className="text-sm md:text-xs text-gray-900 mt-1 font-bold">
             {isMobile ? (language === 'ru' ? '👆 Нажмите чтобы добавить' : '👆 Tap to add') : t.ctaDesc}
           </div>
@@ -2454,7 +2454,7 @@ const Toolbox = ({ language, setMobileView }: { language: 'en' | 'ru'; setMobile
           className="w-full p-3 text-left border-2 border-gray-200 rounded-lg hover:border-blue-400 hover:bg-blue-50 transition-all active:scale-95 cursor-pointer shadow-sm hover:shadow"
           style={{ touchAction: isMobile ? 'auto' : 'none' }}
         >
-          <div className="font-semibold text-base md:text-sm">{t.timeline}</div>
+          <div className="font-semibold text-base md:text-sm text-gray-900">{t.timeline}</div>
           <div className="text-sm md:text-xs text-gray-900 mt-1 font-bold">
             {isMobile ? (language === 'ru' ? '👆 Нажмите чтобы добавить' : '👆 Tap to add') : t.timelineDesc}
           </div>
@@ -2472,7 +2472,7 @@ const Toolbox = ({ language, setMobileView }: { language: 'en' | 'ru'; setMobile
           className="w-full p-3 text-left border-2 border-gray-200 rounded-lg hover:border-blue-400 hover:bg-blue-50 transition-all active:scale-95 cursor-pointer shadow-sm hover:shadow"
           style={{ touchAction: isMobile ? 'auto' : 'none' }}
         >
-          <div className="font-semibold text-base md:text-sm">{t.faq}</div>
+          <div className="font-semibold text-base md:text-sm text-gray-900">{t.faq}</div>
           <div className="text-sm md:text-xs text-gray-900 mt-1 font-bold">
             {isMobile ? (language === 'ru' ? '👆 Нажмите чтобы добавить' : '👆 Tap to add') : t.faqDesc}
           </div>
@@ -2490,7 +2490,7 @@ const Toolbox = ({ language, setMobileView }: { language: 'en' | 'ru'; setMobile
           className="w-full p-3 text-left border-2 border-gray-200 rounded-lg hover:border-blue-400 hover:bg-blue-50 transition-all active:scale-95 cursor-pointer shadow-sm hover:shadow"
           style={{ touchAction: isMobile ? 'auto' : 'none' }}
         >
-          <div className="font-semibold text-base md:text-sm">{t.video}</div>
+          <div className="font-semibold text-base md:text-sm text-gray-900">{t.video}</div>
           <div className="text-sm md:text-xs text-gray-900 mt-1 font-bold">
             {isMobile ? (language === 'ru' ? '👆 Нажмите чтобы добавить' : '👆 Tap to add') : t.videoDesc}
           </div>
@@ -2508,7 +2508,7 @@ const Toolbox = ({ language, setMobileView }: { language: 'en' | 'ru'; setMobile
           className="w-full p-3 text-left border-2 border-gray-200 rounded-lg hover:border-blue-400 hover:bg-blue-50 transition-all active:scale-95 cursor-pointer shadow-sm hover:shadow"
           style={{ touchAction: isMobile ? 'auto' : 'none' }}
         >
-          <div className="font-semibold text-base md:text-sm">{t.social}</div>
+          <div className="font-semibold text-base md:text-sm text-gray-900">{t.social}</div>
           <div className="text-sm md:text-xs text-gray-900 mt-1 font-bold">
             {isMobile ? (language === 'ru' ? '👆 Нажмите чтобы добавить' : '👆 Tap to add') : t.socialDesc}
           </div>
@@ -2907,13 +2907,25 @@ export function CraftJSTemplateBuilder({ template }: { template: TemplateConfig 
 
           {/* Canvas - Always visible on desktop, conditionally on mobile */}
           <div
-            className={`${mobileView === 'canvas' ? 'block' : 'hidden'} md:block flex-1 overflow-auto bg-gray-100 absolute md:relative inset-0 md:inset-auto pb-20 md:pb-0`}
+            className={`${mobileView === 'canvas' ? 'block' : 'hidden'} md:block flex-1 bg-gray-100 pb-20 md:pb-0 ${
+              isMobileDevice ? 'relative overflow-y-scroll' : 'absolute overflow-auto inset-0 md:relative md:inset-auto'
+            }`}
             style={{
-              // Mobile: Enable scrolling, disable drag
-              touchAction: isMobileDevice ? 'pan-y pan-x' : 'none',
-              WebkitOverflowScrolling: 'touch',
-              overflowY: 'auto',
-              overscrollBehavior: 'contain'
+              // Mobile: Force scrollable container
+              ...(isMobileDevice ? {
+                position: 'relative',
+                height: 'auto',
+                minHeight: '100%',
+                touchAction: 'pan-y',
+                WebkitOverflowScrolling: 'touch',
+                overflowY: 'scroll',
+                overscrollBehavior: 'contain'
+              } : {
+                touchAction: 'none',
+                WebkitOverflowScrolling: 'touch',
+                overflowY: 'auto',
+                overscrollBehavior: 'contain'
+              })
             }}
           >
             <Frame key={language}>
