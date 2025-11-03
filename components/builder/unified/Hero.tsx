@@ -86,6 +86,19 @@ export const Hero = ({
 
   const { actions: editorActions } = useEditor();
 
+  // Mobile detection - show delete button always on mobile
+  const [isMobile, setIsMobile] = React.useState(false);
+
+  React.useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 1024);
+    };
+
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
   // Get display text based on language
   const displayName = language === 'ru' ? nameRu : name;
   const displayTitle = language === 'ru' ? titleRu : title;
@@ -110,14 +123,17 @@ export const Hero = ({
           padding: `${padding}px`,
         }}
       >
-        {selected && (
+        {(selected || isMobile) && (
           <div className="absolute top-2 right-2 z-20 flex gap-2">
             <button
               onClick={() => editorActions.delete(id)}
-              className="px-3 py-1 bg-red-500 text-white rounded hover:bg-red-600 flex items-center gap-1 shadow-lg"
+              className={`bg-red-500 text-white rounded hover:bg-red-600 flex items-center shadow-lg ${
+                isMobile ? 'p-2' : 'px-3 py-1 gap-1'
+              }`}
+              title="Delete component"
             >
               <Trash2 className="w-4 h-4" />
-              Delete
+              {!isMobile && <span>Delete</span>}
             </button>
           </div>
         )}
@@ -170,14 +186,17 @@ export const Hero = ({
       className={`min-h-[250px] sm:min-h-[350px] md:min-h-[500px] lg:h-screen flex items-center border-2 ${selected ? 'border-blue-500' : 'border-transparent'}`}
       style={{ padding: `${padding}px 0` }}
     >
-      {selected && (
+      {(selected || isMobile) && (
         <div className="absolute top-2 right-2 z-20 flex gap-2">
           <button
             onClick={() => editorActions.delete(id)}
-            className="px-3 py-1 bg-red-500 text-white rounded hover:bg-red-600 flex items-center gap-1 shadow-lg"
+            className={`bg-red-500 text-white rounded hover:bg-red-600 flex items-center shadow-lg ${
+              isMobile ? 'p-2' : 'px-3 py-1 gap-1'
+            }`}
+            title="Delete component"
           >
             <Trash2 className="w-4 h-4" />
-            Delete
+            {!isMobile && <span>Delete</span>}
           </button>
         </div>
       )}
