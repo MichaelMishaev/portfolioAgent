@@ -14,7 +14,6 @@ import { FiGrid, FiZap, FiLayers, FiCode, FiTrendingUp, FiCheck, FiMail, FiGithu
 import Link from "next/link";
 import { HowItWorksModal } from "@/components/how-it-works-modal";
 import { HelpCenter } from "@/components/help-center";
-import { OnboardingTour, TourStep } from "@/components/onboarding-tour";
 
 function HowItWorksModalWrapper() {
   const { language } = useI18n();
@@ -23,48 +22,6 @@ function HowItWorksModalWrapper() {
 
 export default function Home() {
   const { t, language } = useI18n();
-
-  // Onboarding tour steps
-  const tourSteps: TourStep[] = [
-    {
-      title: "Welcome to Portfolio Builder!",
-      titleRu: "Добро пожаловать в Portfolio Builder!",
-      content: "Create professional portfolio websites in minutes. Let's take a quick tour to show you around!",
-      contentRu: "Создавайте профессиональные портфолио за минуты. Давайте быстро покажем вам основные возможности!",
-      position: "center",
-    },
-    {
-      target: "#templates",
-      title: "Browse Templates",
-      titleRu: "Просмотр шаблонов",
-      content: "Explore our collection of 39+ professional templates. Filter by category or search for specific features.",
-      contentRu: "Изучите нашу коллекцию из 39+ профессиональных шаблонов. Фильтруйте по категориям или ищите конкретные функции.",
-      position: "top",
-    },
-    {
-      target: ".category-menu-button",
-      title: "Filter by Category",
-      titleRu: "Фильтр по категориям",
-      content: "Use categories to quickly find templates for your specific industry: Online Business, Services, Products, and more.",
-      contentRu: "Используйте категории для быстрого поиска шаблонов для вашей отрасли: Онлайн-бизнес, Услуги, Продукты и другие.",
-      position: "bottom",
-    },
-    {
-      target: "input[type='text']",
-      title: "Smart Search",
-      titleRu: "Умный поиск",
-      content: "Search templates by name, description, features, or tags. The search is instant and very powerful!",
-      contentRu: "Ищите шаблоны по названию, описанию, функциям или тегам. Поиск мгновенный и очень мощный!",
-      position: "bottom",
-    },
-    {
-      title: "Start Building!",
-      titleRu: "Начните создавать!",
-      content: "Click on any template to customize it with our drag-and-drop builder. No coding required!",
-      contentRu: "Нажмите на любой шаблон, чтобы настроить его с помощью нашего конструктора drag-and-drop. Программирование не требуется!",
-      position: "center",
-    },
-  ];
 
   const stats = [
     { value: "39+", label: t.homepage.stats.templates },
@@ -631,15 +588,6 @@ export default function Home() {
 
       {/* Help Center - Floating Button */}
       <HelpCenter language={language} />
-
-      {/* Onboarding Tour */}
-      <OnboardingTour
-        steps={tourSteps}
-        tourKey="homepage-tour"
-        language={language}
-        autoStart={true}
-        showProgress={true}
-      />
     </main>
   );
 }
