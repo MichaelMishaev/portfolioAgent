@@ -2549,6 +2549,7 @@ export function CraftJSTemplateBuilder({ template }: { template: TemplateConfig 
   const [showTelegramModal, setShowTelegramModal] = React.useState(false);
   const [showWhatsAppModal, setShowWhatsAppModal] = React.useState(false);
   const [showSubmitDropdown, setShowSubmitDropdown] = React.useState(false);
+  const [showScrollHint, setShowScrollHint] = React.useState(true);
 
   // Tutorial state - user clicks button to show
   const [showTutorial, setShowTutorial] = React.useState(false);
@@ -2938,14 +2939,19 @@ export function CraftJSTemplateBuilder({ template }: { template: TemplateConfig 
               </Element>
             </Frame>
             {/* Scroll indicator for mobile - shows there's more content */}
-            <div className="md:hidden fixed bottom-16 left-1/2 transform -translate-x-1/2 z-10 pointer-events-none">
-              <div className="bg-blue-600 text-white px-4 py-2 rounded-full shadow-lg flex items-center gap-2 animate-bounce">
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-                </svg>
-                <span className="text-sm font-semibold">{language === 'ru' ? 'Прокрутите вниз' : 'Scroll down'}</span>
+            {showScrollHint && (
+              <div
+                className="md:hidden fixed bottom-20 left-1/2 transform -translate-x-1/2 z-10 pointer-events-none"
+                style={{ animation: 'bounce 2s infinite' }}
+              >
+                <div className="bg-blue-600 text-white px-3 py-2 rounded-full shadow-lg flex items-center gap-2">
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                  </svg>
+                  <span className="text-xs font-semibold">{language === 'ru' ? 'Листайте ↓' : 'Scroll ↓'}</span>
+                </div>
               </div>
-            </div>
+            )}
           </div>
 
           {/* Settings Panel - Hidden on mobile unless active */}
@@ -2966,18 +2972,6 @@ export function CraftJSTemplateBuilder({ template }: { template: TemplateConfig 
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
             </svg>
             <span className="text-xs font-medium">{language === 'ru' ? 'Компоненты' : 'Components'}</span>
-            <div className="absolute -top-8 left-1/2 transform -translate-x-1/2">
-              <TooltipHint
-                content="Add new sections to your page"
-                contentRu="Добавить новые секции на страницу"
-                position="top"
-                language={language}
-                trigger="hover"
-                persistent={true}
-                storageKey="mobile-components-hint"
-                insideButton={true}
-              />
-            </div>
           </button>
           <button
             onClick={() => setMobileView('canvas')}
@@ -2989,18 +2983,6 @@ export function CraftJSTemplateBuilder({ template }: { template: TemplateConfig 
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
             </svg>
             <span className="text-xs font-medium">{language === 'ru' ? 'Холст' : 'Canvas'}</span>
-            <div className="absolute -top-8 left-1/2 transform -translate-x-1/2">
-              <TooltipHint
-                content="Tap components to select and edit them"
-                contentRu="Нажмите компоненты для выбора и редактирования"
-                position="top"
-                language={language}
-                trigger="hover"
-                persistent={true}
-                storageKey="mobile-canvas-hint"
-                insideButton={true}
-              />
-            </div>
           </button>
           <button
             onClick={() => setMobileView('settings')}
@@ -3010,18 +2992,6 @@ export function CraftJSTemplateBuilder({ template }: { template: TemplateConfig 
           >
             <Settings className="w-5 h-5" />
             <span className="text-xs font-medium">{language === 'ru' ? 'Настройки' : 'Settings'}</span>
-            <div className="absolute -top-8 left-1/2 transform -translate-x-1/2">
-              <TooltipHint
-                content="Customize colors, text, and images"
-                contentRu="Настройка цветов, текста и изображений"
-                position="top"
-                language={language}
-                trigger="hover"
-                persistent={true}
-                storageKey="mobile-settings-hint"
-                insideButton={true}
-              />
-            </div>
           </button>
         </div>
       </Editor>
