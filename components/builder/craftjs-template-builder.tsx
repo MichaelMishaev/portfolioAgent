@@ -518,8 +518,8 @@ const AboutComponent = ({ title, titleRu, text, textRu, imageUrl, language = 'en
           <img src={imageUrl} alt="About" className="rounded-lg w-full h-64 object-cover" />
         )}
         <div>
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">{language === 'ru' ? titleRu : title}</h2>
-          <p className="text-lg leading-relaxed">{language === 'ru' ? textRu : text}</p>
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 text-gray-900">{language === 'ru' ? titleRu : title}</h2>
+          <p className="text-lg leading-relaxed text-gray-700">{language === 'ru' ? textRu : text}</p>
         </div>
       </div>
     </div>
@@ -665,7 +665,7 @@ const SkillsComponent = ({ title, titleRu, skills, language = 'en' }: SkillsProp
         </div>
       )}
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-8 text-center">{language === 'ru' ? titleRu : title}</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-8 text-center text-gray-900">{language === 'ru' ? titleRu : title}</h2>
         <div className="flex flex-wrap gap-3 justify-center">
           {skills.map((skill, index) => (
             <span
@@ -750,7 +750,7 @@ const ProjectsComponent = ({ title, titleRu, projects, language = 'en' }: Projec
         </div>
       )}
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-8 text-center">{language === 'ru' ? titleRu : title}</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-8 text-center text-gray-900">{language === 'ru' ? titleRu : title}</h2>
         <div className="grid md:grid-cols-2 gap-6">
           {projects.map((project, index) => (
             <div key={index} className="bg-white p-6 rounded-lg shadow-md">
@@ -761,7 +761,7 @@ const ProjectsComponent = ({ title, titleRu, projects, language = 'en' }: Projec
                   className="w-full h-48 object-cover rounded-lg mb-4"
                 />
               )}
-              <h3 className="text-xl font-bold mb-2">{language === 'ru' ? project.titleRu : project.title}</h3>
+              <h3 className="text-xl font-bold mb-2 text-gray-900">{language === 'ru' ? project.titleRu : project.title}</h3>
               <p className="text-gray-600">{language === 'ru' ? project.descriptionRu : project.description}</p>
             </div>
           ))}
@@ -876,19 +876,19 @@ const ContactComponent = ({
         </div>
       )}
       <div className="max-w-4xl mx-auto text-center">
-        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-8">{language === 'ru' ? titleRu : title}</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-8 text-gray-900">{language === 'ru' ? titleRu : title}</h2>
         <div className="space-y-4">
           <div>
             <p className="text-gray-600 mb-1">{language === 'ru' ? emailLabelRu : emailLabel}</p>
-            <p className="text-lg font-medium">{email}</p>
+            <p className="text-lg font-medium text-gray-900">{email}</p>
           </div>
           <div>
             <p className="text-gray-600 mb-1">{language === 'ru' ? phoneLabelRu : phoneLabel}</p>
-            <p className="text-lg font-medium">{phone}</p>
+            <p className="text-lg font-medium text-gray-900">{phone}</p>
           </div>
           <div>
             <p className="text-gray-600 mb-1">{language === 'ru' ? locationLabelRu : locationLabel}</p>
-            <p className="text-lg font-medium">{location}</p>
+            <p className="text-lg font-medium text-gray-900">{location}</p>
           </div>
         </div>
       </div>
@@ -973,11 +973,11 @@ const PricingComponent = ({ title, titleRu, plans, language = 'en' }: PricingPro
         </div>
       )}
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-8 text-center">{language === 'ru' ? titleRu : title}</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-8 text-center text-gray-900">{language === 'ru' ? titleRu : title}</h2>
         <div className="grid md:grid-cols-3 gap-6">
           {plans.map((plan, index) => (
             <div key={index} className="bg-white p-6 rounded-lg shadow-md border-2 border-gray-200">
-              <h3 className="text-xl font-bold mb-2">{language === 'ru' ? plan.nameRu : plan.name}</h3>
+              <h3 className="text-xl font-bold mb-2 text-gray-900">{language === 'ru' ? plan.nameRu : plan.name}</h3>
               <p className="text-3xl font-bold text-blue-600 mb-4">{language === 'ru' ? plan.priceRu : plan.price}</p>
               <ul className="space-y-2">
                 {(language === 'ru' ? plan.featuresRu : plan.features).map((feature, featureIndex) => (
@@ -1089,7 +1089,7 @@ const TestimonialsComponent = ({ title, titleRu, testimonials, language = 'en' }
         </div>
       )}
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-12 text-center">{language === 'ru' ? titleRu : title}</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-12 text-center text-gray-900">{language === 'ru' ? titleRu : title}</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {testimonials.map((testimonial, index) => (
             <div key={index} className="bg-white p-6 rounded-lg shadow-md">
@@ -1098,7 +1098,7 @@ const TestimonialsComponent = ({ title, titleRu, testimonials, language = 'en' }
                   {(language === 'ru' ? testimonial.nameRu : testimonial.name).charAt(0)}
                 </div>
                 <div>
-                  <h4 className="font-bold">{language === 'ru' ? testimonial.nameRu : testimonial.name}</h4>
+                  <h4 className="font-bold text-gray-900">{language === 'ru' ? testimonial.nameRu : testimonial.name}</h4>
                   <p className="text-sm text-gray-600">{language === 'ru' ? testimonial.roleRu : testimonial.role}</p>
                 </div>
               </div>
@@ -1192,7 +1192,7 @@ const GalleryComponent = ({ title, titleRu, images, columns, language = 'en' }: 
         </div>
       )}
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-8 text-center">{language === 'ru' ? titleRu : title}</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-8 text-center text-gray-900">{language === 'ru' ? titleRu : title}</h2>
         <div className={`grid ${gridClass} gap-4`}>
           {images.map((image, index) => (
             <div key={index} className="relative group overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow">
@@ -1393,7 +1393,7 @@ const TimelineComponent = ({ title, titleRu, steps, language = 'en' }: TimelineP
         </div>
       )}
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-12 text-center">{language === 'ru' ? titleRu : title}</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-12 text-center text-gray-900">{language === 'ru' ? titleRu : title}</h2>
         <div className="space-y-8">
           {steps.map((step, index) => (
             <div key={index} className="flex gap-6">
@@ -1405,7 +1405,7 @@ const TimelineComponent = ({ title, titleRu, steps, language = 'en' }: TimelineP
               </div>
               <div className="flex-1 pb-8">
                 <div className="text-sm text-blue-600 font-semibold mb-1">{step.year}</div>
-                <h3 className="text-xl font-bold mb-2">{language === 'ru' ? step.titleRu : step.title}</h3>
+                <h3 className="text-xl font-bold mb-2 text-gray-900">{language === 'ru' ? step.titleRu : step.title}</h3>
                 <p className="text-gray-600">{language === 'ru' ? step.descriptionRu : step.description}</p>
               </div>
             </div>
@@ -1492,14 +1492,14 @@ const FAQComponent = ({ title, titleRu, faqs, language = 'en' }: FAQProps) => {
         </div>
       )}
       <div className="max-w-3xl mx-auto">
-        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-12 text-center">{displayTitle}</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-12 text-center text-gray-900">{displayTitle}</h2>
         <div className="space-y-4">
           {faqs.map((faq, index) => {
             const displayQuestion = language === 'ru' ? faq.questionRu : faq.question;
             const displayAnswer = language === 'ru' ? faq.answerRu : faq.answer;
             return (
               <div key={index} className="bg-white p-6 rounded-lg shadow-sm">
-                <h3 className="text-lg font-bold mb-2">{displayQuestion}</h3>
+                <h3 className="text-lg font-bold mb-2 text-gray-900">{displayQuestion}</h3>
                 <p className="text-gray-600">{displayAnswer}</p>
               </div>
             );
@@ -1601,7 +1601,7 @@ const VideoComponent = ({ videoUrl, title, titleRu, description, descriptionRu, 
         </div>
       )}
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 text-center">{language === 'ru' ? titleRu : title}</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 text-center text-gray-900">{language === 'ru' ? titleRu : title}</h2>
         <p className="text-center text-gray-600 mb-8">{language === 'ru' ? descriptionRu : description}</p>
         <div className="aspect-video bg-gray-900 rounded-lg overflow-hidden flex items-center justify-center">
           <div className="text-center">
@@ -1689,7 +1689,7 @@ const SocialLinksComponent = ({ title, titleRu, links, language = 'en' }: Social
         </div>
       )}
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-8 text-center">{language === 'ru' ? titleRu : title}</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-8 text-center text-gray-900">{language === 'ru' ? titleRu : title}</h2>
         <div className="flex justify-center gap-4 flex-wrap">
           {links.map((link, index) => (
             <a
@@ -1699,7 +1699,7 @@ const SocialLinksComponent = ({ title, titleRu, links, language = 'en' }: Social
               rel="noopener noreferrer"
               className="w-14 h-14 rounded-full bg-gray-900 hover:bg-blue-600 flex items-center justify-center text-white transition-colors"
             >
-              <span className="text-xl font-bold">{link.platform.charAt(0)}</span>
+              <span className="text-xl font-bold text-gray-900">{link.platform.charAt(0)}</span>
             </a>
           ))}
         </div>
@@ -2204,7 +2204,7 @@ const Toolbox = ({ language, setMobileView }: { language: 'en' | 'ru'; setMobile
   return (
     <div className="w-full md:w-64 bg-white border-r h-full overflow-y-auto">
       <div className="p-3 sm:p-4 border-b bg-gray-50">
-        <h3 className="font-bold text-base sm:text-lg">{t.components}</h3>
+        <h3 className="font-bold text-base sm:text-lg text-gray-900">{t.components}</h3>
         <p className="text-sm md:text-xs text-gray-900 mt-1 font-bold">{isMobile ? (language === 'ru' ? 'Нажмите для добавления' : 'Tap to add components') : 'Drag to canvas'}</p>
       </div>
       <div className="p-3 sm:p-4 space-y-3">
