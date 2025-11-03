@@ -41,19 +41,34 @@ export const Stats = ({
 
   const { actions: editorActions } = useEditor();
 
+  const [isMobile, setIsMobile] = React.useState(false);
+
+  React.useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 1024);
+    };
+
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
   return (
     <section
       ref={(ref) => ref && connect(drag(ref))}
       className={`py-20 border-t border-2 ${selected ? "border-blue-500" : "border-transparent"}`}
     >
-      {selected && (
+      {(selected || isMobile) && (
         <div className="absolute top-2 right-2 z-20 flex gap-2">
           <button
             onClick={() => editorActions.delete(id)}
-            className="px-3 py-1 bg-red-500 text-white rounded hover:bg-red-600 flex items-center gap-1 shadow-lg"
+            className={`bg-red-500 text-white rounded hover:bg-red-600 flex items-center shadow-lg ${
+              isMobile ? 'p-2' : 'px-3 py-1 gap-1'
+            }`}
+            title="Delete component"
           >
             <Trash2 className="w-4 h-4" />
-            Delete
+            {!isMobile && <span>Delete</span>}
           </button>
         </div>
       )}
@@ -68,8 +83,8 @@ export const Stats = ({
             return (
               <ScrollReveal key={index} delay={index * 0.1}>
                 <div className="text-center">
-                  <div className="text-4xl md:text-5xl font-bold mb-2">{stat.value}</div>
-                  <div className="text-sm text-muted-foreground">{displayLabel}</div>
+                  <div className="text-4xl md:text-5xl font-bold mb-2 text-gray-900">{stat.value}</div>
+                  <div className="text-sm text-gray-600">{displayLabel}</div>
                 </div>
               </ScrollReveal>
             );

@@ -48,6 +48,18 @@ export const Skills = ({
 
   const { actions: editorActions } = useEditor();
 
+  const [isMobile, setIsMobile] = React.useState(false);
+
+  React.useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 1024);
+    };
+
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
   const displayTitle = language === 'ru' ? titleRu : title;
 
   return (
@@ -55,25 +67,28 @@ export const Skills = ({
       ref={(ref) => ref && connect(drag(ref))}
       className={`py-20 border-t border-2 ${selected ? "border-blue-500" : "border-transparent"}`}
     >
-      {selected && (
+      {(selected || isMobile) && (
         <div className="absolute top-2 right-2 z-20 flex gap-2">
           <button
             onClick={() => editorActions.delete(id)}
-            className="px-3 py-1 bg-red-500 text-white rounded hover:bg-red-600 flex items-center gap-1 shadow-lg"
+            className={`bg-red-500 text-white rounded hover:bg-red-600 flex items-center shadow-lg ${
+              isMobile ? 'p-2' : 'px-3 py-1 gap-1'
+            }`}
+            title="Delete component"
           >
             <Trash2 className="w-4 h-4" />
-            Delete
+            {!isMobile && <span>Delete</span>}
           </button>
         </div>
       )}
       <div className="container mx-auto px-3 sm:px-3">
         <ScrollReveal>
-          <h2 className="text-3xl md:text-4xl font-bold mb-12">{displayTitle}</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-gray-900">{displayTitle}</h2>
         </ScrollReveal>
         <div className="flex flex-wrap gap-3">
           {skills.map((skill, index) => (
             <ScrollReveal key={index} delay={index * 0.05}>
-              <div className="px-4 py-2 bg-muted rounded-full text-sm hover:bg-primary hover:text-primary-foreground transition-colors">
+              <div className="px-4 py-2 bg-gray-100 text-gray-900 rounded-full text-sm hover:bg-primary hover:text-primary-foreground transition-colors">
                 {skill}
               </div>
             </ScrollReveal>
