@@ -91,7 +91,8 @@
       "intermediate": "moderate",
       "advanced": "complex",
       "readMore": "Read more",
-      "showLess": "Show less"
+      "showLess": "Show less",
+      "customizeAndBuild": "Start Building"
     },
     "stylePreview": {
       "title": "Try Before You Choose",
@@ -2298,7 +2299,8 @@
       "intermediate": "средний",
       "advanced": "сложный",
       "readMore": "Читать далее",
-      "showLess": "Свернуть"
+      "showLess": "Свернуть",
+      "customizeAndBuild": "Начать Создание"
     },
     "stylePreview": {
       "title": "Попробуйте Перед Выбором",

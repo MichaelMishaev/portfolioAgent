@@ -346,16 +346,16 @@ export function TemplateGallery() {
                   ))}
                 </div>
 
-                {/* Actions - Single Primary Button */}
-                <div className="mt-auto">
+                {/* Actions - Primary CTA Button */}
+                <div className="mt-auto pt-2">
                   <Button
                     asChild
-                    className="w-full min-h-[48px] touch-manipulation font-semibold bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-base"
+                    className="w-full min-h-[56px] touch-manipulation font-bold text-lg shadow-lg hover:shadow-xl transition-all bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 hover:from-blue-700 hover:via-purple-700 hover:to-pink-700 border-2 border-white/20"
                     size="lg"
                   >
                     <Link href={`/templates/${template.id}`} onClick={handleTemplateClick}>
                       <FiEdit3 className="mr-2 h-5 w-5" />
-                      Customize & Build
+                      {t.ui.customizeAndBuild}
                     </Link>
                   </Button>
                 </div>
