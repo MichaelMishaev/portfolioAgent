@@ -70,7 +70,7 @@ export const SplitScreenHero = ({
   return (
     <section
       ref={(ref) => ref && connect(drag(ref))}
-      className={`h-screen flex items-center pt-16 ${selected ? "ring-2 ring-blue-500" : ""}`}
+      className={`min-h-[400px] md:min-h-[600px] lg:h-screen flex items-center pt-16 ${selected ? "ring-2 ring-blue-500" : ""}`}
     >
       <div className="container mx-auto px-3 sm:px-3 h-full">
         <div className="grid grid-cols-1 md:grid-cols-2 h-full gap-8">
@@ -609,7 +609,7 @@ export const SplitScreenContact = ({
   return (
     <section
       ref={(ref) => ref && connect(drag(ref))}
-      className={`min-h-screen flex items-center border-t ${selected ? "ring-2 ring-blue-500" : ""}`}
+      className={`min-h-[400px] md:min-h-[600px] lg:min-h-screen flex items-center border-t ${selected ? "ring-2 ring-blue-500" : ""}`}
     >
       <div className="container mx-auto px-3 sm:px-3">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">

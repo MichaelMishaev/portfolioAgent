@@ -2922,7 +2922,7 @@ export function CraftJSTemplateBuilder({ template }: { template: TemplateConfig 
 
           {/* Canvas - Always visible on desktop, conditionally on mobile */}
           <div
-            className={`${mobileView === 'canvas' ? 'block' : 'hidden'} md:block flex-1 overflow-auto bg-gray-100 absolute md:relative inset-0 md:inset-auto`}
+            className={`${mobileView === 'canvas' ? 'block' : 'hidden'} md:block flex-1 overflow-auto bg-gray-100 absolute md:relative inset-0 md:inset-auto pb-20 md:pb-0`}
             style={{
               userSelect: 'none',
               WebkitUserSelect: 'none',
@@ -2937,6 +2937,15 @@ export function CraftJSTemplateBuilder({ template }: { template: TemplateConfig 
                 <Element is={EmptyCanvas} language={language} />
               </Element>
             </Frame>
+            {/* Scroll indicator for mobile - shows there's more content */}
+            <div className="md:hidden fixed bottom-16 left-1/2 transform -translate-x-1/2 z-10 pointer-events-none">
+              <div className="bg-blue-600 text-white px-4 py-2 rounded-full shadow-lg flex items-center gap-2 animate-bounce">
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                </svg>
+                <span className="text-sm font-semibold">{language === 'ru' ? 'Прокрутите вниз' : 'Scroll down'}</span>
+              </div>
+            </div>
           </div>
 
           {/* Settings Panel - Hidden on mobile unless active */}

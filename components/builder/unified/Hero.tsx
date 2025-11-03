@@ -104,7 +104,7 @@ export const Hero = ({
     return (
       <div
         ref={(ref) => ref && connect(drag(ref))}
-        className={`relative text-center min-h-screen flex items-center justify-center border-2 ${selected ? 'border-blue-500' : 'border-transparent'}`}
+        className={`relative text-center min-h-[400px] md:min-h-[600px] lg:min-h-screen flex items-center justify-center border-2 ${selected ? 'border-blue-500' : 'border-transparent'}`}
         style={{
           ...backgroundStyle,
           padding: `${padding}px`,
@@ -167,7 +167,7 @@ export const Hero = ({
   return (
     <section
       ref={(ref) => ref && connect(drag(ref))}
-      className={`h-screen flex items-center border-2 ${selected ? 'border-blue-500' : 'border-transparent'}`}
+      className={`min-h-[400px] md:min-h-[600px] lg:h-screen flex items-center border-2 ${selected ? 'border-blue-500' : 'border-transparent'}`}
       style={{ padding: `${padding}px 0` }}
     >
       {selected && (
