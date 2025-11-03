@@ -2206,7 +2206,7 @@ const Toolbox = ({ language, setMobileView }: { language: 'en' | 'ru'; setMobile
         </button>
 
         {/* OTHER COMPONENTS SECTION */}
-        <div className="text-xs font-bold text-gray-700 uppercase tracking-wide mb-2 mt-6 flex items-center gap-2">
+        <div className="text-xs font-bold text-gray-900 uppercase tracking-wide mb-2 mt-6 flex items-center gap-2">
           <div className="w-1 h-4 bg-green-500 rounded"></div>
           {t.content}
         </div>
@@ -2287,7 +2287,7 @@ const Toolbox = ({ language, setMobileView }: { language: 'en' | 'ru'; setMobile
           </div>
         </button>
 
-        <div className="text-xs font-bold text-gray-700 uppercase tracking-wide mb-2 mt-6 flex items-center gap-2">
+        <div className="text-xs font-bold text-gray-900 uppercase tracking-wide mb-2 mt-6 flex items-center gap-2">
           <div className="w-1 h-4 bg-purple-500 rounded"></div>
           {t.content}
         </div>
@@ -2887,20 +2887,22 @@ export function CraftJSTemplateBuilder({ template }: { template: TemplateConfig 
             )}
 
             {/* Canvas Content with Preview Mode Scaling */}
-            <div
-              className="transition-transform duration-300 origin-top"
-              style={{
-                transform: isPreviewMode ? 'scale(0.35)' : 'scale(1)',
-                transformOrigin: 'top center',
-                width: isPreviewMode ? '285%' : '100%',
-                pointerEvents: isPreviewMode ? 'none' : 'auto',
-              }}
-            >
-              <Frame key={language}>
-                <Element is={Container} canvas>
-                  <Element is={EmptyCanvas} language={language} />
-                </Element>
-              </Frame>
+            <div className="w-full">
+              <div
+                className="transition-all duration-300"
+                style={{
+                  transform: isPreviewMode ? 'scale(0.4)' : 'scale(1)',
+                  transformOrigin: 'top left',
+                  width: isPreviewMode ? '250%' : '100%',
+                  pointerEvents: isPreviewMode ? 'none' : 'auto',
+                }}
+              >
+                <Frame key={language}>
+                  <Element is={Container} canvas>
+                    <Element is={EmptyCanvas} language={language} />
+                  </Element>
+                </Frame>
+              </div>
             </div>
             {/* Scroll indicator for mobile - shows there's more content */}
             {showScrollHint && !isMobileDevice && (
