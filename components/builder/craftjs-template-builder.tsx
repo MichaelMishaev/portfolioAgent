@@ -2548,6 +2548,7 @@ export function CraftJSTemplateBuilder({ template }: { template: TemplateConfig 
   const [showSuccessToast, setShowSuccessToast] = React.useState(false);
   const [showTelegramModal, setShowTelegramModal] = React.useState(false);
   const [showWhatsAppModal, setShowWhatsAppModal] = React.useState(false);
+  const [showSubmitDropdown, setShowSubmitDropdown] = React.useState(false);
 
   // Tutorial state - user clicks button to show
   const [showTutorial, setShowTutorial] = React.useState(false);
@@ -2756,6 +2757,16 @@ export function CraftJSTemplateBuilder({ template }: { template: TemplateConfig 
           .craftjs-renderer {
             -webkit-overflow-scrolling: touch !important;
             touch-action: pan-y !important;
+            overflow-y: auto !important;
+          }
+          /* Prevent body scroll when touching canvas */
+          body {
+            overscroll-behavior: contain;
+          }
+          /* Make canvas scrollable */
+          .craftjs-renderer > div {
+            overflow-y: auto !important;
+            -webkit-overflow-scrolling: touch !important;
           }
         }
       `}</style>
@@ -2779,87 +2790,72 @@ export function CraftJSTemplateBuilder({ template }: { template: TemplateConfig 
           </div>
         </div>
         <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0">
-          {/* Language Toggle - Modern Segmented Control */}
-          <div className="inline-flex items-center bg-gray-100 rounded-lg p-1 gap-1 relative">
-            <button
-              onClick={() => setLanguage('en')}
-              className={`px-4 py-2 rounded-md text-sm font-semibold transition-all duration-200 ${
-                language === 'en'
-                  ? 'bg-blue-600 text-white shadow-sm'
-                  : 'text-gray-700 hover:text-gray-900'
-              }`}
-            >
-              EN
-            </button>
-            <button
-              onClick={() => setLanguage('ru')}
-              className={`px-4 py-2 rounded-md text-sm font-semibold transition-all duration-200 ${
-                language === 'ru'
-                  ? 'bg-blue-600 text-white shadow-sm'
-                  : 'text-gray-700 hover:text-gray-900'
-              }`}
-            >
-              RU
-            </button>
-            <div className="absolute -top-2 -right-2 hidden sm:block">
-              <TooltipHint
-                content="Switch language to preview your site in English or Russian"
-                contentRu="Переключите язык для предварительного просмотра сайта на английском или русском"
-                position="bottom"
-                language={language}
-                trigger="hover"
-              />
-            </div>
-          </div>
-
           {/* View Demo Button */}
+          <Link
+            href={`/templates/${template.id}`}
+            target="_blank"
+            className="flex items-center gap-2 px-4 sm:px-5 py-2.5 border-2 border-gray-300 hover:border-blue-600 rounded-lg font-semibold text-gray-700 hover:text-blue-600 bg-white hover:bg-blue-50 transition-all duration-200 hover:scale-105 active:scale-95 shadow-sm hover:shadow-md"
+          >
+            <Eye className="w-4 h-4" />
+            <span className="hidden sm:inline">{language === 'ru' ? 'Демо' : 'Demo'}</span>
+          </Link>
+
+          {/* Combined Submit Website Button */}
           <div className="relative">
-            <Link
-              href={`/templates/${template.id}`}
-              target="_blank"
-              className="flex items-center gap-2 px-4 sm:px-5 py-2.5 border-2 border-gray-300 hover:border-blue-600 rounded-lg font-semibold text-gray-700 hover:text-blue-600 bg-white hover:bg-blue-50 transition-all duration-200 hover:scale-105 active:scale-95 shadow-sm hover:shadow-md"
+            <Button
+              onClick={() => setShowSubmitDropdown(!showSubmitDropdown)}
+              className="flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-4 sm:px-6 py-2.5 rounded-lg font-semibold shadow-lg shadow-green-600/30 hover:shadow-xl hover:shadow-green-600/40 transition-all duration-200 hover:scale-105 active:scale-95"
             >
-              <Eye className="w-4 h-4" />
-              <span className="hidden sm:inline">{language === 'ru' ? 'Демо' : 'Demo'}</span>
-            </Link>
-            <div className="absolute -top-2 -right-2 hidden sm:block">
-              <TooltipHint
-                content="Preview the original template before customization"
-                contentRu="Просмотр оригинального шаблона до настройки"
-                position="bottom"
-                language={language}
-                trigger="hover"
-              />
-            </div>
+              <Send className="w-4 h-4" />
+              <span className="hidden sm:inline">{language === 'ru' ? 'Отправить сайт' : 'Submit Website'}</span>
+            </Button>
+
+            {/* Dropdown Menu */}
+            {showSubmitDropdown && (
+              <>
+                <div
+                  className="fixed inset-0 z-40"
+                  onClick={() => setShowSubmitDropdown(false)}
+                />
+                <div className="absolute right-0 top-full mt-2 w-56 bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-50">
+                  <button
+                    onClick={() => {
+                      setShowTelegramModal(true);
+                      setShowSubmitDropdown(false);
+                    }}
+                    className="w-full flex items-center gap-3 px-4 py-3 hover:bg-gray-50 transition-colors"
+                  >
+                    <Send className="w-5 h-5 text-blue-600" />
+                    <div className="text-left">
+                      <div className="font-semibold text-gray-900">Telegram</div>
+                      <div className="text-xs text-gray-500">{language === 'ru' ? 'Отправить в Telegram' : 'Send via Telegram'}</div>
+                    </div>
+                  </button>
+                  <button
+                    onClick={() => {
+                      setShowWhatsAppModal(true);
+                      setShowSubmitDropdown(false);
+                    }}
+                    className="w-full flex items-center gap-3 px-4 py-3 hover:bg-gray-50 transition-colors"
+                  >
+                    <FaWhatsapp className="w-5 h-5 text-[#25D366]" />
+                    <div className="text-left">
+                      <div className="font-semibold text-gray-900">WhatsApp</div>
+                      <div className="text-xs text-gray-500">{language === 'ru' ? 'Отправить в WhatsApp' : 'Send via WhatsApp'}</div>
+                    </div>
+                  </button>
+                </div>
+              </>
+            )}
           </div>
-
-          {/* Send to Telegram Button */}
-          <Button
-            onClick={() => setShowTelegramModal(true)}
-            className="flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-4 sm:px-6 py-2.5 rounded-lg font-semibold shadow-lg shadow-green-600/30 hover:shadow-xl hover:shadow-green-600/40 transition-all duration-200 hover:scale-105 active:scale-95"
-          >
-            <Send className="w-4 h-4" />
-            <span className="hidden sm:inline">{language === 'ru' ? 'Отправить' : 'Send'}</span>
-          </Button>
-
-          {/* Send to WhatsApp Button */}
-          <Button
-            onClick={() => setShowWhatsAppModal(true)}
-            className="flex items-center gap-2 bg-[#25D366] hover:bg-[#20BA5A] text-white px-4 sm:px-6 py-2.5 rounded-lg font-semibold shadow-lg shadow-[#25D366]/30 hover:shadow-xl hover:shadow-[#25D366]/40 transition-all duration-200 hover:scale-105 active:scale-95"
-          >
-            <FaWhatsapp className="w-4 h-4" />
-            <span className="hidden sm:inline">{language === 'ru' ? 'WhatsApp' : 'WhatsApp'}</span>
-          </Button>
 
           {/* Tutorial Button - Show animated instructions */}
           <Button
             onClick={() => setShowTutorial(true)}
-            className="flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white px-6 py-2.5 rounded-lg font-semibold shadow-lg shadow-purple-600/30 hover:shadow-xl hover:shadow-purple-600/40 transition-all duration-200 hover:scale-105 active:scale-95"
+            className="flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white px-4 sm:px-6 py-2.5 rounded-lg font-semibold shadow-lg shadow-purple-600/30 hover:shadow-xl hover:shadow-purple-600/40 transition-all duration-200 hover:scale-105 active:scale-95"
           >
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-            <span className="hidden sm:inline">{language === 'ru' ? 'Инструкция' : 'Tutorial'}</span>
+            <span className="text-lg font-bold">?</span>
+            <span className="hidden sm:inline">{language === 'ru' ? 'Помощь' : 'Help'}</span>
           </Button>
         </div>
       </div>

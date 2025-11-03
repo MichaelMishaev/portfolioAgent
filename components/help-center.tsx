@@ -193,10 +193,10 @@ export function HelpCenter({ language = "en", onClose, defaultArticleId }: HelpC
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
         onClick={handleOpen}
-        className="fixed bottom-6 right-6 z-50 w-14 h-14 bg-gradient-to-br from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white rounded-full shadow-2xl flex items-center justify-center transition-all duration-300 md:bottom-8 md:right-8"
+        className="fixed bottom-6 right-6 z-50 w-14 h-14 bg-gradient-to-br from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white rounded-full shadow-2xl flex items-center justify-center transition-all duration-300 md:bottom-8 md:right-8 text-2xl font-bold"
         aria-label={language === "en" ? "Help Center" : "Центр помощи"}
       >
-        <FiHelpCircle className="w-6 h-6" />
+        ?
       </motion.button>
 
       {/* Help Modal */}

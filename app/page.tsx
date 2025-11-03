@@ -413,7 +413,7 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.5 }}
-              className="mt-12 bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border-2 border-blue-200 dark:border-blue-800"
+              className="mt-8 bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border-2 border-blue-200 dark:border-blue-800"
             >
               <div className="flex items-start gap-4 mb-4">
                 <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-500 rounded-xl flex items-center justify-center flex-shrink-0">
@@ -476,22 +476,6 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-            </motion.div>
-
-            {/* CTA Button */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.6 }}
-              className="text-center mt-10"
-            >
-              <Button size="lg" className="text-base px-8 py-6 h-auto shadow-xl hover:shadow-2xl bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700" asChild>
-                <a href="#templates">
-                  {language === 'en' ? 'Start Building Now' : 'Начать создавать'}
-                  <FiZap className="ml-2 w-5 h-5" />
-                </a>
-              </Button>
             </motion.div>
           </div>
         </div>
