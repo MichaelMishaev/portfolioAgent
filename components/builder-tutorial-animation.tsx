@@ -74,13 +74,14 @@ interface BuilderTutorialAnimationProps {
 }
 
 export function BuilderTutorialAnimation({
-  language = 'en',
+  language: initialLanguage = 'en',
   onClose,
   autoPlay = true,
 }: BuilderTutorialAnimationProps) {
   const [currentStep, setCurrentStep] = useState(0);
   const [isPlaying, setIsPlaying] = useState(autoPlay);
   const [isVisible, setIsVisible] = useState(true);
+  const [language, setLanguage] = useState<'en' | 'ru'>(initialLanguage);
 
   // Auto-advance through steps when playing
   useEffect(() => {
@@ -141,32 +142,57 @@ export function BuilderTutorialAnimation({
           animate={{ scale: 1, opacity: 1 }}
           exit={{ scale: 0.9, opacity: 0 }}
           transition={{ type: "spring", damping: 20 }}
-          className="bg-white rounded-2xl shadow-2xl max-w-4xl w-full overflow-hidden"
+          className="bg-white rounded-2xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-hidden flex flex-col"
           onClick={(e) => e.stopPropagation()}
         >
           {/* Header */}
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 px-6 py-4 text-white flex items-center justify-between">
-            <div>
-              <h2 className="text-2xl font-bold">
+          <div className="bg-gradient-to-r from-blue-600 to-purple-600 px-4 sm:px-6 py-3 sm:py-4 text-white flex items-center justify-between flex-shrink-0">
+            <div className="flex-1">
+              <h2 className="text-lg sm:text-2xl font-bold">
                 {language === 'ru' ? 'Как использовать конструктор' : 'How to Use the Builder'}
               </h2>
-              <p className="text-blue-100 text-sm mt-1">
+              <p className="text-blue-100 text-xs sm:text-sm mt-1">
                 {language === 'ru'
                   ? `Шаг ${currentStep + 1} из ${tutorialSteps.length}`
                   : `Step ${currentStep + 1} of ${tutorialSteps.length}`}
               </p>
             </div>
+
+            {/* Language Switcher */}
+            <div className="flex items-center gap-2 mx-4">
+              <button
+                onClick={() => setLanguage('en')}
+                className={`px-2 sm:px-3 py-1 rounded text-xs sm:text-sm font-semibold transition-colors ${
+                  language === 'en'
+                    ? 'bg-white text-blue-600'
+                    : 'bg-white/20 text-white hover:bg-white/30'
+                }`}
+              >
+                EN
+              </button>
+              <button
+                onClick={() => setLanguage('ru')}
+                className={`px-2 sm:px-3 py-1 rounded text-xs sm:text-sm font-semibold transition-colors ${
+                  language === 'ru'
+                    ? 'bg-white text-blue-600'
+                    : 'bg-white/20 text-white hover:bg-white/30'
+                }`}
+              >
+                RU
+              </button>
+            </div>
+
             <button
               onClick={handleClose}
-              className="p-2 hover:bg-white/20 rounded-lg transition-colors"
+              className="p-2 hover:bg-white/20 rounded-lg transition-colors flex-shrink-0"
               aria-label="Close tutorial"
             >
-              <X className="w-6 h-6" />
+              <X className="w-5 h-5 sm:w-6 sm:h-6" />
             </button>
           </div>
 
           {/* Content Area */}
-          <div className="relative">
+          <div className="relative flex-1 overflow-y-auto">
             <AnimatePresence mode="wait">
               <motion.div
                 key={currentStep}
@@ -174,14 +200,14 @@ export function BuilderTutorialAnimation({
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -20 }}
                 transition={{ duration: 0.3 }}
-                className="p-8"
+                className="p-4 sm:p-8"
               >
                 {/* Step Title & Description */}
-                <div className="mb-6">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                <div className="mb-4 sm:mb-6">
+                  <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">
                     {language === 'ru' ? currentStepData.titleRu : currentStepData.title}
                   </h3>
-                  <p className="text-gray-600 text-lg">
+                  <p className="text-gray-600 text-sm sm:text-lg whitespace-pre-line">
                     {language === 'ru' ? currentStepData.descriptionRu : currentStepData.description}
                   </p>
                 </div>
@@ -237,16 +263,16 @@ export function BuilderTutorialAnimation({
           </div>
 
           {/* Footer Controls */}
-          <div className="bg-gray-50 px-6 py-4 flex items-center justify-between border-t">
+          <div className="bg-gray-50 px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between border-t flex-shrink-0">
             {/* Progress Dots */}
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-1.5 sm:gap-2">
               {tutorialSteps.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => handleDotClick(index)}
                   className={`h-2 rounded-full transition-all ${
                     index === currentStep
-                      ? 'w-8 bg-blue-600'
+                      ? 'w-6 sm:w-8 bg-blue-600'
                       : 'w-2 bg-gray-300 hover:bg-gray-400'
                   }`}
                   aria-label={`Go to step ${index + 1}`}
@@ -255,14 +281,14 @@ export function BuilderTutorialAnimation({
             </div>
 
             {/* Navigation Buttons */}
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-1.5 sm:gap-3">
               {/* Play/Pause */}
               <button
                 onClick={togglePlay}
-                className="p-2 hover:bg-gray-200 rounded-lg transition-colors"
+                className="p-1.5 sm:p-2 hover:bg-gray-200 rounded-lg transition-colors"
                 aria-label={isPlaying ? "Pause" : "Play"}
               >
-                <Play className={`w-5 h-5 ${isPlaying ? 'text-blue-600' : 'text-gray-600'}`} />
+                <Play className={`w-4 h-4 sm:w-5 sm:h-5 ${isPlaying ? 'text-blue-600' : 'text-gray-600'}`} />
               </button>
 
               {/* Previous */}
@@ -271,10 +297,10 @@ export function BuilderTutorialAnimation({
                 disabled={currentStep === 0}
                 variant="outline"
                 size="sm"
-                className="gap-2"
+                className="gap-1 sm:gap-2 text-xs sm:text-sm px-2 sm:px-3"
               >
-                <ChevronLeft className="w-4 h-4" />
-                {language === 'ru' ? 'Назад' : 'Previous'}
+                <ChevronLeft className="w-3 h-3 sm:w-4 sm:h-4" />
+                <span className="hidden xs:inline">{language === 'ru' ? 'Назад' : 'Previous'}</span>
               </Button>
 
               {/* Next / Finish */}
@@ -282,19 +308,19 @@ export function BuilderTutorialAnimation({
                 <Button
                   onClick={handleNext}
                   size="sm"
-                  className="gap-2 bg-blue-600 hover:bg-blue-700"
+                  className="gap-1 sm:gap-2 bg-blue-600 hover:bg-blue-700 text-xs sm:text-sm px-2 sm:px-3"
                 >
-                  {language === 'ru' ? 'Далее' : 'Next'}
-                  <ChevronRight className="w-4 h-4" />
+                  <span className="hidden xs:inline">{language === 'ru' ? 'Далее' : 'Next'}</span>
+                  <ChevronRight className="w-3 h-3 sm:w-4 sm:h-4" />
                 </Button>
               ) : (
                 <Button
                   onClick={handleClose}
                   size="sm"
-                  className="gap-2 bg-green-600 hover:bg-green-700"
+                  className="gap-1 sm:gap-2 bg-green-600 hover:bg-green-700 text-xs sm:text-sm px-2 sm:px-3"
                 >
-                  {language === 'ru' ? 'Начать!' : 'Get Started!'}
-                  <ChevronRight className="w-4 h-4" />
+                  <span className="hidden xs:inline">{language === 'ru' ? 'Начать!' : 'Get Started!'}</span>
+                  <ChevronRight className="w-3 h-3 sm:w-4 sm:h-4" />
                 </Button>
               )}
             </div>
