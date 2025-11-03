@@ -93,6 +93,17 @@ const HeroComponent = ({
 
   const { actions: editorActions } = useEditor();
 
+  const [isMobile, setIsMobile] = React.useState(false);
+
+  React.useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 1024);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
   const backgroundStyle = imageUrl
     ? { backgroundImage: `url(${imageUrl})`, backgroundSize: 'cover', backgroundPosition: 'center' }
     : { background: `linear-gradient(135deg, ${gradientFrom} 0%, ${gradientTo} 100%)` };
@@ -106,39 +117,18 @@ const HeroComponent = ({
         padding: `${padding}px`,
       }}
     >
-      {selected && (
+      {(selected || isMobile) && (
         <div className="absolute top-2 right-2 z-20 flex gap-2">
-          <AlertDialog>
-            <AlertDialogTrigger asChild>
-              <button
-                className="px-3 py-1 bg-red-500 text-white rounded hover:bg-red-600 flex items-center gap-1 shadow-lg"
-                aria-label={language === 'ru' ? 'Удалить компонент' : 'Delete component'}
-              >
-                <Trash2 className="w-4 h-4" />
-                {language === 'ru' ? 'Удалить' : 'Delete'}
-              </button>
-            </AlertDialogTrigger>
-            <AlertDialogContent>
-              <AlertDialogHeader>
-                <AlertDialogTitle>
-                  {language === 'ru' ? 'Удалить компонент?' : 'Delete component?'}
-                </AlertDialogTitle>
-                <AlertDialogDescription>
-                  {language === 'ru'
-                    ? 'Это действие нельзя отменить. Компонент будет удален навсегда.'
-                    : 'This action cannot be undone. The component will be permanently deleted.'}
-                </AlertDialogDescription>
-              </AlertDialogHeader>
-              <AlertDialogFooter>
-                <AlertDialogCancel>
-                  {language === 'ru' ? 'Отмена' : 'Cancel'}
-                </AlertDialogCancel>
-                <AlertDialogAction onClick={() => editorActions.delete(id)} className="bg-red-500 hover:bg-red-600">
-                  {language === 'ru' ? 'Удалить' : 'Delete'}
-                </AlertDialogAction>
-              </AlertDialogFooter>
-            </AlertDialogContent>
-          </AlertDialog>
+          <button
+            onClick={() => editorActions.delete(id)}
+            className={`bg-red-500 text-white rounded hover:bg-red-600 flex items-center shadow-lg ${
+              isMobile ? 'p-2' : 'px-3 py-1 gap-1'
+            }`}
+            title={language === 'ru' ? 'Удалить компонент' : 'Delete component'}
+          >
+            <Trash2 className="w-4 h-4" />
+            {!isMobile && <span>{language === 'ru' ? 'Удалить' : 'Delete'}</span>}
+          </button>
         </div>
       )}
       <div className="relative z-10 max-w-4xl mx-auto">
@@ -473,44 +463,34 @@ const AboutComponent = ({ title, titleRu, text, textRu, imageUrl, language = 'en
 
   const { actions: editorActions } = useEditor();
 
+  const [isMobile, setIsMobile] = React.useState(false);
+
+  React.useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 1024);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
   return (
     <div
       ref={(ref) => ref && connect(drag(ref))}
       className={`relative p-6 md:p-12 lg:p-16 border-2 ${selected ? 'border-blue-500' : 'border-transparent'}`}
     >
-      {selected && (
+      {(selected || isMobile) && (
         <div className="absolute top-2 right-2 z-20 flex gap-2">
-          <AlertDialog>
-            <AlertDialogTrigger asChild>
-              <button
-                className="px-3 py-1 bg-red-500 text-white rounded hover:bg-red-600 flex items-center gap-1"
-                aria-label={language === 'ru' ? 'Удалить компонент' : 'Delete component'}
-              >
-                <Trash2 className="w-4 h-4" />
-                {language === 'ru' ? 'Удалить' : 'Delete'}
-              </button>
-            </AlertDialogTrigger>
-            <AlertDialogContent>
-              <AlertDialogHeader>
-                <AlertDialogTitle>
-                  {language === 'ru' ? 'Удалить компонент?' : 'Delete component?'}
-                </AlertDialogTitle>
-                <AlertDialogDescription>
-                  {language === 'ru'
-                    ? 'Это действие нельзя отменить. Компонент будет удален навсегда.'
-                    : 'This action cannot be undone. The component will be permanently deleted.'}
-                </AlertDialogDescription>
-              </AlertDialogHeader>
-              <AlertDialogFooter>
-                <AlertDialogCancel>
-                  {language === 'ru' ? 'Отмена' : 'Cancel'}
-                </AlertDialogCancel>
-                <AlertDialogAction onClick={() => editorActions.delete(id)} className="bg-red-500 hover:bg-red-600">
-                  {language === 'ru' ? 'Удалить' : 'Delete'}
-                </AlertDialogAction>
-              </AlertDialogFooter>
-            </AlertDialogContent>
-          </AlertDialog>
+          <button
+            onClick={() => editorActions.delete(id)}
+            className={`bg-red-500 text-white rounded hover:bg-red-600 flex items-center shadow-lg ${
+              isMobile ? 'p-2' : 'px-3 py-1 gap-1'
+            }`}
+            title={language === 'ru' ? 'Удалить компонент' : 'Delete component'}
+          >
+            <Trash2 className="w-4 h-4" />
+            {!isMobile && <span>{language === 'ru' ? 'Удалить' : 'Delete'}</span>}
+          </button>
         </div>
       )}
       <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8 items-center">
@@ -624,44 +604,34 @@ const SkillsComponent = ({ title, titleRu, skills, language = 'en' }: SkillsProp
 
   const { actions: editorActions } = useEditor();
 
+  const [isMobile, setIsMobile] = React.useState(false);
+
+  React.useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 1024);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
   return (
     <div
       ref={(ref) => ref && connect(drag(ref))}
       className={`relative p-6 md:p-12 lg:p-16 bg-gray-50 border-2 ${selected ? 'border-blue-500' : 'border-transparent'}`}
     >
-      {selected && (
+      {(selected || isMobile) && (
         <div className="absolute top-2 right-2 z-20 flex gap-2">
-          <AlertDialog>
-            <AlertDialogTrigger asChild>
-              <button
-                className="px-3 py-1 bg-red-500 text-white rounded hover:bg-red-600 flex items-center gap-1"
-                aria-label={language === 'ru' ? 'Удалить компонент' : 'Delete component'}
-              >
-                <Trash2 className="w-4 h-4" />
-                {language === 'ru' ? 'Удалить' : 'Delete'}
-              </button>
-            </AlertDialogTrigger>
-            <AlertDialogContent>
-              <AlertDialogHeader>
-                <AlertDialogTitle>
-                  {language === 'ru' ? 'Удалить компонент?' : 'Delete component?'}
-                </AlertDialogTitle>
-                <AlertDialogDescription>
-                  {language === 'ru'
-                    ? 'Это действие нельзя отменить. Компонент будет удален навсегда.'
-                    : 'This action cannot be undone. The component will be permanently deleted.'}
-                </AlertDialogDescription>
-              </AlertDialogHeader>
-              <AlertDialogFooter>
-                <AlertDialogCancel>
-                  {language === 'ru' ? 'Отмена' : 'Cancel'}
-                </AlertDialogCancel>
-                <AlertDialogAction onClick={() => editorActions.delete(id)} className="bg-red-500 hover:bg-red-600">
-                  {language === 'ru' ? 'Удалить' : 'Delete'}
-                </AlertDialogAction>
-              </AlertDialogFooter>
-            </AlertDialogContent>
-          </AlertDialog>
+          <button
+            onClick={() => editorActions.delete(id)}
+            className={`bg-red-500 text-white rounded hover:bg-red-600 flex items-center shadow-lg ${
+              isMobile ? 'p-2' : 'px-3 py-1 gap-1'
+            }`}
+            title={language === 'ru' ? 'Удалить компонент' : 'Delete component'}
+          >
+            <Trash2 className="w-4 h-4" />
+            {!isMobile && <span>{language === 'ru' ? 'Удалить' : 'Delete'}</span>}
+          </button>
         </div>
       )}
       <div className="max-w-4xl mx-auto">
@@ -709,44 +679,34 @@ const ProjectsComponent = ({ title, titleRu, projects, language = 'en' }: Projec
 
   const { actions: editorActions } = useEditor();
 
+  const [isMobile, setIsMobile] = React.useState(false);
+
+  React.useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 1024);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
   return (
     <div
       ref={(ref) => ref && connect(drag(ref))}
       className={`relative p-6 md:p-12 lg:p-16 border-2 ${selected ? 'border-blue-500' : 'border-transparent'}`}
     >
-      {selected && (
+      {(selected || isMobile) && (
         <div className="absolute top-2 right-2 z-20 flex gap-2">
-          <AlertDialog>
-            <AlertDialogTrigger asChild>
-              <button
-                className="px-3 py-1 bg-red-500 text-white rounded hover:bg-red-600 flex items-center gap-1"
-                aria-label={language === 'ru' ? 'Удалить компонент' : 'Delete component'}
-              >
-                <Trash2 className="w-4 h-4" />
-                {language === 'ru' ? 'Удалить' : 'Delete'}
-              </button>
-            </AlertDialogTrigger>
-            <AlertDialogContent>
-              <AlertDialogHeader>
-                <AlertDialogTitle>
-                  {language === 'ru' ? 'Удалить компонент?' : 'Delete component?'}
-                </AlertDialogTitle>
-                <AlertDialogDescription>
-                  {language === 'ru'
-                    ? 'Это действие нельзя отменить. Компонент будет удален навсегда.'
-                    : 'This action cannot be undone. The component will be permanently deleted.'}
-                </AlertDialogDescription>
-              </AlertDialogHeader>
-              <AlertDialogFooter>
-                <AlertDialogCancel>
-                  {language === 'ru' ? 'Отмена' : 'Cancel'}
-                </AlertDialogCancel>
-                <AlertDialogAction onClick={() => editorActions.delete(id)} className="bg-red-500 hover:bg-red-600">
-                  {language === 'ru' ? 'Удалить' : 'Delete'}
-                </AlertDialogAction>
-              </AlertDialogFooter>
-            </AlertDialogContent>
-          </AlertDialog>
+          <button
+            onClick={() => editorActions.delete(id)}
+            className={`bg-red-500 text-white rounded hover:bg-red-600 flex items-center shadow-lg ${
+              isMobile ? 'p-2' : 'px-3 py-1 gap-1'
+            }`}
+            title={language === 'ru' ? 'Удалить компонент' : 'Delete component'}
+          >
+            <Trash2 className="w-4 h-4" />
+            {!isMobile && <span>{language === 'ru' ? 'Удалить' : 'Delete'}</span>}
+          </button>
         </div>
       )}
       <div className="max-w-4xl mx-auto">
@@ -835,44 +795,34 @@ const ContactComponent = ({
 
   const { actions: editorActions } = useEditor();
 
+  const [isMobile, setIsMobile] = React.useState(false);
+
+  React.useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 1024);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
   return (
     <div
       ref={(ref) => ref && connect(drag(ref))}
       className={`relative p-6 md:p-12 lg:p-16 bg-gray-50 border-2 ${selected ? 'border-blue-500' : 'border-transparent'}`}
     >
-      {selected && (
+      {(selected || isMobile) && (
         <div className="absolute top-2 right-2 z-20 flex gap-2">
-          <AlertDialog>
-            <AlertDialogTrigger asChild>
-              <button
-                className="px-3 py-1 bg-red-500 text-white rounded hover:bg-red-600 flex items-center gap-1"
-                aria-label={language === 'ru' ? 'Удалить компонент' : 'Delete component'}
-              >
-                <Trash2 className="w-4 h-4" />
-                {language === 'ru' ? 'Удалить' : 'Delete'}
-              </button>
-            </AlertDialogTrigger>
-            <AlertDialogContent>
-              <AlertDialogHeader>
-                <AlertDialogTitle>
-                  {language === 'ru' ? 'Удалить компонент?' : 'Delete component?'}
-                </AlertDialogTitle>
-                <AlertDialogDescription>
-                  {language === 'ru'
-                    ? 'Это действие нельзя отменить. Компонент будет удален навсегда.'
-                    : 'This action cannot be undone. The component will be permanently deleted.'}
-                </AlertDialogDescription>
-              </AlertDialogHeader>
-              <AlertDialogFooter>
-                <AlertDialogCancel>
-                  {language === 'ru' ? 'Отмена' : 'Cancel'}
-                </AlertDialogCancel>
-                <AlertDialogAction onClick={() => editorActions.delete(id)} className="bg-red-500 hover:bg-red-600">
-                  {language === 'ru' ? 'Удалить' : 'Delete'}
-                </AlertDialogAction>
-              </AlertDialogFooter>
-            </AlertDialogContent>
-          </AlertDialog>
+          <button
+            onClick={() => editorActions.delete(id)}
+            className={`bg-red-500 text-white rounded hover:bg-red-600 flex items-center shadow-lg ${
+              isMobile ? 'p-2' : 'px-3 py-1 gap-1'
+            }`}
+            title={language === 'ru' ? 'Удалить компонент' : 'Delete component'}
+          >
+            <Trash2 className="w-4 h-4" />
+            {!isMobile && <span>{language === 'ru' ? 'Удалить' : 'Delete'}</span>}
+          </button>
         </div>
       )}
       <div className="max-w-4xl mx-auto text-center">
@@ -932,44 +882,34 @@ const PricingComponent = ({ title, titleRu, plans, language = 'en' }: PricingPro
 
   const { actions: editorActions } = useEditor();
 
+  const [isMobile, setIsMobile] = React.useState(false);
+
+  React.useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 1024);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
   return (
     <div
       ref={(ref) => ref && connect(drag(ref))}
       className={`relative p-6 md:p-12 lg:p-16 border-2 ${selected ? 'border-blue-500' : 'border-transparent'}`}
     >
-      {selected && (
+      {(selected || isMobile) && (
         <div className="absolute top-2 right-2 z-20 flex gap-2">
-          <AlertDialog>
-            <AlertDialogTrigger asChild>
-              <button
-                className="px-3 py-1 bg-red-500 text-white rounded hover:bg-red-600 flex items-center gap-1"
-                aria-label={language === 'ru' ? 'Удалить компонент' : 'Delete component'}
-              >
-                <Trash2 className="w-4 h-4" />
-                {language === 'ru' ? 'Удалить' : 'Delete'}
-              </button>
-            </AlertDialogTrigger>
-            <AlertDialogContent>
-              <AlertDialogHeader>
-                <AlertDialogTitle>
-                  {language === 'ru' ? 'Удалить компонент?' : 'Delete component?'}
-                </AlertDialogTitle>
-                <AlertDialogDescription>
-                  {language === 'ru'
-                    ? 'Это действие нельзя отменить. Компонент будет удален навсегда.'
-                    : 'This action cannot be undone. The component will be permanently deleted.'}
-                </AlertDialogDescription>
-              </AlertDialogHeader>
-              <AlertDialogFooter>
-                <AlertDialogCancel>
-                  {language === 'ru' ? 'Отмена' : 'Cancel'}
-                </AlertDialogCancel>
-                <AlertDialogAction onClick={() => editorActions.delete(id)} className="bg-red-500 hover:bg-red-600">
-                  {language === 'ru' ? 'Удалить' : 'Delete'}
-                </AlertDialogAction>
-              </AlertDialogFooter>
-            </AlertDialogContent>
-          </AlertDialog>
+          <button
+            onClick={() => editorActions.delete(id)}
+            className={`bg-red-500 text-white rounded hover:bg-red-600 flex items-center shadow-lg ${
+              isMobile ? 'p-2' : 'px-3 py-1 gap-1'
+            }`}
+            title={language === 'ru' ? 'Удалить компонент' : 'Delete component'}
+          >
+            <Trash2 className="w-4 h-4" />
+            {!isMobile && <span>{language === 'ru' ? 'Удалить' : 'Delete'}</span>}
+          </button>
         </div>
       )}
       <div className="max-w-4xl mx-auto">
@@ -1048,44 +988,34 @@ const TestimonialsComponent = ({ title, titleRu, testimonials, language = 'en' }
 
   const { actions: editorActions } = useEditor();
 
+  const [isMobile, setIsMobile] = React.useState(false);
+
+  React.useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 1024);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
   return (
     <div
       ref={(ref) => ref && connect(drag(ref))}
       className={`relative p-6 md:p-12 lg:p-16 bg-gray-50 border-2 ${selected ? 'border-blue-500' : 'border-transparent'}`}
     >
-      {selected && (
+      {(selected || isMobile) && (
         <div className="absolute top-2 right-2 z-20 flex gap-2">
-          <AlertDialog>
-            <AlertDialogTrigger asChild>
-              <button
-                className="px-3 py-1 bg-red-500 text-white rounded hover:bg-red-600 flex items-center gap-1"
-                aria-label={language === 'ru' ? 'Удалить компонент' : 'Delete component'}
-              >
-                <Trash2 className="w-4 h-4" />
-                {language === 'ru' ? 'Удалить' : 'Delete'}
-              </button>
-            </AlertDialogTrigger>
-            <AlertDialogContent>
-              <AlertDialogHeader>
-                <AlertDialogTitle>
-                  {language === 'ru' ? 'Удалить компонент?' : 'Delete component?'}
-                </AlertDialogTitle>
-                <AlertDialogDescription>
-                  {language === 'ru'
-                    ? 'Это действие нельзя отменить. Компонент будет удален навсегда.'
-                    : 'This action cannot be undone. The component will be permanently deleted.'}
-                </AlertDialogDescription>
-              </AlertDialogHeader>
-              <AlertDialogFooter>
-                <AlertDialogCancel>
-                  {language === 'ru' ? 'Отмена' : 'Cancel'}
-                </AlertDialogCancel>
-                <AlertDialogAction onClick={() => editorActions.delete(id)} className="bg-red-500 hover:bg-red-600">
-                  {language === 'ru' ? 'Удалить' : 'Delete'}
-                </AlertDialogAction>
-              </AlertDialogFooter>
-            </AlertDialogContent>
-          </AlertDialog>
+          <button
+            onClick={() => editorActions.delete(id)}
+            className={`bg-red-500 text-white rounded hover:bg-red-600 flex items-center shadow-lg ${
+              isMobile ? 'p-2' : 'px-3 py-1 gap-1'
+            }`}
+            title={language === 'ru' ? 'Удалить компонент' : 'Delete component'}
+          >
+            <Trash2 className="w-4 h-4" />
+            {!isMobile && <span>{language === 'ru' ? 'Удалить' : 'Delete'}</span>}
+          </button>
         </div>
       )}
       <div className="max-w-6xl mx-auto">
@@ -1145,6 +1075,17 @@ const GalleryComponent = ({ title, titleRu, images, columns, language = 'en' }: 
 
   const { actions: editorActions } = useEditor();
 
+  const [isMobile, setIsMobile] = React.useState(false);
+
+  React.useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 1024);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
   const gridClass = {
     2: "md:grid-cols-2",
     3: "md:grid-cols-2 lg:grid-cols-3",
@@ -1156,39 +1097,18 @@ const GalleryComponent = ({ title, titleRu, images, columns, language = 'en' }: 
       ref={(ref) => ref && connect(drag(ref))}
       className={`relative p-6 md:p-12 lg:p-16 border-2 ${selected ? 'border-blue-500' : 'border-transparent'}`}
     >
-      {selected && (
+      {(selected || isMobile) && (
         <div className="absolute top-2 right-2 z-20 flex gap-2">
-          <AlertDialog>
-            <AlertDialogTrigger asChild>
-              <button
-                className="px-3 py-1 bg-red-500 text-white rounded hover:bg-red-600 flex items-center gap-1"
-                aria-label={language === 'ru' ? 'Удалить компонент' : 'Delete component'}
-              >
-                <Trash2 className="w-4 h-4" />
-                {language === 'ru' ? 'Удалить' : 'Delete'}
-              </button>
-            </AlertDialogTrigger>
-            <AlertDialogContent>
-              <AlertDialogHeader>
-                <AlertDialogTitle>
-                  {language === 'ru' ? 'Удалить компонент?' : 'Delete component?'}
-                </AlertDialogTitle>
-                <AlertDialogDescription>
-                  {language === 'ru'
-                    ? 'Это действие нельзя отменить. Компонент будет удален навсегда.'
-                    : 'This action cannot be undone. The component will be permanently deleted.'}
-                </AlertDialogDescription>
-              </AlertDialogHeader>
-              <AlertDialogFooter>
-                <AlertDialogCancel>
-                  {language === 'ru' ? 'Отмена' : 'Cancel'}
-                </AlertDialogCancel>
-                <AlertDialogAction onClick={() => editorActions.delete(id)} className="bg-red-500 hover:bg-red-600">
-                  {language === 'ru' ? 'Удалить' : 'Delete'}
-                </AlertDialogAction>
-              </AlertDialogFooter>
-            </AlertDialogContent>
-          </AlertDialog>
+          <button
+            onClick={() => editorActions.delete(id)}
+            className={`bg-red-500 text-white rounded hover:bg-red-600 flex items-center shadow-lg ${
+              isMobile ? 'p-2' : 'px-3 py-1 gap-1'
+            }`}
+            title={language === 'ru' ? 'Удалить компонент' : 'Delete component'}
+          >
+            <Trash2 className="w-4 h-4" />
+            {!isMobile && <span>{language === 'ru' ? 'Удалить' : 'Delete'}</span>}
+          </button>
         </div>
       )}
       <div className="max-w-6xl mx-auto">
@@ -1262,45 +1182,35 @@ const CTAComponent = ({
 
   const { actions: editorActions } = useEditor();
 
+  const [isMobile, setIsMobile] = React.useState(false);
+
+  React.useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 1024);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
   return (
     <div
       ref={(ref) => ref && connect(drag(ref))}
       className={`relative p-16 border-2 ${selected ? 'border-blue-500' : 'border-transparent'}`}
       style={{ backgroundColor }}
     >
-      {selected && (
+      {(selected || isMobile) && (
         <div className="absolute top-2 right-2 z-20 flex gap-2">
-          <AlertDialog>
-            <AlertDialogTrigger asChild>
-              <button
-                className="px-3 py-1 bg-red-500 text-white rounded hover:bg-red-600 flex items-center gap-1"
-                aria-label={language === 'ru' ? 'Удалить компонент' : 'Delete component'}
-              >
-                <Trash2 className="w-4 h-4" />
-                {language === 'ru' ? 'Удалить' : 'Delete'}
-              </button>
-            </AlertDialogTrigger>
-            <AlertDialogContent>
-              <AlertDialogHeader>
-                <AlertDialogTitle>
-                  {language === 'ru' ? 'Удалить компонент?' : 'Delete component?'}
-                </AlertDialogTitle>
-                <AlertDialogDescription>
-                  {language === 'ru'
-                    ? 'Это действие нельзя отменить. Компонент будет удален навсегда.'
-                    : 'This action cannot be undone. The component will be permanently deleted.'}
-                </AlertDialogDescription>
-              </AlertDialogHeader>
-              <AlertDialogFooter>
-                <AlertDialogCancel>
-                  {language === 'ru' ? 'Отмена' : 'Cancel'}
-                </AlertDialogCancel>
-                <AlertDialogAction onClick={() => editorActions.delete(id)} className="bg-red-500 hover:bg-red-600">
-                  {language === 'ru' ? 'Удалить' : 'Delete'}
-                </AlertDialogAction>
-              </AlertDialogFooter>
-            </AlertDialogContent>
-          </AlertDialog>
+          <button
+            onClick={() => editorActions.delete(id)}
+            className={`bg-red-500 text-white rounded hover:bg-red-600 flex items-center shadow-lg ${
+              isMobile ? 'p-2' : 'px-3 py-1 gap-1'
+            }`}
+            title={language === 'ru' ? 'Удалить компонент' : 'Delete component'}
+          >
+            <Trash2 className="w-4 h-4" />
+            {!isMobile && <span>{language === 'ru' ? 'Удалить' : 'Delete'}</span>}
+          </button>
         </div>
       )}
       <div className="max-w-4xl mx-auto text-center">
@@ -1352,44 +1262,34 @@ const TimelineComponent = ({ title, titleRu, steps, language = 'en' }: TimelineP
 
   const { actions: editorActions } = useEditor();
 
+  const [isMobile, setIsMobile] = React.useState(false);
+
+  React.useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 1024);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
   return (
     <div
       ref={(ref) => ref && connect(drag(ref))}
       className={`relative p-6 md:p-12 lg:p-16 border-2 ${selected ? 'border-blue-500' : 'border-transparent'}`}
     >
-      {selected && (
+      {(selected || isMobile) && (
         <div className="absolute top-2 right-2 z-20 flex gap-2">
-          <AlertDialog>
-            <AlertDialogTrigger asChild>
-              <button
-                className="px-3 py-1 bg-red-500 text-white rounded hover:bg-red-600 flex items-center gap-1"
-                aria-label={language === 'ru' ? 'Удалить компонент' : 'Delete component'}
-              >
-                <Trash2 className="w-4 h-4" />
-                {language === 'ru' ? 'Удалить' : 'Delete'}
-              </button>
-            </AlertDialogTrigger>
-            <AlertDialogContent>
-              <AlertDialogHeader>
-                <AlertDialogTitle>
-                  {language === 'ru' ? 'Удалить компонент?' : 'Delete component?'}
-                </AlertDialogTitle>
-                <AlertDialogDescription>
-                  {language === 'ru'
-                    ? 'Это действие нельзя отменить. Компонент будет удален навсегда.'
-                    : 'This action cannot be undone. The component will be permanently deleted.'}
-                </AlertDialogDescription>
-              </AlertDialogHeader>
-              <AlertDialogFooter>
-                <AlertDialogCancel>
-                  {language === 'ru' ? 'Отмена' : 'Cancel'}
-                </AlertDialogCancel>
-                <AlertDialogAction onClick={() => editorActions.delete(id)} className="bg-red-500 hover:bg-red-600">
-                  {language === 'ru' ? 'Удалить' : 'Delete'}
-                </AlertDialogAction>
-              </AlertDialogFooter>
-            </AlertDialogContent>
-          </AlertDialog>
+          <button
+            onClick={() => editorActions.delete(id)}
+            className={`bg-red-500 text-white rounded hover:bg-red-600 flex items-center shadow-lg ${
+              isMobile ? 'p-2' : 'px-3 py-1 gap-1'
+            }`}
+            title={language === 'ru' ? 'Удалить компонент' : 'Delete component'}
+          >
+            <Trash2 className="w-4 h-4" />
+            {!isMobile && <span>{language === 'ru' ? 'Удалить' : 'Delete'}</span>}
+          </button>
         </div>
       )}
       <div className="max-w-4xl mx-auto">
@@ -1449,6 +1349,17 @@ const FAQComponent = ({ title, titleRu, faqs, language = 'en' }: FAQProps) => {
   }));
 
   const { actions: editorActions } = useEditor();
+
+  const [isMobile, setIsMobile] = React.useState(false);
+
+  React.useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 1024);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
   const displayTitle = language === 'ru' ? titleRu : title;
 
   return (
@@ -1456,39 +1367,18 @@ const FAQComponent = ({ title, titleRu, faqs, language = 'en' }: FAQProps) => {
       ref={(ref) => ref && connect(drag(ref))}
       className={`relative p-6 md:p-12 lg:p-16 bg-gray-50 border-2 ${selected ? 'border-blue-500' : 'border-transparent'}`}
     >
-      {selected && (
+      {(selected || isMobile) && (
         <div className="absolute top-2 right-2 z-20 flex gap-2">
-          <AlertDialog>
-            <AlertDialogTrigger asChild>
-              <button
-                className="px-3 py-1 bg-red-500 text-white rounded hover:bg-red-600 flex items-center gap-1"
-                aria-label={language === 'ru' ? 'Удалить компонент' : 'Delete component'}
-              >
-                <Trash2 className="w-4 h-4" />
-                {language === 'ru' ? 'Удалить' : 'Delete'}
-              </button>
-            </AlertDialogTrigger>
-            <AlertDialogContent>
-              <AlertDialogHeader>
-                <AlertDialogTitle>
-                  {language === 'ru' ? 'Удалить компонент?' : 'Delete component?'}
-                </AlertDialogTitle>
-                <AlertDialogDescription>
-                  {language === 'ru'
-                    ? 'Это действие нельзя отменить. Компонент будет удален навсегда.'
-                    : 'This action cannot be undone. The component will be permanently deleted.'}
-                </AlertDialogDescription>
-              </AlertDialogHeader>
-              <AlertDialogFooter>
-                <AlertDialogCancel>
-                  {language === 'ru' ? 'Отмена' : 'Cancel'}
-                </AlertDialogCancel>
-                <AlertDialogAction onClick={() => editorActions.delete(id)} className="bg-red-500 hover:bg-red-600">
-                  {language === 'ru' ? 'Удалить' : 'Delete'}
-                </AlertDialogAction>
-              </AlertDialogFooter>
-            </AlertDialogContent>
-          </AlertDialog>
+          <button
+            onClick={() => editorActions.delete(id)}
+            className={`bg-red-500 text-white rounded hover:bg-red-600 flex items-center shadow-lg ${
+              isMobile ? 'p-2' : 'px-3 py-1 gap-1'
+            }`}
+            title={language === 'ru' ? 'Удалить компонент' : 'Delete component'}
+          >
+            <Trash2 className="w-4 h-4" />
+            {!isMobile && <span>{language === 'ru' ? 'Удалить' : 'Delete'}</span>}
+          </button>
         </div>
       )}
       <div className="max-w-3xl mx-auto">
@@ -1560,44 +1450,34 @@ const VideoComponent = ({ videoUrl, title, titleRu, description, descriptionRu, 
 
   const { actions: editorActions } = useEditor();
 
+  const [isMobile, setIsMobile] = React.useState(false);
+
+  React.useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 1024);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
   return (
     <div
       ref={(ref) => ref && connect(drag(ref))}
       className={`relative p-6 md:p-12 lg:p-16 border-2 ${selected ? 'border-blue-500' : 'border-transparent'}`}
     >
-      {selected && (
+      {(selected || isMobile) && (
         <div className="absolute top-2 right-2 z-20 flex gap-2">
-          <AlertDialog>
-            <AlertDialogTrigger asChild>
-              <button
-                className="px-3 py-1 bg-red-500 text-white rounded hover:bg-red-600 flex items-center gap-1"
-                aria-label={language === 'ru' ? 'Удалить компонент' : 'Delete component'}
-              >
-                <Trash2 className="w-4 h-4" />
-                {language === 'ru' ? 'Удалить' : 'Delete'}
-              </button>
-            </AlertDialogTrigger>
-            <AlertDialogContent>
-              <AlertDialogHeader>
-                <AlertDialogTitle>
-                  {language === 'ru' ? 'Удалить компонент?' : 'Delete component?'}
-                </AlertDialogTitle>
-                <AlertDialogDescription>
-                  {language === 'ru'
-                    ? 'Это действие нельзя отменить. Компонент будет удален навсегда.'
-                    : 'This action cannot be undone. The component will be permanently deleted.'}
-                </AlertDialogDescription>
-              </AlertDialogHeader>
-              <AlertDialogFooter>
-                <AlertDialogCancel>
-                  {language === 'ru' ? 'Отмена' : 'Cancel'}
-                </AlertDialogCancel>
-                <AlertDialogAction onClick={() => editorActions.delete(id)} className="bg-red-500 hover:bg-red-600">
-                  {language === 'ru' ? 'Удалить' : 'Delete'}
-                </AlertDialogAction>
-              </AlertDialogFooter>
-            </AlertDialogContent>
-          </AlertDialog>
+          <button
+            onClick={() => editorActions.delete(id)}
+            className={`bg-red-500 text-white rounded hover:bg-red-600 flex items-center shadow-lg ${
+              isMobile ? 'p-2' : 'px-3 py-1 gap-1'
+            }`}
+            title={language === 'ru' ? 'Удалить компонент' : 'Delete component'}
+          >
+            <Trash2 className="w-4 h-4" />
+            {!isMobile && <span>{language === 'ru' ? 'Удалить' : 'Delete'}</span>}
+          </button>
         </div>
       )}
       <div className="max-w-4xl mx-auto">
@@ -1648,44 +1528,34 @@ const SocialLinksComponent = ({ title, titleRu, links, language = 'en' }: Social
 
   const { actions: editorActions } = useEditor();
 
+  const [isMobile, setIsMobile] = React.useState(false);
+
+  React.useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 1024);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
   return (
     <div
       ref={(ref) => ref && connect(drag(ref))}
       className={`relative p-6 md:p-12 lg:p-16 border-2 ${selected ? 'border-blue-500' : 'border-transparent'}`}
     >
-      {selected && (
+      {(selected || isMobile) && (
         <div className="absolute top-2 right-2 z-20 flex gap-2">
-          <AlertDialog>
-            <AlertDialogTrigger asChild>
-              <button
-                className="px-3 py-1 bg-red-500 text-white rounded hover:bg-red-600 flex items-center gap-1"
-                aria-label={language === 'ru' ? 'Удалить компонент' : 'Delete component'}
-              >
-                <Trash2 className="w-4 h-4" />
-                {language === 'ru' ? 'Удалить' : 'Delete'}
-              </button>
-            </AlertDialogTrigger>
-            <AlertDialogContent>
-              <AlertDialogHeader>
-                <AlertDialogTitle>
-                  {language === 'ru' ? 'Удалить компонент?' : 'Delete component?'}
-                </AlertDialogTitle>
-                <AlertDialogDescription>
-                  {language === 'ru'
-                    ? 'Это действие нельзя отменить. Компонент будет удален навсегда.'
-                    : 'This action cannot be undone. The component will be permanently deleted.'}
-                </AlertDialogDescription>
-              </AlertDialogHeader>
-              <AlertDialogFooter>
-                <AlertDialogCancel>
-                  {language === 'ru' ? 'Отмена' : 'Cancel'}
-                </AlertDialogCancel>
-                <AlertDialogAction onClick={() => editorActions.delete(id)} className="bg-red-500 hover:bg-red-600">
-                  {language === 'ru' ? 'Удалить' : 'Delete'}
-                </AlertDialogAction>
-              </AlertDialogFooter>
-            </AlertDialogContent>
-          </AlertDialog>
+          <button
+            onClick={() => editorActions.delete(id)}
+            className={`bg-red-500 text-white rounded hover:bg-red-600 flex items-center shadow-lg ${
+              isMobile ? 'p-2' : 'px-3 py-1 gap-1'
+            }`}
+            title={language === 'ru' ? 'Удалить компонент' : 'Delete component'}
+          >
+            <Trash2 className="w-4 h-4" />
+            {!isMobile && <span>{language === 'ru' ? 'Удалить' : 'Delete'}</span>}
+          </button>
         </div>
       )}
       <div className="max-w-4xl mx-auto">
@@ -2551,6 +2421,9 @@ export function CraftJSTemplateBuilder({ template }: { template: TemplateConfig 
   const [showSubmitDropdown, setShowSubmitDropdown] = React.useState(false);
   const [showScrollHint, setShowScrollHint] = React.useState(true);
 
+  // Mobile preview mode: zoom out to see full page
+  const [isPreviewMode, setIsPreviewMode] = React.useState(false);
+
   // Detect if device is mobile/touch
   const [isMobileDevice, setIsMobileDevice] = React.useState(false);
 
@@ -2928,23 +2801,55 @@ export function CraftJSTemplateBuilder({ template }: { template: TemplateConfig 
               })
             }}
           >
-            <Frame key={language}>
-              <Element is={Container} canvas>
-                <Element is={EmptyCanvas} language={language} />
-              </Element>
-            </Frame>
-            {/* Mobile info banner */}
-            {isMobileDevice && (
-              <div className="md:hidden fixed top-20 left-1/2 transform -translate-x-1/2 z-10 max-w-xs">
-                <div className="bg-blue-600 text-white px-3 py-2 rounded-lg shadow-lg text-center">
-                  <span className="text-xs font-semibold">
-                    {language === 'ru'
-                      ? '📱 Нажмите для выбора • Прокрутка включена'
-                      : '📱 Tap to select • Scroll enabled'}
-                  </span>
-                </div>
+            {/* Mobile Preview Mode Toggle - Floating button */}
+            {isMobileDevice && mobileView === 'canvas' && (
+              <div className="md:hidden absolute top-4 left-1/2 transform -translate-x-1/2 z-50">
+                <button
+                  onClick={() => setIsPreviewMode(!isPreviewMode)}
+                  className={`${
+                    isPreviewMode ? 'bg-purple-600' : 'bg-blue-600'
+                  } text-white px-4 py-2.5 rounded-full shadow-xl flex items-center gap-2 transition-all hover:scale-105 active:scale-95`}
+                >
+                  {isPreviewMode ? (
+                    <>
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                      </svg>
+                      <span className="text-xs font-semibold">
+                        {language === 'ru' ? 'Режим редактирования' : 'Edit Mode'}
+                      </span>
+                    </>
+                  ) : (
+                    <>
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                      </svg>
+                      <span className="text-xs font-semibold">
+                        {language === 'ru' ? 'Режим просмотра' : 'Preview Mode'}
+                      </span>
+                    </>
+                  )}
+                </button>
               </div>
             )}
+
+            {/* Canvas Content with Preview Mode Scaling */}
+            <div
+              className="transition-transform duration-300 origin-top"
+              style={{
+                transform: isMobileDevice && isPreviewMode ? 'scale(0.35)' : 'scale(1)',
+                transformOrigin: 'top center',
+                width: isMobileDevice && isPreviewMode ? '285%' : '100%',
+                pointerEvents: isMobileDevice && isPreviewMode ? 'none' : 'auto',
+              }}
+            >
+              <Frame key={language}>
+                <Element is={Container} canvas>
+                  <Element is={EmptyCanvas} language={language} />
+                </Element>
+              </Frame>
+            </div>
             {/* Scroll indicator for mobile - shows there's more content */}
             {showScrollHint && !isMobileDevice && (
               <div

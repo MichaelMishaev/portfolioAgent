@@ -56,7 +56,7 @@ export const Stats = ({
   return (
     <section
       ref={(ref) => ref && connect(drag(ref))}
-      className={`py-20 border-t border-2 ${selected ? "border-blue-500" : "border-transparent"}`}
+      className={`py-8 sm:py-12 md:py-16 border-t border-2 ${selected ? "border-blue-500" : "border-transparent"}`}
     >
       {(selected || isMobile) && (
         <div className="absolute top-2 right-2 z-20 flex gap-2">
