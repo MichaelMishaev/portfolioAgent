@@ -1011,12 +1011,14 @@ const Toolbox = ({ language }: { language: 'en' | 'ru' }) => {
 
 const EditorActionsCapturer = ({ setActions }: { setActions: (actions: any) => void }) => {
   const { actions, query } = useEditor((state) => ({}), (query) => query);
-  const actionsRef = React.useRef({ actions, query });
+  const hasSetActions = React.useRef(false);
 
   React.useEffect(() => {
-    actionsRef.current = { actions, query };
-    setActions(actionsRef.current);
-  }, []); // Only run once on mount
+    if (!hasSetActions.current) {
+      setActions({ actions, query });
+      hasSetActions.current = true;
+    }
+  }, [actions, query, setActions]);
 
   return null;
 };
@@ -1029,6 +1031,7 @@ export function CraftJSTemplateBuilder({ template }: { template: TemplateConfig 
   const [isSaving, setIsSaving] = React.useState(false);
   const [language, setLanguage] = React.useState<'en' | 'ru'>('en');
   const [editorActions, setEditorActions] = React.useState<any>(null);
+  const [mobileView, setMobileView] = React.useState<'canvas' | 'components' | 'settings'>('canvas');
 
   const handleSave = () => {
     setIsSaving(true);
@@ -1043,15 +1046,23 @@ export function CraftJSTemplateBuilder({ template }: { template: TemplateConfig 
   // Update all components when language changes
   React.useEffect(() => {
     if (editorActions && editorActions.query) {
-      const serializedNodes = editorActions.query.getSerializedNodes();
-      const nodeIds = Object.keys(serializedNodes);
-      nodeIds.forEach((nodeId) => {
-        editorActions.actions.setProp(nodeId, (props: any) => {
-          if (props.hasOwnProperty('language')) {
-            props.language = language;
-          }
-        });
-      });
+      // Use setTimeout to avoid setState during render
+      setTimeout(() => {
+        try {
+          const serializedNodes = editorActions.query.getSerializedNodes();
+          const nodeIds = Object.keys(serializedNodes);
+          nodeIds.forEach((nodeId) => {
+            editorActions.actions.setProp(nodeId, (props: any) => {
+              if (props.hasOwnProperty('language')) {
+                props.language = language;
+              }
+            });
+          });
+        } catch (e) {
+          // Ignore errors during Frame re-render
+          console.log('Language update skipped during Frame re-render');
+        }
+      }, 0);
     }
   }, [language, editorActions]);
 
@@ -1081,19 +1092,21 @@ export function CraftJSTemplateBuilder({ template }: { template: TemplateConfig 
   return (
     <div className="h-screen flex flex-col">
       {/* Header */}
-      <div className="bg-white border-b px-6 py-4 flex items-center justify-between">
-        <div className="flex items-center gap-4">
-          <Link href="/" className="flex items-center gap-2 text-gray-600 hover:text-gray-900">
+      <div className="bg-white border-b px-3 sm:px-6 py-3 sm:py-4 flex items-center justify-between">
+        <div className="flex items-center gap-2 sm:gap-4">
+          <Link href="/" className="flex items-center gap-1 sm:gap-2 text-gray-600 hover:text-gray-900">
             <ArrowLeft className="w-4 h-4" />
-            <span>Back to Gallery</span>
+            <span className="hidden sm:inline">Back to Gallery</span>
           </Link>
-          <div className="text-lg font-semibold">Building: {template.name}</div>
+          <div className="text-sm sm:text-lg font-semibold truncate">
+            <span className="hidden sm:inline">Building: </span>{template.name}
+          </div>
         </div>
-        <div className="flex gap-2">
-          <div className="flex items-center gap-2 border rounded-md overflow-hidden">
+        <div className="flex gap-1 sm:gap-2">
+          <div className="flex items-center gap-0 border rounded-md overflow-hidden">
             <button
               onClick={() => setLanguage('en')}
-              className={`px-3 py-2 text-sm font-medium transition-colors ${
+              className={`px-2 sm:px-3 py-1 sm:py-2 text-xs sm:text-sm font-medium transition-colors ${
                 language === 'en' ? 'bg-blue-600 text-white' : 'bg-white text-gray-600 hover:bg-gray-50'
               }`}
             >
@@ -1101,7 +1114,7 @@ export function CraftJSTemplateBuilder({ template }: { template: TemplateConfig 
             </button>
             <button
               onClick={() => setLanguage('ru')}
-              className={`px-3 py-2 text-sm font-medium transition-colors ${
+              className={`px-2 sm:px-3 py-1 sm:py-2 text-xs sm:text-sm font-medium transition-colors ${
                 language === 'ru' ? 'bg-blue-600 text-white' : 'bg-white text-gray-600 hover:bg-gray-50'
               }`}
             >
@@ -1111,7 +1124,7 @@ export function CraftJSTemplateBuilder({ template }: { template: TemplateConfig 
           <Link
             href={`/templates/${template.id}`}
             target="_blank"
-            className="flex items-center gap-2 px-4 py-2 border rounded-md hover:bg-gray-50"
+            className="hidden sm:flex items-center gap-2 px-4 py-2 border rounded-md hover:bg-gray-50"
           >
             <Eye className="w-4 h-4" />
             View Demo
@@ -1119,33 +1132,34 @@ export function CraftJSTemplateBuilder({ template }: { template: TemplateConfig 
           <Button
             onClick={handleSave}
             disabled={isSaving}
-            className="flex items-center gap-2 bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 disabled:opacity-50"
+            className="flex items-center gap-1 sm:gap-2 bg-blue-600 text-white px-3 sm:px-6 py-1 sm:py-2 rounded-md hover:bg-blue-700 disabled:opacity-50 text-xs sm:text-sm"
           >
-            <Settings className="w-4 h-4" />
-            {isSaving ? "Saving..." : "Save Template"}
+            <Settings className="w-3 h-3 sm:w-4 sm:h-4" />
+            <span className="hidden sm:inline">{isSaving ? "Saving..." : "Save Template"}</span>
+            <span className="sm:hidden">{isSaving ? "..." : "Save"}</span>
           </Button>
         </div>
       </div>
 
       {/* Info Banner */}
-      <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border-b border-blue-200 px-6 py-4">
+      <div className="hidden sm:block bg-gradient-to-r from-blue-50 to-indigo-50 border-b border-blue-200 px-3 sm:px-6 py-3 sm:py-4">
         <div className="max-w-6xl mx-auto">
-          <h3 className="text-lg font-bold text-gray-900 mb-3 flex items-center gap-2">
+          <h3 className="text-base sm:text-lg font-bold text-gray-900 mb-2 sm:mb-3 flex items-center gap-2">
             <span className="text-blue-600">ℹ️</span>
             {currentText.title}
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div className="bg-white rounded-lg p-4 shadow-sm">
-              <div className="font-semibold text-blue-600 mb-1">{currentText.step1}</div>
-              <div className="text-sm text-gray-600">{currentText.step1desc}</div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-3 sm:gap-4">
+            <div className="bg-white rounded-lg p-3 sm:p-4 shadow-sm">
+              <div className="font-semibold text-blue-600 mb-1 text-sm sm:text-base">{currentText.step1}</div>
+              <div className="text-xs sm:text-sm text-gray-600">{currentText.step1desc}</div>
             </div>
-            <div className="bg-white rounded-lg p-4 shadow-sm">
-              <div className="font-semibold text-blue-600 mb-1">{currentText.step2}</div>
-              <div className="text-sm text-gray-600">{currentText.step2desc}</div>
+            <div className="bg-white rounded-lg p-3 sm:p-4 shadow-sm">
+              <div className="font-semibold text-blue-600 mb-1 text-sm sm:text-base">{currentText.step2}</div>
+              <div className="text-xs sm:text-sm text-gray-600">{currentText.step2desc}</div>
             </div>
-            <div className="bg-white rounded-lg p-4 shadow-sm">
-              <div className="font-semibold text-green-600 mb-1">{currentText.step3}</div>
-              <div className="text-sm text-gray-600">{currentText.step3desc}</div>
+            <div className="bg-white rounded-lg p-3 sm:p-4 shadow-sm">
+              <div className="font-semibold text-green-600 mb-1 text-sm sm:text-base">{currentText.step3}</div>
+              <div className="text-xs sm:text-sm text-gray-600">{currentText.step3desc}</div>
             </div>
           </div>
         </div>
@@ -1169,10 +1183,15 @@ export function CraftJSTemplateBuilder({ template }: { template: TemplateConfig 
         }}
       >
         <EditorActionsCapturer setActions={setEditorActions} />
-        <div className="flex-1 flex overflow-hidden">
-          <Toolbox language={language} />
+        <div className="flex-1 flex overflow-hidden relative">
+          {/* Toolbox - Hidden on mobile unless active */}
+          <div className={`${mobileView === 'components' ? 'block' : 'hidden'} md:block absolute md:relative inset-0 md:inset-auto z-20 md:z-auto`}>
+            <Toolbox language={language} />
+          </div>
+
+          {/* Canvas - Always visible on desktop, conditionally on mobile */}
           <div
-            className="flex-1 overflow-auto bg-gray-100"
+            className={`${mobileView === 'canvas' ? 'block' : 'hidden'} md:block flex-1 overflow-auto bg-gray-100 absolute md:relative inset-0 md:inset-auto`}
             style={{
               userSelect: 'none',
               WebkitUserSelect: 'none',
@@ -1186,7 +1205,46 @@ export function CraftJSTemplateBuilder({ template }: { template: TemplateConfig 
               </Element>
             </Frame>
           </div>
-          <SettingsPanel />
+
+          {/* Settings Panel - Hidden on mobile unless active */}
+          <div className={`${mobileView === 'settings' ? 'block' : 'hidden'} md:block absolute md:relative inset-0 md:inset-auto z-20 md:z-auto`}>
+            <SettingsPanel />
+          </div>
+        </div>
+
+        {/* Mobile Navigation Bar */}
+        <div className="md:hidden bg-white border-t flex items-center justify-around py-2 safe-area-inset-bottom">
+          <button
+            onClick={() => setMobileView('components')}
+            className={`flex flex-col items-center gap-1 px-4 py-2 rounded-md transition-colors ${
+              mobileView === 'components' ? 'bg-blue-50 text-blue-600' : 'text-gray-600'
+            }`}
+          >
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+            </svg>
+            <span className="text-xs font-medium">{language === 'ru' ? 'Компоненты' : 'Components'}</span>
+          </button>
+          <button
+            onClick={() => setMobileView('canvas')}
+            className={`flex flex-col items-center gap-1 px-4 py-2 rounded-md transition-colors ${
+              mobileView === 'canvas' ? 'bg-blue-50 text-blue-600' : 'text-gray-600'
+            }`}
+          >
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
+            </svg>
+            <span className="text-xs font-medium">{language === 'ru' ? 'Холст' : 'Canvas'}</span>
+          </button>
+          <button
+            onClick={() => setMobileView('settings')}
+            className={`flex flex-col items-center gap-1 px-4 py-2 rounded-md transition-colors ${
+              mobileView === 'settings' ? 'bg-blue-50 text-blue-600' : 'text-gray-600'
+            }`}
+          >
+            <Settings className="w-5 h-5" />
+            <span className="text-xs font-medium">{language === 'ru' ? 'Настройки' : 'Settings'}</span>
+          </button>
         </div>
       </Editor>
     </div>
