@@ -8,6 +8,14 @@ import Link from "next/link";
 import { ArrowLeft, Eye, Trash2, Settings } from "lucide-react";
 import type { TemplateConfig } from "@/lib/template-registry";
 
+// Import Split-Screen editable components
+import {
+  SplitScreenHero,
+  SplitScreenStats,
+  SplitScreenSkills,
+  SplitScreenContact,
+} from "@/components/builder/split-screen-components";
+
 // ============================================
 // CRAFT.JS USER COMPONENTS
 // ============================================
@@ -104,9 +112,9 @@ HeroComponent.craft = {
     name: "John Doe",
     title: "Full Stack Developer & Designer",
     imageUrl: "",
-    backgroundColor: "#667eea",
-    gradientFrom: "#667eea",
-    gradientTo: "#764ba2",
+    backgroundColor: "#1E293B",
+    gradientFrom: "#1E293B",
+    gradientTo: "#06B6D4",
     textColor: "#ffffff",
     subtitleColor: "#ffffff",
     padding: 80,
@@ -722,6 +730,37 @@ const Toolbox = () => {
         <h3 className="font-semibold text-lg">Components</h3>
       </div>
       <div className="p-4 space-y-2">
+        <div className="text-xs font-semibold text-gray-500 uppercase mb-2">Split-Screen</div>
+        <button
+          ref={(ref) => ref && connectors.create(ref, <Element is={SplitScreenHero} canvas />)}
+          className="w-full p-3 text-left border rounded hover:bg-gray-50 transition-colors"
+        >
+          <div className="font-medium">Split Hero</div>
+          <div className="text-xs text-gray-500">Split-screen hero section</div>
+        </button>
+        <button
+          ref={(ref) => ref && connectors.create(ref, <Element is={SplitScreenStats} canvas />)}
+          className="w-full p-3 text-left border rounded hover:bg-gray-50 transition-colors"
+        >
+          <div className="font-medium">Stats</div>
+          <div className="text-xs text-gray-500">Statistics showcase</div>
+        </button>
+        <button
+          ref={(ref) => ref && connectors.create(ref, <Element is={SplitScreenSkills} canvas />)}
+          className="w-full p-3 text-left border rounded hover:bg-gray-50 transition-colors"
+        >
+          <div className="font-medium">Skills</div>
+          <div className="text-xs text-gray-500">Skills tags section</div>
+        </button>
+        <button
+          ref={(ref) => ref && connectors.create(ref, <Element is={SplitScreenContact} canvas />)}
+          className="w-full p-3 text-left border rounded hover:bg-gray-50 transition-colors"
+        >
+          <div className="font-medium">Contact</div>
+          <div className="text-xs text-gray-500">Contact split section</div>
+        </button>
+
+        <div className="text-xs font-semibold text-gray-500 uppercase mb-2 mt-6">Generic</div>
         <button
           ref={(ref) => ref && connectors.create(ref, <Element is={HeroComponent} canvas />)}
           className="w-full p-3 text-left border rounded hover:bg-gray-50 transition-colors"
@@ -743,27 +782,6 @@ const Toolbox = () => {
           <div className="font-medium">Projects</div>
           <div className="text-xs text-gray-500">Project showcase</div>
         </button>
-        <button
-          ref={(ref) => ref && connectors.create(ref, <Element is={SkillsComponent} canvas />)}
-          className="w-full p-3 text-left border rounded hover:bg-gray-50 transition-colors"
-        >
-          <div className="font-medium">Skills</div>
-          <div className="text-xs text-gray-500">Skills showcase</div>
-        </button>
-        <button
-          ref={(ref) => ref && connectors.create(ref, <Element is={ContactComponent} canvas />)}
-          className="w-full p-3 text-left border rounded hover:bg-gray-50 transition-colors"
-        >
-          <div className="font-medium">Contact</div>
-          <div className="text-xs text-gray-500">Contact information</div>
-        </button>
-        <button
-          ref={(ref) => ref && connectors.create(ref, <Element is={PricingComponent} canvas />)}
-          className="w-full p-3 text-left border rounded hover:bg-gray-50 transition-colors"
-        >
-          <div className="font-medium">Pricing</div>
-          <div className="text-xs text-gray-500">Pricing plans</div>
-        </button>
       </div>
     </div>
   );
@@ -774,6 +792,18 @@ const Toolbox = () => {
 // ============================================
 
 export function CraftJSTemplateBuilder({ template }: { template: TemplateConfig }) {
+  const [isSaving, setIsSaving] = React.useState(false);
+
+  const handleSave = () => {
+    setIsSaving(true);
+    // TODO: Implement save/submit functionality
+    // This will serialize the editor state and send to backend
+    setTimeout(() => {
+      setIsSaving(false);
+      alert("Template customization saved! (Submit functionality coming soon)");
+    }, 1000);
+  };
+
   return (
     <div className="h-screen flex flex-col">
       {/* Header */}
@@ -794,12 +824,24 @@ export function CraftJSTemplateBuilder({ template }: { template: TemplateConfig 
             <Eye className="w-4 h-4" />
             View Demo
           </Link>
+          <Button
+            onClick={handleSave}
+            disabled={isSaving}
+            className="flex items-center gap-2 bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 disabled:opacity-50"
+          >
+            <Settings className="w-4 h-4" />
+            {isSaving ? "Saving..." : "Save Template"}
+          </Button>
         </div>
       </div>
 
       {/* Editor */}
       <Editor
         resolver={{
+          SplitScreenHero,
+          SplitScreenStats,
+          SplitScreenSkills,
+          SplitScreenContact,
           HeroComponent,
           AboutComponent,
           ProjectsComponent,
@@ -814,31 +856,10 @@ export function CraftJSTemplateBuilder({ template }: { template: TemplateConfig 
           <div className="flex-1 overflow-auto bg-gray-100">
             <Frame>
               <Element is={Container} canvas>
-                <Element
-                  is={HeroComponent}
-                  name="John Doe"
-                  title="Full Stack Developer & Designer"
-                  imageUrl=""
-                  gradientFrom="#667eea"
-                  gradientTo="#764ba2"
-                  textColor="#ffffff"
-                  subtitleColor="#ffffff"
-                  padding={80}
-                  fontSize={48}
-                  subtitleSize={24}
-                  canvas
-                />
-                <Element
-                  is={AboutComponent}
-                  text="I'm a passionate developer with 5 years of experience building amazing web applications. I specialize in creating user-friendly interfaces and scalable backend systems."
-                  imageUrl="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=600&fit=crop"
-                  canvas
-                />
-                <Element
-                  is={SkillsComponent}
-                  skills={["React", "TypeScript", "Node.js", "Python", "UI/UX Design", "GraphQL", "AWS", "Docker"]}
-                  canvas
-                />
+                <Element is={SplitScreenHero} />
+                <Element is={SplitScreenStats} />
+                <Element is={SplitScreenSkills} />
+                <Element is={SplitScreenContact} />
               </Element>
             </Frame>
           </div>
