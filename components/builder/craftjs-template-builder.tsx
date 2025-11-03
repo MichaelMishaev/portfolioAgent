@@ -120,10 +120,14 @@ const HeroComponent = ({
       {(selected || isMobile) && (
         <div className="absolute top-2 right-2 z-20 flex gap-2">
           <button
-            onClick={() => editorActions.delete(id)}
+            onClick={(e) => {
+              e.stopPropagation();
+              editorActions.delete(id);
+            }}
             className={`bg-red-500 text-white rounded hover:bg-red-600 flex items-center shadow-lg ${
               isMobile ? 'p-2' : 'px-3 py-1 gap-1'
             }`}
+            style={{ pointerEvents: 'auto' }}
             title={language === 'ru' ? 'Удалить компонент' : 'Delete component'}
           >
             <Trash2 className="w-4 h-4" />
@@ -482,10 +486,14 @@ const AboutComponent = ({ title, titleRu, text, textRu, imageUrl, language = 'en
       {(selected || isMobile) && (
         <div className="absolute top-2 right-2 z-20 flex gap-2">
           <button
-            onClick={() => editorActions.delete(id)}
+            onClick={(e) => {
+              e.stopPropagation();
+              editorActions.delete(id);
+            }}
             className={`bg-red-500 text-white rounded hover:bg-red-600 flex items-center shadow-lg ${
               isMobile ? 'p-2' : 'px-3 py-1 gap-1'
             }`}
+            style={{ pointerEvents: 'auto' }}
             title={language === 'ru' ? 'Удалить компонент' : 'Delete component'}
           >
             <Trash2 className="w-4 h-4" />
@@ -623,10 +631,14 @@ const SkillsComponent = ({ title, titleRu, skills, language = 'en' }: SkillsProp
       {(selected || isMobile) && (
         <div className="absolute top-2 right-2 z-20 flex gap-2">
           <button
-            onClick={() => editorActions.delete(id)}
+            onClick={(e) => {
+              e.stopPropagation();
+              editorActions.delete(id);
+            }}
             className={`bg-red-500 text-white rounded hover:bg-red-600 flex items-center shadow-lg ${
               isMobile ? 'p-2' : 'px-3 py-1 gap-1'
             }`}
+            style={{ pointerEvents: 'auto' }}
             title={language === 'ru' ? 'Удалить компонент' : 'Delete component'}
           >
             <Trash2 className="w-4 h-4" />
@@ -698,10 +710,14 @@ const ProjectsComponent = ({ title, titleRu, projects, language = 'en' }: Projec
       {(selected || isMobile) && (
         <div className="absolute top-2 right-2 z-20 flex gap-2">
           <button
-            onClick={() => editorActions.delete(id)}
+            onClick={(e) => {
+              e.stopPropagation();
+              editorActions.delete(id);
+            }}
             className={`bg-red-500 text-white rounded hover:bg-red-600 flex items-center shadow-lg ${
               isMobile ? 'p-2' : 'px-3 py-1 gap-1'
             }`}
+            style={{ pointerEvents: 'auto' }}
             title={language === 'ru' ? 'Удалить компонент' : 'Delete component'}
           >
             <Trash2 className="w-4 h-4" />
@@ -814,10 +830,14 @@ const ContactComponent = ({
       {(selected || isMobile) && (
         <div className="absolute top-2 right-2 z-20 flex gap-2">
           <button
-            onClick={() => editorActions.delete(id)}
+            onClick={(e) => {
+              e.stopPropagation();
+              editorActions.delete(id);
+            }}
             className={`bg-red-500 text-white rounded hover:bg-red-600 flex items-center shadow-lg ${
               isMobile ? 'p-2' : 'px-3 py-1 gap-1'
             }`}
+            style={{ pointerEvents: 'auto' }}
             title={language === 'ru' ? 'Удалить компонент' : 'Delete component'}
           >
             <Trash2 className="w-4 h-4" />
@@ -901,10 +921,14 @@ const PricingComponent = ({ title, titleRu, plans, language = 'en' }: PricingPro
       {(selected || isMobile) && (
         <div className="absolute top-2 right-2 z-20 flex gap-2">
           <button
-            onClick={() => editorActions.delete(id)}
+            onClick={(e) => {
+              e.stopPropagation();
+              editorActions.delete(id);
+            }}
             className={`bg-red-500 text-white rounded hover:bg-red-600 flex items-center shadow-lg ${
               isMobile ? 'p-2' : 'px-3 py-1 gap-1'
             }`}
+            style={{ pointerEvents: 'auto' }}
             title={language === 'ru' ? 'Удалить компонент' : 'Delete component'}
           >
             <Trash2 className="w-4 h-4" />
@@ -1007,10 +1031,14 @@ const TestimonialsComponent = ({ title, titleRu, testimonials, language = 'en' }
       {(selected || isMobile) && (
         <div className="absolute top-2 right-2 z-20 flex gap-2">
           <button
-            onClick={() => editorActions.delete(id)}
+            onClick={(e) => {
+              e.stopPropagation();
+              editorActions.delete(id);
+            }}
             className={`bg-red-500 text-white rounded hover:bg-red-600 flex items-center shadow-lg ${
               isMobile ? 'p-2' : 'px-3 py-1 gap-1'
             }`}
+            style={{ pointerEvents: 'auto' }}
             title={language === 'ru' ? 'Удалить компонент' : 'Delete component'}
           >
             <Trash2 className="w-4 h-4" />
@@ -1100,10 +1128,14 @@ const GalleryComponent = ({ title, titleRu, images, columns, language = 'en' }: 
       {(selected || isMobile) && (
         <div className="absolute top-2 right-2 z-20 flex gap-2">
           <button
-            onClick={() => editorActions.delete(id)}
+            onClick={(e) => {
+              e.stopPropagation();
+              editorActions.delete(id);
+            }}
             className={`bg-red-500 text-white rounded hover:bg-red-600 flex items-center shadow-lg ${
               isMobile ? 'p-2' : 'px-3 py-1 gap-1'
             }`}
+            style={{ pointerEvents: 'auto' }}
             title={language === 'ru' ? 'Удалить компонент' : 'Delete component'}
           >
             <Trash2 className="w-4 h-4" />
@@ -1202,10 +1234,14 @@ const CTAComponent = ({
       {(selected || isMobile) && (
         <div className="absolute top-2 right-2 z-20 flex gap-2">
           <button
-            onClick={() => editorActions.delete(id)}
+            onClick={(e) => {
+              e.stopPropagation();
+              editorActions.delete(id);
+            }}
             className={`bg-red-500 text-white rounded hover:bg-red-600 flex items-center shadow-lg ${
               isMobile ? 'p-2' : 'px-3 py-1 gap-1'
             }`}
+            style={{ pointerEvents: 'auto' }}
             title={language === 'ru' ? 'Удалить компонент' : 'Delete component'}
           >
             <Trash2 className="w-4 h-4" />
@@ -1281,10 +1317,14 @@ const TimelineComponent = ({ title, titleRu, steps, language = 'en' }: TimelineP
       {(selected || isMobile) && (
         <div className="absolute top-2 right-2 z-20 flex gap-2">
           <button
-            onClick={() => editorActions.delete(id)}
+            onClick={(e) => {
+              e.stopPropagation();
+              editorActions.delete(id);
+            }}
             className={`bg-red-500 text-white rounded hover:bg-red-600 flex items-center shadow-lg ${
               isMobile ? 'p-2' : 'px-3 py-1 gap-1'
             }`}
+            style={{ pointerEvents: 'auto' }}
             title={language === 'ru' ? 'Удалить компонент' : 'Delete component'}
           >
             <Trash2 className="w-4 h-4" />
@@ -1370,10 +1410,14 @@ const FAQComponent = ({ title, titleRu, faqs, language = 'en' }: FAQProps) => {
       {(selected || isMobile) && (
         <div className="absolute top-2 right-2 z-20 flex gap-2">
           <button
-            onClick={() => editorActions.delete(id)}
+            onClick={(e) => {
+              e.stopPropagation();
+              editorActions.delete(id);
+            }}
             className={`bg-red-500 text-white rounded hover:bg-red-600 flex items-center shadow-lg ${
               isMobile ? 'p-2' : 'px-3 py-1 gap-1'
             }`}
+            style={{ pointerEvents: 'auto' }}
             title={language === 'ru' ? 'Удалить компонент' : 'Delete component'}
           >
             <Trash2 className="w-4 h-4" />
@@ -1469,10 +1513,14 @@ const VideoComponent = ({ videoUrl, title, titleRu, description, descriptionRu, 
       {(selected || isMobile) && (
         <div className="absolute top-2 right-2 z-20 flex gap-2">
           <button
-            onClick={() => editorActions.delete(id)}
+            onClick={(e) => {
+              e.stopPropagation();
+              editorActions.delete(id);
+            }}
             className={`bg-red-500 text-white rounded hover:bg-red-600 flex items-center shadow-lg ${
               isMobile ? 'p-2' : 'px-3 py-1 gap-1'
             }`}
+            style={{ pointerEvents: 'auto' }}
             title={language === 'ru' ? 'Удалить компонент' : 'Delete component'}
           >
             <Trash2 className="w-4 h-4" />
@@ -1547,10 +1595,14 @@ const SocialLinksComponent = ({ title, titleRu, links, language = 'en' }: Social
       {(selected || isMobile) && (
         <div className="absolute top-2 right-2 z-20 flex gap-2">
           <button
-            onClick={() => editorActions.delete(id)}
+            onClick={(e) => {
+              e.stopPropagation();
+              editorActions.delete(id);
+            }}
             className={`bg-red-500 text-white rounded hover:bg-red-600 flex items-center shadow-lg ${
               isMobile ? 'p-2' : 'px-3 py-1 gap-1'
             }`}
+            style={{ pointerEvents: 'auto' }}
             title={language === 'ru' ? 'Удалить компонент' : 'Delete component'}
           >
             <Trash2 className="w-4 h-4" />

@@ -61,10 +61,14 @@ export const Stats = ({
       {(selected || isMobile) && (
         <div className="absolute top-2 right-2 z-20 flex gap-2">
           <button
-            onClick={() => editorActions.delete(id)}
+            onClick={(e) => {
+              e.stopPropagation();
+              editorActions.delete(id);
+            }}
             className={`bg-red-500 text-white rounded hover:bg-red-600 flex items-center shadow-lg ${
               isMobile ? 'p-2' : 'px-3 py-1 gap-1'
             }`}
+            style={{ pointerEvents: 'auto' }}
             title="Delete component"
           >
             <Trash2 className="w-4 h-4" />
