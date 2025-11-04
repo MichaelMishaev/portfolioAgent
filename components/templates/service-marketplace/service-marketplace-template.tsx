@@ -18,6 +18,10 @@ import {
   FiX,
   FiClock,
   FiStar,
+  FiMail,
+  FiGithub,
+  FiLinkedin,
+  FiTwitter,
 } from "react-icons/fi";
 import Link from "next/link";
 import { useI18n } from "@/lib/i18n-context";
