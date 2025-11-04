@@ -527,7 +527,7 @@ export function PersonalBlogTemplate() {
                     placeholder="Your email"
                     className="bg-white/10 border-white/20 text-white placeholder:text-white/60 mb-3"
                   />
-                  <Button variant="secondary" className="w-full bg-white text-blue-600 hover:bg-gray-100">
+                  <Button variant="secondary" className="w-full bg-white !text-blue-600 hover:bg-gray-100">
                     Subscribe
                   </Button>
                 </CardContent>
@@ -680,7 +680,7 @@ export function PersonalBlogTemplate() {
                 placeholder="Your email address"
                 className="bg-white/10 border-white/20 text-white placeholder:text-white/60"
               />
-              <Button variant="secondary" className="bg-white text-blue-600 hover:bg-gray-100 whitespace-nowrap">
+              <Button variant="secondary" className="bg-white !text-blue-600 hover:bg-gray-100 whitespace-nowrap">
                 Subscribe
               </Button>
             </div>

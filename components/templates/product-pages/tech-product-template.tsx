@@ -251,7 +251,7 @@ export function TechProductTemplate() {
               <Button size="lg" className="w-full mb-4 bg-yellow-400 text-black hover:bg-yellow-300 font-bold text-lg py-6">
                 ADD TO CART - ${productData.price}
               </Button>
-              <Button size="lg" variant="outline" className="w-full border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black font-bold">
+              <Button size="lg" variant="outline" className="w-full border-yellow-400 !text-yellow-400 hover:bg-yellow-400 hover:text-black font-bold">
                 ADD TO WISHLIST
               </Button>
             </FadeIn>
@@ -396,7 +396,7 @@ export function TechProductTemplate() {
               <p className="text-xl mb-8 font-semibold">
                 Free shipping • 2-year warranty • 30-day returns
               </p>
-              <Button size="lg" variant="secondary" className="text-lg px-12 py-6 bg-black text-yellow-400 hover:bg-gray-900 font-bold">
+              <Button size="lg" variant="secondary" className="text-lg px-12 py-6 bg-black !text-yellow-400 hover:bg-gray-900 font-bold">
                 ADD TO CART - ${productData.price}
               </Button>
             </CardContent>

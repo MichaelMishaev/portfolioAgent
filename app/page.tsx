@@ -109,8 +109,8 @@ export default function Home() {
             {/* Description */}
             <p className="text-xl sm:text-2xl md:text-3xl text-slate-600 dark:text-slate-400 max-w-4xl mx-auto leading-relaxed">
               {language === 'en'
-                ? 'Choose from 39+ ready-to-use templates. Customize in minutes, launch in hours.'
-                : 'Выберите из 39+ готовых шаблонов. Настройте за минуты, запустите за часы.'}
+                ? 'Even in the era of AI, we believe a human must review every detail.'
+                : 'Даже в эпоху ИИ мы верим, что человек должен проверить каждую деталь.'}
             </p>
           </motion.div>
         </div>
@@ -175,9 +175,9 @@ export default function Home() {
                 animate={{ opacity: 1, height: "auto" }}
                 exit={{ opacity: 0, height: 0 }}
                 transition={{ duration: 0.3 }}
-                className="max-w-5xl mx-auto overflow-hidden"
+                className="max-w-7xl mx-auto overflow-visible px-4"
               >
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 sm:gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 sm:gap-6 lg:gap-4">
               {/* Step 1: Browse Templates */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -205,7 +205,7 @@ export default function Home() {
                   </p>
                 </div>
                 {/* Arrow (Desktop only) */}
-                <div className="hidden lg:block absolute top-1/2 -right-4 transform -translate-y-1/2 text-blue-400 text-3xl z-10">
+                <div className="hidden lg:block absolute top-1/2 -right-3 transform -translate-y-1/2 text-blue-400 text-2xl z-10">
                   →
                 </div>
               </motion.div>
@@ -232,7 +232,7 @@ export default function Home() {
                       : 'Посмотрите функции, скриншоты и цены'}
                   </p>
                 </div>
-                <div className="hidden lg:block absolute top-1/2 -right-4 transform -translate-y-1/2 text-purple-400 text-3xl z-10">
+                <div className="hidden lg:block absolute top-1/2 -right-3 transform -translate-y-1/2 text-purple-400 text-2xl z-10">
                   →
                 </div>
               </motion.div>
@@ -259,7 +259,7 @@ export default function Home() {
                       : 'Купите шаблон + добавьте Content Maker (опция)'}
                   </p>
                 </div>
-                <div className="hidden lg:block absolute top-1/2 -right-4 transform -translate-y-1/2 text-pink-400 text-3xl z-10">
+                <div className="hidden lg:block absolute top-1/2 -right-3 transform -translate-y-1/2 text-pink-400 text-2xl z-10">
                   →
                 </div>
               </motion.div>
@@ -286,7 +286,7 @@ export default function Home() {
                       : 'Получите файлы шаблона сразу после оплаты'}
                   </p>
                 </div>
-                <div className="hidden lg:block absolute top-1/2 -right-4 transform -translate-y-1/2 text-orange-400 text-3xl z-10">
+                <div className="hidden lg:block absolute top-1/2 -right-3 transform -translate-y-1/2 text-orange-400 text-2xl z-10">
                   →
                 </div>
               </motion.div>

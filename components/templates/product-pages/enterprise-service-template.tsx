@@ -546,7 +546,7 @@ export function EnterpriseServiceTemplate() {
               Join 500+ enterprise clients who trust us with their mission-critical operations.
             </p>
             <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-center">
-              <Button size="lg" variant="secondary" className="w-full sm:w-auto bg-white text-blue-600 hover:bg-gray-100">
+              <Button size="lg" variant="secondary" className="w-full sm:w-auto bg-white !text-blue-600 hover:bg-gray-100">
                 Schedule Demo
                 <FiArrowRight className="ml-2" />
               </Button>

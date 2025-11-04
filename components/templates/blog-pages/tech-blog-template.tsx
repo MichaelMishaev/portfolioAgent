@@ -368,7 +368,7 @@ export function TechBlogTemplate() {
               <Button size="lg" className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700">
                 Start Reading
               </Button>
-              <Button size="lg" variant="outline" className="w-full sm:w-auto text-slate-900 dark:text-white">
+              <Button size="lg" variant="outline" className="w-full sm:w-auto !text-slate-900 dark:text-white">
                 Browse Topics
               </Button>
             </div>
@@ -759,7 +759,7 @@ export function TechBlogTemplate() {
                 placeholder="your@email.com"
                 className="bg-white/10 border-white/20 text-white placeholder:text-white/60"
               />
-              <Button variant="secondary" className="bg-white text-blue-600 hover:bg-gray-100 whitespace-nowrap">
+              <Button variant="secondary" className="bg-white !text-blue-600 hover:bg-gray-100 whitespace-nowrap">
                 Subscribe
               </Button>
             </div>

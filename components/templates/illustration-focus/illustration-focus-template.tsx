@@ -510,7 +510,7 @@ return (
                       </li>
                     ))}
                   </ul>
-                  <Button className={`w-full ${plan.popular ? 'bg-white text-purple-600 hover:bg-gray-100' : 'bg-gradient-to-r from-pink-500 to-purple-500 text-white'}`}>
+                  <Button className={`w-full ${plan.popular ? 'bg-white !text-purple-600 hover:bg-gray-100' : 'bg-gradient-to-r from-pink-500 to-purple-500 text-white'}`}>
                     Get Started
                   </Button>
                 </div>

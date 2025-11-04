@@ -599,7 +599,7 @@ export function ConsultingServiceTemplate() {
                       {insight.title}
                     </h3>
                     <p className="text-sm text-gray-600 mb-4">{insight.description}</p>
-                    <Button variant="ghost" className="p-0 h-auto text-emerald-600 hover:text-emerald-700">
+                    <Button variant="ghost" className="p-0 h-auto !text-emerald-600 hover:text-emerald-700">
                       Download PDF <FiArrowRight className="ml-1" />
                     </Button>
                   </CardContent>
@@ -621,7 +621,7 @@ export function ConsultingServiceTemplate() {
               Schedule a confidential consultation with one of our senior partners.
             </p>
             <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-center">
-              <Button size="lg" variant="secondary" className="w-full sm:w-auto bg-white text-emerald-600 hover:bg-gray-100 text-lg px-8">
+              <Button size="lg" variant="secondary" className="w-full sm:w-auto bg-white !text-emerald-600 hover:bg-gray-100 text-lg px-8">
                 Schedule Consultation
                 <FiArrowRight className="ml-2" />
               </Button>

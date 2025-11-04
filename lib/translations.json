@@ -95,6 +95,20 @@
       "customizeAndBuild": "Start Building",
       "tryIt": "Try It"
     },
+    "featureExplanations": {
+      "Responsive Design": "Works perfectly on all devices - mobile phones, tablets, and desktop computers. The layout automatically adjusts to provide the best viewing experience on any screen size.",
+      "Dark Mode Support": "Includes a built-in dark mode that users can toggle. Reduces eye strain in low-light conditions and provides a modern, sleek appearance.",
+      "SEO Optimized": "Structured with search engine best practices including proper meta tags, semantic HTML, and optimized page speed to help your site rank higher in search results.",
+      "Fast Performance": "Built with Next.js and optimized for lightning-fast loading times. Includes code splitting, image optimization, and efficient rendering for the best user experience.",
+      "Modern UI Components": "Pre-built, beautiful UI components that follow current design trends. Easy to customize and extend to match your brand.",
+      "Easy Customization": "Simple to modify colors, fonts, and content. No complex coding required - just update the configuration files and you're good to go.",
+      "Free Builder Access": "Includes access to our drag-and-drop page builder. Rearrange sections, customize layouts, and preview changes in real-time before you buy.",
+      "Professional Code": "Clean, well-organized code following industry best practices. Easy to maintain and extend with comprehensive comments and documentation.",
+      "TypeScript Support": "Fully typed with TypeScript for better code quality, fewer bugs, and improved developer experience with autocompletion and type checking.",
+      "Tailwind CSS": "Built with Tailwind CSS utility framework for rapid UI development. Easily customize the design system to match your brand.",
+      "Framer Motion": "Smooth, professional animations powered by Framer Motion. Enhance user experience with delightful micro-interactions.",
+      "Production Ready": "Tested and optimized for production deployment. Includes error handling, loading states, and edge case management."
+    },
     "stylePreview": {
       "title": "Try Before You Choose",
       "description": "Type your name below to see it styled in this template. Explore the colors, fonts, and design elements. When you're ready,",
@@ -3803,6 +3817,20 @@
       "showLess": "Свернуть",
       "customizeAndBuild": "Начать Создание",
       "tryIt": "Попробовать"
+    },
+    "featureExplanations": {
+      "Адаптивный дизайн": "Идеально работает на всех устройствах - мобильных телефонах, планшетах и настольных компьютерах. Макет автоматически адаптируется для наилучшего отображения на любом размере экрана.",
+      "Поддержка темной темы": "Включает встроенную темную тему, которую пользователи могут переключать. Снижает нагрузку на глаза при слабом освещении и обеспечивает современный, элегантный внешний вид.",
+      "SEO оптимизация": "Структурирован с учетом лучших практик поисковых систем, включая правильные мета-теги, семантический HTML и оптимизированную скорость загрузки страниц для более высокого рейтинга в поисковых результатах.",
+      "Быстрая производительность": "Построен на Next.js и оптимизирован для молниеносной загрузки. Включает разделение кода, оптимизацию изображений и эффективный рендеринг для лучшего пользовательского опыта.",
+      "Современные UI-компоненты": "Готовые, красивые UI-компоненты, следующие современным тенденциям дизайна. Легко настраиваются и расширяются под ваш бренд.",
+      "Простая настройка": "Легко изменять цвета, шрифты и контент. Не требуется сложного кодирования - просто обновите файлы конфигурации.",
+      "Бесплатный доступ к билдеру": "Включает доступ к нашему конструктору страниц с перетаскиванием. Переставляйте секции, настраивайте макеты и просматривайте изменения в реальном времени перед покупкой.",
+      "Профессиональный код": "Чистый, хорошо организованный код, следующий лучшим практикам индустрии. Легко поддерживать и расширять с подробными комментариями и документацией.",
+      "Поддержка TypeScript": "Полностью типизирован с TypeScript для лучшего качества кода, меньшего количества ошибок и улучшенного опыта разработчика с автодополнением и проверкой типов.",
+      "Tailwind CSS": "Построен на фреймворке Tailwind CSS для быстрой разработки UI. Легко настроить дизайн-систему под ваш бренд.",
+      "Framer Motion": "Плавные, профессиональные анимации на основе Framer Motion. Улучшайте пользовательский опыт с приятными микро-взаимодействиями.",
+      "Готовность к продакшену": "Протестирован и оптимизирован для развертывания в продакшене. Включает обработку ошибок, состояния загрузки и управление граничными случаями."
     },
     "stylePreview": {
       "title": "Попробуйте Перед Выбором",

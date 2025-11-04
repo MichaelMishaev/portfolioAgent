@@ -268,7 +268,7 @@ export function AgencyServiceTemplate() {
                 View Our Work
                 <FiArrowRight className="ml-2" />
               </Button>
-              <Button size="lg" variant="outline" className="w-full sm:w-auto group text-slate-900 dark:text-white">
+              <Button size="lg" variant="outline" className="w-full sm:w-auto group !text-slate-900 dark:text-white">
                 <FiPlay className="mr-2 group-hover:scale-110 transition-transform" />
                 Watch Showreel
               </Button>
@@ -455,7 +455,7 @@ export function AgencyServiceTemplate() {
               Let's create something extraordinary together. Book a free strategy call today.
             </p>
             <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-center">
-              <Button size="lg" variant="secondary" className="w-full sm:w-auto bg-white text-blue-600 hover:bg-gray-100">
+              <Button size="lg" variant="secondary" className="w-full sm:w-auto bg-white !text-blue-600 hover:bg-gray-100">
                 Start Your Project
                 <FiArrowRight className="ml-2" />
               </Button>

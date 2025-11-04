@@ -23,8 +23,9 @@ interface TemplateDetailViewProps {
 }
 
 export function TemplateDetailView({ template }: TemplateDetailViewProps) {
-  const { language } = useI18n();
+  const { language, t } = useI18n();
   const [currentScreenshot, setCurrentScreenshot] = useState(0);
+  const [expandedFeatures, setExpandedFeatures] = useState<Set<number>>(new Set());
 
   const nextScreenshot = () => {
     setCurrentScreenshot((prev) => (prev + 1) % template.screenshots.length);
@@ -34,6 +35,18 @@ export function TemplateDetailView({ template }: TemplateDetailViewProps) {
     setCurrentScreenshot((prev) =>
       prev === 0 ? template.screenshots.length - 1 : prev - 1
     );
+  };
+
+  const toggleFeature = (index: number) => {
+    setExpandedFeatures((prev) => {
+      const newSet = new Set(prev);
+      if (newSet.has(index)) {
+        newSet.delete(index);
+      } else {
+        newSet.add(index);
+      }
+      return newSet;
+    });
   };
 
   return (
@@ -277,10 +290,36 @@ export function TemplateDetailView({ template }: TemplateDetailViewProps) {
           </h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {template.whatsIncluded.map((feature, index) => (
-              <Card key={index} className="p-4">
+              <Card
+                key={index}
+                className="p-4 cursor-pointer hover:shadow-lg transition-all duration-300 hover:scale-[1.02]"
+                onClick={() => toggleFeature(index)}
+              >
                 <div className="flex items-start gap-3">
                   <FiCheck className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
-                  <span className="font-medium">{feature}</span>
+                  <div className="flex-1">
+                    <div className="flex items-center justify-between gap-2">
+                      <span className="font-medium">{feature}</span>
+                      <FiChevronRight
+                        className={`w-4 h-4 text-muted-foreground flex-shrink-0 transition-transform duration-300 ${
+                          expandedFeatures.has(index) ? 'rotate-90' : ''
+                        }`}
+                      />
+                    </div>
+                    {expandedFeatures.has(index) && (
+                      <motion.div
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: "auto" }}
+                        exit={{ opacity: 0, height: 0 }}
+                        transition={{ duration: 0.3 }}
+                        className="overflow-hidden"
+                      >
+                        <p className="text-sm text-muted-foreground mt-3 leading-relaxed">
+                          {t.featureExplanations?.[feature] || ''}
+                        </p>
+                      </motion.div>
+                    )}
+                  </div>
                 </div>
               </Card>
             ))}

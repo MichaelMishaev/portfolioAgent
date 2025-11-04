@@ -124,7 +124,7 @@ export function ProfessionalB2bTemplate() {
                   {data.hero.subtitle}
                 </p>
                 <div className="flex gap-4 flex-wrap">
-                  <Button size="lg" className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-6 text-lg font-semibold">
+                  <Button size="lg" className="bg-white !text-blue-600 hover:bg-blue-50 px-8 py-6 text-lg font-semibold">
                     {data.hero.primaryCta}
                   </Button>
                   <Button
@@ -308,7 +308,7 @@ export function ProfessionalB2bTemplate() {
             <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
               {data.cta.subtitle}
             </p>
-            <Button size="lg" className="bg-white text-blue-600 hover:bg-blue-50 px-10 py-6 text-lg">
+            <Button size="lg" className="bg-white !text-blue-600 hover:bg-blue-50 px-10 py-6 text-lg">
               {data.cta.buttonText}
             </Button>
           </ScrollReveal>

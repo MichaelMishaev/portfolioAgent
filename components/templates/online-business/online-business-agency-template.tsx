@@ -109,7 +109,7 @@ export function OnlineBusinessAgencyTemplate() {
                 {data.hero?.startProject || "Start Your Project"}
                 <FiArrowRight className="ml-2" />
               </Button>
-              <Button size="lg" variant="outline" className="border-2 border-blue-500 text-blue-600 hover:bg-blue-50 dark:hover:bg-blue-950 text-lg px-8 py-6">
+              <Button size="lg" variant="outline" className="border-2 border-blue-500 !text-blue-600 hover:bg-blue-50 dark:hover:bg-blue-950 text-lg px-8 py-6">
                 {data.hero?.viewCaseStudies || "View Case Studies"}
               </Button>
             </div>
@@ -202,7 +202,7 @@ export function OnlineBusinessAgencyTemplate() {
         </div>
 
         <div className="text-center">
-          <Button size="lg" variant="outline" className="border-2 border-blue-500 text-blue-600">
+          <Button size="lg" variant="outline" className="border-2 border-blue-500 !text-blue-600">
             {data.services?.seeAll || "See All Services"}
             <FiArrowRight className="ml-2" />
           </Button>
@@ -402,7 +402,7 @@ export function OnlineBusinessAgencyTemplate() {
                       <option>$50K - $100K</option>
                       <option>$100K+</option>
                     </select>
-                    <Button size="lg" className="w-full bg-white text-blue-600 hover:bg-gray-100 py-6 text-lg font-semibold">
+                    <Button size="lg" className="w-full bg-white !text-blue-600 hover:bg-gray-100 py-6 text-lg font-semibold">
                       {data.cta?.button || "Book Strategy Call"}
                       <FiArrowRight className="ml-2" />
                     </Button>

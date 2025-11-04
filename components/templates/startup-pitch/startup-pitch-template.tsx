@@ -468,7 +468,7 @@ export function StartupPitchTemplate() {
                 <Button size="lg" className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-lg px-12">
                   Schedule a Demo
                 </Button>
-                <Button size="lg" variant="outline" className="text-lg px-12 border-2 border-blue-600 text-blue-600 hover:bg-blue-50">
+                <Button size="lg" variant="outline" className="text-lg px-12 border-2 border-blue-600 !text-blue-600 hover:bg-blue-50">
                   Contact Sales
                 </Button>
               </div>
@@ -491,7 +491,7 @@ export function StartupPitchTemplate() {
             <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
               Join thousands of companies already growing with our platform
             </p>
-            <Button size="lg" className="bg-white text-blue-600 hover:bg-blue-50 text-lg px-12">
+            <Button size="lg" className="bg-white !text-blue-600 hover:bg-blue-50 text-lg px-12">
               Start Your Free Trial <FiArrowRight className="ml-2" />
             </Button>
           </motion.div>

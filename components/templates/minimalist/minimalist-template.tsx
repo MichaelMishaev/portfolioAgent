@@ -83,7 +83,7 @@ export function MinimalistTemplate() {
                 {tt.common.contact}
               </a>
               <div className="pt-2">
-                <CustomizeTemplateButton variant="outline" size="sm" className="w-full text-slate-900 dark:text-white" />
+                <CustomizeTemplateButton variant="outline" size="sm" className="w-full !text-slate-900 dark:text-white" />
               </div>
             </div>
           </div>

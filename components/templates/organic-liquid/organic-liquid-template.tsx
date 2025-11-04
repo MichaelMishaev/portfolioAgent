@@ -564,7 +564,7 @@ return (
                 Transform your ideas into flowing, organic digital experiences
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" className="bg-white text-rose-600 hover:bg-white/90 rounded-full font-semibold text-lg px-8">
+                <Button size="lg" className="bg-white !text-rose-600 hover:bg-white/90 rounded-full font-semibold text-lg px-8">
                   <FiMail className="mr-2" />
                   Start Project
                 </Button>

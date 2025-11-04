@@ -268,7 +268,7 @@ export function SaasFeatureRichTemplate() {
           <ScrollReveal>
             <h2 className="text-4xl lg:text-5xl font-bold mb-6">{data.cta.title}</h2>
             <p className="text-xl mb-8">{data.cta.subtitle}</p>
-            <Button size="lg" className="bg-white text-blue-600 hover:bg-blue-50 px-12 py-6 text-lg">
+            <Button size="lg" className="bg-white !text-blue-600 hover:bg-blue-50 px-12 py-6 text-lg">
               {data.cta.buttonText}
             </Button>
           </ScrollReveal>

@@ -84,7 +84,7 @@ export function OnlineBusinessCoachTemplate() {
                   {data.hero?.startJourney || "Start Your Journey"}
                   <FiArrowRight className="ml-2" />
                 </Button>
-                <Button size="lg" variant="outline" className="border-2 border-amber-500 text-amber-600 hover:bg-amber-50 dark:hover:bg-amber-950 text-lg px-8 py-6">
+                <Button size="lg" variant="outline" className="border-2 border-amber-500 !text-amber-600 hover:bg-amber-50 dark:hover:bg-amber-950 text-lg px-8 py-6">
                   {data.hero?.freeCall || "Free Discovery Call"}
                 </Button>
               </div>
@@ -369,7 +369,7 @@ export function OnlineBusinessCoachTemplate() {
                     onChange={(e) => setEmail(e.target.value)}
                     className="flex-1 px-3 py-4 rounded-xl border-0 focus:outline-none focus:ring-2 focus:ring-white/50 text-gray-900"
                   />
-                  <Button size="lg" className="bg-white text-amber-600 hover:bg-gray-100 px-8 py-4 rounded-xl font-semibold">
+                  <Button size="lg" className="bg-white !text-amber-600 hover:bg-gray-100 px-8 py-4 rounded-xl font-semibold">
                     {data.newsletter?.cta || "Get Free Guide"}
                   </Button>
                 </div>

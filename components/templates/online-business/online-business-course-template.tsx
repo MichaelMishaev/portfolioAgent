@@ -90,7 +90,7 @@ export function OnlineBusinessCourseTemplate() {
                   <FiPlay className="mr-2 flex-shrink-0" />
                   <span className="truncate">{data.hero?.startLearning || "Start Learning Now"}</span>
                 </Button>
-                <Button size="lg" variant="outline" className="border-2 border-purple-500 text-purple-600 hover:bg-purple-50 dark:hover:bg-purple-950 text-sm sm:text-base md:text-lg px-6 sm:px-8 py-4 sm:py-6 w-full sm:w-auto">
+                <Button size="lg" variant="outline" className="border-2 border-purple-500 !text-purple-600 hover:bg-purple-50 dark:hover:bg-purple-950 text-sm sm:text-base md:text-lg px-6 sm:px-8 py-4 sm:py-6 w-full sm:w-auto">
                   <FiDownload className="mr-2 flex-shrink-0" />
                   <span className="truncate">{data.hero?.freeSample || "Free Sample Lessons"}</span>
                 </Button>
@@ -298,7 +298,7 @@ export function OnlineBusinessCourseTemplate() {
                     </li>
                   ))}
                 </ul>
-                <Button className="w-full text-slate-900 dark:text-white" variant="outline">
+                <Button className="w-full !text-slate-900 dark:text-white" variant="outline">
                   {data.pricing?.essentials?.cta || "Get Started"}
                 </Button>
               </CardContent>
@@ -357,7 +357,7 @@ export function OnlineBusinessCourseTemplate() {
                     </li>
                   ))}
                 </ul>
-                <Button className="w-full bg-white text-purple-900 hover:bg-gray-100">
+                <Button className="w-full bg-white !text-purple-900 hover:bg-gray-100">
                   {data.pricing?.vip?.cta || "Apply Now"}
                 </Button>
               </CardContent>
@@ -426,7 +426,7 @@ export function OnlineBusinessCourseTemplate() {
               <p className="text-base sm:text-lg md:text-xl text-white/90 mb-8 max-w-full mx-auto break-words">
                 {data.cta?.subtitle || "Join 100,000+ students who have already started their journey. 30-day money-back guarantee."}
               </p>
-              <Button size="lg" className="bg-white text-purple-600 hover:bg-gray-100 px-6 sm:px-8 md:px-12 py-4 sm:py-5 md:py-6 text-sm sm:text-base md:text-lg font-semibold w-full sm:w-auto">
+              <Button size="lg" className="bg-white !text-purple-600 hover:bg-gray-100 px-6 sm:px-8 md:px-12 py-4 sm:py-5 md:py-6 text-sm sm:text-base md:text-lg font-semibold w-full sm:w-auto">
                 <FiPlay className="mr-2 flex-shrink-0" />
                 <span className="truncate">{data.cta?.button || "Enroll in Complete Course - $697"}</span>
               </Button>

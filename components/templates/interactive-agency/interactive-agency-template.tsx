@@ -314,7 +314,7 @@ export function InteractiveAgencyTemplate() {
               <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
                 Let's collaborate and build something extraordinary together.
               </p>
-              <Button size="lg" className="bg-white text-purple-600 hover:bg-gray-100 text-lg px-12">
+              <Button size="lg" className="bg-white !text-purple-600 hover:bg-gray-100 text-lg px-12">
                 Start a Project <FiArrowRight className="ml-2" />
               </Button>
             </div>
@@ -387,7 +387,7 @@ export function InteractiveAgencyTemplate() {
                       <li key={j} className="text-white font-medium">✓ {f}</li>
                     ))}
                   </ul>
-                  <Button className={`w-full ${pkg.popular ? 'bg-white text-purple-600 hover:bg-gray-100' : 'bg-purple-600 hover:bg-purple-700'} font-bold`}>
+                  <Button className={`w-full ${pkg.popular ? 'bg-white !text-purple-600 hover:bg-gray-100' : 'bg-purple-600 hover:bg-purple-700'} font-bold`}>
                     Choose Plan
                   </Button>
                 </div>

@@ -499,10 +499,10 @@ export function Y2KRetroTemplate() {
                 LET'S CREATE SOMETHING TOTALLY RADICAL! 🎉
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" className="bg-cyan-400 hover:bg-cyan-500 text-purple-900 font-black text-xl px-12 py-8 h-auto border-4 border-white shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
+                <Button size="lg" className="bg-cyan-400 hover:bg-cyan-500 !text-purple-900 font-black text-xl px-12 py-8 h-auto border-4 border-white shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
                   💌 CONTACT ME
                 </Button>
-                <Button size="lg" className="bg-yellow-400 hover:bg-yellow-500 text-purple-900 font-black text-xl px-12 py-8 h-auto border-4 border-white shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
+                <Button size="lg" className="bg-yellow-400 hover:bg-yellow-500 !text-purple-900 font-black text-xl px-12 py-8 h-auto border-4 border-white shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
                   🎨 VIEW WORK
                 </Button>
               </div>
