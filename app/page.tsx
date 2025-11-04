@@ -95,18 +95,18 @@ export default function Home() {
             className="text-center max-w-5xl mx-auto"
           >
             {/* Title */}
-            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black mb-8 leading-[1.1] tracking-tight">
-              <span className="text-blue-600 dark:text-blue-400">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black mb-6 sm:mb-8 leading-[1.15] sm:leading-[1.1] tracking-tight px-4">
+              <span className="text-blue-600 dark:text-blue-400 break-words">
                 {language === 'en' ? 'Professional' : 'Профессиональные'}
               </span>
               <br />
-              <span className="text-slate-900 dark:text-slate-100">
+              <span className="text-slate-900 dark:text-slate-100 break-words">
                 {language === 'en' ? 'Portfolio Templates' : 'Шаблоны Портфолио'}
               </span>
             </h1>
 
             {/* Description */}
-            <p className="text-xl sm:text-2xl md:text-3xl text-slate-600 dark:text-slate-400 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-slate-600 dark:text-slate-400 max-w-4xl mx-auto leading-relaxed px-4">
               {language === 'en'
                 ? 'Even in the era of AI, we believe a human must review every detail.'
                 : 'Даже в эпоху ИИ мы верим, что человек должен проверить каждую деталь.'}
