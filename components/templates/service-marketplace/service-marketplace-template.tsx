@@ -147,7 +147,7 @@ export function ServiceMarketplaceTemplate() {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-slate-700 text-white hover:bg-slate-800 px-8 py-6 text-lg w-full sm:w-auto"
+                className="border-slate-700 !text-white !bg-transparent hover:!bg-slate-800 px-8 py-6 text-lg w-full sm:w-auto"
               >
                 {portfolioData.hero?.ctaSecondary || "Learn More"}
               </Button>
@@ -376,7 +376,7 @@ export function ServiceMarketplaceTemplate() {
             {['Web Development', 'Mobile Apps', 'UI/UX Design', 'Backend', 'DevOps', 'Cloud', 'Database', 'API Design', 'Testing', 'Security', 'Analytics', 'AI/ML'].map((skill, i) => (
               <FadeIn key={i} delay={i * 0.05}>
                 <div className="bg-white dark:bg-slate-800 p-4 rounded-lg border border-slate-200 dark:border-slate-700 hover:border-green-500 hover:shadow-md transition-all text-center">
-                  <span className="font-semibold text-sm">{skill}</span>
+                  <span className="font-semibold text-sm text-slate-900 dark:text-white">{skill}</span>
                 </div>
               </FadeIn>
             ))}
@@ -398,13 +398,13 @@ export function ServiceMarketplaceTemplate() {
                 Send Message
               </Button>
               <div className="flex gap-4">
-                <Button variant="outline" size="icon" className="h-12 w-12 text-white border-white">
+                <Button variant="outline" size="icon" className="h-12 w-12 !text-white !bg-transparent border-white">
                   <FiGithub className="h-5 w-5" />
                 </Button>
-                <Button variant="outline" size="icon" className="h-12 w-12 text-white border-white">
+                <Button variant="outline" size="icon" className="h-12 w-12 !text-white !bg-transparent border-white">
                   <FiLinkedin className="h-5 w-5" />
                 </Button>
-                <Button variant="outline" size="icon" className="h-12 w-12 text-white border-white">
+                <Button variant="outline" size="icon" className="h-12 w-12 !text-white !bg-transparent border-white">
                   <FiTwitter className="h-5 w-5" />
                 </Button>
               </div>
@@ -449,7 +449,7 @@ export function ServiceMarketplaceTemplate() {
                 <div className="flex gap-6 items-start">
                   <div className="flex-shrink-0 w-20 text-green-600 font-bold text-lg">{item.year}</div>
                   <div className="flex-1 bg-white dark:bg-slate-800 p-6 rounded-lg border border-slate-200 dark:border-slate-700">
-                    <h3 className="font-bold text-lg mb-2">{item.title}</h3>
+                    <h3 className="font-bold text-lg mb-2 text-slate-900 dark:text-white">{item.title}</h3>
                     <p className="text-slate-600 dark:text-slate-400">{item.desc}</p>
                   </div>
                 </div>
@@ -475,7 +475,7 @@ export function ServiceMarketplaceTemplate() {
             ].map((item, i) => (
               <FadeIn key={i} delay={i * 0.05}>
                 <div className="bg-white dark:bg-slate-800 p-6 rounded-lg border border-slate-200 dark:border-slate-700">
-                  <h3 className="font-bold text-lg mb-3">{item.q}</h3>
+                  <h3 className="font-bold text-lg mb-3 text-slate-900 dark:text-white">{item.q}</h3>
                   <p className="text-slate-600 dark:text-slate-400">{item.a}</p>
                 </div>
               </FadeIn>

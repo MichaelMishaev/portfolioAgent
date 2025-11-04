@@ -192,9 +192,9 @@ export function LuxuryProductTemplate() {
               CRAFTSMANSHIP
             </a>
             <Button
-              variant="outline" className="text-white border-white"
+              variant="outline"
               size="sm"
-              className="border-amber-600 text-amber-500 hover:bg-amber-600 hover:text-black"
+              className="border-amber-600 !text-amber-500 !bg-transparent hover:bg-amber-600 hover:text-black"
             >
               FIND BOUTIQUE
             </Button>
@@ -533,9 +533,9 @@ export function LuxuryProductTemplate() {
                   FIND YOUR BOUTIQUE
                 </Button>
                 <Button
-                  variant="outline" className="text-white border-white"
+                  variant="outline"
                   size="lg"
-                  className="border-amber-600 text-amber-500 hover:bg-amber-600 hover:text-black text-lg px-12"
+                  className="border-amber-600 !text-amber-500 !bg-transparent hover:bg-amber-600 hover:text-black text-lg px-12"
                 >
                   BOOK APPOINTMENT
                 </Button>

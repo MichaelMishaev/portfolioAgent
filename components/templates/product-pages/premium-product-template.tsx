@@ -856,7 +856,7 @@ export function PremiumProductTemplate() {
                   Schedule Consultation
                   <FiArrowRight className="ml-2" />
                 </Button>
-                <Button size="lg" variant="outline" className="w-full sm:w-auto border-white/30 text-white hover:bg-white/10 px-12 py-6 text-sm tracking-wider">
+                <Button size="lg" variant="outline" className="w-full sm:w-auto border-white/30 !text-white !bg-transparent hover:bg-white/10 px-12 py-6 text-sm tracking-wider">
                   Download Brochure
                 </Button>
               </div>

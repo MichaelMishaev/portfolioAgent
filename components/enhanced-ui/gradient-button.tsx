@@ -31,9 +31,9 @@ export function GradientButton({
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
       >
-        {/* Gradient overlay that slides in on hover */}
+        {/* Blue overlay that slides in on hover */}
         <motion.div
-          className="absolute inset-0 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 opacity-0 group-hover:opacity-100"
+          className="absolute inset-0 bg-blue-700 opacity-0 group-hover:opacity-100"
           initial={{ x: "-100%" }}
           whileHover={{ x: "0%" }}
           transition={{ duration: 0.3 }}

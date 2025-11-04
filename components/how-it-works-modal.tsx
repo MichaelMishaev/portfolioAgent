@@ -113,7 +113,7 @@ export function HowItWorksModal({ language = 'en' }: HowItWorksModalProps) {
               className="relative w-full max-w-xs sm:max-w-lg md:max-w-5xl max-h-[95vh] h-full sm:h-auto mx-2 sm:mx-4 bg-white dark:bg-gray-900 rounded-xl sm:rounded-2xl shadow-2xl overflow-hidden flex flex-col"
             >
               {/* Header */}
-              <div className="relative bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 px-4 sm:px-6 md:px-8 py-4 sm:py-6 md:py-8">
+              <div className="relative bg-blue-600 px-4 sm:px-6 md:px-8 py-4 sm:py-6 md:py-8">
                 <button
                   onClick={() => setIsOpen(false)}
                   className="absolute top-2 right-2 sm:top-4 sm:right-4 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white/20 hover:bg-white/30 backdrop-blur-sm flex items-center justify-center transition-all hover:scale-110 active:scale-95 touch-manipulation"

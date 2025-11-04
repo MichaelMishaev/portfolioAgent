@@ -625,7 +625,7 @@ export function ConsultingServiceTemplate() {
                 Schedule Consultation
                 <FiArrowRight className="ml-2" />
               </Button>
-              <Button size="lg" variant="outline" className="w-full sm:w-auto text-white border-white hover:bg-white/10 text-lg px-8">
+              <Button size="lg" variant="outline" className="w-full sm:w-auto !text-white !bg-transparent border-white hover:bg-white/10 text-lg px-8">
                 Request Proposal
               </Button>
             </div>

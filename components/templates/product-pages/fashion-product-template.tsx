@@ -539,7 +539,7 @@ export function FashionProductTemplate() {
                     className="w-full aspect-square object-cover group-hover:scale-105 transition-transform"
                   />
                   <CardContent className="p-6">
-                    <h3 className="font-semibold mb-2">{item.name}</h3>
+                    <h3 className="font-semibold mb-2 text-stone-900">{item.name}</h3>
                     <div className="text-lg font-semibold">${item.price}</div>
                   </CardContent>
                 </Card>

@@ -568,7 +568,7 @@ return (
                   <FiMail className="mr-2" />
                   Start Project
                 </Button>
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/20 rounded-full font-semibold text-lg px-8">
+                <Button size="lg" variant="outline" className="border-white !text-white !bg-transparent hover:bg-white/20 rounded-full font-semibold text-lg px-8">
                   View Portfolio
                 </Button>
               </div>

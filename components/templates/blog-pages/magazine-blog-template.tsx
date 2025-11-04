@@ -780,7 +780,7 @@ export function MagazineBlogTemplate() {
               </div>
             </div>
             <div>
-              <h4 className="font-semibold mb-4">Categories</h4>
+              <h4 className="font-semibold mb-4 text-gray-900 dark:text-white">Categories</h4>
               <div className="space-y-2 text-gray-400">
                 <a href="#" className="block hover:text-white transition-colors">Design</a>
                 <a href="#" className="block hover:text-white transition-colors">Development</a>
@@ -790,7 +790,7 @@ export function MagazineBlogTemplate() {
               </div>
             </div>
             <div>
-              <h4 className="font-semibold mb-4">Company</h4>
+              <h4 className="font-semibold mb-4 text-gray-900 dark:text-white">Company</h4>
               <div className="space-y-2 text-gray-400">
                 <a href="#" className="block hover:text-white transition-colors">About Us</a>
                 <a href="#" className="block hover:text-white transition-colors">Our Team</a>
@@ -800,7 +800,7 @@ export function MagazineBlogTemplate() {
               </div>
             </div>
             <div>
-              <h4 className="font-semibold mb-4">Resources</h4>
+              <h4 className="font-semibold mb-4 text-gray-900 dark:text-white">Resources</h4>
               <div className="space-y-2 text-gray-400">
                 <a href="#" className="block hover:text-white transition-colors">Newsletter</a>
                 <a href="#" className="block hover:text-white transition-colors">RSS Feed</a>

@@ -696,7 +696,7 @@ export function TechBlogTemplate() {
                         className="w-16 h-16 rounded-full border-2 border-blue-600"
                       />
                       <div className="flex-1">
-                        <h3 className="font-bold">{contributor.name}</h3>
+                        <h3 className="font-bold text-gray-900 dark:text-white">{contributor.name}</h3>
                         <p className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-600'} mb-1`}>{contributor.role}</p>
                         <div className="flex items-center gap-3 text-sm">
                           <Badge variant="outline">{contributor.specialty}</Badge>
@@ -721,7 +721,7 @@ export function TechBlogTemplate() {
               <ScrollReveal key={topic.name} delay={index * 0.05}>
                 <Card className={`p-6 text-center hover:shadow-lg transition-all cursor-pointer group ${darkMode ? 'bg-gray-800 border-gray-700 hover:border-blue-600' : 'bg-white hover:border-blue-600'}`}>
                   <topic.icon className="w-8 h-8 mx-auto mb-3 text-blue-600 group-hover:scale-110 transition-transform" />
-                  <h3 className="font-bold mb-1">{topic.name}</h3>
+                  <h3 className={`font-bold mb-1 ${darkMode ? 'text-white' : 'text-gray-900'}`}>{topic.name}</h3>
                   <p className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>{topic.count} articles</p>
                 </Card>
               </ScrollReveal>
@@ -807,7 +807,7 @@ export function TechBlogTemplate() {
               </div>
             </div>
             <div>
-              <h4 className="font-semibold mb-4">Content</h4>
+              <h4 className="font-semibold mb-4 text-gray-900 dark:text-white">Content</h4>
               <div className={`space-y-2 ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
                 <a href="#" className={`block ${darkMode ? 'hover:text-white' : 'hover:text-gray-900'} transition-colors`}>Articles</a>
                 <a href="#" className={`block ${darkMode ? 'hover:text-white' : 'hover:text-gray-900'} transition-colors`}>Tutorials</a>
@@ -816,7 +816,7 @@ export function TechBlogTemplate() {
               </div>
             </div>
             <div>
-              <h4 className="font-semibold mb-4">Community</h4>
+              <h4 className="font-semibold mb-4 text-gray-900 dark:text-white">Community</h4>
               <div className={`space-y-2 ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
                 <a href="#" className={`block ${darkMode ? 'hover:text-white' : 'hover:text-gray-900'} transition-colors`}>Discord</a>
                 <a href="#" className={`block ${darkMode ? 'hover:text-white' : 'hover:text-gray-900'} transition-colors`}>GitHub</a>
@@ -825,7 +825,7 @@ export function TechBlogTemplate() {
               </div>
             </div>
             <div>
-              <h4 className="font-semibold mb-4">Company</h4>
+              <h4 className="font-semibold mb-4 text-gray-900 dark:text-white">Company</h4>
               <div className={`space-y-2 ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
                 <a href="#" className={`block ${darkMode ? 'hover:text-white' : 'hover:text-gray-900'} transition-colors`}>About</a>
                 <a href="#" className={`block ${darkMode ? 'hover:text-white' : 'hover:text-gray-900'} transition-colors`}>Sponsor</a>

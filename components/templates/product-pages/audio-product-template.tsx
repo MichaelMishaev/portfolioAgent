@@ -559,7 +559,7 @@ export function AudioProductTemplate() {
                 <Button size="lg" variant="secondary" className="text-lg px-12">
                   Buy Now - ${productData.price.amount}
                 </Button>
-                <Button size="lg" variant="outline" className="text-lg px-12 text-white border-white hover:bg-white/10">
+                <Button size="lg" variant="outline" className="text-lg px-12 !text-white !bg-transparent border-white hover:bg-white/10">
                   Find a Store
                 </Button>
               </div>

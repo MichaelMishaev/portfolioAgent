@@ -725,7 +725,7 @@ export function PersonalBlogTemplate() {
               </div>
             </div>
             <div>
-              <h4 className="font-semibold mb-4">Categories</h4>
+              <h4 className="font-semibold mb-4 text-gray-900 dark:text-white">Categories</h4>
               <ul className="space-y-2 text-sm">
                 <li><a href="#" className="text-gray-600 hover:text-blue-600 transition-colors">Design</a></li>
                 <li><a href="#" className="text-gray-600 hover:text-blue-600 transition-colors">Development</a></li>
@@ -734,7 +734,7 @@ export function PersonalBlogTemplate() {
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold mb-4">Resources</h4>
+              <h4 className="font-semibold mb-4 text-gray-900 dark:text-white">Resources</h4>
               <ul className="space-y-2 text-sm">
                 <li><a href="#" className="text-gray-600 hover:text-blue-600 transition-colors">Free Downloads</a></li>
                 <li><a href="#" className="text-gray-600 hover:text-blue-600 transition-colors">Design Tools</a></li>
@@ -743,7 +743,7 @@ export function PersonalBlogTemplate() {
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold mb-4">About</h4>
+              <h4 className="font-semibold mb-4 text-gray-900 dark:text-white">About</h4>
               <ul className="space-y-2 text-sm">
                 <li><a href="#" className="text-gray-600 hover:text-blue-600 transition-colors">About Me</a></li>
                 <li><a href="#" className="text-gray-600 hover:text-blue-600 transition-colors">Contact</a></li>

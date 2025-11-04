@@ -571,7 +571,7 @@ export function BentoGridTemplate() {
             <Card className="h-full bg-gradient-to-br from-amber-50 to-yellow-50 dark:from-amber-950 dark:to-yellow-950 border-amber-200 dark:border-amber-800 overflow-hidden">
               <CardContent className="p-6 text-center">
                 <div className="text-5xl mb-3">🎥</div>
-                <h3 className="font-bold mb-2">Watch Demo</h3>
+                <h3 className="font-bold mb-2 text-gray-900 dark:text-white">Watch Demo</h3>
                 <p className="text-sm text-muted-foreground">See my work in action</p>
               </CardContent>
             </Card>
@@ -582,7 +582,7 @@ export function BentoGridTemplate() {
             <Card className="h-full bg-gradient-to-br from-emerald-50 to-green-50 dark:from-emerald-950 dark:to-green-950 border-emerald-200 dark:border-emerald-800">
               <CardContent className="p-6 text-center">
                 <div className="w-3 h-3 bg-green-500 rounded-full mx-auto mb-3 animate-pulse"></div>
-                <h3 className="font-bold mb-2">{portfolioData.availability}</h3>
+                <h3 className="font-bold mb-2 text-gray-900 dark:text-white">{portfolioData.availability}</h3>
                 <p className="text-sm text-muted-foreground">Taking new projects</p>
               </CardContent>
             </Card>
@@ -593,7 +593,7 @@ export function BentoGridTemplate() {
             <Card className="h-full">
               <CardContent className="p-6 text-center">
                 <div className="text-3xl mb-3">📍</div>
-                <h3 className="font-bold mb-1">{portfolioData.location}</h3>
+                <h3 className="font-bold mb-1 text-gray-900 dark:text-white">{portfolioData.location}</h3>
                 <p className="text-sm text-muted-foreground">Working remotely worldwide</p>
               </CardContent>
             </Card>
@@ -604,8 +604,8 @@ export function BentoGridTemplate() {
             <Card className="h-full bg-gradient-to-br from-indigo-50 to-blue-50 dark:from-indigo-950 dark:to-blue-950 border-indigo-200 dark:border-indigo-800">
               <CardContent className="p-6 text-center">
                 <div className="text-3xl mb-3">📅</div>
-                <h3 className="font-bold mb-2">Book a Call</h3>
-                <Button variant="outline" className="text-white border-white" size="sm">Schedule Meeting</Button>
+                <h3 className="font-bold mb-2 text-gray-900 dark:text-white">Book a Call</h3>
+                <Button variant="outline" className="!text-slate-900 dark:text-white !bg-transparent border-slate-900 dark:border-white" size="sm">Schedule Meeting</Button>
               </CardContent>
             </Card>
           </ScrollReveal>
@@ -614,7 +614,7 @@ export function BentoGridTemplate() {
           <ScrollReveal delay={1.35} className="md:col-span-2 lg:col-span-2">
             <Card className="h-full">
               <CardContent className="p-6">
-                <h3 className="font-bold mb-3">Connect</h3>
+                <h3 className="font-bold mb-3 text-gray-900 dark:text-white">Connect</h3>
                 <div className="flex flex-col gap-2">
                   <Button variant="ghost" size="sm" className="justify-start">
                     <FiGithub className="mr-2" /> GitHub

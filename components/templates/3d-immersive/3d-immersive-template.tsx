@@ -463,7 +463,7 @@ export function ThreeDImmersiveTemplate() {
             <Button size="lg" className="bg-white !text-purple-600 hover:bg-gray-100 font-bold text-xl px-12 py-8 h-auto">
               Start Project
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/20 font-bold text-xl px-12 py-8 h-auto">
+            <Button size="lg" variant="outline" className="border-white !text-white !bg-transparent hover:bg-white/20 font-bold text-xl px-12 py-8 h-auto">
               View Demo
             </Button>
           </div>

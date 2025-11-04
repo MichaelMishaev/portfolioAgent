@@ -138,7 +138,7 @@ export function InteractiveAgencyTemplate() {
               <Button size="lg" className="bg-gradient-to-r from-purple-600 to-cyan-500 hover:from-purple-500 hover:to-cyan-400 text-lg px-8">
                 {tt.common.viewAll} <FiArrowRight className="ml-2" />
               </Button>
-              <Button size="lg" variant="outline" className="border-2 border-purple-500 text-white hover:bg-purple-500/10 text-lg px-8">
+              <Button size="lg" variant="outline" className="border-2 border-purple-500 !text-white !bg-transparent hover:bg-purple-500/10 text-lg px-8">
                 <FiPlay className="mr-2" /> Watch Showreel
               </Button>
             </motion.div>

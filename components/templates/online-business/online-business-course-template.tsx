@@ -165,7 +165,7 @@ export function OnlineBusinessCourseTemplate() {
                 <div className="w-16 h-16 mx-auto mb-4 bg-purple-100 dark:bg-purple-900/30 rounded-2xl flex items-center justify-center">
                   <FiMonitor className="w-8 h-8 text-purple-600" />
                 </div>
-                <h3 className="font-semibold mb-1">{data.features?.onDemand?.title || "On-Demand Videos"}</h3>
+                <h3 className="font-semibold mb-1 text-gray-900 dark:text-white">{data.features?.onDemand?.title || "On-Demand Videos"}</h3>
                 <p className="text-sm text-gray-600 dark:text-gray-400">{data.features?.onDemand?.description || "Watch anytime, anywhere"}</p>
               </div>
             </ScrollReveal>
@@ -174,7 +174,7 @@ export function OnlineBusinessCourseTemplate() {
                 <div className="w-16 h-16 mx-auto mb-4 bg-pink-100 dark:bg-pink-900/30 rounded-2xl flex items-center justify-center">
                   <FiBook className="w-8 h-8 text-pink-600" />
                 </div>
-                <h3 className="font-semibold mb-1">{data.features?.workbooks?.title || "Workbooks & PDFs"}</h3>
+                <h3 className="font-semibold mb-1 text-gray-900 dark:text-white">{data.features?.workbooks?.title || "Workbooks & PDFs"}</h3>
                 <p className="text-sm text-gray-600 dark:text-gray-400">{data.features?.workbooks?.description || "Downloadable resources"}</p>
               </div>
             </ScrollReveal>
@@ -183,7 +183,7 @@ export function OnlineBusinessCourseTemplate() {
                 <div className="w-16 h-16 mx-auto mb-4 bg-blue-100 dark:bg-blue-900/30 rounded-2xl flex items-center justify-center">
                   <FiUsers className="w-8 h-8 text-blue-600" />
                 </div>
-                <h3 className="font-semibold mb-1">{data.features?.community?.title || "Private Community"}</h3>
+                <h3 className="font-semibold mb-1 text-gray-900 dark:text-white">{data.features?.community?.title || "Private Community"}</h3>
                 <p className="text-sm text-gray-600 dark:text-gray-400">{data.features?.community?.description || "Network with peers"}</p>
               </div>
             </ScrollReveal>
@@ -192,7 +192,7 @@ export function OnlineBusinessCourseTemplate() {
                 <div className="w-16 h-16 mx-auto mb-4 bg-green-100 dark:bg-green-900/30 rounded-2xl flex items-center justify-center">
                   <FiAward className="w-8 h-8 text-green-600" />
                 </div>
-                <h3 className="font-semibold mb-1">{data.features?.certificate?.title || "Certificate"}</h3>
+                <h3 className="font-semibold mb-1 text-gray-900 dark:text-white">{data.features?.certificate?.title || "Certificate"}</h3>
                 <p className="text-sm text-gray-600 dark:text-gray-400">{data.features?.certificate?.description || "Upon completion"}</p>
               </div>
             </ScrollReveal>

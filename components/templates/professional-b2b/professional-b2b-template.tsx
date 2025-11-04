@@ -336,7 +336,7 @@ export function ProfessionalB2bTemplate() {
             </div>
 
             <div>
-              <h4 className="font-semibold mb-4">Quick Links</h4>
+              <h4 className="font-semibold mb-4 text-gray-900 dark:text-white">Quick Links</h4>
               <div className="grid grid-cols-2 gap-4">
                 <a href="#services" className="text-gray-400 hover:text-white transition-colors">Services</a>
                 <a href="#case-studies" className="text-gray-400 hover:text-white transition-colors">Case Studies</a>
