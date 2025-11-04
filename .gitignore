@@ -81,6 +81,7 @@ test-screenshots/
 mobile-test-screenshots/
 mobile-deep-check-screenshots/
 screenshots/
+!public/screenshots/
 
 # Scripts
 *.sh
