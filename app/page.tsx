@@ -13,7 +13,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import { FiGrid, FiZap, FiLayers, FiCode, FiTrendingUp, FiCheck, FiMail, FiGithub, FiLinkedin, FiTwitter, FiChevronDown, FiChevronUp, FiFolder } from "react-icons/fi";
 import Link from "next/link";
 import { HowItWorksModal } from "@/components/how-it-works-modal";
-import { HelpCenter } from "@/components/help-center";
 
 function HowItWorksModalWrapper() {
   const { language } = useI18n();
@@ -97,7 +96,7 @@ export default function Home() {
           >
             {/* Title */}
             <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black mb-8 leading-[1.1] tracking-tight">
-              <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+              <span className="text-blue-600 dark:text-blue-400">
                 {language === 'en' ? 'Professional' : 'Профессиональные'}
               </span>
               <br />
@@ -114,21 +113,6 @@ export default function Home() {
             </p>
           </motion.div>
         </div>
-
-        {/* Scroll indicator */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1, duration: 0.5 }}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2"
-        >
-          <a href="#templates" className="flex flex-col items-center gap-2 text-slate-400 hover:text-blue-600 transition-colors group">
-            <span className="text-xs uppercase tracking-wider font-semibold">
-              {language === 'en' ? 'Scroll to explore' : 'Прокрутите вниз'}
-            </span>
-            <FiChevronDown className="w-6 h-6 animate-bounce group-hover:text-blue-600" />
-          </a>
-        </motion.div>
       </section>
 
       {/* How It Works - Visual Flow Section */}
@@ -541,8 +525,6 @@ export default function Home() {
       <MobileBottomNav />
       <ScrollToTop />
 
-      {/* Help Center - Floating Button */}
-      <HelpCenter language={language} />
     </main>
   );
 }

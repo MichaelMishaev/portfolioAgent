@@ -171,11 +171,11 @@ export function TemplateDetailView({ template }: TemplateDetailViewProps) {
               <Button
                 asChild
                 size="lg"
-                className="h-14 text-base font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 hover:from-blue-700 hover:via-purple-700 hover:to-pink-700 shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300 rounded-xl"
+                className="h-14 text-base font-bold bg-gradient-to-r from-purple-600 via-violet-600 to-purple-600 hover:from-purple-700 hover:via-violet-700 hover:to-purple-700 text-white shadow-lg hover:shadow-xl transition-all duration-200 rounded-xl"
               >
                 <Link href={`/templates/${template.id}/builder`} className="flex items-center justify-center gap-2.5">
                   <FiEdit3 className="w-5 h-5" />
-                  <span>{language === 'en' ? 'Try Builder' : 'Попробовать'}</span>
+                  <span>{language === 'en' ? 'Try Builder' : 'Попробовать Билдер'}</span>
                 </Link>
               </Button>
 
@@ -187,7 +187,7 @@ export function TemplateDetailView({ template }: TemplateDetailViewProps) {
               >
                 <Link href={`/templates/${template.id}/demo`} className="flex items-center justify-center gap-2.5">
                   <FiEye className="w-5 h-5" />
-                  <span>{language === 'en' ? 'Live Demo' : 'Демо'}</span>
+                  <span>{language === 'en' ? 'View Demo' : 'Посмотреть Демо'}</span>
                 </Link>
               </Button>
             </div>
@@ -289,40 +289,45 @@ export function TemplateDetailView({ template }: TemplateDetailViewProps) {
             {language === 'en' ? "What's Included" : 'Что включено'}
           </h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {template.whatsIncluded.map((feature, index) => (
-              <Card
-                key={index}
-                className="p-4 cursor-pointer hover:shadow-lg transition-all duration-300 hover:scale-[1.02]"
-                onClick={() => toggleFeature(index)}
-              >
-                <div className="flex items-start gap-3">
-                  <FiCheck className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
-                  <div className="flex-1">
-                    <div className="flex items-center justify-between gap-2">
-                      <span className="font-medium">{feature}</span>
-                      <FiChevronRight
-                        className={`w-4 h-4 text-muted-foreground flex-shrink-0 transition-transform duration-300 ${
-                          expandedFeatures.has(index) ? 'rotate-90' : ''
-                        }`}
-                      />
+            {template.whatsIncluded.map((feature, index) => {
+              const hasExplanation = t.featureExplanations?.[feature];
+              return (
+                <Card
+                  key={index}
+                  className={`p-4 transition-all duration-300 ${hasExplanation ? 'cursor-pointer hover:shadow-lg hover:scale-[1.02]' : ''}`}
+                  onClick={() => hasExplanation && toggleFeature(index)}
+                >
+                  <div className="flex items-start gap-3">
+                    <FiCheck className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
+                    <div className="flex-1">
+                      <div className="flex items-center justify-between gap-2">
+                        <span className="font-medium">{feature}</span>
+                        {hasExplanation && (
+                          <FiChevronRight
+                            className={`w-4 h-4 text-muted-foreground flex-shrink-0 transition-transform duration-300 ${
+                              expandedFeatures.has(index) ? 'rotate-90' : ''
+                            }`}
+                          />
+                        )}
+                      </div>
+                      {hasExplanation && expandedFeatures.has(index) && (
+                        <motion.div
+                          initial={{ opacity: 0, height: 0 }}
+                          animate={{ opacity: 1, height: "auto" }}
+                          exit={{ opacity: 0, height: 0 }}
+                          transition={{ duration: 0.3 }}
+                          className="overflow-hidden"
+                        >
+                          <p className="text-sm text-muted-foreground mt-3 leading-relaxed">
+                            {t.featureExplanations[feature]}
+                          </p>
+                        </motion.div>
+                      )}
                     </div>
-                    {expandedFeatures.has(index) && (
-                      <motion.div
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: "auto" }}
-                        exit={{ opacity: 0, height: 0 }}
-                        transition={{ duration: 0.3 }}
-                        className="overflow-hidden"
-                      >
-                        <p className="text-sm text-muted-foreground mt-3 leading-relaxed">
-                          {t.featureExplanations?.[feature] || ''}
-                        </p>
-                      </motion.div>
-                    )}
                   </div>
-                </div>
-              </Card>
-            ))}
+                </Card>
+              );
+            })}
           </div>
         </motion.div>
 

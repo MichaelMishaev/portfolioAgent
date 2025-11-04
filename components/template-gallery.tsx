@@ -146,11 +146,12 @@ export function TemplateGallery() {
     // Category filter
     const matchesCategory = filter === "all" || template.category === filter;
 
-    // Text search filter (search in name, description, and tags)
+    // Text search filter (search in name, description, tags, and bestFor)
     const matchesSearch = !searchQuery ||
       template.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
       template.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      template.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+      template.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())) ||
+      (template.bestFor && template.bestFor.some(item => item.toLowerCase().includes(searchQuery.toLowerCase())));
 
     // Tag filter (exact match or contains)
     const matchesTag = !selectedTag ||
@@ -348,51 +349,49 @@ export function TemplateGallery() {
             <Card className="h-full flex flex-col hover:shadow-2xl transition-all duration-500 group border-0 bg-card/50 backdrop-blur-sm overflow-hidden">
               {/* Thumbnail with Enhanced Hover Effects */}
               <CardHeader className="p-0 flex-shrink-0">
-                <Link href={`/templates/${template.id}`} onClick={handleTemplateClick}>
-                  <div className="aspect-[4/3] bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 relative overflow-hidden cursor-pointer">
-                    <img
-                      src={template.thumbnail}
-                      alt={`${template.name} preview`}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
-                      loading="lazy"
-                      onError={(e) => {
-                        e.currentTarget.style.display = 'none';
-                      }}
-                    />
+                <div className="aspect-[4/3] bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 relative overflow-hidden cursor-pointer">
+                  <img
+                    src={template.thumbnail}
+                    alt={`${template.name} preview`}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
+                    loading="lazy"
+                    onError={(e) => {
+                      e.currentTarget.style.display = 'none';
+                    }}
+                  />
 
-                    {/* Premium Gradient Overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  {/* Premium Gradient Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-                    {/* Floating Action Buttons */}
-                    <div className="absolute inset-0 flex items-center justify-center gap-3 opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
-                      <Button
-                        size="lg"
-                        variant="secondary"
-                        className="shadow-2xl backdrop-blur-sm bg-white/95 hover:bg-white border-2 border-white/20 font-semibold"
-                        asChild
-                      >
-                        <Link href={`/templates/${template.id}`} onClick={handleTemplateClick}>
-                          <FiEye className="mr-2 h-5 w-5" />
-                          {language === 'en' ? 'Preview' : 'Просмотр'}
-                        </Link>
-                      </Button>
-                    </div>
-
-                    {/* Difficulty Badge - Top Right */}
-                    <div className="absolute top-3 right-3">
-                      <Badge className="text-xs font-semibold px-3 py-1 bg-white/95 dark:bg-gray-900/95 text-gray-900 dark:text-gray-100 backdrop-blur-sm shadow-lg">
-                        {t.ui[template.difficulty]}
-                      </Badge>
-                    </div>
-
-                    {/* Category Badge - Top Left */}
-                    <div className="absolute top-3 left-3">
-                      <Badge className="text-xs font-semibold px-3 py-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg">
-                        {t.categories[template.category as keyof typeof t.categories] || template.category}
-                      </Badge>
-                    </div>
+                  {/* Floating Action Buttons */}
+                  <div className="absolute inset-0 flex items-center justify-center gap-3 opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
+                    <Button
+                      size="lg"
+                      variant="secondary"
+                      className="shadow-2xl backdrop-blur-sm bg-white/95 hover:bg-white border-2 border-white/20 font-semibold"
+                      asChild
+                    >
+                      <Link href={`/templates/${template.id}`} onClick={handleTemplateClick}>
+                        <FiEye className="mr-2 h-5 w-5" />
+                        {language === 'en' ? 'Preview' : 'Просмотр'}
+                      </Link>
+                    </Button>
                   </div>
-                </Link>
+
+                  {/* Difficulty Badge - Top Right */}
+                  <div className="absolute top-3 right-3">
+                    <Badge className="text-xs font-semibold px-3 py-1 bg-white/95 dark:bg-gray-900/95 text-gray-900 dark:text-gray-100 backdrop-blur-sm shadow-lg">
+                      {t.ui[template.difficulty]}
+                    </Badge>
+                  </div>
+
+                  {/* Category Badge - Top Left */}
+                  <div className="absolute top-3 left-3">
+                    <Badge className="text-xs font-semibold px-3 py-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg">
+                      {t.categories[template.category as keyof typeof t.categories] || template.category}
+                    </Badge>
+                  </div>
+                </div>
               </CardHeader>
 
               {/* Content Section */}
@@ -453,7 +452,7 @@ export function TemplateGallery() {
                 <div className="mt-auto">
                   <Button
                     asChild
-                    className="w-full h-12 text-base font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 hover:from-blue-700 hover:via-purple-700 hover:to-pink-700 shadow-lg hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 rounded-xl"
+                    className="w-full h-12 text-base font-bold bg-blue-600 hover:bg-blue-700 shadow-lg hover:shadow-xl transition-all duration-200 rounded-xl"
                     size="lg"
                   >
                     <Link href={`/templates/${template.id}`} onClick={handleTemplateClick} className="flex items-center justify-center gap-2.5">
