@@ -455,6 +455,128 @@ return (
         </div>
       </section>
 
+      {/* Skills - Organic Liquid Style */}
+      <section className="py-20 px-3 sm:px-3 bg-gradient-to-br from-rose-50 via-amber-50 to-emerald-50 dark:from-gray-900 dark:via-rose-950 dark:to-gray-900">
+        <div className="container mx-auto max-w-6xl">
+          <ScrollReveal>
+            <h2 className="text-4xl md:text-6xl font-bold mb-12 text-center bg-gradient-to-r from-rose-600 via-amber-600 to-emerald-600 bg-clip-text text-transparent">
+              Skills & Expertise
+            </h2>
+          </ScrollReveal>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {[
+              { name: 'React', color: 'from-rose-400 to-pink-400' },
+              { name: 'TypeScript', color: 'from-blue-400 to-cyan-400' },
+              { name: 'Design', color: 'from-purple-400 to-indigo-400' },
+              { name: 'Node.js', color: 'from-green-400 to-emerald-400' },
+              { name: 'Next.js', color: 'from-gray-600 to-gray-800' },
+              { name: 'Tailwind', color: 'from-teal-400 to-cyan-400' },
+              { name: 'Figma', color: 'from-orange-400 to-red-400' },
+              { name: 'Framer', color: 'from-violet-400 to-purple-400' }
+            ].map((skill, i) => (
+              <ScrollReveal key={i} delay={i * 0.05}>
+                <div className={`bg-gradient-to-br ${skill.color} p-6 rounded-[2.5rem] text-white text-center font-semibold text-lg shadow-lg hover:scale-105 transition-transform`}>
+                  {skill.name}
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing - Organic Liquid Style */}
+      <section className="py-20 px-3 sm:px-3">
+        <div className="container mx-auto max-w-6xl">
+          <ScrollReveal>
+            <h2 className="text-4xl md:text-6xl font-bold mb-4 text-center bg-gradient-to-r from-rose-600 via-amber-600 to-emerald-600 bg-clip-text text-transparent">
+              Pricing
+            </h2>
+            <p className="text-center text-lg text-muted-foreground mb-12">Flexible plans for every need</p>
+          </ScrollReveal>
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              { name: 'Seed', price: '$399', gradient: 'from-green-400 to-emerald-500', features: ['Landing Page', '2 Revisions', 'Responsive Design', 'Basic SEO'] },
+              { name: 'Bloom', price: '$999', gradient: 'from-rose-400 to-pink-500', features: ['Multi-Page Site', '5 Revisions', 'Custom Design', 'Advanced SEO', 'CMS Integration'], popular: true },
+              { name: 'Forest', price: '$2499', gradient: 'from-purple-400 to-indigo-500', features: ['Full Application', 'Unlimited Revisions', 'Custom Features', 'API Development', 'Priority Support', 'Maintenance'] }
+            ].map((plan, i) => (
+              <ScrollReveal key={i} delay={i * 0.1}>
+                <div className={`relative p-8 rounded-[3rem] bg-gradient-to-br ${plan.gradient} text-white shadow-2xl hover:scale-105 transition-transform ${plan.popular ? 'ring-4 ring-amber-400' : ''}`}>
+                  {plan.popular && (
+                    <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-amber-400 text-amber-900 px-6 py-2 rounded-full font-bold text-sm">
+                      Most Popular
+                    </div>
+                  )}
+                  <h3 className="text-3xl font-bold mb-2">{plan.name}</h3>
+                  <div className="text-5xl font-bold mb-8">{plan.price}</div>
+                  <ul className="space-y-3 mb-8">
+                    {plan.features.map((f, j) => (
+                      <li key={j} className="flex items-start gap-2 text-sm">
+                        <span>✓</span>
+                        <span>{f}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <Button className="w-full bg-white/20 hover:bg-white/30 backdrop-blur text-white border-2 border-white/50 rounded-full">
+                    Choose Plan
+                  </Button>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Gallery - Organic Liquid Style */}
+      <section className="py-20 px-3 sm:px-3 bg-gradient-to-br from-amber-50 via-rose-50 to-purple-50 dark:from-gray-900 dark:via-amber-950 dark:to-gray-900">
+        <div className="container mx-auto max-w-6xl">
+          <ScrollReveal>
+            <h2 className="text-4xl md:text-6xl font-bold mb-12 text-center bg-gradient-to-r from-amber-600 via-rose-600 to-purple-600 bg-clip-text text-transparent">
+              Gallery
+            </h2>
+          </ScrollReveal>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+            {[
+              { gradient: 'from-rose-400 to-pink-500', shape: 'rounded-[3rem]' },
+              { gradient: 'from-amber-400 to-orange-500', shape: 'rounded-[2rem_3rem]' },
+              { gradient: 'from-emerald-400 to-teal-500', shape: 'rounded-[3rem_2rem]' },
+              { gradient: 'from-purple-400 to-indigo-500', shape: 'rounded-[2.5rem]' },
+              { gradient: 'from-blue-400 to-cyan-500', shape: 'rounded-[2rem_4rem]' },
+              { gradient: 'from-pink-400 to-rose-500', shape: 'rounded-[4rem_2rem]' }
+            ].map((item, i) => (
+              <ScrollReveal key={i} delay={i * 0.05}>
+                <div className={`aspect-square bg-gradient-to-br ${item.gradient} ${item.shape} shadow-xl hover:scale-105 transition-transform cursor-pointer`}>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Call to Action - Organic Liquid Style */}
+      <section className="py-32 px-3 sm:px-3 bg-gradient-to-br from-rose-500 via-amber-500 to-emerald-500 text-white">
+        <div className="container mx-auto max-w-4xl text-center">
+          <ScrollReveal>
+            <div className="bg-white/10 backdrop-blur-xl p-12 rounded-[4rem] border-2 border-white/30">
+              <h2 className="text-4xl md:text-6xl font-bold mb-6">
+                Let's Create Something Beautiful
+              </h2>
+              <p className="text-xl mb-8 opacity-90">
+                Transform your ideas into flowing, organic digital experiences
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button size="lg" className="bg-white text-rose-600 hover:bg-white/90 rounded-full font-semibold text-lg px-8">
+                  <FiMail className="mr-2" />
+                  Start Project
+                </Button>
+                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/20 rounded-full font-semibold text-lg px-8">
+                  View Portfolio
+                </Button>
+              </div>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="border-t border-rose-200/50 dark:border-rose-800/50 bg-white/40 dark:bg-gray-900/40 backdrop-blur py-8">
         <div className="container mx-auto px-3 sm:px-3">

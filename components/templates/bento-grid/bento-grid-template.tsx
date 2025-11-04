@@ -669,6 +669,34 @@ export function BentoGridTemplate() {
         </div>
       </div>
 
+      {/* Pricing Bento */}
+      <section className="py-20 px-3">
+        <div className="container mx-auto max-w-6xl">
+          <h2 className="text-4xl font-bold mb-12">Pricing</h2>
+          <div className="grid md:grid-cols-3 gap-6">
+            {[{n:"Starter",p:"$49"},{n:"Professional",p:"$149"},{n:"Enterprise",p:"$499"}].map((p,i) => (
+              <div key={i} className="rounded-3xl border-2 p-8 hover:shadow-xl transition-shadow">
+                <h3 className="text-2xl font-bold mb-4">{p.n}</h3>
+                <div className="text-5xl font-bold mb-6">{p.p}</div>
+                <Button className="w-full">Choose Plan</Button>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Gallery Bento */}
+      <section className="py-20 px-3 bg-muted/20">
+        <div className="container mx-auto max-w-6xl">
+          <h2 className="text-4xl font-bold mb-12">Gallery</h2>
+          <div className="grid grid-cols-6 gap-4">
+            {[...Array(12)].map((_,i) => (
+              <div key={i} className={`rounded-2xl bg-gradient-to-br from-primary/30 to-secondary/30 ${i%5===0?'col-span-3 row-span-2':'col-span-2'} aspect-square`}></div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="border-t bg-white dark:bg-gray-900 py-8">
         <div className="container mx-auto px-3 max-w-full">

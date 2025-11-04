@@ -446,6 +446,141 @@ return (
         </ScrollReveal>
       </section>
 
+      {/* Skills - Illustration Style */}
+      <section className="py-20 px-3 sm:px-3 bg-gradient-to-br from-yellow-50 to-orange-50 dark:from-gray-900 dark:to-gray-800">
+        <div className="container mx-auto max-w-6xl">
+          <ScrollReveal>
+            <div className="text-center mb-12">
+              <span className="text-6xl mb-6 inline-block">🎨</span>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">Skills & Tools</h2>
+            </div>
+          </ScrollReveal>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {[
+              { icon: '⚛️', name: 'React' },
+              { icon: '📘', name: 'TypeScript' },
+              { icon: '⚡', name: 'Next.js' },
+              { icon: '🎨', name: 'Figma' },
+              { icon: '🎭', name: 'Framer Motion' },
+              { icon: '💅', name: 'Tailwind CSS' },
+              { icon: '🔧', name: 'Node.js' },
+              { icon: '🗄️', name: 'PostgreSQL' }
+            ].map((skill, i) => (
+              <ScrollReveal key={i} delay={i * 0.05}>
+                <div className="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-md hover:shadow-xl transition-shadow text-center">
+                  <div className="text-4xl mb-3">{skill.icon}</div>
+                  <div className="font-semibold">{skill.name}</div>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing - Illustration Style */}
+      <section className="py-20 px-3 sm:px-3">
+        <div className="container mx-auto max-w-6xl">
+          <ScrollReveal>
+            <div className="text-center mb-12">
+              <span className="text-6xl mb-6 inline-block">💰</span>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">Pricing Plans</h2>
+              <p className="text-xl text-muted-foreground">Choose the perfect package for your project</p>
+            </div>
+          </ScrollReveal>
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              { icon: '🌱', name: 'Starter', price: '$349', features: ['Simple Landing Page', '2 Revisions', 'Mobile Responsive', 'Basic SEO'] },
+              { icon: '🚀', name: 'Professional', price: '$849', features: ['Multi-Page Website', '5 Revisions', 'Custom Illustrations', 'Advanced SEO', 'CMS Integration'], popular: true },
+              { icon: '⭐', name: 'Premium', price: '$1999', features: ['Full Web Application', 'Unlimited Revisions', 'Custom Animations', 'API Integration', 'Dedicated Support', 'Performance Optimization'] }
+            ].map((plan, i) => (
+              <ScrollReveal key={i} delay={i * 0.1}>
+                <div className={`p-8 rounded-3xl transition-all hover:scale-105 ${
+                  plan.popular
+                    ? 'bg-gradient-to-br from-pink-500 to-purple-500 text-white shadow-2xl'
+                    : 'bg-white dark:bg-gray-800 shadow-lg'
+                }`}>
+                  <div className="text-5xl mb-4">{plan.icon}</div>
+                  <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
+                  <div className="text-4xl font-bold mb-6">{plan.price}</div>
+                  <ul className="space-y-3 mb-8">
+                    {plan.features.map((f, j) => (
+                      <li key={j} className="flex items-start gap-2">
+                        <span className={plan.popular ? 'text-white' : 'text-pink-500'}>✓</span>
+                        <span className="text-sm">{f}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <Button className={`w-full ${plan.popular ? 'bg-white text-purple-600 hover:bg-gray-100' : 'bg-gradient-to-r from-pink-500 to-purple-500 text-white'}`}>
+                    Get Started
+                  </Button>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Gallery - Illustration Style */}
+      <section className="py-20 px-3 sm:px-3 bg-gradient-to-br from-blue-50 to-purple-50 dark:from-gray-900 dark:to-gray-800">
+        <div className="container mx-auto max-w-6xl">
+          <ScrollReveal>
+            <div className="text-center mb-12">
+              <span className="text-6xl mb-6 inline-block">🖼️</span>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">Gallery</h2>
+            </div>
+          </ScrollReveal>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+            {[
+              { emoji: '🎪', color: 'from-red-400 to-pink-400' },
+              { emoji: '🎭', color: 'from-purple-400 to-indigo-400' },
+              { emoji: '🎨', color: 'from-blue-400 to-cyan-400' },
+              { emoji: '🎯', color: 'from-green-400 to-teal-400' },
+              { emoji: '🎸', color: 'from-yellow-400 to-orange-400' },
+              { emoji: '🎮', color: 'from-pink-400 to-rose-400' }
+            ].map((item, i) => (
+              <ScrollReveal key={i} delay={i * 0.05}>
+                <div className={`aspect-square rounded-3xl bg-gradient-to-br ${item.color} flex items-center justify-center text-6xl hover:scale-105 transition-transform cursor-pointer shadow-lg`}>
+                  {item.emoji}
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Timeline - Illustration Style */}
+      <section className="py-20 px-3 sm:px-3">
+        <div className="container mx-auto max-w-4xl">
+          <ScrollReveal>
+            <div className="text-center mb-12">
+              <span className="text-6xl mb-6 inline-block">📅</span>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">My Journey</h2>
+            </div>
+          </ScrollReveal>
+          <div className="space-y-8">
+            {[
+              { year: '2024', icon: '🚀', title: 'Senior Creative Developer', company: 'Innovation Studio' },
+              { year: '2022', icon: '🎨', title: 'Lead Designer & Developer', company: 'Creative Agency' },
+              { year: '2020', icon: '💻', title: 'Full Stack Developer', company: 'Tech Startup' },
+              { year: '2018', icon: '🌱', title: 'Junior Developer', company: 'Digital Agency' }
+            ].map((item, i) => (
+              <ScrollReveal key={i} delay={i * 0.05}>
+                <div className="flex gap-6 items-start">
+                  <div className="flex-shrink-0 w-24 text-center">
+                    <div className="text-3xl mb-2">{item.icon}</div>
+                    <div className="font-bold text-sm text-muted-foreground">{item.year}</div>
+                  </div>
+                  <div className="flex-1 bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-md">
+                    <h3 className="font-bold text-lg mb-2">{item.title}</h3>
+                    <p className="text-muted-foreground">{item.company}</p>
+                  </div>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="border-t bg-white/50 dark:bg-gray-900/50 backdrop-blur">
         <div className="container mx-auto px-3 sm:px-3 py-8">

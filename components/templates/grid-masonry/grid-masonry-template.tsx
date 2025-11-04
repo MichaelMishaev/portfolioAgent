@@ -444,6 +444,126 @@ export function GridMasonryTemplate() {
         )}
       </AnimatePresence>
 
+      {/* Skills - Masonry Grid Style */}
+      <section className="py-20 px-3 sm:px-3 bg-muted/30">
+        <div className="container mx-auto max-w-6xl">
+          <ScrollReveal>
+            <h2 className="text-4xl font-bold mb-12">Skills & Expertise</h2>
+          </ScrollReveal>
+          <div className="columns-2 md:columns-4 gap-4 space-y-4">
+            {['React', 'TypeScript', 'Next.js', 'Node.js', 'Tailwind CSS', 'GraphQL', 'PostgreSQL', 'Docker', 'AWS', 'Figma', 'Git', 'REST APIs'].map((skill, i) => (
+              <ScrollReveal key={i} delay={i * 0.03}>
+                <div className="break-inside-avoid bg-background p-4 rounded-lg border hover:shadow-md transition-shadow">
+                  <span className="font-semibold">{skill}</span>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* About - Masonry Style */}
+      <section className="py-20 px-3 sm:px-3">
+        <div className="container mx-auto max-w-4xl">
+          <ScrollReveal>
+            <h2 className="text-4xl font-bold mb-8">About Me</h2>
+            <div className="prose prose-lg max-w-none">
+              <p className="text-lg text-muted-foreground mb-6">
+                I'm a full-stack developer with over 6 years of experience building modern web applications.
+                My passion lies in creating elegant solutions to complex problems.
+              </p>
+              <p className="text-lg text-muted-foreground">
+                I specialize in React, Next.js, and Node.js, and I'm always exploring new technologies
+                to improve my craft and deliver better results for my clients.
+              </p>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* Pricing - Masonry Grid */}
+      <section className="py-20 px-3 sm:px-3 bg-muted/30">
+        <div className="container mx-auto max-w-6xl">
+          <ScrollReveal>
+            <h2 className="text-4xl font-bold mb-12">Pricing</h2>
+          </ScrollReveal>
+          <div className="columns-1 md:columns-3 gap-6 space-y-6">
+            {[
+              { name: 'Starter', price: '$399', features: ['Single Page Site', '2 Revisions', 'Responsive Design', 'Basic SEO'], height: 'h-64' },
+              { name: 'Business', price: '$899', features: ['Multi-Page Site', '5 Revisions', 'Custom Design', 'Advanced SEO', 'CMS Integration', 'Analytics'], height: 'h-80' },
+              { name: 'Enterprise', price: '$2199', features: ['Full Application', 'Unlimited Revisions', 'Custom Features', 'API Development', 'Database Design', 'Priority Support', 'Maintenance'], height: 'h-96' }
+            ].map((plan, i) => (
+              <ScrollReveal key={i} delay={i * 0.1}>
+                <div className={`break-inside-avoid bg-background p-8 rounded-lg border hover:shadow-lg transition-shadow ${plan.height}`}>
+                  <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
+                  <div className="text-4xl font-bold mb-6 text-primary">{plan.price}</div>
+                  <ul className="space-y-2">
+                    {plan.features.map((f, j) => (
+                      <li key={j} className="text-sm flex items-start gap-2">
+                        <span className="text-primary mt-0.5">✓</span>
+                        <span>{f}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <Button className="w-full mt-6">Choose Plan</Button>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Gallery - Masonry Grid */}
+      <section className="py-20 px-3 sm:px-3">
+        <div className="container mx-auto max-w-6xl">
+          <ScrollReveal>
+            <h2 className="text-4xl font-bold mb-12">Gallery</h2>
+          </ScrollReveal>
+          <div className="columns-2 md:columns-3 gap-4 space-y-4">
+            {[
+              { h: 'h-48' }, { h: 'h-64' }, { h: 'h-56' },
+              { h: 'h-72' }, { h: 'h-52' }, { h: 'h-60' },
+              { h: 'h-64' }, { h: 'h-48' }, { h: 'h-68' }
+            ].map((item, i) => (
+              <ScrollReveal key={i} delay={i * 0.05}>
+                <div className={`break-inside-avoid ${item.h} bg-gradient-to-br from-primary/20 to-secondary/20 rounded-lg hover:scale-105 transition-transform cursor-pointer`}>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Timeline - Masonry Style */}
+      <section className="py-20 px-3 sm:px-3 bg-muted/30">
+        <div className="container mx-auto max-w-4xl">
+          <ScrollReveal>
+            <h2 className="text-4xl font-bold mb-12">Timeline</h2>
+          </ScrollReveal>
+          <div className="space-y-6">
+            {[
+              { year: '2024', title: 'Senior Full Stack Developer', company: 'Tech Innovations', desc: 'Leading development of cloud-native applications' },
+              { year: '2022', title: 'Lead Developer', company: 'Digital Solutions', desc: 'Built scalable web platforms for enterprise clients' },
+              { year: '2020', title: 'Full Stack Developer', company: 'Startup Hub', desc: 'Developed MVPs for multiple successful startups' },
+              { year: '2018', title: 'Junior Developer', company: 'Web Agency', desc: 'Learned modern web development practices' }
+            ].map((item, i) => (
+              <ScrollReveal key={i} delay={i * 0.05}>
+                <div className="bg-background p-6 rounded-lg border">
+                  <div className="flex items-start gap-4">
+                    <div className="text-sm font-mono text-primary w-16 flex-shrink-0">{item.year}</div>
+                    <div className="flex-1">
+                      <h3 className="font-bold text-lg mb-1">{item.title}</h3>
+                      <div className="text-sm text-muted-foreground mb-2">{item.company}</div>
+                      <p className="text-sm text-muted-foreground">{item.desc}</p>
+                    </div>
+                  </div>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="border-t bg-background">
         <div className="container mx-auto px-3 sm:px-3 py-8">

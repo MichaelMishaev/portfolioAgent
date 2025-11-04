@@ -363,6 +363,138 @@ export function ThreeDImmersiveTemplate() {
       </section>
 
       {/* Footer */}
+      {/* Stats - 3D Immersive Style */}
+      <section className="py-20 px-3 sm:px-3 bg-black relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-900/30 to-blue-900/30"></div>
+        <div className="container mx-auto max-w-6xl relative">
+          <h2 className="text-5xl md:text-7xl font-bold mb-16 text-center text-white">Stats</h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {[
+              { num: '50+', label: '3D Projects' },
+              { num: '100K', label: 'Polygons' },
+              { num: '60fps', label: 'Performance' },
+              { num: '99%', label: 'Satisfaction' }
+            ].map((stat, i) => (
+              <div key={i} className="bg-white/5 backdrop-blur-xl p-8 rounded-2xl border border-white/10 hover:bg-white/10 transition-all transform hover:scale-105">
+                <div className="text-5xl font-bold text-white mb-2">{stat.num}</div>
+                <div className="text-sm text-gray-400 uppercase">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* About - 3D Immersive */}
+      <section className="py-32 px-3 sm:px-3 bg-gradient-to-br from-indigo-950 to-black">
+        <div className="container mx-auto max-w-4xl text-center text-white">
+          <h2 className="text-5xl md:text-7xl font-bold mb-8">About</h2>
+          <p className="text-2xl text-gray-300 mb-6">
+            Crafting immersive 3D experiences that push the boundaries of web technology.
+          </p>
+          <p className="text-xl text-gray-400">
+            Specializing in WebGL, Three.js, and cutting-edge 3D web development.
+          </p>
+        </div>
+      </section>
+
+      {/* Pricing - 3D Immersive */}
+      <section className="py-20 px-3 sm:px-3 bg-black">
+        <div className="container mx-auto max-w-6xl">
+          <h2 className="text-5xl md:text-7xl font-bold mb-16 text-center text-white">Pricing</h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              { name: 'Basic 3D', price: '$999', features: ['Simple 3D Scene', '2 Models', 'Basic Animation', '2 Revisions'] },
+              { name: 'Advanced 3D', price: '$2999', features: ['Complex Scene', '10+ Models', 'Advanced Animation', '5 Revisions', 'Physics Engine'], popular: true },
+              { name: 'Ultra 3D', price: '$6999', features: ['Unlimited Models', 'Custom Shaders', 'Real-time Rendering', 'Unlimited Revisions', 'VR/AR Ready'] }
+            ].map((plan, i) => (
+              <div key={i} className={`bg-white/5 backdrop-blur-xl p-8 rounded-2xl border transition-all hover:scale-105 ${
+                plan.popular ? 'border-purple-500 ring-4 ring-purple-500/20' : 'border-white/10'
+              }`}>
+                {plan.popular && <div className="text-xs font-bold text-purple-400 mb-2 uppercase">Most Popular</div>}
+                <h3 className="text-2xl font-bold mb-2 text-white">{plan.name}</h3>
+                <div className="text-5xl font-bold mb-8 text-white">{plan.price}</div>
+                <ul className="space-y-3 mb-8">
+                  {plan.features.map((f, j) => (
+                    <li key={j} className="flex items-start gap-2 text-sm text-gray-300">
+                      <span className="text-purple-400 mt-0.5">✓</span>
+                      <span>{f}</span>
+                    </li>
+                  ))}
+                </ul>
+                <Button className={`w-full ${plan.popular ? 'bg-purple-600 hover:bg-purple-700' : 'bg-white/10 hover:bg-white/20'} text-white`}>
+                  Select Plan
+                </Button>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials - 3D Immersive */}
+      <section className="py-20 px-3 sm:px-3 bg-gradient-to-br from-purple-950 to-black">
+        <div className="container mx-auto max-w-4xl">
+          <h2 className="text-5xl md:text-7xl font-bold mb-16 text-center text-white">Testimonials</h2>
+          <div className="space-y-8">
+            {[
+              { text: 'Mind-blowing 3D work. Our website has never looked better!', author: 'Alex Turner', role: 'Creative Director' },
+              { text: 'The immersive experience increased our engagement by 300%!', author: 'Maria Garcia', role: 'Marketing Head' },
+              { text: 'Professional, innovative, and delivered on time. Highly recommend!', author: 'John Smith', role: 'CEO, TechCorp' }
+            ].map((t, i) => (
+              <div key={i} className="bg-white/5 backdrop-blur-xl p-8 rounded-2xl border border-white/10">
+                <p className="text-lg text-gray-300 mb-4 italic">&ldquo;{t.text}&rdquo;</p>
+                <div>
+                  <div className="font-bold text-white">{t.author}</div>
+                  <div className="text-sm text-gray-400">{t.role}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Call to Action - 3D Immersive */}
+      <section className="py-32 px-3 sm:px-3 bg-gradient-to-br from-purple-600 via-pink-600 to-blue-600">
+        <div className="container mx-auto max-w-4xl text-center text-white">
+          <h2 className="text-5xl md:text-7xl font-bold mb-8">Ready to Go 3D?</h2>
+          <p className="text-2xl mb-12 opacity-90">
+            Let's create an unforgettable immersive experience
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button size="lg" className="bg-white text-purple-600 hover:bg-gray-100 font-bold text-xl px-12 py-8 h-auto">
+              Start Project
+            </Button>
+            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/20 font-bold text-xl px-12 py-8 h-auto">
+              View Demo
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Timeline - 3D Immersive */}
+      <section className="py-20 px-3 sm:px-3 bg-black">
+        <div className="container mx-auto max-w-4xl">
+          <h2 className="text-5xl md:text-7xl font-bold mb-16 text-center text-white">Timeline</h2>
+          <div className="space-y-8">
+            {[
+              { year: '2024', title: '3D Creative Director', company: 'Immersive Labs' },
+              { year: '2022', title: 'Lead 3D Developer', company: 'WebGL Studios' },
+              { year: '2020', title: '3D Designer', company: 'Digital Dimension' },
+              { year: '2018', title: 'Junior 3D Artist', company: 'Pixel Factory' }
+            ].map((item, i) => (
+              <div key={i} className="flex gap-6">
+                <div className="flex-shrink-0 w-24 text-center">
+                  <div className="text-3xl font-bold text-purple-400">{item.year}</div>
+                </div>
+                <div className="flex-1 bg-white/5 backdrop-blur-xl p-6 rounded-2xl border border-white/10">
+                  <h3 className="font-bold text-xl mb-2 text-white">{item.title}</h3>
+                  <p className="text-gray-400">{item.company}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <footer className="border-t border-gray-800 bg-black py-8">
         <div className="container mx-auto px-3 sm:px-3">
           <p className="text-sm text-gray-500 text-center">

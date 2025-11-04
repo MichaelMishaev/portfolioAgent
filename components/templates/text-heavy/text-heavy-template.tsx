@@ -474,6 +474,54 @@ return (
         </ScrollReveal>
       </section>
 
+      {/* Pricing - Text-Heavy Style */}
+      <section className="py-20 px-3 border-t">
+        <div className="container mx-auto max-w-4xl">
+          <ScrollReveal>
+            <h2 className="text-4xl font-bold mb-8">Services & Pricing</h2>
+            <div className="prose prose-lg max-w-none space-y-8">
+              <div className="border-l-4 border-primary pl-6">
+                <h3 className="text-2xl font-bold mb-2">Consulting - $200/hour</h3>
+                <p className="text-muted-foreground">Strategic guidance, code review, and technical advisory services for your projects.</p>
+              </div>
+              <div className="border-l-4 border-primary pl-6">
+                <h3 className="text-2xl font-bold mb-2">Project Work - $5K-$20K</h3>
+                <p className="text-muted-foreground">Full-stack development from concept to deployment. Fixed-price or milestone-based billing available.</p>
+              </div>
+              <div className="border-l-4 border-primary pl-6">
+                <h3 className="text-2xl font-bold mb-2">Retainer - $3K/month</h3>
+                <p className="text-muted-foreground">Ongoing development support with priority access and dedicated hours each month.</p>
+              </div>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* Timeline - Text Format */}
+      <section className="py-20 px-3 bg-muted/30">
+        <div className="container mx-auto max-w-4xl">
+          <ScrollReveal>
+            <h2 className="text-4xl font-bold mb-12">Professional Timeline</h2>
+            <div className="space-y-12">
+              {[
+                {y:"2024",t:"Lead Engineer",c:"Tech Startup",d:"Leading full-stack development team building scalable web applications."},
+                {y:"2022",t:"Senior Developer",c:"Digital Agency",d:"Architected and delivered 15+ client projects using React and Node.js."},
+                {y:"2020",t:"Full-Stack Developer",c:"SaaS Company",d:"Built core features for B2B platform serving 10,000+ users."},
+                {y:"2018",t:"Junior Developer",c:"Web Studio",d:"Gained foundation in modern web development and agile methodologies."}
+              ].map((item,i) => (
+                <div key={i} className="relative pl-8 border-l-2 border-muted-foreground/20">
+                  <div className="absolute -left-2 top-0 w-4 h-4 rounded-full bg-primary"></div>
+                  <div className="text-sm font-mono text-muted-foreground mb-2">{item.y}</div>
+                  <h3 className="text-xl font-bold mb-1">{item.t}</h3>
+                  <div className="text-lg text-muted-foreground mb-2">{item.c}</div>
+                  <p className="text-muted-foreground leading-relaxed">{item.d}</p>
+                </div>
+              ))}
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="border-t bg-background py-12">
         <div className="container mx-auto px-3 sm:px-3 max-w-full">

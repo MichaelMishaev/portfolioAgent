@@ -37,6 +37,140 @@ const portfolioData = {
   name: "DataViz Pro",
   title: "Data Analyst & Visualization Specialist",
   tagline: "Turning complex data into actionable insights",
+  about: "With over 8 years of experience in data analytics and visualization, I help businesses make data-driven decisions through intuitive dashboards and comprehensive reports. Specialized in Python, R, SQL, and modern BI tools.",
+  email: "contact@datavizpro.com",
+  stats: [
+    { label: "Projects Completed", value: "150+" },
+    { label: "Companies Served", value: "50+" },
+    { label: "Data Points Analyzed", value: "10M+" },
+    { label: "Satisfaction Rate", value: "99%" },
+  ],
+  skills: [
+    "Python & Pandas",
+    "SQL & PostgreSQL",
+    "Tableau & Power BI",
+    "Data Visualization",
+    "Statistical Analysis",
+    "Machine Learning",
+    "ETL Pipelines",
+    "Dashboard Design",
+  ],
+  testimonials: [
+    {
+      quote: "DataViz Pro transformed our messy data into clear, actionable insights. The dashboards are stunning and incredibly useful.",
+      author: "Sarah Johnson",
+      role: "CEO, TechStart Inc",
+    },
+    {
+      quote: "Working with this team was seamless. They understood our data challenges and delivered solutions that exceeded expectations.",
+      author: "Michael Chen",
+      role: "Data Director, FinanceHub",
+    },
+    {
+      quote: "The best data analyst we've worked with. Fast, professional, and delivers results that drive business decisions.",
+      author: "Emma Williams",
+      role: "VP Analytics, RetailCorp",
+    },
+  ],
+  pricing: [
+    {
+      name: "Starter",
+      price: "$1,500",
+      period: "per project",
+      features: [
+        "Basic Dashboard Setup",
+        "Up to 3 Data Sources",
+        "5 Custom Visualizations",
+        "Email Support",
+        "1 Revision Round",
+      ],
+    },
+    {
+      name: "Professional",
+      price: "$3,500",
+      period: "per project",
+      popular: true,
+      features: [
+        "Advanced Dashboard Design",
+        "Unlimited Data Sources",
+        "15 Custom Visualizations",
+        "Priority Support",
+        "3 Revision Rounds",
+        "Data Pipeline Setup",
+        "Training Session Included",
+      ],
+    },
+    {
+      name: "Enterprise",
+      price: "Custom",
+      period: "contact us",
+      features: [
+        "Full BI Solution",
+        "Custom Development",
+        "Real-time Data Processing",
+        "Dedicated Support",
+        "Unlimited Revisions",
+        "Team Training",
+        "Ongoing Maintenance",
+      ],
+    },
+  ],
+  timeline: [
+    {
+      year: "2023-2024",
+      title: "Senior Data Analyst",
+      company: "Tech Giants Inc",
+      description: "Led data visualization initiatives for Fortune 500 clients, creating executive dashboards and predictive models.",
+    },
+    {
+      year: "2021-2023",
+      title: "Data Analyst",
+      company: "Analytics Pro",
+      description: "Developed automated reporting systems and built interactive dashboards using Tableau and Power BI.",
+    },
+    {
+      year: "2019-2021",
+      title: "Junior Data Analyst",
+      company: "StartupData",
+      description: "Analyzed customer behavior data and created visualizations to support marketing decisions.",
+    },
+    {
+      year: "2016-2019",
+      title: "Data Science Degree",
+      company: "University of Data",
+      description: "Graduated with honors, specializing in statistical analysis and machine learning.",
+    },
+  ],
+  faq: [
+    {
+      question: "What tools do you use for data visualization?",
+      answer: "I work with industry-leading tools including Tableau, Power BI, Python (Matplotlib, Plotly, Seaborn), and custom web-based solutions using D3.js and Recharts.",
+    },
+    {
+      question: "How long does a typical dashboard project take?",
+      answer: "Most dashboard projects take 2-4 weeks depending on complexity. Simple dashboards can be completed in 1 week, while enterprise solutions may take 6-8 weeks.",
+    },
+    {
+      question: "Do you provide training on how to use the dashboards?",
+      answer: "Yes! All Professional and Enterprise packages include training sessions. I'll ensure your team knows how to use, update, and interpret the dashboards effectively.",
+    },
+    {
+      question: "Can you work with our existing data infrastructure?",
+      answer: "Absolutely. I have experience integrating with various databases (SQL, NoSQL), APIs, cloud platforms (AWS, Azure, GCP), and data warehouses.",
+    },
+    {
+      question: "What if we need changes after the project is completed?",
+      answer: "All projects include revision rounds based on your package. For ongoing changes, I offer maintenance contracts with monthly support hours.",
+    },
+  ],
+  gallery: [
+    { title: "Sales Dashboard", description: "Real-time sales tracking with predictive analytics" },
+    { title: "Customer Analytics", description: "360-degree customer behavior visualization" },
+    { title: "Financial Reports", description: "Automated financial reporting system" },
+    { title: "Marketing Dashboard", description: "Campaign performance and ROI tracking" },
+    { title: "Operations Monitor", description: "Real-time operational metrics dashboard" },
+    { title: "Executive Overview", description: "High-level KPI dashboard for C-suite" },
+  ],
 };
 
 // Mock data for visualizations
@@ -141,6 +275,29 @@ export function DataDashboardTemplate() {
             <p className="text-lg text-gray-400">
               {portfolioData.tagline}
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="py-12 px-3 bg-gray-900/30">
+        <div className="container mx-auto max-w-full">
+          <ScrollReveal>
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-white">
+              Track Record
+            </h2>
+          </ScrollReveal>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {portfolioData.stats.map((stat, index) => (
+              <ScrollReveal key={stat.label} delay={index * 0.1}>
+                <div className="text-center">
+                  <div className="text-4xl md:text-5xl font-black bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent mb-2">
+                    {stat.value}
+                  </div>
+                  <div className="text-sm md:text-base text-gray-400">{stat.label}</div>
+                </div>
+              </ScrollReveal>
+            ))}
           </div>
         </div>
       </section>
@@ -326,44 +483,226 @@ export function DataDashboardTemplate() {
         </div>
       </section>
 
-      {/* Insights Section */}
+      {/* About Section */}
       <section className="py-16 px-3 bg-gray-900/50">
+        <div className="container mx-auto max-w-6xl">
+          <ScrollReveal>
+            <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-white">
+              About Me
+            </h2>
+          </ScrollReveal>
+          <ScrollReveal delay={0.2}>
+            <p className="text-lg md:text-xl text-gray-300 text-center max-w-4xl mx-auto leading-relaxed">
+              {portfolioData.about}
+            </p>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* Skills Section */}
+      <section className="py-16 px-3">
         <div className="container mx-auto max-w-full">
           <ScrollReveal>
             <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-white">
-              Key Insights
+              Technical Skills
             </h2>
           </ScrollReveal>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Revenue Trend",
-                description: "Revenue has grown 23% over the past 6 months with consistent month-over-month increases.",
-                icon: <FiTrendingUp />,
-              },
-              {
-                title: "User Engagement",
-                description: "Active user count has increased by 275% since January, indicating strong product-market fit.",
-                icon: <FiUsers />,
-              },
-              {
-                title: "Project Success",
-                description: "45% of projects completed successfully, with 30% actively in progress toward goals.",
-                icon: <FiActivity />,
-              },
-            ].map((insight, index) => (
-              <ScrollReveal key={insight.title} delay={index * 0.1}>
-                <div className="bg-gray-900 border border-gray-800 rounded-lg p-6 hover:border-gray-700 transition-all">
-                  <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center text-blue-400 text-2xl mb-4">
-                    {insight.icon}
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-3">{insight.title}</h3>
-                  <p className="text-gray-400 leading-relaxed">{insight.description}</p>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+            {portfolioData.skills.map((skill, index) => (
+              <ScrollReveal key={skill} delay={index * 0.05}>
+                <div className="bg-gray-900 border border-gray-800 rounded-lg p-4 text-center hover:border-blue-500 transition-all hover:scale-105">
+                  <div className="text-sm md:text-base font-medium text-white">{skill}</div>
                 </div>
               </ScrollReveal>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Gallery Section */}
+      <section className="py-16 px-3 bg-gray-900/30">
+        <div className="container mx-auto max-w-full">
+          <ScrollReveal>
+            <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-white">
+              Featured Dashboards
+            </h2>
+          </ScrollReveal>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {portfolioData.gallery.map((item, index) => (
+              <ScrollReveal key={item.title} delay={index * 0.1}>
+                <Card className="bg-gray-900 border-gray-800 hover:border-blue-500 transition-all group cursor-pointer">
+                  <CardContent className="p-6">
+                    <div className="w-full h-48 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-lg mb-4 flex items-center justify-center group-hover:from-blue-500/30 group-hover:to-cyan-500/30 transition-all">
+                      <FiActivity className="w-16 h-16 text-blue-400" />
+                    </div>
+                    <h3 className="text-xl font-bold text-white mb-2">{item.title}</h3>
+                    <p className="text-gray-400 text-sm">{item.description}</p>
+                  </CardContent>
+                </Card>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Timeline Section */}
+      <section className="py-16 px-3">
+        <div className="container mx-auto max-w-4xl">
+          <ScrollReveal>
+            <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-white">
+              Career Journey
+            </h2>
+          </ScrollReveal>
+          <div className="space-y-8">
+            {portfolioData.timeline.map((item, index) => (
+              <ScrollReveal key={item.year} delay={index * 0.1}>
+                <div className="flex gap-6 group">
+                  <div className="flex flex-col items-center">
+                    <div className="w-4 h-4 rounded-full bg-blue-500 group-hover:scale-125 transition-transform" />
+                    {index !== portfolioData.timeline.length - 1 && (
+                      <div className="w-px flex-1 bg-gray-800 mt-2" />
+                    )}
+                  </div>
+                  <div className="flex-1 pb-8">
+                    <div className="text-blue-400 font-semibold mb-2">{item.year}</div>
+                    <h3 className="text-xl font-bold text-white mb-1">{item.title}</h3>
+                    <div className="text-gray-400 text-sm mb-3">{item.company}</div>
+                    <p className="text-gray-300 leading-relaxed">{item.description}</p>
+                  </div>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section className="py-16 px-3 bg-gray-900/50">
+        <div className="container mx-auto max-w-full">
+          <ScrollReveal>
+            <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-white">
+              Pricing Plans
+            </h2>
+          </ScrollReveal>
+          <ScrollReveal delay={0.1}>
+            <p className="text-center text-gray-400 mb-12 max-w-2xl mx-auto">
+              Choose the perfect package for your data visualization needs
+            </p>
+          </ScrollReveal>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {portfolioData.pricing.map((plan, index) => (
+              <ScrollReveal key={plan.name} delay={index * 0.1}>
+                <Card className={`bg-gray-900 border-gray-800 ${plan.popular ? 'ring-2 ring-blue-500' : ''} hover:border-blue-500 transition-all relative`}>
+                  {plan.popular && (
+                    <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-blue-500 to-cyan-500 text-white text-sm font-bold px-4 py-1 rounded-full">
+                      POPULAR
+                    </div>
+                  )}
+                  <CardContent className="p-8">
+                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                    <div className="mb-6">
+                      <span className="text-4xl font-black text-white">{plan.price}</span>
+                      <span className="text-gray-400 ml-2">{plan.period}</span>
+                    </div>
+                    <ul className="space-y-3 mb-8">
+                      {plan.features.map((feature) => (
+                        <li key={feature} className="flex items-start gap-2 text-gray-300">
+                          <FiActivity className="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" />
+                          <span className="text-sm">{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    <Button className={`w-full ${plan.popular ? 'bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600' : 'bg-gray-800 hover:bg-gray-700'} text-white border-0`}>
+                      Get Started
+                    </Button>
+                  </CardContent>
+                </Card>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-16 px-3">
+        <div className="container mx-auto max-w-full">
+          <ScrollReveal>
+            <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-white">
+              Client Testimonials
+            </h2>
+          </ScrollReveal>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {portfolioData.testimonials.map((testimonial, index) => (
+              <ScrollReveal key={testimonial.author} delay={index * 0.1}>
+                <Card className="bg-gray-900 border-gray-800 hover:border-blue-500 transition-all h-full">
+                  <CardContent className="p-6">
+                    <div className="text-blue-400 text-4xl mb-4">"</div>
+                    <p className="text-gray-300 mb-6 leading-relaxed">{testimonial.quote}</p>
+                    <div className="mt-auto">
+                      <div className="font-semibold text-white">{testimonial.author}</div>
+                      <div className="text-sm text-gray-400">{testimonial.role}</div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-16 px-3 bg-gray-900/30">
+        <div className="container mx-auto max-w-4xl">
+          <ScrollReveal>
+            <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-white">
+              Frequently Asked Questions
+            </h2>
+          </ScrollReveal>
+          <div className="space-y-4">
+            {portfolioData.faq.map((item, index) => (
+              <ScrollReveal key={item.question} delay={index * 0.05}>
+                <Card className="bg-gray-900 border-gray-800 hover:border-blue-500 transition-all">
+                  <CardContent className="p-6">
+                    <h3 className="text-lg font-semibold text-white mb-3">{item.question}</h3>
+                    <p className="text-gray-400 leading-relaxed">{item.answer}</p>
+                  </CardContent>
+                </Card>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-3 bg-gradient-to-r from-blue-600/20 to-cyan-600/20">
+        <div className="container mx-auto max-w-4xl text-center">
+          <ScrollReveal>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+              Ready to Transform Your Data?
+            </h2>
+          </ScrollReveal>
+          <ScrollReveal delay={0.1}>
+            <p className="text-lg text-gray-300 mb-8">
+              Let's turn your raw data into powerful insights that drive business decisions
+            </p>
+          </ScrollReveal>
+          <ScrollReveal delay={0.2}>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button
+                size="lg"
+                className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white border-0 text-lg px-8 py-6 h-auto"
+              >
+                Start Your Project
+              </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                className="bg-transparent border-2 border-white/30 text-white hover:bg-white/10 text-lg px-8 py-6 h-auto"
+              >
+                Schedule Consultation
+              </Button>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
@@ -383,13 +722,13 @@ export function DataDashboardTemplate() {
           </ScrollReveal>
 
           <ScrollReveal delay={0.3}>
-            <div className="flex flex-col gap-4 sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col gap-4 sm:flex-row justify-center">
               <Button
                 size="lg"
                 className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white border-0 text-lg px-8 py-6 h-auto"
               >
                 <FiMail className="mr-2 w-5 h-5" />
-                data@vizpro.com
+                {portfolioData.email}
               </Button>
               <Button
                 size="lg"

@@ -431,6 +431,142 @@ export function VoiceFirstTemplate() {
         </div>
       </section>
 
+      {/* Stats - Voice First Style */}
+      <section className="py-20 px-3 sm:px-3 bg-gray-900">
+        <div className="container mx-auto max-w-6xl">
+          <h2 className="text-4xl md:text-6xl font-bold mb-12 text-center text-white">
+            🎙️ Stats
+          </h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {[
+              { num: '1000+', label: 'Voice Commands', icon: '🗣️' },
+              { num: '50+', label: 'Voice Apps', icon: '📱' },
+              { num: '98%', label: 'Accuracy', icon: '✅' },
+              { num: '24/7', label: 'Available', icon: '⏰' }
+            ].map((stat, i) => (
+              <div key={i} className="bg-gray-800 p-8 rounded-2xl border border-gray-700 hover:border-blue-500 transition-colors text-center">
+                <div className="text-4xl mb-3">{stat.icon}</div>
+                <div className="text-4xl font-bold text-white mb-2">{stat.num}</div>
+                <div className="text-sm text-gray-400 uppercase tracking-wider">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing - Voice First Style */}
+      <section className="py-20 px-3 sm:px-3 bg-gradient-to-b from-gray-900 to-black">
+        <div className="container mx-auto max-w-6xl">
+          <h2 className="text-4xl md:text-6xl font-bold mb-4 text-center text-white">
+            🎯 Pricing
+          </h2>
+          <p className="text-center text-gray-400 mb-12">Voice-enabled solutions for every need</p>
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              { name: 'Basic Voice', price: '$499', features: ['Voice Navigation', 'Basic Commands', 'Mobile Support', '2 Revisions'] },
+              { name: 'Pro Voice', price: '$1299', features: ['Advanced AI', 'Multi-Language', 'Voice Analytics', '5 Revisions', 'Priority Support'], popular: true },
+              { name: 'Enterprise', price: '$2999', features: ['Custom AI Model', 'Unlimited Commands', 'Full Analytics', 'Unlimited Revisions', 'Dedicated Support'] }
+            ].map((plan, i) => (
+              <div key={i} className={`bg-gray-800 p-8 rounded-2xl border-2 transition-all hover:scale-105 ${
+                plan.popular ? 'border-blue-500 ring-4 ring-blue-500/20' : 'border-gray-700'
+              }`}>
+                {plan.popular && (
+                  <div className="text-xs font-bold text-blue-400 mb-2 uppercase">Most Popular</div>
+                )}
+                <h3 className="text-2xl font-bold mb-2 text-white">{plan.name}</h3>
+                <div className="text-5xl font-bold mb-8 text-white">{plan.price}</div>
+                <ul className="space-y-3 mb-8">
+                  {plan.features.map((f, j) => (
+                    <li key={j} className="flex items-start gap-2 text-sm text-gray-300">
+                      <span className="text-blue-400 mt-0.5">✓</span>
+                      <span>{f}</span>
+                    </li>
+                  ))}
+                </ul>
+                <Button className={`w-full ${plan.popular ? 'bg-blue-600 hover:bg-blue-700' : 'bg-gray-700 hover:bg-gray-600'} text-white`}>
+                  Get Started
+                </Button>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials - Voice First Style */}
+      <section className="py-20 px-3 sm:px-3 bg-gray-900">
+        <div className="container mx-auto max-w-4xl">
+          <h2 className="text-4xl md:text-6xl font-bold mb-12 text-center text-white">
+            💬 Testimonials
+          </h2>
+          <div className="space-y-8">
+            {[
+              { text: 'The voice interface is incredibly intuitive. Our users love it!', author: 'Sarah Chen', role: 'Product Manager, TechCo', icon: '🎤' },
+              { text: 'Best voice-first experience I\'ve seen. Highly recommended!', author: 'Michael Ross', role: 'CEO, VoiceApp', icon: '🗣️' },
+              { text: 'Revolutionary approach to voice interaction. Game changer!', author: 'Emma Wilson', role: 'UX Director', icon: '✨' }
+            ].map((t, i) => (
+              <div key={i} className="bg-gray-800 p-8 rounded-2xl border border-gray-700">
+                <div className="flex items-start gap-4">
+                  <div className="text-4xl flex-shrink-0">{t.icon}</div>
+                  <div className="flex-1">
+                    <p className="text-lg text-gray-300 mb-4 italic">&ldquo;{t.text}&rdquo;</p>
+                    <div>
+                      <div className="font-bold text-white">{t.author}</div>
+                      <div className="text-sm text-gray-400">{t.role}</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Gallery - Voice First Style */}
+      <section className="py-20 px-3 sm:px-3 bg-black">
+        <div className="container mx-auto max-w-6xl">
+          <h2 className="text-4xl md:text-6xl font-bold mb-12 text-center text-white">
+            🎨 Gallery
+          </h2>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+            {[
+              { icon: '🎙️', gradient: 'from-blue-500 to-cyan-500' },
+              { icon: '🗣️', gradient: 'from-purple-500 to-pink-500' },
+              { icon: '📱', gradient: 'from-green-500 to-emerald-500' },
+              { icon: '🎧', gradient: 'from-orange-500 to-red-500' },
+              { icon: '🔊', gradient: 'from-indigo-500 to-purple-500' },
+              { icon: '🎵', gradient: 'from-pink-500 to-rose-500' }
+            ].map((item, i) => (
+              <div key={i} className={`aspect-square bg-gradient-to-br ${item.gradient} rounded-2xl flex items-center justify-center text-6xl hover:scale-105 transition-transform cursor-pointer`}>
+                {item.icon}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Call to Action - Voice First */}
+      <section className="py-32 px-3 sm:px-3 bg-gradient-to-br from-blue-600 to-purple-600">
+        <div className="container mx-auto max-w-4xl text-center text-white">
+          <div className="bg-white/10 backdrop-blur-xl p-12 rounded-3xl border border-white/20">
+            <div className="text-6xl mb-6">🎙️</div>
+            <h2 className="text-4xl md:text-6xl font-bold mb-6">
+              Ready to Go Voice-First?
+            </h2>
+            <p className="text-xl mb-8 opacity-90">
+              Let's build the future of voice interaction together
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 font-semibold text-lg px-8">
+                Start Voice Project
+              </Button>
+              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/20 font-semibold text-lg px-8">
+                See Demo
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="border-t border-gray-800 bg-gray-900/50 py-8">
         <div className="container mx-auto px-3 sm:px-3">

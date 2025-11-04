@@ -27,6 +27,10 @@ const staticTemplateData = {
     colors: { primary: "#000000", secondary: "#FFFFFF", accent: "#3B82F6" },
     fonts: { heading: "Inter", body: "Inter" },
   },
+  "service-marketplace": {
+    colors: { primary: "#2563EB", secondary: "#10B981", accent: "#F59E0B" },
+    fonts: { heading: "Inter", body: "Inter" },
+  },
   "dark-mode": {
     colors: { primary: "#0A0A0A", secondary: "#1A1A1A", accent: "#00D9FF" },
     fonts: { heading: "Poppins", body: "Montserrat" },
@@ -210,6 +214,58 @@ const staticTemplateData = {
   "lin-tech-pioneer": {
     colors: { primary: "#3B82F6", secondary: "#1E293B", accent: "#06B6D4" },
     fonts: { heading: "Inter", body: "Inter" },
+  },
+  "professional-b2b": {
+    colors: { primary: "#1a73e8", secondary: "#1557b0", accent: "#10b981" },
+    fonts: { heading: "Inter", body: "Inter" },
+  },
+  "creative-agency-bold": {
+    colors: { primary: "#0033ff", secondary: "#27cc8d", accent: "#ffa1a1" },
+    fonts: { heading: "Barlow Semi Condensed", body: "Source Sans Pro" },
+  },
+  "minimal-portfolio-clean": {
+    colors: { primary: "#111827", secondary: "#f3f4f6", accent: "#3b82f6" },
+    fonts: { heading: "Inter", body: "Inter" },
+  },
+  "glassmorphism-modern": {
+    colors: { primary: "#343434", secondary: "rgba(255, 255, 255, 0.1)", accent: "#4d65ff" },
+    fonts: { heading: "Montserrat", body: "Open Sans" },
+  },
+  "split-screen-editorial": {
+    colors: { primary: "#1f2937", secondary: "#f8fafc", accent: "#3b82f6" },
+    fonts: { heading: "Inter", body: "Inter" },
+  },
+  "saas-feature-rich": {
+    colors: { primary: "#2563eb", secondary: "#6366f1", accent: "#3b82f6" },
+    fonts: { heading: "Inter", body: "Inter" },
+  },
+  "personal-brand": {
+    colors: { primary: "#f59e0b", secondary: "#3b82f6", accent: "#ec4899" },
+    fonts: { heading: "Inter", body: "Inter" },
+  },
+  "experimental-3d": {
+    colors: { primary: "#000000", secondary: "#1a1a2e", accent: "#06b6d4" },
+    fonts: { heading: "Space Grotesk", body: "Inter" },
+  },
+  "interactive-agency": {
+    colors: { primary: "#8B5CF6", secondary: "#06B6D4", accent: "#0A0A0A" },
+    fonts: { heading: "Space Grotesk", body: "Inter" },
+  },
+  "luxury-minimal": {
+    colors: { primary: "#D4AF37", secondary: "#000000", accent: "#F5F5DC" },
+    fonts: { heading: "Playfair Display", body: "Inter" },
+  },
+  "startup-pitch": {
+    colors: { primary: "#2563EB", secondary: "#F59E0B", accent: "#FFFFFF" },
+    fonts: { heading: "Inter", body: "Inter" },
+  },
+  "photography-immersive": {
+    colors: { primary: "#000000", secondary: "#FFFFFF", accent: "#808080" },
+    fonts: { heading: "Inter", body: "Inter" },
+  },
+  "motion-designer": {
+    colors: { primary: "#00FF00", secondary: "#FF006E", accent: "#000000" },
+    fonts: { heading: "Space Grotesk", body: "Inter" },
   },
 };
 

@@ -282,6 +282,99 @@ return (
         </div>
       </section>
 
+      {/* Stats - Neo-Brutalist Style */}
+      <section className="py-20 px-3 bg-yellow-300 border-y-8 border-black">
+        <div className="container mx-auto max-w-6xl">
+          <h2 className="text-5xl md:text-7xl font-black mb-12 uppercase">STATS</h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {[
+              { num: '100+', label: 'PROJECTS' },
+              { num: '50+', label: 'CLIENTS' },
+              { num: '5YRS', label: 'EXPERIENCE' },
+              { num: '99%', label: 'SATISFACTION' }
+            ].map((stat, i) => (
+              <div key={i} className="bg-white p-8 border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
+                <div className="text-5xl font-black mb-2">{stat.num}</div>
+                <div className="text-lg font-bold uppercase">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing - Neo-Brutalist Style */}
+      <section className="py-20 px-3 bg-white">
+        <div className="container mx-auto max-w-6xl">
+          <h2 className="text-5xl md:text-7xl font-black mb-12 uppercase border-b-8 border-black pb-4">PRICING</h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              { name: 'BASIC', price: '$599', color: 'bg-red-500', features: ['1 PAGE', '2 REVISIONS', 'RESPONSIVE'] },
+              { name: 'PRO', price: '$1499', color: 'bg-blue-500', features: ['5 PAGES', '5 REVISIONS', 'ANIMATIONS', 'CMS'], highlight: true },
+              { name: 'ULTRA', price: '$3999', color: 'bg-green-500', features: ['UNLIMITED', 'WEB APP', 'CUSTOM CODE', 'SUPPORT'] }
+            ].map((plan, i) => (
+              <div key={i} className={`${plan.color} text-white p-8 border-8 border-black ${plan.highlight ? 'shadow-[16px_16px_0px_0px_rgba(0,0,0,1)]' : 'shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]'}`}>
+                <h3 className="text-4xl font-black mb-4 uppercase">{plan.name}</h3>
+                <div className="text-6xl font-black mb-8">{plan.price}</div>
+                <ul className="space-y-3 mb-8">
+                  {plan.features.map((f, j) => (
+                    <li key={j} className="font-bold text-lg uppercase">/// {f}</li>
+                  ))}
+                </ul>
+                <Button className="w-full bg-black hover:bg-gray-800 text-white border-4 border-white font-black uppercase text-lg h-14">
+                  SELECT
+                </Button>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Gallery - Neo-Brutalist Style */}
+      <section className="py-20 px-3 bg-black text-white">
+        <div className="container mx-auto max-w-6xl">
+          <h2 className="text-5xl md:text-7xl font-black mb-12 uppercase border-b-8 border-white pb-4">GALLERY</h2>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+            {[
+              { bg: 'bg-red-500' },
+              { bg: 'bg-yellow-500' },
+              { bg: 'bg-blue-500' },
+              { bg: 'bg-green-500' },
+              { bg: 'bg-purple-500' },
+              { bg: 'bg-pink-500' }
+            ].map((item, i) => (
+              <div key={i} className={`aspect-square ${item.bg} border-8 border-white shadow-[8px_8px_0px_0px_rgba(255,255,255,1)] hover:shadow-[16px_16px_0px_0px_rgba(255,255,255,1)] transition-all cursor-pointer flex items-center justify-center`}>
+                <span className="text-8xl font-black text-white">{(i+1).toString().padStart(2, '0')}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Timeline - Neo-Brutalist Style */}
+      <section className="py-20 px-3 bg-yellow-300">
+        <div className="container mx-auto max-w-4xl">
+          <h2 className="text-5xl md:text-7xl font-black mb-12 uppercase border-b-8 border-black pb-4">TIMELINE</h2>
+          <div className="space-y-6">
+            {[
+              { year: '2024', title: 'CREATIVE DIRECTOR', company: 'ANTI STUDIO', color: 'bg-red-500' },
+              { year: '2022', title: 'LEAD DESIGNER', company: 'CHAOS AGENCY', color: 'bg-blue-500' },
+              { year: '2020', title: 'DESIGNER', company: 'REBEL CO', color: 'bg-green-500' },
+              { year: '2018', title: 'JUNIOR', company: 'STARTUP X', color: 'bg-purple-500' }
+            ].map((item, i) => (
+              <div key={i} className="flex gap-4">
+                <div className={`flex-shrink-0 w-32 ${item.color} text-white p-4 border-4 border-black font-black text-3xl flex items-center justify-center`}>
+                  {item.year}
+                </div>
+                <div className="flex-1 bg-white p-6 border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
+                  <h3 className="text-2xl font-black uppercase mb-2">{item.title}</h3>
+                  <p className="font-bold uppercase text-lg">{item.company}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="border-t-4 border-black bg-black text-white py-8">
         <div className="container mx-auto px-3 max-w-full">

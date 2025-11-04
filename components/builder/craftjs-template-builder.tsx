@@ -17,7 +17,7 @@ import {
   AlertDialogTrigger
 } from "@/components/ui/alert-dialog";
 import Link from "next/link";
-import { ArrowLeft, Eye, Trash2, Settings, ImageIcon, Send, Plus } from "lucide-react";
+import { ArrowLeft, Eye, Trash2, Settings, ImageIcon, Send, Plus, FileText } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 import type { TemplateConfig } from "@/lib/template-registry";
 import { TooltipHint } from "@/components/ui/tooltip-hint";
@@ -44,6 +44,9 @@ import {
   Stats,
   Skills,
 } from "@/components/builder/unified";
+
+// Import Content Editor Panel
+import { ContentEditorPanel } from "@/components/builder/content-editor-panel";
 
 // ============================================
 // CRAFT.JS USER COMPONENTS
@@ -1987,7 +1990,7 @@ const SettingsPanel = () => {
 // TOOLBOX
 // ============================================
 
-const Toolbox = ({ language, setMobileView }: { language: 'en' | 'ru'; setMobileView?: (view: 'canvas' | 'components' | 'settings') => void }) => {
+const Toolbox = ({ language, setMobileView }: { language: 'en' | 'ru'; setMobileView?: (view: 'canvas' | 'components' | 'settings' | 'content') => void }) => {
   const { connectors, actions, query } = useEditor((state, query) => ({
     enabled: state.options.enabled,
   }));
@@ -2466,7 +2469,7 @@ export function CraftJSTemplateBuilder({ template }: { template: TemplateConfig 
   const { language, setLanguage } = useI18n(); // Use global language context
   const [isSaving, setIsSaving] = React.useState(false);
   const [editorActions, setEditorActions] = React.useState<any>(null);
-  const [mobileView, setMobileView] = React.useState<'canvas' | 'components' | 'settings'>('canvas');
+  const [mobileView, setMobileView] = React.useState<'canvas' | 'components' | 'settings' | 'content'>('canvas');
   const [showSuccessToast, setShowSuccessToast] = React.useState(false);
   const [showTelegramModal, setShowTelegramModal] = React.useState(false);
   const [showWhatsAppModal, setShowWhatsAppModal] = React.useState(false);
@@ -2920,6 +2923,11 @@ export function CraftJSTemplateBuilder({ template }: { template: TemplateConfig 
             )}
           </div>
 
+          {/* Content Editor Panel - Hidden on mobile unless active */}
+          <div className={`content-panel-container ${mobileView === 'content' ? 'block' : 'hidden'} md:hidden absolute md:relative inset-0 md:inset-auto z-20 md:z-auto`}>
+            <ContentEditorPanel language={language} />
+          </div>
+
           {/* Settings Panel - Hidden on mobile unless active */}
           <div className={`settings-panel-container ${mobileView === 'settings' ? 'block' : 'hidden'} md:block absolute md:relative inset-0 md:inset-auto z-20 md:z-auto`}>
             <SettingsPanel />
@@ -2951,8 +2959,17 @@ export function CraftJSTemplateBuilder({ template }: { template: TemplateConfig 
             <span className="text-xs font-medium">{language === 'ru' ? 'Холст' : 'Canvas'}</span>
           </button>
           <button
+            onClick={() => setMobileView('content')}
+            className={`flex flex-col items-center gap-1 px-3 py-2 rounded-md transition-colors relative ${
+              mobileView === 'content' ? 'bg-purple-50 text-purple-600' : 'text-gray-600'
+            }`}
+          >
+            <FileText className="w-5 h-5" />
+            <span className="text-xs font-medium">{language === 'ru' ? 'Контент' : 'Content'}</span>
+          </button>
+          <button
             onClick={() => setMobileView('settings')}
-            className={`flex flex-col items-center gap-1 px-4 py-2 rounded-md transition-colors relative ${
+            className={`flex flex-col items-center gap-1 px-3 py-2 rounded-md transition-colors relative ${
               mobileView === 'settings' ? 'bg-blue-50 text-blue-600' : 'text-gray-600'
             }`}
           >

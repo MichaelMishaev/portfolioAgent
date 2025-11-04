@@ -390,6 +390,131 @@ export function BoldTypographyTemplate() {
         </ScrollReveal>
       </section>
 
+      {/* Skills - Bold Typography Style */}
+      <section className="py-20 px-3 border-t">
+        <div className="container mx-auto max-w-6xl">
+          <ScrollReveal>
+            <h2 className="text-6xl md:text-8xl font-black mb-16 tracking-tight">SKILLS</h2>
+          </ScrollReveal>
+          <div className="grid md:grid-cols-2 gap-8">
+            {[
+              { cat: 'FRONTEND', skills: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS'] },
+              { cat: 'BACKEND', skills: ['Node.js', 'PostgreSQL', 'GraphQL', 'REST APIs'] },
+              { cat: 'TOOLS', skills: ['Git', 'Docker', 'AWS', 'Figma'] },
+              { cat: 'SOFT SKILLS', skills: ['Leadership', 'Communication', 'Problem Solving', 'Agile'] }
+            ].map((group, i) => (
+              <ScrollReveal key={i} delay={i * 0.1}>
+                <div className="space-y-4">
+                  <h3 className="text-2xl font-black tracking-tight">{group.cat}</h3>
+                  <div className="flex flex-wrap gap-3">
+                    {group.skills.map((s, j) => (
+                      <span key={j} className="px-4 py-2 bg-foreground text-background font-bold text-sm">
+                        {s}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing - Bold Typography Style */}
+      <section className="py-20 px-3 bg-foreground text-background">
+        <div className="container mx-auto max-w-6xl">
+          <ScrollReveal>
+            <h2 className="text-6xl md:text-8xl font-black mb-16 tracking-tight">PRICING</h2>
+          </ScrollReveal>
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              { name: 'BASIC', price: '$499', features: ['LANDING PAGE', '2 REVISIONS', 'RESPONSIVE', 'SEO READY'] },
+              { name: 'PRO', price: '$999', features: ['FULL WEBSITE', '5 REVISIONS', 'CUSTOM DESIGN', 'CMS SETUP', 'ADVANCED SEO'] },
+              { name: 'ULTIMATE', price: '$2499', features: ['WEB APPLICATION', 'UNLIMITED REVISIONS', 'CUSTOM FEATURES', 'API INTEGRATION', 'PRIORITY SUPPORT'] }
+            ].map((plan, i) => (
+              <ScrollReveal key={i} delay={i * 0.1}>
+                <div className="border-4 border-background p-8">
+                  <div className="text-3xl font-black mb-6">{plan.name}</div>
+                  <div className="text-5xl font-black mb-8">{plan.price}</div>
+                  <ul className="space-y-3">
+                    {plan.features.map((f, j) => (
+                      <li key={j} className="font-bold text-sm">{f}</li>
+                    ))}
+                  </ul>
+                  <Button className="w-full mt-8 bg-background text-foreground hover:bg-background/90 font-black text-lg h-12">
+                    SELECT
+                  </Button>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Gallery - Bold Typography Style */}
+      <section className="py-20 px-3">
+        <div className="container mx-auto max-w-6xl">
+          <ScrollReveal>
+            <h2 className="text-6xl md:text-8xl font-black mb-16 tracking-tight">GALLERY</h2>
+          </ScrollReveal>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            {[1, 2, 3, 4, 5, 6].map((i) => (
+              <ScrollReveal key={i} delay={i * 0.05}>
+                <div className="aspect-square bg-foreground/10 hover:bg-foreground hover:text-background transition-all cursor-pointer flex items-center justify-center group">
+                  <span className="text-6xl font-black opacity-20 group-hover:opacity-100 transition-opacity">
+                    {i.toString().padStart(2, '0')}
+                  </span>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Call to Action - Bold Typography Style */}
+      <section className="py-32 px-3 bg-foreground text-background">
+        <div className="container mx-auto max-w-4xl text-center">
+          <ScrollReveal>
+            <h2 className="text-6xl md:text-9xl font-black mb-8 tracking-tighter leading-none">
+              LET'S WORK
+            </h2>
+            <h2 className="text-6xl md:text-9xl font-black mb-12 tracking-tighter leading-none">
+              TOGETHER
+            </h2>
+            <Button size="lg" className="bg-background text-foreground hover:bg-background/90 font-black text-xl px-12 h-16">
+              GET IN TOUCH
+            </Button>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* Timeline - Bold Typography Style */}
+      <section className="py-20 px-3">
+        <div className="container mx-auto max-w-6xl">
+          <ScrollReveal>
+            <h2 className="text-6xl md:text-8xl font-black mb-16 tracking-tight">TIMELINE</h2>
+          </ScrollReveal>
+          <div className="space-y-8">
+            {[
+              { year: '2024', title: 'SENIOR DEVELOPER', company: 'TECH CORP' },
+              { year: '2022', title: 'LEAD DEVELOPER', company: 'DIGITAL AGENCY' },
+              { year: '2020', title: 'FULL STACK DEV', company: 'STARTUP CO' },
+              { year: '2018', title: 'JUNIOR DEVELOPER', company: 'WEB STUDIO' }
+            ].map((item, i) => (
+              <ScrollReveal key={i} delay={i * 0.05}>
+                <div className="grid grid-cols-4 gap-8 border-b-4 border-foreground pb-6">
+                  <div className="text-3xl font-black">{item.year}</div>
+                  <div className="col-span-3">
+                    <div className="text-2xl font-black mb-2">{item.title}</div>
+                    <div className="text-lg font-bold text-muted-foreground">{item.company}</div>
+                  </div>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="border-t bg-background">
         <div className="container mx-auto px-3 max-w-full py-8">

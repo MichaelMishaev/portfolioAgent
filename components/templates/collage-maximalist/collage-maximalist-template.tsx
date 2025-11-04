@@ -389,6 +389,128 @@ return (
         </div>
       </section>
 
+      {/* Skills - Collage Maximalist Style */}
+      <section className="py-20 px-3 sm:px-3 bg-gradient-to-br from-orange-100 via-pink-100 to-purple-100 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute top-10 left-10 w-40 h-40 bg-red-400 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 right-20 w-60 h-60 bg-blue-400 rounded-full blur-3xl"></div>
+        </div>
+        <div className="container mx-auto max-w-6xl relative">
+          <h2 className="text-5xl md:text-7xl font-black mb-12 text-center rotate-1 [text-shadow:3px_3px_0px_rgba(0,0,0,0.2)]">
+            SKILLS++
+          </h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {[
+              { name: 'REACT', rot: 'rotate-2', color: 'bg-red-400' },
+              { name: 'TYPESCRIPT', rot: '-rotate-1', color: 'bg-blue-400' },
+              { name: 'DESIGN', rot: 'rotate-3', color: 'bg-purple-400' },
+              { name: 'NODE', rot: '-rotate-2', color: 'bg-green-400' },
+              { name: 'NEXT.JS', rot: 'rotate-1', color: 'bg-gray-800' },
+              { name: 'TAILWIND', rot: '-rotate-3', color: 'bg-cyan-400' },
+              { name: 'FIGMA', rot: 'rotate-2', color: 'bg-orange-400' },
+              { name: 'FRAMER', rot: '-rotate-1', color: 'bg-pink-400' }
+            ].map((skill, i) => (
+              <div key={i} className={`${skill.color} ${skill.rot} p-6 border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:scale-110 transition-transform`}>
+                <span className="font-black text-white text-lg text-center block">{skill.name}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing - Collage Maximalist Style */}
+      <section className="py-20 px-3 sm:px-3 bg-yellow-200 border-y-8 border-black">
+        <div className="container mx-auto max-w-6xl">
+          <h2 className="text-5xl md:text-7xl font-black mb-12 text-center -rotate-2 [text-shadow:4px_4px_0px_rgba(0,0,0,0.3)]">
+            $$$ PRICING $$$
+          </h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              { name: 'STARTER', price: '$599', rot: 'rotate-2', bg: 'bg-gradient-to-br from-red-300 to-orange-300', features: ['1 PAGE', '2 REVS', 'RESPONSIVE'] },
+              { name: 'PRO PACK', price: '$1599', rot: '-rotate-1', bg: 'bg-gradient-to-br from-purple-300 to-pink-300', features: ['5 PAGES', '5 REVS', 'ANIMATIONS', 'CMS'], highlight: true },
+              { name: 'MEGA', price: '$3999', rot: 'rotate-3', bg: 'bg-gradient-to-br from-blue-300 to-cyan-300', features: ['UNLIMITED', 'WEB APP', 'CUSTOM', 'SUPPORT'] }
+            ].map((plan, i) => (
+              <div key={i} className={`${plan.bg} ${plan.rot} p-8 border-6 border-black shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] ${plan.highlight ? 'ring-8 ring-yellow-400 scale-105' : ''}`}>
+                <h3 className="text-3xl font-black mb-4 text-black">{plan.name}</h3>
+                <div className="text-6xl font-black mb-8 text-black [text-shadow:3px_3px_0px_rgba(255,255,255,0.5)]">
+                  {plan.price}
+                </div>
+                <ul className="space-y-3 mb-8">
+                  {plan.features.map((f, j) => (
+                    <li key={j} className="font-black text-lg text-black">★ {f}</li>
+                  ))}
+                </ul>
+                <Button className="w-full bg-black hover:bg-gray-800 text-white font-black text-xl border-4 border-white shadow-[4px_4px_0px_0px_rgba(255,255,255,1)] h-14">
+                  BUY NOW
+                </Button>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Call to Action - Collage Maximalist */}
+      <section className="py-32 px-3 sm:px-3 bg-gradient-to-br from-pink-400 via-purple-400 to-blue-400 relative overflow-hidden">
+        <div className="absolute inset-0">
+          {[...Array(20)].map((_, i) => (
+            <div
+              key={i}
+              className="absolute w-20 h-20 border-4 border-white/30 rounded-full"
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+                transform: `rotate(${Math.random() * 360}deg)`
+              }}
+            ></div>
+          ))}
+        </div>
+        <div className="container mx-auto max-w-4xl text-center relative">
+          <div className="bg-white/90 p-12 border-8 border-black shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] rotate-1">
+            <h2 className="text-5xl md:text-7xl font-black mb-6 -rotate-2 [text-shadow:4px_4px_0px_rgba(0,0,0,0.1)]">
+              LET'S MAKE SOMETHING WILD!
+            </h2>
+            <p className="text-2xl font-bold mb-8 rotate-1">
+              NO BORING WEBSITES HERE! 🎨🔥
+            </p>
+            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+              <Button size="lg" className="bg-red-500 hover:bg-red-600 text-white font-black text-xl px-12 py-8 h-auto border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] rotate-2">
+                HIT ME UP!
+              </Button>
+              <Button size="lg" className="bg-yellow-400 hover:bg-yellow-500 text-black font-black text-xl px-12 py-8 h-auto border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] -rotate-2">
+                SEE WORK
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Timeline - Collage Maximalist */}
+      <section className="py-20 px-3 sm:px-3 bg-gradient-to-br from-green-200 via-cyan-200 to-blue-200">
+        <div className="container mx-auto max-w-4xl">
+          <h2 className="text-5xl md:text-7xl font-black mb-12 text-center rotate-2 [text-shadow:4px_4px_0px_rgba(0,0,0,0.2)]">
+            MY STORY>>>
+          </h2>
+          <div className="space-y-8">
+            {[
+              { year: '2024', title: 'CHIEF CREATIVE OFFICER', company: 'CHAOS STUDIO', rot: 'rotate-1', bg: 'from-red-400 to-pink-400' },
+              { year: '2022', title: 'CREATIVE DIRECTOR', company: 'WILD AGENCY', rot: '-rotate-2', bg: 'from-purple-400 to-indigo-400' },
+              { year: '2020', title: 'SENIOR DESIGNER', company: 'BOLD CO', rot: 'rotate-2', bg: 'from-yellow-400 to-orange-400' },
+              { year: '2018', title: 'DESIGNER', company: 'START LAB', rot: '-rotate-1', bg: 'from-green-400 to-teal-400' }
+            ].map((item, i) => (
+              <div key={i} className="flex gap-6">
+                <div className={`flex-shrink-0 w-28 bg-black text-white p-4 border-4 border-black font-black text-3xl flex items-center justify-center ${item.rot}`}>
+                  {item.year}
+                </div>
+                <div className={`flex-1 bg-gradient-to-r ${item.bg} p-6 border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] ${item.rot}`}>
+                  <h3 className="font-black text-2xl mb-2 text-black">{item.title}</h3>
+                  <p className="font-bold text-lg text-black/80">{item.company}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="border-t-4 border-black bg-white py-8">
         <div className="container mx-auto px-3 sm:px-3">

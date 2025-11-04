@@ -15,10 +15,10 @@
     "homepage": {
       "hero": {
         "badge": "Full-Stack Developer & Designer",
-        "title": "Crafting Digital",
-        "titleGradient": "Experiences",
-        "titleEnd": "That Matter",
-        "subtitle": "I create custom websites adjusted for each specific purpose and business need. From concept to deployment, every project is tailored to achieve your unique goals with clean code and beautiful design.",
+        "title": "Building Personal",
+        "titleGradient": "Websites",
+        "titleEnd": "With Care",
+        "subtitle": "A simple yet powerful site constructor that helps you create professional web presence while maintaining authentic human touch. Each template is designed to bring your personality online with ease and style.",
         "ctaExplore": "View My Work",
         "ctaDemo": "Contact Me"
       },
@@ -2036,6 +2036,428 @@
           "B2B Tools",
           "Productivity Apps"
         ]
+      },
+      {
+        "id": "professional-b2b",
+        "name": "Professional B2B",
+        "description": "Clean corporate style template for B2B lead generation and professional services. Features appointment setting, case studies, and social proof.",
+        "category": "Professional",
+        "difficulty": "intermediate",
+        "features": [
+          "Lead Generation",
+          "Case Studies",
+          "Social Proof",
+          "Testimonials",
+          "Professional Design"
+        ],
+        "tags": [
+          "b2b",
+          "professional",
+          "corporate",
+          "lead-generation",
+          "appointment-setting",
+          "sales",
+          "enterprise",
+          "business",
+          "clean",
+          "modern"
+        ],
+        "bestFor": [
+          "B2B Services",
+          "Lead Generation Agencies",
+          "Consulting Firms",
+          "Professional Services"
+        ]
+      },
+      {
+        "id": "creative-agency-bold",
+        "name": "Creative Agency Bold",
+        "description": "Electric blue bold typography template for creative agencies. Features split-screen hero, ping-pong layout, and vibrant colors.",
+        "category": "Creative",
+        "difficulty": "intermediate",
+        "features": [
+          "Bold Typography",
+          "Split Screen",
+          "Alternating Layouts",
+          "Vibrant Colors",
+          "Portfolio Showcase"
+        ],
+        "tags": [
+          "creative",
+          "agency",
+          "bold",
+          "electric-blue",
+          "typography",
+          "colorful",
+          "modern",
+          "portfolio",
+          "projects"
+        ],
+        "bestFor": [
+          "Creative Agencies",
+          "Design Studios",
+          "Brand Agencies",
+          "Marketing Firms"
+        ]
+      },
+      {
+        "id": "minimal-portfolio-clean",
+        "name": "Minimal Portfolio Clean",
+        "description": "Text-first minimalism template for designers and developers. Features centered hero, simple project grid, and clean typography.",
+        "category": "Professional",
+        "difficulty": "beginner",
+        "features": [
+          "Minimal Design",
+          "Text-First",
+          "Simple Navigation",
+          "Project Grid",
+          "Clean Typography"
+        ],
+        "tags": [
+          "minimal",
+          "clean",
+          "simple",
+          "portfolio",
+          "text-first",
+          "designers",
+          "developers",
+          "professional",
+          "elegant"
+        ],
+        "bestFor": [
+          "Designers",
+          "Developers",
+          "UX Professionals",
+          "Product Managers"
+        ]
+      },
+      {
+        "id": "glassmorphism-modern",
+        "name": "Glassmorphism Modern",
+        "description": "Modern dark theme with glass card effects. Features backdrop blur, transparency layers, and stunning visual design.",
+        "category": "Creative",
+        "difficulty": "advanced",
+        "features": [
+          "Glass Effects",
+          "Dark Theme",
+          "Backdrop Blur",
+          "Pricing Table",
+          "Modern Design"
+        ],
+        "tags": [
+          "glassmorphism",
+          "glass",
+          "dark",
+          "modern",
+          "blur",
+          "transparency",
+          "creative",
+          "premium",
+          "advanced"
+        ],
+        "bestFor": [
+          "Tech Companies",
+          "Modern Portfolios",
+          "Creative Professionals",
+          "Premium Services"
+        ]
+      },
+      {
+        "id": "split-screen-editorial",
+        "name": "Split Screen Editorial",
+        "description": "Fixed sidebar with fullscreen projects for editorial and design portfolios. Features immersive fullscreen galleries.",
+        "category": "Creative",
+        "difficulty": "intermediate",
+        "features": [
+          "Fixed Sidebar",
+          "Fullscreen Projects",
+          "Editorial Layout",
+          "Scrolling Content",
+          "Portfolio Gallery"
+        ],
+        "tags": [
+          "split-screen",
+          "editorial",
+          "fullscreen",
+          "portfolio",
+          "gallery",
+          "creative",
+          "design",
+          "projects"
+        ],
+        "bestFor": [
+          "Art Directors",
+          "Design Directors",
+          "Creative Professionals",
+          "Photographers"
+        ]
+      },
+      {
+        "id": "saas-feature-rich",
+        "name": "SaaS Feature Rich",
+        "description": "Complete SaaS landing page with email capture, pricing tables, and feature showcase. Built for conversion.",
+        "category": "Product",
+        "difficulty": "intermediate",
+        "features": [
+          "Email Capture",
+          "Pricing Tables",
+          "Feature Grid",
+          "Testimonials",
+          "CTA Sections"
+        ],
+        "tags": [
+          "saas",
+          "product",
+          "landing-page",
+          "email-capture",
+          "pricing",
+          "features",
+          "conversion",
+          "marketing"
+        ],
+        "bestFor": [
+          "SaaS Products",
+          "Software Companies",
+          "Startups",
+          "Tech Products"
+        ]
+      },
+      {
+        "id": "personal-brand",
+        "name": "Personal Brand",
+        "description": "Conversational template with social network feel for personal branding. Features FAQ section and company showcases.",
+        "category": "Professional",
+        "difficulty": "beginner",
+        "features": [
+          "Personal Photo",
+          "FAQ Section",
+          "Company Logos",
+          "Project Cards",
+          "Social Links"
+        ],
+        "tags": [
+          "personal",
+          "brand",
+          "conversational",
+          "social",
+          "faq",
+          "friendly",
+          "approachable",
+          "professional"
+        ],
+        "bestFor": [
+          "Freelancers",
+          "Consultants",
+          "Personal Brands",
+          "Entrepreneurs"
+        ]
+      },
+      {
+        "id": "experimental-3d",
+        "name": "Experimental 3D",
+        "description": "Immersive 3D template with stunning animations and experimental design. Features fullscreen experiences and motion graphics.",
+        "category": "Creative",
+        "difficulty": "advanced",
+        "features": [
+          "3D Effects",
+          "Fullscreen Layouts",
+          "Motion Graphics",
+          "Experimental Design",
+          "Immersive Experience"
+        ],
+        "tags": [
+          "3d",
+          "experimental",
+          "immersive",
+          "motion",
+          "graphics",
+          "creative",
+          "advanced",
+          "animation",
+          "futuristic"
+        ],
+        "bestFor": [
+          "3D Designers",
+          "Motion Artists",
+          "Creative Technologists",
+          "Experimental Portfolios"
+        ]
+      },
+      {
+        "id": "interactive-agency",
+        "name": "Interactive Agency",
+        "description": "Bold scroll effects, kinetic typography, and WebGL-inspired animations for creative agencies.",
+        "category": "Creative",
+        "difficulty": "advanced",
+        "features": [
+          "WebGL Effects",
+          "Parallax Scrolling",
+          "Video Backgrounds",
+          "Animated Cards"
+        ],
+        "tags": [
+          "interactive",
+          "agency",
+          "webgl",
+          "parallax",
+          "animation",
+          "creative",
+          "bold",
+          "kinetic-typography",
+          "scroll-effects",
+          "design-studio"
+        ],
+        "bestFor": [
+          "Creative Agencies",
+          "Design Studios",
+          "Interactive Developers"
+        ]
+      },
+      {
+        "id": "luxury-minimal",
+        "name": "Luxury Minimal",
+        "description": "Ultra-clean, sophisticated design with gold accents and premium feel for luxury brands.",
+        "category": "Professional",
+        "difficulty": "intermediate",
+        "features": [
+          "Elegant Animations",
+          "Luxury Aesthetics",
+          "Masonry Grid",
+          "Premium Typography"
+        ],
+        "tags": [
+          "luxury",
+          "minimal",
+          "sophisticated",
+          "premium",
+          "elegant",
+          "gold-accents",
+          "high-end",
+          "fashion",
+          "luxury-brands"
+        ],
+        "bestFor": [
+          "Luxury Brands",
+          "High-End Designers",
+          "Premium Services"
+        ]
+      },
+      {
+        "id": "startup-pitch",
+        "name": "Startup Pitch",
+        "description": "Modern SaaS landing page with metrics, pricing tables, and conversion-focused design.",
+        "category": "Business",
+        "difficulty": "intermediate",
+        "features": [
+          "Metrics Counters",
+          "Pricing Tables",
+          "Email Capture",
+          "Feature Comparison"
+        ],
+        "tags": [
+          "startup",
+          "saas",
+          "landing-page",
+          "conversion",
+          "pricing",
+          "metrics",
+          "business",
+          "tech-company",
+          "data-driven"
+        ],
+        "bestFor": [
+          "Startups",
+          "SaaS Products",
+          "Tech Companies"
+        ]
+      },
+      {
+        "id": "photography-immersive",
+        "name": "Photography Immersive",
+        "description": "Image-first portfolio with fullscreen galleries, lightbox, and minimal UI for photographers.",
+        "category": "Creative",
+        "difficulty": "intermediate",
+        "features": [
+          "Fullscreen Galleries",
+          "Lightbox",
+          "Category Filters",
+          "EXIF Data Display"
+        ],
+        "tags": [
+          "photography",
+          "portfolio",
+          "gallery",
+          "lightbox",
+          "image-heavy",
+          "minimal-ui",
+          "immersive",
+          "visual-artist",
+          "photographer"
+        ],
+        "bestFor": [
+          "Photographers",
+          "Visual Artists",
+          "Image Portfolios"
+        ]
+      },
+      {
+        "id": "motion-designer",
+        "name": "Motion Designer",
+        "description": "Kinetic, animated portfolio with neon colors and rhythm-driven effects for motion designers.",
+        "category": "Creative",
+        "difficulty": "advanced",
+        "features": [
+          "CSS Animations",
+          "Scroll Effects",
+          "Video Showcases",
+          "Kinetic Typography"
+        ],
+        "tags": [
+          "motion-design",
+          "animation",
+          "kinetic",
+          "neon",
+          "video",
+          "animator",
+          "creative",
+          "bold-colors",
+          "dynamic"
+        ],
+        "bestFor": [
+          "Motion Designers",
+          "Animators",
+          "Video Creators"
+        ]
+      },
+      {
+        "id": "service-marketplace",
+        "name": "Service Marketplace",
+        "description": "Multi-vendor marketplace template for service providers. Features provider listings, reviews, and booking system.",
+        "category": "Service",
+        "difficulty": "advanced",
+        "features": [
+          "Provider Listings",
+          "Review System",
+          "Booking Integration",
+          "Search & Filters"
+        ],
+        "tags": [
+          "marketplace",
+          "services",
+          "vendors",
+          "booking",
+          "reviews",
+          "multi-vendor",
+          "platform",
+          "providers",
+          "ratings",
+          "search"
+        ],
+        "bestFor": [
+          "Service Marketplaces",
+          "Freelance Platforms",
+          "Booking Systems"
+        ]
       }
     ],
     "serviceMarketplace": {
@@ -2223,10 +2645,10 @@
     "homepage": {
       "hero": {
         "badge": "Full-Stack Разработчик и Дизайнер",
-        "title": "Создаю Цифровые",
-        "titleGradient": "Решения",
-        "titleEnd": "Которые Важны",
-        "subtitle": "Я создаю кастомные веб-сайты, адаптированные под каждую конкретную цель и бизнес-задачу. От концепции до деплоя, каждый проект настроен для достижения ваших уникальных целей с чистым кодом и красивым дизайном.",
+        "title": "Создаём Персональные",
+        "titleGradient": "Сайты",
+        "titleEnd": "С Душой",
+        "subtitle": "Простой, но мощный конструктор сайтов, который помогает создать профессиональное веб-присутствие, сохраняя живое человеческое тепло. Каждый шаблон разработан так, чтобы ваша личность была онлайн с лёгкостью и стилем.",
         "ctaExplore": "Посмотреть Работы",
         "ctaDemo": "Связаться со Мной"
       },
@@ -4006,6 +4428,428 @@
           "SaaS Продукты",
           "Технологические Стартапы",
           "Разработчики"
+        ]
+      },
+      {
+        "id": "professional-b2b",
+        "name": "Профессиональный B2B",
+        "description": "Чистый корпоративный шаблон для генерации B2B лидов и профессиональных услуг. Включает назначение встреч, кейсы и социальные доказательства.",
+        "category": "Professional",
+        "difficulty": "intermediate",
+        "features": [
+          "Генерация лидов",
+          "Кейсы",
+          "Социальные доказательства",
+          "Отзывы",
+          "Профессиональный дизайн"
+        ],
+        "tags": [
+          "b2b",
+          "профессиональный",
+          "корпоративный",
+          "генерация-лидов",
+          "назначение-встреч",
+          "продажи",
+          "предприятие",
+          "бизнес",
+          "чистый",
+          "современный"
+        ],
+        "bestFor": [
+          "B2B Услуги",
+          "Агентства по генерации лидов",
+          "Консалтинговые фирмы",
+          "Профессиональные услуги"
+        ]
+      },
+      {
+        "id": "creative-agency-bold",
+        "name": "Смелое Креативное Агентство",
+        "description": "Шаблон с электрически синей жирной типографикой для креативных агентств. Включает разделенный экран, чередующиеся макеты и яркие цвета.",
+        "category": "Creative",
+        "difficulty": "intermediate",
+        "features": [
+          "Жирная типографика",
+          "Разделенный экран",
+          "Чередующиеся макеты",
+          "Яркие цвета",
+          "Витрина портфолио"
+        ],
+        "tags": [
+          "креативный",
+          "агентство",
+          "смелый",
+          "электрический-синий",
+          "типографика",
+          "яркий",
+          "современный",
+          "портфолио",
+          "проекты"
+        ],
+        "bestFor": [
+          "Креативные агентства",
+          "Дизайн-студии",
+          "Брендинговые агентства",
+          "Маркетинговые фирмы"
+        ]
+      },
+      {
+        "id": "minimal-portfolio-clean",
+        "name": "Минимальное Чистое Портфолио",
+        "description": "Текстовый минималистичный шаблон для дизайнеров и разработчиков. Включает центрированный герой, простую сетку проектов и чистую типографику.",
+        "category": "Professional",
+        "difficulty": "beginner",
+        "features": [
+          "Минимальный дизайн",
+          "Текст в фокусе",
+          "Простая навигация",
+          "Сетка проектов",
+          "Чистая типографика"
+        ],
+        "tags": [
+          "минимальный",
+          "чистый",
+          "простой",
+          "портфолио",
+          "текст-первый",
+          "дизайнеры",
+          "разработчики",
+          "профессиональный",
+          "элегантный"
+        ],
+        "bestFor": [
+          "Дизайнеры",
+          "Разработчики",
+          "UX профессионалы",
+          "Продакт-менеджеры"
+        ]
+      },
+      {
+        "id": "glassmorphism-modern",
+        "name": "Современный Глассморфизм",
+        "description": "Современная темная тема с эффектами стеклянных карт. Включает размытие фона, слои прозрачности и потрясающий визуальный дизайн.",
+        "category": "Creative",
+        "difficulty": "advanced",
+        "features": [
+          "Эффекты стекла",
+          "Темная тема",
+          "Размытие фона",
+          "Таблица цен",
+          "Современный дизайн"
+        ],
+        "tags": [
+          "глассморфизм",
+          "стекло",
+          "темный",
+          "современный",
+          "размытие",
+          "прозрачность",
+          "креативный",
+          "премиум",
+          "продвинутый"
+        ],
+        "bestFor": [
+          "Технологические компании",
+          "Современные портфолио",
+          "Креативные профессионалы",
+          "Премиум услуги"
+        ]
+      },
+      {
+        "id": "split-screen-editorial",
+        "name": "Редакционный Разделенный Экран",
+        "description": "Фиксированная боковая панель с полноэкранными проектами для редакционных и дизайнерских портфолио. Включает иммерсивные полноэкранные галереи.",
+        "category": "Creative",
+        "difficulty": "intermediate",
+        "features": [
+          "Фиксированная боковая панель",
+          "Полноэкранные проекты",
+          "Редакционный макет",
+          "Прокручиваемый контент",
+          "Галерея портфолио"
+        ],
+        "tags": [
+          "разделенный-экран",
+          "редакционный",
+          "полноэкранный",
+          "портфолио",
+          "галерея",
+          "креативный",
+          "дизайн",
+          "проекты"
+        ],
+        "bestFor": [
+          "Арт-директора",
+          "Директора по дизайну",
+          "Креативные профессионалы",
+          "Фотографы"
+        ]
+      },
+      {
+        "id": "saas-feature-rich",
+        "name": "Функциональный SaaS",
+        "description": "Полная целевая страница SaaS с захватом email, таблицами цен и витриной функций. Создан для конверсии.",
+        "category": "Product",
+        "difficulty": "intermediate",
+        "features": [
+          "Захват Email",
+          "Таблицы цен",
+          "Сетка функций",
+          "Отзывы",
+          "CTA секции"
+        ],
+        "tags": [
+          "saas",
+          "продукт",
+          "лендинг",
+          "захват-email",
+          "цены",
+          "функции",
+          "конверсия",
+          "маркетинг"
+        ],
+        "bestFor": [
+          "SaaS продукты",
+          "Программные компании",
+          "Стартапы",
+          "Технологические продукты"
+        ]
+      },
+      {
+        "id": "personal-brand",
+        "name": "Личный Бренд",
+        "description": "Разговорный шаблон с ощущением социальной сети для личного брендинга. Включает секцию FAQ и витрины компаний.",
+        "category": "Professional",
+        "difficulty": "beginner",
+        "features": [
+          "Личное фото",
+          "Секция FAQ",
+          "Логотипы компаний",
+          "Карточки проектов",
+          "Социальные ссылки"
+        ],
+        "tags": [
+          "личный",
+          "бренд",
+          "разговорный",
+          "социальный",
+          "faq",
+          "дружелюбный",
+          "доступный",
+          "профессиональный"
+        ],
+        "bestFor": [
+          "Фрилансеры",
+          "Консультанты",
+          "Личные бренды",
+          "Предприниматели"
+        ]
+      },
+      {
+        "id": "experimental-3d",
+        "name": "Экспериментальный 3D",
+        "description": "Иммерсивный 3D шаблон с потрясающими анимациями и экспериментальным дизайном. Включает полноэкранные опыты и моушн-графику.",
+        "category": "Creative",
+        "difficulty": "advanced",
+        "features": [
+          "3D эффекты",
+          "Полноэкранные макеты",
+          "Моушн-графика",
+          "Экспериментальный дизайн",
+          "Иммерсивный опыт"
+        ],
+        "tags": [
+          "3d",
+          "экспериментальный",
+          "иммерсивный",
+          "моушн",
+          "графика",
+          "креативный",
+          "продвинутый",
+          "анимация",
+          "футуристический"
+        ],
+        "bestFor": [
+          "3D дизайнеры",
+          "Моушн-художники",
+          "Креативные технологи",
+          "Экспериментальные портфолио"
+        ]
+      },
+      {
+        "id": "interactive-agency",
+        "name": "Интерактивное Агентство",
+        "description": "Смелые эффекты прокрутки, кинетическая типографика и WebGL-анимации для креативных агентств.",
+        "category": "Творческое",
+        "difficulty": "advanced",
+        "features": [
+          "WebGL Эффекты",
+          "Параллакс Прокрутка",
+          "Видео Фоны",
+          "Анимированные Карточки"
+        ],
+        "tags": [
+          "интерактивное",
+          "агентство",
+          "webgl",
+          "параллакс",
+          "анимация",
+          "креативное",
+          "смелое",
+          "кинетическая-типографика",
+          "эффекты-прокрутки",
+          "дизайн-студия"
+        ],
+        "bestFor": [
+          "Креативные Агентства",
+          "Дизайн Студии",
+          "Интерактивные Разработчики"
+        ]
+      },
+      {
+        "id": "luxury-minimal",
+        "name": "Люксовый Минимализм",
+        "description": "Ультра-чистый, утонченный дизайн с золотыми акцентами и премиальным ощущением для люксовых брендов.",
+        "category": "Профессиональное",
+        "difficulty": "intermediate",
+        "features": [
+          "Элегантные Анимации",
+          "Люксовая Эстетика",
+          "Masonry Сетка",
+          "Премиум Типографика"
+        ],
+        "tags": [
+          "люксовое",
+          "минимальное",
+          "утонченное",
+          "премиум",
+          "элегантное",
+          "золотые-акценты",
+          "высокий-уровень",
+          "мода",
+          "люксовые-бренды"
+        ],
+        "bestFor": [
+          "Люксовые Бренды",
+          "Высококлассные Дизайнеры",
+          "Премиальные Услуги"
+        ]
+      },
+      {
+        "id": "startup-pitch",
+        "name": "Презентация Стартапа",
+        "description": "Современная SaaS целевая страница с метриками, таблицами цен и дизайном, ориентированным на конверсию.",
+        "category": "Бизнес",
+        "difficulty": "intermediate",
+        "features": [
+          "Счетчики Метрик",
+          "Таблицы Цен",
+          "Захват Email",
+          "Сравнение Функций"
+        ],
+        "tags": [
+          "стартап",
+          "saas",
+          "целевая-страница",
+          "конверсия",
+          "ценообразование",
+          "метрики",
+          "бизнес",
+          "технологическая-компания",
+          "на-основе-данных"
+        ],
+        "bestFor": [
+          "Стартапы",
+          "SaaS Продукты",
+          "Технологические Компании"
+        ]
+      },
+      {
+        "id": "photography-immersive",
+        "name": "Иммерсивная Фотография",
+        "description": "Портфолио с акцентом на изображения, полноэкранными галереями, лайтбоксом и минимальным UI для фотографов.",
+        "category": "Творческое",
+        "difficulty": "intermediate",
+        "features": [
+          "Полноэкранные Галереи",
+          "Лайтбокс",
+          "Фильтры Категорий",
+          "Отображение EXIF Данных"
+        ],
+        "tags": [
+          "фотография",
+          "портфолио",
+          "галерея",
+          "лайтбокс",
+          "много-изображений",
+          "минимальный-ui",
+          "иммерсивное",
+          "визуальный-художник",
+          "фотограф"
+        ],
+        "bestFor": [
+          "Фотографы",
+          "Визуальные Художники",
+          "Портфолио Изображений"
+        ]
+      },
+      {
+        "id": "motion-designer",
+        "name": "Моушн-дизайнер",
+        "description": "Кинетическое, анимированное портфолио с неоновыми цветами и ритмичными эффектами для моушн-дизайнеров.",
+        "category": "Творческое",
+        "difficulty": "advanced",
+        "features": [
+          "CSS Анимации",
+          "Эффекты Прокрутки",
+          "Видео Витрины",
+          "Кинетическая Типографика"
+        ],
+        "tags": [
+          "моушн-дизайн",
+          "анимация",
+          "кинетическое",
+          "неон",
+          "видео",
+          "аниматор",
+          "креативное",
+          "смелые-цвета",
+          "динамичное"
+        ],
+        "bestFor": [
+          "Моушн-дизайнеры",
+          "Аниматоры",
+          "Видео Создатели"
+        ]
+      },
+      {
+        "id": "service-marketplace",
+        "name": "Маркетплейс Услуг",
+        "description": "Шаблон мультивендорного маркетплейса для поставщиков услуг. Включает листинг провайдеров, систему отзывов и бронирование.",
+        "category": "Service",
+        "difficulty": "advanced",
+        "features": [
+          "Листинг провайдеров",
+          "Система отзывов",
+          "Интеграция бронирования",
+          "Поиск и фильтры"
+        ],
+        "tags": [
+          "маркетплейс",
+          "услуги",
+          "вендоры",
+          "бронирование",
+          "отзывы",
+          "мультивендор",
+          "платформа",
+          "провайдеры",
+          "рейтинги",
+          "поиск"
+        ],
+        "bestFor": [
+          "Маркетплейсы услуг",
+          "Фриланс-платформы",
+          "Системы бронирования"
         ]
       }
     ],

@@ -405,6 +405,89 @@ export function SinglePageTemplate() {
         </ScrollReveal>
       </section>
 
+      {/* Pricing - Single Page Style */}
+      <section id="pricing" className="py-20 px-3 sm:px-3 bg-muted/30">
+        <div className="container mx-auto max-w-6xl">
+          <ScrollReveal>
+            <h2 className="text-4xl font-bold mb-12 text-center">Pricing</h2>
+          </ScrollReveal>
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              { name: 'Basic', price: '$199', period: '/project', features: ['Landing Page Design', '3 Revisions', 'Responsive Layout', 'Basic SEO', '2 Weeks Delivery'] },
+              { name: 'Standard', price: '$499', period: '/project', features: ['Multi-Page Website', '5 Revisions', 'Custom Design', 'Advanced SEO', 'CMS Integration', '4 Weeks Delivery'], popular: true },
+              { name: 'Premium', price: '$999', period: '/project', features: ['Full Website', 'Unlimited Revisions', 'Custom Features', 'E-commerce Ready', 'API Integration', 'Priority Support', '6 Weeks Delivery'] }
+            ].map((plan, i) => (
+              <ScrollReveal key={i} delay={i * 0.1}>
+                <div className={`p-8 rounded-lg border-2 transition-all hover:shadow-lg ${
+                  plan.popular ? 'border-primary bg-primary/5' : 'border-border bg-background'
+                }`}>
+                  {plan.popular && (
+                    <div className="text-xs font-bold text-primary mb-2 uppercase">Most Popular</div>
+                  )}
+                  <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
+                  <div className="mb-6">
+                    <span className="text-4xl font-bold">{plan.price}</span>
+                    <span className="text-muted-foreground">{plan.period}</span>
+                  </div>
+                  <ul className="space-y-3 mb-8">
+                    {plan.features.map((f, j) => (
+                      <li key={j} className="flex items-start gap-2 text-sm">
+                        <span className="text-primary mt-0.5">✓</span>
+                        <span>{f}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <Button className={`w-full ${plan.popular ? 'bg-primary' : 'variant-outline'}`}>
+                    Choose Plan
+                  </Button>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Gallery - Single Page Grid */}
+      <section id="gallery" className="py-20 px-3 sm:px-3">
+        <div className="container mx-auto max-w-6xl">
+          <ScrollReveal>
+            <h2 className="text-4xl font-bold mb-12 text-center">Gallery</h2>
+          </ScrollReveal>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {[1, 2, 3, 4, 5, 6, 7, 8].map((i) => (
+              <ScrollReveal key={i} delay={i * 0.05}>
+                <div className="aspect-square rounded-lg bg-muted hover:bg-muted/80 transition-all cursor-pointer overflow-hidden group">
+                  <div className="w-full h-full flex items-center justify-center text-muted-foreground group-hover:scale-110 transition-transform">
+                    <span className="text-sm font-medium">Image {i}</span>
+                  </div>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Call to Action - Single Page CTA */}
+      <section className="py-20 px-3 sm:px-3 bg-primary text-primary-foreground">
+        <div className="container mx-auto max-w-4xl text-center">
+          <ScrollReveal>
+            <h2 className="text-4xl font-bold mb-6">Ready to Start Your Project?</h2>
+            <p className="text-xl mb-8 opacity-90">
+              Let's work together to bring your ideas to life
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button size="lg" variant="secondary" className="font-semibold">
+                <FiMail className="mr-2" />
+                Contact Me
+              </Button>
+              <Button size="lg" variant="outline" className="font-semibold border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+                View Portfolio
+              </Button>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="border-t bg-background py-8">
         <div className="container mx-auto px-3 sm:px-3">

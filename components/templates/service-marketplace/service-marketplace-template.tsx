@@ -362,6 +362,124 @@ export function ServiceMarketplaceTemplate() {
         </div>
       </section>
 
+      {/* Skills - Marketplace Style */}
+      <section className="py-20 px-3 bg-slate-50 dark:bg-slate-900">
+        <div className="container mx-auto max-w-6xl">
+          <FadeIn>
+            <h2 className="text-3xl sm:text-4xl font-bold mb-12 text-center">Top Skills</h2>
+          </FadeIn>
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+            {['Web Development', 'Mobile Apps', 'UI/UX Design', 'Backend', 'DevOps', 'Cloud', 'Database', 'API Design', 'Testing', 'Security', 'Analytics', 'AI/ML'].map((skill, i) => (
+              <FadeIn key={i} delay={i * 0.05}>
+                <div className="bg-white dark:bg-slate-800 p-4 rounded-lg border border-slate-200 dark:border-slate-700 hover:border-green-500 hover:shadow-md transition-all text-center">
+                  <span className="font-semibold text-sm">{skill}</span>
+                </div>
+              </FadeIn>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact - Marketplace Style */}
+      <section className="py-20 px-3">
+        <div className="container mx-auto max-w-4xl text-center">
+          <FadeIn>
+            <h2 className="text-3xl sm:text-4xl font-bold mb-6">Get in Touch</h2>
+            <p className="text-lg text-slate-600 dark:text-slate-400 mb-8">
+              Have a project in mind? Let's discuss how we can help you succeed.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white px-8">
+                <FiMail className="mr-2" />
+                Send Message
+              </Button>
+              <div className="flex gap-4">
+                <Button variant="outline" size="icon" className="h-12 w-12">
+                  <FiGithub className="h-5 w-5" />
+                </Button>
+                <Button variant="outline" size="icon" className="h-12 w-12">
+                  <FiLinkedin className="h-5 w-5" />
+                </Button>
+                <Button variant="outline" size="icon" className="h-12 w-12">
+                  <FiTwitter className="h-5 w-5" />
+                </Button>
+              </div>
+            </div>
+          </FadeIn>
+        </div>
+      </section>
+
+      {/* About - Marketplace Style */}
+      <section className="py-20 px-3 bg-slate-50 dark:bg-slate-900">
+        <div className="container mx-auto max-w-4xl">
+          <FadeIn>
+            <h2 className="text-3xl sm:text-4xl font-bold mb-8 text-center">About Our Platform</h2>
+            <div className="prose prose-lg max-w-none text-center">
+              <p className="text-lg text-slate-600 dark:text-slate-400 mb-6">
+                We connect talented professionals with businesses that need their expertise.
+                Our platform has facilitated over 10,000 successful projects worldwide.
+              </p>
+              <p className="text-lg text-slate-600 dark:text-slate-400">
+                With vetted freelancers, secure payments, and 24/7 support, we make hiring and working remotely seamless.
+              </p>
+            </div>
+          </FadeIn>
+        </div>
+      </section>
+
+      {/* Timeline - Marketplace Style */}
+      <section className="py-20 px-3">
+        <div className="container mx-auto max-w-5xl">
+          <FadeIn>
+            <h2 className="text-3xl sm:text-4xl font-bold mb-12 text-center">Our Journey</h2>
+          </FadeIn>
+          <div className="space-y-8">
+            {[
+              { year: '2024', title: 'Global Expansion', desc: 'Reached 50+ countries with 100k+ active users' },
+              { year: '2023', title: 'Series B Funding', desc: 'Raised $25M to scale operations and improve platform' },
+              { year: '2022', title: 'Mobile Launch', desc: 'Released iOS and Android apps with 500k downloads' },
+              { year: '2021', title: 'Platform Launch', desc: 'Officially launched with 1,000 freelancers and 200 businesses' },
+              { year: '2020', title: 'Founded', desc: 'Started with a vision to revolutionize remote work' }
+            ].map((item, i) => (
+              <FadeIn key={i} delay={i * 0.1}>
+                <div className="flex gap-6 items-start">
+                  <div className="flex-shrink-0 w-20 text-green-600 font-bold text-lg">{item.year}</div>
+                  <div className="flex-1 bg-white dark:bg-slate-800 p-6 rounded-lg border border-slate-200 dark:border-slate-700">
+                    <h3 className="font-bold text-lg mb-2">{item.title}</h3>
+                    <p className="text-slate-600 dark:text-slate-400">{item.desc}</p>
+                  </div>
+                </div>
+              </FadeIn>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ - Marketplace Style */}
+      <section className="py-20 px-3 bg-slate-50 dark:bg-slate-900">
+        <div className="container mx-auto max-w-4xl">
+          <FadeIn>
+            <h2 className="text-3xl sm:text-4xl font-bold mb-12 text-center">Frequently Asked Questions</h2>
+          </FadeIn>
+          <div className="space-y-6">
+            {[
+              { q: 'How do I get started?', a: 'Sign up for free, create your profile, and start browsing projects or posting your services.' },
+              { q: 'What are the fees?', a: 'We charge 10% on completed projects for freelancers and 3% processing fee for clients.' },
+              { q: 'How does payment work?', a: 'We use escrow. Clients deposit funds upfront, released upon project completion and approval.' },
+              { q: 'Is there a refund policy?', a: 'Yes, if work doesn\'t meet agreed specifications, clients can dispute and request refunds.' },
+              { q: 'How do you vet freelancers?', a: 'All freelancers undergo skills testing, portfolio review, and identity verification.' }
+            ].map((item, i) => (
+              <FadeIn key={i} delay={i * 0.05}>
+                <div className="bg-white dark:bg-slate-800 p-6 rounded-lg border border-slate-200 dark:border-slate-700">
+                  <h3 className="font-bold text-lg mb-3">{item.q}</h3>
+                  <p className="text-slate-600 dark:text-slate-400">{item.a}</p>
+                </div>
+              </FadeIn>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="border-t border-slate-800 py-8">
         <div className="container mx-auto px-3 max-w-full">

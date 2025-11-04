@@ -405,6 +405,201 @@ export function KineticTypographyTemplate() {
         </div>
       </section>
 
+      {/* Skills - Kinetic Typography Style */}
+      <section className="py-32 px-3 sm:px-3 bg-white text-black">
+        <div className="container mx-auto max-w-6xl">
+          <motion.h2
+            className="text-6xl md:text-9xl font-black mb-20 tracking-tighter"
+            initial={{ opacity: 0, x: -100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            SKILLS
+          </motion.h2>
+          <div className="grid md:grid-cols-2 gap-12">
+            {[
+              { cat: 'DEVELOPMENT', items: ['REACT', 'TYPESCRIPT', 'NEXT.JS', 'NODE.JS'] },
+              { cat: 'DESIGN', items: ['FIGMA', 'MOTION', 'PROTOTYPING', 'UX/UI'] }
+            ].map((group, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.2 }}
+              >
+                <h3 className="text-3xl font-black mb-6 tracking-tight">{group.cat}</h3>
+                <div className="space-y-4">
+                  {group.items.map((item, j) => (
+                    <div key={j} className="text-4xl font-bold tracking-tight opacity-60 hover:opacity-100 transition-opacity">
+                      {item}
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* About - Kinetic Typography Style */}
+      <section className="py-32 px-3 sm:px-3">
+        <div className="container mx-auto max-w-4xl">
+          <motion.h2
+            className="text-6xl md:text-9xl font-black mb-12 tracking-tighter text-white"
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            ABOUT
+          </motion.h2>
+          <motion.div
+            className="space-y-8"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <p className="text-2xl md:text-4xl font-bold text-gray-400 leading-relaxed">
+              WE CREATE DIGITAL EXPERIENCES THAT MOVE PEOPLE. LITERALLY.
+            </p>
+            <p className="text-xl md:text-2xl text-gray-500">
+              With a focus on motion design and kinetic typography, we bring brands to life through dynamic, engaging interfaces.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Pricing - Kinetic Typography Style */}
+      <section className="py-32 px-3 sm:px-3 bg-white text-black">
+        <div className="container mx-auto max-w-6xl">
+          <motion.h2
+            className="text-6xl md:text-9xl font-black mb-20 tracking-tighter"
+            initial={{ opacity: 0, x: 100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            PRICING
+          </motion.h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              { name: 'BASIC', price: '$499', features: ['SINGLE PAGE', '2 REVISIONS', 'RESPONSIVE'] },
+              { name: 'PRO', price: '$1499', features: ['MULTI-PAGE', '5 REVISIONS', 'ANIMATIONS', 'CMS'], highlight: true },
+              { name: 'ULTIMATE', price: '$3999', features: ['WEB APP', 'UNLIMITED', 'ADVANCED MOTION', 'SUPPORT'] }
+            ].map((plan, i) => (
+              <motion.div
+                key={i}
+                className={`p-10 border-4 ${plan.highlight ? 'border-black bg-black text-white' : 'border-black'}`}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.15 }}
+              >
+                <div className="text-4xl font-black mb-4">{plan.name}</div>
+                <div className="text-6xl font-black mb-8">{plan.price}</div>
+                <ul className="space-y-4">
+                  {plan.features.map((f, j) => (
+                    <li key={j} className="text-lg font-bold">{f}</li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Gallery - Kinetic Typography Style */}
+      <section className="py-32 px-3 sm:px-3">
+        <div className="container mx-auto max-w-6xl">
+          <motion.h2
+            className="text-6xl md:text-9xl font-black mb-20 tracking-tighter text-white"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+          >
+            GALLERY
+          </motion.h2>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+            {['01', '02', '03', '04', '05', '06'].map((num, i) => (
+              <motion.div
+                key={i}
+                className="aspect-square bg-white flex items-center justify-center cursor-pointer hover:bg-gray-200 transition-colors"
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+              >
+                <span className="text-6xl font-black text-black">{num}</span>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Call to Action - Kinetic Typography Style */}
+      <section className="py-32 px-3 sm:px-3 bg-white text-black">
+        <div className="container mx-auto max-w-6xl text-center">
+          <motion.h2
+            className="text-6xl md:text-[12rem] font-black tracking-tighter leading-none mb-12"
+            initial={{ opacity: 0, scale: 0.5 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            LET'S<br/>BUILD
+          </motion.h2>
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.4 }}
+          >
+            <Button size="lg" className="bg-black text-white hover:bg-gray-800 text-2xl px-16 py-10 h-auto font-black">
+              CONTACT NOW
+            </Button>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Timeline - Kinetic Typography Style */}
+      <section className="py-32 px-3 sm:px-3">
+        <div className="container mx-auto max-w-6xl">
+          <motion.h2
+            className="text-6xl md:text-9xl font-black mb-20 tracking-tighter text-white"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+          >
+            TIMELINE
+          </motion.h2>
+          <div className="space-y-12">
+            {[
+              { year: '2024', title: 'CREATIVE DIRECTOR', company: 'MOTION STUDIO' },
+              { year: '2022', title: 'LEAD ANIMATOR', company: 'DIGITAL AGENCY' },
+              { year: '2020', title: 'MOTION DESIGNER', company: 'STARTUP' },
+              { year: '2018', title: 'JUNIOR DEVELOPER', company: 'TECH CO' }
+            ].map((item, i) => (
+              <motion.div
+                key={i}
+                className="grid md:grid-cols-12 gap-8 items-center"
+                initial={{ opacity: 0, x: -100 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+              >
+                <div className="md:col-span-2 text-5xl font-black text-gray-600">{item.year}</div>
+                <div className="md:col-span-10 bg-white p-8">
+                  <div className="text-3xl font-black text-black mb-2">{item.title}</div>
+                  <div className="text-xl font-bold text-gray-600">{item.company}</div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="border-t border-white/10 py-8">
         <div className="container mx-auto px-3 sm:px-3">

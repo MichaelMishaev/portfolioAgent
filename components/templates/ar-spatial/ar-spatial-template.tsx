@@ -23,6 +23,28 @@ const portfolioData = {
   name: "Spatial Vision",
   title: "AR/VR Experience Designer",
   tagline: "Crafting the future of spatial computing",
+  about: "As a pioneering AR/VR experience designer with 6+ years pushing the boundaries of spatial computing, I create immersive digital experiences that blur the line between physical and virtual worlds. Specialized in Apple Vision Pro, Meta Quest, and WebXR platforms.",
+  email: "spatial@vision.ar",
+  stats: [
+    { label: "AR/VR Projects", value: "80+" },
+    { label: "Platform Reach", value: "5M+" },
+    { label: "Awards Won", value: "12" },
+    { label: "Innovation Rate", value: "98%" },
+  ],
+  skills: [
+    "Unity & Unreal Engine",
+    "ARKit & ARCore",
+    "WebXR & Three.js",
+    "Spatial UI/UX",
+    "Hand Tracking",
+    "Eye Tracking",
+    "6DOF Interaction",
+    "Spatial Audio",
+    "Computer Vision",
+    "3D Modeling",
+    "Gesture Recognition",
+    "Mixed Reality",
+  ],
   experiences: [
     {
       title: "Mixed Reality Shopping",
@@ -58,6 +80,125 @@ const portfolioData = {
     { name: "AR Development", icon: <FiBox />, level: "Expert" },
     { name: "Eye Tracking UX", icon: <FiEye />, level: "Advanced" },
     { name: "Gesture Control", icon: <FiMove />, level: "Expert" },
+  ],
+  testimonials: [
+    {
+      quote: "The spatial experiences created by Spatial Vision are truly next-generation. Their AR shopping app increased our conversion rate by 340%.",
+      author: "Jennifer Martinez",
+      role: "Head of Digital, Fashion Retail Co",
+    },
+    {
+      quote: "Working with a true spatial computing pioneer. The VR collaboration tool revolutionized how our remote teams work together.",
+      author: "David Chang",
+      role: "CTO, TechCollaborate",
+    },
+    {
+      quote: "Incredible attention to spatial UX details. The hand tracking interactions feel natural and intuitive. Best AR developer we've partnered with.",
+      author: "Lisa Anderson",
+      role: "Product Lead, SpatialTech",
+    },
+  ],
+  pricing: [
+    {
+      name: "AR Experience",
+      price: "$8,000",
+      period: "per project",
+      features: [
+        "Custom AR Application",
+        "iOS/Android Support",
+        "Basic 3D Assets",
+        "Gesture Interactions",
+        "2 Months Development",
+        "Technical Support",
+      ],
+    },
+    {
+      name: "VR Solution",
+      price: "$15,000",
+      period: "per project",
+      popular: true,
+      features: [
+        "Full VR Experience",
+        "Quest/PSVR/PC Support",
+        "Advanced 3D Assets",
+        "6DOF Interactions",
+        "Spatial Audio",
+        "4 Months Development",
+        "Premium Support",
+        "2 Months Maintenance",
+      ],
+    },
+    {
+      name: "Mixed Reality",
+      price: "Custom",
+      period: "enterprise",
+      features: [
+        "Vision Pro Compatible",
+        "Full MR Platform",
+        "Eye/Hand Tracking",
+        "Spatial Computing UI",
+        "Multi-User Support",
+        "Enterprise Integration",
+        "Dedicated Team",
+        "Ongoing Support",
+      ],
+    },
+  ],
+  timeline: [
+    {
+      year: "2023-2024",
+      title: "Lead XR Designer",
+      company: "Apple Vision Labs",
+      description: "Pioneered spatial computing experiences for Vision Pro launch, creating groundbreaking UI paradigms for mixed reality.",
+    },
+    {
+      year: "2021-2023",
+      title: "Senior AR/VR Developer",
+      company: "Meta Reality Labs",
+      description: "Developed immersive VR experiences for Quest platform, focusing on hand tracking and social presence.",
+    },
+    {
+      year: "2019-2021",
+      title: "AR Experience Designer",
+      company: "Google Creative Lab",
+      description: "Created innovative AR applications using ARCore, pushing the boundaries of mobile spatial computing.",
+    },
+    {
+      year: "2018-2019",
+      title: "XR Degree Specialization",
+      company: "MIT Media Lab",
+      description: "Focused on human-computer interaction in spatial computing environments and gesture-based interfaces.",
+    },
+  ],
+  faq: [
+    {
+      question: "What platforms do you develop for?",
+      answer: "I specialize in Apple Vision Pro, Meta Quest 2/3/Pro, iOS (ARKit), Android (ARCore), and WebXR for browser-based experiences. Each platform has unique capabilities I leverage for optimal user experiences.",
+    },
+    {
+      question: "How long does an AR/VR project typically take?",
+      answer: "AR applications typically take 2-3 months, while VR experiences require 3-6 months depending on complexity. Mixed reality projects for platforms like Vision Pro may take 4-8 months due to advanced interactions.",
+    },
+    {
+      question: "Do you provide 3D assets or do I need to supply them?",
+      answer: "I offer full 3D asset creation services, from modeling to texturing and optimization. I can also work with your existing assets, optimizing them for spatial computing performance.",
+    },
+    {
+      question: "Can you integrate AR/VR with existing mobile apps?",
+      answer: "Absolutely! I specialize in integrating AR/VR features into existing applications, whether they're native iOS/Android apps or web-based platforms using WebXR.",
+    },
+    {
+      question: "What makes spatial computing different from traditional UX?",
+      answer: "Spatial computing requires thinking in 3D space with depth, considering factors like eye gaze, hand gestures, spatial audio, and real-world context. It's about creating intuitive interactions that feel natural in mixed reality.",
+    },
+  ],
+  gallery: [
+    { title: "Vision Pro Shopping", description: "Mixed reality retail experience", depth: 100 },
+    { title: "VR Training Simulator", description: "Industrial safety training in VR", depth: 150 },
+    { title: "AR Museum Guide", description: "Interactive cultural heritage app", depth: 80 },
+    { title: "Spatial Workspace", description: "Multi-user 3D collaboration", depth: 200 },
+    { title: "Hand Tracking Game", description: "Controller-free VR gaming", depth: 120 },
+    { title: "AR Navigation", description: "Real-world wayfinding overlay", depth: 90 },
   ],
 };
 
@@ -260,8 +401,51 @@ export function ARSpatialTemplate() {
         </div>
       </section>
 
-      {/* Spatial Projects Section */}
+      {/* Stats Section */}
+      <section className="relative py-16 px-3 bg-black/20 backdrop-blur-sm">
+        <div className="container mx-auto max-w-full">
+          <ScrollReveal>
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-white">
+              Impact in Spatial Computing
+            </h2>
+          </ScrollReveal>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {portfolioData.stats.map((stat, index) => (
+              <ScrollReveal key={stat.label} delay={index * 0.1}>
+                <motion.div
+                  className="text-center"
+                  whileHover={{ scale: 1.05, z: 50 }}
+                  style={{ transformStyle: "preserve-3d" }}
+                >
+                  <div className="text-4xl md:text-5xl font-black bg-gradient-to-r from-cyan-300 to-purple-300 bg-clip-text text-transparent mb-2">
+                    {stat.value}
+                  </div>
+                  <div className="text-sm md:text-base text-gray-400">{stat.label}</div>
+                </motion.div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* About Section */}
       <section className="relative py-20 px-3">
+        <div className="container mx-auto max-w-6xl">
+          <ScrollReveal>
+            <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 bg-gradient-to-r from-cyan-300 to-purple-300 bg-clip-text text-transparent">
+              About the Vision
+            </h2>
+          </ScrollReveal>
+          <ScrollReveal delay={0.2}>
+            <p className="text-lg md:text-xl text-gray-300 text-center max-w-4xl mx-auto leading-relaxed">
+              {portfolioData.about}
+            </p>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* Spatial Projects Section */}
+      <section className="relative py-20 px-3 bg-black/10 backdrop-blur-sm">
         <div className="container mx-auto max-w-full">
           <ScrollReveal>
             <h2 className="text-5xl md:text-6xl font-bold text-center mb-16 bg-gradient-to-r from-cyan-300 to-purple-300 bg-clip-text text-transparent">
@@ -301,6 +485,30 @@ export function ARSpatialTemplate() {
         </div>
       </section>
 
+      {/* Skills Section */}
+      <section className="relative py-20 px-3">
+        <div className="container mx-auto max-w-full">
+          <ScrollReveal>
+            <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-white">
+              Spatial Tech Stack
+            </h2>
+          </ScrollReveal>
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 max-w-6xl mx-auto">
+            {portfolioData.skills.map((skill, index) => (
+              <ScrollReveal key={skill} delay={index * 0.03}>
+                <motion.div
+                  className="bg-gradient-to-br from-cyan-500/10 to-blue-500/10 backdrop-blur-xl border border-white/20 rounded-lg p-4 text-center hover:border-cyan-400/50 transition-all cursor-pointer"
+                  whileHover={{ scale: 1.1, z: 30 }}
+                  style={{ transformStyle: "preserve-3d" }}
+                >
+                  <div className="text-xs md:text-sm font-medium text-white">{skill}</div>
+                </motion.div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Capabilities Section */}
       <section className="relative py-20 px-3 bg-black/20 backdrop-blur-sm">
         <div className="container mx-auto max-w-full">
@@ -330,31 +538,208 @@ export function ARSpatialTemplate() {
         </div>
       </section>
 
-      {/* Spatial Info Panel */}
-      <section className="py-20 px-3">
+      {/* Gallery Section */}
+      <section className="relative py-20 px-3 bg-black/10 backdrop-blur-sm">
         <div className="container mx-auto max-w-full">
           <ScrollReveal>
-            <div className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 backdrop-blur-xl border border-purple-500/30 rounded-2xl p-12">
-              <div className="flex items-center gap-4 mb-6">
-                <FiZap className="text-4xl text-purple-400" />
-                <h3 className="text-3xl font-bold text-white">The Future is Spatial</h3>
-              </div>
-              <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                Spatial computing represents the next evolution of human-computer interaction.
-                By blending digital content with the physical world, we create experiences that
-                feel natural, intuitive, and magical.
+            <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-cyan-300 to-purple-300 bg-clip-text text-transparent">
+              Portfolio Gallery
+            </h2>
+          </ScrollReveal>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {portfolioData.gallery.map((item, index) => (
+              <ScrollReveal key={item.title} delay={index * 0.1}>
+                <SpatialCard depth={item.depth} className="h-full">
+                  <Card className="h-full bg-gradient-to-br from-cyan-500/10 to-blue-500/10 backdrop-blur-xl border-white/20 hover:border-cyan-400/50 transition-all group cursor-pointer overflow-hidden">
+                    <div className="p-6 h-full flex flex-col">
+                      <div className="w-full h-48 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-lg mb-4 flex items-center justify-center group-hover:from-cyan-500/30 group-hover:to-purple-500/30 transition-all relative overflow-hidden">
+                        <FiBox className="w-16 h-16 text-cyan-400" />
+                        <div className="absolute top-2 right-2 text-xs text-cyan-400 flex items-center gap-1">
+                          <FiLayers />
+                          {item.depth}px
+                        </div>
+                      </div>
+                      <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors">
+                        {item.title}
+                      </h3>
+                      <p className="text-gray-400 text-sm">{item.description}</p>
+                    </div>
+                  </Card>
+                </SpatialCard>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Timeline Section */}
+      <section className="relative py-20 px-3">
+        <div className="container mx-auto max-w-4xl">
+          <ScrollReveal>
+            <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-white">
+              Journey Through Dimensions
+            </h2>
+          </ScrollReveal>
+          <div className="space-y-8">
+            {portfolioData.timeline.map((item, index) => (
+              <ScrollReveal key={item.year} delay={index * 0.1}>
+                <div className="flex gap-6 group">
+                  <div className="flex flex-col items-center">
+                    <motion.div
+                      className="w-4 h-4 rounded-full bg-cyan-500 group-hover:scale-150 transition-transform shadow-[0_0_20px_rgba(6,182,212,0.8)]"
+                      whileHover={{ scale: 2 }}
+                    />
+                    {index !== portfolioData.timeline.length - 1 && (
+                      <div className="w-px flex-1 bg-gradient-to-b from-cyan-500/50 to-transparent mt-2" />
+                    )}
+                  </div>
+                  <div className="flex-1 pb-8">
+                    <div className="text-cyan-400 font-semibold mb-2">{item.year}</div>
+                    <h3 className="text-xl font-bold text-white mb-1">{item.title}</h3>
+                    <div className="text-gray-400 text-sm mb-3">{item.company}</div>
+                    <p className="text-gray-300 leading-relaxed">{item.description}</p>
+                  </div>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section className="relative py-20 px-3 bg-black/20 backdrop-blur-sm">
+        <div className="container mx-auto max-w-full">
+          <ScrollReveal>
+            <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-white">
+              Investment Packages
+            </h2>
+          </ScrollReveal>
+          <ScrollReveal delay={0.1}>
+            <p className="text-center text-gray-400 mb-12 max-w-2xl mx-auto">
+              Choose the right spatial computing solution for your vision
+            </p>
+          </ScrollReveal>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {portfolioData.pricing.map((plan, index) => (
+              <ScrollReveal key={plan.name} delay={index * 0.1}>
+                <motion.div
+                  whileHover={{ scale: 1.05, z: 50 }}
+                  style={{ transformStyle: "preserve-3d" }}
+                >
+                  <Card className={`bg-gradient-to-br from-cyan-500/10 to-blue-500/10 backdrop-blur-xl border-white/20 ${plan.popular ? 'ring-2 ring-cyan-500 shadow-[0_0_40px_rgba(6,182,212,0.3)]' : ''} hover:border-cyan-500/50 transition-all relative h-full`}>
+                    {plan.popular && (
+                      <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white text-sm font-bold px-4 py-1 rounded-full shadow-[0_0_20px_rgba(6,182,212,0.6)]">
+                        MOST POPULAR
+                      </div>
+                    )}
+                    <div className="p-8">
+                      <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                      <div className="mb-6">
+                        <span className="text-4xl font-black text-white">{plan.price}</span>
+                        <span className="text-gray-400 ml-2">{plan.period}</span>
+                      </div>
+                      <ul className="space-y-3 mb-8">
+                        {plan.features.map((feature) => (
+                          <li key={feature} className="flex items-start gap-2 text-gray-300">
+                            <FiZap className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5" />
+                            <span className="text-sm">{feature}</span>
+                          </li>
+                        ))}
+                      </ul>
+                      <Button className={`w-full ${plan.popular ? 'bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 shadow-[0_0_20px_rgba(6,182,212,0.5)]' : 'bg-white/10 hover:bg-white/20'} text-white border-0 rounded-full`}>
+                        Start Project
+                      </Button>
+                    </div>
+                  </Card>
+                </motion.div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="relative py-20 px-3">
+        <div className="container mx-auto max-w-full">
+          <ScrollReveal>
+            <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-cyan-300 to-purple-300 bg-clip-text text-transparent">
+              Client Experiences
+            </h2>
+          </ScrollReveal>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {portfolioData.testimonials.map((testimonial, index) => (
+              <ScrollReveal key={testimonial.author} delay={index * 0.1}>
+                <SpatialCard depth={100 + index * 30} className="h-full">
+                  <Card className="h-full bg-gradient-to-br from-purple-500/10 to-pink-500/10 backdrop-blur-xl border-white/20 hover:border-purple-400/50 transition-all">
+                    <div className="p-6 h-full flex flex-col">
+                      <div className="text-cyan-400 text-4xl mb-4">"</div>
+                      <p className="text-gray-300 mb-6 leading-relaxed flex-grow">{testimonial.quote}</p>
+                      <div className="mt-auto">
+                        <div className="font-semibold text-white">{testimonial.author}</div>
+                        <div className="text-sm text-gray-400">{testimonial.role}</div>
+                      </div>
+                    </div>
+                  </Card>
+                </SpatialCard>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="relative py-20 px-3 bg-black/10 backdrop-blur-sm">
+        <div className="container mx-auto max-w-4xl">
+          <ScrollReveal>
+            <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-white">
+              Frequently Asked
+            </h2>
+          </ScrollReveal>
+          <div className="space-y-4">
+            {portfolioData.faq.map((item, index) => (
+              <ScrollReveal key={item.question} delay={index * 0.05}>
+                <Card className="bg-gradient-to-br from-cyan-500/10 to-blue-500/10 backdrop-blur-xl border-white/20 hover:border-cyan-400/50 transition-all">
+                  <div className="p-6">
+                    <h3 className="text-lg font-semibold text-white mb-3 flex items-start gap-2">
+                      <FiEye className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-1" />
+                      {item.question}
+                    </h3>
+                    <p className="text-gray-400 leading-relaxed pl-7">{item.answer}</p>
+                  </div>
+                </Card>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="relative py-20 px-3">
+        <div className="container mx-auto max-w-4xl text-center">
+          <ScrollReveal>
+            <motion.div
+              className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 backdrop-blur-xl border border-cyan-500/50 rounded-3xl p-12 shadow-[0_0_60px_rgba(6,182,212,0.3)]"
+              whileHover={{ scale: 1.02 }}
+              style={{ transformStyle: "preserve-3d" }}
+            >
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+                Ready to Build the Future?
+              </h2>
+              <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
+                Let's create immersive spatial experiences that transform how people interact with technology
               </p>
-              <div className="flex flex-wrap gap-3">
-                {["Hand Tracking", "Eye Gaze", "Spatial Audio", "6DOF"].map((tech) => (
-                  <span
-                    key={tech}
-                    className="px-3 py-2 bg-purple-500/20 border border-purple-500/50 rounded-full text-purple-300 text-sm"
-                  >
-                    {tech}
-                  </span>
-                ))}
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white border-0 text-lg px-10 py-6 h-auto rounded-full shadow-[0_0_30px_rgba(6,182,212,0.6)]">
+                  Start Your Project
+                </Button>
+                <Button
+                  variant="outline"
+                  className="bg-transparent border-2 border-white/30 text-white hover:bg-white/10 text-lg px-10 py-6 h-auto rounded-full backdrop-blur-sm"
+                >
+                  Schedule Demo
+                </Button>
               </div>
-            </div>
+            </motion.div>
           </ScrollReveal>
         </div>
       </section>

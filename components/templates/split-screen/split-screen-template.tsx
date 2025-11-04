@@ -818,6 +818,43 @@ export function SplitScreenTemplate() {
         </div>
       </section>
 
+      {/* Gallery */}
+      <section className="py-20 border-t">
+        <div className="container mx-auto px-3">
+          <h2 className="text-4xl font-bold mb-12">Gallery</h2>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            {[1,2,3,4,5,6].map(i => (
+              <div key={i} className="aspect-square bg-muted rounded-lg hover:scale-105 transition-transform"></div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Timeline */}
+      <section className="py-20 border-t">
+        <div className="grid md:grid-cols-2 gap-12 container mx-auto px-3">
+          <div>
+            <h2 className="text-4xl font-bold mb-8">Timeline</h2>
+          </div>
+          <div className="space-y-8">
+            {[
+              {y:"2024",t:"Senior Designer",c:"TechCo"},
+              {y:"2022",t:"Lead Designer",c:"StartupX"},
+              {y:"2020",t:"Designer",c:"Agency"},
+              {y:"2018",t:"Junior Designer",c:"Studio"}
+            ].map((item,i) => (
+              <div key={i} className="flex gap-4">
+                <div className="text-sm font-mono w-16">{item.y}</div>
+                <div>
+                  <h3 className="font-bold">{item.t}</h3>
+                  <p className="text-sm text-muted-foreground">{item.c}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="border-t bg-background py-8">
         <div className="container mx-auto px-3 sm:px-3">

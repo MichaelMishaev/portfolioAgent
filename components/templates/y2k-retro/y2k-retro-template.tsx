@@ -424,6 +424,151 @@ export function Y2KRetroTemplate() {
         </div>
       </section>
 
+      {/* Pricing - Y2K Retro Style */}
+      <section className="py-20 px-3 sm:px-3 bg-gradient-to-br from-pink-400 via-purple-400 to-blue-400">
+        <div className="container mx-auto max-w-6xl">
+          <ScrollReveal>
+            <h2 className="text-5xl md:text-7xl font-black mb-12 text-center text-white [text-shadow:4px_4px_0px_rgba(0,0,0,0.5)]">
+              ✨ PRICING ✨
+            </h2>
+          </ScrollReveal>
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              { name: 'CYBER BASIC', price: '$499', icon: '💾', features: ['1 PAGE SITE', '2 REVISIONS', 'RETRO VIBES', 'MOBILE READY'] },
+              { name: 'MILLENNIUM PRO', price: '$1299', icon: '💿', features: ['FULL WEBSITE', '5 REVISIONS', 'CUSTOM GRAPHICS', 'ANIMATIONS', 'CMS SETUP'], glow: true },
+              { name: 'DIGITAL FUTURE', price: '$2999', icon: '🎮', features: ['WEB APP', 'UNLIMITED REVS', '3D ELEMENTS', 'CUSTOM CODE', 'PRIORITY SUPPORT'] }
+            ].map((plan, i) => (
+              <ScrollReveal key={i} delay={i * 0.1}>
+                <div className={`bg-gradient-to-br from-cyan-300 to-pink-300 p-8 rounded-3xl border-4 border-white shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] ${plan.glow ? 'ring-4 ring-yellow-300 animate-pulse' : ''}`}>
+                  <div className="text-6xl mb-4 text-center">{plan.icon}</div>
+                  <h3 className="text-2xl font-black text-center mb-4 text-purple-800">{plan.name}</h3>
+                  <div className="text-5xl font-black text-center mb-8 text-white [text-shadow:3px_3px_0px_rgba(0,0,0,0.3)]">
+                    {plan.price}
+                  </div>
+                  <ul className="space-y-3 mb-8">
+                    {plan.features.map((f, j) => (
+                      <li key={j} className="font-bold text-center text-purple-900">✦ {f}</li>
+                    ))}
+                  </ul>
+                  <Button className="w-full bg-purple-600 hover:bg-purple-700 text-white font-black text-lg border-4 border-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                    GET IT NOW!
+                  </Button>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Gallery - Y2K Retro Style */}
+      <section className="py-20 px-3 sm:px-3 bg-gradient-to-br from-yellow-300 via-green-300 to-cyan-300">
+        <div className="container mx-auto max-w-6xl">
+          <ScrollReveal>
+            <h2 className="text-5xl md:text-7xl font-black mb-12 text-center text-purple-800 [text-shadow:4px_4px_0px_rgba(255,255,255,0.8)]">
+              🎨 GALLERY 🎨
+            </h2>
+          </ScrollReveal>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+            {[
+              { gradient: 'from-pink-400 to-purple-400', icon: '⭐' },
+              { gradient: 'from-cyan-400 to-blue-400', icon: '💫' },
+              { gradient: 'from-yellow-400 to-orange-400', icon: '✨' },
+              { gradient: 'from-green-400 to-teal-400', icon: '🌟' },
+              { gradient: 'from-red-400 to-pink-400', icon: '💥' },
+              { gradient: 'from-purple-400 to-indigo-400', icon: '🎆' }
+            ].map((item, i) => (
+              <ScrollReveal key={i} delay={i * 0.05}>
+                <div className={`aspect-square bg-gradient-to-br ${item.gradient} rounded-3xl border-4 border-white shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:scale-105 transition-transform cursor-pointer flex items-center justify-center text-6xl`}>
+                  {item.icon}
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Call to Action - Y2K Style */}
+      <section className="py-32 px-3 sm:px-3 bg-gradient-to-br from-purple-500 via-pink-500 to-orange-500 text-white">
+        <div className="container mx-auto max-w-4xl text-center">
+          <ScrollReveal>
+            <div className="bg-white/20 backdrop-blur-xl p-12 rounded-[3rem] border-4 border-white shadow-[12px_12px_0px_0px_rgba(0,0,0,0.5)]">
+              <h2 className="text-5xl md:text-7xl font-black mb-6 [text-shadow:4px_4px_0px_rgba(0,0,0,0.3)]">
+                ✨ READY TO GO RETRO? ✨
+              </h2>
+              <p className="text-2xl mb-8 font-bold">
+                LET'S CREATE SOMETHING TOTALLY RADICAL! 🎉
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button size="lg" className="bg-cyan-400 hover:bg-cyan-500 text-purple-900 font-black text-xl px-12 py-8 h-auto border-4 border-white shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
+                  💌 CONTACT ME
+                </Button>
+                <Button size="lg" className="bg-yellow-400 hover:bg-yellow-500 text-purple-900 font-black text-xl px-12 py-8 h-auto border-4 border-white shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
+                  🎨 VIEW WORK
+                </Button>
+              </div>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* Timeline - Y2K Retro Style */}
+      <section className="py-20 px-3 sm:px-3 bg-gradient-to-br from-green-300 via-cyan-300 to-blue-300">
+        <div className="container mx-auto max-w-4xl">
+          <ScrollReveal>
+            <h2 className="text-5xl md:text-7xl font-black mb-12 text-center text-purple-800 [text-shadow:4px_4px_0px_rgba(255,255,255,0.8)]">
+              ⏰ TIMELINE ⏰
+            </h2>
+          </ScrollReveal>
+          <div className="space-y-6">
+            {[
+              { year: '2024', icon: '🚀', title: 'CREATIVE DIRECTOR', company: 'PIXEL STUDIO', bg: 'from-pink-400 to-purple-400' },
+              { year: '2022', icon: '💿', title: 'LEAD DESIGNER', company: 'CYBER AGENCY', bg: 'from-cyan-400 to-blue-400' },
+              { year: '2020', icon: '💾', title: 'WEB DESIGNER', company: 'DIGITAL CO', bg: 'from-yellow-400 to-orange-400' },
+              { year: '2018', icon: '🎮', title: 'JUNIOR DEV', company: 'RETRO LABS', bg: 'from-green-400 to-teal-400' }
+            ].map((item, i) => (
+              <ScrollReveal key={i} delay={i * 0.05}>
+                <div className="flex gap-4 items-center">
+                  <div className="flex-shrink-0 w-24 text-center">
+                    <div className="text-4xl mb-2">{item.icon}</div>
+                    <div className="font-black text-2xl text-purple-800">{item.year}</div>
+                  </div>
+                  <div className={`flex-1 bg-gradient-to-r ${item.bg} p-6 rounded-2xl border-4 border-white shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]`}>
+                    <h3 className="font-black text-xl mb-2 text-white [text-shadow:2px_2px_0px_rgba(0,0,0,0.3)]">{item.title}</h3>
+                    <p className="font-bold text-white/90">{item.company}</p>
+                  </div>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ - Y2K Retro Style */}
+      <section className="py-20 px-3 sm:px-3 bg-gradient-to-br from-purple-400 via-pink-400 to-red-400">
+        <div className="container mx-auto max-w-4xl">
+          <ScrollReveal>
+            <h2 className="text-5xl md:text-7xl font-black mb-12 text-center text-white [text-shadow:4px_4px_0px_rgba(0,0,0,0.5)]">
+              ❓ FAQ ❓
+            </h2>
+          </ScrollReveal>
+          <div className="space-y-6">
+            {[
+              { q: 'HOW LONG DOES IT TAKE?', a: 'Most projects are done in 4-6 weeks! Super fast!' },
+              { q: 'DO YOU DO REVISIONS?', a: 'YES! All packages include revisions to make it perfect!' },
+              { q: 'WHAT ABOUT MOBILE?', a: 'All sites are 100% mobile responsive - looks great everywhere!' },
+              { q: 'CAN I UPDATE IT MYSELF?', a: 'Totally! We can set up a CMS so you can update content easily!' }
+            ].map((item, i) => (
+              <ScrollReveal key={i} delay={i * 0.05}>
+                <div className="bg-gradient-to-r from-cyan-300 to-yellow-300 p-6 rounded-2xl border-4 border-white shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
+                  <h3 className="font-black text-lg mb-3 text-purple-900">{item.q}</h3>
+                  <p className="font-bold text-purple-800">{item.a}</p>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="border-t-4 border-white bg-purple-500/90 backdrop-blur-sm py-8">
         <div className="container mx-auto px-3 sm:px-3">

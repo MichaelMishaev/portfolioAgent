@@ -391,6 +391,109 @@ export function DarkModeTemplate() {
         </div>
       </section>
 
+      {/* Skills - Dark Mode Style */}
+      <section className="py-20 px-3 sm:px-3 bg-black border-t border-white/10">
+        <div className="container mx-auto max-w-6xl">
+          <ScrollReveal>
+            <h2 className="text-4xl font-bold mb-12 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+              Skills & Expertise
+            </h2>
+          </ScrollReveal>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {[
+              { name: 'React', level: '95%' },
+              { name: 'TypeScript', level: '90%' },
+              { name: 'Node.js', level: '85%' },
+              { name: 'Next.js', level: '92%' },
+              { name: 'GraphQL', level: '88%' },
+              { name: 'PostgreSQL', level: '82%' },
+              { name: 'Docker', level: '80%' },
+              { name: 'AWS', level: '75%' }
+            ].map((skill, i) => (
+              <ScrollReveal key={i} delay={i * 0.05}>
+                <div className="p-6 rounded-xl bg-white/5 border border-white/10 hover:border-cyan-500/50 transition-all hover:bg-white/10">
+                  <div className="text-lg font-semibold mb-3 text-white">{skill.name}</div>
+                  <div className="w-full h-2 bg-white/10 rounded-full overflow-hidden">
+                    <div
+                      className="h-full bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full"
+                      style={{ width: skill.level }}
+                    ></div>
+                  </div>
+                  <div className="text-xs text-gray-400 mt-2">{skill.level}</div>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing - Dark Mode Style */}
+      <section className="py-20 px-3 sm:px-3 bg-gradient-to-b from-black to-gray-900">
+        <div className="container mx-auto max-w-6xl">
+          <ScrollReveal>
+            <h2 className="text-4xl font-bold mb-4 text-center bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+              Pricing Plans
+            </h2>
+            <p className="text-gray-400 text-center mb-12">Choose the perfect plan for your needs</p>
+          </ScrollReveal>
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              { name: 'Starter', price: '$299', features: ['Single Page Website', '3 Revisions', 'Basic SEO', 'Responsive Design', '1 Month Support'] },
+              { name: 'Professional', price: '$799', features: ['Multi-Page Website', 'Unlimited Revisions', 'Advanced SEO', 'CMS Integration', '3 Months Support', 'Performance Optimization'], highlight: true },
+              { name: 'Enterprise', price: '$1,999', features: ['Custom Web Application', 'Full Stack Development', 'API Integration', 'Database Design', '12 Months Support', 'Dedicated Manager', 'Priority Updates'] }
+            ].map((plan, i) => (
+              <ScrollReveal key={i} delay={i * 0.1}>
+                <div className={`p-8 rounded-2xl border-2 transition-all hover:scale-105 ${
+                  plan.highlight
+                    ? 'bg-gradient-to-br from-cyan-500/10 to-purple-500/10 border-cyan-500/50'
+                    : 'bg-white/5 border-white/10 hover:border-white/30'
+                }`}>
+                  <h3 className="text-2xl font-bold mb-2 text-white">{plan.name}</h3>
+                  <div className="text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                    {plan.price}
+                  </div>
+                  <ul className="space-y-3 mb-8">
+                    {plan.features.map((f, j) => (
+                      <li key={j} className="flex items-start gap-2 text-sm text-gray-300">
+                        <span className="text-cyan-400 mt-1">✓</span>
+                        <span>{f}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <Button className={`w-full ${
+                    plan.highlight
+                      ? 'bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600'
+                      : 'bg-white/10 hover:bg-white/20'
+                  }`}>
+                    Get Started
+                  </Button>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Gallery - Dark Mode Style */}
+      <section className="py-20 px-3 sm:px-3 bg-black">
+        <div className="container mx-auto max-w-6xl">
+          <ScrollReveal>
+            <h2 className="text-4xl font-bold mb-12 text-center bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+              Gallery
+            </h2>
+          </ScrollReveal>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((i) => (
+              <ScrollReveal key={i} delay={i * 0.05}>
+                <div className="aspect-square rounded-xl bg-gradient-to-br from-cyan-500/20 to-purple-500/20 border border-white/10 hover:border-cyan-500/50 transition-all hover:scale-105 cursor-pointer overflow-hidden group">
+                  <div className="w-full h-full bg-black/40 group-hover:bg-black/20 transition-colors"></div>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="border-t border-white/10 bg-black">
         <div className="container mx-auto px-3 sm:px-3 py-8">

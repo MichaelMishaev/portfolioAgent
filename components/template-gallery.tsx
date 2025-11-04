@@ -105,6 +105,9 @@ export function TemplateGallery() {
 
   const templates = getTemplates(language);
 
+  // Sort templates by creation date (newest first) - reverse array order
+  const sortedTemplates = [...templates].reverse();
+
   // Get all unique categories and sort them according to priority
   const allCategories = ["all", ...Array.from(new Set(templates.map(t => t.category)))];
   const categories = allCategories.sort((a, b) => {
@@ -122,7 +125,7 @@ export function TemplateGallery() {
   });
 
   // Combined filtering: category + search + tag
-  const filteredTemplates = templates.filter(template => {
+  const filteredTemplates = sortedTemplates.filter(template => {
     // Category filter
     const matchesCategory = filter === "all" || template.category === filter;
 
@@ -224,16 +227,6 @@ export function TemplateGallery() {
             onChange={handleSearchChange}
             className="pl-12 pr-12 py-6 text-base rounded-full border-2 focus:border-primary"
           />
-          <div className="absolute right-12 top-1/2 transform -translate-y-1/2">
-            <TooltipHint
-              content="Search by template name, description, features, or tags. Try searching for 'modern', 'portfolio', or 'business'."
-              contentRu="Поиск по названию, описанию, функциям или тегам шаблона. Попробуйте искать 'современный', 'портфолио' или 'бизнес'."
-              title="Smart Search"
-              titleRu="Умный поиск"
-              position="bottom"
-              language={language}
-            />
-          </div>
           {searchQuery && (
             <button
               onClick={clearSearch}
@@ -350,11 +343,11 @@ export function TemplateGallery() {
                 <div className="mt-auto pt-2">
                   <Button
                     asChild
-                    className="w-full min-h-[56px] touch-manipulation font-bold text-lg shadow-lg hover:shadow-xl transition-all bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 hover:from-blue-700 hover:via-purple-700 hover:to-pink-700 border-2 border-white/20"
+                    className="group relative w-full min-h-[60px] touch-manipulation font-extrabold text-lg overflow-hidden transition-all duration-300 bg-gradient-to-br from-indigo-600 via-blue-600 to-cyan-500 hover:from-indigo-700 hover:via-blue-700 hover:to-cyan-600 shadow-[0_8px_30px_rgb(0,0,0,0.12),0_0_20px_rgba(59,130,246,0.3)] hover:shadow-[0_12px_40px_rgb(0,0,0,0.18),0_0_30px_rgba(59,130,246,0.5)] hover:scale-[1.02] active:scale-[0.98] border-2 border-white/40 dark:border-white/20 backdrop-blur-sm before:absolute before:inset-0 before:bg-gradient-to-r before:from-white/0 before:via-white/20 before:to-white/0 before:-translate-x-full hover:before:translate-x-full before:transition-transform before:duration-700"
                     size="lg"
                   >
-                    <Link href={`/templates/${template.id}`} onClick={handleTemplateClick}>
-                      <FiEdit3 className="mr-2 h-5 w-5" />
+                    <Link href={`/templates/${template.id}`} onClick={handleTemplateClick} className="flex items-center justify-center relative z-10">
+                      <FiEdit3 className="mr-2 h-5 w-5 group-hover:rotate-12 transition-transform duration-300" />
                       {t.ui.customizeAndBuild}
                     </Link>
                   </Button>

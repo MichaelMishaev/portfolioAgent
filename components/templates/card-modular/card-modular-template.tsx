@@ -856,6 +856,38 @@ return (
         </ScrollReveal>
       </section>
 
+      {/* Pricing Cards */}
+      <section className="py-20 px-3">
+        <div className="container mx-auto max-w-6xl">
+          <h2 className="text-4xl font-bold mb-12 text-center">Pricing</h2>
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              {n:"Basic",p:"$99",f:["5 Projects","Basic Support","1 User"]},
+              {n:"Pro",p:"$299",f:["Unlimited Projects","Priority Support","5 Users","Advanced Features"]},
+              {n:"Enterprise",p:"Custom",f:["Custom Solutions","24/7 Support","Unlimited Users","Dedicated Manager"]}
+            ].map((plan,i) => (
+              <Card key={i} className="p-6 hover:shadow-lg transition-shadow">
+                <h3 className="text-2xl font-bold mb-2">{plan.n}</h3>
+                <div className="text-4xl font-bold mb-4">{plan.p}</div>
+                <ul className="space-y-2">{plan.f.map((f,j) => <li key={j} className="text-sm">✓ {f}</li>)}</ul>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Gallery Grid */}
+      <section className="py-20 px-3 bg-muted/30">
+        <div className="container mx-auto max-w-6xl">
+          <h2 className="text-4xl font-bold mb-12 text-center">Gallery</h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {[1,2,3,4,5,6,7,8].map(i => (
+              <Card key={i} className="aspect-square bg-gradient-to-br from-primary/20 to-secondary/20"></Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="border-t bg-background py-8">
         <div className="container mx-auto px-3 sm:px-3">
