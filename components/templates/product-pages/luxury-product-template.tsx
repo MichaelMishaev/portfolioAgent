@@ -192,7 +192,7 @@ export function LuxuryProductTemplate() {
               CRAFTSMANSHIP
             </a>
             <Button
-              variant="outline"
+              variant="outline" className="text-white border-white"
               size="sm"
               className="border-amber-600 text-amber-500 hover:bg-amber-600 hover:text-black"
             >
@@ -533,7 +533,7 @@ export function LuxuryProductTemplate() {
                   FIND YOUR BOUTIQUE
                 </Button>
                 <Button
-                  variant="outline"
+                  variant="outline" className="text-white border-white"
                   size="lg"
                   className="border-amber-600 text-amber-500 hover:bg-amber-600 hover:text-black text-lg px-12"
                 >

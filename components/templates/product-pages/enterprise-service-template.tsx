@@ -310,7 +310,7 @@ export function EnterpriseServiceTemplate() {
                 Schedule Demo
                 <FiArrowRight className="ml-2" />
               </Button>
-              <Button size="lg" variant="outline">
+              <Button size="lg" variant="outline" className="text-slate-900 dark:text-white">
                 View Case Studies
               </Button>
             </div>

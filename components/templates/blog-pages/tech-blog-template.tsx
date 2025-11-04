@@ -368,7 +368,7 @@ export function TechBlogTemplate() {
               <Button size="lg" className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700">
                 Start Reading
               </Button>
-              <Button size="lg" variant="outline" className="w-full sm:w-auto">
+              <Button size="lg" variant="outline" className="w-full sm:w-auto text-slate-900 dark:text-white">
                 Browse Topics
               </Button>
             </div>
@@ -428,7 +428,7 @@ export function TechBlogTemplate() {
 
                   <div className="flex items-center gap-4 mb-6">
                     {techBlogData.featured.tags.map((tag) => (
-                      <Badge key={tag} variant="outline">
+                      <Badge key={tag} variant="outline" className="text-slate-900 dark:text-white">
                         <FiTag className="w-3 h-3 mr-1" />
                         {tag}
                       </Badge>
@@ -468,10 +468,10 @@ export function TechBlogTemplate() {
                     <Button className="flex-1 bg-blue-600 hover:bg-blue-700">
                       Read Full Tutorial
                     </Button>
-                    <Button variant="outline" size="icon">
+                    <Button variant="outline" className="text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white" size="icon">
                       <FiBookmark className="w-4 h-4" />
                     </Button>
-                    <Button variant="outline" size="icon">
+                    <Button variant="outline" className="text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white" size="icon">
                       <FiShare2 className="w-4 h-4" />
                     </Button>
                   </div>
@@ -550,7 +550,7 @@ export function TechBlogTemplate() {
           <div className="flex items-center justify-between mb-8">
             <h2 className="text-3xl font-bold">Latest Articles</h2>
             <div className="flex items-center gap-2">
-              <Button variant="outline" size="sm">
+              <Button variant="outline" className="text-slate-900 dark:text-white" size="sm">
                 <FiFilter className="w-4 h-4 mr-2" />
                 Filter
               </Button>
@@ -565,7 +565,7 @@ export function TechBlogTemplate() {
                     <div className="flex items-start gap-6">
                       <div className="flex-1">
                         <div className="flex items-center gap-2 mb-3">
-                          <Badge variant="outline">{article.category}</Badge>
+                          <Badge variant="outline" className="text-slate-900 dark:text-white">{article.category}</Badge>
                           <Badge
                             className={
                               article.difficulty === "Beginner"

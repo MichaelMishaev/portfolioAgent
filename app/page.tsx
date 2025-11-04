@@ -162,8 +162,8 @@ export default function Home() {
             </div>
             <p className="text-sm sm:text-base md:text-lg text-foreground/70 max-w-2xl mx-auto px-2">
               {language === 'en'
-                ? 'Create your professional portfolio website in 4 simple steps'
-                : 'Создайте свой профессиональный портфолио за 4 простых шага'}
+                ? 'Get your professional portfolio website in 5 simple steps'
+                : 'Получите свой профессиональный сайт-портфолио за 5 простых шагов'}
             </p>
           </motion.div>
 
@@ -177,8 +177,8 @@ export default function Home() {
                 transition={{ duration: 0.3 }}
                 className="max-w-5xl mx-auto overflow-hidden"
               >
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
-              {/* Step 1 */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 sm:gap-6">
+              {/* Step 1: Browse Templates */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -186,26 +186,26 @@ export default function Home() {
                 transition={{ duration: 0.4, delay: 0.1 }}
                 className="relative"
               >
-                <div className="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-2 border-2 border-blue-200 dark:border-blue-800">
+                <div className="bg-white dark:bg-gray-800 p-4 sm:p-5 rounded-2xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-2 border-2 border-blue-200 dark:border-blue-800 h-full">
                   {/* Step Number */}
-                  <div className="absolute -top-4 -left-4 w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">
+                  <div className="absolute -top-3 -left-3 w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg">
                     1
                   </div>
                   {/* Icon */}
-                  <div className="text-6xl mb-4 text-center">🎨</div>
+                  <div className="text-5xl mb-3 text-center">🎨</div>
                   {/* Title */}
-                  <h3 className="text-lg font-bold mb-2 text-center">
+                  <h3 className="text-base font-bold mb-2 text-center">
                     {language === 'en' ? 'Browse Templates' : 'Выберите шаблон'}
                   </h3>
                   {/* Description */}
-                  <p className="text-sm text-foreground/70 text-center">
+                  <p className="text-xs text-foreground/70 text-center leading-relaxed">
                     {language === 'en'
-                      ? 'Explore 39+ professional templates for various industries'
-                      : 'Изучите 39+ профессиональных шаблонов для разных отраслей'}
+                      ? 'Explore 39+ templates for various industries'
+                      : 'Изучите 39+ шаблонов для разных отраслей'}
                   </p>
                 </div>
                 {/* Arrow (Desktop only) */}
-                <div className="hidden lg:block absolute top-1/2 -right-6 transform -translate-y-1/2 text-blue-400 text-4xl z-10">
+                <div className="hidden lg:block absolute top-1/2 -right-4 transform -translate-y-1/2 text-blue-400 text-3xl z-10">
                   →
                 </div>
               </motion.div>

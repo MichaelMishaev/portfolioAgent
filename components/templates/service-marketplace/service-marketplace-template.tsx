@@ -398,13 +398,13 @@ export function ServiceMarketplaceTemplate() {
                 Send Message
               </Button>
               <div className="flex gap-4">
-                <Button variant="outline" size="icon" className="h-12 w-12">
+                <Button variant="outline" size="icon" className="h-12 w-12 text-white border-white">
                   <FiGithub className="h-5 w-5" />
                 </Button>
-                <Button variant="outline" size="icon" className="h-12 w-12">
+                <Button variant="outline" size="icon" className="h-12 w-12 text-white border-white">
                   <FiLinkedin className="h-5 w-5" />
                 </Button>
-                <Button variant="outline" size="icon" className="h-12 w-12">
+                <Button variant="outline" size="icon" className="h-12 w-12 text-white border-white">
                   <FiTwitter className="h-5 w-5" />
                 </Button>
               </div>

@@ -52,7 +52,7 @@ export function OnlineBusinessSaasTemplate() {
             <Button size="lg" className="gap-2">
               {data.hero?.startTrial || "Start Free Trial"} <FiArrowRight />
             </Button>
-            <Button size="lg" variant="outline">
+            <Button size="lg" variant="outline" className="text-slate-900 dark:text-white">
               {data.hero?.watchDemo || "Watch Demo"}
             </Button>
           </div>

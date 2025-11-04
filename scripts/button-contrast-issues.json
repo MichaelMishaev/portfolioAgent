@@ -1,0 +1,930 @@
+{
+  "high": [
+    {
+      "file": "components/templates/text-heavy/text-heavy-template.tsx",
+      "template": "text-heavy-template",
+      "issue": "variant=\"outline\" buttons without explicit text color",
+      "lines": [
+        216
+      ],
+      "severity": "high"
+    },
+    {
+      "file": "components/templates/single-page/single-page-template.tsx",
+      "template": "single-page-template",
+      "issue": "variant=\"outline\" buttons without explicit text color",
+      "lines": [
+        190,
+        318
+      ],
+      "severity": "high"
+    },
+    {
+      "file": "components/templates/split-screen/split-screen-template.tsx",
+      "template": "split-screen-template",
+      "issue": "variant=\"outline\" buttons without explicit text color",
+      "lines": [
+        510,
+        522
+      ],
+      "severity": "high"
+    },
+    {
+      "file": "components/templates/service-marketplace/service-marketplace-template.tsx",
+      "template": "service-marketplace-template",
+      "issue": "variant=\"outline\" buttons without explicit text color",
+      "lines": [
+        401,
+        404,
+        407
+      ],
+      "severity": "high"
+    },
+    {
+      "file": "components/templates/product-pages/vacuum-product-template.tsx",
+      "template": "vacuum-product-template",
+      "issue": "variant=\"outline\" buttons without explicit text color",
+      "lines": [
+        312
+      ],
+      "severity": "high"
+    },
+    {
+      "file": "components/templates/product-pages/luxury-product-template.tsx",
+      "template": "luxury-product-template",
+      "issue": "variant=\"outline\" buttons without explicit text color",
+      "lines": [
+        195,
+        536
+      ],
+      "severity": "high"
+    },
+    {
+      "file": "components/templates/product-pages/fashion-product-template.tsx",
+      "template": "fashion-product-template",
+      "issue": "variant=\"outline\" buttons without explicit text color",
+      "lines": [
+        332
+      ],
+      "severity": "high"
+    },
+    {
+      "file": "components/templates/product-pages/enterprise-service-template.tsx",
+      "template": "enterprise-service-template",
+      "issue": "variant=\"outline\" buttons without explicit text color",
+      "lines": [
+        313
+      ],
+      "severity": "high"
+    },
+    {
+      "file": "components/templates/product-pages/dfyou-service-template.tsx",
+      "template": "dfyou-service-template",
+      "issue": "variant=\"outline\" buttons without explicit text color",
+      "lines": [
+        384
+      ],
+      "severity": "high"
+    },
+    {
+      "file": "components/templates/product-pages/community-service-template.tsx",
+      "template": "community-service-template",
+      "issue": "variant=\"outline\" buttons without explicit text color",
+      "lines": [
+        357
+      ],
+      "severity": "high"
+    },
+    {
+      "file": "components/templates/product-pages/agency-service-template.tsx",
+      "template": "agency-service-template",
+      "issue": "variant=\"outline\" buttons without explicit text color",
+      "lines": [
+        271
+      ],
+      "severity": "high"
+    },
+    {
+      "file": "components/templates/minimalist/minimalist-template.tsx",
+      "template": "minimalist-template",
+      "issue": "variant=\"outline\" buttons without explicit text color",
+      "lines": [
+        47,
+        86
+      ],
+      "severity": "high"
+    },
+    {
+      "file": "components/templates/online-business-saas/online-business-saas-template.tsx",
+      "template": "online-business-saas-template",
+      "issue": "variant=\"outline\" buttons without explicit text color",
+      "lines": [
+        55
+      ],
+      "severity": "high"
+    },
+    {
+      "file": "components/templates/online-business/online-business-course-template.tsx",
+      "template": "online-business-course-template",
+      "issue": "variant=\"outline\" buttons without explicit text color",
+      "lines": [
+        301
+      ],
+      "severity": "high"
+    },
+    {
+      "file": "components/templates/grid-masonry/grid-masonry-template.tsx",
+      "template": "grid-masonry-template",
+      "issue": "variant=\"outline\" buttons without explicit text color",
+      "lines": [
+        395,
+        398
+      ],
+      "severity": "high"
+    },
+    {
+      "file": "components/templates/bold-typography/bold-typography-template.tsx",
+      "template": "bold-typography-template",
+      "issue": "variant=\"outline\" buttons without explicit text color",
+      "lines": [
+        382,
+        385
+      ],
+      "severity": "high"
+    },
+    {
+      "file": "components/templates/card-modular/card-modular-template.tsx",
+      "template": "card-modular-template",
+      "issue": "variant=\"outline\" buttons without explicit text color",
+      "lines": [
+        841
+      ],
+      "severity": "high"
+    },
+    {
+      "file": "components/templates/bento-grid/bento-grid-template.tsx",
+      "template": "bento-grid-template",
+      "issue": "variant=\"outline\" buttons without explicit text color",
+      "lines": [
+        608
+      ],
+      "severity": "high"
+    },
+    {
+      "file": "components/templates/blog-pages/tech-blog-template.tsx",
+      "template": "tech-blog-template",
+      "issue": "variant=\"outline\" buttons without explicit text color",
+      "lines": [
+        371,
+        431,
+        471,
+        474,
+        553,
+        568
+      ],
+      "severity": "high"
+    },
+    {
+      "file": "components/templates/blog-pages/magazine-blog-template.tsx",
+      "template": "magazine-blog-template",
+      "issue": "variant=\"outline\" buttons without explicit text color",
+      "lines": [
+        538
+      ],
+      "severity": "high"
+    }
+  ],
+  "medium": [
+    {
+      "file": "components/templates/startup-pitch/startup-pitch-template.tsx",
+      "template": "startup-pitch-template",
+      "issue": "Buttons missing dark mode text color variants",
+      "lines": [
+        73,
+        141,
+        319,
+        468,
+        471
+      ],
+      "severity": "medium"
+    },
+    {
+      "file": "components/templates/voice-first/voice-first-template.tsx",
+      "template": "voice-first-template",
+      "issue": "Buttons missing dark mode text color variants",
+      "lines": [
+        418,
+        422,
+        486
+      ],
+      "severity": "medium"
+    },
+    {
+      "file": "components/templates/text-heavy/text-heavy-template.tsx",
+      "template": "text-heavy-template",
+      "issue": "Buttons missing dark mode text color variants",
+      "lines": [
+        187,
+        216,
+        324,
+        469
+      ],
+      "severity": "medium"
+    },
+    {
+      "file": "components/templates/y2k-retro/y2k-retro-template.tsx",
+      "template": "y2k-retro-template",
+      "issue": "Buttons missing dark mode text color variants",
+      "lines": [
+        183,
+        418,
+        453,
+        502,
+        505
+      ],
+      "severity": "medium"
+    },
+    {
+      "file": "components/templates/single-page/single-page-template.tsx",
+      "template": "single-page-template",
+      "issue": "Buttons missing dark mode text color variants",
+      "lines": [
+        186,
+        190,
+        318,
+        372,
+        440,
+        479,
+        483
+      ],
+      "severity": "medium"
+    },
+    {
+      "file": "components/templates/saas-feature-rich/saas-feature-rich-template.tsx",
+      "template": "saas-feature-rich-template",
+      "issue": "Buttons missing dark mode text color variants",
+      "lines": [
+        56,
+        112,
+        220
+      ],
+      "severity": "medium"
+    },
+    {
+      "file": "components/templates/split-screen/split-screen-template.tsx",
+      "template": "split-screen-template",
+      "issue": "Buttons missing dark mode text color variants",
+      "lines": [
+        304,
+        340,
+        509,
+        521,
+        626,
+        717,
+        777,
+        807
+      ],
+      "severity": "medium"
+    },
+    {
+      "file": "components/templates/professional-b2b/professional-b2b-template.tsx",
+      "template": "professional-b2b-template",
+      "issue": "Buttons missing dark mode text color variants",
+      "lines": [
+        78,
+        130,
+        261,
+        393
+      ],
+      "severity": "medium"
+    },
+    {
+      "file": "components/templates/photography-immersive/photography-immersive-template.tsx",
+      "template": "photography-immersive-template",
+      "issue": "Buttons missing dark mode text color variants",
+      "lines": [
+        324
+      ],
+      "severity": "medium"
+    },
+    {
+      "file": "components/templates/service-marketplace/service-marketplace-template.tsx",
+      "template": "service-marketplace-template",
+      "issue": "Buttons missing dark mode text color variants",
+      "lines": [
+        141,
+        147,
+        322,
+        358,
+        396,
+        401,
+        404,
+        407
+      ],
+      "severity": "medium"
+    },
+    {
+      "file": "components/templates/organic-liquid/organic-liquid-template.tsx",
+      "template": "organic-liquid-template",
+      "issue": "Buttons missing dark mode text color variants",
+      "lines": [
+        162,
+        447
+      ],
+      "severity": "medium"
+    },
+    {
+      "file": "components/templates/personal-brand/personal-brand-template.tsx",
+      "template": "personal-brand-template",
+      "issue": "Buttons missing dark mode text color variants",
+      "lines": [
+        87,
+        90,
+        251,
+        255,
+        319
+      ],
+      "severity": "medium"
+    },
+    {
+      "file": "components/templates/product-pages/vacuum-product-template.tsx",
+      "template": "vacuum-product-template",
+      "issue": "Buttons missing dark mode text color variants",
+      "lines": [
+        221,
+        260,
+        309,
+        312,
+        668
+      ],
+      "severity": "medium"
+    },
+    {
+      "file": "components/templates/product-pages/tech-product-template.tsx",
+      "template": "tech-product-template",
+      "issue": "Buttons missing dark mode text color variants",
+      "lines": [
+        118,
+        152,
+        251,
+        254
+      ],
+      "severity": "medium"
+    },
+    {
+      "file": "components/templates/product-pages/saas-product-template.tsx",
+      "template": "saas-product-template",
+      "issue": "Buttons missing dark mode text color variants",
+      "lines": [
+        181,
+        213,
+        244,
+        248,
+        397,
+        450
+      ],
+      "severity": "medium"
+    },
+    {
+      "file": "components/templates/product-pages/premium-product-template.tsx",
+      "template": "premium-product-template",
+      "issue": "Buttons missing dark mode text color variants",
+      "lines": [
+        353
+      ],
+      "severity": "medium"
+    },
+    {
+      "file": "components/templates/product-pages/physical-product-template.tsx",
+      "template": "physical-product-template",
+      "issue": "Buttons missing dark mode text color variants",
+      "lines": [
+        257
+      ],
+      "severity": "medium"
+    },
+    {
+      "file": "components/templates/product-pages/luxury-product-template.tsx",
+      "template": "luxury-product-template",
+      "issue": "Buttons missing dark mode text color variants",
+      "lines": [
+        194,
+        232,
+        427,
+        529,
+        535
+      ],
+      "severity": "medium"
+    },
+    {
+      "file": "components/templates/product-pages/fashion-product-template.tsx",
+      "template": "fashion-product-template",
+      "issue": "Buttons missing dark mode text color variants",
+      "lines": [
+        191,
+        230,
+        325,
+        331
+      ],
+      "severity": "medium"
+    },
+    {
+      "file": "components/templates/product-pages/enterprise-service-template.tsx",
+      "template": "enterprise-service-template",
+      "issue": "Buttons missing dark mode text color variants",
+      "lines": [
+        231,
+        270,
+        309,
+        313,
+        516
+      ],
+      "severity": "medium"
+    },
+    {
+      "file": "components/templates/product-pages/dfyou-service-template.tsx",
+      "template": "dfyou-service-template",
+      "issue": "Buttons missing dark mode text color variants",
+      "lines": [
+        311,
+        352,
+        377,
+        383,
+        504,
+        631
+      ],
+      "severity": "medium"
+    },
+    {
+      "file": "components/templates/product-pages/course-product-template.tsx",
+      "template": "course-product-template",
+      "issue": "Buttons missing dark mode text color variants",
+      "lines": [
+        268,
+        300,
+        331,
+        335,
+        626,
+        690
+      ],
+      "severity": "medium"
+    },
+    {
+      "file": "components/templates/product-pages/consulting-service-template.tsx",
+      "template": "consulting-service-template",
+      "issue": "Buttons missing dark mode text color variants",
+      "lines": [
+        266,
+        312,
+        345,
+        349,
+        602
+      ],
+      "severity": "medium"
+    },
+    {
+      "file": "components/templates/product-pages/community-service-template.tsx",
+      "template": "community-service-template",
+      "issue": "Buttons missing dark mode text color variants",
+      "lines": [
+        288,
+        329,
+        350,
+        356,
+        584,
+        657
+      ],
+      "severity": "medium"
+    },
+    {
+      "file": "components/templates/product-pages/b2b-service-template.tsx",
+      "template": "b2b-service-template",
+      "issue": "Buttons missing dark mode text color variants",
+      "lines": [
+        277,
+        316,
+        336,
+        524,
+        602
+      ],
+      "severity": "medium"
+    },
+    {
+      "file": "components/templates/product-pages/audio-product-template.tsx",
+      "template": "audio-product-template",
+      "issue": "Buttons missing dark mode text color variants",
+      "lines": [
+        195,
+        234,
+        311,
+        314,
+        559
+      ],
+      "severity": "medium"
+    },
+    {
+      "file": "components/templates/product-pages/agency-service-template.tsx",
+      "template": "agency-service-template",
+      "issue": "Buttons missing dark mode text color variants",
+      "lines": [
+        197,
+        236,
+        267,
+        271
+      ],
+      "severity": "medium"
+    },
+    {
+      "file": "components/templates/neo-brutalist/neo-brutalist-template.tsx",
+      "template": "neo-brutalist-template",
+      "issue": "Buttons missing dark mode text color variants",
+      "lines": [
+        274,
+        323
+      ],
+      "severity": "medium"
+    },
+    {
+      "file": "components/templates/online-business-saas/online-business-saas-template.tsx",
+      "template": "online-business-saas-template",
+      "issue": "Buttons missing dark mode text color variants",
+      "lines": [
+        52,
+        55,
+        154,
+        342
+      ],
+      "severity": "medium"
+    },
+    {
+      "file": "components/templates/online-business/online-business-course-template.tsx",
+      "template": "online-business-course-template",
+      "issue": "Buttons missing dark mode text color variants",
+      "lines": [
+        89,
+        93,
+        254,
+        301,
+        333
+      ],
+      "severity": "medium"
+    },
+    {
+      "file": "components/templates/online-business/online-business-coach-template.tsx",
+      "template": "online-business-coach-template",
+      "issue": "Buttons missing dark mode text color variants",
+      "lines": [
+        83,
+        87,
+        200,
+        224,
+        252,
+        276,
+        300,
+        453,
+        478
+      ],
+      "severity": "medium"
+    },
+    {
+      "file": "components/templates/online-business/online-business-agency-template.tsx",
+      "template": "online-business-agency-template",
+      "issue": "Buttons missing dark mode text color variants",
+      "lines": [
+        108,
+        112,
+        205
+      ],
+      "severity": "medium"
+    },
+    {
+      "file": "components/templates/motion-designer/motion-designer-template.tsx",
+      "template": "motion-designer-template",
+      "issue": "Buttons missing dark mode text color variants",
+      "lines": [
+        69,
+        159,
+        162,
+        455,
+        504
+      ],
+      "severity": "medium"
+    },
+    {
+      "file": "components/templates/luxury-minimal/luxury-minimal-template.tsx",
+      "template": "luxury-minimal-template",
+      "issue": "Buttons missing dark mode text color variants",
+      "lines": [
+        109,
+        181,
+        276,
+        394
+      ],
+      "severity": "medium"
+    },
+    {
+      "file": "components/templates/interactive-agency/interactive-agency-template.tsx",
+      "template": "interactive-agency-template",
+      "issue": "Buttons missing dark mode text color variants",
+      "lines": [
+        49,
+        138,
+        141,
+        217
+      ],
+      "severity": "medium"
+    },
+    {
+      "file": "components/templates/grid-masonry/grid-masonry-template.tsx",
+      "template": "grid-masonry-template",
+      "issue": "Buttons missing dark mode text color variants",
+      "lines": [
+        256,
+        289,
+        390,
+        395,
+        398,
+        508
+      ],
+      "severity": "medium"
+    },
+    {
+      "file": "components/templates/illustration-focus/illustration-focus-template.tsx",
+      "template": "illustration-focus-template",
+      "issue": "Buttons missing dark mode text color variants",
+      "lines": [
+        178,
+        217,
+        441
+      ],
+      "severity": "medium"
+    },
+    {
+      "file": "components/templates/fullscreen-immersive/fullscreen-immersive-template.tsx",
+      "template": "fullscreen-immersive-template",
+      "issue": "Buttons missing dark mode text color variants",
+      "lines": [
+        791,
+        797,
+        824
+      ],
+      "severity": "medium"
+    },
+    {
+      "file": "components/templates/glassmorphism-modern/glassmorphism-modern-template.tsx",
+      "template": "glassmorphism-modern-template",
+      "issue": "Buttons missing dark mode text color variants",
+      "lines": [
+        62,
+        148,
+        162,
+        239
+      ],
+      "severity": "medium"
+    },
+    {
+      "file": "components/templates/experimental-3d/experimental-3d-template.tsx",
+      "template": "experimental-3d-template",
+      "issue": "Buttons missing dark mode text color variants",
+      "lines": [
+        78,
+        236
+      ],
+      "severity": "medium"
+    },
+    {
+      "file": "components/templates/dark-mode/dark-mode-template.tsx",
+      "template": "dark-mode-template",
+      "issue": "Buttons missing dark mode text color variants",
+      "lines": [
+        169,
+        199,
+        383,
+        463
+      ],
+      "severity": "medium"
+    },
+    {
+      "file": "components/templates/lin/lin-tech-pioneer-template.tsx",
+      "template": "lin-tech-pioneer-template",
+      "issue": "Buttons missing dark mode text color variants",
+      "lines": [
+        225,
+        228,
+        396
+      ],
+      "severity": "medium"
+    },
+    {
+      "file": "components/templates/lin/lin-professional-authority-template.tsx",
+      "template": "lin-professional-authority-template",
+      "issue": "Buttons missing dark mode text color variants",
+      "lines": [
+        200,
+        311,
+        317
+      ],
+      "severity": "medium"
+    },
+    {
+      "file": "components/templates/lin/lin-portfolio-elegance-template.tsx",
+      "template": "lin-portfolio-elegance-template",
+      "issue": "Buttons missing dark mode text color variants",
+      "lines": [
+        248,
+        254
+      ],
+      "severity": "medium"
+    },
+    {
+      "file": "components/templates/kinetic-typography/kinetic-typography-template.tsx",
+      "template": "kinetic-typography-template",
+      "issue": "Buttons missing dark mode text color variants",
+      "lines": [
+        397,
+        559
+      ],
+      "severity": "medium"
+    },
+    {
+      "file": "components/templates/creative-agency-bold/creative-agency-bold-template.tsx",
+      "template": "creative-agency-bold-template",
+      "issue": "Buttons missing dark mode text color variants",
+      "lines": [
+        133,
+        514,
+        535
+      ],
+      "severity": "medium"
+    },
+    {
+      "file": "components/templates/collage-maximalist/collage-maximalist-template.tsx",
+      "template": "collage-maximalist-template",
+      "issue": "Buttons missing dark mode text color variants",
+      "lines": [
+        129,
+        367,
+        371,
+        443,
+        476,
+        479
+      ],
+      "severity": "medium"
+    },
+    {
+      "file": "components/templates/bold-typography/bold-typography-template.tsx",
+      "template": "bold-typography-template",
+      "issue": "Buttons missing dark mode text color variants",
+      "lines": [
+        148,
+        372,
+        382,
+        385,
+        444,
+        484
+      ],
+      "severity": "medium"
+    },
+    {
+      "file": "components/templates/card-modular/card-modular-template.tsx",
+      "template": "card-modular-template",
+      "issue": "Buttons missing dark mode text color variants",
+      "lines": [
+        348,
+        375,
+        593,
+        754,
+        811,
+        837,
+        841,
+        847,
+        850
+      ],
+      "severity": "medium"
+    },
+    {
+      "file": "components/templates/data-dashboard/data-dashboard-template.tsx",
+      "template": "data-dashboard-template",
+      "issue": "Buttons missing dark mode text color variants",
+      "lines": [
+        615,
+        691,
+        697,
+        726,
+        733,
+        741
+      ],
+      "severity": "medium"
+    },
+    {
+      "file": "components/templates/bento-grid/bento-grid-template.tsx",
+      "template": "bento-grid-template",
+      "issue": "Buttons missing dark mode text color variants",
+      "lines": [
+        155,
+        562,
+        608,
+        619,
+        622,
+        652,
+        681
+      ],
+      "severity": "medium"
+    },
+    {
+      "file": "components/templates/ar-spatial/ar-spatial-template.tsx",
+      "template": "ar-spatial-template",
+      "issue": "Buttons missing dark mode text color variants",
+      "lines": [
+        377,
+        732,
+        735,
+        764,
+        768
+      ],
+      "severity": "medium"
+    },
+    {
+      "file": "components/templates/blog-pages/tech-blog-template.tsx",
+      "template": "tech-blog-template",
+      "issue": "Buttons missing dark mode text color variants",
+      "lines": [
+        344,
+        368,
+        371,
+        468,
+        471,
+        474,
+        495,
+        535,
+        553,
+        634
+      ],
+      "severity": "medium"
+    },
+    {
+      "file": "components/templates/blog-pages/personal-blog-template.tsx",
+      "template": "personal-blog-template",
+      "issue": "Buttons missing dark mode text color variants",
+      "lines": [
+        380,
+        396,
+        468,
+        605,
+        647
+      ],
+      "severity": "medium"
+    },
+    {
+      "file": "components/templates/blog-pages/magazine-blog-template.tsx",
+      "template": "magazine-blog-template",
+      "issue": "Buttons missing dark mode text color variants",
+      "lines": [
+        345,
+        383,
+        538,
+        551
+      ],
+      "severity": "medium"
+    },
+    {
+      "file": "components/templates/blog-pages/archetypes-minimal-template.tsx",
+      "template": "archetypes-minimal-template",
+      "issue": "Buttons missing dark mode text color variants",
+      "lines": [
+        219,
+        439,
+        471
+      ],
+      "severity": "medium"
+    },
+    {
+      "file": "components/templates/blog-pages/archetypes-editorial-template.tsx",
+      "template": "archetypes-editorial-template",
+      "issue": "Buttons missing dark mode text color variants",
+      "lines": [
+        212,
+        218,
+        318,
+        403,
+        556,
+        566,
+        605
+      ],
+      "severity": "medium"
+    },
+    {
+      "file": "components/templates/3d-immersive/3d-immersive-template.tsx",
+      "template": "3d-immersive-template",
+      "issue": "Buttons missing dark mode text color variants",
+      "lines": [
+        222,
+        337,
+        344,
+        352
+      ],
+      "severity": "medium"
+    }
+  ],
+  "total": 78
+}

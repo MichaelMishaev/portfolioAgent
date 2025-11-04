@@ -3687,6 +3687,25 @@
         "subtitle": "Join thousands of businesses and professionals who trust our platform",
         "button": "Create Free Account"
       }
+    },
+    "footer": {
+      "templates": "Templates",
+      "allTemplates": "All Templates",
+      "professional": "Professional",
+      "creative": "Creative",
+      "modern": "Modern",
+      "resources": "Resources",
+      "documentation": "Documentation",
+      "guides": "Guides",
+      "support": "Support",
+      "connect": "Connect"
+    },
+    "errors": {
+      "somethingWentWrong": "Something went wrong",
+      "tryAgain": "Try Again"
+    },
+    "buttons": {
+      "customizeTemplate": "Customize Template"
     }
   },
   "ru": {
@@ -7140,6 +7159,25 @@
         "subtitle": "Присоединяйтесь к тысячам компаний и профессионалов которые доверяют нашей платформе",
         "button": "Создать Бесплатный Аккаунт"
       }
+    },
+    "footer": {
+      "templates": "Шаблоны",
+      "allTemplates": "Все шаблоны",
+      "professional": "Профессиональные",
+      "creative": "Креативные",
+      "modern": "Современные",
+      "resources": "Ресурсы",
+      "documentation": "Документация",
+      "guides": "Руководства",
+      "support": "Поддержка",
+      "connect": "Связаться"
+    },
+    "errors": {
+      "somethingWentWrong": "Что-то пошло не так",
+      "tryAgain": "Попробовать снова"
+    },
+    "buttons": {
+      "customizeTemplate": "Настроить шаблон"
     }
   }
 }

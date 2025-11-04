@@ -187,7 +187,7 @@ export function SinglePageTemplate() {
                 <FiMail className="mr-2" />
                 Get in Touch
               </Button>
-              <Button variant="outline" size="lg" className="w-full sm:w-auto min-h-[44px]">
+              <Button variant="outline" size="lg" className="w-full sm:w-auto min-h-[44px] text-slate-900 dark:text-white">
                 View Projects
               </Button>
             </div>
@@ -315,7 +315,7 @@ export function SinglePageTemplate() {
                     ))}
                   </div>
 
-                  <Button variant="outline" asChild>
+                  <Button variant="outline" className="text-slate-900 dark:text-white" asChild>
                     <a href={project.link} target="_blank" rel="noopener noreferrer">
                       View Project →
                     </a>

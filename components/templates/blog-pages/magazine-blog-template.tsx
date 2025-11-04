@@ -535,7 +535,7 @@ export function MagazineBlogTemplate() {
                 </button>
               ))}
             </div>
-            <Button variant="outline" size="sm">
+            <Button variant="outline" className="text-slate-900 dark:text-white" size="sm">
               <FiFilter className="w-4 h-4 mr-2" />
               More Filters
             </Button>

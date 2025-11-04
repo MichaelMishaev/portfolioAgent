@@ -605,7 +605,7 @@ export function BentoGridTemplate() {
               <CardContent className="p-6 text-center">
                 <div className="text-3xl mb-3">📅</div>
                 <h3 className="font-bold mb-2">Book a Call</h3>
-                <Button variant="outline" size="sm">Schedule Meeting</Button>
+                <Button variant="outline" className="text-white border-white" size="sm">Schedule Meeting</Button>
               </CardContent>
             </Card>
           </ScrollReveal>

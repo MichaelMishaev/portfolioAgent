@@ -392,10 +392,10 @@ export function GridMasonryTemplate() {
                 Get in Touch
               </Button>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
-                <Button variant="outline" size="icon" aria-label="Instagram Profile">
+                <Button variant="outline" className="text-white border-white" size="icon" aria-label="Instagram Profile">
                   <FiInstagram className="w-5 h-5" />
                 </Button>
-                <Button variant="outline" size="icon" aria-label="Twitter Profile">
+                <Button variant="outline" className="text-white border-white" size="icon" aria-label="Twitter Profile">
                   <FiTwitter className="w-5 h-5" />
                 </Button>
               </div>

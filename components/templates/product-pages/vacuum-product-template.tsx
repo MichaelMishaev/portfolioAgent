@@ -309,7 +309,7 @@ export function VacuumProductTemplate() {
                   <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
                     Add to Cart
                   </Button>
-                  <Button size="lg" variant="outline">
+                  <Button size="lg" variant="outline" className="text-slate-900 dark:text-white">
                     Watch Demo
                   </Button>
                 </div>

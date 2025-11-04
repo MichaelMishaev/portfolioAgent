@@ -213,7 +213,7 @@ return (
         </FadeIn>
 
         <FadeIn delay={0.4}>
-          <Button variant="outline" size="lg">
+          <Button variant="outline" className="text-slate-900 dark:text-white" size="lg">
             <FiMail className="mr-2" />
             Work with Me
           </Button>

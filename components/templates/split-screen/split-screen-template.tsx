@@ -507,7 +507,7 @@ export function SplitScreenTemplate() {
                   {/* Navigation */}
                   <div className="flex items-center gap-4">
                     <Button
-                      variant="outline"
+                      variant="outline" className="text-slate-900 dark:text-white"
                       size="icon"
                       onClick={prevProject}
                       className="h-12 w-12"
@@ -519,7 +519,7 @@ export function SplitScreenTemplate() {
                       {activeProject + 1} / {portfolioData.projects.length}
                     </span>
                     <Button
-                      variant="outline"
+                      variant="outline" className="text-slate-900 dark:text-white"
                       size="icon"
                       onClick={nextProject}
                       className="h-12 w-12"

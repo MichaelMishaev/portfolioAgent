@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { usePathname } from "next/navigation";
+import { useI18n } from "@/lib/i18n-context";
 
 interface CustomizeTemplateButtonProps {
   variant?: "default" | "gradient" | "outline";
@@ -18,6 +19,7 @@ export function CustomizeTemplateButton({
   showIcon = true
 }: CustomizeTemplateButtonProps) {
   const pathname = usePathname();
+  const { t } = useI18n();
 
   // Extract template ID from current path
   // Path format: /templates/[templateId] or /templates/[templateId]/preview
@@ -55,7 +57,7 @@ export function CustomizeTemplateButton({
           ${className}
         `}
       >
-        {showIcon && "✏️ "}Customize Template
+        {showIcon && "✏️ "}{t.buttons.customizeTemplate}
       </Button>
     </Link>
   );

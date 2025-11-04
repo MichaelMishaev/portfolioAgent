@@ -298,7 +298,7 @@ export function OnlineBusinessCourseTemplate() {
                     </li>
                   ))}
                 </ul>
-                <Button className="w-full" variant="outline">
+                <Button className="w-full text-slate-900 dark:text-white" variant="outline">
                   {data.pricing?.essentials?.cta || "Get Started"}
                 </Button>
               </CardContent>
