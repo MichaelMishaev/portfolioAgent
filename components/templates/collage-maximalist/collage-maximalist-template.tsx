@@ -488,7 +488,7 @@ return (
       <section className="py-20 px-3 sm:px-3 bg-gradient-to-br from-green-200 via-cyan-200 to-blue-200">
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-5xl md:text-7xl font-black mb-12 text-center rotate-2 [text-shadow:4px_4px_0px_rgba(0,0,0,0.2)]">
-            MY STORY>>>
+            MY STORY{'>>>'}
           </h2>
           <div className="space-y-8">
             {[
