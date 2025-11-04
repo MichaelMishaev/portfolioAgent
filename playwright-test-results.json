@@ -1,0 +1,220 @@
+{
+  "timestamp": "2025-11-04T08:17:54.852Z",
+  "baseUrl": "http://localhost:3500",
+  "totalTests": 35,
+  "passed": 35,
+  "failed": 0,
+  "stuck": 0,
+  "results": [
+    {
+      "templateId": "3d-immersive",
+      "status": "PASS",
+      "loadTime": 1298,
+      "screenshot": "screenshots/3d-immersive-success.png"
+    },
+    {
+      "templateId": "ar-spatial",
+      "status": "PASS",
+      "loadTime": 1116,
+      "screenshot": "screenshots/ar-spatial-success.png"
+    },
+    {
+      "templateId": "bento-grid",
+      "status": "PASS",
+      "loadTime": 1117,
+      "screenshot": "screenshots/bento-grid-success.png"
+    },
+    {
+      "templateId": "bold-typography",
+      "status": "PASS",
+      "loadTime": 1097,
+      "screenshot": "screenshots/bold-typography-success.png"
+    },
+    {
+      "templateId": "card-modular",
+      "status": "PASS",
+      "loadTime": 1231,
+      "screenshot": "screenshots/card-modular-success.png"
+    },
+    {
+      "templateId": "collage-maximalist",
+      "status": "PASS",
+      "loadTime": 1098,
+      "screenshot": "screenshots/collage-maximalist-success.png"
+    },
+    {
+      "templateId": "creative-agency-bold",
+      "status": "PASS",
+      "loadTime": 1069,
+      "screenshot": "screenshots/creative-agency-bold-success.png"
+    },
+    {
+      "templateId": "dark-mode",
+      "status": "PASS",
+      "loadTime": 1073,
+      "screenshot": "screenshots/dark-mode-success.png"
+    },
+    {
+      "templateId": "data-dashboard",
+      "status": "PASS",
+      "loadTime": 1105,
+      "screenshot": "screenshots/data-dashboard-success.png"
+    },
+    {
+      "templateId": "experimental-3d",
+      "status": "PASS",
+      "loadTime": 1070,
+      "screenshot": "screenshots/experimental-3d-success.png"
+    },
+    {
+      "templateId": "fullscreen-immersive",
+      "status": "PASS",
+      "loadTime": 1094,
+      "screenshot": "screenshots/fullscreen-immersive-success.png"
+    },
+    {
+      "templateId": "glassmorphism-modern",
+      "status": "PASS",
+      "loadTime": 1072,
+      "screenshot": "screenshots/glassmorphism-modern-success.png"
+    },
+    {
+      "templateId": "grid-masonry",
+      "status": "PASS",
+      "loadTime": 1103,
+      "screenshot": "screenshots/grid-masonry-success.png"
+    },
+    {
+      "templateId": "illustration-focus",
+      "status": "PASS",
+      "loadTime": 1130,
+      "screenshot": "screenshots/illustration-focus-success.png"
+    },
+    {
+      "templateId": "interactive-agency",
+      "status": "PASS",
+      "loadTime": 1099,
+      "screenshot": "screenshots/interactive-agency-success.png"
+    },
+    {
+      "templateId": "kinetic-typography",
+      "status": "PASS",
+      "loadTime": 1094,
+      "screenshot": "screenshots/kinetic-typography-success.png"
+    },
+    {
+      "templateId": "luxury-minimal",
+      "status": "PASS",
+      "loadTime": 1087,
+      "screenshot": "screenshots/luxury-minimal-success.png"
+    },
+    {
+      "templateId": "minimal-portfolio-clean",
+      "status": "PASS",
+      "loadTime": 1075,
+      "screenshot": "screenshots/minimal-portfolio-clean-success.png"
+    },
+    {
+      "templateId": "minimalist",
+      "status": "PASS",
+      "loadTime": 1092,
+      "screenshot": "screenshots/minimalist-success.png"
+    },
+    {
+      "templateId": "motion-designer",
+      "status": "PASS",
+      "loadTime": 1106,
+      "screenshot": "screenshots/motion-designer-success.png"
+    },
+    {
+      "templateId": "neo-brutalist",
+      "status": "PASS",
+      "loadTime": 1086,
+      "screenshot": "screenshots/neo-brutalist-success.png"
+    },
+    {
+      "templateId": "online-business-saas",
+      "status": "PASS",
+      "loadTime": 1123,
+      "screenshot": "screenshots/online-business-saas-success.png"
+    },
+    {
+      "templateId": "organic-liquid",
+      "status": "PASS",
+      "loadTime": 1096,
+      "screenshot": "screenshots/organic-liquid-success.png"
+    },
+    {
+      "templateId": "personal-brand",
+      "status": "PASS",
+      "loadTime": 1092,
+      "screenshot": "screenshots/personal-brand-success.png"
+    },
+    {
+      "templateId": "photography-immersive",
+      "status": "PASS",
+      "loadTime": 1099,
+      "screenshot": "screenshots/photography-immersive-success.png"
+    },
+    {
+      "templateId": "professional-b2b",
+      "status": "PASS",
+      "loadTime": 1080,
+      "screenshot": "screenshots/professional-b2b-success.png"
+    },
+    {
+      "templateId": "saas-feature-rich",
+      "status": "PASS",
+      "loadTime": 1081,
+      "screenshot": "screenshots/saas-feature-rich-success.png"
+    },
+    {
+      "templateId": "service-marketplace",
+      "status": "PASS",
+      "loadTime": 1085,
+      "screenshot": "screenshots/service-marketplace-success.png"
+    },
+    {
+      "templateId": "single-page",
+      "status": "PASS",
+      "loadTime": 1105,
+      "screenshot": "screenshots/single-page-success.png"
+    },
+    {
+      "templateId": "split-screen",
+      "status": "PASS",
+      "loadTime": 1127,
+      "screenshot": "screenshots/split-screen-success.png"
+    },
+    {
+      "templateId": "split-screen-editorial",
+      "status": "PASS",
+      "loadTime": 1078,
+      "screenshot": "screenshots/split-screen-editorial-success.png"
+    },
+    {
+      "templateId": "startup-pitch",
+      "status": "PASS",
+      "loadTime": 1106,
+      "screenshot": "screenshots/startup-pitch-success.png"
+    },
+    {
+      "templateId": "text-heavy",
+      "status": "PASS",
+      "loadTime": 1109,
+      "screenshot": "screenshots/text-heavy-success.png"
+    },
+    {
+      "templateId": "voice-first",
+      "status": "PASS",
+      "loadTime": 1103,
+      "screenshot": "screenshots/voice-first-success.png"
+    },
+    {
+      "templateId": "y2k-retro",
+      "status": "PASS",
+      "loadTime": 1101,
+      "screenshot": "screenshots/y2k-retro-success.png"
+    }
+  ]
+}

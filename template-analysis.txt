@@ -1,0 +1,599 @@
+Analyzing all 34 templates...
+
+=== minimalist ===
+File: components/templates/minimalist/minimalist-template.tsx (     319 lines)
+✅ Hero (1)
+✅ Stats (2)
+✅ Skills (3)
+✅ Contact (8)
+✅ About (7)
+✅ Projects (18)
+❌ MISSING: Pricing
+❌ MISSING: Testimonials
+✅ Gallery (1)
+✅ CTA (1)
+❌ MISSING: Timeline
+❌ MISSING: FAQ
+
+⭐ Special: Animations (2)
+
+=== service-marketplace ===
+File: components/templates/service-marketplace/service-marketplace-template.tsx (     375 lines)
+✅ Hero (7)
+✅ Stats (2)
+❌ MISSING: Skills
+❌ MISSING: Contact
+❌ MISSING: About
+✅ Projects (33)
+✅ Pricing (10)
+✅ Testimonials (9)
+✅ Gallery (1)
+✅ CTA (7)
+❌ MISSING: Timeline
+❌ MISSING: FAQ
+
+⭐ Special: Animations (2)
+
+=== dark-mode ===
+File: components/templates/dark-mode/dark-mode-template.tsx (     405 lines)
+✅ Hero (1)
+✅ Stats (3)
+❌ MISSING: Skills
+✅ Contact (6)
+✅ About (7)
+✅ Projects (13)
+❌ MISSING: Pricing
+✅ Testimonials (4)
+❌ MISSING: Gallery
+✅ CTA (2)
+✅ Timeline (1)
+✅ FAQ (2)
+
+⭐ Special: Video (1)
+⭐ Special: Animations (2)
+
+=== bold-typography ===
+File: components/templates/bold-typography/bold-typography-template.tsx (     403 lines)
+✅ Hero (1)
+✅ Stats (3)
+❌ MISSING: Skills
+✅ Contact (9)
+✅ About (3)
+✅ Projects (14)
+❌ MISSING: Pricing
+✅ Testimonials (4)
+❌ MISSING: Gallery
+❌ MISSING: CTA
+❌ MISSING: Timeline
+✅ FAQ (3)
+
+⭐ Special: Animations (2)
+
+=== grid-masonry ===
+File: components/templates/grid-masonry/grid-masonry-template.tsx (     457 lines)
+✅ Hero (1)
+✅ Stats (1)
+❌ MISSING: Skills
+✅ Contact (6)
+❌ MISSING: About
+✅ Projects (13)
+❌ MISSING: Pricing
+✅ Testimonials (3)
+❌ MISSING: Gallery
+✅ CTA (1)
+❌ MISSING: Timeline
+✅ FAQ (3)
+
+⭐ Special: Animations (3)
+
+=== fullscreen-immersive ===
+File: components/templates/fullscreen-immersive/fullscreen-immersive-template.tsx (     366 lines)
+✅ Hero (1)
+❌ MISSING: Stats
+❌ MISSING: Skills
+✅ Contact (4)
+✅ About (2)
+✅ Projects (11)
+❌ MISSING: Pricing
+❌ MISSING: Testimonials
+❌ MISSING: Gallery
+❌ MISSING: CTA
+❌ MISSING: Timeline
+✅ FAQ (1)
+
+⭐ Special: Animations (3)
+
+=== split-screen ===
+File: components/templates/split-screen/split-screen-template.tsx (     831 lines)
+✅ Hero (1)
+✅ Stats (3)
+✅ Skills (9)
+✅ Contact (6)
+✅ About (1)
+✅ Projects (29)
+✅ Pricing (1)
+✅ Testimonials (3)
+❌ MISSING: Gallery
+✅ CTA (3)
+❌ MISSING: Timeline
+✅ FAQ (6)
+
+⭐ Special: 3D Graphics (4)
+⭐ Special: Animations (2)
+
+=== illustration-focus ===
+File: components/templates/illustration-focus/illustration-focus-template.tsx (     459 lines)
+✅ Hero (1)
+✅ Stats (3)
+❌ MISSING: Skills
+✅ Contact (6)
+✅ About (6)
+✅ Projects (17)
+❌ MISSING: Pricing
+✅ Testimonials (3)
+❌ MISSING: Gallery
+✅ CTA (2)
+❌ MISSING: Timeline
+✅ FAQ (4)
+
+⭐ Special: Animations (4)
+
+=== single-page ===
+File: components/templates/single-page/single-page-template.tsx (     418 lines)
+✅ Hero (1)
+✅ Stats (3)
+✅ Skills (7)
+✅ Contact (11)
+✅ About (8)
+✅ Projects (26)
+❌ MISSING: Pricing
+✅ Testimonials (3)
+❌ MISSING: Gallery
+❌ MISSING: CTA
+✅ Timeline (1)
+✅ FAQ (4)
+
+⭐ Special: Video (2)
+⭐ Special: Animations (2)
+
+=== text-heavy ===
+File: components/templates/text-heavy/text-heavy-template.tsx (     492 lines)
+✅ Hero (1)
+✅ Stats (3)
+✅ Skills (4)
+✅ Contact (6)
+✅ About (9)
+✅ Projects (14)
+❌ MISSING: Pricing
+✅ Testimonials (4)
+✅ Gallery (1)
+✅ CTA (1)
+❌ MISSING: Timeline
+✅ FAQ (5)
+
+⭐ Special: Animations (2)
+
+=== card-modular ===
+File: components/templates/card-modular/card-modular-template.tsx (     869 lines)
+✅ Hero (1)
+✅ Stats (3)
+✅ Skills (6)
+✅ Contact (6)
+✅ About (5)
+✅ Projects (32)
+❌ MISSING: Pricing
+✅ Testimonials (3)
+❌ MISSING: Gallery
+✅ CTA (3)
+✅ Timeline (2)
+✅ FAQ (3)
+
+⭐ Special: 3D Graphics (2)
+⭐ Special: Animations (2)
+
+=== kinetic-typography ===
+File: components/templates/kinetic-typography/kinetic-typography-template.tsx (     418 lines)
+✅ Hero (1)
+✅ Stats (3)
+❌ MISSING: Skills
+✅ Contact (4)
+❌ MISSING: About
+✅ Projects (12)
+❌ MISSING: Pricing
+✅ Testimonials (3)
+❌ MISSING: Gallery
+❌ MISSING: CTA
+❌ MISSING: Timeline
+✅ FAQ (3)
+
+⭐ Special: 3D Graphics (1)
+⭐ Special: Animations (4)
+
+=== bento-grid ===
+File: components/templates/bento-grid/bento-grid-template.tsx (     682 lines)
+✅ Hero (1)
+✅ Stats (17)
+✅ Skills (5)
+✅ Contact (3)
+✅ About (3)
+✅ Projects (64)
+❌ MISSING: Pricing
+✅ Testimonials (4)
+❌ MISSING: Gallery
+✅ CTA (1)
+✅ Timeline (4)
+✅ FAQ (5)
+
+⭐ Special: Video (1)
+⭐ Special: 3D Graphics (2)
+⭐ Special: Animations (2)
+
+=== 3d-immersive ===
+File: components/templates/3d-immersive/3d-immersive-template.tsx (     375 lines)
+✅ Hero (2)
+❌ MISSING: Stats
+✅ Skills (4)
+✅ Contact (4)
+❌ MISSING: About
+✅ Projects (10)
+❌ MISSING: Pricing
+❌ MISSING: Testimonials
+✅ Gallery (1)
+❌ MISSING: CTA
+❌ MISSING: Timeline
+✅ FAQ (2)
+
+⭐ Special: 3D Graphics (23)
+⭐ Special: Animations (2)
+
+=== neo-brutalist ===
+File: components/templates/neo-brutalist/neo-brutalist-template.tsx (     295 lines)
+✅ Hero (1)
+❌ MISSING: Stats
+✅ Skills (4)
+✅ Contact (6)
+✅ About (2)
+✅ Projects (12)
+❌ MISSING: Pricing
+✅ Testimonials (3)
+❌ MISSING: Gallery
+✅ CTA (2)
+❌ MISSING: Timeline
+✅ FAQ (5)
+
+
+=== organic-liquid ===
+File: components/templates/organic-liquid/organic-liquid-template.tsx (     468 lines)
+✅ Hero (1)
+✅ Stats (3)
+❌ MISSING: Skills
+✅ Contact (3)
+✅ About (2)
+✅ Projects (14)
+❌ MISSING: Pricing
+✅ Testimonials (3)
+❌ MISSING: Gallery
+❌ MISSING: CTA
+✅ Timeline (1)
+✅ FAQ (5)
+
+⭐ Special: Animations (3)
+
+=== data-dashboard ===
+File: components/templates/data-dashboard/data-dashboard-template.tsx (     425 lines)
+✅ Hero (1)
+❌ MISSING: Stats
+❌ MISSING: Skills
+✅ Contact (4)
+❌ MISSING: About
+✅ Projects (9)
+❌ MISSING: Pricing
+❌ MISSING: Testimonials
+❌ MISSING: Gallery
+❌ MISSING: CTA
+❌ MISSING: Timeline
+❌ MISSING: FAQ
+
+⭐ Special: Animations (1)
+
+=== y2k-retro ===
+File: components/templates/y2k-retro/y2k-retro-template.tsx (     437 lines)
+✅ Hero (1)
+✅ Stats (3)
+✅ Skills (3)
+✅ Contact (4)
+✅ About (4)
+✅ Projects (15)
+❌ MISSING: Pricing
+✅ Testimonials (4)
+❌ MISSING: Gallery
+❌ MISSING: CTA
+❌ MISSING: Timeline
+❌ MISSING: FAQ
+
+⭐ Special: 3D Graphics (1)
+⭐ Special: Animations (4)
+
+=== ar-spatial ===
+File: components/templates/ar-spatial/ar-spatial-template.tsx (     405 lines)
+✅ Hero (1)
+❌ MISSING: Stats
+❌ MISSING: Skills
+✅ Contact (3)
+❌ MISSING: About
+✅ Projects (9)
+❌ MISSING: Pricing
+❌ MISSING: Testimonials
+❌ MISSING: Gallery
+❌ MISSING: CTA
+❌ MISSING: Timeline
+❌ MISSING: FAQ
+
+⭐ Special: 3D Graphics (7)
+⭐ Special: Animations (2)
+
+=== collage-maximalist ===
+File: components/templates/collage-maximalist/collage-maximalist-template.tsx (     402 lines)
+✅ Hero (1)
+✅ Stats (3)
+❌ MISSING: Skills
+✅ Contact (4)
+✅ About (2)
+✅ Projects (15)
+❌ MISSING: Pricing
+✅ Testimonials (3)
+✅ Gallery (1)
+❌ MISSING: CTA
+❌ MISSING: Timeline
+✅ FAQ (5)
+
+⭐ Special: 3D Graphics (2)
+⭐ Special: Animations (1)
+
+=== voice-first ===
+File: components/templates/voice-first/voice-first-template.tsx (     444 lines)
+✅ Hero (1)
+❌ MISSING: Stats
+✅ Skills (1)
+✅ Contact (5)
+✅ About (3)
+✅ Projects (10)
+❌ MISSING: Pricing
+❌ MISSING: Testimonials
+❌ MISSING: Gallery
+❌ MISSING: CTA
+✅ Timeline (1)
+✅ FAQ (2)
+
+⭐ Special: Animations (2)
+
+=== professional-b2b ===
+File: components/templates/professional-b2b/professional-b2b-template.tsx (     356 lines)
+✅ Hero (5)
+✅ Stats (1)
+❌ MISSING: Skills
+✅ Contact (9)
+❌ MISSING: About
+✅ Projects (1)
+❌ MISSING: Pricing
+✅ Testimonials (9)
+✅ Gallery (1)
+✅ CTA (7)
+❌ MISSING: Timeline
+❌ MISSING: FAQ
+
+⭐ Special: Animations (3)
+
+=== creative-agency-bold ===
+File: components/templates/creative-agency-bold/creative-agency-bold-template.tsx (     570 lines)
+✅ Hero (6)
+✅ Stats (2)
+❌ MISSING: Skills
+✅ Contact (7)
+❌ MISSING: About
+✅ Projects (3)
+❌ MISSING: Pricing
+❌ MISSING: Testimonials
+✅ Gallery (1)
+✅ CTA (5)
+❌ MISSING: Timeline
+✅ FAQ (5)
+
+⭐ Special: Video (1)
+⭐ Special: Animations (3)
+
+=== minimal-portfolio-clean ===
+File: components/templates/minimal-portfolio-clean/minimal-portfolio-clean-template.tsx (     220 lines)
+✅ Hero (4)
+❌ MISSING: Stats
+✅ Skills (1)
+✅ Contact (10)
+✅ About (12)
+✅ Projects (4)
+❌ MISSING: Pricing
+❌ MISSING: Testimonials
+❌ MISSING: Gallery
+❌ MISSING: CTA
+❌ MISSING: Timeline
+❌ MISSING: FAQ
+
+⭐ Special: Animations (2)
+
+=== glassmorphism-modern ===
+File: components/templates/glassmorphism-modern/glassmorphism-modern-template.tsx (     326 lines)
+✅ Hero (5)
+❌ MISSING: Stats
+❌ MISSING: Skills
+✅ Contact (7)
+❌ MISSING: About
+✅ Projects (3)
+✅ Pricing (9)
+❌ MISSING: Testimonials
+✅ Gallery (1)
+✅ CTA (4)
+❌ MISSING: Timeline
+❌ MISSING: FAQ
+
+⭐ Special: Video (1)
+⭐ Special: Animations (3)
+
+=== split-screen-editorial ===
+File: components/templates/split-screen-editorial/split-screen-editorial-template.tsx (     161 lines)
+✅ Hero (1)
+❌ MISSING: Stats
+✅ Skills (1)
+✅ Contact (7)
+✅ About (8)
+✅ Projects (2)
+❌ MISSING: Pricing
+❌ MISSING: Testimonials
+✅ Gallery (1)
+❌ MISSING: CTA
+❌ MISSING: Timeline
+❌ MISSING: FAQ
+
+⭐ Special: Animations (1)
+
+=== saas-feature-rich ===
+File: components/templates/saas-feature-rich/saas-feature-rich-template.tsx (     317 lines)
+✅ Hero (9)
+✅ Stats (1)
+❌ MISSING: Skills
+✅ Contact (1)
+❌ MISSING: About
+❌ MISSING: Projects
+✅ Pricing (9)
+✅ Testimonials (8)
+✅ Gallery (1)
+✅ CTA (6)
+❌ MISSING: Timeline
+❌ MISSING: FAQ
+
+⭐ Special: Video (1)
+⭐ Special: Animations (2)
+
+=== personal-brand ===
+File: components/templates/personal-brand/personal-brand-template.tsx (     279 lines)
+✅ Hero (7)
+❌ MISSING: Stats
+❌ MISSING: Skills
+✅ Contact (7)
+✅ About (8)
+✅ Projects (2)
+❌ MISSING: Pricing
+❌ MISSING: Testimonials
+✅ Gallery (1)
+✅ CTA (4)
+❌ MISSING: Timeline
+✅ FAQ (15)
+
+⭐ Special: Video (1)
+⭐ Special: Animations (2)
+
+=== experimental-3d ===
+File: components/templates/experimental-3d/experimental-3d-template.tsx (     281 lines)
+✅ Hero (5)
+✅ Stats (2)
+✅ Skills (1)
+✅ Contact (3)
+✅ About (4)
+✅ Projects (1)
+❌ MISSING: Pricing
+❌ MISSING: Testimonials
+❌ MISSING: Gallery
+✅ CTA (3)
+❌ MISSING: Timeline
+❌ MISSING: FAQ
+
+⭐ Special: 3D Graphics (5)
+⭐ Special: Animations (2)
+
+=== interactive-agency ===
+File: components/templates/interactive-agency/interactive-agency-template.tsx (     350 lines)
+✅ Hero (2)
+✅ Stats (2)
+❌ MISSING: Skills
+✅ Contact (6)
+❌ MISSING: About
+✅ Projects (11)
+❌ MISSING: Pricing
+✅ Testimonials (2)
+✅ Gallery (1)
+✅ CTA (1)
+❌ MISSING: Timeline
+✅ FAQ (2)
+
+⭐ Special: 3D Graphics (2)
+⭐ Special: Animations (3)
+
+=== luxury-minimal ===
+File: components/templates/luxury-minimal/luxury-minimal-template.tsx (     311 lines)
+✅ Hero (3)
+❌ MISSING: Stats
+❌ MISSING: Skills
+✅ Contact (6)
+✅ About (7)
+✅ Projects (18)
+❌ MISSING: Pricing
+✅ Testimonials (3)
+✅ Gallery (2)
+✅ CTA (1)
+❌ MISSING: Timeline
+❌ MISSING: FAQ
+
+⭐ Special: Animations (3)
+
+=== startup-pitch ===
+File: components/templates/startup-pitch/startup-pitch-template.tsx (     419 lines)
+✅ Hero (1)
+❌ MISSING: Stats
+❌ MISSING: Skills
+❌ MISSING: Contact
+❌ MISSING: About
+✅ Projects (16)
+✅ Pricing (8)
+✅ Testimonials (7)
+✅ Gallery (1)
+✅ CTA (5)
+❌ MISSING: Timeline
+✅ FAQ (2)
+
+⭐ Special: 3D Graphics (1)
+⭐ Special: Animations (3)
+
+=== photography-immersive ===
+File: components/templates/photography-immersive/photography-immersive-template.tsx (     359 lines)
+✅ Hero (3)
+❌ MISSING: Stats
+❌ MISSING: Skills
+✅ Contact (6)
+✅ About (7)
+✅ Projects (14)
+❌ MISSING: Pricing
+❌ MISSING: Testimonials
+✅ Gallery (7)
+✅ CTA (1)
+❌ MISSING: Timeline
+❌ MISSING: FAQ
+
+⭐ Special: Animations (3)
+
+=== motion-designer ===
+File: components/templates/motion-designer/motion-designer-template.tsx (     431 lines)
+✅ Hero (1)
+✅ Stats (2)
+✅ Skills (2)
+✅ Contact (6)
+❌ MISSING: About
+✅ Projects (13)
+❌ MISSING: Pricing
+❌ MISSING: Testimonials
+✅ Gallery (1)
+✅ CTA (1)
+❌ MISSING: Timeline
+✅ FAQ (2)
+
+⭐ Special: Video (4)
+⭐ Special: 3D Graphics (2)
+⭐ Special: Animations (3)
+

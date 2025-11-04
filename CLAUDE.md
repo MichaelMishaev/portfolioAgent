@@ -1,2 +1,3 @@
 - use clean and simple -proffesional code,
 - when create content always must be english and  russian
+- each bug that discovered and fixed must be documented in '/Users/michaelmishayev/Desktop/Projects/portfolioWeb/docs/bugs.md'

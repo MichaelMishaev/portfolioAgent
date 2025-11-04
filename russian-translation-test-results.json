@@ -1,0 +1,247 @@
+{
+  "timestamp": "2025-11-04T10:27:48.107Z",
+  "baseUrl": "http://localhost:3500",
+  "totalTests": 34,
+  "passed": 34,
+  "failed": 0,
+  "results": [
+    {
+      "templateId": "minimalist",
+      "status": "PASS",
+      "hasRussianContent": true,
+      "screenshot": "screenshots/ru-minimalist-success.png",
+      "sampleText": "((e, i, s, u, m, a, l, h)=>{\n    let d = document.documentElement, w = [\n        \"light\",\n        \"d"
+    },
+    {
+      "templateId": "service-marketplace",
+      "status": "PASS",
+      "hasRussianContent": true,
+      "screenshot": "screenshots/ru-service-marketplace-success.png",
+      "sampleText": "((e, i, s, u, m, a, l, h)=>{\n    let d = document.documentElement, w = [\n        \"light\",\n        \"d"
+    },
+    {
+      "templateId": "dark-mode",
+      "status": "PASS",
+      "hasRussianContent": true,
+      "screenshot": "screenshots/ru-dark-mode-success.png",
+      "sampleText": "((e, i, s, u, m, a, l, h)=>{\n    let d = document.documentElement, w = [\n        \"light\",\n        \"d"
+    },
+    {
+      "templateId": "bold-typography",
+      "status": "PASS",
+      "hasRussianContent": true,
+      "screenshot": "screenshots/ru-bold-typography-success.png",
+      "sampleText": "((e, i, s, u, m, a, l, h)=>{\n    let d = document.documentElement, w = [\n        \"light\",\n        \"d"
+    },
+    {
+      "templateId": "grid-masonry",
+      "status": "PASS",
+      "hasRussianContent": true,
+      "screenshot": "screenshots/ru-grid-masonry-success.png",
+      "sampleText": "((e, i, s, u, m, a, l, h)=>{\n    let d = document.documentElement, w = [\n        \"light\",\n        \"d"
+    },
+    {
+      "templateId": "fullscreen-immersive",
+      "status": "PASS",
+      "hasRussianContent": true,
+      "screenshot": "screenshots/ru-fullscreen-immersive-success.png",
+      "sampleText": "((e, i, s, u, m, a, l, h)=>{\n    let d = document.documentElement, w = [\n        \"light\",\n        \"d"
+    },
+    {
+      "templateId": "split-screen",
+      "status": "PASS",
+      "hasRussianContent": true,
+      "screenshot": "screenshots/ru-split-screen-success.png",
+      "sampleText": "((e, i, s, u, m, a, l, h)=>{\n    let d = document.documentElement, w = [\n        \"light\",\n        \"d"
+    },
+    {
+      "templateId": "illustration-focus",
+      "status": "PASS",
+      "hasRussianContent": true,
+      "screenshot": "screenshots/ru-illustration-focus-success.png",
+      "sampleText": "((e, i, s, u, m, a, l, h)=>{\n    let d = document.documentElement, w = [\n        \"light\",\n        \"d"
+    },
+    {
+      "templateId": "single-page",
+      "status": "PASS",
+      "hasRussianContent": true,
+      "screenshot": "screenshots/ru-single-page-success.png",
+      "sampleText": "((e, i, s, u, m, a, l, h)=>{\n    let d = document.documentElement, w = [\n        \"light\",\n        \"d"
+    },
+    {
+      "templateId": "text-heavy",
+      "status": "PASS",
+      "hasRussianContent": true,
+      "screenshot": "screenshots/ru-text-heavy-success.png",
+      "sampleText": "((e, i, s, u, m, a, l, h)=>{\n    let d = document.documentElement, w = [\n        \"light\",\n        \"d"
+    },
+    {
+      "templateId": "card-modular",
+      "status": "PASS",
+      "hasRussianContent": true,
+      "screenshot": "screenshots/ru-card-modular-success.png",
+      "sampleText": "((e, i, s, u, m, a, l, h)=>{\n    let d = document.documentElement, w = [\n        \"light\",\n        \"d"
+    },
+    {
+      "templateId": "kinetic-typography",
+      "status": "PASS",
+      "hasRussianContent": true,
+      "screenshot": "screenshots/ru-kinetic-typography-success.png",
+      "sampleText": "((e, i, s, u, m, a, l, h)=>{\n    let d = document.documentElement, w = [\n        \"light\",\n        \"d"
+    },
+    {
+      "templateId": "bento-grid",
+      "status": "PASS",
+      "hasRussianContent": true,
+      "screenshot": "screenshots/ru-bento-grid-success.png",
+      "sampleText": "((e, i, s, u, m, a, l, h)=>{\n    let d = document.documentElement, w = [\n        \"light\",\n        \"d"
+    },
+    {
+      "templateId": "3d-immersive",
+      "status": "PASS",
+      "hasRussianContent": true,
+      "screenshot": "screenshots/ru-3d-immersive-success.png",
+      "sampleText": "((e, i, s, u, m, a, l, h)=>{\n    let d = document.documentElement, w = [\n        \"light\",\n        \"d"
+    },
+    {
+      "templateId": "neo-brutalist",
+      "status": "PASS",
+      "hasRussianContent": true,
+      "screenshot": "screenshots/ru-neo-brutalist-success.png",
+      "sampleText": "((e, i, s, u, m, a, l, h)=>{\n    let d = document.documentElement, w = [\n        \"light\",\n        \"d"
+    },
+    {
+      "templateId": "organic-liquid",
+      "status": "PASS",
+      "hasRussianContent": true,
+      "screenshot": "screenshots/ru-organic-liquid-success.png",
+      "sampleText": "((e, i, s, u, m, a, l, h)=>{\n    let d = document.documentElement, w = [\n        \"light\",\n        \"d"
+    },
+    {
+      "templateId": "data-dashboard",
+      "status": "PASS",
+      "hasRussianContent": true,
+      "screenshot": "screenshots/ru-data-dashboard-success.png",
+      "sampleText": "((e, i, s, u, m, a, l, h)=>{\n    let d = document.documentElement, w = [\n        \"light\",\n        \"d"
+    },
+    {
+      "templateId": "y2k-retro",
+      "status": "PASS",
+      "hasRussianContent": true,
+      "screenshot": "screenshots/ru-y2k-retro-success.png",
+      "sampleText": "((e, i, s, u, m, a, l, h)=>{\n    let d = document.documentElement, w = [\n        \"light\",\n        \"d"
+    },
+    {
+      "templateId": "ar-spatial",
+      "status": "PASS",
+      "hasRussianContent": true,
+      "screenshot": "screenshots/ru-ar-spatial-success.png",
+      "sampleText": "((e, i, s, u, m, a, l, h)=>{\n    let d = document.documentElement, w = [\n        \"light\",\n        \"d"
+    },
+    {
+      "templateId": "collage-maximalist",
+      "status": "PASS",
+      "hasRussianContent": true,
+      "screenshot": "screenshots/ru-collage-maximalist-success.png",
+      "sampleText": "((e, i, s, u, m, a, l, h)=>{\n    let d = document.documentElement, w = [\n        \"light\",\n        \"d"
+    },
+    {
+      "templateId": "voice-first",
+      "status": "PASS",
+      "hasRussianContent": true,
+      "screenshot": "screenshots/ru-voice-first-success.png",
+      "sampleText": "((e, i, s, u, m, a, l, h)=>{\n    let d = document.documentElement, w = [\n        \"light\",\n        \"d"
+    },
+    {
+      "templateId": "professional-b2b",
+      "status": "PASS",
+      "hasRussianContent": true,
+      "screenshot": "screenshots/ru-professional-b2b-success.png",
+      "sampleText": "((e, i, s, u, m, a, l, h)=>{\n    let d = document.documentElement, w = [\n        \"light\",\n        \"d"
+    },
+    {
+      "templateId": "creative-agency-bold",
+      "status": "PASS",
+      "hasRussianContent": true,
+      "screenshot": "screenshots/ru-creative-agency-bold-success.png",
+      "sampleText": "((e, i, s, u, m, a, l, h)=>{\n    let d = document.documentElement, w = [\n        \"light\",\n        \"d"
+    },
+    {
+      "templateId": "minimal-portfolio-clean",
+      "status": "PASS",
+      "hasRussianContent": true,
+      "screenshot": "screenshots/ru-minimal-portfolio-clean-success.png",
+      "sampleText": "((e, i, s, u, m, a, l, h)=>{\n    let d = document.documentElement, w = [\n        \"light\",\n        \"d"
+    },
+    {
+      "templateId": "glassmorphism-modern",
+      "status": "PASS",
+      "hasRussianContent": true,
+      "screenshot": "screenshots/ru-glassmorphism-modern-success.png",
+      "sampleText": "((e, i, s, u, m, a, l, h)=>{\n    let d = document.documentElement, w = [\n        \"light\",\n        \"d"
+    },
+    {
+      "templateId": "split-screen-editorial",
+      "status": "PASS",
+      "hasRussianContent": true,
+      "screenshot": "screenshots/ru-split-screen-editorial-success.png",
+      "sampleText": "((e, i, s, u, m, a, l, h)=>{\n    let d = document.documentElement, w = [\n        \"light\",\n        \"d"
+    },
+    {
+      "templateId": "saas-feature-rich",
+      "status": "PASS",
+      "hasRussianContent": true,
+      "screenshot": "screenshots/ru-saas-feature-rich-success.png",
+      "sampleText": "((e, i, s, u, m, a, l, h)=>{\n    let d = document.documentElement, w = [\n        \"light\",\n        \"d"
+    },
+    {
+      "templateId": "personal-brand",
+      "status": "PASS",
+      "hasRussianContent": true,
+      "screenshot": "screenshots/ru-personal-brand-success.png",
+      "sampleText": "((e, i, s, u, m, a, l, h)=>{\n    let d = document.documentElement, w = [\n        \"light\",\n        \"d"
+    },
+    {
+      "templateId": "experimental-3d",
+      "status": "PASS",
+      "hasRussianContent": true,
+      "screenshot": "screenshots/ru-experimental-3d-success.png",
+      "sampleText": "((e, i, s, u, m, a, l, h)=>{\n    let d = document.documentElement, w = [\n        \"light\",\n        \"d"
+    },
+    {
+      "templateId": "interactive-agency",
+      "status": "PASS",
+      "hasRussianContent": true,
+      "screenshot": "screenshots/ru-interactive-agency-success.png",
+      "sampleText": "((e, i, s, u, m, a, l, h)=>{\n    let d = document.documentElement, w = [\n        \"light\",\n        \"d"
+    },
+    {
+      "templateId": "luxury-minimal",
+      "status": "PASS",
+      "hasRussianContent": true,
+      "screenshot": "screenshots/ru-luxury-minimal-success.png",
+      "sampleText": "((e, i, s, u, m, a, l, h)=>{\n    let d = document.documentElement, w = [\n        \"light\",\n        \"d"
+    },
+    {
+      "templateId": "startup-pitch",
+      "status": "PASS",
+      "hasRussianContent": true,
+      "screenshot": "screenshots/ru-startup-pitch-success.png",
+      "sampleText": "((e, i, s, u, m, a, l, h)=>{\n    let d = document.documentElement, w = [\n        \"light\",\n        \"d"
+    },
+    {
+      "templateId": "photography-immersive",
+      "status": "PASS",
+      "hasRussianContent": true,
+      "screenshot": "screenshots/ru-photography-immersive-success.png",
+      "sampleText": "((e, i, s, u, m, a, l, h)=>{\n    let d = document.documentElement, w = [\n        \"light\",\n        \"d"
+    },
+    {
+      "templateId": "motion-designer",
+      "status": "PASS",
+      "hasRussianContent": true,
+      "screenshot": "screenshots/ru-motion-designer-success.png",
+      "sampleText": "((e, i, s, u, m, a, l, h)=>{\n    let d = document.documentElement, w = [\n        \"light\",\n        \"d"
+    }
+  ]
+}
