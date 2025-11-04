@@ -60,6 +60,15 @@ export const placeholderImages = {
     '3d2': 'https://images.unsplash.com/photo-1617791160505-6f00504e3519?w=800&h=600&fit=crop',
     '3d3': 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&h=600&fit=crop',
   },
+
+  // Product/Luxury images
+  products: {
+    luxury1: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&h=600&fit=crop', // Watch
+    luxury2: 'https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=800&h=600&fit=crop', // Sunglasses
+    luxury3: 'https://images.unsplash.com/photo-1611652022419-a9419f74343a?w=800&h=600&fit=crop', // Perfume
+    audio: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&h=600&fit=crop', // Headphones
+    vacuum: 'https://images.unsplash.com/photo-1558317374-067fb5f30001?w=800&h=600&fit=crop', // Tech product
+  },
 };
 
 // Helper function to get a random image from a category
