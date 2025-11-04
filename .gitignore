@@ -102,3 +102,6 @@ mobile-fix-backups*/
 design-analysis/
 design-research/
 research/
+
+# API documentation with sensitive keys
+docs/apis/nanoBanana.md

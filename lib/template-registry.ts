@@ -20,6 +20,12 @@ export interface TemplateConfig {
   demoPath: string;
   tags: string[];
   bestFor: string[];
+  // Detail page fields
+  price: number;
+  screenshots: string[];
+  longDescription: string;
+  whatsIncluded: string[];
+  technicalDetails?: string[];
 }
 
 const staticTemplateData = {
@@ -272,6 +278,23 @@ const staticTemplateData = {
 export function getTemplates(language: "en" | "ru" = "en"): TemplateConfig[] {
   const t = translations[language];
 
+  // Default features translated
+  const defaultWhatsIncluded = language === "en" ? [
+    "Responsive Design",
+    "Dark Mode Support",
+    "SEO Optimized",
+    "Fast Performance",
+    "Free Builder Access",
+    "Professional Code"
+  ] : [
+    "Адаптивный дизайн",
+    "Поддержка темной темы",
+    "SEO оптимизация",
+    "Быстрая производительность",
+    "Бесплатный доступ к билдеру",
+    "Профессиональный код"
+  ];
+
   return t.templates.map((template) => ({
     ...template,
     difficulty: template.difficulty as "beginner" | "intermediate" | "advanced",
@@ -279,6 +302,12 @@ export function getTemplates(language: "en" | "ru" = "en"): TemplateConfig[] {
     fonts: staticTemplateData[template.id as keyof typeof staticTemplateData].fonts,
     thumbnail: `/previews/${template.id}.png`,
     demoPath: `/templates/${template.id}`,
+    // Detail page defaults (can be overridden in translations.json)
+    price: template.price || 60,
+    screenshots: template.screenshots || [`/screenshots/${template.id}-1.png`, `/screenshots/${template.id}-2.png`, `/screenshots/${template.id}-3.png`],
+    longDescription: template.longDescription || template.description,
+    whatsIncluded: template.whatsIncluded || defaultWhatsIncluded,
+    technicalDetails: template.technicalDetails || undefined,
   }));
 }
 

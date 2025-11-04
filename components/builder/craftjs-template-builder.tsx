@@ -2703,64 +2703,48 @@ export function CraftJSTemplateBuilder({ template }: { template: TemplateConfig 
           </div>
         </div>
         <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0">
-          {/* View Demo Button */}
+          {/* Back to Detail Button */}
           <Link
             href={`/templates/${template.id}`}
-            target="_blank"
             className="flex items-center gap-2 px-4 sm:px-5 py-2.5 border-2 border-gray-300 hover:border-blue-600 rounded-lg font-semibold text-gray-700 hover:text-blue-600 bg-white hover:bg-blue-50 transition-all duration-200 hover:scale-105 active:scale-95 shadow-sm hover:shadow-md"
           >
-            <Eye className="w-4 h-4" />
-            <span className="hidden sm:inline">{language === 'ru' ? 'Демо' : 'Demo'}</span>
+            <ArrowLeft className="w-4 h-4" />
+            <span className="hidden sm:inline">{language === 'ru' ? 'Назад' : 'Back'}</span>
           </Link>
 
-          {/* Combined Submit Website Button */}
-          <div className="relative">
-            <Button
-              onClick={() => setShowSubmitDropdown(!showSubmitDropdown)}
-              className="flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-4 sm:px-6 py-2.5 rounded-lg font-semibold shadow-lg shadow-green-600/30 hover:shadow-xl hover:shadow-green-600/40 transition-all duration-200 hover:scale-105 active:scale-95"
-            >
-              <Send className="w-4 h-4" />
-              <span className="hidden sm:inline">{language === 'ru' ? 'Отправить сайт' : 'Submit Website'}</span>
-            </Button>
+          {/* View Live Demo Button */}
+          <Link
+            href={`/templates/${template.id}/demo`}
+            target="_blank"
+            className="flex items-center gap-2 px-4 sm:px-5 py-2.5 border-2 border-gray-300 hover:border-purple-600 rounded-lg font-semibold text-gray-700 hover:text-purple-600 bg-white hover:bg-purple-50 transition-all duration-200 hover:scale-105 active:scale-95 shadow-sm hover:shadow-md"
+          >
+            <Eye className="w-4 h-4" />
+            <span className="hidden sm:inline">{language === 'ru' ? 'Демо' : 'Live Demo'}</span>
+          </Link>
 
-            {/* Dropdown Menu */}
-            {showSubmitDropdown && (
-              <>
-                <div
-                  className="fixed inset-0 z-40"
-                  onClick={() => setShowSubmitDropdown(false)}
-                />
-                <div className="absolute right-0 top-full mt-2 w-56 bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-50">
-                  <button
-                    onClick={() => {
-                      setShowTelegramModal(true);
-                      setShowSubmitDropdown(false);
-                    }}
-                    className="w-full flex items-center gap-3 px-4 py-3 hover:bg-gray-50 transition-colors"
-                  >
-                    <Send className="w-5 h-5 text-blue-600" />
-                    <div className="text-left">
-                      <div className="font-semibold text-gray-900">Telegram</div>
-                      <div className="text-xs text-gray-500">{language === 'ru' ? 'Отправить в Telegram' : 'Send via Telegram'}</div>
-                    </div>
-                  </button>
-                  <button
-                    onClick={() => {
-                      setShowWhatsAppModal(true);
-                      setShowSubmitDropdown(false);
-                    }}
-                    className="w-full flex items-center gap-3 px-4 py-3 hover:bg-gray-50 transition-colors"
-                  >
-                    <FaWhatsapp className="w-5 h-5 text-[#25D366]" />
-                    <div className="text-left">
-                      <div className="font-semibold text-gray-900">WhatsApp</div>
-                      <div className="text-xs text-gray-500">{language === 'ru' ? 'Отправить в WhatsApp' : 'Send via WhatsApp'}</div>
-                    </div>
-                  </button>
-                </div>
-              </>
-            )}
-          </div>
+          {/* Buy Now Button - ThemeForest Green */}
+          <Button
+            onClick={() => {
+              window.location.href = `/checkout/${template.id}`;
+            }}
+            className="flex items-center gap-2 bg-[#82b541] hover:bg-[#6fa32d] text-white px-4 sm:px-6 py-2.5 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-105 active:scale-95"
+          >
+            <Send className="w-4 h-4" />
+            <span className="hidden sm:inline">{language === 'ru' ? `Купить - $${template.price}` : `Buy - $${template.price}`}</span>
+            <span className="sm:hidden">{language === 'ru' ? 'Купить' : 'Buy'}</span>
+          </Button>
+
+          {/* Continue to Checkout Button - ThemeForest Green */}
+          <Button
+            onClick={() => {
+              window.location.href = `/checkout/${template.id}`;
+            }}
+            className="flex items-center gap-2 bg-[#82b541] hover:bg-[#6fa32d] text-white px-4 sm:px-6 py-2.5 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-105 active:scale-95"
+          >
+            <Send className="w-4 h-4" />
+            <span className="hidden sm:inline">{language === 'ru' ? 'Перейти к оплате' : 'Continue to Checkout'}</span>
+            <span className="sm:hidden">{language === 'ru' ? 'Оплата' : 'Checkout'}</span>
+          </Button>
 
           {/* Tutorial Button - Show animated instructions */}
           <Button

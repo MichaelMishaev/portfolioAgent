@@ -40,6 +40,7 @@ export function TemplateGallery() {
   const filter = searchParams.get("category") || "all";
   const [searchQuery, setSearchQuery] = useState(searchParams.get("search") || "");
   const [selectedTag, setSelectedTag] = useState<string | null>(searchParams.get("tag") || null);
+  const [sortBy, setSortBy] = useState<string>(searchParams.get("sort") || "newest");
 
   // Restore scroll position and all filters when returning from template detail page
   useEffect(() => {
@@ -105,8 +106,25 @@ export function TemplateGallery() {
 
   const templates = getTemplates(language);
 
-  // Sort templates by creation date (newest first) - reverse array order
-  const sortedTemplates = [...templates].reverse();
+  // Sort templates based on selected sort option
+  const sortedTemplates = [...templates].sort((a, b) => {
+    switch (sortBy) {
+      case "newest":
+        // Newest first (reverse order since templates are added chronologically)
+        return templates.indexOf(b) - templates.indexOf(a);
+      case "oldest":
+        // Oldest first
+        return templates.indexOf(a) - templates.indexOf(b);
+      case "name-az":
+        // Alphabetical A-Z
+        return a.name.localeCompare(b.name);
+      case "name-za":
+        // Alphabetical Z-A
+        return b.name.localeCompare(a.name);
+      default:
+        return templates.indexOf(b) - templates.indexOf(a);
+    }
+  });
 
   // Get all unique categories and sort them according to priority
   const allCategories = ["all", ...Array.from(new Set(templates.map(t => t.category)))];
@@ -198,6 +216,23 @@ export function TemplateGallery() {
     router.push(`/?${params.toString()}`, { scroll: false });
   };
 
+  const handleSortChange = (value: string) => {
+    setSortBy(value);
+
+    // Update URL params
+    const params = new URLSearchParams(searchParams);
+    if (value !== "newest") {
+      params.set("sort", value);
+    } else {
+      params.delete("sort");
+    }
+    // Preserve other params
+    if (searchQuery) params.set("search", searchQuery);
+    if (filter !== "all") params.set("category", filter);
+    if (selectedTag) params.set("tag", selectedTag);
+    router.push(`/?${params.toString()}`, { scroll: false });
+  };
+
   // Prepare data for CategoryMenu
   const categoryLabels = Object.fromEntries(
     categories.map(cat => [cat, t.categories[cat as keyof typeof t.categories] || cat])
@@ -272,20 +307,38 @@ export function TemplateGallery() {
         categoryCounts={categoryCounts}
       />
 
-      {/* Current Category Info */}
+      {/* Current Category Info and Sort */}
       <motion.div
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
-        className="mb-4 sm:mb-6 text-center"
+        className="mb-4 sm:mb-6 flex flex-col sm:flex-row items-center justify-between gap-3 px-2"
       >
         <p className="text-sm text-foreground/60">
           {filteredTemplates.length} {filteredTemplates.length === 1 ? 'project' : 'projects'}
           {filter !== "all" && ` in ${t.categories[filter as keyof typeof t.categories] || filter}`}
         </p>
+
+        {/* Sort Dropdown */}
+        <div className="flex items-center gap-2">
+          <label htmlFor="sort" className="text-sm text-foreground/60 whitespace-nowrap">
+            {language === 'en' ? 'Sort by:' : 'Сортировка:'}
+          </label>
+          <select
+            id="sort"
+            value={sortBy}
+            onChange={(e) => handleSortChange(e.target.value)}
+            className="px-3 py-2 rounded-lg border border-input bg-background text-sm focus:outline-none focus:ring-2 focus:ring-primary cursor-pointer"
+          >
+            <option value="newest">{language === 'en' ? 'Newest First' : 'Сначала новые'}</option>
+            <option value="oldest">{language === 'en' ? 'Oldest First' : 'Сначала старые'}</option>
+            <option value="name-az">{language === 'en' ? 'Name (A-Z)' : 'Название (А-Я)'}</option>
+            <option value="name-za">{language === 'en' ? 'Name (Z-A)' : 'Название (Я-А)'}</option>
+          </select>
+        </div>
       </motion.div>
 
-      {/* Template Grid */}
-      <div id="templates-grid" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5">
+      {/* Template Grid - ThemeForest Style */}
+      <div id="templates-grid" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
         {filteredTemplates.map((template, index) => (
           <motion.div
             key={template.id}
@@ -293,62 +346,131 @@ export function TemplateGallery() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3, delay: index * 0.03 }}
           >
-            <Card className="h-full flex flex-col hover:shadow-xl transition-all duration-300 group">
+            <Card className="h-full flex flex-col hover:shadow-2xl transition-all duration-500 group border-0 bg-card/50 backdrop-blur-sm overflow-hidden">
+              {/* Thumbnail with Enhanced Hover Effects */}
               <CardHeader className="p-0 flex-shrink-0">
-                <div className="aspect-video bg-gradient-to-br from-blue-100 to-purple-100 dark:from-blue-900 dark:to-purple-900 rounded-t-lg relative overflow-hidden">
-                  <img
-                    src={template.thumbnail}
-                    alt={`${template.name} preview`}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    loading="lazy"
-                    onError={(e) => {
-                      // Fallback to gradient background if image fails to load
-                      e.currentTarget.style.display = 'none';
-                    }}
-                  />
-                </div>
+                <Link href={`/templates/${template.id}`} onClick={handleTemplateClick}>
+                  <div className="aspect-[4/3] bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 relative overflow-hidden cursor-pointer">
+                    <img
+                      src={template.thumbnail}
+                      alt={`${template.name} preview`}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
+                      loading="lazy"
+                      onError={(e) => {
+                        e.currentTarget.style.display = 'none';
+                      }}
+                    />
+
+                    {/* Premium Gradient Overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+                    {/* Floating Action Buttons */}
+                    <div className="absolute inset-0 flex items-center justify-center gap-3 opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
+                      <Button
+                        size="lg"
+                        variant="secondary"
+                        className="shadow-2xl backdrop-blur-sm bg-white/95 hover:bg-white border-2 border-white/20 font-semibold"
+                        asChild
+                      >
+                        <Link href={`/templates/${template.id}`} onClick={handleTemplateClick}>
+                          <FiEye className="mr-2 h-5 w-5" />
+                          {language === 'en' ? 'Preview' : 'Просмотр'}
+                        </Link>
+                      </Button>
+                    </div>
+
+                    {/* Difficulty Badge - Top Right */}
+                    <div className="absolute top-3 right-3">
+                      <Badge className="text-xs font-semibold px-3 py-1 bg-white/95 dark:bg-gray-900/95 text-gray-900 dark:text-gray-100 backdrop-blur-sm shadow-lg">
+                        {t.ui[template.difficulty]}
+                      </Badge>
+                    </div>
+
+                    {/* Category Badge - Top Left */}
+                    <div className="absolute top-3 left-3">
+                      <Badge className="text-xs font-semibold px-3 py-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg">
+                        {t.categories[template.category as keyof typeof t.categories] || template.category}
+                      </Badge>
+                    </div>
+                  </div>
+                </Link>
               </CardHeader>
 
-              <div className="p-4 flex flex-col flex-grow">
-                <div className="flex items-start justify-between gap-2 mb-2">
-                  <CardTitle className="text-base sm:text-lg group-hover:text-primary transition-colors line-clamp-2 flex-1">
-                    {template.name}
-                  </CardTitle>
-                  <Badge className="flex-shrink-0 text-xs" variant="secondary">
-                    {t.ui[template.difficulty]}
-                  </Badge>
+              {/* Content Section */}
+              <div className="p-5 flex flex-col flex-grow">
+                {/* Title and Price */}
+                <div className="flex items-start justify-between gap-3 mb-3">
+                  <Link href={`/templates/${template.id}`} onClick={handleTemplateClick} className="flex-1 min-w-0">
+                    <CardTitle className="text-lg font-bold group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors line-clamp-2 leading-tight">
+                      {template.name}
+                    </CardTitle>
+                  </Link>
+                  <div className="flex flex-col items-end flex-shrink-0">
+                    <span className="text-2xl font-bold text-blue-600 dark:text-blue-400">
+                      ${template.price}
+                    </span>
+                  </div>
                 </div>
 
-                <CardDescription className="text-sm line-clamp-2 mb-3 min-h-[40px]">
+                {/* Description */}
+                <CardDescription className="text-sm line-clamp-2 mb-4 min-h-[40px] leading-relaxed">
                   {template.description}
                 </CardDescription>
 
-                {/* Best For - Clickable Chips (Who this site is good for) */}
-                <div className="flex flex-wrap gap-1.5 mb-3">
-                  <span className="text-xs text-muted-foreground mr-1">
-                    {language === 'en' ? 'Best for:' : 'Подходит для:'}
-                  </span>
-                  {template.bestFor.map((audience) => (
+                {/* Best For Tags */}
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {template.bestFor.slice(0, 3).map((audience) => (
                     <Badge
                       key={audience}
-                      variant="default"
-                      className="text-xs bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 cursor-default"
+                      variant="outline"
+                      className="text-xs font-medium px-2.5 py-1 border-blue-200 dark:border-blue-800 text-blue-700 dark:text-blue-300 hover:bg-blue-50 dark:hover:bg-blue-950 transition-colors"
                     >
                       {audience}
                     </Badge>
                   ))}
+                  {template.bestFor.length > 3 && (
+                    <Badge
+                      variant="outline"
+                      className="text-xs font-medium px-2.5 py-1 border-gray-200 dark:border-gray-800"
+                    >
+                      +{template.bestFor.length - 3}
+                    </Badge>
+                  )}
                 </div>
 
-                {/* Actions - Primary CTA Button */}
-                <div className="mt-auto pt-2">
+                {/* Features List */}
+                <div className="flex items-center gap-3 text-xs text-muted-foreground mb-4 pb-4 border-b border-border/50">
+                  <div className="flex items-center gap-1.5">
+                    <div className="w-1.5 h-1.5 rounded-full bg-green-500" />
+                    <span>{template.features.length} {language === 'en' ? 'Features' : 'Функций'}</span>
+                  </div>
+                  <div className="flex items-center gap-1.5">
+                    <div className="w-1.5 h-1.5 rounded-full bg-blue-500" />
+                    <span>{template.tags.length} {language === 'en' ? 'Tags' : 'Тегов'}</span>
+                  </div>
+                </div>
+
+                {/* CTA Buttons - View Details & Try Builder */}
+                <div className="mt-auto grid grid-cols-2 gap-3">
                   <Button
                     asChild
-                    className="group relative w-full min-h-[60px] touch-manipulation font-extrabold text-lg overflow-hidden transition-all duration-300 bg-gradient-to-br from-indigo-600 via-blue-600 to-cyan-500 hover:from-indigo-700 hover:via-blue-700 hover:to-cyan-600 shadow-[0_8px_30px_rgb(0,0,0,0.12),0_0_20px_rgba(59,130,246,0.3)] hover:shadow-[0_12px_40px_rgb(0,0,0,0.18),0_0_30px_rgba(59,130,246,0.5)] hover:scale-[1.02] active:scale-[0.98] border-2 border-white/40 dark:border-white/20 backdrop-blur-sm before:absolute before:inset-0 before:bg-gradient-to-r before:from-white/0 before:via-white/20 before:to-white/0 before:-translate-x-full hover:before:translate-x-full before:transition-transform before:duration-700"
-                    size="lg"
+                    className="h-11 text-sm font-semibold bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 hover:from-blue-700 hover:via-purple-700 hover:to-pink-700 shadow-lg hover:shadow-xl transition-all duration-300"
+                    size="default"
                   >
-                    <Link href={`/templates/${template.id}`} onClick={handleTemplateClick} className="flex items-center justify-center relative z-10">
-                      <FiEdit3 className="mr-2 h-5 w-5 group-hover:rotate-12 transition-transform duration-300" />
-                      {t.ui.customizeAndBuild}
+                    <Link href={`/templates/${template.id}`} onClick={handleTemplateClick} className="flex items-center justify-center gap-2">
+                      <FiEye className="h-4 w-4" />
+                      {language === 'en' ? 'View Details' : 'Подробнее'}
+                    </Link>
+                  </Button>
+                  <Button
+                    asChild
+                    variant="outline"
+                    className="h-11 text-sm font-semibold border-2 hover:bg-accent"
+                    size="default"
+                  >
+                    <Link href={`/templates/${template.id}/builder`} onClick={handleTemplateClick} className="flex items-center justify-center gap-2">
+                      <FiEdit3 className="h-4 w-4" />
+                      {language === 'en' ? 'Try Builder' : 'Конструктор'}
                     </Link>
                   </Button>
                 </div>

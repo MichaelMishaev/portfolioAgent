@@ -1,0 +1,30 @@
+{
+  "successful": [],
+  "failed": [
+    {
+      "template": "Minimalist Portfolio",
+      "id": "minimalist",
+      "error": "models/imagen-3.0-generate-001 is not found for API version v1beta, or is not supported for predict. Call ListModels to see the list of available models and their supported methods."
+    },
+    {
+      "template": "Dark Mode Cinematic",
+      "id": "dark-mode",
+      "error": "models/imagen-3.0-generate-001 is not found for API version v1beta, or is not supported for predict. Call ListModels to see the list of available models and their supported methods."
+    },
+    {
+      "template": "Grid & Masonry",
+      "id": "grid-masonry",
+      "error": "models/imagen-3.0-generate-001 is not found for API version v1beta, or is not supported for predict. Call ListModels to see the list of available models and their supported methods."
+    },
+    {
+      "template": "Bold Typography",
+      "id": "bold-typography",
+      "error": "models/imagen-3.0-generate-001 is not found for API version v1beta, or is not supported for predict. Call ListModels to see the list of available models and their supported methods."
+    },
+    {
+      "template": "Startup Pitch",
+      "id": "startup-pitch",
+      "error": "models/imagen-3.0-generate-001 is not found for API version v1beta, or is not supported for predict. Call ListModels to see the list of available models and their supported methods."
+    }
+  ]
+}

@@ -1,0 +1,187 @@
+{
+  "successful": [
+    {
+      "template": "Minimalist Portfolio",
+      "id": "minimalist",
+      "screenshotNumber": 1,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/minimalist-1.png",
+      "url": "https://ideogram.ai/api/images/ephemeral/DwkFyOCFQoy-SuKOcXkLxQ.png?exp=1762378232&sig=cb70a8c74621475fe07a304531e907a97b92b0be9683f7f4066aa3b0144cd6d6"
+    },
+    {
+      "template": "Minimalist Portfolio",
+      "id": "minimalist",
+      "screenshotNumber": 2,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/minimalist-2.png",
+      "url": "https://ideogram.ai/api/images/ephemeral/Ru-vsHucRZ-ToUSxoxihWw.png?exp=1762378240&sig=a253f19b862e9a4c01cea29ba1f6f671426931237a910f032d9dc4373980d76c"
+    },
+    {
+      "template": "Minimalist Portfolio",
+      "id": "minimalist",
+      "screenshotNumber": 3,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/minimalist-3.png",
+      "url": "https://ideogram.ai/api/images/ephemeral/IWBPwZfZQaerbKidK6cfBA.png?exp=1762378248&sig=fe8b30c1dc6e7cfb428f46790e43900a8d7acd8870c1bc3afc683722708129c6"
+    },
+    {
+      "template": "Dark Mode Cinematic",
+      "id": "dark-mode",
+      "screenshotNumber": 1,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/dark-mode-1.png",
+      "url": "https://ideogram.ai/api/images/ephemeral/SvHfgppdTlCYmdfGtdQrvA.png?exp=1762378255&sig=1604a34b84a97ce461fa1aa354f08e463629089eaa80579ab08a9aa87ccd49de"
+    },
+    {
+      "template": "Dark Mode Cinematic",
+      "id": "dark-mode",
+      "screenshotNumber": 2,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/dark-mode-2.png",
+      "url": "https://ideogram.ai/api/images/ephemeral/DPgdgT2pT_Sr-6uzhalNYw.png?exp=1762378264&sig=f0bf2fa2b75ba3e11869e69acd947d96ccbdffa2b1a201f2ed479c57ec9549fa"
+    },
+    {
+      "template": "Dark Mode Cinematic",
+      "id": "dark-mode",
+      "screenshotNumber": 3,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/dark-mode-3.png",
+      "url": "https://ideogram.ai/api/images/ephemeral/BYUfv1IhQL62g2B5soz8eg.png?exp=1762378272&sig=38f708b2386fdabe1d8d42ea88498e485010faccf5e04d58bee8a5a56235c064"
+    },
+    {
+      "template": "Grid & Masonry",
+      "id": "grid-masonry",
+      "screenshotNumber": 1,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/grid-masonry-1.png",
+      "url": "https://ideogram.ai/api/images/ephemeral/e2jscQW0QZuBZ0xHc6yQbg.png?exp=1762378280&sig=cd5edd7a2e46e6a75f91f2c07b77f14c86fd44705ced923e1aacb99aa04f740d"
+    },
+    {
+      "template": "Grid & Masonry",
+      "id": "grid-masonry",
+      "screenshotNumber": 2,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/grid-masonry-2.png",
+      "url": "https://ideogram.ai/api/images/ephemeral/jlp2D-mdTWCk6GJo3r4cvg.png?exp=1762378293&sig=bffb23c001bc75cef7bfc4f869fe8ec761b9326ffb5c118c0cf3a398098da1b4"
+    },
+    {
+      "template": "Grid & Masonry",
+      "id": "grid-masonry",
+      "screenshotNumber": 3,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/grid-masonry-3.png",
+      "url": "https://ideogram.ai/api/images/ephemeral/BqYYLffgTIS2MGNJCTNzCw.png?exp=1762378300&sig=e51ba8fcbaca14eedd7cbe4b202c05a688926aeb6d831f9ab7dd0c67f29b3d88"
+    },
+    {
+      "template": "Startup Pitch",
+      "id": "startup-pitch",
+      "screenshotNumber": 1,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/startup-pitch-1.png",
+      "url": "https://ideogram.ai/api/images/ephemeral/UKI1G8FhSPi6Vfb6TY-oHQ.png?exp=1762378308&sig=9a7c00691712a2c3ad8b8bbd175544af0a607adac412a6cb7e0fd8e0fea0aaad"
+    },
+    {
+      "template": "Startup Pitch",
+      "id": "startup-pitch",
+      "screenshotNumber": 2,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/startup-pitch-2.png",
+      "url": "https://ideogram.ai/api/images/ephemeral/_5Uwv5WKSIesMUSh4VE1pA.png?exp=1762378315&sig=f7e63bce33e2aa582a473b8bea350e214c79ee2583035d45e850109ee440e117"
+    },
+    {
+      "template": "Startup Pitch",
+      "id": "startup-pitch",
+      "screenshotNumber": 3,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/startup-pitch-3.png",
+      "url": "https://ideogram.ai/api/images/ephemeral/rVwxSQFsRq6qIL2UkbbsVw.png?exp=1762378324&sig=1bd70d645913eff64462184ffa45349249c459f730b1ed2f8db6ad30f5384aaf"
+    },
+    {
+      "template": "Photography Immersive",
+      "id": "photography-immersive",
+      "screenshotNumber": 1,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/photography-immersive-1.png",
+      "url": "https://ideogram.ai/api/images/ephemeral/LVpB8apdTh2uLdbN2_ZRLg.png?exp=1762378332&sig=368542680a6af91ea1b5f34ab3a0a2823ed62cee718b875886b868cc6bd2fdd6"
+    },
+    {
+      "template": "Photography Immersive",
+      "id": "photography-immersive",
+      "screenshotNumber": 2,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/photography-immersive-2.png",
+      "url": "https://ideogram.ai/api/images/ephemeral/VceVpuxaQ-eRwEiGXqyLgQ.png?exp=1762378339&sig=4835ba292249303d243776dac4c6f9804072ea8ee9b93b8cbd04488f29c2b0bd"
+    },
+    {
+      "template": "Photography Immersive",
+      "id": "photography-immersive",
+      "screenshotNumber": 3,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/photography-immersive-3.png",
+      "url": "https://ideogram.ai/api/images/ephemeral/0odA4fGxTaaqOat1FsvxsA.png?exp=1762378347&sig=342ee20909e734d9f30f780d88fb6f99967b5f236b51aac9bbe312b4325edc62"
+    }
+  ],
+  "failed": [],
+  "imageUrls": [
+    {
+      "template": "Minimalist Portfolio",
+      "screenshotNumber": 1,
+      "url": "https://ideogram.ai/api/images/ephemeral/DwkFyOCFQoy-SuKOcXkLxQ.png?exp=1762378232&sig=cb70a8c74621475fe07a304531e907a97b92b0be9683f7f4066aa3b0144cd6d6"
+    },
+    {
+      "template": "Minimalist Portfolio",
+      "screenshotNumber": 2,
+      "url": "https://ideogram.ai/api/images/ephemeral/Ru-vsHucRZ-ToUSxoxihWw.png?exp=1762378240&sig=a253f19b862e9a4c01cea29ba1f6f671426931237a910f032d9dc4373980d76c"
+    },
+    {
+      "template": "Minimalist Portfolio",
+      "screenshotNumber": 3,
+      "url": "https://ideogram.ai/api/images/ephemeral/IWBPwZfZQaerbKidK6cfBA.png?exp=1762378248&sig=fe8b30c1dc6e7cfb428f46790e43900a8d7acd8870c1bc3afc683722708129c6"
+    },
+    {
+      "template": "Dark Mode Cinematic",
+      "screenshotNumber": 1,
+      "url": "https://ideogram.ai/api/images/ephemeral/SvHfgppdTlCYmdfGtdQrvA.png?exp=1762378255&sig=1604a34b84a97ce461fa1aa354f08e463629089eaa80579ab08a9aa87ccd49de"
+    },
+    {
+      "template": "Dark Mode Cinematic",
+      "screenshotNumber": 2,
+      "url": "https://ideogram.ai/api/images/ephemeral/DPgdgT2pT_Sr-6uzhalNYw.png?exp=1762378264&sig=f0bf2fa2b75ba3e11869e69acd947d96ccbdffa2b1a201f2ed479c57ec9549fa"
+    },
+    {
+      "template": "Dark Mode Cinematic",
+      "screenshotNumber": 3,
+      "url": "https://ideogram.ai/api/images/ephemeral/BYUfv1IhQL62g2B5soz8eg.png?exp=1762378272&sig=38f708b2386fdabe1d8d42ea88498e485010faccf5e04d58bee8a5a56235c064"
+    },
+    {
+      "template": "Grid & Masonry",
+      "screenshotNumber": 1,
+      "url": "https://ideogram.ai/api/images/ephemeral/e2jscQW0QZuBZ0xHc6yQbg.png?exp=1762378280&sig=cd5edd7a2e46e6a75f91f2c07b77f14c86fd44705ced923e1aacb99aa04f740d"
+    },
+    {
+      "template": "Grid & Masonry",
+      "screenshotNumber": 2,
+      "url": "https://ideogram.ai/api/images/ephemeral/jlp2D-mdTWCk6GJo3r4cvg.png?exp=1762378293&sig=bffb23c001bc75cef7bfc4f869fe8ec761b9326ffb5c118c0cf3a398098da1b4"
+    },
+    {
+      "template": "Grid & Masonry",
+      "screenshotNumber": 3,
+      "url": "https://ideogram.ai/api/images/ephemeral/BqYYLffgTIS2MGNJCTNzCw.png?exp=1762378300&sig=e51ba8fcbaca14eedd7cbe4b202c05a688926aeb6d831f9ab7dd0c67f29b3d88"
+    },
+    {
+      "template": "Startup Pitch",
+      "screenshotNumber": 1,
+      "url": "https://ideogram.ai/api/images/ephemeral/UKI1G8FhSPi6Vfb6TY-oHQ.png?exp=1762378308&sig=9a7c00691712a2c3ad8b8bbd175544af0a607adac412a6cb7e0fd8e0fea0aaad"
+    },
+    {
+      "template": "Startup Pitch",
+      "screenshotNumber": 2,
+      "url": "https://ideogram.ai/api/images/ephemeral/_5Uwv5WKSIesMUSh4VE1pA.png?exp=1762378315&sig=f7e63bce33e2aa582a473b8bea350e214c79ee2583035d45e850109ee440e117"
+    },
+    {
+      "template": "Startup Pitch",
+      "screenshotNumber": 3,
+      "url": "https://ideogram.ai/api/images/ephemeral/rVwxSQFsRq6qIL2UkbbsVw.png?exp=1762378324&sig=1bd70d645913eff64462184ffa45349249c459f730b1ed2f8db6ad30f5384aaf"
+    },
+    {
+      "template": "Photography Immersive",
+      "screenshotNumber": 1,
+      "url": "https://ideogram.ai/api/images/ephemeral/LVpB8apdTh2uLdbN2_ZRLg.png?exp=1762378332&sig=368542680a6af91ea1b5f34ab3a0a2823ed62cee718b875886b868cc6bd2fdd6"
+    },
+    {
+      "template": "Photography Immersive",
+      "screenshotNumber": 2,
+      "url": "https://ideogram.ai/api/images/ephemeral/VceVpuxaQ-eRwEiGXqyLgQ.png?exp=1762378339&sig=4835ba292249303d243776dac4c6f9804072ea8ee9b93b8cbd04488f29c2b0bd"
+    },
+    {
+      "template": "Photography Immersive",
+      "screenshotNumber": 3,
+      "url": "https://ideogram.ai/api/images/ephemeral/0odA4fGxTaaqOat1FsvxsA.png?exp=1762378347&sig=342ee20909e734d9f30f780d88fb6f99967b5f236b51aac9bbe312b4325edc62"
+    }
+  ]
+}

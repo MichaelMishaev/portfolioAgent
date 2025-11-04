@@ -88,6 +88,7 @@
       ],
       "projects": [
         {
+          "id": "ecommerce-platform",
           "title": "E-Commerce Platform",
           "description": "A modern e-commerce platform with seamless checkout experience and inventory management.",
           "tags": [
@@ -98,6 +99,7 @@
           "year": "2024"
         },
         {
+          "id": "health-wellness-app",
           "title": "Health & Wellness App",
           "description": "Mobile app helping users track their fitness goals and maintain healthy habits.",
           "tags": [
@@ -108,6 +110,7 @@
           "year": "2024"
         },
         {
+          "id": "saas-dashboard",
           "title": "SaaS Dashboard",
           "description": "Analytics dashboard for B2B SaaS platform with real-time data visualization.",
           "tags": [
@@ -118,6 +121,7 @@
           "year": "2023"
         },
         {
+          "id": "brand-identity-system",
           "title": "Brand Identity System",
           "description": "Complete brand identity and design system for a fintech startup.",
           "tags": [
@@ -128,6 +132,7 @@
           "year": "2023"
         },
         {
+          "id": "travel-booking-platform",
           "title": "Travel Booking Platform",
           "description": "Intuitive booking experience for modern travelers with smart recommendations.",
           "tags": [
@@ -138,6 +143,7 @@
           "year": "2023"
         },
         {
+          "id": "banking-mobile-app",
           "title": "Banking Mobile App",
           "description": "Secure and accessible financial management for everyday users.",
           "tags": [
@@ -230,6 +236,170 @@
       "name": "TaskFlow Pro",
       "tagline": "The project management tool that doesn't get in your way",
       "description": "Powerful enough for teams. Simple enough for anyone. TaskFlow Pro helps you ship faster without the complexity."
+    },
+    "serviceMarketplace": {
+      "nav": {
+        "features": "Features",
+        "howItWorks": "How It Works",
+        "testimonials": "Testimonials",
+        "pricing": "Pricing"
+      },
+      "hero": {
+        "badge": "Trusted Marketplace",
+        "title": "Connect with Professional Service Providers",
+        "subtitle": "Buy and sell business services with confidence. Join thousands of professionals and businesses on the leading marketplace platform.",
+        "ctaPrimary": "Get Started",
+        "ctaSecondary": "Learn More"
+      },
+      "stats": [
+        {
+          "value": "50K+",
+          "label": "Active Users"
+        },
+        {
+          "value": "100K+",
+          "label": "Projects Completed"
+        },
+        {
+          "value": "$10M+",
+          "label": "Total Earnings"
+        },
+        {
+          "value": "4.9/5",
+          "label": "Average Rating"
+        }
+      ],
+      "features": {
+        "title": "Why Choose Our Platform",
+        "subtitle": "Everything you need for secure and successful transactions",
+        "items": [
+          {
+            "title": "Secure Payments",
+            "description": "End-to-end encrypted transactions with buyer protection and escrow services"
+          },
+          {
+            "title": "Verified Providers",
+            "description": "All service providers are vetted and rated by the community"
+          },
+          {
+            "title": "Global Reach",
+            "description": "Connect with professionals from over 150 countries worldwide"
+          },
+          {
+            "title": "Fair Pricing",
+            "description": "Transparent pricing with no hidden fees. Only pay when satisfied"
+          },
+          {
+            "title": "Fast Delivery",
+            "description": "Most projects delivered within 24-48 hours with real-time tracking"
+          },
+          {
+            "title": "24/7 Support",
+            "description": "Round-the-clock customer support to help you succeed"
+          }
+        ]
+      },
+      "howItWorks": {
+        "title": "How It Works",
+        "subtitle": "Simple, secure, and straightforward process from start to finish",
+        "steps": [
+          {
+            "title": "Post Your Project",
+            "description": "Describe what you need and set your budget. It takes just minutes to get started."
+          },
+          {
+            "title": "Receive Proposals",
+            "description": "Review proposals from qualified professionals. Compare ratings, portfolios, and pricing."
+          },
+          {
+            "title": "Hire & Collaborate",
+            "description": "Choose the best fit and work together using our built-in collaboration tools."
+          },
+          {
+            "title": "Pay Securely",
+            "description": "Release payment only when you're 100% satisfied with the delivered work."
+          }
+        ]
+      },
+      "testimonials": {
+        "title": "What Our Users Say",
+        "subtitle": "Join thousands of satisfied clients and service providers",
+        "items": [
+          {
+            "quote": "This platform transformed how we hire freelancers. The quality and speed are unmatched!",
+            "name": "Sarah Johnson",
+            "role": "Marketing Director"
+          },
+          {
+            "quote": "I've built my entire freelance career here. The clients are great and payments are always on time.",
+            "name": "Michael Chen",
+            "role": "Web Developer"
+          },
+          {
+            "quote": "Finally, a marketplace that puts quality first. We've completed over 50 projects with zero issues.",
+            "name": "Emily Rodriguez",
+            "role": "Agency Owner"
+          }
+        ]
+      },
+      "pricing": {
+        "title": "Simple, Transparent Pricing",
+        "subtitle": "Choose the plan that fits your needs. Upgrade or downgrade anytime.",
+        "popularBadge": "Most Popular",
+        "plans": [
+          {
+            "name": "Free",
+            "description": "Perfect for trying out the platform",
+            "price": "$0",
+            "period": "forever",
+            "cta": "Get Started",
+            "featured": false,
+            "features": [
+              "Post up to 3 projects per month",
+              "Basic project management tools",
+              "Community support",
+              "Standard payment processing"
+            ]
+          },
+          {
+            "name": "Professional",
+            "description": "For serious freelancers and businesses",
+            "price": "$29",
+            "period": "month",
+            "cta": "Start Free Trial",
+            "featured": true,
+            "features": [
+              "Unlimited projects",
+              "Priority proposal visibility",
+              "Advanced analytics dashboard",
+              "Priority support",
+              "Reduced service fees (5%)",
+              "Verified badge"
+            ]
+          },
+          {
+            "name": "Enterprise",
+            "description": "For large teams and agencies",
+            "price": "$199",
+            "period": "month",
+            "cta": "Contact Sales",
+            "featured": false,
+            "features": [
+              "Everything in Professional",
+              "Dedicated account manager",
+              "Custom integrations",
+              "White-label options",
+              "Bulk hiring tools",
+              "Lowest fees (3%)"
+            ]
+          }
+        ]
+      },
+      "cta": {
+        "title": "Ready to Get Started?",
+        "subtitle": "Join thousands of businesses and professionals already using our platform",
+        "button": "Create Free Account"
+      }
     },
     "tech-product": {
       "name": "HYPERX CLOUD ULTRA",
@@ -2225,15 +2395,18 @@
         "projects": [
           {
             "title": "Электрический ребрендинг",
-            "description": "Полная трансформация бренда для технологического стартапа. Смелые цвета, еще более смелые результаты."
+            "description": "Полная трансформация бренда для технологического стартапа. Смелые цвета, еще более смелые результаты.",
+            "image": "/images/creative-agency-bold/creative-agency-bold-project-1.png"
           },
           {
             "title": "Запуск кампании",
-            "description": "Мультиканальная кампания, которая создала на 300% больше вовлеченности."
+            "description": "Мультиканальная кампания, которая создала на 300% больше вовлеченности.",
+            "image": "/images/creative-agency-bold/creative-agency-bold-project-2.png"
           },
           {
             "title": "Цифровая революция",
-            "description": "Редизайн сайта, который удвоил конверсию и выиграл множество наград."
+            "description": "Редизайн сайта, который удвоил конверсию и выиграл множество наград.",
+            "image": "/images/creative-agency-bold/creative-agency-bold-project-3.png"
           }
         ]
       },
@@ -4388,15 +4561,18 @@
         "projects": [
           {
             "title": "Электрический ребрендинг",
-            "description": "Полная трансформация бренда для технологического стартапа. Смелые цвета, еще более смелые результаты."
+            "description": "Полная трансформация бренда для технологического стартапа. Смелые цвета, еще более смелые результаты.",
+            "image": "/images/creative-agency-bold/creative-agency-bold-project-1.png"
           },
           {
             "title": "Запуск кампании",
-            "description": "Мультиканальная кампания, которая создала на 300% больше вовлеченности."
+            "description": "Мультиканальная кампания, которая создала на 300% больше вовлеченности.",
+            "image": "/images/creative-agency-bold/creative-agency-bold-project-2.png"
           },
           {
             "title": "Цифровая революция",
-            "description": "Редизайн сайта, который удвоил конверсию и выиграл множество наград."
+            "description": "Редизайн сайта, который удвоил конверсию и выиграл множество наград.",
+            "image": "/images/creative-agency-bold/creative-agency-bold-project-3.png"
           }
         ]
       },
@@ -7476,6 +7652,7 @@
       ],
       "projects": [
         {
+          "id": "ecommerce-platform",
           "title": "E-Commerce платформа",
           "description": "Современная платформа электронной коммерции с бесшовным процессом оформления заказа и управлением запасами.",
           "tags": [
@@ -7486,6 +7663,7 @@
           "year": "2024"
         },
         {
+          "id": "health-wellness-app",
           "title": "Приложение для здоровья и велнеса",
           "description": "Мобильное приложение, помогающее пользователям отслеживать фитнес-цели и поддерживать здоровые привычки.",
           "tags": [
@@ -7496,6 +7674,7 @@
           "year": "2024"
         },
         {
+          "id": "saas-dashboard",
           "title": "SaaS панель управления",
           "description": "Аналитическая панель для B2B SaaS платформы с визуализацией данных в реальном времени.",
           "tags": [
@@ -7506,6 +7685,7 @@
           "year": "2023"
         },
         {
+          "id": "brand-identity-system",
           "title": "Система фирменного стиля",
           "description": "Полная система фирменного стиля и дизайна для финтех-стартапа.",
           "tags": [
@@ -7516,6 +7696,7 @@
           "year": "2023"
         },
         {
+          "id": "travel-booking-platform",
           "title": "Платформа бронирования путешествий",
           "description": "Интуитивный опыт бронирования для современных путешественников с умными рекомендациями.",
           "tags": [
@@ -7526,6 +7707,7 @@
           "year": "2023"
         },
         {
+          "id": "banking-mobile-app",
           "title": "Банковское мобильное приложение",
           "description": "Безопасное и доступное управление финансами для повседневных пользователей.",
           "tags": [
@@ -7625,6 +7807,170 @@
       "name": "TaskFlow Pro",
       "tagline": "Инструмент управления проектами, который не мешает вам работать",
       "description": "Достаточно мощный для команд. Достаточно простой для всех. TaskFlow Pro помогает вам работать быстрее без лишней сложности."
+    },
+    "serviceMarketplace": {
+      "nav": {
+        "features": "Возможности",
+        "howItWorks": "Как это работает",
+        "testimonials": "Отзывы",
+        "pricing": "Цены"
+      },
+      "hero": {
+        "badge": "Проверенная площадка",
+        "title": "Найдите профессиональных поставщиков услуг",
+        "subtitle": "Покупайте и продавайте бизнес-услуги с уверенностью. Присоединяйтесь к тысячам профессионалов и компаний на ведущей маркетплейс-платформе.",
+        "ctaPrimary": "Начать",
+        "ctaSecondary": "Узнать больше"
+      },
+      "stats": [
+        {
+          "value": "50K+",
+          "label": "Активных пользователей"
+        },
+        {
+          "value": "100K+",
+          "label": "Завершенных проектов"
+        },
+        {
+          "value": "$10M+",
+          "label": "Общий доход"
+        },
+        {
+          "value": "4.9/5",
+          "label": "Средний рейтинг"
+        }
+      ],
+      "features": {
+        "title": "Почему выбирают нашу платформу",
+        "subtitle": "Все необходимое для безопасных и успешных сделок",
+        "items": [
+          {
+            "title": "Безопасные платежи",
+            "description": "Зашифрованные транзакции с защитой покупателя и эскроу-сервисами"
+          },
+          {
+            "title": "Проверенные поставщики",
+            "description": "Все поставщики услуг проверены и оценены сообществом"
+          },
+          {
+            "title": "Глобальный охват",
+            "description": "Связывайтесь с профессионалами из более чем 150 стран мира"
+          },
+          {
+            "title": "Справедливые цены",
+            "description": "Прозрачное ценообразование без скрытых комиссий. Платите только при удовлетворительном результате"
+          },
+          {
+            "title": "Быстрая доставка",
+            "description": "Большинство проектов выполняется в течение 24-48 часов с отслеживанием в реальном времени"
+          },
+          {
+            "title": "Поддержка 24/7",
+            "description": "Круглосуточная поддержка клиентов для вашего успеха"
+          }
+        ]
+      },
+      "howItWorks": {
+        "title": "Как это работает",
+        "subtitle": "Простой, безопасный и понятный процесс от начала до конца",
+        "steps": [
+          {
+            "title": "Разместите проект",
+            "description": "Опишите, что вам нужно, и установите бюджет. Это займет всего несколько минут."
+          },
+          {
+            "title": "Получите предложения",
+            "description": "Просмотрите предложения от квалифицированных специалистов. Сравните рейтинги, портфолио и цены."
+          },
+          {
+            "title": "Наймите и сотрудничайте",
+            "description": "Выберите лучшего кандидата и работайте вместе используя наши встроенные инструменты совместной работы."
+          },
+          {
+            "title": "Платите безопасно",
+            "description": "Высвобождайте платеж только тогда, когда вы на 100% удовлетворены выполненной работой."
+          }
+        ]
+      },
+      "testimonials": {
+        "title": "Что говорят наши пользователи",
+        "subtitle": "Присоединяйтесь к тысячам довольных клиентов и поставщиков услуг",
+        "items": [
+          {
+            "quote": "Эта платформа изменила способ найма фрилансеров. Качество и скорость непревзойденны!",
+            "name": "Сара Джонсон",
+            "role": "Директор по маркетингу"
+          },
+          {
+            "quote": "Я построил всю свою фриланс-карьеру здесь. Клиенты отличные, и платежи всегда вовремя.",
+            "name": "Михаил Чен",
+            "role": "Веб-разработчик"
+          },
+          {
+            "quote": "Наконец-то маркетплейс, который ставит качество на первое место. Мы завершили более 50 проектов без проблем.",
+            "name": "Эмили Родригес",
+            "role": "Владелец агентства"
+          }
+        ]
+      },
+      "pricing": {
+        "title": "Простые, прозрачные цены",
+        "subtitle": "Выберите план, который соответствует вашим потребностям. Повышайте или понижайте тариф в любое время.",
+        "popularBadge": "Самый популярный",
+        "plans": [
+          {
+            "name": "Бесплатный",
+            "description": "Идеально для знакомства с платформой",
+            "price": "$0",
+            "period": "навсегда",
+            "cta": "Начать",
+            "featured": false,
+            "features": [
+              "До 3 проектов в месяц",
+              "Базовые инструменты управления проектами",
+              "Поддержка сообщества",
+              "Стандартная обработка платежей"
+            ]
+          },
+          {
+            "name": "Профессиональный",
+            "description": "Для серьезных фрилансеров и компаний",
+            "price": "$29",
+            "period": "месяц",
+            "cta": "Начать пробный период",
+            "featured": true,
+            "features": [
+              "Неограниченное количество проектов",
+              "Приоритетная видимость предложений",
+              "Расширенная аналитическая панель",
+              "Приоритетная поддержка",
+              "Сниженные комиссии (5%)",
+              "Значок проверенного"
+            ]
+          },
+          {
+            "name": "Корпоративный",
+            "description": "Для больших команд и агентств",
+            "price": "$199",
+            "period": "месяц",
+            "cta": "Связаться с отделом продаж",
+            "featured": false,
+            "features": [
+              "Все возможности Профессионального",
+              "Выделенный менеджер аккаунта",
+              "Пользовательские интеграции",
+              "White-label опции",
+              "Инструменты массового найма",
+              "Минимальные комиссии (3%)"
+            ]
+          }
+        ]
+      },
+      "cta": {
+        "title": "Готовы начать?",
+        "subtitle": "Присоединяйтесь к тысячам компаний и профессионалов, уже использующих нашу платформу",
+        "button": "Создать бесплатный аккаунт"
+      }
     },
     "tech-product": {
       "name": "HYPERX CLOUD ULTRA",

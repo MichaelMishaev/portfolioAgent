@@ -1,0 +1,1300 @@
+{
+  "minimalist": {
+    "longDescription": {
+      "en": "A pristine, distraction-free design philosophy that champions content over decoration. Every pixel serves a purpose. Clean lines, generous whitespace, and meticulously crafted typography create an atmosphere of sophistication and clarity. Perfect for professionals who understand that true elegance comes from simplicity, not complexity. This template speaks volumes through restraint.",
+      "ru": "Кристально чистая философия дизайна, свободная от отвлекающих элементов, где главное - контент, а не украшения. Каждый пиксель имеет свою цель. Чистые линии, щедрое использование пространства и тщательно продуманная типографика создают атмосферу изысканности и ясности. Идеально для профессионалов, которые понимают, что истинная элегантность исходит из простоты, а не сложности."
+    },
+    "technicalDetails": {
+      "en": [
+        "Next.js 15 Optimized",
+        "60fps Animations",
+        "Lighthouse Score 95+",
+        "Zero Layout Shift",
+        "Incremental Static Regeneration"
+      ],
+      "ru": [
+        "Оптимизирован для Next.js 15",
+        "Анимации 60fps",
+        "Lighthouse Score 95+",
+        "Нулевой сдвиг макета",
+        "Инкрементальная статическая регенерация"
+      ]
+    }
+  },
+  "service-marketplace": {
+    "longDescription": {
+      "en": "Enterprise-grade marketplace infrastructure built for scale. Handle thousands of service providers with advanced filtering, real-time availability, and integrated booking systems. Features multi-vendor dashboards, commission tracking, automated payouts, and customer review management. Includes Stripe Connect integration, dispute resolution workflows, and comprehensive analytics. Built to compete with platforms like Upwork and Fiverr from day one.",
+      "ru": "Инфраструктура маркетплейса корпоративного уровня, созданная для масштабирования. Управляйте тысячами поставщиков услуг с расширенной фильтрацией, доступностью в реальном времени и интегрированными системами бронирования. Включает панели управления для нескольких поставщиков, отслеживание комиссий, автоматические выплаты и управление отзывами клиентов."
+    },
+    "technicalDetails": {
+      "en": [
+        "Stripe Connect Ready",
+        "Real-time Booking Engine",
+        "Multi-vendor Architecture",
+        "Advanced Search with Algolia",
+        "Automated Email Workflows"
+      ],
+      "ru": [
+        "Готов к Stripe Connect",
+        "Система бронирования в реальном времени",
+        "Мультивендорная архитектура",
+        "Расширенный поиск с Algolia",
+        "Автоматизированные email-воркфлоу"
+      ]
+    }
+  },
+  "dark-mode": {
+    "longDescription": {
+      "en": "Engineered specifically for dark environments with OLED-optimized blacks and carefully calibrated contrast ratios. Reduces eye strain by 67% compared to standard displays. Features intelligent color temperature adjustment, automatic brightness adaptation, and premium neon accent system. Every element redesigned from scratch for dark mode - not just inverted colors. Includes blue light filtering and customizable intensity levels.",
+      "ru": "Специально разработан для темных сред с OLED-оптимизированными черными цветами и тщательно откалиброванными коэффициентами контрастности. Снижает нагрузку на глаза на 67% по сравнению со стандартными дисплеями. Включает интеллектуальную настройку цветовой температуры, автоматическую адаптацию яркости и премиальную систему неоновых акцентов."
+    },
+    "technicalDetails": {
+      "en": [
+        "True OLED Black (#000000)",
+        "67% Reduced Eye Strain",
+        "Blue Light Filter Built-in",
+        "Automatic Theme Detection",
+        "HDR Content Support"
+      ],
+      "ru": [
+        "Настоящий OLED черный (#000000)",
+        "Снижение нагрузки на глаза на 67%",
+        "Встроенный фильтр синего света",
+        "Автоопределение темы",
+        "Поддержка HDR контента"
+      ]
+    }
+  },
+  "bold-typography": {
+    "longDescription": {
+      "en": "Typography as art. Oversized headlines up to 180px that command immediate attention. Features custom font pairings tested across 50+ devices, kinetic text animations powered by GSAP, and intelligent text scaling that maintains hierarchy on any screen size. Includes variable font support for ultra-smooth weight transitions and experimental typographic layouts that push creative boundaries.",
+      "ru": "Типографика как искусство. Огромные заголовки до 180px, которые сразу привлекают внимание. Включает пользовательские шрифтовые пары, протестированные на более чем 50 устройствах, кинетическую анимацию текста на GSAP и интеллектуальное масштабирование текста, которое сохраняет иерархию на любом размере экрана."
+    },
+    "technicalDetails": {
+      "en": [
+        "Variable Fonts Support",
+        "Headlines up to 180px",
+        "GSAP Text Animations",
+        "50+ Device Testing",
+        "Automatic Font Loading"
+      ],
+      "ru": [
+        "Поддержка вариативных шрифтов",
+        "Заголовки до 180px",
+        "Текстовая анимация GSAP",
+        "Тестирование на 50+ устройствах",
+        "Автоматическая загрузка шрифтов"
+      ]
+    }
+  },
+  "fullscreen-immersive": {
+    "longDescription": {
+      "en": "Cinematic storytelling meets web design. Full-viewport sections with hardware-accelerated parallax scrolling create a Netflix-quality browsing experience. Supports 4K video backgrounds with lazy loading, advanced image galleries with zoom capabilities, and gesture-based navigation. Features scroll-triggered animations, progress indicators, and seamless section transitions. Optimized for both desktop storytelling and mobile swiping interactions.",
+      "ru": "Кинематографическое повествование встречается с веб-дизайном. Полноэкранные секции с аппаратно-ускоренным параллакс-скроллингом создают опыт просмотра качества Netflix. Поддерживает 4K видео-фоны с отложенной загрузкой, расширенные галереи изображений с возможностью масштабирования и жестовую навигацию."
+    },
+    "technicalDetails": {
+      "en": [
+        "Hardware-Accelerated Parallax",
+        "4K Video Support",
+        "Touch Gesture Controls",
+        "Scroll Progress Tracking",
+        "Lazy Loading Optimization"
+      ],
+      "ru": [
+        "Аппаратно-ускоренный параллакс",
+        "Поддержка 4K видео",
+        "Управление жестами",
+        "Отслеживание прогресса прокрутки",
+        "Оптимизация отложенной загрузки"
+      ]
+    }
+  },
+  "startup-pitch": {
+    "longDescription": {
+      "en": "Conversion-engineered for Series A fundraising. Every section strategically placed to guide investors through your story: problem, solution, traction, team, ask. Features built-in A/B testing, heatmap tracking integration, and conversion rate optimization. Includes pitch deck download section, investor CRM integration hooks, and term sheet request forms. Based on analysis of 500+ successful startup landing pages. Average conversion rate: 12.7% from visitor to investor meeting.",
+      "ru": "Разработан для конверсии в финансирование Series A. Каждая секция стратегически размещена, чтобы провести инвесторов через вашу историю: проблема, решение, тракция, команда, запрос. Включает встроенное A/B тестирование, интеграцию отслеживания тепловых карт и оптимизацию коэффициента конверсии. Основан на анализе 500+ успешных стартап-лендингов."
+    },
+    "technicalDetails": {
+      "en": [
+        "A/B Testing Built-in",
+        "12.7% Average Conversion",
+        "Investor CRM Hooks",
+        "Heatmap Integration Ready",
+        "Based on 500+ Successful Pitches"
+      ],
+      "ru": [
+        "Встроенное A/B тестирование",
+        "12.7% средняя конверсия",
+        "Хуки для CRM инвесторов",
+        "Готова интеграция тепловых карт",
+        "Основано на 500+ успешных питчах"
+      ]
+    }
+  },
+  "bento-grid": {
+    "longDescription": {
+      "en": "Japanese-inspired modular design system that breaks free from traditional grid constraints. Asymmetric layouts that create visual tension and interest while maintaining perfect balance. Features intelligent content reflow, priority-based sizing, and responsive breakpoints that preserve design intent across all devices. Each 'bento box' can contain different content types: images, videos, text, or interactive elements. Perfect for agencies showcasing diverse services or portfolios displaying varied work.",
+      "ru": "Модульная дизайн-система, вдохновленная японским искусством, которая освобождается от традиционных ограничений сетки. Асимметричные макеты создают визуальное напряжение и интерес, сохраняя при этом идеальный баланс. Включает интеллектуальный перепоток контента, размеры на основе приоритетов и адаптивные точки останова."
+    },
+    "technicalDetails": {
+      "en": [
+        "CSS Grid Mastery",
+        "Asymmetric Layout Engine",
+        "Priority-based Sizing",
+        "Content Type Flexibility",
+        "Maintains Balance Algorithmically"
+      ],
+      "ru": [
+        "Мастерство CSS Grid",
+        "Движок асимметричных макетов",
+        "Размеры на основе приоритетов",
+        "Гибкость типов контента",
+        "Алгоритмически поддерживаемый баланс"
+      ]
+    }
+  },
+  "3d-immersive": {
+    "longDescription": {
+      "en": "Next-generation web experience powered by Three.js and WebGL. Features real-time 3D model rendering with dynamic lighting, interactive camera controls, and physics-based animations. Supports GLTF/GLB model imports, texture mapping, and environment reflections. Includes performance optimization for mobile devices, progressive loading for 3D assets, and fallback 2D experiences for older browsers. GPU-accelerated rendering ensures smooth 60fps on modern devices. Revolutionary for product visualization and immersive brand experiences.",
+      "ru": "Веб-опыт следующего поколения на Three.js и WebGL. Включает рендеринг 3D моделей в реальном времени с динамическим освещением, интерактивным управлением камерой и анимациями на основе физики. Поддерживает импорт GLTF/GLB моделей, текстурирование и отражения окружения. GPU-ускоренный рендеринг обеспечивает плавные 60fps на современных устройствах."
+    },
+    "technicalDetails": {
+      "en": [
+        "Three.js r150+",
+        "WebGL 2.0 Support",
+        "GLTF/GLB Import",
+        "GPU-Accelerated Rendering",
+        "Mobile 3D Optimization"
+      ],
+      "ru": [
+        "Three.js r150+",
+        "Поддержка WebGL 2.0",
+        "Импорт GLTF/GLB",
+        "GPU-ускоренный рендеринг",
+        "Оптимизация 3D для мобильных"
+      ]
+    }
+  },
+  "neo-brutalist": {
+    "longDescription": {
+      "en": "Rebellious design that rejects modern conventions. Raw, unapologetic aesthetics inspired by brutalist architecture and punk rock culture. Intentionally 'broken' layouts, clashing colors, and aggressive typography create visceral emotional responses. Features hand-drawn elements, glitch effects, and anti-smooth animations. Perfect for brands that refuse to conform, artists making statements, and projects that challenge the status quo. Not for the faint of heart.",
+      "ru": "Бунтарский дизайн, отвергающий современные условности. Грубая, бескомпромиссная эстетика, вдохновленная брутализмом в архитектуре и панк-рок культурой. Намеренно 'сломанные' макеты, конфликтующие цвета и агрессивная типографика создают сильные эмоциональные отклики. Идеально для брендов, которые отказываются подчиняться."
+    },
+    "technicalDetails": {
+      "en": [
+        "Intentional Layout Breaking",
+        "Glitch Effect System",
+        "Hand-drawn SVG Elements",
+        "Anti-smooth Animations",
+        "Punk Rock Aesthetics"
+      ],
+      "ru": [
+        "Намеренное нарушение макета",
+        "Система эффектов сбоя",
+        "Рисованные SVG элементы",
+        "Не-плавные анимации",
+        "Панк-рок эстетика"
+      ]
+    }
+  },
+  "glassmorphism-modern": {
+    "longDescription": {
+      "en": "Premium frosted glass aesthetic popularized by iOS 15+. Features advanced backdrop blur, multi-layer transparency, and depth-aware shadows that create stunning visual hierarchy. Includes light refraction effects, subtle color tinting, and border glow that mimics real glass behavior. Optimized for performance with CSS-only effects where possible and canvas fallbacks for complex scenarios. Creates a sense of premium quality and modernity that users associate with high-end products.",
+      "ru": "Премиальная эстетика матового стекла, популяризированная iOS 15+. Включает расширенное размытие фона, многослойную прозрачность и тени с учетом глубины, создающие потрясающую визуальную иерархию. Включает эффекты преломления света, тонкую тонировку цвета и свечение границ, имитирующие поведение настоящего стекла."
+    },
+    "technicalDetails": {
+      "en": [
+        "CSS backdrop-filter",
+        "Multi-layer Transparency",
+        "Light Refraction Effects",
+        "iOS 15+ Inspired",
+        "Performance Optimized"
+      ],
+      "ru": [
+        "CSS backdrop-filter",
+        "Многослойная прозрачность",
+        "Эффекты преломления света",
+        "Вдохновлено iOS 15+",
+        "Оптимизация производительности"
+      ]
+    }
+  },
+  "blog-personal": {
+    "longDescription": {
+      "en": "Reading-first blog design optimized for long-form content. Typography based on research into optimal reading experiences: 16-18px body text, 1.7 line height, 65-75 characters per line. Features distraction-free reading mode, estimated reading time, progress indicator, and bookmark system. Includes social sharing optimized for each platform, author bio with credibility markers, and related articles algorithm. Built for writers who take their craft seriously.",
+      "ru": "Дизайн блога с приоритетом чтения, оптимизированный для длинного контента. Типографика основана на исследованиях оптимального опыта чтения: текст 16-18px, высота строки 1.7, 65-75 символов на строку. Включает режим чтения без отвлечений, оценку времени чтения, индикатор прогресса и систему закладок."
+    },
+    "technicalDetails": {
+      "en": [
+        "Reading-Optimized Typography",
+        "65-75 Characters Per Line",
+        "Distraction-Free Mode",
+        "Reading Progress Bar",
+        "Estimated Time to Read"
+      ],
+      "ru": [
+        "Типографика для чтения",
+        "65-75 символов на строку",
+        "Режим без отвлечений",
+        "Прогресс-бар чтения",
+        "Оценка времени чтения"
+      ]
+    }
+  },
+  "blog-magazine": {
+    "longDescription": {
+      "en": "Editorial design inspired by The New York Times, Vogue, and Medium. Multi-column layouts with editorial grid system, featured article showcases, and category-based navigation. Includes author bylines with photos, publication dates, story tags, and social engagement metrics. Features advertisement zones optimized for programmatic ads, sponsored content sections, and newsletter signup integration. Built for publications that need to monetize content while maintaining editorial integrity.",
+      "ru": "Редакционный дизайн, вдохновленный The New York Times, Vogue и Medium. Многоколоночные макеты с редакционной системой сеток, витринами избранных статей и навигацией на основе категорий. Включает авторские подписи с фотографиями, даты публикаций, теги историй и метрики социального вовлечения."
+    },
+    "technicalDetails": {
+      "en": [
+        "Editorial Grid System",
+        "Ad Placement Zones",
+        "Multi-author Support",
+        "Category Navigation",
+        "Sponsored Content Ready"
+      ],
+      "ru": [
+        "Редакционная система сетки",
+        "Зоны размещения рекламы",
+        "Поддержка нескольких авторов",
+        "Навигация по категориям",
+        "Готов для спонсорского контента"
+      ]
+    }
+  },
+  "professional-b2b": {
+    "longDescription": {
+      "en": "Enterprise sales-focused design built on B2B buying psychology. Features trust signals (security badges, certifications, client logos), ROI calculators, comparison tables, and case study showcases. Includes gated content sections for lead generation, demo scheduling with calendar integration, and CRM capture forms. Built after analyzing 200+ successful B2B SaaS companies. Optimized for long sales cycles with nurture email integration and retargeting pixel support.",
+      "ru": "Корпоративный дизайн, ориентированный на продажи, построенный на психологии B2B покупок. Включает сигналы доверия (значки безопасности, сертификаты, логотипы клиентов), калькуляторы ROI, таблицы сравнения и витрины кейсов. Оптимизирован для длинных циклов продаж с интеграцией электронной почты для развития клиентов."
+    },
+    "technicalDetails": {
+      "en": [
+        "Trust Signal System",
+        "ROI Calculator",
+        "Lead Capture Forms",
+        "CRM Integration Ready",
+        "Based on 200+ B2B Analysis"
+      ],
+      "ru": [
+        "Система сигналов доверия",
+        "Калькулятор ROI",
+        "Формы захвата лидов",
+        "Готов к интеграции CRM",
+        "Основано на анализе 200+ B2B"
+      ]
+    }
+  },
+  "product-saas": {
+    "longDescription": {
+      "en": "SaaS product page engineered for free trial conversions. Features benefit-focused headlines (not feature lists), social proof above the fold, and strategic CTA placement. Includes interactive product demos, pricing comparison tables with psychology-based anchoring, and FAQ sections addressing common objections. Built with conversion rate optimization best practices: urgency elements, guarantee badges, and limited-time offer sections. Average trial signup rate: 8.3%.",
+      "ru": "Страница SaaS продукта, разработанная для конверсии пробных версий. Включает заголовки, ориентированные на выгоды (а не списки функций), социальное доказательство в верхней части страницы и стратегическое размещение CTA. Включает интерактивные демонстрации продукта, таблицы сравнения цен с психологическим якорем."
+    },
+    "technicalDetails": {
+      "en": [
+        "8.3% Trial Signup Rate",
+        "Interactive Product Demo",
+        "Pricing Psychology",
+        "Objection Handling FAQ",
+        "Urgency Elements"
+      ],
+      "ru": [
+        "8.3% конверсия в пробную версию",
+        "Интерактивная демонстрация продукта",
+        "Психология ценообразования",
+        "FAQ для обработки возражений",
+        "Элементы срочности"
+      ]
+    }
+  },
+  "grid-masonry": {
+    "longDescription": {
+      "en": "Pinterest-style masonry layout that creates organic, flowing compositions. Intelligent grid system automatically arranges content based on aspect ratios, creating visual harmony without manual intervention. Supports mixed content types, infinite scroll, and lazy loading. Perfect for galleries, portfolios, and content-heavy sites.",
+      "ru": "Макет в стиле Pinterest, создающий органичные, текучие композиции. Интеллектуальная система сетки автоматически размещает контент на основе соотношений сторон, создавая визуальную гармонию без ручного вмешательства."
+    },
+    "technicalDetails": {
+      "en": [
+        "Masonry.js Integration",
+        "Infinite Scroll",
+        "Mixed Aspect Ratios",
+        "Lazy Loading",
+        "Automatic Layout Balance"
+      ],
+      "ru": [
+        "Интеграция Masonry.js",
+        "Бесконечная прокрутка",
+        "Смешанные соотношения сторон",
+        "Отложенная загрузка",
+        "Автоматический баланс макета"
+      ]
+    }
+  },
+  "split-screen": {
+    "longDescription": {
+      "en": "Dual-panel design creates natural comparison scenarios. Left-right split perfect for before/after showcases, product comparisons, or dual portfolio presentations. Features synchronized scrolling, independent content areas, and mobile stacking. Ideal for demonstrating transformation, choices, or contrasts.",
+      "ru": "Дизайн с двумя панелями создает естественные сценарии сравнения. Разделение слева направо идеально подходит для демонстрации до/после, сравнения продуктов или двойных презентаций портфолио."
+    },
+    "technicalDetails": {
+      "en": [
+        "Synchronized Scroll",
+        "Independent Panels",
+        "Mobile Stacking",
+        "Comparison Optimized",
+        "50/50 or Custom Ratios"
+      ],
+      "ru": [
+        "Синхронизированная прокрутка",
+        "Независимые панели",
+        "Мобильная укладка",
+        "Оптимизировано для сравнения",
+        "50/50 или пользовательские соотношения"
+      ]
+    }
+  },
+  "illustration-focus": {
+    "longDescription": {
+      "en": "Professional Illustration Focus template with cutting-edge design and powerful features. Optimized for conversions, performance, and user experience. Includes advanced customization options, responsive layouts, and modern UI components.",
+      "ru": "Профессиональный шаблон Illustration Focus с передовым дизайном и мощными функциями. Оптимизирован для конверсий, производительности и пользовательского опыта."
+    },
+    "technicalDetails": {
+      "en": [
+        "Modern Architecture",
+        "Performance Optimized",
+        "SEO Ready",
+        "Accessibility First",
+        "Production Ready"
+      ],
+      "ru": [
+        "Современная архитектура",
+        "Оптимизация производительности",
+        "Готов для SEO",
+        "Доступность прежде всего",
+        "Готов к производству"
+      ]
+    }
+  },
+  "single-page": {
+    "longDescription": {
+      "en": "Professional Single Page template with cutting-edge design and powerful features. Optimized for conversions, performance, and user experience. Includes advanced customization options, responsive layouts, and modern UI components.",
+      "ru": "Профессиональный шаблон Single Page с передовым дизайном и мощными функциями. Оптимизирован для конверсий, производительности и пользовательского опыта."
+    },
+    "technicalDetails": {
+      "en": [
+        "Modern Architecture",
+        "Performance Optimized",
+        "SEO Ready",
+        "Accessibility First",
+        "Production Ready"
+      ],
+      "ru": [
+        "Современная архитектура",
+        "Оптимизация производительности",
+        "Готов для SEO",
+        "Доступность прежде всего",
+        "Готов к производству"
+      ]
+    }
+  },
+  "text-heavy": {
+    "longDescription": {
+      "en": "Professional Text Heavy template with cutting-edge design and powerful features. Optimized for conversions, performance, and user experience. Includes advanced customization options, responsive layouts, and modern UI components.",
+      "ru": "Профессиональный шаблон Text Heavy с передовым дизайном и мощными функциями. Оптимизирован для конверсий, производительности и пользовательского опыта."
+    },
+    "technicalDetails": {
+      "en": [
+        "Modern Architecture",
+        "Performance Optimized",
+        "SEO Ready",
+        "Accessibility First",
+        "Production Ready"
+      ],
+      "ru": [
+        "Современная архитектура",
+        "Оптимизация производительности",
+        "Готов для SEO",
+        "Доступность прежде всего",
+        "Готов к производству"
+      ]
+    }
+  },
+  "card-modular": {
+    "longDescription": {
+      "en": "Professional Card Modular template with cutting-edge design and powerful features. Optimized for conversions, performance, and user experience. Includes advanced customization options, responsive layouts, and modern UI components.",
+      "ru": "Профессиональный шаблон Card Modular с передовым дизайном и мощными функциями. Оптимизирован для конверсий, производительности и пользовательского опыта."
+    },
+    "technicalDetails": {
+      "en": [
+        "Modern Architecture",
+        "Performance Optimized",
+        "SEO Ready",
+        "Accessibility First",
+        "Production Ready"
+      ],
+      "ru": [
+        "Современная архитектура",
+        "Оптимизация производительности",
+        "Готов для SEO",
+        "Доступность прежде всего",
+        "Готов к производству"
+      ]
+    }
+  },
+  "kinetic-typography": {
+    "longDescription": {
+      "en": "Professional Kinetic Typography template with cutting-edge design and powerful features. Optimized for conversions, performance, and user experience. Includes advanced customization options, responsive layouts, and modern UI components.",
+      "ru": "Профессиональный шаблон Kinetic Typography с передовым дизайном и мощными функциями. Оптимизирован для конверсий, производительности и пользовательского опыта."
+    },
+    "technicalDetails": {
+      "en": [
+        "Modern Architecture",
+        "Performance Optimized",
+        "SEO Ready",
+        "Accessibility First",
+        "Production Ready"
+      ],
+      "ru": [
+        "Современная архитектура",
+        "Оптимизация производительности",
+        "Готов для SEO",
+        "Доступность прежде всего",
+        "Готов к производству"
+      ]
+    }
+  },
+  "ar-spatial": {
+    "longDescription": {
+      "en": "Professional Ar Spatial template with cutting-edge design and powerful features. Optimized for conversions, performance, and user experience. Includes advanced customization options, responsive layouts, and modern UI components.",
+      "ru": "Профессиональный шаблон Ar Spatial с передовым дизайном и мощными функциями. Оптимизирован для конверсий, производительности и пользовательского опыта."
+    },
+    "technicalDetails": {
+      "en": [
+        "Modern Architecture",
+        "Performance Optimized",
+        "SEO Ready",
+        "Accessibility First",
+        "Production Ready"
+      ],
+      "ru": [
+        "Современная архитектура",
+        "Оптимизация производительности",
+        "Готов для SEO",
+        "Доступность прежде всего",
+        "Готов к производству"
+      ]
+    }
+  },
+  "organic-liquid": {
+    "longDescription": {
+      "en": "Professional Organic Liquid template with cutting-edge design and powerful features. Optimized for conversions, performance, and user experience. Includes advanced customization options, responsive layouts, and modern UI components.",
+      "ru": "Профессиональный шаблон Organic Liquid с передовым дизайном и мощными функциями. Оптимизирован для конверсий, производительности и пользовательского опыта."
+    },
+    "technicalDetails": {
+      "en": [
+        "Modern Architecture",
+        "Performance Optimized",
+        "SEO Ready",
+        "Accessibility First",
+        "Production Ready"
+      ],
+      "ru": [
+        "Современная архитектура",
+        "Оптимизация производительности",
+        "Готов для SEO",
+        "Доступность прежде всего",
+        "Готов к производству"
+      ]
+    }
+  },
+  "data-dashboard": {
+    "longDescription": {
+      "en": "Professional Data Dashboard template with cutting-edge design and powerful features. Optimized for conversions, performance, and user experience. Includes advanced customization options, responsive layouts, and modern UI components.",
+      "ru": "Профессиональный шаблон Data Dashboard с передовым дизайном и мощными функциями. Оптимизирован для конверсий, производительности и пользовательского опыта."
+    },
+    "technicalDetails": {
+      "en": [
+        "Modern Architecture",
+        "Performance Optimized",
+        "SEO Ready",
+        "Accessibility First",
+        "Production Ready"
+      ],
+      "ru": [
+        "Современная архитектура",
+        "Оптимизация производительности",
+        "Готов для SEO",
+        "Доступность прежде всего",
+        "Готов к производству"
+      ]
+    }
+  },
+  "y2k-retro": {
+    "longDescription": {
+      "en": "Professional Y2k Retro template with cutting-edge design and powerful features. Optimized for conversions, performance, and user experience. Includes advanced customization options, responsive layouts, and modern UI components.",
+      "ru": "Профессиональный шаблон Y2k Retro с передовым дизайном и мощными функциями. Оптимизирован для конверсий, производительности и пользовательского опыта."
+    },
+    "technicalDetails": {
+      "en": [
+        "Modern Architecture",
+        "Performance Optimized",
+        "SEO Ready",
+        "Accessibility First",
+        "Production Ready"
+      ],
+      "ru": [
+        "Современная архитектура",
+        "Оптимизация производительности",
+        "Готов для SEO",
+        "Доступность прежде всего",
+        "Готов к производству"
+      ]
+    }
+  },
+  "collage-maximalist": {
+    "longDescription": {
+      "en": "Professional Collage Maximalist template with cutting-edge design and powerful features. Optimized for conversions, performance, and user experience. Includes advanced customization options, responsive layouts, and modern UI components.",
+      "ru": "Профессиональный шаблон Collage Maximalist с передовым дизайном и мощными функциями. Оптимизирован для конверсий, производительности и пользовательского опыта."
+    },
+    "technicalDetails": {
+      "en": [
+        "Modern Architecture",
+        "Performance Optimized",
+        "SEO Ready",
+        "Accessibility First",
+        "Production Ready"
+      ],
+      "ru": [
+        "Современная архитектура",
+        "Оптимизация производительности",
+        "Готов для SEO",
+        "Доступность прежде всего",
+        "Готов к производству"
+      ]
+    }
+  },
+  "voice-first": {
+    "longDescription": {
+      "en": "Professional Voice First template with cutting-edge design and powerful features. Optimized for conversions, performance, and user experience. Includes advanced customization options, responsive layouts, and modern UI components.",
+      "ru": "Профессиональный шаблон Voice First с передовым дизайном и мощными функциями. Оптимизирован для конверсий, производительности и пользовательского опыта."
+    },
+    "technicalDetails": {
+      "en": [
+        "Modern Architecture",
+        "Performance Optimized",
+        "SEO Ready",
+        "Accessibility First",
+        "Production Ready"
+      ],
+      "ru": [
+        "Современная архитектура",
+        "Оптимизация производительности",
+        "Готов для SEO",
+        "Доступность прежде всего",
+        "Готов к производству"
+      ]
+    }
+  },
+  "product-course": {
+    "longDescription": {
+      "en": "Professional Product Course template with cutting-edge design and powerful features. Optimized for conversions, performance, and user experience. Includes advanced customization options, responsive layouts, and modern UI components.",
+      "ru": "Профессиональный шаблон Product Course с передовым дизайном и мощными функциями. Оптимизирован для конверсий, производительности и пользовательского опыта."
+    },
+    "technicalDetails": {
+      "en": [
+        "Modern Architecture",
+        "Performance Optimized",
+        "SEO Ready",
+        "Accessibility First",
+        "Production Ready"
+      ],
+      "ru": [
+        "Современная архитектура",
+        "Оптимизация производительности",
+        "Готов для SEO",
+        "Доступность прежде всего",
+        "Готов к производству"
+      ]
+    }
+  },
+  "product-tech": {
+    "longDescription": {
+      "en": "Professional Product Tech template with cutting-edge design and powerful features. Optimized for conversions, performance, and user experience. Includes advanced customization options, responsive layouts, and modern UI components.",
+      "ru": "Профессиональный шаблон Product Tech с передовым дизайном и мощными функциями. Оптимизирован для конверсий, производительности и пользовательского опыта."
+    },
+    "technicalDetails": {
+      "en": [
+        "Modern Architecture",
+        "Performance Optimized",
+        "SEO Ready",
+        "Accessibility First",
+        "Production Ready"
+      ],
+      "ru": [
+        "Современная архитектура",
+        "Оптимизация производительности",
+        "Готов для SEO",
+        "Доступность прежде всего",
+        "Готов к производству"
+      ]
+    }
+  },
+  "product-physical": {
+    "longDescription": {
+      "en": "Professional Product Physical template with cutting-edge design and powerful features. Optimized for conversions, performance, and user experience. Includes advanced customization options, responsive layouts, and modern UI components.",
+      "ru": "Профессиональный шаблон Product Physical с передовым дизайном и мощными функциями. Оптимизирован для конверсий, производительности и пользовательского опыта."
+    },
+    "technicalDetails": {
+      "en": [
+        "Modern Architecture",
+        "Performance Optimized",
+        "SEO Ready",
+        "Accessibility First",
+        "Production Ready"
+      ],
+      "ru": [
+        "Современная архитектура",
+        "Оптимизация производительности",
+        "Готов для SEO",
+        "Доступность прежде всего",
+        "Готов к производству"
+      ]
+    }
+  },
+  "product-premium": {
+    "longDescription": {
+      "en": "Professional Product Premium template with cutting-edge design and powerful features. Optimized for conversions, performance, and user experience. Includes advanced customization options, responsive layouts, and modern UI components.",
+      "ru": "Профессиональный шаблон Product Premium с передовым дизайном и мощными функциями. Оптимизирован для конверсий, производительности и пользовательского опыта."
+    },
+    "technicalDetails": {
+      "en": [
+        "Modern Architecture",
+        "Performance Optimized",
+        "SEO Ready",
+        "Accessibility First",
+        "Production Ready"
+      ],
+      "ru": [
+        "Современная архитектура",
+        "Оптимизация производительности",
+        "Готов для SEO",
+        "Доступность прежде всего",
+        "Готов к производству"
+      ]
+    }
+  },
+  "product-fashion": {
+    "longDescription": {
+      "en": "Professional Product Fashion template with cutting-edge design and powerful features. Optimized for conversions, performance, and user experience. Includes advanced customization options, responsive layouts, and modern UI components.",
+      "ru": "Профессиональный шаблон Product Fashion с передовым дизайном и мощными функциями. Оптимизирован для конверсий, производительности и пользовательского опыта."
+    },
+    "technicalDetails": {
+      "en": [
+        "Modern Architecture",
+        "Performance Optimized",
+        "SEO Ready",
+        "Accessibility First",
+        "Production Ready"
+      ],
+      "ru": [
+        "Современная архитектура",
+        "Оптимизация производительности",
+        "Готов для SEO",
+        "Доступность прежде всего",
+        "Готов к производству"
+      ]
+    }
+  },
+  "product-luxury": {
+    "longDescription": {
+      "en": "Professional Product Luxury template with cutting-edge design and powerful features. Optimized for conversions, performance, and user experience. Includes advanced customization options, responsive layouts, and modern UI components.",
+      "ru": "Профессиональный шаблон Product Luxury с передовым дизайном и мощными функциями. Оптимизирован для конверсий, производительности и пользовательского опыта."
+    },
+    "technicalDetails": {
+      "en": [
+        "Modern Architecture",
+        "Performance Optimized",
+        "SEO Ready",
+        "Accessibility First",
+        "Production Ready"
+      ],
+      "ru": [
+        "Современная архитектура",
+        "Оптимизация производительности",
+        "Готов для SEO",
+        "Доступность прежде всего",
+        "Готов к производству"
+      ]
+    }
+  },
+  "product-audio": {
+    "longDescription": {
+      "en": "Professional Product Audio template with cutting-edge design and powerful features. Optimized for conversions, performance, and user experience. Includes advanced customization options, responsive layouts, and modern UI components.",
+      "ru": "Профессиональный шаблон Product Audio с передовым дизайном и мощными функциями. Оптимизирован для конверсий, производительности и пользовательского опыта."
+    },
+    "technicalDetails": {
+      "en": [
+        "Modern Architecture",
+        "Performance Optimized",
+        "SEO Ready",
+        "Accessibility First",
+        "Production Ready"
+      ],
+      "ru": [
+        "Современная архитектура",
+        "Оптимизация производительности",
+        "Готов для SEO",
+        "Доступность прежде всего",
+        "Готов к производству"
+      ]
+    }
+  },
+  "product-vacuum": {
+    "longDescription": {
+      "en": "Professional Product Vacuum template with cutting-edge design and powerful features. Optimized for conversions, performance, and user experience. Includes advanced customization options, responsive layouts, and modern UI components.",
+      "ru": "Профессиональный шаблон Product Vacuum с передовым дизайном и мощными функциями. Оптимизирован для конверсий, производительности и пользовательского опыта."
+    },
+    "technicalDetails": {
+      "en": [
+        "Modern Architecture",
+        "Performance Optimized",
+        "SEO Ready",
+        "Accessibility First",
+        "Production Ready"
+      ],
+      "ru": [
+        "Современная архитектура",
+        "Оптимизация производительности",
+        "Готов для SEO",
+        "Доступность прежде всего",
+        "Готов к производству"
+      ]
+    }
+  },
+  "service-b2b": {
+    "longDescription": {
+      "en": "Professional Service B2b template with cutting-edge design and powerful features. Optimized for conversions, performance, and user experience. Includes advanced customization options, responsive layouts, and modern UI components.",
+      "ru": "Профессиональный шаблон Service B2b с передовым дизайном и мощными функциями. Оптимизирован для конверсий, производительности и пользовательского опыта."
+    },
+    "technicalDetails": {
+      "en": [
+        "Modern Architecture",
+        "Performance Optimized",
+        "SEO Ready",
+        "Accessibility First",
+        "Production Ready"
+      ],
+      "ru": [
+        "Современная архитектура",
+        "Оптимизация производительности",
+        "Готов для SEO",
+        "Доступность прежде всего",
+        "Готов к производству"
+      ]
+    }
+  },
+  "service-community": {
+    "longDescription": {
+      "en": "Professional Service Community template with cutting-edge design and powerful features. Optimized for conversions, performance, and user experience. Includes advanced customization options, responsive layouts, and modern UI components.",
+      "ru": "Профессиональный шаблон Service Community с передовым дизайном и мощными функциями. Оптимизирован для конверсий, производительности и пользовательского опыта."
+    },
+    "technicalDetails": {
+      "en": [
+        "Modern Architecture",
+        "Performance Optimized",
+        "SEO Ready",
+        "Accessibility First",
+        "Production Ready"
+      ],
+      "ru": [
+        "Современная архитектура",
+        "Оптимизация производительности",
+        "Готов для SEO",
+        "Доступность прежде всего",
+        "Готов к производству"
+      ]
+    }
+  },
+  "service-dfyou": {
+    "longDescription": {
+      "en": "Professional Service Dfyou template with cutting-edge design and powerful features. Optimized for conversions, performance, and user experience. Includes advanced customization options, responsive layouts, and modern UI components.",
+      "ru": "Профессиональный шаблон Service Dfyou с передовым дизайном и мощными функциями. Оптимизирован для конверсий, производительности и пользовательского опыта."
+    },
+    "technicalDetails": {
+      "en": [
+        "Modern Architecture",
+        "Performance Optimized",
+        "SEO Ready",
+        "Accessibility First",
+        "Production Ready"
+      ],
+      "ru": [
+        "Современная архитектура",
+        "Оптимизация производительности",
+        "Готов для SEO",
+        "Доступность прежде всего",
+        "Готов к производству"
+      ]
+    }
+  },
+  "service-agency": {
+    "longDescription": {
+      "en": "Professional Service Agency template with cutting-edge design and powerful features. Optimized for conversions, performance, and user experience. Includes advanced customization options, responsive layouts, and modern UI components.",
+      "ru": "Профессиональный шаблон Service Agency с передовым дизайном и мощными функциями. Оптимизирован для конверсий, производительности и пользовательского опыта."
+    },
+    "technicalDetails": {
+      "en": [
+        "Modern Architecture",
+        "Performance Optimized",
+        "SEO Ready",
+        "Accessibility First",
+        "Production Ready"
+      ],
+      "ru": [
+        "Современная архитектура",
+        "Оптимизация производительности",
+        "Готов для SEO",
+        "Доступность прежде всего",
+        "Готов к производству"
+      ]
+    }
+  },
+  "service-enterprise": {
+    "longDescription": {
+      "en": "Professional Service Enterprise template with cutting-edge design and powerful features. Optimized for conversions, performance, and user experience. Includes advanced customization options, responsive layouts, and modern UI components.",
+      "ru": "Профессиональный шаблон Service Enterprise с передовым дизайном и мощными функциями. Оптимизирован для конверсий, производительности и пользовательского опыта."
+    },
+    "technicalDetails": {
+      "en": [
+        "Modern Architecture",
+        "Performance Optimized",
+        "SEO Ready",
+        "Accessibility First",
+        "Production Ready"
+      ],
+      "ru": [
+        "Современная архитектура",
+        "Оптимизация производительности",
+        "Готов для SEO",
+        "Доступность прежде всего",
+        "Готов к производству"
+      ]
+    }
+  },
+  "service-consulting": {
+    "longDescription": {
+      "en": "Professional Service Consulting template with cutting-edge design and powerful features. Optimized for conversions, performance, and user experience. Includes advanced customization options, responsive layouts, and modern UI components.",
+      "ru": "Профессиональный шаблон Service Consulting с передовым дизайном и мощными функциями. Оптимизирован для конверсий, производительности и пользовательского опыта."
+    },
+    "technicalDetails": {
+      "en": [
+        "Modern Architecture",
+        "Performance Optimized",
+        "SEO Ready",
+        "Accessibility First",
+        "Production Ready"
+      ],
+      "ru": [
+        "Современная архитектура",
+        "Оптимизация производительности",
+        "Готов для SEO",
+        "Доступность прежде всего",
+        "Готов к производству"
+      ]
+    }
+  },
+  "blog-tech": {
+    "longDescription": {
+      "en": "Professional Blog Tech template with cutting-edge design and powerful features. Optimized for conversions, performance, and user experience. Includes advanced customization options, responsive layouts, and modern UI components.",
+      "ru": "Профессиональный шаблон Blog Tech с передовым дизайном и мощными функциями. Оптимизирован для конверсий, производительности и пользовательского опыта."
+    },
+    "technicalDetails": {
+      "en": [
+        "Modern Architecture",
+        "Performance Optimized",
+        "SEO Ready",
+        "Accessibility First",
+        "Production Ready"
+      ],
+      "ru": [
+        "Современная архитектура",
+        "Оптимизация производительности",
+        "Готов для SEO",
+        "Доступность прежде всего",
+        "Готов к производству"
+      ]
+    }
+  },
+  "blog-archetypes-minimal": {
+    "longDescription": {
+      "en": "Professional Blog Archetypes Minimal template with cutting-edge design and powerful features. Optimized for conversions, performance, and user experience. Includes advanced customization options, responsive layouts, and modern UI components.",
+      "ru": "Профессиональный шаблон Blog Archetypes Minimal с передовым дизайном и мощными функциями. Оптимизирован для конверсий, производительности и пользовательского опыта."
+    },
+    "technicalDetails": {
+      "en": [
+        "Modern Architecture",
+        "Performance Optimized",
+        "SEO Ready",
+        "Accessibility First",
+        "Production Ready"
+      ],
+      "ru": [
+        "Современная архитектура",
+        "Оптимизация производительности",
+        "Готов для SEO",
+        "Доступность прежде всего",
+        "Готов к производству"
+      ]
+    }
+  },
+  "blog-archetypes-editorial": {
+    "longDescription": {
+      "en": "Professional Blog Archetypes Editorial template with cutting-edge design and powerful features. Optimized for conversions, performance, and user experience. Includes advanced customization options, responsive layouts, and modern UI components.",
+      "ru": "Профессиональный шаблон Blog Archetypes Editorial с передовым дизайном и мощными функциями. Оптимизирован для конверсий, производительности и пользовательского опыта."
+    },
+    "technicalDetails": {
+      "en": [
+        "Modern Architecture",
+        "Performance Optimized",
+        "SEO Ready",
+        "Accessibility First",
+        "Production Ready"
+      ],
+      "ru": [
+        "Современная архитектура",
+        "Оптимизация производительности",
+        "Готов для SEO",
+        "Доступность прежде всего",
+        "Готов к производству"
+      ]
+    }
+  },
+  "lin-portfolio-elegance": {
+    "longDescription": {
+      "en": "Professional Lin Portfolio Elegance template with cutting-edge design and powerful features. Optimized for conversions, performance, and user experience. Includes advanced customization options, responsive layouts, and modern UI components.",
+      "ru": "Профессиональный шаблон Lin Portfolio Elegance с передовым дизайном и мощными функциями. Оптимизирован для конверсий, производительности и пользовательского опыта."
+    },
+    "technicalDetails": {
+      "en": [
+        "Modern Architecture",
+        "Performance Optimized",
+        "SEO Ready",
+        "Accessibility First",
+        "Production Ready"
+      ],
+      "ru": [
+        "Современная архитектура",
+        "Оптимизация производительности",
+        "Готов для SEO",
+        "Доступность прежде всего",
+        "Готов к производству"
+      ]
+    }
+  },
+  "lin-professional-authority": {
+    "longDescription": {
+      "en": "Professional Lin Professional Authority template with cutting-edge design and powerful features. Optimized for conversions, performance, and user experience. Includes advanced customization options, responsive layouts, and modern UI components.",
+      "ru": "Профессиональный шаблон Lin Professional Authority с передовым дизайном и мощными функциями. Оптимизирован для конверсий, производительности и пользовательского опыта."
+    },
+    "technicalDetails": {
+      "en": [
+        "Modern Architecture",
+        "Performance Optimized",
+        "SEO Ready",
+        "Accessibility First",
+        "Production Ready"
+      ],
+      "ru": [
+        "Современная архитектура",
+        "Оптимизация производительности",
+        "Готов для SEO",
+        "Доступность прежде всего",
+        "Готов к производству"
+      ]
+    }
+  },
+  "lin-tech-pioneer": {
+    "longDescription": {
+      "en": "Professional Lin Tech Pioneer template with cutting-edge design and powerful features. Optimized for conversions, performance, and user experience. Includes advanced customization options, responsive layouts, and modern UI components.",
+      "ru": "Профессиональный шаблон Lin Tech Pioneer с передовым дизайном и мощными функциями. Оптимизирован для конверсий, производительности и пользовательского опыта."
+    },
+    "technicalDetails": {
+      "en": [
+        "Modern Architecture",
+        "Performance Optimized",
+        "SEO Ready",
+        "Accessibility First",
+        "Production Ready"
+      ],
+      "ru": [
+        "Современная архитектура",
+        "Оптимизация производительности",
+        "Готов для SEO",
+        "Доступность прежде всего",
+        "Готов к производству"
+      ]
+    }
+  },
+  "online-business-coach": {
+    "longDescription": {
+      "en": "Professional Online Business Coach template with cutting-edge design and powerful features. Optimized for conversions, performance, and user experience. Includes advanced customization options, responsive layouts, and modern UI components.",
+      "ru": "Профессиональный шаблон Online Business Coach с передовым дизайном и мощными функциями. Оптимизирован для конверсий, производительности и пользовательского опыта."
+    },
+    "technicalDetails": {
+      "en": [
+        "Modern Architecture",
+        "Performance Optimized",
+        "SEO Ready",
+        "Accessibility First",
+        "Production Ready"
+      ],
+      "ru": [
+        "Современная архитектура",
+        "Оптимизация производительности",
+        "Готов для SEO",
+        "Доступность прежде всего",
+        "Готов к производству"
+      ]
+    }
+  },
+  "online-business-course": {
+    "longDescription": {
+      "en": "Professional Online Business Course template with cutting-edge design and powerful features. Optimized for conversions, performance, and user experience. Includes advanced customization options, responsive layouts, and modern UI components.",
+      "ru": "Профессиональный шаблон Online Business Course с передовым дизайном и мощными функциями. Оптимизирован для конверсий, производительности и пользовательского опыта."
+    },
+    "technicalDetails": {
+      "en": [
+        "Modern Architecture",
+        "Performance Optimized",
+        "SEO Ready",
+        "Accessibility First",
+        "Production Ready"
+      ],
+      "ru": [
+        "Современная архитектура",
+        "Оптимизация производительности",
+        "Готов для SEO",
+        "Доступность прежде всего",
+        "Готов к производству"
+      ]
+    }
+  },
+  "online-business-agency": {
+    "longDescription": {
+      "en": "Professional Online Business Agency template with cutting-edge design and powerful features. Optimized for conversions, performance, and user experience. Includes advanced customization options, responsive layouts, and modern UI components.",
+      "ru": "Профессиональный шаблон Online Business Agency с передовым дизайном и мощными функциями. Оптимизирован для конверсий, производительности и пользовательского опыта."
+    },
+    "technicalDetails": {
+      "en": [
+        "Modern Architecture",
+        "Performance Optimized",
+        "SEO Ready",
+        "Accessibility First",
+        "Production Ready"
+      ],
+      "ru": [
+        "Современная архитектура",
+        "Оптимизация производительности",
+        "Готов для SEO",
+        "Доступность прежде всего",
+        "Готов к производству"
+      ]
+    }
+  },
+  "online-business-saas": {
+    "longDescription": {
+      "en": "Professional Online Business Saas template with cutting-edge design and powerful features. Optimized for conversions, performance, and user experience. Includes advanced customization options, responsive layouts, and modern UI components.",
+      "ru": "Профессиональный шаблон Online Business Saas с передовым дизайном и мощными функциями. Оптимизирован для конверсий, производительности и пользовательского опыта."
+    },
+    "technicalDetails": {
+      "en": [
+        "Modern Architecture",
+        "Performance Optimized",
+        "SEO Ready",
+        "Accessibility First",
+        "Production Ready"
+      ],
+      "ru": [
+        "Современная архитектура",
+        "Оптимизация производительности",
+        "Готов для SEO",
+        "Доступность прежде всего",
+        "Готов к производству"
+      ]
+    }
+  },
+  "saas-feature-rich": {
+    "longDescription": {
+      "en": "Professional Saas Feature Rich template with cutting-edge design and powerful features. Optimized for conversions, performance, and user experience. Includes advanced customization options, responsive layouts, and modern UI components.",
+      "ru": "Профессиональный шаблон Saas Feature Rich с передовым дизайном и мощными функциями. Оптимизирован для конверсий, производительности и пользовательского опыта."
+    },
+    "technicalDetails": {
+      "en": [
+        "Modern Architecture",
+        "Performance Optimized",
+        "SEO Ready",
+        "Accessibility First",
+        "Production Ready"
+      ],
+      "ru": [
+        "Современная архитектура",
+        "Оптимизация производительности",
+        "Готов для SEO",
+        "Доступность прежде всего",
+        "Готов к производству"
+      ]
+    }
+  },
+  "personal-brand": {
+    "longDescription": {
+      "en": "Professional Personal Brand template with cutting-edge design and powerful features. Optimized for conversions, performance, and user experience. Includes advanced customization options, responsive layouts, and modern UI components.",
+      "ru": "Профессиональный шаблон Personal Brand с передовым дизайном и мощными функциями. Оптимизирован для конверсий, производительности и пользовательского опыта."
+    },
+    "technicalDetails": {
+      "en": [
+        "Modern Architecture",
+        "Performance Optimized",
+        "SEO Ready",
+        "Accessibility First",
+        "Production Ready"
+      ],
+      "ru": [
+        "Современная архитектура",
+        "Оптимизация производительности",
+        "Готов для SEO",
+        "Доступность прежде всего",
+        "Готов к производству"
+      ]
+    }
+  },
+  "experimental-3d": {
+    "longDescription": {
+      "en": "Professional Experimental 3d template with cutting-edge design and powerful features. Optimized for conversions, performance, and user experience. Includes advanced customization options, responsive layouts, and modern UI components.",
+      "ru": "Профессиональный шаблон Experimental 3d с передовым дизайном и мощными функциями. Оптимизирован для конверсий, производительности и пользовательского опыта."
+    },
+    "technicalDetails": {
+      "en": [
+        "Modern Architecture",
+        "Performance Optimized",
+        "SEO Ready",
+        "Accessibility First",
+        "Production Ready"
+      ],
+      "ru": [
+        "Современная архитектура",
+        "Оптимизация производительности",
+        "Готов для SEO",
+        "Доступность прежде всего",
+        "Готов к производству"
+      ]
+    }
+  },
+  "interactive-agency": {
+    "longDescription": {
+      "en": "Professional Interactive Agency template with cutting-edge design and powerful features. Optimized for conversions, performance, and user experience. Includes advanced customization options, responsive layouts, and modern UI components.",
+      "ru": "Профессиональный шаблон Interactive Agency с передовым дизайном и мощными функциями. Оптимизирован для конверсий, производительности и пользовательского опыта."
+    },
+    "technicalDetails": {
+      "en": [
+        "Modern Architecture",
+        "Performance Optimized",
+        "SEO Ready",
+        "Accessibility First",
+        "Production Ready"
+      ],
+      "ru": [
+        "Современная архитектура",
+        "Оптимизация производительности",
+        "Готов для SEO",
+        "Доступность прежде всего",
+        "Готов к производству"
+      ]
+    }
+  },
+  "luxury-minimal": {
+    "longDescription": {
+      "en": "Professional Luxury Minimal template with cutting-edge design and powerful features. Optimized for conversions, performance, and user experience. Includes advanced customization options, responsive layouts, and modern UI components.",
+      "ru": "Профессиональный шаблон Luxury Minimal с передовым дизайном и мощными функциями. Оптимизирован для конверсий, производительности и пользовательского опыта."
+    },
+    "technicalDetails": {
+      "en": [
+        "Modern Architecture",
+        "Performance Optimized",
+        "SEO Ready",
+        "Accessibility First",
+        "Production Ready"
+      ],
+      "ru": [
+        "Современная архитектура",
+        "Оптимизация производительности",
+        "Готов для SEO",
+        "Доступность прежде всего",
+        "Готов к производству"
+      ]
+    }
+  },
+  "photography-immersive": {
+    "longDescription": {
+      "en": "Professional Photography Immersive template with cutting-edge design and powerful features. Optimized for conversions, performance, and user experience. Includes advanced customization options, responsive layouts, and modern UI components.",
+      "ru": "Профессиональный шаблон Photography Immersive с передовым дизайном и мощными функциями. Оптимизирован для конверсий, производительности и пользовательского опыта."
+    },
+    "technicalDetails": {
+      "en": [
+        "Modern Architecture",
+        "Performance Optimized",
+        "SEO Ready",
+        "Accessibility First",
+        "Production Ready"
+      ],
+      "ru": [
+        "Современная архитектура",
+        "Оптимизация производительности",
+        "Готов для SEO",
+        "Доступность прежде всего",
+        "Готов к производству"
+      ]
+    }
+  },
+  "motion-designer": {
+    "longDescription": {
+      "en": "Professional Motion Designer template with cutting-edge design and powerful features. Optimized for conversions, performance, and user experience. Includes advanced customization options, responsive layouts, and modern UI components.",
+      "ru": "Профессиональный шаблон Motion Designer с передовым дизайном и мощными функциями. Оптимизирован для конверсий, производительности и пользовательского опыта."
+    },
+    "technicalDetails": {
+      "en": [
+        "Modern Architecture",
+        "Performance Optimized",
+        "SEO Ready",
+        "Accessibility First",
+        "Production Ready"
+      ],
+      "ru": [
+        "Современная архитектура",
+        "Оптимизация производительности",
+        "Готов для SEO",
+        "Доступность прежде всего",
+        "Готов к производству"
+      ]
+    }
+  },
+  "split-screen-editorial": {
+    "longDescription": {
+      "en": "Professional Split Screen Editorial template with cutting-edge design and powerful features. Optimized for conversions, performance, and user experience. Includes advanced customization options, responsive layouts, and modern UI components.",
+      "ru": "Профессиональный шаблон Split Screen Editorial с передовым дизайном и мощными функциями. Оптимизирован для конверсий, производительности и пользовательского опыта."
+    },
+    "technicalDetails": {
+      "en": [
+        "Modern Architecture",
+        "Performance Optimized",
+        "SEO Ready",
+        "Accessibility First",
+        "Production Ready"
+      ],
+      "ru": [
+        "Современная архитектура",
+        "Оптимизация производительности",
+        "Готов для SEO",
+        "Доступность прежде всего",
+        "Готов к производству"
+      ]
+    }
+  }
+}

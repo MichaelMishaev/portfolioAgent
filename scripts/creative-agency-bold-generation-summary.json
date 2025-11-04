@@ -1,0 +1,40 @@
+{
+  "successful": [
+    {
+      "name": "Electric Rebranding",
+      "id": "creative-agency-bold-project-1",
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/images/creative-agency-bold/creative-agency-bold-project-1.png",
+      "url": "https://ideogram.ai/api/images/ephemeral/Yz-3-eXPSd2Y_RV-7ONEfQ.png?exp=1762380897&sig=41c6374110165303b2d06169f43822f39e7dec274add72e34f9f4765eb2f8175",
+      "enhancedPrompt": "A bold modern brand identity mockup on laptop screen, electric blue and vibrant purple color scheme, tech startup branding, logo design, color palette swatches, bold geometric shapes, contemporary design, photorealistic rendering, 16:9"
+    },
+    {
+      "name": "Campaign Launch",
+      "id": "creative-agency-bold-project-2",
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/images/creative-agency-bold/creative-agency-bold-project-2.png",
+      "url": "https://ideogram.ai/api/images/ephemeral/PBRNcbwPQ3ujA8e7a-TLJQ.png?exp=1762380905&sig=f1b309d2b520ac306341c415ab7b559276313fb0ff92d465257e60583a326924",
+      "enhancedPrompt": "A multichannel marketing campaign mockup on laptop display, social media ads grid, bold colorful graphics, engagement metrics dashboard, modern advertising design, vibrant colors, professional presentation, photorealistic rendering, 16:9"
+    },
+    {
+      "name": "Digital Revolution",
+      "id": "creative-agency-bold-project-3",
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/images/creative-agency-bold/creative-agency-bold-project-3.png",
+      "url": "https://ideogram.ai/api/images/ephemeral/i1GRmpVzQG2OjYJ_vw8NrA.png?exp=1762380915&sig=27c1d9480f5aa706ac4128323154967cdfb957cde79f17414d35fb367e76e845",
+      "enhancedPrompt": "A website redesign mockup on laptop screen showing before/after comparison, modern UI/UX design, clean layout, professional aesthetic, conversion optimization elements, bold typography, award-winning design, photorealistic rendering, 16:9"
+    }
+  ],
+  "failed": [],
+  "imageUrls": [
+    {
+      "name": "Electric Rebranding",
+      "url": "https://ideogram.ai/api/images/ephemeral/Yz-3-eXPSd2Y_RV-7ONEfQ.png?exp=1762380897&sig=41c6374110165303b2d06169f43822f39e7dec274add72e34f9f4765eb2f8175"
+    },
+    {
+      "name": "Campaign Launch",
+      "url": "https://ideogram.ai/api/images/ephemeral/PBRNcbwPQ3ujA8e7a-TLJQ.png?exp=1762380905&sig=f1b309d2b520ac306341c415ab7b559276313fb0ff92d465257e60583a326924"
+    },
+    {
+      "name": "Digital Revolution",
+      "url": "https://ideogram.ai/api/images/ephemeral/i1GRmpVzQG2OjYJ_vw8NrA.png?exp=1762380915&sig=27c1d9480f5aa706ac4128323154967cdfb957cde79f17414d35fb367e76e845"
+    }
+  ]
+}

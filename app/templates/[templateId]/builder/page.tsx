@@ -1,33 +1,19 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { getTemplateById, type TemplateConfig } from "@/lib/template-registry";
-import { useParams } from "next/navigation";
-import dynamic from "next/dynamic";
+import { getTemplateById } from "@/lib/template-registry";
+import { CraftJSTemplateBuilder } from "@/components/builder/craftjs-template-builder";
+import { notFound, useParams } from "next/navigation";
+import { useI18n } from "@/lib/i18n-context";
 
-const CraftJSTemplateBuilder = dynamic(
-  () => import("@/components/builder/craftjs-template-builder").then(mod => ({ default: mod.CraftJSTemplateBuilder })),
-  { ssr: false, loading: () => <div className="flex items-center justify-center h-screen">Loading Builder...</div> }
-);
-
-export default function BuilderPage() {
+export default function TemplateBuilderPage() {
   const params = useParams();
-  const [template, setTemplate] = useState<TemplateConfig | null>(null);
-  const [loading, setLoading] = useState(true);
+  const { language } = useI18n();
+  const templateId = params.templateId as string;
 
-  useEffect(() => {
-    const templateId = params.templateId as string;
-    const templateData = getTemplateById(templateId);
-    setTemplate(templateData || null);
-    setLoading(false);
-  }, [params]);
-
-  if (loading) {
-    return <div className="flex items-center justify-center h-screen">Loading...</div>;
-  }
+  const template = getTemplateById(templateId, language);
 
   if (!template) {
-    return <div className="flex items-center justify-center h-screen">Template Not Found</div>;
+    notFound();
   }
 
   return <CraftJSTemplateBuilder template={template} />;

@@ -1,0 +1,2462 @@
+{
+  "minimalist": {
+    "longDescription": "A pristine, distraction-free design that puts your content first. Perfect for professionals who value clarity and elegance. Clean lines, ample whitespace, and thoughtful typography create a sophisticated presence that lets your work speak for itself.",
+    "whatsIncluded": {
+      "en": [
+        "Minimal Design System",
+        "Dark Mode Toggle",
+        "Smooth Page Transitions",
+        "Typography Hierarchy",
+        "Mobile-First Layout",
+        "Contact Form Integration"
+      ],
+      "ru": [
+        "Минималистичная дизайн-система",
+        "Переключатель темной темы",
+        "Плавные переходы страниц",
+        "Иерархия типографики",
+        "Mobile-first макет",
+        "Интеграция контактной формы"
+      ]
+    },
+    "bestFor": {
+      "en": [
+        "Designers",
+        "Developers",
+        "Consultants",
+        "Freelancers"
+      ],
+      "ru": [
+        "Дизайнеры",
+        "Разработчики",
+        "Консультанты",
+        "Фрилансеры"
+      ]
+    },
+    "colorScheme": {
+      "primary": "#000000",
+      "secondary": "#FFFFFF",
+      "accent": "#3B82F6"
+    },
+    "price": 49
+  },
+  "service-marketplace": {
+    "longDescription": "A comprehensive marketplace platform designed for service providers. Features advanced filtering, booking systems, and user reviews. Perfect for building multi-vendor service platforms, appointment booking sites, or professional directories with integrated payment processing.",
+    "whatsIncluded": {
+      "en": [
+        "Service Listings Grid",
+        "Advanced Search & Filters",
+        "User Review System",
+        "Booking Calendar",
+        "Payment Integration Ready",
+        "Vendor Dashboard"
+      ],
+      "ru": [
+        "Сетка списков услуг",
+        "Расширенный поиск и фильтры",
+        "Система отзывов",
+        "Календарь бронирования",
+        "Готовность к интеграции платежей",
+        "Панель поставщика"
+      ]
+    },
+    "bestFor": {
+      "en": [
+        "Service Marketplaces",
+        "Booking Platforms",
+        "Professional Directories",
+        "B2B Services"
+      ],
+      "ru": [
+        "Маркетплейсы услуг",
+        "Платформы бронирования",
+        "Профессиональные каталоги",
+        "B2B услуги"
+      ]
+    },
+    "colorScheme": {
+      "primary": "#2563EB",
+      "secondary": "#10B981",
+      "accent": "#F59E0B"
+    },
+    "price": 89
+  },
+  "dark-mode": {
+    "longDescription": "Designed specifically for dark mode enthusiasts. Deep blacks, carefully calibrated contrasts, and eye-friendly color palettes. Perfect for developers, tech companies, and modern brands who want to stand out with a sleek, contemporary aesthetic.",
+    "whatsIncluded": {
+      "en": [
+        "Premium Dark Theme",
+        "Neon Accent Colors",
+        "Reduced Eye Strain Design",
+        "Glassmorphism Effects",
+        "Animated Gradients",
+        "Code Syntax Highlighting"
+      ],
+      "ru": [
+        "Премиум темная тема",
+        "Неоновые акцентные цвета",
+        "Дизайн с уменьшенной нагрузкой на глаза",
+        "Эффекты глассморфизма",
+        "Анимированные градиенты",
+        "Подсветка синтаксиса кода"
+      ]
+    },
+    "bestFor": {
+      "en": [
+        "Tech Startups",
+        "Gaming",
+        "Crypto Projects",
+        "Developer Tools"
+      ],
+      "ru": [
+        "Технологические стартапы",
+        "Игры",
+        "Крипто проекты",
+        "Инструменты разработчика"
+      ]
+    },
+    "colorScheme": {
+      "primary": "#0A0A0A",
+      "secondary": "#1A1A1A",
+      "accent": "#00D9FF"
+    },
+    "price": 59
+  },
+  "bold-typography": {
+    "longDescription": "Make a statement with oversized headlines and powerful typography. Perfect for brands that need to capture attention instantly. Features custom font pairings, kinetic text animations, and bold visual hierarchy that commands attention.",
+    "whatsIncluded": {
+      "en": [
+        "Giant Typography System",
+        "Custom Font Pairing",
+        "Text Animations",
+        "Bold Visual Hierarchy",
+        "Minimal Graphics",
+        "Fast Loading"
+      ],
+      "ru": [
+        "Гигантская типографическая система",
+        "Пользовательские шрифтовые пары",
+        "Текстовая анимация",
+        "Смелая визуальная иерархия",
+        "Минимальная графика",
+        "Быстрая загрузка"
+      ]
+    },
+    "bestFor": {
+      "en": [
+        "Agencies",
+        "Fashion Brands",
+        "Art Directors",
+        "Editorial Sites"
+      ],
+      "ru": [
+        "Агентства",
+        "Модные бренды",
+        "Арт-директора",
+        "Редакционные сайты"
+      ]
+    },
+    "colorScheme": {
+      "primary": "#000000",
+      "secondary": "#FFFFFF",
+      "accent": "#FF006E"
+    },
+    "price": 69
+  },
+  "fullscreen-immersive": {
+    "longDescription": "Transform your portfolio into an immersive visual experience. Full-screen sections with parallax scrolling, video backgrounds, and cinematic transitions create an unforgettable journey through your work. Ideal for photographers, videographers, and visual artists.",
+    "whatsIncluded": {
+      "en": [
+        "Fullscreen Sections",
+        "Parallax Scrolling",
+        "Video Background Support",
+        "Smooth Transitions",
+        "Gallery Lightbox",
+        "Touch Gestures"
+      ],
+      "ru": [
+        "Полноэкранные секции",
+        "Параллакс-скроллинг",
+        "Поддержка видео-фона",
+        "Плавные переходы",
+        "Галерея с лайтбоксом",
+        "Сенсорные жесты"
+      ]
+    },
+    "bestFor": {
+      "en": [
+        "Photographers",
+        "Videographers",
+        "Creative Studios",
+        "Artists"
+      ],
+      "ru": [
+        "Фотографы",
+        "Видеографы",
+        "Креативные студии",
+        "Художники"
+      ]
+    },
+    "colorScheme": {
+      "primary": "#000000",
+      "secondary": "#FFFFFF",
+      "accent": "#F59E0B"
+    },
+    "price": 79
+  },
+  "startup-pitch": {
+    "longDescription": "Built for startups that need to make a powerful first impression. Optimized for conversions with strategic CTAs, social proof sections, and investor-ready layouts. Perfect for SaaS products, tech startups, and fundraising campaigns.",
+    "whatsIncluded": {
+      "en": [
+        "Hero CTA Section",
+        "Product Features Grid",
+        "Social Proof Display",
+        "Team Section",
+        "Investor Deck Layout",
+        "Analytics Integration"
+      ],
+      "ru": [
+        "Героическая CTA секция",
+        "Сетка функций продукта",
+        "Отображение социального доказательства",
+        "Секция команды",
+        "Макет для инвесторов",
+        "Интеграция аналитики"
+      ]
+    },
+    "bestFor": {
+      "en": [
+        "SaaS Startups",
+        "Tech Companies",
+        "Fundraising",
+        "Product Launches"
+      ],
+      "ru": [
+        "SaaS стартапы",
+        "Технологические компании",
+        "Сбор средств",
+        "Запуск продуктов"
+      ]
+    },
+    "colorScheme": {
+      "primary": "#3B82F6",
+      "secondary": "#1E293B",
+      "accent": "#10B981"
+    },
+    "price": 99
+  },
+  "bento-grid": {
+    "longDescription": "Modern modular design inspired by Japanese bento boxes. Asymmetric grid layouts that create visual interest while maintaining perfect organization. Ideal for showcasing multiple services, products, or portfolio pieces with equal emphasis.",
+    "whatsIncluded": {
+      "en": [
+        "Bento Grid System",
+        "Asymmetric Layouts",
+        "Hover Animations",
+        "Responsive Grid",
+        "Card Components",
+        "Flexible Sections"
+      ],
+      "ru": [
+        "Система Bento Grid",
+        "Асимметричные макеты",
+        "Анимации при наведении",
+        "Адаптивная сетка",
+        "Карточные компоненты",
+        "Гибкие секции"
+      ]
+    },
+    "bestFor": {
+      "en": [
+        "Multi-Service Agencies",
+        "Product Showcases",
+        "Creative Portfolios",
+        "Design Systems"
+      ],
+      "ru": [
+        "Агентства с множеством услуг",
+        "Витрины продуктов",
+        "Креативные портфолио",
+        "Дизайн-системы"
+      ]
+    },
+    "colorScheme": {
+      "primary": "#1F2937",
+      "secondary": "#F3F4F6",
+      "accent": "#6366F1"
+    },
+    "price": 69
+  },
+  "3d-immersive": {
+    "longDescription": "Push the boundaries of web design with Three.js 3D elements, WebGL effects, and interactive 3D models. Perfect for tech companies, game studios, and brands wanting to create truly memorable digital experiences that wow visitors.",
+    "whatsIncluded": {
+      "en": [
+        "Three.js Integration",
+        "3D Model Viewer",
+        "WebGL Effects",
+        "Interactive 3D Elements",
+        "Smooth 60fps Animations",
+        "Mobile Optimized 3D"
+      ],
+      "ru": [
+        "Интеграция Three.js",
+        "Просмотрщик 3D моделей",
+        "WebGL эффекты",
+        "Интерактивные 3D элементы",
+        "Плавная анимация 60fps",
+        "Оптимизированный 3D для мобильных"
+      ]
+    },
+    "bestFor": {
+      "en": [
+        "Tech Companies",
+        "Game Studios",
+        "AR/VR Companies",
+        "Innovation Labs"
+      ],
+      "ru": [
+        "Технологические компании",
+        "Игровые студии",
+        "AR/VR компании",
+        "Инновационные лаборатории"
+      ]
+    },
+    "colorScheme": {
+      "primary": "#000000",
+      "secondary": "#1A1A2E",
+      "accent": "#06B6D4"
+    },
+    "price": 129
+  },
+  "neo-brutalist": {
+    "longDescription": "Raw, unapologetic design that breaks all the rules. Bold borders, clashing colors, and intentionally rough aesthetics. Perfect for brands that want to stand out and aren't afraid to be different. Inspired by brutalist architecture and punk design movements.",
+    "whatsIncluded": {
+      "en": [
+        "Bold Border System",
+        "High Contrast Colors",
+        "Brutalist Typography",
+        "Intentional Imperfection",
+        "Raw Aesthetic",
+        "Anti-Design Elements"
+      ],
+      "ru": [
+        "Система жирных границ",
+        "Высококонтрастные цвета",
+        "Бруталистская типографика",
+        "Намеренное несовершенство",
+        "Сырая эстетика",
+        "Анти-дизайн элементы"
+      ]
+    },
+    "bestFor": {
+      "en": [
+        "Creative Agencies",
+        "Art Projects",
+        "Alternative Brands",
+        "Youth Culture"
+      ],
+      "ru": [
+        "Креативные агентства",
+        "Арт-проекты",
+        "Альтернативные бренды",
+        "Молодежная культура"
+      ]
+    },
+    "colorScheme": {
+      "primary": "#FFFFFF",
+      "secondary": "#000000",
+      "accent": "#FFFF00"
+    },
+    "price": 79
+  },
+  "glassmorphism-modern": {
+    "longDescription": "Cutting-edge frosted glass effects with backdrop blur, transparency, and depth. Modern, elegant design that feels premium and futuristic. Perfect for fintech, SaaS products, and brands that want a sophisticated, iOS-inspired aesthetic.",
+    "whatsIncluded": {
+      "en": [
+        "Glassmorphism UI Kit",
+        "Backdrop Blur Effects",
+        "Transparency Layers",
+        "Depth Shadows",
+        "iOS-inspired Design",
+        "Premium Feel"
+      ],
+      "ru": [
+        "UI Kit с эффектом стекла",
+        "Эффекты размытия фона",
+        "Слои прозрачности",
+        "Глубинные тени",
+        "iOS-вдохновленный дизайн",
+        "Премиальное ощущение"
+      ]
+    },
+    "bestFor": {
+      "en": [
+        "Fintech",
+        "SaaS Products",
+        "Premium Brands",
+        "Modern Startups"
+      ],
+      "ru": [
+        "Финтех",
+        "SaaS продукты",
+        "Премиум бренды",
+        "Современные стартапы"
+      ]
+    },
+    "colorScheme": {
+      "primary": "#343434",
+      "secondary": "rgba(255, 255, 255, 0.1)",
+      "accent": "#4d65ff"
+    },
+    "price": 89
+  },
+  "blog-personal": {
+    "longDescription": "A warm, readable blog design focused on your writing. Beautiful typography, comfortable reading experience, and personal touches that help readers connect with your voice. Perfect for authors, journalists, and storytellers.",
+    "whatsIncluded": {
+      "en": [
+        "Reading-Optimized Layout",
+        "Article Grid",
+        "Author Bio Section",
+        "Social Sharing",
+        "Comment Integration",
+        "Newsletter Signup"
+      ],
+      "ru": [
+        "Макет для чтения",
+        "Сетка статей",
+        "Секция об авторе",
+        "Социальный шеринг",
+        "Интеграция комментариев",
+        "Подписка на рассылку"
+      ]
+    },
+    "bestFor": {
+      "en": [
+        "Personal Bloggers",
+        "Authors",
+        "Journalists",
+        "Storytellers"
+      ],
+      "ru": [
+        "Личные блогеры",
+        "Авторы",
+        "Журналисты",
+        "Рассказчики"
+      ]
+    },
+    "colorScheme": {
+      "primary": "#1F2937",
+      "secondary": "#F9FAFB",
+      "accent": "#3B82F6"
+    },
+    "price": 49
+  },
+  "blog-magazine": {
+    "longDescription": "Editorial-style design inspired by premium magazines. Multi-column layouts, featured articles, and sophisticated typography create a professional publication feel. Perfect for news sites, online magazines, and content-heavy platforms.",
+    "whatsIncluded": {
+      "en": [
+        "Magazine Layout",
+        "Featured Articles",
+        "Multi-column Grid",
+        "Category Pages",
+        "Author Pages",
+        "Ad Placement Zones"
+      ],
+      "ru": [
+        "Журнальный макет",
+        "Избранные статьи",
+        "Многоколоночная сетка",
+        "Страницы категорий",
+        "Страницы авторов",
+        "Зоны размещения рекламы"
+      ]
+    },
+    "bestFor": {
+      "en": [
+        "Online Magazines",
+        "News Sites",
+        "Publishers",
+        "Content Platforms"
+      ],
+      "ru": [
+        "Онлайн-журналы",
+        "Новостные сайты",
+        "Издатели",
+        "Контент-платформы"
+      ]
+    },
+    "colorScheme": {
+      "primary": "#0F172A",
+      "secondary": "#F8FAFC",
+      "accent": "#EF4444"
+    },
+    "price": 79
+  },
+  "professional-b2b": {
+    "longDescription": "Corporate design built for B2B sales. Trust-building elements, case studies, and ROI-focused content structure. Perfect for enterprise software, professional services, and companies selling to other businesses.",
+    "whatsIncluded": {
+      "en": [
+        "Enterprise Layout",
+        "Case Study Templates",
+        "Client Logo Showcase",
+        "ROI Calculator",
+        "Demo Request Form",
+        "Trust Badges"
+      ],
+      "ru": [
+        "Корпоративный макет",
+        "Шаблоны кейсов",
+        "Витрина логотипов клиентов",
+        "ROI калькулятор",
+        "Форма запроса демо",
+        "Значки доверия"
+      ]
+    },
+    "bestFor": {
+      "en": [
+        "B2B Software",
+        "Professional Services",
+        "Enterprise Solutions",
+        "Consulting Firms"
+      ],
+      "ru": [
+        "B2B программное обеспечение",
+        "Профессиональные услуги",
+        "Корпоративные решения",
+        "Консалтинговые фирмы"
+      ]
+    },
+    "colorScheme": {
+      "primary": "#1a73e8",
+      "secondary": "#1557b0",
+      "accent": "#10b981"
+    },
+    "price": 99
+  },
+  "product-saas": {
+    "longDescription": "Conversion-optimized design for SaaS products. Features benefit-focused sections, pricing tables, and strategic CTAs. Includes trial signup flows and product demo sections. Perfect for subscription-based software products.",
+    "whatsIncluded": {
+      "en": [
+        "Feature Comparison Table",
+        "Pricing Tiers",
+        "Trial Signup Flow",
+        "Product Screenshots",
+        "Integration Showcases",
+        "FAQ Section"
+      ],
+      "ru": [
+        "Таблица сравнения функций",
+        "Тарифные планы",
+        "Поток регистрации пробной версии",
+        "Скриншоты продукта",
+        "Витрины интеграций",
+        "Раздел FAQ"
+      ]
+    },
+    "bestFor": {
+      "en": [
+        "SaaS Products",
+        "Software Tools",
+        "Web Apps",
+        "Subscription Services"
+      ],
+      "ru": [
+        "SaaS продукты",
+        "Программные инструменты",
+        "Веб-приложения",
+        "Сервисы по подписке"
+      ]
+    },
+    "colorScheme": {
+      "primary": "#4F46E5",
+      "secondary": "#F3F4F6",
+      "accent": "#10B981"
+    },
+    "price": 89
+  },
+  "creative-agency-bold": {
+    "longDescription": "Make a bold statement with this energetic agency template. Vibrant colors, dynamic animations, and portfolio showcases that demand attention. Perfect for design agencies, marketing firms, and creative studios that want to show off their personality.",
+    "whatsIncluded": {
+      "en": [
+        "Portfolio Grid",
+        "Case Study Layouts",
+        "Team Showcase",
+        "Client Testimonials",
+        "Service Pages",
+        "Contact CTA"
+      ],
+      "ru": [
+        "Сетка портфолио",
+        "Макеты кейсов",
+        "Витрина команды",
+        "Отзывы клиентов",
+        "Страницы услуг",
+        "Контактный CTA"
+      ]
+    },
+    "bestFor": {
+      "en": [
+        "Design Agencies",
+        "Marketing Firms",
+        "Creative Studios",
+        "Branding Agencies"
+      ],
+      "ru": [
+        "Дизайн-агентства",
+        "Маркетинговые фирмы",
+        "Креативные студии",
+        "Брендинговые агентства"
+      ]
+    },
+    "colorScheme": {
+      "primary": "#0033ff",
+      "secondary": "#27cc8d",
+      "accent": "#ffa1a1"
+    },
+    "price": 89
+  },
+  "minimal-portfolio-clean": {
+    "longDescription": "Elegant portfolio design that lets your work take center stage. Clean layouts, subtle animations, and thoughtful spacing create a sophisticated showcase. Perfect for designers, illustrators, and creatives who want their work to speak louder than the design.",
+    "whatsIncluded": {
+      "en": [
+        "Project Grid",
+        "Case Study Pages",
+        "Image Galleries",
+        "About Section",
+        "Contact Form",
+        "Resume/CV Page"
+      ],
+      "ru": [
+        "Сетка проектов",
+        "Страницы кейсов",
+        "Галереи изображений",
+        "Раздел о себе",
+        "Контактная форма",
+        "Страница резюме/CV"
+      ]
+    },
+    "bestFor": {
+      "en": [
+        "Designers",
+        "Illustrators",
+        "Photographers",
+        "Creative Professionals"
+      ],
+      "ru": [
+        "Дизайнеры",
+        "Иллюстраторы",
+        "Фотографы",
+        "Креативные профессионалы"
+      ]
+    },
+    "colorScheme": {
+      "primary": "#111827",
+      "secondary": "#f3f4f6",
+      "accent": "#3b82f6"
+    },
+    "price": 59
+  },
+  "grid-masonry": {
+    "longDescription": "Professional Grid Masonry template with modern design and powerful features. Perfect for creating engaging, conversion-optimized experiences that stand out.",
+    "whatsIncluded": {
+      "en": [
+        "Responsive Design",
+        "Dark Mode Support",
+        "SEO Optimized",
+        "Fast Performance",
+        "Modern UI Components",
+        "Easy Customization"
+      ],
+      "ru": [
+        "Адаптивный дизайн",
+        "Поддержка темной темы",
+        "SEO оптимизация",
+        "Быстрая производительность",
+        "Современные UI компоненты",
+        "Легкая настройка"
+      ]
+    },
+    "bestFor": {
+      "en": [
+        "Professionals",
+        "Businesses",
+        "Freelancers",
+        "Agencies"
+      ],
+      "ru": [
+        "Профессионалы",
+        "Бизнес",
+        "Фрилансеры",
+        "Агентства"
+      ]
+    },
+    "colorScheme": {
+      "primary": "#1F2937",
+      "secondary": "#F3F4F6",
+      "accent": "#3B82F6"
+    },
+    "price": 69
+  },
+  "split-screen": {
+    "longDescription": "Professional Split Screen template with modern design and powerful features. Perfect for creating engaging, conversion-optimized experiences that stand out.",
+    "whatsIncluded": {
+      "en": [
+        "Responsive Design",
+        "Dark Mode Support",
+        "SEO Optimized",
+        "Fast Performance",
+        "Modern UI Components",
+        "Easy Customization"
+      ],
+      "ru": [
+        "Адаптивный дизайн",
+        "Поддержка темной темы",
+        "SEO оптимизация",
+        "Быстрая производительность",
+        "Современные UI компоненты",
+        "Легкая настройка"
+      ]
+    },
+    "bestFor": {
+      "en": [
+        "Professionals",
+        "Businesses",
+        "Freelancers",
+        "Agencies"
+      ],
+      "ru": [
+        "Профессионалы",
+        "Бизнес",
+        "Фрилансеры",
+        "Агентства"
+      ]
+    },
+    "colorScheme": {
+      "primary": "#1F2937",
+      "secondary": "#F3F4F6",
+      "accent": "#3B82F6"
+    },
+    "price": 69
+  },
+  "illustration-focus": {
+    "longDescription": "Professional Illustration Focus template with modern design and powerful features. Perfect for creating engaging, conversion-optimized experiences that stand out.",
+    "whatsIncluded": {
+      "en": [
+        "Responsive Design",
+        "Dark Mode Support",
+        "SEO Optimized",
+        "Fast Performance",
+        "Modern UI Components",
+        "Easy Customization"
+      ],
+      "ru": [
+        "Адаптивный дизайн",
+        "Поддержка темной темы",
+        "SEO оптимизация",
+        "Быстрая производительность",
+        "Современные UI компоненты",
+        "Легкая настройка"
+      ]
+    },
+    "bestFor": {
+      "en": [
+        "Professionals",
+        "Businesses",
+        "Freelancers",
+        "Agencies"
+      ],
+      "ru": [
+        "Профессионалы",
+        "Бизнес",
+        "Фрилансеры",
+        "Агентства"
+      ]
+    },
+    "colorScheme": {
+      "primary": "#1F2937",
+      "secondary": "#F3F4F6",
+      "accent": "#3B82F6"
+    },
+    "price": 69
+  },
+  "single-page": {
+    "longDescription": "Professional Single Page template with modern design and powerful features. Perfect for creating engaging, conversion-optimized experiences that stand out.",
+    "whatsIncluded": {
+      "en": [
+        "Responsive Design",
+        "Dark Mode Support",
+        "SEO Optimized",
+        "Fast Performance",
+        "Modern UI Components",
+        "Easy Customization"
+      ],
+      "ru": [
+        "Адаптивный дизайн",
+        "Поддержка темной темы",
+        "SEO оптимизация",
+        "Быстрая производительность",
+        "Современные UI компоненты",
+        "Легкая настройка"
+      ]
+    },
+    "bestFor": {
+      "en": [
+        "Professionals",
+        "Businesses",
+        "Freelancers",
+        "Agencies"
+      ],
+      "ru": [
+        "Профессионалы",
+        "Бизнес",
+        "Фрилансеры",
+        "Агентства"
+      ]
+    },
+    "colorScheme": {
+      "primary": "#1F2937",
+      "secondary": "#F3F4F6",
+      "accent": "#3B82F6"
+    },
+    "price": 69
+  },
+  "text-heavy": {
+    "longDescription": "Professional Text Heavy template with modern design and powerful features. Perfect for creating engaging, conversion-optimized experiences that stand out.",
+    "whatsIncluded": {
+      "en": [
+        "Responsive Design",
+        "Dark Mode Support",
+        "SEO Optimized",
+        "Fast Performance",
+        "Modern UI Components",
+        "Easy Customization"
+      ],
+      "ru": [
+        "Адаптивный дизайн",
+        "Поддержка темной темы",
+        "SEO оптимизация",
+        "Быстрая производительность",
+        "Современные UI компоненты",
+        "Легкая настройка"
+      ]
+    },
+    "bestFor": {
+      "en": [
+        "Professionals",
+        "Businesses",
+        "Freelancers",
+        "Agencies"
+      ],
+      "ru": [
+        "Профессионалы",
+        "Бизнес",
+        "Фрилансеры",
+        "Агентства"
+      ]
+    },
+    "colorScheme": {
+      "primary": "#1F2937",
+      "secondary": "#F3F4F6",
+      "accent": "#3B82F6"
+    },
+    "price": 69
+  },
+  "card-modular": {
+    "longDescription": "Professional Card Modular template with modern design and powerful features. Perfect for creating engaging, conversion-optimized experiences that stand out.",
+    "whatsIncluded": {
+      "en": [
+        "Responsive Design",
+        "Dark Mode Support",
+        "SEO Optimized",
+        "Fast Performance",
+        "Modern UI Components",
+        "Easy Customization"
+      ],
+      "ru": [
+        "Адаптивный дизайн",
+        "Поддержка темной темы",
+        "SEO оптимизация",
+        "Быстрая производительность",
+        "Современные UI компоненты",
+        "Легкая настройка"
+      ]
+    },
+    "bestFor": {
+      "en": [
+        "Professionals",
+        "Businesses",
+        "Freelancers",
+        "Agencies"
+      ],
+      "ru": [
+        "Профессионалы",
+        "Бизнес",
+        "Фрилансеры",
+        "Агентства"
+      ]
+    },
+    "colorScheme": {
+      "primary": "#1F2937",
+      "secondary": "#F3F4F6",
+      "accent": "#3B82F6"
+    },
+    "price": 69
+  },
+  "kinetic-typography": {
+    "longDescription": "Professional Kinetic Typography template with modern design and powerful features. Perfect for creating engaging, conversion-optimized experiences that stand out.",
+    "whatsIncluded": {
+      "en": [
+        "Responsive Design",
+        "Dark Mode Support",
+        "SEO Optimized",
+        "Fast Performance",
+        "Modern UI Components",
+        "Easy Customization"
+      ],
+      "ru": [
+        "Адаптивный дизайн",
+        "Поддержка темной темы",
+        "SEO оптимизация",
+        "Быстрая производительность",
+        "Современные UI компоненты",
+        "Легкая настройка"
+      ]
+    },
+    "bestFor": {
+      "en": [
+        "Professionals",
+        "Businesses",
+        "Freelancers",
+        "Agencies"
+      ],
+      "ru": [
+        "Профессионалы",
+        "Бизнес",
+        "Фрилансеры",
+        "Агентства"
+      ]
+    },
+    "colorScheme": {
+      "primary": "#1F2937",
+      "secondary": "#F3F4F6",
+      "accent": "#3B82F6"
+    },
+    "price": 69
+  },
+  "ar-spatial": {
+    "longDescription": "Professional Ar Spatial template with modern design and powerful features. Perfect for creating engaging, conversion-optimized experiences that stand out.",
+    "whatsIncluded": {
+      "en": [
+        "Responsive Design",
+        "Dark Mode Support",
+        "SEO Optimized",
+        "Fast Performance",
+        "Modern UI Components",
+        "Easy Customization"
+      ],
+      "ru": [
+        "Адаптивный дизайн",
+        "Поддержка темной темы",
+        "SEO оптимизация",
+        "Быстрая производительность",
+        "Современные UI компоненты",
+        "Легкая настройка"
+      ]
+    },
+    "bestFor": {
+      "en": [
+        "Professionals",
+        "Businesses",
+        "Freelancers",
+        "Agencies"
+      ],
+      "ru": [
+        "Профессионалы",
+        "Бизнес",
+        "Фрилансеры",
+        "Агентства"
+      ]
+    },
+    "colorScheme": {
+      "primary": "#1F2937",
+      "secondary": "#F3F4F6",
+      "accent": "#3B82F6"
+    },
+    "price": 69
+  },
+  "organic-liquid": {
+    "longDescription": "Professional Organic Liquid template with modern design and powerful features. Perfect for creating engaging, conversion-optimized experiences that stand out.",
+    "whatsIncluded": {
+      "en": [
+        "Responsive Design",
+        "Dark Mode Support",
+        "SEO Optimized",
+        "Fast Performance",
+        "Modern UI Components",
+        "Easy Customization"
+      ],
+      "ru": [
+        "Адаптивный дизайн",
+        "Поддержка темной темы",
+        "SEO оптимизация",
+        "Быстрая производительность",
+        "Современные UI компоненты",
+        "Легкая настройка"
+      ]
+    },
+    "bestFor": {
+      "en": [
+        "Professionals",
+        "Businesses",
+        "Freelancers",
+        "Agencies"
+      ],
+      "ru": [
+        "Профессионалы",
+        "Бизнес",
+        "Фрилансеры",
+        "Агентства"
+      ]
+    },
+    "colorScheme": {
+      "primary": "#1F2937",
+      "secondary": "#F3F4F6",
+      "accent": "#3B82F6"
+    },
+    "price": 69
+  },
+  "data-dashboard": {
+    "longDescription": "Professional Data Dashboard template with modern design and powerful features. Perfect for creating engaging, conversion-optimized experiences that stand out.",
+    "whatsIncluded": {
+      "en": [
+        "Responsive Design",
+        "Dark Mode Support",
+        "SEO Optimized",
+        "Fast Performance",
+        "Modern UI Components",
+        "Easy Customization"
+      ],
+      "ru": [
+        "Адаптивный дизайн",
+        "Поддержка темной темы",
+        "SEO оптимизация",
+        "Быстрая производительность",
+        "Современные UI компоненты",
+        "Легкая настройка"
+      ]
+    },
+    "bestFor": {
+      "en": [
+        "Professionals",
+        "Businesses",
+        "Freelancers",
+        "Agencies"
+      ],
+      "ru": [
+        "Профессионалы",
+        "Бизнес",
+        "Фрилансеры",
+        "Агентства"
+      ]
+    },
+    "colorScheme": {
+      "primary": "#1F2937",
+      "secondary": "#F3F4F6",
+      "accent": "#3B82F6"
+    },
+    "price": 69
+  },
+  "y2k-retro": {
+    "longDescription": "Professional Y2k Retro template with modern design and powerful features. Perfect for creating engaging, conversion-optimized experiences that stand out.",
+    "whatsIncluded": {
+      "en": [
+        "Responsive Design",
+        "Dark Mode Support",
+        "SEO Optimized",
+        "Fast Performance",
+        "Modern UI Components",
+        "Easy Customization"
+      ],
+      "ru": [
+        "Адаптивный дизайн",
+        "Поддержка темной темы",
+        "SEO оптимизация",
+        "Быстрая производительность",
+        "Современные UI компоненты",
+        "Легкая настройка"
+      ]
+    },
+    "bestFor": {
+      "en": [
+        "Professionals",
+        "Businesses",
+        "Freelancers",
+        "Agencies"
+      ],
+      "ru": [
+        "Профессионалы",
+        "Бизнес",
+        "Фрилансеры",
+        "Агентства"
+      ]
+    },
+    "colorScheme": {
+      "primary": "#1F2937",
+      "secondary": "#F3F4F6",
+      "accent": "#3B82F6"
+    },
+    "price": 69
+  },
+  "collage-maximalist": {
+    "longDescription": "Professional Collage Maximalist template with modern design and powerful features. Perfect for creating engaging, conversion-optimized experiences that stand out.",
+    "whatsIncluded": {
+      "en": [
+        "Responsive Design",
+        "Dark Mode Support",
+        "SEO Optimized",
+        "Fast Performance",
+        "Modern UI Components",
+        "Easy Customization"
+      ],
+      "ru": [
+        "Адаптивный дизайн",
+        "Поддержка темной темы",
+        "SEO оптимизация",
+        "Быстрая производительность",
+        "Современные UI компоненты",
+        "Легкая настройка"
+      ]
+    },
+    "bestFor": {
+      "en": [
+        "Professionals",
+        "Businesses",
+        "Freelancers",
+        "Agencies"
+      ],
+      "ru": [
+        "Профессионалы",
+        "Бизнес",
+        "Фрилансеры",
+        "Агентства"
+      ]
+    },
+    "colorScheme": {
+      "primary": "#1F2937",
+      "secondary": "#F3F4F6",
+      "accent": "#3B82F6"
+    },
+    "price": 69
+  },
+  "voice-first": {
+    "longDescription": "Professional Voice First template with modern design and powerful features. Perfect for creating engaging, conversion-optimized experiences that stand out.",
+    "whatsIncluded": {
+      "en": [
+        "Responsive Design",
+        "Dark Mode Support",
+        "SEO Optimized",
+        "Fast Performance",
+        "Modern UI Components",
+        "Easy Customization"
+      ],
+      "ru": [
+        "Адаптивный дизайн",
+        "Поддержка темной темы",
+        "SEO оптимизация",
+        "Быстрая производительность",
+        "Современные UI компоненты",
+        "Легкая настройка"
+      ]
+    },
+    "bestFor": {
+      "en": [
+        "Professionals",
+        "Businesses",
+        "Freelancers",
+        "Agencies"
+      ],
+      "ru": [
+        "Профессионалы",
+        "Бизнес",
+        "Фрилансеры",
+        "Агентства"
+      ]
+    },
+    "colorScheme": {
+      "primary": "#1F2937",
+      "secondary": "#F3F4F6",
+      "accent": "#3B82F6"
+    },
+    "price": 69
+  },
+  "product-course": {
+    "longDescription": "Professional Product Course template with modern design and powerful features. Perfect for creating engaging, conversion-optimized experiences that stand out.",
+    "whatsIncluded": {
+      "en": [
+        "Responsive Design",
+        "Dark Mode Support",
+        "SEO Optimized",
+        "Fast Performance",
+        "Modern UI Components",
+        "Easy Customization"
+      ],
+      "ru": [
+        "Адаптивный дизайн",
+        "Поддержка темной темы",
+        "SEO оптимизация",
+        "Быстрая производительность",
+        "Современные UI компоненты",
+        "Легкая настройка"
+      ]
+    },
+    "bestFor": {
+      "en": [
+        "Professionals",
+        "Businesses",
+        "Freelancers",
+        "Agencies"
+      ],
+      "ru": [
+        "Профессионалы",
+        "Бизнес",
+        "Фрилансеры",
+        "Агентства"
+      ]
+    },
+    "colorScheme": {
+      "primary": "#1F2937",
+      "secondary": "#F3F4F6",
+      "accent": "#3B82F6"
+    },
+    "price": 69
+  },
+  "product-tech": {
+    "longDescription": "Professional Product Tech template with modern design and powerful features. Perfect for creating engaging, conversion-optimized experiences that stand out.",
+    "whatsIncluded": {
+      "en": [
+        "Responsive Design",
+        "Dark Mode Support",
+        "SEO Optimized",
+        "Fast Performance",
+        "Modern UI Components",
+        "Easy Customization"
+      ],
+      "ru": [
+        "Адаптивный дизайн",
+        "Поддержка темной темы",
+        "SEO оптимизация",
+        "Быстрая производительность",
+        "Современные UI компоненты",
+        "Легкая настройка"
+      ]
+    },
+    "bestFor": {
+      "en": [
+        "Professionals",
+        "Businesses",
+        "Freelancers",
+        "Agencies"
+      ],
+      "ru": [
+        "Профессионалы",
+        "Бизнес",
+        "Фрилансеры",
+        "Агентства"
+      ]
+    },
+    "colorScheme": {
+      "primary": "#1F2937",
+      "secondary": "#F3F4F6",
+      "accent": "#3B82F6"
+    },
+    "price": 69
+  },
+  "product-physical": {
+    "longDescription": "Professional Product Physical template with modern design and powerful features. Perfect for creating engaging, conversion-optimized experiences that stand out.",
+    "whatsIncluded": {
+      "en": [
+        "Responsive Design",
+        "Dark Mode Support",
+        "SEO Optimized",
+        "Fast Performance",
+        "Modern UI Components",
+        "Easy Customization"
+      ],
+      "ru": [
+        "Адаптивный дизайн",
+        "Поддержка темной темы",
+        "SEO оптимизация",
+        "Быстрая производительность",
+        "Современные UI компоненты",
+        "Легкая настройка"
+      ]
+    },
+    "bestFor": {
+      "en": [
+        "Professionals",
+        "Businesses",
+        "Freelancers",
+        "Agencies"
+      ],
+      "ru": [
+        "Профессионалы",
+        "Бизнес",
+        "Фрилансеры",
+        "Агентства"
+      ]
+    },
+    "colorScheme": {
+      "primary": "#1F2937",
+      "secondary": "#F3F4F6",
+      "accent": "#3B82F6"
+    },
+    "price": 69
+  },
+  "product-premium": {
+    "longDescription": "Professional Product Premium template with modern design and powerful features. Perfect for creating engaging, conversion-optimized experiences that stand out.",
+    "whatsIncluded": {
+      "en": [
+        "Responsive Design",
+        "Dark Mode Support",
+        "SEO Optimized",
+        "Fast Performance",
+        "Modern UI Components",
+        "Easy Customization"
+      ],
+      "ru": [
+        "Адаптивный дизайн",
+        "Поддержка темной темы",
+        "SEO оптимизация",
+        "Быстрая производительность",
+        "Современные UI компоненты",
+        "Легкая настройка"
+      ]
+    },
+    "bestFor": {
+      "en": [
+        "Professionals",
+        "Businesses",
+        "Freelancers",
+        "Agencies"
+      ],
+      "ru": [
+        "Профессионалы",
+        "Бизнес",
+        "Фрилансеры",
+        "Агентства"
+      ]
+    },
+    "colorScheme": {
+      "primary": "#1F2937",
+      "secondary": "#F3F4F6",
+      "accent": "#3B82F6"
+    },
+    "price": 69
+  },
+  "product-fashion": {
+    "longDescription": "Professional Product Fashion template with modern design and powerful features. Perfect for creating engaging, conversion-optimized experiences that stand out.",
+    "whatsIncluded": {
+      "en": [
+        "Responsive Design",
+        "Dark Mode Support",
+        "SEO Optimized",
+        "Fast Performance",
+        "Modern UI Components",
+        "Easy Customization"
+      ],
+      "ru": [
+        "Адаптивный дизайн",
+        "Поддержка темной темы",
+        "SEO оптимизация",
+        "Быстрая производительность",
+        "Современные UI компоненты",
+        "Легкая настройка"
+      ]
+    },
+    "bestFor": {
+      "en": [
+        "Professionals",
+        "Businesses",
+        "Freelancers",
+        "Agencies"
+      ],
+      "ru": [
+        "Профессионалы",
+        "Бизнес",
+        "Фрилансеры",
+        "Агентства"
+      ]
+    },
+    "colorScheme": {
+      "primary": "#1F2937",
+      "secondary": "#F3F4F6",
+      "accent": "#3B82F6"
+    },
+    "price": 69
+  },
+  "product-luxury": {
+    "longDescription": "Professional Product Luxury template with modern design and powerful features. Perfect for creating engaging, conversion-optimized experiences that stand out.",
+    "whatsIncluded": {
+      "en": [
+        "Responsive Design",
+        "Dark Mode Support",
+        "SEO Optimized",
+        "Fast Performance",
+        "Modern UI Components",
+        "Easy Customization"
+      ],
+      "ru": [
+        "Адаптивный дизайн",
+        "Поддержка темной темы",
+        "SEO оптимизация",
+        "Быстрая производительность",
+        "Современные UI компоненты",
+        "Легкая настройка"
+      ]
+    },
+    "bestFor": {
+      "en": [
+        "Professionals",
+        "Businesses",
+        "Freelancers",
+        "Agencies"
+      ],
+      "ru": [
+        "Профессионалы",
+        "Бизнес",
+        "Фрилансеры",
+        "Агентства"
+      ]
+    },
+    "colorScheme": {
+      "primary": "#1F2937",
+      "secondary": "#F3F4F6",
+      "accent": "#3B82F6"
+    },
+    "price": 69
+  },
+  "product-audio": {
+    "longDescription": "Professional Product Audio template with modern design and powerful features. Perfect for creating engaging, conversion-optimized experiences that stand out.",
+    "whatsIncluded": {
+      "en": [
+        "Responsive Design",
+        "Dark Mode Support",
+        "SEO Optimized",
+        "Fast Performance",
+        "Modern UI Components",
+        "Easy Customization"
+      ],
+      "ru": [
+        "Адаптивный дизайн",
+        "Поддержка темной темы",
+        "SEO оптимизация",
+        "Быстрая производительность",
+        "Современные UI компоненты",
+        "Легкая настройка"
+      ]
+    },
+    "bestFor": {
+      "en": [
+        "Professionals",
+        "Businesses",
+        "Freelancers",
+        "Agencies"
+      ],
+      "ru": [
+        "Профессионалы",
+        "Бизнес",
+        "Фрилансеры",
+        "Агентства"
+      ]
+    },
+    "colorScheme": {
+      "primary": "#1F2937",
+      "secondary": "#F3F4F6",
+      "accent": "#3B82F6"
+    },
+    "price": 69
+  },
+  "product-vacuum": {
+    "longDescription": "Professional Product Vacuum template with modern design and powerful features. Perfect for creating engaging, conversion-optimized experiences that stand out.",
+    "whatsIncluded": {
+      "en": [
+        "Responsive Design",
+        "Dark Mode Support",
+        "SEO Optimized",
+        "Fast Performance",
+        "Modern UI Components",
+        "Easy Customization"
+      ],
+      "ru": [
+        "Адаптивный дизайн",
+        "Поддержка темной темы",
+        "SEO оптимизация",
+        "Быстрая производительность",
+        "Современные UI компоненты",
+        "Легкая настройка"
+      ]
+    },
+    "bestFor": {
+      "en": [
+        "Professionals",
+        "Businesses",
+        "Freelancers",
+        "Agencies"
+      ],
+      "ru": [
+        "Профессионалы",
+        "Бизнес",
+        "Фрилансеры",
+        "Агентства"
+      ]
+    },
+    "colorScheme": {
+      "primary": "#1F2937",
+      "secondary": "#F3F4F6",
+      "accent": "#3B82F6"
+    },
+    "price": 69
+  },
+  "service-b2b": {
+    "longDescription": "Professional Service B2b template with modern design and powerful features. Perfect for creating engaging, conversion-optimized experiences that stand out.",
+    "whatsIncluded": {
+      "en": [
+        "Responsive Design",
+        "Dark Mode Support",
+        "SEO Optimized",
+        "Fast Performance",
+        "Modern UI Components",
+        "Easy Customization"
+      ],
+      "ru": [
+        "Адаптивный дизайн",
+        "Поддержка темной темы",
+        "SEO оптимизация",
+        "Быстрая производительность",
+        "Современные UI компоненты",
+        "Легкая настройка"
+      ]
+    },
+    "bestFor": {
+      "en": [
+        "Professionals",
+        "Businesses",
+        "Freelancers",
+        "Agencies"
+      ],
+      "ru": [
+        "Профессионалы",
+        "Бизнес",
+        "Фрилансеры",
+        "Агентства"
+      ]
+    },
+    "colorScheme": {
+      "primary": "#1F2937",
+      "secondary": "#F3F4F6",
+      "accent": "#3B82F6"
+    },
+    "price": 69
+  },
+  "service-community": {
+    "longDescription": "Professional Service Community template with modern design and powerful features. Perfect for creating engaging, conversion-optimized experiences that stand out.",
+    "whatsIncluded": {
+      "en": [
+        "Responsive Design",
+        "Dark Mode Support",
+        "SEO Optimized",
+        "Fast Performance",
+        "Modern UI Components",
+        "Easy Customization"
+      ],
+      "ru": [
+        "Адаптивный дизайн",
+        "Поддержка темной темы",
+        "SEO оптимизация",
+        "Быстрая производительность",
+        "Современные UI компоненты",
+        "Легкая настройка"
+      ]
+    },
+    "bestFor": {
+      "en": [
+        "Professionals",
+        "Businesses",
+        "Freelancers",
+        "Agencies"
+      ],
+      "ru": [
+        "Профессионалы",
+        "Бизнес",
+        "Фрилансеры",
+        "Агентства"
+      ]
+    },
+    "colorScheme": {
+      "primary": "#1F2937",
+      "secondary": "#F3F4F6",
+      "accent": "#3B82F6"
+    },
+    "price": 69
+  },
+  "service-dfyou": {
+    "longDescription": "Professional Service Dfyou template with modern design and powerful features. Perfect for creating engaging, conversion-optimized experiences that stand out.",
+    "whatsIncluded": {
+      "en": [
+        "Responsive Design",
+        "Dark Mode Support",
+        "SEO Optimized",
+        "Fast Performance",
+        "Modern UI Components",
+        "Easy Customization"
+      ],
+      "ru": [
+        "Адаптивный дизайн",
+        "Поддержка темной темы",
+        "SEO оптимизация",
+        "Быстрая производительность",
+        "Современные UI компоненты",
+        "Легкая настройка"
+      ]
+    },
+    "bestFor": {
+      "en": [
+        "Professionals",
+        "Businesses",
+        "Freelancers",
+        "Agencies"
+      ],
+      "ru": [
+        "Профессионалы",
+        "Бизнес",
+        "Фрилансеры",
+        "Агентства"
+      ]
+    },
+    "colorScheme": {
+      "primary": "#1F2937",
+      "secondary": "#F3F4F6",
+      "accent": "#3B82F6"
+    },
+    "price": 69
+  },
+  "service-agency": {
+    "longDescription": "Professional Service Agency template with modern design and powerful features. Perfect for creating engaging, conversion-optimized experiences that stand out.",
+    "whatsIncluded": {
+      "en": [
+        "Responsive Design",
+        "Dark Mode Support",
+        "SEO Optimized",
+        "Fast Performance",
+        "Modern UI Components",
+        "Easy Customization"
+      ],
+      "ru": [
+        "Адаптивный дизайн",
+        "Поддержка темной темы",
+        "SEO оптимизация",
+        "Быстрая производительность",
+        "Современные UI компоненты",
+        "Легкая настройка"
+      ]
+    },
+    "bestFor": {
+      "en": [
+        "Professionals",
+        "Businesses",
+        "Freelancers",
+        "Agencies"
+      ],
+      "ru": [
+        "Профессионалы",
+        "Бизнес",
+        "Фрилансеры",
+        "Агентства"
+      ]
+    },
+    "colorScheme": {
+      "primary": "#1F2937",
+      "secondary": "#F3F4F6",
+      "accent": "#3B82F6"
+    },
+    "price": 69
+  },
+  "service-enterprise": {
+    "longDescription": "Professional Service Enterprise template with modern design and powerful features. Perfect for creating engaging, conversion-optimized experiences that stand out.",
+    "whatsIncluded": {
+      "en": [
+        "Responsive Design",
+        "Dark Mode Support",
+        "SEO Optimized",
+        "Fast Performance",
+        "Modern UI Components",
+        "Easy Customization"
+      ],
+      "ru": [
+        "Адаптивный дизайн",
+        "Поддержка темной темы",
+        "SEO оптимизация",
+        "Быстрая производительность",
+        "Современные UI компоненты",
+        "Легкая настройка"
+      ]
+    },
+    "bestFor": {
+      "en": [
+        "Professionals",
+        "Businesses",
+        "Freelancers",
+        "Agencies"
+      ],
+      "ru": [
+        "Профессионалы",
+        "Бизнес",
+        "Фрилансеры",
+        "Агентства"
+      ]
+    },
+    "colorScheme": {
+      "primary": "#1F2937",
+      "secondary": "#F3F4F6",
+      "accent": "#3B82F6"
+    },
+    "price": 69
+  },
+  "service-consulting": {
+    "longDescription": "Professional Service Consulting template with modern design and powerful features. Perfect for creating engaging, conversion-optimized experiences that stand out.",
+    "whatsIncluded": {
+      "en": [
+        "Responsive Design",
+        "Dark Mode Support",
+        "SEO Optimized",
+        "Fast Performance",
+        "Modern UI Components",
+        "Easy Customization"
+      ],
+      "ru": [
+        "Адаптивный дизайн",
+        "Поддержка темной темы",
+        "SEO оптимизация",
+        "Быстрая производительность",
+        "Современные UI компоненты",
+        "Легкая настройка"
+      ]
+    },
+    "bestFor": {
+      "en": [
+        "Professionals",
+        "Businesses",
+        "Freelancers",
+        "Agencies"
+      ],
+      "ru": [
+        "Профессионалы",
+        "Бизнес",
+        "Фрилансеры",
+        "Агентства"
+      ]
+    },
+    "colorScheme": {
+      "primary": "#1F2937",
+      "secondary": "#F3F4F6",
+      "accent": "#3B82F6"
+    },
+    "price": 69
+  },
+  "blog-tech": {
+    "longDescription": "Professional Blog Tech template with modern design and powerful features. Perfect for creating engaging, conversion-optimized experiences that stand out.",
+    "whatsIncluded": {
+      "en": [
+        "Responsive Design",
+        "Dark Mode Support",
+        "SEO Optimized",
+        "Fast Performance",
+        "Modern UI Components",
+        "Easy Customization"
+      ],
+      "ru": [
+        "Адаптивный дизайн",
+        "Поддержка темной темы",
+        "SEO оптимизация",
+        "Быстрая производительность",
+        "Современные UI компоненты",
+        "Легкая настройка"
+      ]
+    },
+    "bestFor": {
+      "en": [
+        "Professionals",
+        "Businesses",
+        "Freelancers",
+        "Agencies"
+      ],
+      "ru": [
+        "Профессионалы",
+        "Бизнес",
+        "Фрилансеры",
+        "Агентства"
+      ]
+    },
+    "colorScheme": {
+      "primary": "#1F2937",
+      "secondary": "#F3F4F6",
+      "accent": "#3B82F6"
+    },
+    "price": 69
+  },
+  "blog-archetypes-minimal": {
+    "longDescription": "Professional Blog Archetypes Minimal template with modern design and powerful features. Perfect for creating engaging, conversion-optimized experiences that stand out.",
+    "whatsIncluded": {
+      "en": [
+        "Responsive Design",
+        "Dark Mode Support",
+        "SEO Optimized",
+        "Fast Performance",
+        "Modern UI Components",
+        "Easy Customization"
+      ],
+      "ru": [
+        "Адаптивный дизайн",
+        "Поддержка темной темы",
+        "SEO оптимизация",
+        "Быстрая производительность",
+        "Современные UI компоненты",
+        "Легкая настройка"
+      ]
+    },
+    "bestFor": {
+      "en": [
+        "Professionals",
+        "Businesses",
+        "Freelancers",
+        "Agencies"
+      ],
+      "ru": [
+        "Профессионалы",
+        "Бизнес",
+        "Фрилансеры",
+        "Агентства"
+      ]
+    },
+    "colorScheme": {
+      "primary": "#1F2937",
+      "secondary": "#F3F4F6",
+      "accent": "#3B82F6"
+    },
+    "price": 69
+  },
+  "blog-archetypes-editorial": {
+    "longDescription": "Professional Blog Archetypes Editorial template with modern design and powerful features. Perfect for creating engaging, conversion-optimized experiences that stand out.",
+    "whatsIncluded": {
+      "en": [
+        "Responsive Design",
+        "Dark Mode Support",
+        "SEO Optimized",
+        "Fast Performance",
+        "Modern UI Components",
+        "Easy Customization"
+      ],
+      "ru": [
+        "Адаптивный дизайн",
+        "Поддержка темной темы",
+        "SEO оптимизация",
+        "Быстрая производительность",
+        "Современные UI компоненты",
+        "Легкая настройка"
+      ]
+    },
+    "bestFor": {
+      "en": [
+        "Professionals",
+        "Businesses",
+        "Freelancers",
+        "Agencies"
+      ],
+      "ru": [
+        "Профессионалы",
+        "Бизнес",
+        "Фрилансеры",
+        "Агентства"
+      ]
+    },
+    "colorScheme": {
+      "primary": "#1F2937",
+      "secondary": "#F3F4F6",
+      "accent": "#3B82F6"
+    },
+    "price": 69
+  },
+  "lin-portfolio-elegance": {
+    "longDescription": "Professional Lin Portfolio Elegance template with modern design and powerful features. Perfect for creating engaging, conversion-optimized experiences that stand out.",
+    "whatsIncluded": {
+      "en": [
+        "Responsive Design",
+        "Dark Mode Support",
+        "SEO Optimized",
+        "Fast Performance",
+        "Modern UI Components",
+        "Easy Customization"
+      ],
+      "ru": [
+        "Адаптивный дизайн",
+        "Поддержка темной темы",
+        "SEO оптимизация",
+        "Быстрая производительность",
+        "Современные UI компоненты",
+        "Легкая настройка"
+      ]
+    },
+    "bestFor": {
+      "en": [
+        "Professionals",
+        "Businesses",
+        "Freelancers",
+        "Agencies"
+      ],
+      "ru": [
+        "Профессионалы",
+        "Бизнес",
+        "Фрилансеры",
+        "Агентства"
+      ]
+    },
+    "colorScheme": {
+      "primary": "#1F2937",
+      "secondary": "#F3F4F6",
+      "accent": "#3B82F6"
+    },
+    "price": 69
+  },
+  "lin-professional-authority": {
+    "longDescription": "Professional Lin Professional Authority template with modern design and powerful features. Perfect for creating engaging, conversion-optimized experiences that stand out.",
+    "whatsIncluded": {
+      "en": [
+        "Responsive Design",
+        "Dark Mode Support",
+        "SEO Optimized",
+        "Fast Performance",
+        "Modern UI Components",
+        "Easy Customization"
+      ],
+      "ru": [
+        "Адаптивный дизайн",
+        "Поддержка темной темы",
+        "SEO оптимизация",
+        "Быстрая производительность",
+        "Современные UI компоненты",
+        "Легкая настройка"
+      ]
+    },
+    "bestFor": {
+      "en": [
+        "Professionals",
+        "Businesses",
+        "Freelancers",
+        "Agencies"
+      ],
+      "ru": [
+        "Профессионалы",
+        "Бизнес",
+        "Фрилансеры",
+        "Агентства"
+      ]
+    },
+    "colorScheme": {
+      "primary": "#1F2937",
+      "secondary": "#F3F4F6",
+      "accent": "#3B82F6"
+    },
+    "price": 69
+  },
+  "lin-tech-pioneer": {
+    "longDescription": "Professional Lin Tech Pioneer template with modern design and powerful features. Perfect for creating engaging, conversion-optimized experiences that stand out.",
+    "whatsIncluded": {
+      "en": [
+        "Responsive Design",
+        "Dark Mode Support",
+        "SEO Optimized",
+        "Fast Performance",
+        "Modern UI Components",
+        "Easy Customization"
+      ],
+      "ru": [
+        "Адаптивный дизайн",
+        "Поддержка темной темы",
+        "SEO оптимизация",
+        "Быстрая производительность",
+        "Современные UI компоненты",
+        "Легкая настройка"
+      ]
+    },
+    "bestFor": {
+      "en": [
+        "Professionals",
+        "Businesses",
+        "Freelancers",
+        "Agencies"
+      ],
+      "ru": [
+        "Профессионалы",
+        "Бизнес",
+        "Фрилансеры",
+        "Агентства"
+      ]
+    },
+    "colorScheme": {
+      "primary": "#1F2937",
+      "secondary": "#F3F4F6",
+      "accent": "#3B82F6"
+    },
+    "price": 69
+  },
+  "online-business-coach": {
+    "longDescription": "Professional Online Business Coach template with modern design and powerful features. Perfect for creating engaging, conversion-optimized experiences that stand out.",
+    "whatsIncluded": {
+      "en": [
+        "Responsive Design",
+        "Dark Mode Support",
+        "SEO Optimized",
+        "Fast Performance",
+        "Modern UI Components",
+        "Easy Customization"
+      ],
+      "ru": [
+        "Адаптивный дизайн",
+        "Поддержка темной темы",
+        "SEO оптимизация",
+        "Быстрая производительность",
+        "Современные UI компоненты",
+        "Легкая настройка"
+      ]
+    },
+    "bestFor": {
+      "en": [
+        "Professionals",
+        "Businesses",
+        "Freelancers",
+        "Agencies"
+      ],
+      "ru": [
+        "Профессионалы",
+        "Бизнес",
+        "Фрилансеры",
+        "Агентства"
+      ]
+    },
+    "colorScheme": {
+      "primary": "#1F2937",
+      "secondary": "#F3F4F6",
+      "accent": "#3B82F6"
+    },
+    "price": 69
+  },
+  "online-business-course": {
+    "longDescription": "Professional Online Business Course template with modern design and powerful features. Perfect for creating engaging, conversion-optimized experiences that stand out.",
+    "whatsIncluded": {
+      "en": [
+        "Responsive Design",
+        "Dark Mode Support",
+        "SEO Optimized",
+        "Fast Performance",
+        "Modern UI Components",
+        "Easy Customization"
+      ],
+      "ru": [
+        "Адаптивный дизайн",
+        "Поддержка темной темы",
+        "SEO оптимизация",
+        "Быстрая производительность",
+        "Современные UI компоненты",
+        "Легкая настройка"
+      ]
+    },
+    "bestFor": {
+      "en": [
+        "Professionals",
+        "Businesses",
+        "Freelancers",
+        "Agencies"
+      ],
+      "ru": [
+        "Профессионалы",
+        "Бизнес",
+        "Фрилансеры",
+        "Агентства"
+      ]
+    },
+    "colorScheme": {
+      "primary": "#1F2937",
+      "secondary": "#F3F4F6",
+      "accent": "#3B82F6"
+    },
+    "price": 69
+  },
+  "online-business-agency": {
+    "longDescription": "Professional Online Business Agency template with modern design and powerful features. Perfect for creating engaging, conversion-optimized experiences that stand out.",
+    "whatsIncluded": {
+      "en": [
+        "Responsive Design",
+        "Dark Mode Support",
+        "SEO Optimized",
+        "Fast Performance",
+        "Modern UI Components",
+        "Easy Customization"
+      ],
+      "ru": [
+        "Адаптивный дизайн",
+        "Поддержка темной темы",
+        "SEO оптимизация",
+        "Быстрая производительность",
+        "Современные UI компоненты",
+        "Легкая настройка"
+      ]
+    },
+    "bestFor": {
+      "en": [
+        "Professionals",
+        "Businesses",
+        "Freelancers",
+        "Agencies"
+      ],
+      "ru": [
+        "Профессионалы",
+        "Бизнес",
+        "Фрилансеры",
+        "Агентства"
+      ]
+    },
+    "colorScheme": {
+      "primary": "#1F2937",
+      "secondary": "#F3F4F6",
+      "accent": "#3B82F6"
+    },
+    "price": 69
+  },
+  "online-business-saas": {
+    "longDescription": "Professional Online Business Saas template with modern design and powerful features. Perfect for creating engaging, conversion-optimized experiences that stand out.",
+    "whatsIncluded": {
+      "en": [
+        "Responsive Design",
+        "Dark Mode Support",
+        "SEO Optimized",
+        "Fast Performance",
+        "Modern UI Components",
+        "Easy Customization"
+      ],
+      "ru": [
+        "Адаптивный дизайн",
+        "Поддержка темной темы",
+        "SEO оптимизация",
+        "Быстрая производительность",
+        "Современные UI компоненты",
+        "Легкая настройка"
+      ]
+    },
+    "bestFor": {
+      "en": [
+        "Professionals",
+        "Businesses",
+        "Freelancers",
+        "Agencies"
+      ],
+      "ru": [
+        "Профессионалы",
+        "Бизнес",
+        "Фрилансеры",
+        "Агентства"
+      ]
+    },
+    "colorScheme": {
+      "primary": "#1F2937",
+      "secondary": "#F3F4F6",
+      "accent": "#3B82F6"
+    },
+    "price": 69
+  },
+  "saas-feature-rich": {
+    "longDescription": "Professional Saas Feature Rich template with modern design and powerful features. Perfect for creating engaging, conversion-optimized experiences that stand out.",
+    "whatsIncluded": {
+      "en": [
+        "Responsive Design",
+        "Dark Mode Support",
+        "SEO Optimized",
+        "Fast Performance",
+        "Modern UI Components",
+        "Easy Customization"
+      ],
+      "ru": [
+        "Адаптивный дизайн",
+        "Поддержка темной темы",
+        "SEO оптимизация",
+        "Быстрая производительность",
+        "Современные UI компоненты",
+        "Легкая настройка"
+      ]
+    },
+    "bestFor": {
+      "en": [
+        "Professionals",
+        "Businesses",
+        "Freelancers",
+        "Agencies"
+      ],
+      "ru": [
+        "Профессионалы",
+        "Бизнес",
+        "Фрилансеры",
+        "Агентства"
+      ]
+    },
+    "colorScheme": {
+      "primary": "#1F2937",
+      "secondary": "#F3F4F6",
+      "accent": "#3B82F6"
+    },
+    "price": 69
+  },
+  "personal-brand": {
+    "longDescription": "Professional Personal Brand template with modern design and powerful features. Perfect for creating engaging, conversion-optimized experiences that stand out.",
+    "whatsIncluded": {
+      "en": [
+        "Responsive Design",
+        "Dark Mode Support",
+        "SEO Optimized",
+        "Fast Performance",
+        "Modern UI Components",
+        "Easy Customization"
+      ],
+      "ru": [
+        "Адаптивный дизайн",
+        "Поддержка темной темы",
+        "SEO оптимизация",
+        "Быстрая производительность",
+        "Современные UI компоненты",
+        "Легкая настройка"
+      ]
+    },
+    "bestFor": {
+      "en": [
+        "Professionals",
+        "Businesses",
+        "Freelancers",
+        "Agencies"
+      ],
+      "ru": [
+        "Профессионалы",
+        "Бизнес",
+        "Фрилансеры",
+        "Агентства"
+      ]
+    },
+    "colorScheme": {
+      "primary": "#1F2937",
+      "secondary": "#F3F4F6",
+      "accent": "#3B82F6"
+    },
+    "price": 69
+  },
+  "experimental-3d": {
+    "longDescription": "Professional Experimental 3d template with modern design and powerful features. Perfect for creating engaging, conversion-optimized experiences that stand out.",
+    "whatsIncluded": {
+      "en": [
+        "Responsive Design",
+        "Dark Mode Support",
+        "SEO Optimized",
+        "Fast Performance",
+        "Modern UI Components",
+        "Easy Customization"
+      ],
+      "ru": [
+        "Адаптивный дизайн",
+        "Поддержка темной темы",
+        "SEO оптимизация",
+        "Быстрая производительность",
+        "Современные UI компоненты",
+        "Легкая настройка"
+      ]
+    },
+    "bestFor": {
+      "en": [
+        "Professionals",
+        "Businesses",
+        "Freelancers",
+        "Agencies"
+      ],
+      "ru": [
+        "Профессионалы",
+        "Бизнес",
+        "Фрилансеры",
+        "Агентства"
+      ]
+    },
+    "colorScheme": {
+      "primary": "#1F2937",
+      "secondary": "#F3F4F6",
+      "accent": "#3B82F6"
+    },
+    "price": 69
+  },
+  "interactive-agency": {
+    "longDescription": "Professional Interactive Agency template with modern design and powerful features. Perfect for creating engaging, conversion-optimized experiences that stand out.",
+    "whatsIncluded": {
+      "en": [
+        "Responsive Design",
+        "Dark Mode Support",
+        "SEO Optimized",
+        "Fast Performance",
+        "Modern UI Components",
+        "Easy Customization"
+      ],
+      "ru": [
+        "Адаптивный дизайн",
+        "Поддержка темной темы",
+        "SEO оптимизация",
+        "Быстрая производительность",
+        "Современные UI компоненты",
+        "Легкая настройка"
+      ]
+    },
+    "bestFor": {
+      "en": [
+        "Professionals",
+        "Businesses",
+        "Freelancers",
+        "Agencies"
+      ],
+      "ru": [
+        "Профессионалы",
+        "Бизнес",
+        "Фрилансеры",
+        "Агентства"
+      ]
+    },
+    "colorScheme": {
+      "primary": "#1F2937",
+      "secondary": "#F3F4F6",
+      "accent": "#3B82F6"
+    },
+    "price": 69
+  },
+  "luxury-minimal": {
+    "longDescription": "Professional Luxury Minimal template with modern design and powerful features. Perfect for creating engaging, conversion-optimized experiences that stand out.",
+    "whatsIncluded": {
+      "en": [
+        "Responsive Design",
+        "Dark Mode Support",
+        "SEO Optimized",
+        "Fast Performance",
+        "Modern UI Components",
+        "Easy Customization"
+      ],
+      "ru": [
+        "Адаптивный дизайн",
+        "Поддержка темной темы",
+        "SEO оптимизация",
+        "Быстрая производительность",
+        "Современные UI компоненты",
+        "Легкая настройка"
+      ]
+    },
+    "bestFor": {
+      "en": [
+        "Professionals",
+        "Businesses",
+        "Freelancers",
+        "Agencies"
+      ],
+      "ru": [
+        "Профессионалы",
+        "Бизнес",
+        "Фрилансеры",
+        "Агентства"
+      ]
+    },
+    "colorScheme": {
+      "primary": "#1F2937",
+      "secondary": "#F3F4F6",
+      "accent": "#3B82F6"
+    },
+    "price": 69
+  },
+  "photography-immersive": {
+    "longDescription": "Professional Photography Immersive template with modern design and powerful features. Perfect for creating engaging, conversion-optimized experiences that stand out.",
+    "whatsIncluded": {
+      "en": [
+        "Responsive Design",
+        "Dark Mode Support",
+        "SEO Optimized",
+        "Fast Performance",
+        "Modern UI Components",
+        "Easy Customization"
+      ],
+      "ru": [
+        "Адаптивный дизайн",
+        "Поддержка темной темы",
+        "SEO оптимизация",
+        "Быстрая производительность",
+        "Современные UI компоненты",
+        "Легкая настройка"
+      ]
+    },
+    "bestFor": {
+      "en": [
+        "Professionals",
+        "Businesses",
+        "Freelancers",
+        "Agencies"
+      ],
+      "ru": [
+        "Профессионалы",
+        "Бизнес",
+        "Фрилансеры",
+        "Агентства"
+      ]
+    },
+    "colorScheme": {
+      "primary": "#1F2937",
+      "secondary": "#F3F4F6",
+      "accent": "#3B82F6"
+    },
+    "price": 69
+  },
+  "motion-designer": {
+    "longDescription": "Professional Motion Designer template with modern design and powerful features. Perfect for creating engaging, conversion-optimized experiences that stand out.",
+    "whatsIncluded": {
+      "en": [
+        "Responsive Design",
+        "Dark Mode Support",
+        "SEO Optimized",
+        "Fast Performance",
+        "Modern UI Components",
+        "Easy Customization"
+      ],
+      "ru": [
+        "Адаптивный дизайн",
+        "Поддержка темной темы",
+        "SEO оптимизация",
+        "Быстрая производительность",
+        "Современные UI компоненты",
+        "Легкая настройка"
+      ]
+    },
+    "bestFor": {
+      "en": [
+        "Professionals",
+        "Businesses",
+        "Freelancers",
+        "Agencies"
+      ],
+      "ru": [
+        "Профессионалы",
+        "Бизнес",
+        "Фрилансеры",
+        "Агентства"
+      ]
+    },
+    "colorScheme": {
+      "primary": "#1F2937",
+      "secondary": "#F3F4F6",
+      "accent": "#3B82F6"
+    },
+    "price": 69
+  }
+}

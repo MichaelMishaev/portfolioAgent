@@ -272,7 +272,7 @@ export function PhotographyImmersiveTemplate() {
                   {portfolioData.bio}
                 </p>
                 <div className="space-y-4 text-sm text-white/60">
-                  {portfolioData.awards.map((award, index) => (
+                  {portfolioData.awards?.items?.map((award, index) => (
                     <div key={index} className="border-l-2 border-white/20 pl-4">
                       <div className="font-medium text-white/90">{award.title}</div>
                       <div>{award.year} • {award.organization}</div>

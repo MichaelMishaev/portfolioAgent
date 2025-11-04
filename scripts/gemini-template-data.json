@@ -1,0 +1,152 @@
+[
+  {
+    "template": {
+      "id": "minimalist",
+      "name": "Minimalist Portfolio",
+      "description": "\"Minimalist Portfolio\" offers a clean, sophisticated stage for your work with its ample white space, elegant sans-serif typography, and subtle gray accents. The grid-based layout showcases your best projects in a visually striking manner, while a focused navigation system ensures a seamless user experience. This template empowers creatives to present their skills with clarity and confidence, making a strong, lasting impression.\n",
+      "category": "Portfolio"
+    },
+    "colors": {
+      "primary": "#FAFAFA",
+      "secondary": "#212121",
+      "accent": "#007BFF"
+    },
+    "imageCommand": "convert -size 1200x800 gradient:'#FAFAFA'-'#212121'     -gravity center     -font Arial -pointsize 60 -fill white -stroke black -strokewidth 2     -annotate +0-50 \"Minimalist Portfolio\"     -pointsize 30     -annotate +0+50 \"Portfolio\"     \"/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/minimalist-1.png\"",
+    "outputPath": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/minimalist-1.png"
+  },
+  {
+    "template": {
+      "id": "dark-mode",
+      "name": "Dark Mode Cinematic",
+      "description": "\"Dark Mode Cinematic\" plunges viewers into a world of sleek, noir-inspired visuals with its deep blacks, subtle gradients, and bold, cinematic typography. The layout emphasizes large, impactful imagery and video, perfect for portfolios aiming to evoke a sense of drama, sophistication, and leave a lasting impression. It’s designed to make your creative work feel like a premiere event.\n",
+      "category": "Portfolio"
+    },
+    "colors": {
+      "primary": "#121212",
+      "secondary": "#2E2E2E",
+      "accent": "#E0A800"
+    },
+    "imageCommand": "convert -size 1200x800 gradient:'#121212'-'#2E2E2E'     -gravity center     -font Arial -pointsize 60 -fill white -stroke black -strokewidth 2     -annotate +0-50 \"Dark Mode Cinematic\"     -pointsize 30     -annotate +0+50 \"Portfolio\"     \"/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/dark-mode-1.png\"",
+    "outputPath": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/dark-mode-1.png"
+  },
+  {
+    "template": {
+      "id": "grid-masonry",
+      "name": "Grid & Masonry",
+      "description": "\"Grid & Masonry\" offers a visually dynamic portfolio layout with clean, sans-serif typography against a backdrop of modern, muted tones. The template's flexible grid and asymmetrical masonry blocks showcase projects in an engaging, personalized way. It inspires confidence and creativity, perfect for designers and artists who want to display their work with a modern and sophisticated edge.\n",
+      "category": "Portfolio"
+    },
+    "colors": {
+      "primary": "#264653",
+      "secondary": "#2A9D8F",
+      "accent": "#E9C46A"
+    },
+    "imageCommand": "convert -size 1200x800 gradient:'#264653'-'#2A9D8F'     -gravity center     -font Arial -pointsize 60 -fill white -stroke black -strokewidth 2     -annotate +0-50 \"Grid & Masonry\"     -pointsize 30     -annotate +0+50 \"Portfolio\"     \"/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/grid-masonry-1.png\"",
+    "outputPath": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/grid-masonry-1.png"
+  },
+  {
+    "template": {
+      "id": "bold-typography",
+      "name": "Bold Typography",
+      "description": "\"Bold Typography\" showcases your work with impactful, oversized fonts against a clean, minimal background of stark whites and deep blacks. Geometric layouts and sharp lines draw immediate attention, creating a sophisticated and confident portfolio. This template makes a powerful statement, ideal for designers and creatives who want to project a cutting-edge and authoritative presence.\n",
+      "category": "Portfolio"
+    },
+    "colors": {
+      "primary": "#264653",
+      "secondary": "#E9C46A",
+      "accent": "#E76F51"
+    },
+    "imageCommand": "convert -size 1200x800 gradient:'#264653'-'#E9C46A'     -gravity center     -font Arial -pointsize 60 -fill white -stroke black -strokewidth 2     -annotate +0-50 \"Bold Typography\"     -pointsize 30     -annotate +0+50 \"Portfolio\"     \"/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/bold-typography-1.png\"",
+    "outputPath": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/bold-typography-1.png"
+  },
+  {
+    "template": {
+      "id": "fullscreen-immersive",
+      "name": "Fullscreen Immersive",
+      "description": "Fullscreen Immersive features bold typography splashed across striking, full-bleed imagery, immediately captivating the viewer. Clean lines and a minimalist navigation let the showcased work breathe, drawing you into each project. Designed for artists and creatives who want to leave a lasting impression, this template offers a sense of awe and professional sophistication.\n",
+      "category": "Portfolio"
+    },
+    "colors": {
+      "primary": "#22223B",
+      "secondary": "#F2E9E4",
+      "accent": "#9A8C98"
+    },
+    "imageCommand": "convert -size 1200x800 gradient:'#22223B'-'#F2E9E4'     -gravity center     -font Arial -pointsize 60 -fill white -stroke black -strokewidth 2     -annotate +0-50 \"Fullscreen Immersive\"     -pointsize 30     -annotate +0+50 \"Portfolio\"     \"/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/fullscreen-immersive-1.png\"",
+    "outputPath": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/fullscreen-immersive-1.png"
+  },
+  {
+    "template": {
+      "id": "startup-pitch",
+      "name": "Startup Pitch",
+      "description": "Startup Pitch boasts a clean, modern design with bold typography and a vibrant accent color against a professional, dark background, creating a confident and dynamic first impression. Geometric shapes and strategic use of whitespace guide the eye through key information, perfect for presenting a compelling narrative. The layout inspires trust and innovation, making investors feel excited about the future.\n",
+      "category": "Business"
+    },
+    "colors": {
+      "primary": "#2563EB",
+      "secondary": "#10B981",
+      "accent": "#F59E0B"
+    },
+    "imageCommand": "convert -size 1200x800 gradient:'#2563EB'-'#10B981'     -gravity center     -font Arial -pointsize 60 -fill white -stroke black -strokewidth 2     -annotate +0-50 \"Startup Pitch\"     -pointsize 30     -annotate +0+50 \"Business\"     \"/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/startup-pitch-1.png\"",
+    "outputPath": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/startup-pitch-1.png"
+  },
+  {
+    "template": {
+      "id": "photography-immersive",
+      "name": "Photography Immersive",
+      "description": "A portfolio template with modern design",
+      "category": "Portfolio"
+    },
+    "colors": {
+      "primary": "#2563EB",
+      "secondary": "#10B981",
+      "accent": "#F59E0B"
+    },
+    "imageCommand": "convert -size 1200x800 gradient:'#2563EB'-'#10B981'     -gravity center     -font Arial -pointsize 60 -fill white -stroke black -strokewidth 2     -annotate +0-50 \"Photography Immersive\"     -pointsize 30     -annotate +0+50 \"Portfolio\"     \"/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/photography-immersive-1.png\"",
+    "outputPath": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/photography-immersive-1.png"
+  },
+  {
+    "template": {
+      "id": "saas-feature-rich",
+      "name": "SaaS Feature Rich",
+      "description": "A product template with modern design",
+      "category": "Product"
+    },
+    "colors": {
+      "primary": "#2563EB",
+      "secondary": "#10B981",
+      "accent": "#F59E0B"
+    },
+    "imageCommand": "convert -size 1200x800 gradient:'#2563EB'-'#10B981'     -gravity center     -font Arial -pointsize 60 -fill white -stroke black -strokewidth 2     -annotate +0-50 \"SaaS Feature Rich\"     -pointsize 30     -annotate +0+50 \"Product\"     \"/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/saas-feature-rich-1.png\"",
+    "outputPath": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/saas-feature-rich-1.png"
+  },
+  {
+    "template": {
+      "id": "neo-brutalist",
+      "name": "Neo Brutalist",
+      "description": "A portfolio template with modern design",
+      "category": "Portfolio"
+    },
+    "colors": {
+      "primary": "#2563EB",
+      "secondary": "#10B981",
+      "accent": "#F59E0B"
+    },
+    "imageCommand": "convert -size 1200x800 gradient:'#2563EB'-'#10B981'     -gravity center     -font Arial -pointsize 60 -fill white -stroke black -strokewidth 2     -annotate +0-50 \"Neo Brutalist\"     -pointsize 30     -annotate +0+50 \"Portfolio\"     \"/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/neo-brutalist-1.png\"",
+    "outputPath": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/neo-brutalist-1.png"
+  },
+  {
+    "template": {
+      "id": "glassmorphism-modern",
+      "name": "Glassmorphism Modern",
+      "description": "A portfolio template with modern design",
+      "category": "Portfolio"
+    },
+    "colors": {
+      "primary": "#2563EB",
+      "secondary": "#10B981",
+      "accent": "#F59E0B"
+    },
+    "imageCommand": "convert -size 1200x800 gradient:'#2563EB'-'#10B981'     -gravity center     -font Arial -pointsize 60 -fill white -stroke black -strokewidth 2     -annotate +0-50 \"Glassmorphism Modern\"     -pointsize 30     -annotate +0+50 \"Portfolio\"     \"/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/glassmorphism-modern-1.png\"",
+    "outputPath": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/glassmorphism-modern-1.png"
+  }
+]

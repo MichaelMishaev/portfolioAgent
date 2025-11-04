@@ -1,6 +1,6 @@
 "use client";
 
-import { Suspense } from "react";
+import { Suspense, useState, useEffect } from "react";
 import { TemplateGallery } from "@/components/template-gallery";
 import { ErrorBoundary } from "@/components/error-boundary";
 import { Header } from "@/components/shared/header";
@@ -9,8 +9,8 @@ import { MobileBottomNav } from "@/components/shared/mobile-bottom-nav";
 import { ScrollToTop } from "@/components/shared/scroll-to-top";
 import { useI18n } from "@/lib/i18n-context";
 import { Button } from "@/components/ui/button";
-import { motion } from "framer-motion";
-import { FiGrid, FiZap, FiLayers, FiCode, FiTrendingUp, FiCheck, FiMail, FiGithub, FiLinkedin, FiTwitter } from "react-icons/fi";
+import { motion, AnimatePresence } from "framer-motion";
+import { FiGrid, FiZap, FiLayers, FiCode, FiTrendingUp, FiCheck, FiMail, FiGithub, FiLinkedin, FiTwitter, FiChevronDown, FiChevronUp, FiFolder } from "react-icons/fi";
 import Link from "next/link";
 import { HowItWorksModal } from "@/components/how-it-works-modal";
 import { HelpCenter } from "@/components/help-center";
@@ -22,12 +22,28 @@ function HowItWorksModalWrapper() {
 
 export default function Home() {
   const { t, language } = useI18n();
+  const [isHowItWorksExpanded, setIsHowItWorksExpanded] = useState(true);
+
+  // Load saved state from localStorage
+  useEffect(() => {
+    const saved = localStorage.getItem('howItWorksExpanded');
+    if (saved !== null) {
+      setIsHowItWorksExpanded(saved === 'true');
+    }
+  }, []);
+
+  // Save state to localStorage
+  const toggleHowItWorks = () => {
+    const newState = !isHowItWorksExpanded;
+    setIsHowItWorksExpanded(newState);
+    localStorage.setItem('howItWorksExpanded', String(newState));
+  };
 
   const stats = [
-    { value: "39+", label: t.homepage.stats.templates },
-    { value: "9", label: t.homepage.stats.categories },
-    { value: "100%", label: t.homepage.stats.responsive },
-    { value: "Free", label: t.homepage.stats.openSource }
+    { value: "39+", label: t.homepage.stats.templates, icon: <FiLayers className="w-6 h-6 sm:w-8 sm:h-8" /> },
+    { value: "9", label: t.homepage.stats.categories, icon: <FiFolder className="w-6 h-6 sm:w-8 sm:h-8" /> },
+    { value: "100%", label: t.homepage.stats.responsive, icon: <FiCheck className="w-6 h-6 sm:w-8 sm:h-8" /> },
+    { value: "Free", label: t.homepage.stats.openSource, icon: <FiZap className="w-6 h-6 sm:w-8 sm:h-8" /> }
   ];
 
   const features = [
@@ -67,100 +83,56 @@ export default function Home() {
     <main className="min-h-screen pb-20 md:pb-0">
       <Header />
 
-      {/* Hero Section - Compact */}
-      <section className="relative overflow-hidden">
-        {/* Optimized Background Image - Local */}
-        <picture className="absolute inset-0">
-          <source srcSet="/hero-bg.webp" type="image/webp" />
-          <img
-            src="/hero-bg.png"
-            alt=""
-            className="absolute inset-0 w-full h-full object-cover"
-            loading="eager"
-            fetchPriority="high"
-          />
-        </picture>
-        {/* Overlay for better text readability */}
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/70 via-purple-900/70 to-pink-900/70 dark:from-blue-950/80 dark:via-purple-950/80 dark:to-pink-950/80" />
+      {/* Hero Section - Ultra Minimal */}
+      <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50 dark:from-slate-950 dark:via-blue-950 dark:to-purple-950">
+        {/* Subtle animated background pattern */}
+        <div className="absolute inset-0 bg-grid-slate-200/50 dark:bg-grid-slate-800/50 [mask-image:linear-gradient(0deg,transparent,black)]" />
 
-        <div className="relative container mx-auto px-4 sm:px-6 py-8 sm:py-12 md:py-16">
+        <div className="relative container mx-auto px-4 sm:px-6 py-16 sm:py-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="text-center max-w-4xl mx-auto"
+            transition={{ duration: 0.6 }}
+            className="text-center max-w-5xl mx-auto"
           >
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.4, delay: 0.1 }}
-              className="inline-flex items-center gap-2 bg-blue-500/20 backdrop-blur-sm border border-blue-300/30 text-blue-100 px-3 py-1.5 rounded-full text-xs sm:text-sm font-medium mb-4"
-            >
-              <FiZap className="w-3.5 h-3.5" />
-              {t.homepage.hero.badge}
-            </motion.div>
-
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-3 sm:mb-4 leading-tight text-white">
-              {t.homepage.hero.title}{" "}
-              <span className="text-blue-300">
-                {t.homepage.hero.titleGradient}
+            {/* Title */}
+            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black mb-8 leading-[1.1] tracking-tight">
+              <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+                {language === 'en' ? 'Professional' : 'Профессиональные'}
               </span>
-              {" "}{t.homepage.hero.titleEnd}
+              <br />
+              <span className="text-slate-900 dark:text-slate-100">
+                {language === 'en' ? 'Portfolio Templates' : 'Шаблоны Портфолио'}
+              </span>
             </h1>
 
-            <p className="text-base sm:text-lg md:text-xl text-white/90 max-w-2xl mx-auto mb-6 sm:mb-8 leading-relaxed px-2">
-              {t.homepage.hero.subtitle}
+            {/* Description */}
+            <p className="text-xl sm:text-2xl md:text-3xl text-slate-600 dark:text-slate-400 max-w-4xl mx-auto leading-relaxed">
+              {language === 'en'
+                ? 'Choose from 39+ ready-to-use templates. Customize in minutes, launch in hours.'
+                : 'Выберите из 39+ готовых шаблонов. Настройте за минуты, запустите за часы.'}
             </p>
-
-            <div className="flex flex-col sm:flex-row gap-3 justify-center items-center mb-4 sm:mb-6 px-4">
-              <Button size="lg" className="text-base px-6 py-6 h-auto min-h-[48px] touch-manipulation shadow-lg hover:shadow-xl" asChild>
-                <a href="#templates">
-                  {t.homepage.hero.ctaExplore}
-                  <FiGrid className="ml-2 w-4 h-4" />
-                </a>
-              </Button>
-              <Button size="lg" variant="outline" className="text-base px-6 py-6 h-auto min-h-[48px] touch-manipulation" asChild>
-                <a href="#contact">
-                  {t.homepage.hero.ctaDemo}
-                  <FiMail className="ml-2 w-4 h-4" />
-                </a>
-              </Button>
-            </div>
-
-            {/* How It Works Button */}
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              className="flex justify-center mb-8 sm:mb-10 px-4"
-            >
-              <HowItWorksModalWrapper />
-            </motion.div>
-
-            {/* Stats - Compact */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="grid grid-cols-4 gap-3 sm:gap-6 max-w-3xl mx-auto px-4"
-            >
-              {stats.map((stat, index) => (
-                <div key={index} className="text-center">
-                  <div className="text-xl sm:text-2xl md:text-3xl font-bold text-blue-300 mb-0.5 sm:mb-1">
-                    {stat.value}
-                  </div>
-                  <div className="text-[10px] sm:text-xs md:text-sm text-white/70 font-medium leading-tight">
-                    {stat.label}
-                  </div>
-                </div>
-              ))}
-            </motion.div>
           </motion.div>
         </div>
+
+        {/* Scroll indicator */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1, duration: 0.5 }}
+          className="absolute bottom-8 left-1/2 -translate-x-1/2"
+        >
+          <a href="#templates" className="flex flex-col items-center gap-2 text-slate-400 hover:text-blue-600 transition-colors group">
+            <span className="text-xs uppercase tracking-wider font-semibold">
+              {language === 'en' ? 'Scroll to explore' : 'Прокрутите вниз'}
+            </span>
+            <FiChevronDown className="w-6 h-6 animate-bounce group-hover:text-blue-600" />
+          </a>
+        </motion.div>
       </section>
 
       {/* How It Works - Visual Flow Section */}
-      <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 dark:from-blue-950/20 dark:via-purple-950/20 dark:to-pink-950/20">
+      <section id="how-it-works" className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 dark:from-blue-950/20 dark:via-purple-950/20 dark:to-pink-950/20">
         <div className="container mx-auto px-4 sm:px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -169,12 +141,25 @@ export default function Home() {
             transition={{ duration: 0.5 }}
             className="text-center mb-8 sm:mb-12"
           >
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 sm:mb-3 px-2">
-              {language === 'en' ? 'How It ' : 'Как это '}
-              <span className="text-blue-600 dark:text-blue-400">
-                {language === 'en' ? 'Works' : 'работает'}
-              </span>
-            </h2>
+            <div className="flex items-center justify-center gap-3 mb-2 sm:mb-3">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold px-2">
+                {language === 'en' ? 'How It ' : 'Как это '}
+                <span className="text-blue-600 dark:text-blue-400">
+                  {language === 'en' ? 'Works' : 'работает'}
+                </span>
+              </h2>
+              <button
+                onClick={toggleHowItWorks}
+                className="p-2 rounded-full hover:bg-blue-100 dark:hover:bg-blue-900/30 transition-colors"
+                aria-label={isHowItWorksExpanded ? (language === 'en' ? 'Minimize section' : 'Свернуть раздел') : (language === 'en' ? 'Expand section' : 'Развернуть раздел')}
+              >
+                {isHowItWorksExpanded ? (
+                  <FiChevronUp className="w-6 h-6 sm:w-8 sm:h-8 text-blue-600 dark:text-blue-400" />
+                ) : (
+                  <FiChevronDown className="w-6 h-6 sm:w-8 sm:h-8 text-blue-600 dark:text-blue-400" />
+                )}
+              </button>
+            </div>
             <p className="text-sm sm:text-base md:text-lg text-foreground/70 max-w-2xl mx-auto px-2">
               {language === 'en'
                 ? 'Create your professional portfolio website in 4 simple steps'
@@ -182,8 +167,16 @@ export default function Home() {
             </p>
           </motion.div>
 
-          {/* Visual Workflow */}
-          <div className="max-w-5xl mx-auto">
+          {/* Visual Workflow - Collapsible */}
+          <AnimatePresence>
+            {isHowItWorksExpanded && (
+              <motion.div
+                initial={{ opacity: 0, height: 0 }}
+                animate={{ opacity: 1, height: "auto" }}
+                exit={{ opacity: 0, height: 0 }}
+                transition={{ duration: 0.3 }}
+                className="max-w-5xl mx-auto overflow-hidden"
+              >
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
               {/* Step 1 */}
               <motion.div
@@ -434,7 +427,9 @@ export default function Home() {
                 </div>
               </div>
             </motion.div>
-          </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
       </section>
 
@@ -449,13 +444,15 @@ export default function Home() {
             className="text-center mb-6 sm:mb-8"
           >
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 sm:mb-3 px-2">
-              {t.homepage.gallery.title}{" "}
+              {language === 'en' ? 'Browse ' : 'Просмотрите '}
               <span className="text-blue-600 dark:text-blue-400">
-                {t.homepage.gallery.titleGradient}
+                {language === 'en' ? 'All Templates' : 'все шаблоны'}
               </span>
             </h2>
             <p className="text-sm sm:text-base md:text-lg text-foreground/70 max-w-2xl mx-auto px-2">
-              {t.homepage.gallery.subtitle}
+              {language === 'en'
+                ? 'Filter by category, style, and features to find the perfect template for your needs'
+                : 'Фильтруйте по категории, стилю и функциям, чтобы найти идеальный шаблон'}
             </p>
           </motion.div>
 

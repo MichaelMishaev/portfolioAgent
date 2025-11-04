@@ -9,6 +9,7 @@ import { FiMail, FiInstagram, FiTwitter, FiMenu, FiX, FiArrowRight, FiZap, FiHea
 import { ThemeToggle } from "@/components/theme-toggle";
 import { LanguageToggle } from "@/components/language-toggle";
 import Link from "next/link";
+import Image from "next/image";
 import { useI18n } from "@/lib/i18n-context";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import { CustomizeTemplateButton } from "@/components/customize-template-button";
@@ -249,11 +250,20 @@ export function CreativeAgencyBoldTemplate() {
                   }}
                 >
                   <div className="bg-gradient-to-br from-blue-100 via-purple-100 to-pink-100 rounded-2xl shadow-[0_8px_30px_rgba(0,0,0,0.12),0_16px_60px_rgba(0,0,0,0.15)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.3)] h-96 flex items-center justify-center relative overflow-hidden group cursor-pointer transition-all duration-500">
-                    <div className="text-8xl text-blue-600/20 group-hover:scale-110 transition-transform duration-500">
-                      <FiStar />
-                    </div>
+                    {project.image ? (
+                      <Image
+                        src={project.image}
+                        alt={project.title}
+                        fill
+                        className="object-cover group-hover:scale-110 transition-transform duration-500"
+                      />
+                    ) : (
+                      <div className="text-8xl text-blue-600/20 group-hover:scale-110 transition-transform duration-500">
+                        <FiStar />
+                      </div>
+                    )}
                     {/* Shine effect */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 z-10" />
                     {/* Gradient border glow */}
                     <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
                          style={{
