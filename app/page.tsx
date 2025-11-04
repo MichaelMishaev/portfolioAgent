@@ -210,7 +210,7 @@ export default function Home() {
                 </div>
               </motion.div>
 
-              {/* Step 2 - REDESIGNED WITH VISUAL EXAMPLE */}
+              {/* Step 2: View Details */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -218,86 +218,26 @@ export default function Home() {
                 transition={{ duration: 0.4, delay: 0.2 }}
                 className="relative"
               >
-                <div className="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-2 border-2 border-purple-200 dark:border-purple-800">
-                  {/* Step Number */}
-                  <div className="absolute -top-4 -left-4 w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">
+                <div className="bg-white dark:bg-gray-800 p-4 sm:p-5 rounded-2xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-2 border-2 border-purple-200 dark:border-purple-800 h-full">
+                  <div className="absolute -top-3 -left-3 w-10 h-10 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg">
                     2
                   </div>
-
-                  {/* Title (Simplified) */}
-                  <h3 className="text-lg font-bold mb-3 text-center">
-                    {language === 'en' ? 'Arrange Your Sections' : 'Расставьте секции'}
+                  <div className="text-5xl mb-3 text-center">👁️</div>
+                  <h3 className="text-base font-bold mb-2 text-center">
+                    {language === 'en' ? 'View Details' : 'Просмотрите детали'}
                   </h3>
-
-                  {/* Visual Mini-Diagram */}
-                  <div className="bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 rounded-xl p-4 mb-4">
-                    <div className="flex items-center justify-center gap-3 sm:gap-4">
-                      {/* BEFORE */}
-                      <div className="flex flex-col gap-1.5 sm:gap-2">
-                        <div className="text-[10px] font-semibold text-center text-purple-600 dark:text-purple-400 mb-1">
-                          {language === 'en' ? 'Before' : 'До'}
-                        </div>
-                        <div className="flex items-center gap-1 sm:gap-1.5 bg-white dark:bg-gray-700 rounded px-1.5 sm:px-2 py-1 sm:py-1.5 text-[9px] sm:text-[10px] shadow-sm">
-                          <span className="text-gray-400">⋮⋮</span>
-                          <span className="font-medium">Hero</span>
-                        </div>
-                        <div className="flex items-center gap-1 sm:gap-1.5 bg-white dark:bg-gray-700 rounded px-1.5 sm:px-2 py-1 sm:py-1.5 text-[9px] sm:text-[10px] shadow-sm">
-                          <span className="text-gray-400">⋮⋮</span>
-                          <span className="font-medium">{language === 'en' ? 'About' : 'О нас'}</span>
-                        </div>
-                        <div className="flex items-center gap-1 sm:gap-1.5 bg-yellow-100 dark:bg-yellow-900/30 rounded px-1.5 sm:px-2 py-1 sm:py-1.5 text-[9px] sm:text-[10px] shadow-sm border-2 border-yellow-400">
-                          <span className="text-gray-400">⋮⋮</span>
-                          <span className="font-medium">{language === 'en' ? 'Pricing' : 'Цены'}</span>
-                        </div>
-                        <div className="flex items-center gap-1 sm:gap-1.5 bg-white dark:bg-gray-700 rounded px-1.5 sm:px-2 py-1 sm:py-1.5 text-[9px] sm:text-[10px] shadow-sm">
-                          <span className="text-gray-400">⋮⋮</span>
-                          <span className="font-medium">FAQ</span>
-                        </div>
-                      </div>
-
-                      {/* ARROW */}
-                      <div className="text-xl sm:text-2xl text-purple-500 font-bold">→</div>
-
-                      {/* AFTER */}
-                      <div className="flex flex-col gap-1.5 sm:gap-2">
-                        <div className="text-[10px] font-semibold text-center text-purple-600 dark:text-purple-400 mb-1">
-                          {language === 'en' ? 'After' : 'После'}
-                        </div>
-                        <div className="flex items-center gap-1 sm:gap-1.5 bg-white dark:bg-gray-700 rounded px-1.5 sm:px-2 py-1 sm:py-1.5 text-[9px] sm:text-[10px] shadow-sm">
-                          <span className="text-gray-400">⋮⋮</span>
-                          <span className="font-medium">Hero</span>
-                        </div>
-                        <div className="flex items-center gap-1 sm:gap-1.5 bg-green-100 dark:bg-green-900/30 rounded px-1.5 sm:px-2 py-1 sm:py-1.5 text-[9px] sm:text-[10px] shadow-sm border-2 border-green-400">
-                          <span className="text-gray-400">⋮⋮</span>
-                          <span className="font-medium">{language === 'en' ? 'Pricing' : 'Цены'}</span>
-                          <span className="text-green-600 text-sm">⬆</span>
-                        </div>
-                        <div className="flex items-center gap-1 sm:gap-1.5 bg-white dark:bg-gray-700 rounded px-1.5 sm:px-2 py-1 sm:py-1.5 text-[9px] sm:text-[10px] shadow-sm">
-                          <span className="text-gray-400">⋮⋮</span>
-                          <span className="font-medium">{language === 'en' ? 'About' : 'О нас'}</span>
-                        </div>
-                        <div className="flex items-center gap-1 sm:gap-1.5 bg-white dark:bg-gray-700 rounded px-1.5 sm:px-2 py-1 sm:py-1.5 text-[9px] sm:text-[10px] shadow-sm">
-                          <span className="text-gray-400">⋮⋮</span>
-                          <span className="font-medium">FAQ</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Simple Description */}
-                  <p className="text-xs sm:text-sm text-foreground/70 text-center leading-relaxed">
+                  <p className="text-xs text-foreground/70 text-center leading-relaxed">
                     {language === 'en'
-                      ? 'Drag sections up & down. Put pricing after hero, FAQ at bottom - your choice!'
-                      : 'Перетаскивайте секции вверх и вниз. Цены после hero, FAQ внизу - ваш выбор!'}
+                      ? 'See features, screenshots, and pricing'
+                      : 'Посмотрите функции, скриншоты и цены'}
                   </p>
                 </div>
-                {/* Arrow (Desktop only) */}
-                <div className="hidden lg:block absolute top-1/2 -right-6 transform -translate-y-1/2 text-purple-400 text-4xl z-10">
+                <div className="hidden lg:block absolute top-1/2 -right-4 transform -translate-y-1/2 text-purple-400 text-3xl z-10">
                   →
                 </div>
               </motion.div>
 
-              {/* Step 3 */}
+              {/* Step 3: Checkout & Pay */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -305,53 +245,71 @@ export default function Home() {
                 transition={{ duration: 0.4, delay: 0.3 }}
                 className="relative"
               >
-                <div className="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-2 border-2 border-pink-200 dark:border-pink-800">
-                  {/* Step Number */}
-                  <div className="absolute -top-4 -left-4 w-12 h-12 bg-gradient-to-br from-pink-500 to-pink-600 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">
+                <div className="bg-white dark:bg-gray-800 p-4 sm:p-5 rounded-2xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-2 border-2 border-pink-200 dark:border-pink-800 h-full">
+                  <div className="absolute -top-3 -left-3 w-10 h-10 bg-gradient-to-br from-pink-500 to-pink-600 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg">
                     3
                   </div>
-                  {/* Icon */}
-                  <div className="text-6xl mb-4 text-center">📱</div>
-                  {/* Title */}
-                  <h3 className="text-lg font-bold mb-2 text-center">
-                    {language === 'en' ? 'Send via Telegram' : 'Отправьте в Telegram'}
+                  <div className="text-5xl mb-3 text-center">💳</div>
+                  <h3 className="text-base font-bold mb-2 text-center">
+                    {language === 'en' ? 'Checkout & Pay' : 'Оформите и оплатите'}
                   </h3>
-                  {/* Description */}
-                  <p className="text-sm text-foreground/70 text-center">
+                  <p className="text-xs text-foreground/70 text-center leading-relaxed">
                     {language === 'en'
-                      ? 'Save your design and send it to us via Telegram - simple and instant'
-                      : 'Сохраните дизайн и отправьте нам через Telegram - просто и мгновенно'}
+                      ? 'Buy template + add Content Maker (optional)'
+                      : 'Купите шаблон + добавьте Content Maker (опция)'}
                   </p>
                 </div>
-                {/* Arrow (Desktop only) */}
-                <div className="hidden lg:block absolute top-1/2 -right-6 transform -translate-y-1/2 text-pink-400 text-4xl z-10">
+                <div className="hidden lg:block absolute top-1/2 -right-4 transform -translate-y-1/2 text-pink-400 text-3xl z-10">
                   →
                 </div>
               </motion.div>
 
-              {/* Step 4 */}
+              {/* Step 4: Download */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: 0.4 }}
+                className="relative"
               >
-                <div className="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-2 border-2 border-green-200 dark:border-green-800">
-                  {/* Step Number */}
-                  <div className="absolute -top-4 -left-4 w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">
+                <div className="bg-white dark:bg-gray-800 p-4 sm:p-5 rounded-2xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-2 border-2 border-orange-200 dark:border-orange-800 h-full">
+                  <div className="absolute -top-3 -left-3 w-10 h-10 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg">
                     4
                   </div>
-                  {/* Icon */}
-                  <div className="text-6xl mb-4 text-center">🚀</div>
-                  {/* Title */}
-                  <h3 className="text-lg font-bold mb-2 text-center">
-                    {language === 'en' ? 'Get Your Site ASAP' : 'Получите сайт быстро'}
+                  <div className="text-5xl mb-3 text-center">📥</div>
+                  <h3 className="text-base font-bold mb-2 text-center">
+                    {language === 'en' ? 'Download Files' : 'Скачайте файлы'}
                   </h3>
-                  {/* Description */}
-                  <p className="text-sm text-foreground/70 text-center">
+                  <p className="text-xs text-foreground/70 text-center leading-relaxed">
                     {language === 'en'
-                      ? 'We build your professional site based on your design and deliver it ready to launch'
-                      : 'Мы создадим профессиональный сайт по вашему дизайну и доставим готовым к запуску'}
+                      ? 'Get template files instantly after payment'
+                      : 'Получите файлы шаблона сразу после оплаты'}
+                  </p>
+                </div>
+                <div className="hidden lg:block absolute top-1/2 -right-4 transform -translate-y-1/2 text-orange-400 text-3xl z-10">
+                  →
+                </div>
+              </motion.div>
+
+              {/* Step 5: Get Site Live */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: 0.5 }}
+              >
+                <div className="bg-white dark:bg-gray-800 p-4 sm:p-5 rounded-2xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-2 border-2 border-green-200 dark:border-green-800 h-full">
+                  <div className="absolute -top-3 -left-3 w-10 h-10 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg">
+                    5
+                  </div>
+                  <div className="text-5xl mb-3 text-center">🚀</div>
+                  <h3 className="text-base font-bold mb-2 text-center">
+                    {language === 'en' ? 'Get Site Live' : 'Запустите сайт'}
+                  </h3>
+                  <p className="text-xs text-foreground/70 text-center leading-relaxed">
+                    {language === 'en'
+                      ? 'Add hosting, domain, installation services'
+                      : 'Добавьте хостинг, домен, услуги установки'}
                   </p>
                 </div>
               </motion.div>
@@ -371,55 +329,55 @@ export default function Home() {
                 </div>
                 <div>
                   <h3 className="text-xl font-bold mb-2">
-                    {language === 'en' ? 'What does "Build Your Flow" mean?' : 'Что значит "Создайте структуру"?'}
+                    {language === 'en' ? 'Fast & Complete Solution' : 'Быстрое и полное решение'}
                   </h3>
                   <p className="text-foreground/70 mb-4">
                     {language === 'en'
-                      ? 'In the builder, you don\'t write code - you decide the structure of your website:'
-                      : 'В конструкторе вы не пишете код - вы определяете структуру вашего сайта:'}
+                      ? 'Get your professional website live in minutes with our marketplace approach:'
+                      : 'Запустите свой профессиональный сайт за минуты с нашим маркетплейс подходом:'}
                   </p>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
                     <div className="flex items-start gap-2">
-                      <span className="text-lg">📍</span>
+                      <span className="text-lg">⚡</span>
                       <div>
-                        <strong>{language === 'en' ? 'Reorder sections:' : 'Переставьте секции:'}</strong>
+                        <strong>{language === 'en' ? 'Instant Download:' : 'Мгновенная загрузка:'}</strong>
                         <p className="text-foreground/60">
                           {language === 'en'
-                            ? 'Want pricing after hero? Or FAQ at the end? You decide!'
-                            : 'Хотите цены после hero? Или FAQ в конце? Вы решаете!'}
+                            ? 'Get template files immediately after purchase'
+                            : 'Получите файлы шаблона сразу после покупки'}
                         </p>
                       </div>
                     </div>
                     <div className="flex items-start gap-2">
-                      <span className="text-lg">➕</span>
+                      <span className="text-lg">🛠️</span>
                       <div>
-                        <strong>{language === 'en' ? 'Add/Remove:' : 'Добавить/Удалить:'}</strong>
+                        <strong>{language === 'en' ? 'Optional Services:' : 'Дополнительные услуги:'}</strong>
                         <p className="text-foreground/60">
                           {language === 'en'
-                            ? 'Need testimonials? Gallery? Skills section? Add them!'
-                            : 'Нужны отзывы? Галерея? Секция навыков? Добавьте их!'}
-                        </p>
-                      </div>
-                    </div>
-                    <div className="flex items-start gap-2">
-                      <span className="text-lg">🎯</span>
-                      <div>
-                        <strong>{language === 'en' ? 'Your order:' : 'Ваш порядок:'}</strong>
-                        <p className="text-foreground/60">
-                          {language === 'en'
-                            ? 'Hero → About → Pricing → FAQ or Hero → Pricing → Gallery → Contact'
-                            : 'Hero → О нас → Цены → FAQ или Hero → Цены → Галерея → Контакты'}
+                            ? 'Add hosting, domain, installation, or branding'
+                            : 'Добавьте хостинг, домен, установку или брендинг'}
                         </p>
                       </div>
                     </div>
                     <div className="flex items-start gap-2">
                       <span className="text-lg">🎨</span>
                       <div>
-                        <strong>{language === 'en' ? 'We handle:' : 'Мы обработаем:'}</strong>
+                        <strong>{language === 'en' ? 'Advanced Builder:' : 'Расширенный конструктор:'}</strong>
                         <p className="text-foreground/60">
                           {language === 'en'
-                            ? 'Design, code, optimization - you just decide the flow!'
-                            : 'Дизайн, код, оптимизацию - вы просто определяете структуру!'}
+                            ? 'Optional tool for advanced users to customize layout'
+                            : 'Опциональный инструмент для продвинутых пользователей'}
+                        </p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-2">
+                      <span className="text-lg">✅</span>
+                      <div>
+                        <strong>{language === 'en' ? 'Ready to Use:' : 'Готово к использованию:'}</strong>
+                        <p className="text-foreground/60">
+                          {language === 'en'
+                            ? 'All templates are production-ready and optimized'
+                            : 'Все шаблоны готовы к работе и оптимизированы'}
                         </p>
                       </div>
                     </div>

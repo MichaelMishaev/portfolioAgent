@@ -154,11 +154,11 @@ export function TemplateDetailView({ template }: TemplateDetailViewProps) {
             </div>
 
             {/* CTA Buttons - Hidden on mobile (lg:hidden), visible on desktop (lg:flex) */}
-            <div className="hidden lg:flex flex-col gap-3 mb-8">
+            <div className="hidden lg:flex flex-col gap-4 mb-8">
               <Button
                 asChild
                 size="lg"
-                className="h-14 text-base font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 hover:from-blue-700 hover:via-purple-700 hover:to-pink-700 shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300"
+                className="h-14 text-base font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 hover:from-blue-700 hover:via-purple-700 hover:to-pink-700 shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300 rounded-xl"
               >
                 <Link href={`/templates/${template.id}/builder`} className="flex items-center justify-center gap-2.5">
                   <FiEdit3 className="w-5 h-5" />
@@ -170,7 +170,7 @@ export function TemplateDetailView({ template }: TemplateDetailViewProps) {
                 asChild
                 size="lg"
                 variant="outline"
-                className="h-14 text-base font-semibold border-2 hover:bg-accent/50"
+                className="h-14 text-base font-semibold border-2 hover:bg-accent/50 rounded-xl"
               >
                 <Link href={`/templates/${template.id}/demo`} className="flex items-center justify-center gap-2.5">
                   <FiEye className="w-5 h-5" />
@@ -182,10 +182,10 @@ export function TemplateDetailView({ template }: TemplateDetailViewProps) {
             <Button
               asChild
               size="lg"
-              className="hidden lg:block w-full h-14 text-base font-bold bg-gray-900 hover:bg-gray-800 dark:bg-gray-50 dark:hover:bg-gray-200 dark:text-gray-900"
+              className="hidden lg:flex w-full h-16 text-lg font-bold bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white shadow-xl hover:shadow-2xl hover:scale-[1.03] transition-all duration-300 rounded-xl"
             >
-              <Link href={`/checkout/${template.id}`} className="flex items-center justify-center gap-2.5">
-                <FiShoppingCart className="w-5 h-5" />
+              <Link href={`/checkout/${template.id}`} className="flex items-center justify-center gap-3">
+                <FiShoppingCart className="w-6 h-6" />
                 <span>{language === 'en' ? `Buy Now - $${template.price}` : `Купить - $${template.price}`}</span>
               </Link>
             </Button>
@@ -408,6 +408,7 @@ export function TemplateDetailView({ template }: TemplateDetailViewProps) {
       {/* Sticky Bottom Bar (Mobile) */}
       <div className="fixed bottom-0 left-0 right-0 z-50 lg:hidden bg-background/95 backdrop-blur-sm border-t shadow-2xl">
         <div className="p-3">
+          {/* Price and Buy Button Row */}
           <div className="flex items-center justify-between gap-3 mb-3">
             <div>
               <div className="text-2xl font-bold">${template.price}</div>
@@ -415,21 +416,26 @@ export function TemplateDetailView({ template }: TemplateDetailViewProps) {
                 {language === 'en' ? 'one-time' : 'один раз'}
               </div>
             </div>
-            <Button asChild size="sm" className="bg-gray-900 hover:bg-gray-800 dark:bg-gray-50 dark:hover:bg-gray-200 dark:text-gray-900 h-10 px-4">
+            <Button
+              asChild
+              className="bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white shadow-lg hover:shadow-xl h-11 px-5 font-bold rounded-lg"
+            >
               <Link href={`/checkout/${template.id}`} className="flex items-center gap-2">
                 <FiShoppingCart className="w-4 h-4" />
-                <span className="font-semibold">{language === 'en' ? 'Buy' : 'Купить'}</span>
+                <span>{language === 'en' ? `Buy Now - $${template.price}` : `Купить - $${template.price}`}</span>
               </Link>
             </Button>
           </div>
+
+          {/* Builder and Demo Buttons Row */}
           <div className="grid grid-cols-2 gap-2">
-            <Button asChild variant="outline" size="sm" className="h-10">
+            <Button asChild variant="outline" size="sm" className="h-10 border-2">
               <Link href={`/templates/${template.id}/builder`} className="flex items-center justify-center gap-1.5">
                 <FiEdit3 className="w-4 h-4" />
                 <span className="text-xs font-semibold">{language === 'en' ? 'Builder' : 'Билдер'}</span>
               </Link>
             </Button>
-            <Button asChild variant="outline" size="sm" className="h-10">
+            <Button asChild variant="outline" size="sm" className="h-10 border-2">
               <Link href={`/templates/${template.id}/demo`} className="flex items-center justify-center gap-1.5">
                 <FiEye className="w-4 h-4" />
                 <span className="text-xs font-semibold">{language === 'en' ? 'Demo' : 'Демо'}</span>

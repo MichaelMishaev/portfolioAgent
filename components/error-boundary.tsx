@@ -1,8 +1,7 @@
 "use client";
 
 import { Component, ReactNode } from "react";
-import { FiAlertTriangle, FiRefreshCw } from "react-icons/fi";
-import { Button } from "@/components/ui/button";
+import { ErrorBoundaryContent } from "./error-boundary-content";
 
 interface Props {
   children: ReactNode;
@@ -35,23 +34,13 @@ export class ErrorBoundary extends Component<Props, State> {
       }
 
       return (
-        <div className="flex flex-col items-center justify-center min-h-[400px] p-8 text-center">
-          <FiAlertTriangle className="w-16 h-16 text-amber-500 mb-4" />
-          <h2 className="text-2xl font-bold mb-2">Something went wrong</h2>
-          <p className="text-foreground/70 mb-6 max-w-md">
-            {this.state.error?.message || "An unexpected error occurred. Please try again."}
-          </p>
-          <Button
-            onClick={() => {
-              this.setState({ hasError: false, error: undefined });
-              window.location.reload();
-            }}
-            className="gap-2"
-          >
-            <FiRefreshCw className="w-4 h-4" />
-            Reload Page
-          </Button>
-        </div>
+        <ErrorBoundaryContent
+          error={this.state.error}
+          onReset={() => {
+            this.setState({ hasError: false, error: undefined });
+            window.location.reload();
+          }}
+        />
       );
     }
 

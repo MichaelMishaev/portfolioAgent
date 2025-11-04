@@ -357,7 +357,7 @@ export function ServiceMarketplaceTemplate() {
               </p>
               <Button
                 size="lg"
-                className="bg-white text-green-600 hover:bg-green-50 px-8 py-6 text-lg font-semibold"
+                className="bg-white !text-green-600 hover:bg-green-50 hover:!text-green-700 px-8 py-6 text-lg font-semibold"
               >
                 {portfolioData.cta?.button || "Create Free Account"} <FiArrowRight className="ml-2" />
               </Button>
