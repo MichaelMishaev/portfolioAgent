@@ -513,4 +513,26 @@ Below is a **comprehensive design breakdown of 20 portfolio website template sty
 
 ---
 
-Would you like me to **compile these into a structured table (with color palette hex codes and suggested font pairings)** so you can design each one easily in Figma or Webflow?
+After payment (on the Thank-You / Post-Purchase screen), your system shows a curated list of upsell offers — everything that can be added after buying the template.
+Here’s the complete and organized list from your v2 spec 👇
+🧾 Post-Purchase Offers (after payment)
+Priority	Offer	Type	Typical Price	Short Explanation
+1️⃣ Hosting Service	Subscription (monthly)	$5 – $19 / month	“We’ll host your website on secure servers so it’s always live — no setup needed.”	
+2️⃣ Domain Assistance	One-time	~$10	“We’ll help you choose, register, and connect a domain like yourbrand.com.”	
+3️⃣ Installation & Launch	One-time	$29 – $49	“We’ll install your template, connect hosting + domain, and launch your site within 24 hours.”	
+4️⃣ Admin Panel Service	One-time	$99	“Get a private dashboard to edit texts & images without touching code.”	
+5️⃣ Branding Pack	One-time	$19 – $39	“We’ll design a simple logo + color palette that matches your new site.”	
+6️⃣ Stock Image Pack	One-time	$15 – $25	“We’ll fill your pages with professional, license-free images that fit your business.”	
+7️⃣ Security & Backup Plan	Subscription	$5 – $9 / month	“Daily backups + malware protection to keep your site safe.”	
+8️⃣ Maintenance Plan	Subscription	$9 – $19 / month	“We’ll update plugins, monitor performance, and keep everything running smoothly.”	
+💬 Simple Explanations (shown in the UI)
+Hosting → “Your website’s home on the internet — we’ll keep it online 24/7.”
+Domain → “Your web address — like mybusiness.com.”
+Installation & Launch → “We’ll do all setup for you; get a live website fast.”
+Admin Panel → “Edit your content anytime without coding.”
+Branding Pack → “Professional logo and colors matched to your template.”
+Stock Images → “Ready-made visuals so your site looks complete instantly.”
+Security / Maintenance → “Peace of mind — your site stays safe, fast, and up to date.”
+📈 Offer Timing
+Immediately after checkout: Hosting, Domain, Installation, Admin Panel, Branding, Images
+Later (email follow-ups): Security & Backup, Maintenance Plan

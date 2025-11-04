@@ -15,7 +15,6 @@ import {
   FiMessageCircle,
   FiEye,
   FiFolder,
-  FiEdit3,
   FiSearch,
   FiX,
 } from "react-icons/fi";
@@ -450,27 +449,16 @@ export function TemplateGallery() {
                   </div>
                 </div>
 
-                {/* CTA Buttons - View Details & Try Builder */}
-                <div className="mt-auto grid grid-cols-2 gap-3">
+                {/* CTA Button - Try It */}
+                <div className="mt-auto">
                   <Button
                     asChild
-                    className="h-11 text-sm font-semibold bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 hover:from-blue-700 hover:via-purple-700 hover:to-pink-700 shadow-lg hover:shadow-xl transition-all duration-300"
-                    size="default"
+                    className="w-full h-12 text-base font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 hover:from-blue-700 hover:via-purple-700 hover:to-pink-700 shadow-lg hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 rounded-xl"
+                    size="lg"
                   >
-                    <Link href={`/templates/${template.id}`} onClick={handleTemplateClick} className="flex items-center justify-center gap-2">
-                      <FiEye className="h-4 w-4" />
-                      {language === 'en' ? 'View Details' : 'Подробнее'}
-                    </Link>
-                  </Button>
-                  <Button
-                    asChild
-                    variant="outline"
-                    className="h-11 text-sm font-semibold border-2 hover:bg-accent"
-                    size="default"
-                  >
-                    <Link href={`/templates/${template.id}/builder`} onClick={handleTemplateClick} className="flex items-center justify-center gap-2">
-                      <FiEdit3 className="h-4 w-4" />
-                      {language === 'en' ? 'Try Builder' : 'Конструктор'}
+                    <Link href={`/templates/${template.id}`} onClick={handleTemplateClick} className="flex items-center justify-center gap-2.5">
+                      <FiEye className="h-5 w-5" />
+                      <span>{t.ui.tryIt}</span>
                     </Link>
                   </Button>
                 </div>
