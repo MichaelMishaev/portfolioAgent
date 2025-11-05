@@ -23,7 +23,7 @@ export const placeholderImages = {
     mobile2: 'https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800&h=600&fit=crop',
     design1: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&h=600&fit=crop',
     design2: 'https://images.unsplash.com/photo-1558655146-364adaf1fcc9?w=800&h=600&fit=crop',
-    dashboard: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop',
+    dashboard: '/images/dashboard-hero.png',
     ecommerce: 'https://images.unsplash.com/photo-1472851294608-062f824d29cc?w=800&h=600&fit=crop',
     branding: 'https://images.unsplash.com/photo-1561070791-36c11767b26a?w=800&h=600&fit=crop',
   },
