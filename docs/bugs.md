@@ -2613,8 +2613,124 @@ Together, Bugs #15-#17 represent a **comprehensive mobile visibility overhaul** 
 
 **Last Updated**: 2025-11-05
 **Updated By**: Claude AI Assistant
-**Status**: ✅ All 61 templates complete + 17 critical bugs fixed!
+**Status**: ✅ All 61 templates complete + 18 critical bugs fixed!
 **Template Success Rate**: 100% (61/61 templates loading successfully)
-**Latest Fix**: SYSTEMATIC - Invisible text across 213 headings in 31 templates (50% of site)
-**Major Milestone**: Complete mobile visibility overhaul (Bugs #15-#17) affecting 82% of templates
+**Latest Fix**: Replaced ugly dashboard image with AI-generated professional version (Bug #18)
+**Major Milestone**: Complete mobile visibility overhaul (Bugs #15-#17) + visual quality improvements
+
+
+## Bug #18: Ugly Dashboard Image in Startup-Pitch Template
+
+**Date Discovered**: 2025-11-05  
+**Severity**: Medium - Visual Quality  
+**Status**: ✅ FIXED  
+**Affected Template**: startup-pitch  
+**Fix Commit**: e2fb75f  
+
+### Problem Description
+
+The startup-pitch template hero section displayed a low-quality, generic Unsplash dashboard image that looked unprofessional and did not match the high-quality aesthetic of the template.
+
+**User Feedback**:
+> "on startup-pitch/demo there is a picture: [Image] its HELL UGLY"
+
+**Location**: 
+- Component: `/components/templates/startup-pitch/startup-pitch-template.tsx`
+- Line: 158-164 (Product Screenshot section)
+- Old image: Generic Unsplash photo (`photo-1551288049-bebda4e38f71`)
+
+### Impact
+
+- **Visual Quality**: Poor first impression for potential users
+- **Professional Credibility**: Generic stock photo undermined SaaS product demo
+- **Brand Perception**: Did not convey modern, professional SaaS aesthetic
+- **User Experience**: Users explicitly complained about image quality
+
+### Root Cause
+
+The placeholder-images.ts file was using a generic Unsplash stock photo that:
+1. Did not represent actual SaaS dashboard functionality
+2. Had poor visual quality for hero section prominence
+3. Looked like a placeholder rather than a real product screenshot
+
+### Solution Implemented
+
+**Generated high-quality AI dashboard image using Ideogram API**:
+
+1. **Created Generation Script** (`scripts/generate-dashboard-image.js`):
+   - Uses Ideogram API v3 with REALISTIC style
+   - Aspect ratio: 16x9 (1312x736 resolution)
+   - Prompt: "A modern SaaS analytics dashboard interface on laptop screen, showing real-time metrics, charts, and graphs. Clean professional UI design with blue gradients, data visualizations, clean typography, modern flat design, photorealistic rendering, high quality"
+   - Output: `/public/images/dashboard-hero.png`
+
+2. **Updated placeholder-images.ts**:
+   ```typescript
+   // BEFORE
+   dashboard: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop'
+   
+   // AFTER
+   dashboard: '/images/dashboard-hero.png'
+   ```
+
+3. **Image Specifications**:
+   - Resolution: 1312x736 (16:9)
+   - Format: PNG
+   - Size: High-quality, optimized
+   - Style: Modern SaaS dashboard with blue gradients
+   - Content: Real-time analytics, charts, metrics visualization
+
+### Technical Implementation
+
+**Ideogram API Configuration**:
+```javascript
+{
+  aspect_ratio: '16x9',
+  model: 'V_3',
+  magic_prompt_option: 'AUTO',  // Enhanced prompt automatically
+  style_type: 'REALISTIC',
+  rendering_speed: 'TURBO'
+}
+```
+
+**Files Changed**:
+- ✅ `lib/placeholder-images.ts` - Updated dashboard image path
+- ✅ `public/images/dashboard-hero.png` - New AI-generated image (1312x736)
+- ✅ `scripts/generate-dashboard-image.js` - Reusable generation script (not committed - in .gitignore)
+
+### Result
+
+✅ **High-quality professional dashboard image** replacing ugly generic photo  
+✅ **Modern SaaS aesthetic** matching template design  
+✅ **Photorealistic rendering** with blue gradients and clean typography  
+✅ **Local image file** - no external dependencies on Unsplash  
+✅ **Reusable script** for future dashboard image generation  
+✅ **Proper resolution** (16:9) for hero section display  
+
+### Prevention Strategy
+
+**For Future Images**:
+1. Use Ideogram API for all hero/showcase images requiring high quality
+2. Store generated images locally in `/public/images/` directory
+3. Use descriptive filenames (e.g., `dashboard-hero.png`)
+4. Document image source and generation parameters
+5. Maintain generation scripts for reproducibility
+
+**Quality Standards**:
+- Hero images: Minimum 1200px width, 16:9 or 16:10 aspect ratio
+- Use AI generation (Ideogram) for custom product screenshots
+- Avoid generic stock photos for product demonstrations
+- Ensure visual style matches template aesthetic (colors, typography, mood)
+
+### Related Issues
+
+This fix improves visual quality alongside:
+- **Bug #15**: Invisible text in startup-pitch (fixed separately)
+- **Bug #17**: Systematic invisible text across 31 templates
+
+Together these fixes ensure the startup-pitch template has:
+1. ✅ All text visible on mobile (Bugs #15, #17)
+2. ✅ High-quality professional imagery (Bug #18)
+3. ✅ Complete SaaS product demo experience
+
+---
 
