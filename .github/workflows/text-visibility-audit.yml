@@ -52,23 +52,26 @@ jobs:
             const report = fs.readFileSync('docs/text-visibility-audit.md', 'utf8');
             const summary = report.split('\n').slice(0, 30).join('\n');
 
+            const commentBody = [
+              '## ❌ Text Visibility Issues Detected',
+              '',
+              summary,
+              '',
+              '**Action Required:** Fix text visibility issues before merging.',
+              '',
+              'Run locally:',
+              '```bash',
+              'npm run audit:text-colors',
+              'npm run fix:text-colors:dry  # Preview fixes',
+              'npm run fix:text-colors       # Apply fixes',
+              '```',
+              '',
+              '📄 Full report available in workflow artifacts.'
+            ].join('\n');
+
             github.rest.issues.createComment({
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: `## ❌ Text Visibility Issues Detected
-
-${summary}
-
-**Action Required:** Fix text visibility issues before merging.
-
-Run locally:
-\`\`\`bash
-npm run audit:text-colors
-npm run fix:text-colors:dry  # Preview fixes
-npm run fix:text-colors       # Apply fixes
-\`\`\`
-
-📄 Full report available in workflow artifacts.
-`
+              body: commentBody
             });
