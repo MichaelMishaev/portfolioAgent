@@ -232,7 +232,7 @@ export function ArchetypesMinimalTemplate() {
         <div className="container mx-auto px-4 sm:px-6">
           <div className="text-center mb-16">
             <ScrollReveal>
-              <h2 className="text-3xl sm: text-3xl sm:text-5xl   font-bold mb-4 text-gray-900 dark:text-white break-words">
+              <h2 className="text-3xl sm:text-3xl sm:text-5xl font-bold mb-4 text-gray-900 dark:text-white break-words">
                 The 7 Creative Archetypes
               </h2>
               <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
@@ -251,7 +251,7 @@ export function ArchetypesMinimalTemplate() {
                   <CardContent className="p-6 sm:p-8">
                     {/* Number badge */}
                     <div className="flex items-start justify-between mb-4">
-                      <span className="text-3xl sm:text-4xl  font-bold text-gray-200 dark:text-gray-700">
+                      <span className="text-3xl sm:text-4xl font-bold text-gray-200 dark:text-gray-700">
                         {archetype.number}
                       </span>
                       <div className={`p-3 rounded-2xl bg-gradient-to-br ${archetype.color} text-white shadow-lg group-hover:scale-110 transition-transform`}>
@@ -288,7 +288,7 @@ export function ArchetypesMinimalTemplate() {
         <div className="container mx-auto px-4 sm:px-6">
           <div className="text-center mb-16">
             <ScrollReveal>
-              <h2 className="text-3xl sm: text-3xl sm:text-5xl   font-bold mb-4 text-gray-900 dark:text-white break-words">
+              <h2 className="text-3xl sm:text-3xl sm:text-5xl font-bold mb-4 text-gray-900 dark:text-white break-words">
                 {archetypesData.targetAudience.title}
               </h2>
               <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
@@ -325,7 +325,7 @@ export function ArchetypesMinimalTemplate() {
         <div className="container mx-auto px-4 sm:px-6">
           <div className="text-center mb-16">
             <ScrollReveal>
-              <h2 className="text-3xl sm: text-3xl sm:text-5xl   font-bold mb-4 text-gray-900 dark:text-white break-words">
+              <h2 className="text-3xl sm:text-3xl sm:text-5xl font-bold mb-4 text-gray-900 dark:text-white break-words">
                 Success Stories
               </h2>
               <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
@@ -381,7 +381,7 @@ export function ArchetypesMinimalTemplate() {
           <div className="max-w-5xl mx-auto">
             <ScrollReveal>
               <div className="text-center mb-12">
-                <h2 className="text-3xl sm: text-3xl sm:text-5xl   font-bold mb-4 text-gray-900 dark:text-white break-words">
+                <h2 className="text-3xl sm:text-3xl sm:text-5xl font-bold mb-4 text-gray-900 dark:text-white break-words">
                   {archetypesData.program.title}
                 </h2>
                 <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300">
@@ -427,7 +427,7 @@ export function ArchetypesMinimalTemplate() {
                             <span className="text-2xl line-through opacity-60">
                               {archetypesData.program.pricing.original}
                             </span>
-                            <span className="text-4xl sm:text-5xl  font-bold break-words">
+                            <span className="text-4xl sm:text-5xl font-bold break-words">
                               {archetypesData.program.pricing.current}
                             </span>
                           </div>
@@ -462,7 +462,7 @@ export function ArchetypesMinimalTemplate() {
       <section className="py-16 sm:py-20 bg-gradient-to-br from-teal-500 to-purple-600 text-white">
         <div className="container mx-auto px-4 sm:px-6 text-center">
           <ScrollReveal>
-            <h2 className="text-3xl sm: text-3xl sm:text-5xl   font-bold mb-6 break-words">
+            <h2 className="text-3xl sm:text-3xl sm:text-5xl font-bold mb-6 break-words">
               Ready to Transform Your Creative Journey?
             </h2>
             <p className="text-xl sm:text-2xl mb-8 text-teal-50 max-w-2xl mx-auto">

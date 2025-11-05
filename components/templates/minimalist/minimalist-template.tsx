@@ -94,7 +94,7 @@ export function MinimalistTemplate() {
       <section className="container mx-auto px-3 max-w-full pt-40 pb-32">
         <div className="max-w-full">
           <FadeIn>
-            <h1 className="text-4xl sm: text-4xl sm:text-5xl md:text-6xl lg:text-9xl font-light mb-8 tracking-tighter leading-none break-words">
+            <h1 className="text-4xl sm:text-4xl sm:text-5xl md:text-6xl lg:text-9xl font-light mb-8 tracking-tighter leading-none break-words">
               {portfolioData.name}
             </h1>
           </FadeIn>
@@ -134,7 +134,7 @@ export function MinimalistTemplate() {
       <section className="container mx-auto px-3 max-w-full py-32 border-t">
         <div className="max-w-full mx-auto">
           <ScrollReveal>
-            <p className="text-3xl sm:text-4xl md:text-5xl  font-light leading-tight tracking-tight text-center break-words">
+            <p className="text-3xl sm:text-4xl md:text-5xl font-light leading-tight tracking-tight text-center break-words">
               {portfolioData.statement}
             </p>
           </ScrollReveal>

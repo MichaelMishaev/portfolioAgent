@@ -191,7 +191,7 @@ export function ThreeDImmersiveTemplate() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-3xl sm:text-5xl md:text-5xl lg:text-6xl  xl:text-5xl sm:text-6xl md:text-7xl lg:text-8xl  font-black mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent break-words"
+            className="text-3xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent break-words"
           >
             {portfolioData.name}
           </motion.h1>
@@ -200,7 +200,7 @@ export function ThreeDImmersiveTemplate() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl sm:text-2xl md:text-3xl  text-gray-300 mb-4"
+            className="text-xl sm:text-2xl md:text-3xl text-gray-300 mb-4"
           >
             {portfolioData.title}
           </motion.p>
@@ -244,7 +244,7 @@ export function ThreeDImmersiveTemplate() {
       <section className="relative py-20 px-3 bg-gradient-to-b from-black via-gray-900 to-black">
         <div className="container mx-auto max-w-full">
           <ScrollReveal>
-            <h2 className="text-5xl md: text-4xl sm:text-5xl md:text-6xl  font-bold text-center mb-16 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent break-words">
+            <h2 className="text-5xl md:text-4xl sm:text-5xl md:text-6xl font-bold text-center mb-16 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent break-words">
               Featured Projects
             </h2>
           </ScrollReveal>
@@ -283,7 +283,7 @@ export function ThreeDImmersiveTemplate() {
       <section className="relative py-20 px-3 bg-black">
         <div className="container mx-auto max-w-full">
           <ScrollReveal>
-            <h2 className="text-3xl sm:text-5xl   font-bold text-center mb-16 text-white break-words">
+            <h2 className="text-3xl sm:text-5xl font-bold text-center mb-16 text-white break-words">
               Technical Expertise
             </h2>
           </ScrollReveal>
@@ -321,7 +321,7 @@ export function ThreeDImmersiveTemplate() {
       <section id="contact" className="relative py-20 px-3 bg-gradient-to-b from-black to-gray-900">
         <div className="container mx-auto max-w-full text-center">
           <ScrollReveal>
-            <h2 className="text-5xl md: text-4xl sm:text-5xl md:text-6xl  font-bold mb-8 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent break-words">
+            <h2 className="text-5xl md:text-4xl sm:text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent break-words">
               Let's Create Together
             </h2>
           </ScrollReveal>
@@ -367,7 +367,7 @@ export function ThreeDImmersiveTemplate() {
       <section className="py-20 px-3 sm:px-3 bg-black relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-purple-900/30 to-blue-900/30"></div>
         <div className="container mx-auto max-w-6xl relative">
-          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl  font-bold mb-16 text-center text-white break-words">Stats</h2>
+          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-16 text-center text-white break-words">Stats</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
               { num: '50+', label: '3D Projects' },
@@ -376,7 +376,7 @@ export function ThreeDImmersiveTemplate() {
               { num: '99%', label: 'Satisfaction' }
             ].map((stat, i) => (
               <div key={i} className="bg-white/5 backdrop-blur-xl p-8 rounded-2xl border border-white/10 hover:bg-white/10 transition-all transform hover:scale-105">
-                <div className="text-4xl sm:text-5xl  font-bold text-white mb-2 break-words">{stat.num}</div>
+                <div className="text-4xl sm:text-5xl font-bold text-white mb-2 break-words">{stat.num}</div>
                 <div className="text-sm text-gray-400 uppercase">{stat.label}</div>
               </div>
             ))}
@@ -387,7 +387,7 @@ export function ThreeDImmersiveTemplate() {
       {/* About - 3D Immersive */}
       <section className="py-32 px-3 sm:px-3 bg-gradient-to-br from-indigo-950 to-black">
         <div className="container mx-auto max-w-4xl text-center text-white">
-          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl  font-bold mb-8 break-words">About</h2>
+          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-8 break-words">About</h2>
           <p className="text-2xl text-gray-300 mb-6">
             Crafting immersive 3D experiences that push the boundaries of web technology.
           </p>
@@ -400,7 +400,7 @@ export function ThreeDImmersiveTemplate() {
       {/* Pricing - 3D Immersive */}
       <section className="py-20 px-3 sm:px-3 bg-black">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl  font-bold mb-16 text-center text-white break-words">Pricing</h2>
+          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-16 text-center text-white break-words">Pricing</h2>
           <div className="grid md:grid-cols-3 gap-8">
             {[
               { name: 'Basic 3D', price: '$999', features: ['Simple 3D Scene', '2 Models', 'Basic Animation', '2 Revisions'] },
@@ -412,7 +412,7 @@ export function ThreeDImmersiveTemplate() {
               }`}>
                 {plan.popular && <div className="text-xs font-bold text-purple-400 mb-2 uppercase">Most Popular</div>}
                 <h3 className="text-2xl font-bold mb-2 text-white">{plan.name}</h3>
-                <div className="text-4xl sm:text-5xl  font-bold mb-8 text-white break-words">{plan.price}</div>
+                <div className="text-4xl sm:text-5xl font-bold mb-8 text-white break-words">{plan.price}</div>
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((f, j) => (
                     <li key={j} className="flex items-start gap-2 text-sm text-gray-300">
@@ -433,7 +433,7 @@ export function ThreeDImmersiveTemplate() {
       {/* Testimonials - 3D Immersive */}
       <section className="py-20 px-3 sm:px-3 bg-gradient-to-br from-purple-950 to-black">
         <div className="container mx-auto max-w-4xl">
-          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl  font-bold mb-16 text-center text-white break-words">Testimonials</h2>
+          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-16 text-center text-white break-words">Testimonials</h2>
           <div className="space-y-8">
             {[
               { text: 'Mind-blowing 3D work. Our website has never looked better!', author: 'Alex Turner', role: 'Creative Director' },
@@ -455,7 +455,7 @@ export function ThreeDImmersiveTemplate() {
       {/* Call to Action - 3D Immersive */}
       <section className="py-32 px-3 sm:px-3 bg-gradient-to-br from-purple-600 via-pink-600 to-blue-600">
         <div className="container mx-auto max-w-4xl text-center text-white">
-          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl  font-bold mb-8 break-words">Ready to Go 3D?</h2>
+          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-8 break-words">Ready to Go 3D?</h2>
           <p className="text-2xl mb-12 opacity-90">
             Let's create an unforgettable immersive experience
           </p>
@@ -473,7 +473,7 @@ export function ThreeDImmersiveTemplate() {
       {/* Timeline - 3D Immersive */}
       <section className="py-20 px-3 sm:px-3 bg-black">
         <div className="container mx-auto max-w-4xl">
-          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl  font-bold mb-16 text-center text-white break-words">Timeline</h2>
+          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-16 text-center text-white break-words">Timeline</h2>
           <div className="space-y-8">
             {[
               { year: '2024', title: '3D Creative Director', company: 'Immersive Labs' },

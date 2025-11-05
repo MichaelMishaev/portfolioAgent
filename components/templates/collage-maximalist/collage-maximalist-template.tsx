@@ -116,11 +116,11 @@ return (
             <div className="bg-red-500 text-white px-3 py-1 inline-block transform -rotate-2 mb-4 border-2 border-black">
               <span className="text-sm font-bold">{portfolioData.location}</span>
             </div>
-            <h1 className="text-3xl sm:text-5xl md:text-5xl lg:text-6xl  xl:text-5xl sm:text-6xl md:text-7xl lg:text-8xl  font-black mb-4 leading-none break-words">
+            <h1 className="text-3xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black mb-4 leading-none break-words">
               {portfolioData.name}
             </h1>
             <div className="h-1 w-32 bg-black mb-6" />
-            <p className="text-xl sm:text-2xl md:text-3xl  font-bold mb-4">
+            <p className="text-xl sm:text-2xl md:text-3xl font-bold mb-4">
               {portfolioData.title}
             </p>
             <p className="text-lg max-w-full leading-relaxed mb-8">
@@ -149,7 +149,7 @@ return (
                 }`}
               >
                 <div className="text-6xl mb-2">{stat.emoji}</div>
-                <div className="text-3xl sm:text-4xl  font-black mb-1">{stat.number}</div>
+                <div className="text-3xl sm:text-4xl font-black mb-1">{stat.number}</div>
                 <p className="text-sm font-bold uppercase">{stat.label}</p>
               </div>
             </ScrollReveal>
@@ -219,7 +219,7 @@ return (
       <section className="container mx-auto px-3 sm:px-3 py-20">
         <ScrollReveal>
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm: text-3xl sm:text-5xl md:text-6xl lg:text-7xl  font-black inline-block bg-blue-200 px-8 py-4 border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] transform -rotate-1 break-words">
+            <h2 className="text-3xl sm:text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black inline-block bg-blue-200 px-8 py-4 border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] transform -rotate-1 break-words">
               RECENT WORK
             </h2>
           </div>
@@ -271,7 +271,7 @@ return (
 
         <ScrollReveal>
           <div className="text-center mb-12">
-            <h2 className="text-5xl md: text-4xl sm:text-5xl md:text-6xl  font-black inline-block bg-pink-300 px-8 py-4 border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] transform rotate-2 break-words">
+            <h2 className="text-5xl md:text-4xl sm:text-5xl md:text-6xl font-black inline-block bg-pink-300 px-8 py-4 border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] transform rotate-2 break-words">
               MY PROCESS
             </h2>
           </div>
@@ -307,7 +307,7 @@ return (
 
         <ScrollReveal>
           <div className="text-center mb-16">
-            <h2 className="text-5xl md: text-4xl sm:text-5xl md:text-6xl  font-black inline-block bg-green-300 px-8 py-4 border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] transform -rotate-1 break-words">
+            <h2 className="text-5xl md:text-4xl sm:text-5xl md:text-6xl font-black inline-block bg-green-300 px-8 py-4 border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] transform -rotate-1 break-words">
               WHAT THEY SAY
             </h2>
           </div>
@@ -356,7 +356,7 @@ return (
           <div className="relative z-10 bg-white border-4 border-black p-12 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] transform rotate-1">
             <div className="text-center">
               <div className="text-7xl mb-6">✉️</div>
-              <h2 className="text-5xl md: text-4xl sm:text-5xl md:text-6xl  font-black mb-6 break-words">
+              <h2 className="text-5xl md:text-4xl sm:text-5xl md:text-6xl font-black mb-6 break-words">
                 GET IN TOUCH
               </h2>
               <p className="text-xl mb-8 max-w-full mx-auto">
@@ -396,7 +396,7 @@ return (
           <div className="absolute bottom-20 right-20 w-60 h-60 bg-blue-400 rounded-full blur-3xl"></div>
         </div>
         <div className="container mx-auto max-w-6xl relative">
-          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl  font-black mb-12 text-center rotate-1 [text-shadow:3px_3px_0px_rgba(0,0,0,0.2)] break-words">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-12 text-center rotate-1 [text-shadow:3px_3px_0px_rgba(0,0,0,0.2)] break-words">
             SKILLS++
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -421,7 +421,7 @@ return (
       {/* Pricing - Collage Maximalist Style */}
       <section className="py-20 px-3 sm:px-3 bg-yellow-200 border-y-8 border-black">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl  font-black mb-12 text-center -rotate-2 [text-shadow:4px_4px_0px_rgba(0,0,0,0.3)] break-words">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-12 text-center -rotate-2 [text-shadow:4px_4px_0px_rgba(0,0,0,0.3)] break-words">
             $$$ PRICING $$$
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
@@ -432,7 +432,7 @@ return (
             ].map((plan, i) => (
               <div key={i} className={`${plan.bg} ${plan.rot} p-8 border-6 border-black shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] ${plan.highlight ? 'ring-8 ring-yellow-400 scale-105' : ''}`}>
                 <h3 className="text-3xl font-black mb-4 text-black">{plan.name}</h3>
-                <div className="text-4xl sm:text-5xl md:text-6xl  font-black mb-8 text-black [text-shadow:3px_3px_0px_rgba(255,255,255,0.5)] break-words">
+                <div className="text-4xl sm:text-5xl md:text-6xl font-black mb-8 text-black [text-shadow:3px_3px_0px_rgba(255,255,255,0.5)] break-words">
                   {plan.price}
                 </div>
                 <ul className="space-y-3 mb-8">
@@ -466,7 +466,7 @@ return (
         </div>
         <div className="container mx-auto max-w-4xl text-center relative">
           <div className="bg-white/90 p-12 border-8 border-black shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] rotate-1">
-            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl  font-black mb-6 -rotate-2 [text-shadow:4px_4px_0px_rgba(0,0,0,0.1)] break-words">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-6 -rotate-2 [text-shadow:4px_4px_0px_rgba(0,0,0,0.1)] break-words">
               LET'S MAKE SOMETHING WILD!
             </h2>
             <p className="text-2xl font-bold mb-8 rotate-1">
@@ -487,7 +487,7 @@ return (
       {/* Timeline - Collage Maximalist */}
       <section className="py-20 px-3 sm:px-3 bg-gradient-to-br from-green-200 via-cyan-200 to-blue-200">
         <div className="container mx-auto max-w-4xl">
-          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl  font-black mb-12 text-center rotate-2 [text-shadow:4px_4px_0px_rgba(0,0,0,0.2)] break-words">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-12 text-center rotate-2 [text-shadow:4px_4px_0px_rgba(0,0,0,0.2)] break-words">
             MY STORY{'>>>'}
           </h2>
           <div className="space-y-8">

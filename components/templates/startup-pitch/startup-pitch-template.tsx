@@ -224,12 +224,12 @@ export function StartupPitchTemplate() {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
                 whileHover={{ y: -5 }}
-                className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100"
+                className="bg-white rounded-2xl p-4 sm:p-6 md:p-8 shadow-lg border border-gray-100"
               >
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-orange-500 rounded-xl flex items-center justify-center text-white text-2xl mb-6">
                   {feature.icon}
                 </div>
-                <h3 className="text-xl font-bold mb-3">{feature.title}</h3>
+                <h3 className="text-base sm:text-lg md:text-xl font-bold mb-3 break-words">{feature.title}</h3>
                 <p className="text-gray-600 leading-relaxed">{feature.description}</p>
               </motion.div>
             ))}
@@ -261,7 +261,7 @@ export function StartupPitchTemplate() {
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-orange-500 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-6">
                     {step.number}
                   </div>
-                  <h3 className="text-2xl font-bold mb-3">{step.title}</h3>
+                  <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-3 break-words">{step.title}</h3>
                   <p className="text-gray-600">{step.description}</p>
                 </div>
                 {index < portfolioData.steps.length - 1 && (
@@ -292,7 +292,7 @@ export function StartupPitchTemplate() {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.15 }}
                 whileHover={{ y: -10 }}
-                className={`rounded-2xl p-8 border-2 ${
+                className={`rounded-2xl p-4 sm:p-6 md:p-8 border-2 ${
                   plan.popular
                     ? "bg-gradient-to-br from-blue-600 to-blue-700 text-white border-blue-600 shadow-2xl"
                     : "bg-white border-gray-200"
@@ -303,7 +303,7 @@ export function StartupPitchTemplate() {
                     Most Popular
                   </div>
                 )}
-                <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
+                <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 break-words">{plan.name}</h3>
                 <div className="mb-6">
                   <span className="text-3xl sm:text-4xl md:text-5xl font-bold break-words">${plan.price}</span>
                   <span className={plan.popular ? "text-blue-100" : "text-gray-500"}>/month</span>
@@ -349,7 +349,7 @@ export function StartupPitchTemplate() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.15 }}
-                className="bg-white rounded-2xl p-8 shadow-lg"
+                className="bg-white rounded-2xl p-4 sm:p-6 md:p-8 shadow-lg"
               >
                 <div className="flex gap-1 mb-4">
                   {[...Array(5)].map((_, i) => (
@@ -376,7 +376,7 @@ export function StartupPitchTemplate() {
           <div className="max-w-4xl mx-auto">
             <ScrollReveal>
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-center break-words">About FlowMetrics</h2>
-              <p className="text-xl text-gray-600 leading-relaxed text-center">
+              <p className="text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed text-center">
                 {portfolioData.about}
               </p>
             </ScrollReveal>

@@ -159,7 +159,7 @@ export function ServiceMarketplaceTemplate() {
             {(portfolioData.stats || []).map((stat, idx) => (
               <ScrollReveal key={idx} delay={idx * 0.1}>
                 <div className="text-center">
-                  <div className="text-3xl sm: text-3xl sm:text-4xl  font-bold text-green-400 mb-2">
+                  <div className="text-3xl sm:text-3xl sm:text-4xl font-bold text-green-400 mb-2">
                     {stat.value}
                   </div>
                   <div className="text-sm text-slate-400">{stat.label}</div>
@@ -175,7 +175,7 @@ export function ServiceMarketplaceTemplate() {
         <div className="container mx-auto px-3 max-w-full">
           <div className="text-center mb-16">
             <FadeIn>
-              <h2 className="text-3xl sm: text-3xl sm:text-5xl   font-bold mb-4 break-words">
+              <h2 className="text-3xl sm:text-3xl sm:text-5xl font-bold mb-4 break-words">
                 {portfolioData.features?.title || "Why Choose Our Platform"}
               </h2>
               <p className="text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto">
@@ -212,7 +212,7 @@ export function ServiceMarketplaceTemplate() {
         <div className="container mx-auto px-3 max-w-full">
           <div className="text-center mb-16">
             <FadeIn>
-              <h2 className="text-3xl sm: text-3xl sm:text-5xl   font-bold mb-4 break-words">
+              <h2 className="text-3xl sm:text-3xl sm:text-5xl font-bold mb-4 break-words">
                 {portfolioData.howItWorks?.title || "How It Works"}
               </h2>
               <p className="text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto">
@@ -244,7 +244,7 @@ export function ServiceMarketplaceTemplate() {
         <div className="container mx-auto px-3 max-w-full">
           <div className="text-center mb-16">
             <FadeIn>
-              <h2 className="text-3xl sm: text-3xl sm:text-5xl   font-bold mb-4 break-words">
+              <h2 className="text-3xl sm:text-3xl sm:text-5xl font-bold mb-4 break-words">
                 {portfolioData.testimonials?.title || "What Our Users Say"}
               </h2>
               <p className="text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto">
@@ -286,7 +286,7 @@ export function ServiceMarketplaceTemplate() {
         <div className="container mx-auto px-3 max-w-full">
           <div className="text-center mb-16">
             <FadeIn>
-              <h2 className="text-3xl sm: text-3xl sm:text-5xl   font-bold mb-4 break-words">
+              <h2 className="text-3xl sm:text-3xl sm:text-5xl font-bold mb-4 break-words">
                 {portfolioData.pricing?.title || "Simple, Transparent Pricing"}
               </h2>
               <p className="text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto">
@@ -316,7 +316,7 @@ export function ServiceMarketplaceTemplate() {
                     <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
                     <p className="text-slate-400 mb-6">{plan.description}</p>
                     <div className="mb-6">
-                      <span className="text-3xl sm:text-4xl  font-bold">{plan.price}</span>
+                      <span className="text-3xl sm:text-4xl font-bold">{plan.price}</span>
                       {plan.period && <span className="text-slate-400">/{plan.period}</span>}
                     </div>
                     <Button
@@ -349,7 +349,7 @@ export function ServiceMarketplaceTemplate() {
         <div className="container mx-auto px-3 max-w-full">
           <div className="max-w-4xl mx-auto text-center">
             <FadeIn>
-              <h2 className="text-3xl sm: text-3xl sm:text-5xl   font-bold mb-6 break-words">
+              <h2 className="text-3xl sm:text-3xl sm:text-5xl font-bold mb-6 break-words">
                 {portfolioData.cta?.title || "Ready to Get Started?"}
               </h2>
               <p className="text-lg sm:text-xl text-green-50 mb-8">
@@ -370,7 +370,7 @@ export function ServiceMarketplaceTemplate() {
       <section className="py-20 px-3 bg-slate-50 dark:bg-slate-900">
         <div className="container mx-auto max-w-6xl">
           <FadeIn>
-            <h2 className="text-3xl sm: text-3xl sm:text-4xl  font-bold mb-12 text-center">Top Skills</h2>
+            <h2 className="text-3xl sm:text-3xl sm:text-4xl font-bold mb-12 text-center">Top Skills</h2>
           </FadeIn>
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
             {['Web Development', 'Mobile Apps', 'UI/UX Design', 'Backend', 'DevOps', 'Cloud', 'Database', 'API Design', 'Testing', 'Security', 'Analytics', 'AI/ML'].map((skill, i) => (
@@ -388,7 +388,7 @@ export function ServiceMarketplaceTemplate() {
       <section className="py-20 px-3">
         <div className="container mx-auto max-w-4xl text-center">
           <FadeIn>
-            <h2 className="text-3xl sm: text-3xl sm:text-4xl  font-bold mb-6">Get in Touch</h2>
+            <h2 className="text-3xl sm:text-3xl sm:text-4xl font-bold mb-6">Get in Touch</h2>
             <p className="text-lg text-slate-600 dark:text-slate-400 mb-8">
               Have a project in mind? Let's discuss how we can help you succeed.
             </p>
@@ -417,7 +417,7 @@ export function ServiceMarketplaceTemplate() {
       <section className="py-20 px-3 bg-slate-50 dark:bg-slate-900">
         <div className="container mx-auto max-w-4xl">
           <FadeIn>
-            <h2 className="text-3xl sm: text-3xl sm:text-4xl  font-bold mb-8 text-center">About Our Platform</h2>
+            <h2 className="text-3xl sm:text-3xl sm:text-4xl font-bold mb-8 text-center">About Our Platform</h2>
             <div className="prose prose-lg max-w-none text-center">
               <p className="text-lg text-slate-600 dark:text-slate-400 mb-6">
                 We connect talented professionals with businesses that need their expertise.
@@ -435,7 +435,7 @@ export function ServiceMarketplaceTemplate() {
       <section className="py-20 px-3">
         <div className="container mx-auto max-w-5xl">
           <FadeIn>
-            <h2 className="text-3xl sm: text-3xl sm:text-4xl  font-bold mb-12 text-center">Our Journey</h2>
+            <h2 className="text-3xl sm:text-3xl sm:text-4xl font-bold mb-12 text-center">Our Journey</h2>
           </FadeIn>
           <div className="space-y-8">
             {[
@@ -463,7 +463,7 @@ export function ServiceMarketplaceTemplate() {
       <section className="py-20 px-3 bg-slate-50 dark:bg-slate-900">
         <div className="container mx-auto max-w-4xl">
           <FadeIn>
-            <h2 className="text-3xl sm: text-3xl sm:text-4xl  font-bold mb-12 text-center">Frequently Asked Questions</h2>
+            <h2 className="text-3xl sm:text-3xl sm:text-4xl font-bold mb-12 text-center">Frequently Asked Questions</h2>
           </FadeIn>
           <div className="space-y-6">
             {[

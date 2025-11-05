@@ -233,7 +233,7 @@ export function ArchetypesEditorialTemplate() {
                   { value: "98%", label: "Success Rate" },
                 ].map((stat, idx) => (
                   <div key={idx} className="text-center border-2 border-white p-3 sm:p-6 bg-slate-800/50">
-                    <div className="text-2xl sm: text-3xl sm:text-4xl  font-black text-blue-400 mb-1 sm:mb-2">{stat.value}</div>
+                    <div className="text-2xl sm:text-3xl sm:text-4xl font-black text-blue-400 mb-1 sm:mb-2">{stat.value}</div>
                     <div className="text-xs sm:text-sm font-bold text-white">{stat.label}</div>
                   </div>
                 ))}
@@ -248,7 +248,7 @@ export function ArchetypesEditorialTemplate() {
         <div className="container mx-auto px-4 sm:px-6">
           <div className="text-center mb-12 sm:mb-20">
             <FadeIn>
-              <h2 className="font-playfair text-3xl sm: text-3xl sm:text-5xl md:text-5xl sm:text-5xl md:text-6xl   font-black text-slate-900 dark:text-white mb-4 sm:mb-6 leading-tight break-words">
+              <h2 className="font-playfair text-3xl sm:text-3xl sm:text-5xl md:text-5xl sm:text-5xl md:text-6xl font-black text-slate-900 dark:text-white mb-4 sm:mb-6 leading-tight break-words">
                 The <span className="text-blue-600">Seven</span> Archetypes
               </h2>
               <div className="w-16 sm:w-24 h-1 bg-blue-600 mx-auto mb-4 sm:mb-6" />
@@ -309,7 +309,7 @@ export function ArchetypesEditorialTemplate() {
           <div className="text-center mt-12 sm:mt-20">
             <FadeIn delay={0.8}>
               <div className="bg-slate-900 dark:bg-slate-950 text-white p-6 sm:p-12 border-4 border-blue-500 shadow-[12px_12px_0px_0px_rgba(59,130,246,1)] max-w-4xl mx-auto">
-                <h3 className="font-playfair text-2xl sm:text-4xl  font-black mb-4 sm:mb-6">
+                <h3 className="font-playfair text-2xl sm:text-4xl font-black mb-4 sm:mb-6">
                   Ready to Discover Your Dominant Archetype?
                 </h3>
                 <p className="text-base sm:text-xl text-gray-300 mb-6 sm:mb-8">
@@ -332,7 +332,7 @@ export function ArchetypesEditorialTemplate() {
         <div className="container mx-auto px-4 sm:px-6">
           <div className="max-w-6xl mx-auto">
             <FadeIn>
-              <h2 className="font-playfair text-3xl sm: text-3xl sm:text-5xl md:text-5xl sm:text-5xl md:text-6xl   font-black text-center mb-6 sm:mb-8 leading-tight break-words">
+              <h2 className="font-playfair text-3xl sm:text-3xl sm:text-5xl md:text-5xl sm:text-5xl md:text-6xl font-black text-center mb-6 sm:mb-8 leading-tight break-words">
                 Is This <span className="text-blue-400">Your Journey</span>?
               </h2>
               <div className="w-16 sm:w-24 h-1 bg-blue-500 mx-auto mb-8 sm:mb-16" />
@@ -417,7 +417,7 @@ export function ArchetypesEditorialTemplate() {
         <div className="container mx-auto px-4 sm:px-6">
           <div className="text-center mb-12 sm:mb-20">
             <FadeIn>
-              <h2 className="font-playfair text-3xl sm: text-3xl sm:text-5xl md:text-5xl sm:text-5xl md:text-6xl   font-black text-slate-900 dark:text-white mb-4 sm:mb-6 leading-tight break-words">
+              <h2 className="font-playfair text-3xl sm:text-3xl sm:text-5xl md:text-5xl sm:text-5xl md:text-6xl font-black text-slate-900 dark:text-white mb-4 sm:mb-6 leading-tight break-words">
                 Real People. <span className="text-blue-600">Real Transformation</span>.
               </h2>
               <div className="w-16 sm:w-24 h-1 bg-blue-600 mx-auto mb-4 sm:mb-6" />
@@ -472,15 +472,15 @@ export function ArchetypesEditorialTemplate() {
               <div className="bg-blue-600 text-white p-6 sm:p-10 border-4 border-slate-900 dark:border-white shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] dark:shadow-[8px_8px_0px_0px_rgba(255,255,255,1)] max-w-4xl mx-auto">
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 text-center">
                   <div>
-                    <div className="text-3xl sm: text-3xl sm:text-5xl   font-black mb-2 break-words">4.9/5</div>
+                    <div className="text-3xl sm:text-3xl sm:text-5xl font-black mb-2 break-words">4.9/5</div>
                     <div className="text-sm sm:text-base font-bold">Average Rating</div>
                   </div>
                   <div>
-                    <div className="text-3xl sm: text-3xl sm:text-5xl   font-black mb-2 break-words">2,847</div>
+                    <div className="text-3xl sm:text-3xl sm:text-5xl font-black mb-2 break-words">2,847</div>
                     <div className="text-sm sm:text-base font-bold">Success Stories</div>
                   </div>
                   <div>
-                    <div className="text-3xl sm: text-3xl sm:text-5xl   font-black mb-2 break-words">98%</div>
+                    <div className="text-3xl sm:text-3xl sm:text-5xl font-black mb-2 break-words">98%</div>
                     <div className="text-sm sm:text-base font-bold">Would Recommend</div>
                   </div>
                 </div>
@@ -496,7 +496,7 @@ export function ArchetypesEditorialTemplate() {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12 sm:mb-20">
               <FadeIn>
-                <h2 className="font-playfair text-3xl sm: text-3xl sm:text-5xl md:text-5xl sm:text-5xl md:text-6xl   font-black mb-4 sm:mb-6 leading-tight break-words">
+                <h2 className="font-playfair text-3xl sm:text-3xl sm:text-5xl md:text-5xl sm:text-5xl md:text-6xl font-black mb-4 sm:mb-6 leading-tight break-words">
                   The <span className="text-blue-400">Mastery Program</span>
                 </h2>
                 <div className="w-16 sm:w-24 h-1 bg-blue-500 mx-auto mb-4 sm:mb-6" />
@@ -512,7 +512,7 @@ export function ArchetypesEditorialTemplate() {
                 <ScrollReveal key={idx} delay={idx * 0.1}>
                   <div className="border-4 border-white p-6 sm:p-8 bg-slate-800 hover:bg-slate-700 transition-colors">
                     <div className="flex items-start gap-4 mb-4">
-                      <div className="text-3xl sm: text-3xl sm:text-4xl  font-black text-blue-400">
+                      <div className="text-3xl sm:text-3xl sm:text-4xl font-black text-blue-400">
                         {String(idx + 1).padStart(2, '0')}
                       </div>
                       <div className="flex-1">
@@ -539,7 +539,7 @@ export function ArchetypesEditorialTemplate() {
                   <Badge className="bg-red-600 text-white px-4 sm:px-6 py-2 text-sm sm:text-lg font-black mb-4 sm:mb-6">
                     LIMITED TIME OFFER
                   </Badge>
-                  <h3 className="font-playfair text-3xl sm: text-3xl sm:text-5xl   font-black mb-4 sm:mb-6 break-words">
+                  <h3 className="font-playfair text-3xl sm:text-3xl sm:text-5xl font-black mb-4 sm:mb-6 break-words">
                     Investment Options
                   </h3>
                   <p className="text-base sm:text-xl text-gray-600 dark:text-gray-300 mb-6 sm:mb-8">
@@ -551,7 +551,7 @@ export function ArchetypesEditorialTemplate() {
                   {/* Pay in Full */}
                   <div className="border-4 border-slate-900 dark:border-white p-6 sm:p-8 text-center bg-blue-50 dark:bg-slate-800">
                     <div className="text-sm font-bold mb-2 text-gray-600 dark:text-gray-400">PAY IN FULL</div>
-                    <div className="text-4xl sm:text-5xl md:text-6xl  font-black mb-2 break-words">{programDetails.investment.full}</div>
+                    <div className="text-4xl sm:text-5xl md:text-6xl font-black mb-2 break-words">{programDetails.investment.full}</div>
                     <div className="text-sm sm:text-base font-bold text-green-600 mb-4">Save $781</div>
                     <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-black border-4 border-slate-900 dark:border-white py-4 sm:py-6 text-base sm:text-lg">
                       ENROLL NOW
@@ -561,7 +561,7 @@ export function ArchetypesEditorialTemplate() {
                   {/* Payment Plan */}
                   <div className="border-4 border-slate-900 dark:border-white p-6 sm:p-8 text-center">
                     <div className="text-sm font-bold mb-2 text-gray-600 dark:text-gray-400">PAYMENT PLAN</div>
-                    <div className="text-4xl sm:text-5xl md:text-6xl  font-black mb-2 break-words">{programDetails.investment.payment}</div>
+                    <div className="text-4xl sm:text-5xl md:text-6xl font-black mb-2 break-words">{programDetails.investment.payment}</div>
                     <div className="text-sm sm:text-base font-bold text-gray-600 dark:text-gray-400 mb-4">12 Monthly Payments</div>
                     <Button
                       variant="outline"
@@ -596,7 +596,7 @@ export function ArchetypesEditorialTemplate() {
             {/* Final CTA */}
             <div className="text-center mt-12 sm:mt-20">
               <FadeIn delay={0.7}>
-                <h3 className="font-playfair text-2xl sm:text-4xl  font-black mb-4 sm:mb-6">
+                <h3 className="font-playfair text-2xl sm:text-4xl font-black mb-4 sm:mb-6">
                   Your True Self Is Waiting
                 </h3>
                 <p className="text-base sm:text-xl text-gray-300 mb-6 sm:mb-8 max-w-3xl mx-auto">

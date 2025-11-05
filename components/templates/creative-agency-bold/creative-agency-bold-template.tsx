@@ -198,7 +198,7 @@ export function CreativeAgencyBoldTemplate() {
             {data.stats.map((stat: any, index: number) => (
               <ScrollReveal key={index} delay={index * 0.1}>
                 <div className="text-center">
-                  <div className="text-4xl sm:text-5xl md:text-6xl  font-black text-blue-600 mb-2 break-words">{stat.value}</div>
+                  <div className="text-4xl sm:text-5xl md:text-6xl font-black text-blue-600 mb-2 break-words">{stat.value}</div>
                   <div className="text-xl font-bold text-gray-600">{stat.label}</div>
                 </div>
               </ScrollReveal>
@@ -211,7 +211,7 @@ export function CreativeAgencyBoldTemplate() {
       <section id="work" className="py-20">
         <div className="container mx-auto max-w-7xl px-6">
           <ScrollReveal>
-            <h2 className="text-4xl sm:text-5xl  font-black mb-20 text-center break-words">{data.portfolio.title}</h2>
+            <h2 className="text-4xl sm:text-5xl font-black mb-20 text-center break-words">{data.portfolio.title}</h2>
           </ScrollReveal>
 
           {data.portfolio.projects.map((project: any, index: number) => (
@@ -227,7 +227,7 @@ export function CreativeAgencyBoldTemplate() {
                     transition={{ duration: 0.8 }}
                     viewport={{ once: true }}
                   />
-                  <h3 className="text-4xl lg: text-4xl sm:text-5xl  font-bold mb-6 hover:text-blue-600 transition-colors duration-300 break-words">{project.title}</h3>
+                  <h3 className="text-4xl lg:text-4xl sm:text-5xl font-bold mb-6 hover:text-blue-600 transition-colors duration-300 break-words">{project.title}</h3>
                   <p className="text-xl text-gray-600 leading-relaxed mb-8">
                     {project.description}
                   </p>
@@ -284,7 +284,7 @@ export function CreativeAgencyBoldTemplate() {
       <section id="services" className="py-20 bg-gray-50">
         <div className="container mx-auto max-w-7xl px-6">
           <ScrollReveal>
-            <h2 className="text-4xl sm:text-5xl  font-black text-center mb-16 break-words">{data.services.title}</h2>
+            <h2 className="text-4xl sm:text-5xl font-black text-center mb-16 break-words">{data.services.title}</h2>
           </ScrollReveal>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -330,7 +330,7 @@ export function CreativeAgencyBoldTemplate() {
           <div className="container mx-auto max-w-7xl px-6">
             <ScrollReveal>
               <div className="text-center mb-16">
-                <h2 className="text-4xl sm:text-5xl  font-black mb-4 break-words">{data.process.title}</h2>
+                <h2 className="text-4xl sm:text-5xl font-black mb-4 break-words">{data.process.title}</h2>
                 <p className="text-xl text-gray-600">{data.process.subtitle}</p>
               </div>
             </ScrollReveal>
@@ -343,7 +343,7 @@ export function CreativeAgencyBoldTemplate() {
                     whileHover={{ y: -10 }}
                     transition={{ duration: 0.3 }}
                   >
-                    <div className="text-4xl sm:text-5xl md:text-6xl  font-black text-blue-600/20 mb-4 group-hover:text-blue-600/40 transition-colors break-words">{step.number}</div>
+                    <div className="text-4xl sm:text-5xl md:text-6xl font-black text-blue-600/20 mb-4 group-hover:text-blue-600/40 transition-colors break-words">{step.number}</div>
                     <h3 className="text-xl font-bold mb-3 group-hover:text-blue-600 transition-colors">{step.title}</h3>
                     <p className="text-gray-600 mb-3">{step.description}</p>
                     <div className="text-sm text-blue-600 font-bold">{step.duration}</div>
@@ -361,7 +361,7 @@ export function CreativeAgencyBoldTemplate() {
           <div className="container mx-auto max-w-7xl px-6">
             <ScrollReveal>
               <div className="text-center mb-16">
-                <h2 className="text-4xl sm:text-5xl  font-black mb-4 break-words">{data.team.title}</h2>
+                <h2 className="text-4xl sm:text-5xl font-black mb-4 break-words">{data.team.title}</h2>
                 <p className="text-xl text-gray-600">{data.team.subtitle}</p>
               </div>
             </ScrollReveal>
@@ -399,7 +399,7 @@ export function CreativeAgencyBoldTemplate() {
           <div className="container mx-auto max-w-7xl px-6">
             <ScrollReveal>
               <div className="text-center mb-16">
-                <h2 className="text-4xl sm:text-5xl  font-black mb-4 break-words">{data.blog.title}</h2>
+                <h2 className="text-4xl sm:text-5xl font-black mb-4 break-words">{data.blog.title}</h2>
                 <p className="text-xl text-gray-600">{data.blog.subtitle}</p>
               </div>
             </ScrollReveal>
@@ -442,7 +442,7 @@ export function CreativeAgencyBoldTemplate() {
           <div className="container mx-auto max-w-7xl px-6">
             <ScrollReveal>
               <div className="text-center mb-16">
-                <h2 className="text-4xl sm:text-5xl  font-black mb-4 break-words">{data.awards.title}</h2>
+                <h2 className="text-4xl sm:text-5xl font-black mb-4 break-words">{data.awards.title}</h2>
                 <p className="text-xl text-gray-400">{data.awards.subtitle}</p>
               </div>
             </ScrollReveal>
@@ -476,7 +476,7 @@ export function CreativeAgencyBoldTemplate() {
         <section className="py-20 bg-white">
           <div className="container mx-auto max-w-4xl px-6">
             <ScrollReveal>
-              <h2 className="text-4xl sm:text-5xl  font-black text-center mb-16 break-words">{data.faq.title}</h2>
+              <h2 className="text-4xl sm:text-5xl font-black text-center mb-16 break-words">{data.faq.title}</h2>
             </ScrollReveal>
 
             <div className="space-y-6">
@@ -503,7 +503,7 @@ export function CreativeAgencyBoldTemplate() {
           <div className="container mx-auto max-w-3xl px-6">
             <ScrollReveal>
               <div className="text-center">
-                <h2 className="text-4xl sm:text-5xl  font-black mb-4 break-words">{data.newsletter.title}</h2>
+                <h2 className="text-4xl sm:text-5xl font-black mb-4 break-words">{data.newsletter.title}</h2>
                 <p className="text-xl text-gray-600 mb-8">{data.newsletter.subtitle}</p>
                 <div className="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
                   <input
@@ -526,7 +526,7 @@ export function CreativeAgencyBoldTemplate() {
       <section className="py-32 bg-gradient-to-br from-pink-500 via-blue-600 to-purple-600 text-white">
         <div className="container mx-auto max-w-4xl px-6 text-center">
           <ScrollReveal>
-            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl  font-black mb-8 leading-tight break-words">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-8 leading-tight break-words">
               {data.cta.title}
             </h2>
             <p className="text-2xl mb-12 text-white/90">
@@ -546,7 +546,7 @@ export function CreativeAgencyBoldTemplate() {
       <footer id="contact" className="py-16 bg-gray-900 text-white">
         <div className="container mx-auto max-w-7xl px-6">
           <div className="text-center mb-12">
-            <h3 className="text-3xl sm:text-4xl  font-black mb-4">{tt.common.getInTouch}</h3>
+            <h3 className="text-3xl sm:text-4xl font-black mb-4">{tt.common.getInTouch}</h3>
             <p className="text-xl text-gray-400 mb-8">{data.contact.description}</p>
             <div className="flex gap-6 justify-center">
               <a
@@ -572,7 +572,7 @@ export function CreativeAgencyBoldTemplate() {
 
           {/* Skills - Creative Agency Bold */}
           <section className="py-20 border-t border-gray-800">
-            <h3 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl  font-black mb-12 text-center break-words">OUR SKILLS</h3>
+            <h3 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-12 text-center break-words">OUR SKILLS</h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {['Branding', 'Design', 'Strategy', 'Development', 'Marketing', 'Content', 'Video', 'Photography'].map((skill, i) => (
                 <div key={i} className="bg-gradient-to-br from-red-500 to-orange-500 p-8 rounded-2xl text-center transform hover:scale-105 transition-transform">
@@ -585,7 +585,7 @@ export function CreativeAgencyBoldTemplate() {
           {/* About - Creative Agency Bold */}
           <section className="py-20 border-t border-gray-800 bg-gradient-to-br from-purple-900 to-black">
             <div className="max-w-4xl mx-auto text-center">
-              <h3 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl  font-black mb-8 break-words">ABOUT US</h3>
+              <h3 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-8 break-words">ABOUT US</h3>
               <p className="text-2xl text-gray-300 mb-6 font-bold">
                 WE ARE A BOLD CREATIVE AGENCY PUSHING BOUNDARIES AND BREAKING RULES.
               </p>
@@ -597,7 +597,7 @@ export function CreativeAgencyBoldTemplate() {
 
           {/* Pricing - Creative Agency Bold */}
           <section className="py-20 border-t border-gray-800">
-            <h3 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl  font-black mb-12 text-center break-words">PRICING</h3>
+            <h3 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-12 text-center break-words">PRICING</h3>
             <div className="grid md:grid-cols-3 gap-8">
               {[
                 { name: 'LAUNCH', price: '$5K', color: 'from-blue-500 to-cyan-500', features: ['Brand Identity', 'Website Design', '3 Revisions'] },
@@ -607,7 +607,7 @@ export function CreativeAgencyBoldTemplate() {
                 <div key={i} className={`bg-gradient-to-br ${pkg.color} p-8 rounded-2xl ${pkg.popular ? 'ring-4 ring-yellow-400 scale-105' : ''}`}>
                   {pkg.popular && <div className="text-xs font-black text-yellow-300 mb-2">MOST POPULAR</div>}
                   <h4 className="text-3xl font-black mb-2 text-white">{pkg.name}</h4>
-                  <div className="text-4xl sm:text-5xl md:text-6xl  font-black text-white mb-8 break-words">{pkg.price}</div>
+                  <div className="text-4xl sm:text-5xl md:text-6xl font-black text-white mb-8 break-words">{pkg.price}</div>
                   <ul className="space-y-3 mb-8">
                     {pkg.features.map((f, j) => (
                       <li key={j} className="font-bold text-white">✓ {f}</li>
@@ -623,7 +623,7 @@ export function CreativeAgencyBoldTemplate() {
 
           {/* Testimonials - Creative Agency Bold */}
           <section className="py-20 border-t border-gray-800 bg-gradient-to-br from-red-900 to-black">
-            <h3 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl  font-black mb-12 text-center break-words">WHAT CLIENTS SAY</h3>
+            <h3 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-12 text-center break-words">WHAT CLIENTS SAY</h3>
             <div className="max-w-4xl mx-auto space-y-8">
               {[
                 { text: 'They completely transformed our brand. Bold, fearless, and incredibly talented!', author: 'Sarah Martinez', company: 'TechStartup Inc' },
@@ -643,7 +643,7 @@ export function CreativeAgencyBoldTemplate() {
 
           {/* Timeline - Creative Agency Bold */}
           <section className="py-20 border-t border-gray-800">
-            <h3 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl  font-black mb-12 text-center break-words">OUR JOURNEY</h3>
+            <h3 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-12 text-center break-words">OUR JOURNEY</h3>
             <div className="max-w-3xl mx-auto space-y-6">
               {[
                 { year: '2024', title: 'GLOBAL EXPANSION', desc: 'Opened studios in NYC, London, Tokyo' },

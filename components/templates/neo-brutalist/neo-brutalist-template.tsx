@@ -58,11 +58,11 @@ return (
       <section className="min-h-screen flex items-center justify-center p-4 border-b-4 border-black">
         <div className="max-w-full w-full">
           <div className="bg-black text-white p-8 md:p-12 border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] mb-8">
-            <h1 className="text-5xl sm: text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl  lg:text-6xl sm:text-7xl md:text-8xl lg:text-9xl  font-black leading-none mb-4 tracking-tighter break-words">
+            <h1 className="text-5xl sm:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl lg:text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black leading-none mb-4 tracking-tighter break-words">
               {portfolioData.name}
             </h1>
             <div className="h-2 w-32 bg-red-600 mb-4"></div>
-            <p className="text-xl sm:text-2xl md:text-3xl  font-bold uppercase">
+            <p className="text-xl sm:text-2xl md:text-3xl font-bold uppercase">
               {portfolioData.title}
             </p>
           </div>
@@ -87,7 +87,7 @@ return (
             {/* Bio */}
             <div className="space-y-6">
               <div className="bg-black text-white p-6 border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] -rotate-1">
-                <h2 className="text-3xl sm:text-5xl   font-black mb-4 break-words">
+                <h2 className="text-3xl sm:text-5xl font-black mb-4 break-words">
                   WHO IS THIS?
                 </h2>
                 <p className="text-lg font-bold uppercase leading-relaxed">
@@ -103,7 +103,7 @@ return (
       <section className="py-20 px-3 border-b-4 border-black">
         <div className="max-w-full mx-auto">
           <div className="bg-red-600 text-white p-6 border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] mb-12 rotate-1">
-            <h2 className="text-3xl sm: text-3xl sm:text-5xl md:text-6xl lg:text-7xl  font-black break-words">
+            <h2 className="text-3xl sm:text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black break-words">
               SKILLS
             </h2>
           </div>
@@ -133,7 +133,7 @@ return (
       <section className="py-20 px-3 border-b-4 border-black">
         <div className="max-w-full mx-auto">
           <div className="bg-blue-600 text-white p-6 border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] mb-12 -rotate-1">
-            <h2 className="text-3xl sm: text-3xl sm:text-5xl md:text-6xl lg:text-7xl  font-black break-words">
+            <h2 className="text-3xl sm:text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black break-words">
               {"SELECTED WORK" || "SELECTED WORK"}
             </h2>
           </div>
@@ -152,11 +152,11 @@ return (
                     {/* Header */}
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 pb-4 border-b-4 border-black">
                       <div className="flex items-baseline gap-4">
-                        <span className="text-3xl sm: text-3xl sm:text-5xl md:text-6xl lg:text-7xl  font-black break-words">
+                        <span className="text-3xl sm:text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black break-words">
                           {project.id}
                         </span>
                         <div>
-                          <h3 className="text-3xl md: text-3xl sm:text-4xl  font-black uppercase">
+                          <h3 className="text-3xl md:text-3xl sm:text-4xl font-black uppercase">
                             {project.title}
                           </h3>
                           <p className="text-sm font-bold uppercase text-gray-600">
@@ -186,7 +186,7 @@ return (
       <section className="py-20 px-3 border-b-4 border-black bg-lime-300">
         <div className="max-w-full mx-auto">
           <div className="bg-black text-white p-6 border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] mb-12 rotate-1">
-            <h2 className="text-3xl sm: text-3xl sm:text-5xl md:text-6xl lg:text-7xl  font-black break-words">
+            <h2 className="text-3xl sm:text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black break-words">
               {"HOW I WORK" || "HOW I WORK"}
             </h2>
           </div>
@@ -201,7 +201,7 @@ return (
                 }}
               >
                 <div className="flex items-baseline gap-4 mb-4">
-                  <span className="text-4xl sm:text-5xl md:text-6xl  font-black break-words">{step.step}</span>
+                  <span className="text-4xl sm:text-5xl md:text-6xl font-black break-words">{step.step}</span>
                   <h3 className="text-3xl font-black uppercase">{step.title}</h3>
                 </div>
                 <p className="text-lg font-bold uppercase">
@@ -217,7 +217,7 @@ return (
       <section className="py-20 px-3 border-b-4 border-black">
         <div className="max-w-full mx-auto">
           <div className="bg-purple-600 text-white p-6 border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] mb-12 -rotate-1">
-            <h2 className="text-3xl sm: text-3xl sm:text-5xl md:text-6xl lg:text-7xl  font-black break-words">
+            <h2 className="text-3xl sm:text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black break-words">
               {"WHAT THEY SAY" || "WHAT THEY SAY"}
             </h2>
           </div>
@@ -268,7 +268,7 @@ return (
       <section id="contact" className="py-20 px-3 bg-lime-300">
         <div className="max-w-full mx-auto text-center">
           <div className="bg-black text-white p-12 border-4 border-black shadow-[12px_12px_0px_0px_rgba(0,0,0,1)]">
-            <h2 className="text-3xl sm:text-5xl md:text-5xl lg:text-6xl  xl:text-5xl sm:text-6xl md:text-7xl lg:text-8xl  font-black mb-8 uppercase break-words">
+            <h2 className="text-3xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black mb-8 uppercase break-words">
               {"LET'S TALK" || "LET'S TALK"}
             </h2>
             <Button
@@ -285,7 +285,7 @@ return (
       {/* Stats - Neo-Brutalist Style */}
       <section className="py-20 px-3 bg-yellow-300 border-y-8 border-black">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl  font-black mb-12 uppercase break-words">STATS</h2>
+          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-12 uppercase break-words">STATS</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
               { num: '100+', label: 'PROJECTS' },
@@ -294,7 +294,7 @@ return (
               { num: '99%', label: 'SATISFACTION' }
             ].map((stat, i) => (
               <div key={i} className="bg-white p-8 border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
-                <div className="text-4xl sm:text-5xl  font-black mb-2 break-words">{stat.num}</div>
+                <div className="text-4xl sm:text-5xl font-black mb-2 break-words">{stat.num}</div>
                 <div className="text-lg font-bold uppercase">{stat.label}</div>
               </div>
             ))}
@@ -305,7 +305,7 @@ return (
       {/* Pricing - Neo-Brutalist Style */}
       <section className="py-20 px-3 bg-white">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl  font-black mb-12 uppercase border-b-8 border-black pb-4 break-words">PRICING</h2>
+          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-12 uppercase border-b-8 border-black pb-4 break-words">PRICING</h2>
           <div className="grid md:grid-cols-3 gap-8">
             {[
               { name: 'BASIC', price: '$599', color: 'bg-red-500', features: ['1 PAGE', '2 REVISIONS', 'RESPONSIVE'] },
@@ -313,8 +313,8 @@ return (
               { name: 'ULTRA', price: '$3999', color: 'bg-green-500', features: ['UNLIMITED', 'WEB APP', 'CUSTOM CODE', 'SUPPORT'] }
             ].map((plan, i) => (
               <div key={i} className={`${plan.color} text-white p-8 border-8 border-black ${plan.highlight ? 'shadow-[16px_16px_0px_0px_rgba(0,0,0,1)]' : 'shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]'}`}>
-                <h3 className="text-3xl sm:text-4xl  font-black mb-4 uppercase">{plan.name}</h3>
-                <div className="text-4xl sm:text-5xl md:text-6xl  font-black mb-8 break-words">{plan.price}</div>
+                <h3 className="text-3xl sm:text-4xl font-black mb-4 uppercase">{plan.name}</h3>
+                <div className="text-4xl sm:text-5xl md:text-6xl font-black mb-8 break-words">{plan.price}</div>
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((f, j) => (
                     <li key={j} className="font-bold text-lg uppercase">/// {f}</li>
@@ -332,7 +332,7 @@ return (
       {/* Gallery - Neo-Brutalist Style */}
       <section className="py-20 px-3 bg-black text-white">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl  font-black mb-12 uppercase border-b-8 border-white pb-4 break-words">GALLERY</h2>
+          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-12 uppercase border-b-8 border-white pb-4 break-words">GALLERY</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
             {[
               { bg: 'bg-red-500' },
@@ -353,7 +353,7 @@ return (
       {/* Timeline - Neo-Brutalist Style */}
       <section className="py-20 px-3 bg-yellow-300">
         <div className="container mx-auto max-w-4xl">
-          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl  font-black mb-12 uppercase border-b-8 border-black pb-4 break-words">TIMELINE</h2>
+          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-12 uppercase border-b-8 border-black pb-4 break-words">TIMELINE</h2>
           <div className="space-y-6">
             {[
               { year: '2024', title: 'CREATIVE DIRECTOR', company: 'ANTI STUDIO', color: 'bg-red-500' },

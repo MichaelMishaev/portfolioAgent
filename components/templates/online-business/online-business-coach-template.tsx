@@ -157,7 +157,7 @@ export function OnlineBusinessCoachTemplate() {
       <section id="about" className="container mx-auto px-3 md:px-3 max-w-full py-20 md:py-32">
         <ScrollReveal>
           <div className="text-center max-w-full mx-auto">
-            <h2 className="text-3xl md: text-4xl sm:text-5xl  font-bold mb-6 bg-gradient-to-r from-amber-600 to-blue-600 bg-clip-text text-transparent break-words">
+            <h2 className="text-3xl md:text-4xl sm:text-5xl font-bold mb-6 bg-gradient-to-r from-amber-600 to-blue-600 bg-clip-text text-transparent break-words">
               {data.aboutTitle || "Hi, I'm Your Guide to Transformation"}
             </h2>
             <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
@@ -171,7 +171,7 @@ export function OnlineBusinessCoachTemplate() {
       <section id="offerings" className="container mx-auto px-3 md:px-3 max-w-full py-20 md:py-32 bg-gradient-to-br from-amber-50 to-blue-50 dark:from-gray-800 dark:to-gray-900 rounded-3xl">
         <ScrollReveal>
           <div className="text-center mb-16">
-            <h2 className="text-3xl md: text-4xl sm:text-5xl  font-bold mb-4 break-words">
+            <h2 className="text-3xl md:text-4xl sm:text-5xl font-bold mb-4 break-words">
               {data.offerings?.title || "Ways to Work With Me"}
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-300 max-w-full mx-auto">
@@ -311,7 +311,7 @@ export function OnlineBusinessCoachTemplate() {
       <section id="testimonials" className="container mx-auto px-3 md:px-3 max-w-full py-20 md:py-32">
         <ScrollReveal>
           <div className="text-center mb-16">
-            <h2 className="text-3xl md: text-4xl sm:text-5xl  font-bold mb-4 break-words">
+            <h2 className="text-3xl md:text-4xl sm:text-5xl font-bold mb-4 break-words">
               {data.testimonials?.title || "Success Stories"}
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-300 max-w-full mx-auto">
@@ -354,7 +354,7 @@ export function OnlineBusinessCoachTemplate() {
             <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10"></div>
             <CardContent className="p-8 md:p-12 relative z-10">
               <div className="text-center max-w-full mx-auto">
-                <h2 className="text-3xl md: text-3xl sm:text-4xl  font-bold text-white mb-4">
+                <h2 className="text-3xl md:text-3xl sm:text-4xl font-bold text-white mb-4">
                   {data.newsletter?.title || "Get My Free Clarity Guide"}
                 </h2>
                 <p className="text-xl text-white/90 mb-8">
@@ -387,7 +387,7 @@ export function OnlineBusinessCoachTemplate() {
       <section className="container mx-auto px-3 md:px-3 max-w-full py-20 md:py-32 border-t border-gray-200 dark:border-gray-800">
         <ScrollReveal>
           <div className="text-center mb-16">
-            <h2 className="text-3xl md: text-4xl sm:text-5xl  font-bold mb-4 break-words">
+            <h2 className="text-3xl md:text-4xl sm:text-5xl font-bold mb-4 break-words">
               {data.blog?.title || "Latest Insights"}
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-300 max-w-full mx-auto">
@@ -431,7 +431,7 @@ export function OnlineBusinessCoachTemplate() {
         <ScrollReveal>
           <div className="bg-gradient-to-br from-white to-amber-50 dark:from-gray-800 dark:to-gray-900 rounded-3xl p-8 md:p-12 border border-gray-200 dark:border-gray-700">
             <div className="max-w-full mx-auto text-center">
-              <h2 className="text-3xl md: text-3xl sm:text-4xl  font-bold mb-4">
+              <h2 className="text-3xl md:text-3xl sm:text-4xl font-bold mb-4">
                 {data.contactForm?.title || "Ready to Transform Your Life?"}
               </h2>
               <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">

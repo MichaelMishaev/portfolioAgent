@@ -358,7 +358,7 @@ export function TechBlogTemplate() {
               <FiZap className="w-3 h-3 mr-1" />
               New: Interactive Code Playgrounds
             </Badge>
-            <h1 className="text-5xl md: text-4xl sm:text-5xl md:text-6xl  font-bold mb-6 leading-tight break-words">
+            <h1 className="text-5xl md:text-4xl sm:text-5xl md:text-6xl font-bold mb-6 leading-tight break-words">
               {techBlogData.hero.title}
             </h1>
             <p className={`text-xl mb-8 ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
@@ -736,7 +736,7 @@ export function TechBlogTemplate() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
             {techBlogData.achievements.map((achievement) => (
               <div key={achievement.label}>
-                <div className="text-3xl sm:text-4xl  font-bold text-blue-600 mb-2">{achievement.value}</div>
+                <div className="text-3xl sm:text-4xl font-bold text-blue-600 mb-2">{achievement.value}</div>
                 <div className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>{achievement.label}</div>
               </div>
             ))}
@@ -749,7 +749,7 @@ export function TechBlogTemplate() {
         <div className="container mx-auto px-3 max-w-full text-center">
           <ScrollReveal>
             <FiMail className="w-16 h-16 mx-auto mb-6 text-white" />
-            <h2 className="text-3xl sm:text-4xl  font-bold text-white mb-4">Join 50,000+ Developers</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">Join 50,000+ Developers</h2>
             <p className="text-xl text-blue-100 mb-8">
               Get weekly tutorials, insights, and code snippets delivered to your inbox.
             </p>

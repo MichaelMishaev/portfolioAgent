@@ -163,7 +163,7 @@ export function VoiceFirstTemplate() {
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              className="text-3xl sm: text-3xl sm:text-5xl md:text-6xl lg:text-7xl  font-black mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent break-words"
+              className="text-3xl sm:text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent break-words"
             >
               {portfolioData.name}
             </motion.h1>
@@ -171,7 +171,7 @@ export function VoiceFirstTemplate() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="text-xl sm:text-2xl md:text-3xl  text-gray-300 mb-4"
+              className="text-xl sm:text-2xl md:text-3xl text-gray-300 mb-4"
             >
               {portfolioData.title}
             </motion.p>
@@ -274,7 +274,7 @@ export function VoiceFirstTemplate() {
       <section className="py-20 px-3 bg-gray-900/30">
         <div className="container mx-auto max-w-full">
           <ScrollReveal>
-            <h2 className="text-3xl sm:text-5xl   font-bold text-center mb-12 text-white break-words">
+            <h2 className="text-3xl sm:text-5xl font-bold text-center mb-12 text-white break-words">
               Sample Conversation
             </h2>
           </ScrollReveal>
@@ -317,7 +317,7 @@ export function VoiceFirstTemplate() {
       <section className="py-20 px-3">
         <div className="container mx-auto max-w-full">
           <ScrollReveal>
-            <h2 className="text-3xl sm:text-5xl   font-bold text-center mb-16 text-white break-words">
+            <h2 className="text-3xl sm:text-5xl font-bold text-center mb-16 text-white break-words">
               Voice Experience Projects
             </h2>
           </ScrollReveal>
@@ -356,7 +356,7 @@ export function VoiceFirstTemplate() {
       <section className="py-20 px-3 bg-gray-900/30">
         <div className="container mx-auto max-w-full">
           <ScrollReveal>
-            <h2 className="text-3xl sm:text-5xl   font-bold text-center mb-16 text-white break-words">
+            <h2 className="text-3xl sm:text-5xl font-bold text-center mb-16 text-white break-words">
               Voice Design Principles
             </h2>
           </ScrollReveal>
@@ -402,7 +402,7 @@ export function VoiceFirstTemplate() {
       <section id="contact" className="py-20 px-3">
         <div className="container mx-auto max-w-full text-center">
           <ScrollReveal>
-            <h2 className="text-5xl md: text-4xl sm:text-5xl md:text-6xl  font-bold mb-8 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent break-words">
+            <h2 className="text-5xl md:text-4xl sm:text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent break-words">
               Let's Talk About Voice
             </h2>
           </ScrollReveal>
@@ -434,7 +434,7 @@ export function VoiceFirstTemplate() {
       {/* Stats - Voice First Style */}
       <section className="py-20 px-3 sm:px-3 bg-gray-900">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-4xl md: text-4xl sm:text-5xl md:text-6xl  font-bold mb-12 text-center text-white break-words">
+          <h2 className="text-4xl md:text-4xl sm:text-5xl md:text-6xl font-bold mb-12 text-center text-white break-words">
             🎙️ Stats
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -446,7 +446,7 @@ export function VoiceFirstTemplate() {
             ].map((stat, i) => (
               <div key={i} className="bg-gray-800 p-8 rounded-2xl border border-gray-700 hover:border-blue-500 transition-colors text-center">
                 <div className="text-4xl mb-3">{stat.icon}</div>
-                <div className="text-3xl sm:text-4xl  font-bold text-white mb-2">{stat.num}</div>
+                <div className="text-3xl sm:text-4xl font-bold text-white mb-2">{stat.num}</div>
                 <div className="text-sm text-gray-400 uppercase tracking-wider">{stat.label}</div>
               </div>
             ))}
@@ -457,7 +457,7 @@ export function VoiceFirstTemplate() {
       {/* Pricing - Voice First Style */}
       <section className="py-20 px-3 sm:px-3 bg-gradient-to-b from-gray-900 to-black">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-4xl md: text-4xl sm:text-5xl md:text-6xl  font-bold mb-4 text-center text-white break-words">
+          <h2 className="text-4xl md:text-4xl sm:text-5xl md:text-6xl font-bold mb-4 text-center text-white break-words">
             🎯 Pricing
           </h2>
           <p className="text-center text-gray-400 mb-12">Voice-enabled solutions for every need</p>
@@ -474,7 +474,7 @@ export function VoiceFirstTemplate() {
                   <div className="text-xs font-bold text-blue-400 mb-2 uppercase">Most Popular</div>
                 )}
                 <h3 className="text-2xl font-bold mb-2 text-white">{plan.name}</h3>
-                <div className="text-4xl sm:text-5xl  font-bold mb-8 text-white break-words">{plan.price}</div>
+                <div className="text-4xl sm:text-5xl font-bold mb-8 text-white break-words">{plan.price}</div>
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((f, j) => (
                     <li key={j} className="flex items-start gap-2 text-sm text-gray-300">
@@ -495,7 +495,7 @@ export function VoiceFirstTemplate() {
       {/* Testimonials - Voice First Style */}
       <section className="py-20 px-3 sm:px-3 bg-gray-900">
         <div className="container mx-auto max-w-4xl">
-          <h2 className="text-4xl md: text-4xl sm:text-5xl md:text-6xl  font-bold mb-12 text-center text-white break-words">
+          <h2 className="text-4xl md:text-4xl sm:text-5xl md:text-6xl font-bold mb-12 text-center text-white break-words">
             💬 Testimonials
           </h2>
           <div className="space-y-8">
@@ -524,7 +524,7 @@ export function VoiceFirstTemplate() {
       {/* Gallery - Voice First Style */}
       <section className="py-20 px-3 sm:px-3 bg-black">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-4xl md: text-4xl sm:text-5xl md:text-6xl  font-bold mb-12 text-center text-white break-words">
+          <h2 className="text-4xl md:text-4xl sm:text-5xl md:text-6xl font-bold mb-12 text-center text-white break-words">
             🎨 Gallery
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
@@ -549,7 +549,7 @@ export function VoiceFirstTemplate() {
         <div className="container mx-auto max-w-4xl text-center text-white">
           <div className="bg-white/10 backdrop-blur-xl p-12 rounded-3xl border border-white/20">
             <div className="text-6xl mb-6">🎙️</div>
-            <h2 className="text-4xl md: text-4xl sm:text-5xl md:text-6xl  font-bold mb-6 break-words">
+            <h2 className="text-4xl md:text-4xl sm:text-5xl md:text-6xl font-bold mb-6 break-words">
               Ready to Go Voice-First?
             </h2>
             <p className="text-xl mb-8 opacity-90">

@@ -196,13 +196,13 @@ return (
           </FadeIn>
 
           <FadeIn delay={0.2}>
-            <h1 className="text-3xl sm:text-5xl md:text-5xl lg:text-6xl  xl:text-5xl sm:text-6xl md:text-7xl lg:text-8xl  font-bold mb-6 bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-clip-text text-transparent break-words">
+            <h1 className="text-3xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-6 bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-clip-text text-transparent break-words">
               {portfolioData.name}
             </h1>
           </FadeIn>
 
           <FadeIn delay={0.3}>
-            <p className="text-xl sm:text-2xl md:text-3xl  text-foreground/80 mb-4">
+            <p className="text-xl sm:text-2xl md:text-3xl text-foreground/80 mb-4">
               {portfolioData.title}
             </p>
           </FadeIn>
@@ -243,7 +243,7 @@ return (
               <Card className="bg-gradient-to-br from-pink-100 to-purple-100 dark:from-pink-900/30 dark:to-purple-900/30 border-2 border-pink-300 dark:border-pink-700 hover:shadow-lg transition-shadow">
                 <CardContent className="p-8 text-center">
                   <div className="text-6xl mb-4">{stat.emoji}</div>
-                  <div className="text-4xl sm:text-5xl  font-bold mb-2 bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent break-words">
+                  <div className="text-4xl sm:text-5xl font-bold mb-2 bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent break-words">
                     {stat.value}
                   </div>
                   <div className="text-lg text-foreground/70">{stat.label}</div>
@@ -257,7 +257,7 @@ return (
       {/* Services Section */}
       <section id="services" className="container mx-auto px-3 sm:px-3 py-20">
         <ScrollReveal>
-          <h2 className="text-3xl sm:text-5xl md:text-6xl  font-bold text-center mb-16 break-words">
+          <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold text-center mb-16 break-words">
             What I Do
           </h2>
         </ScrollReveal>
@@ -286,7 +286,7 @@ return (
       {/* Projects Section */}
       <section id="work" className="container mx-auto px-3 sm:px-3 py-20">
         <ScrollReveal>
-          <h2 className="text-3xl sm:text-5xl md:text-6xl  font-bold text-center mb-16 break-words">
+          <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold text-center mb-16 break-words">
             Recent Projects
           </h2>
         </ScrollReveal>
@@ -315,7 +315,7 @@ return (
       {/* Process Section */}
       <section className="container mx-auto px-3 sm:px-3 py-20 bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-blue-950/30 dark:to-cyan-950/30">
         <ScrollReveal>
-          <h2 className="text-3xl sm:text-5xl md:text-6xl  font-bold text-center mb-16 break-words">
+          <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold text-center mb-16 break-words">
             My Creative Process
           </h2>
         </ScrollReveal>
@@ -341,7 +341,7 @@ return (
       {/* Art Styles Section */}
       <section className="container mx-auto px-3 sm:px-3 py-20">
         <ScrollReveal>
-          <h2 className="text-3xl sm:text-5xl md:text-6xl  font-bold text-center mb-6 break-words">
+          <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold text-center mb-6 break-words">
             Art Styles I Love
           </h2>
           <p className="text-lg text-center text-muted-foreground mb-16 max-w-full mx-auto">
@@ -366,7 +366,7 @@ return (
       {/* Tools & Software Section */}
       <section className="container mx-auto px-3 sm:px-3 py-20 bg-gradient-to-br from-orange-50 to-yellow-50 dark:from-orange-950/30 dark:to-yellow-950/30">
         <ScrollReveal>
-          <h2 className="text-3xl sm:text-5xl md:text-6xl  font-bold text-center mb-6 break-words">
+          <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold text-center mb-6 break-words">
             Tools I Use
           </h2>
           <p className="text-lg text-center text-muted-foreground mb-16 max-w-full mx-auto">
@@ -393,7 +393,7 @@ return (
       {/* Testimonials Section */}
       <section className="container mx-auto px-3 sm:px-3 py-20">
         <ScrollReveal>
-          <h2 className="text-3xl sm:text-5xl md:text-6xl  font-bold text-center mb-6 break-words">
+          <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold text-center mb-6 break-words">
             Client Love
           </h2>
           <p className="text-lg text-center text-muted-foreground mb-16 max-w-full mx-auto">
@@ -432,7 +432,7 @@ return (
             <div className="mb-8">
               <span className="text-8xl">💌</span>
             </div>
-            <h2 className="text-3xl sm: text-3xl sm:text-5xl md:text-6xl lg:text-7xl  font-bold mb-6 break-words">
+            <h2 className="text-3xl sm:text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 break-words">
               Let's Collaborate!
             </h2>
             <p className="text-xl text-muted-foreground mb-8">
@@ -452,7 +452,7 @@ return (
           <ScrollReveal>
             <div className="text-center mb-12">
               <span className="text-6xl mb-6 inline-block">🎨</span>
-              <h2 className="text-3xl sm: text-3xl sm:text-5xl   font-bold mb-4 break-words">Skills & Tools</h2>
+              <h2 className="text-3xl sm:text-3xl sm:text-5xl font-bold mb-4 break-words">Skills & Tools</h2>
             </div>
           </ScrollReveal>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -483,7 +483,7 @@ return (
           <ScrollReveal>
             <div className="text-center mb-12">
               <span className="text-6xl mb-6 inline-block">💰</span>
-              <h2 className="text-3xl sm: text-3xl sm:text-5xl   font-bold mb-4 break-words">Pricing Plans</h2>
+              <h2 className="text-3xl sm:text-3xl sm:text-5xl font-bold mb-4 break-words">Pricing Plans</h2>
               <p className="text-xl text-muted-foreground">Choose the perfect package for your project</p>
             </div>
           </ScrollReveal>
@@ -501,7 +501,7 @@ return (
                 }`}>
                   <div className="text-5xl mb-4">{plan.icon}</div>
                   <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
-                  <div className="text-3xl sm:text-4xl  font-bold mb-6">{plan.price}</div>
+                  <div className="text-3xl sm:text-4xl font-bold mb-6">{plan.price}</div>
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((f, j) => (
                       <li key={j} className="flex items-start gap-2">
@@ -526,7 +526,7 @@ return (
           <ScrollReveal>
             <div className="text-center mb-12">
               <span className="text-6xl mb-6 inline-block">🖼️</span>
-              <h2 className="text-3xl sm: text-3xl sm:text-5xl   font-bold mb-4 break-words">Gallery</h2>
+              <h2 className="text-3xl sm:text-3xl sm:text-5xl font-bold mb-4 break-words">Gallery</h2>
             </div>
           </ScrollReveal>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
@@ -554,7 +554,7 @@ return (
           <ScrollReveal>
             <div className="text-center mb-12">
               <span className="text-6xl mb-6 inline-block">📅</span>
-              <h2 className="text-3xl sm: text-3xl sm:text-5xl   font-bold mb-4 break-words">My Journey</h2>
+              <h2 className="text-3xl sm:text-3xl sm:text-5xl font-bold mb-4 break-words">My Journey</h2>
             </div>
           </ScrollReveal>
           <div className="space-y-8">

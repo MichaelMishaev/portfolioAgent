@@ -305,7 +305,7 @@ export function PersonalBlogTemplate() {
                 className="w-32 h-32 rounded-full object-cover border-4 border-gray-100"
               />
               <div className="text-center md:text-left flex-1">
-                <h1 className="text-3xl sm:text-5xl   font-bold mb-3 break-words">{blogData.author.name}</h1>
+                <h1 className="text-3xl sm:text-5xl font-bold mb-3 break-words">{blogData.author.name}</h1>
                 <p className="text-xl text-gray-600 mb-4">{blogData.author.bio}</p>
                 <div className="flex items-center gap-3 justify-center md:justify-start mb-4">
                   <a
@@ -541,7 +541,7 @@ export function PersonalBlogTemplate() {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-3 sm:px-3 max-w-full">
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl  font-bold mb-4 break-words">What Readers Say</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4 break-words">What Readers Say</h2>
             <p className="text-xl text-gray-600">
               Join thousands of designers and developers who trust this blog
             </p>
@@ -580,7 +580,7 @@ export function PersonalBlogTemplate() {
       <section id="resources" className="py-20 bg-gray-50">
         <div className="container mx-auto px-3 sm:px-3 max-w-full">
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl  font-bold mb-4 break-words">Free Resources</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4 break-words">Free Resources</h2>
             <p className="text-xl text-gray-600">
               Downloadable tools and templates to help you in your creative journey
             </p>
@@ -620,7 +620,7 @@ export function PersonalBlogTemplate() {
           <ScrollReveal>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
               <div>
-                <h2 className="text-3xl sm:text-4xl  font-bold mb-6 break-words">About Sarah</h2>
+                <h2 className="text-3xl sm:text-4xl font-bold mb-6 break-words">About Sarah</h2>
                 <p className="text-gray-600 mb-4 text-lg leading-relaxed">
                   {blogData.author.fullBio}
                 </p>
@@ -670,7 +670,7 @@ export function PersonalBlogTemplate() {
         <div className="container mx-auto px-3 sm:px-3 max-w-full text-center">
           <ScrollReveal>
             <FiMail className="w-16 h-16 mx-auto mb-6 text-white" />
-            <h2 className="text-3xl sm:text-4xl  font-bold text-white mb-4 break-words">Join the Newsletter</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 break-words">Join the Newsletter</h2>
             <p className="text-xl text-blue-100 mb-8">
               Get the latest articles and insights delivered to your inbox every week.
             </p>

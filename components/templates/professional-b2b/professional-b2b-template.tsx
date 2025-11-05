@@ -117,7 +117,7 @@ export function ProfessionalB2bTemplate() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <FadeIn>
               <div className="max-w-2xl">
-                <h1 className="text-4xl sm:text-5xl md:text-5xl sm:text-5xl md:text-6xl   font-bold mb-6 leading-tight break-words">
+                <h1 className="text-4xl sm:text-5xl md:text-5xl sm:text-5xl md:text-6xl font-bold mb-6 leading-tight break-words">
                   {data.hero.title}
                 </h1>
                 <p className="text-xl mb-8 text-blue-100">
@@ -165,7 +165,7 @@ export function ProfessionalB2bTemplate() {
             {data.socialProof.stats.map((stat: any, index: number) => (
               <ScrollReveal key={index} delay={index * 0.1}>
                 <div className="text-center">
-                  <div className="text-3xl sm:text-4xl  font-bold text-gray-900">{stat.value}</div>
+                  <div className="text-3xl sm:text-4xl font-bold text-gray-900">{stat.value}</div>
                   <div className="text-gray-500">{stat.label}</div>
                 </div>
               </ScrollReveal>
@@ -178,7 +178,7 @@ export function ProfessionalB2bTemplate() {
       <section id="services" className="py-20 bg-gray-50">
         <div className="container mx-auto max-w-7xl px-6">
           <ScrollReveal>
-            <h2 className="text-3xl sm:text-4xl  font-bold text-center mb-4">{data.services.title}</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4">{data.services.title}</h2>
             <p className="text-xl text-gray-600 text-center mb-16 max-w-2xl mx-auto">
               {data.services.subtitle}
             </p>
@@ -233,7 +233,7 @@ export function ProfessionalB2bTemplate() {
           <ScrollReveal>
             <div className="text-center mb-16">
               <div className="text-blue-600 text-sm font-semibold mb-2">FEATURED CASE STUDY</div>
-              <h2 className="text-3xl sm:text-4xl  font-bold">{data.caseStudy.title}</h2>
+              <h2 className="text-3xl sm:text-4xl font-bold">{data.caseStudy.title}</h2>
             </div>
           </ScrollReveal>
 
@@ -272,7 +272,7 @@ export function ProfessionalB2bTemplate() {
       <section id="testimonials" className="py-20 bg-gray-50">
         <div className="container mx-auto max-w-7xl px-6">
           <ScrollReveal>
-            <h2 className="text-3xl sm:text-4xl  font-bold text-center mb-16">{data.testimonials.title}</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold text-center mb-16">{data.testimonials.title}</h2>
           </ScrollReveal>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -302,7 +302,7 @@ export function ProfessionalB2bTemplate() {
       <section className="py-20 bg-gradient-to-r from-blue-600 to-blue-800 text-white">
         <div className="container mx-auto max-w-7xl px-6 text-center">
           <ScrollReveal>
-            <h2 className="text-4xl lg: text-4xl sm:text-5xl  font-bold mb-6 break-words">
+            <h2 className="text-4xl lg:text-4xl sm:text-5xl font-bold mb-6 break-words">
               {data.cta.title}
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
@@ -381,7 +381,7 @@ export function ProfessionalB2bTemplate() {
                 <div key={i} className={`bg-gray-800 p-8 rounded-xl border-2 ${pkg.popular ? 'border-blue-500' : 'border-gray-700'}`}>
                   {pkg.popular && <div className="text-xs font-bold text-blue-400 mb-2 uppercase">Most Popular</div>}
                   <h4 className="text-2xl font-bold mb-2">{pkg.name}</h4>
-                  <div className="text-3xl sm:text-4xl  font-bold text-blue-400 mb-6">{pkg.price}</div>
+                  <div className="text-3xl sm:text-4xl font-bold text-blue-400 mb-6">{pkg.price}</div>
                   <ul className="space-y-3 mb-8">
                     {pkg.features.map((f, j) => (
                       <li key={j} className="flex items-start gap-2 text-sm text-gray-300">

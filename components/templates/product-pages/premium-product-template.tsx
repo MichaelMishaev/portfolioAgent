@@ -383,7 +383,7 @@ export function PremiumProductTemplate() {
           </FadeIn>
 
           <FadeIn delay={0.2}>
-            <h1 className="text-4xl sm: text-4xl sm:text-5xl md:text-6xl lg:text-9xl font-light mb-4 tracking-tight break-words">
+            <h1 className="text-4xl sm:text-4xl sm:text-5xl md:text-6xl lg:text-9xl font-light mb-4 tracking-tight break-words">
               {productData.name}
             </h1>
           </FadeIn>

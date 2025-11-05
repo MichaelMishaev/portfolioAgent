@@ -25,7 +25,7 @@ export function SplitScreenEditorialTemplate() {
             {tt.common.back}
           </Link>
 
-          <h1 className="text-3xl sm:text-4xl  font-bold mb-4">{data.sidebar.name}</h1>
+          <h1 className="text-3xl sm:text-4xl font-bold mb-4">{data.sidebar.name}</h1>
           <p className="text-gray-400 text-lg mb-8">
             {data.sidebar.title}
           </p>
@@ -70,7 +70,7 @@ export function SplitScreenEditorialTemplate() {
         <section id="work" className="min-h-screen flex items-center justify-center p-8 lg:p-16">
           <div className="max-w-2xl">
             <ScrollReveal>
-              <h2 className="text-4xl sm:text-5xl md:text-5xl sm:text-5xl md:text-6xl   font-bold mb-8 break-words">{data.intro.headline}</h2>
+              <h2 className="text-4xl sm:text-5xl md:text-5xl sm:text-5xl md:text-6xl font-bold mb-8 break-words">{data.intro.headline}</h2>
               <p className="text-2xl text-gray-600 leading-relaxed">
                 {data.intro.description}
               </p>
@@ -90,7 +90,7 @@ export function SplitScreenEditorialTemplate() {
             <div className="relative z-10 text-center text-white p-8">
               <ScrollReveal>
                 <div className="text-sm font-semibold mb-2 opacity-80">{project.client}</div>
-                <h2 className="text-4xl sm:text-5xl md:text-5xl sm:text-5xl md:text-6xl   font-bold mb-4 break-words">{project.title}</h2>
+                <h2 className="text-4xl sm:text-5xl md:text-5xl sm:text-5xl md:text-6xl font-bold mb-4 break-words">{project.title}</h2>
                 <p className="text-xl opacity-90 max-w-2xl mx-auto">
                   {project.description}
                 </p>
@@ -107,7 +107,7 @@ export function SplitScreenEditorialTemplate() {
         <section id="about" className="min-h-screen flex items-center p-8 lg:p-16 bg-gray-50">
           <div className="max-w-3xl mx-auto">
             <ScrollReveal>
-              <h2 className="text-3xl sm:text-4xl  font-bold mb-8">{tt.common.about}</h2>
+              <h2 className="text-3xl sm:text-4xl font-bold mb-8">{tt.common.about}</h2>
               <div className="prose prose-lg">
                 <p className="text-gray-600 leading-relaxed mb-6">
                   {data.about.bio}
@@ -135,7 +135,7 @@ export function SplitScreenEditorialTemplate() {
         <section id="contact" className="min-h-screen flex items-center justify-center p-8 lg:p-16 bg-white">
           <div className="max-w-2xl mx-auto text-center">
             <ScrollReveal>
-              <h2 className="text-4xl lg: text-4xl sm:text-5xl  font-bold mb-8 break-words">
+              <h2 className="text-4xl lg:text-4xl sm:text-5xl font-bold mb-8 break-words">
                 {tt.common.letsWorkTogether}
               </h2>
               <p className="text-xl text-gray-600 mb-12">
@@ -156,7 +156,7 @@ export function SplitScreenEditorialTemplate() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center border-y border-gray-200 py-12">
             {[{ n: "10+", l: "Years" }, { n: "200+", l: "Stories" }, { n: "50M", l: "Readers" }, { n: "15", l: "Awards" }].map((s, i) => (
               <div key={i}>
-                <div className="text-4xl sm:text-5xl  font-serif font-bold mb-2 break-words">{s.n}</div>
+                <div className="text-4xl sm:text-5xl font-serif font-bold mb-2 break-words">{s.n}</div>
                 <div className="text-sm uppercase tracking-widest text-gray-600">{s.l}</div>
               </div>
             ))}
@@ -165,7 +165,7 @@ export function SplitScreenEditorialTemplate() {
 
         {/* Timeline - Editorial Career */}
         <section className="py-20 px-8">
-          <h2 className="text-3xl sm:text-4xl  font-serif font-bold mb-12">Career Highlights</h2>
+          <h2 className="text-3xl sm:text-4xl font-serif font-bold mb-12">Career Highlights</h2>
           <div className="space-y-8 border-l-2 border-gray-300 pl-8">
             {[
               { y: "2024", t: "Editor-in-Chief", p: "Modern Magazine" },
@@ -185,7 +185,7 @@ export function SplitScreenEditorialTemplate() {
 
         {/* Testimonials - Magazine Pull Quotes */}
         <section className="py-20 px-8 bg-gray-50">
-          <h2 className="text-3xl sm:text-4xl  font-serif font-bold mb-12">Praise</h2>
+          <h2 className="text-3xl sm:text-4xl font-serif font-bold mb-12">Praise</h2>
           <div className="space-y-12">
             {[
               { q: "A masterful storyteller with an eye for detail", a: "Jane Doe", r: "Editor, Vogue" },
@@ -202,7 +202,7 @@ export function SplitScreenEditorialTemplate() {
 
         {/* Pricing - Editorial Services */}
         <section className="py-20 px-8">
-          <h2 className="text-3xl sm:text-4xl  font-serif font-bold mb-12">Services & Rates</h2>
+          <h2 className="text-3xl sm:text-4xl font-serif font-bold mb-12">Services & Rates</h2>
           <div className="space-y-6">
             {[
               { s: "Feature Articles", p: "$2,500/piece", d: "Long-form journalism, 2000-5000 words" },
@@ -222,7 +222,7 @@ export function SplitScreenEditorialTemplate() {
 
         {/* FAQ - Editorial Format */}
         <section className="py-20 px-8 bg-gray-50">
-          <h2 className="text-3xl sm:text-4xl  font-serif font-bold mb-12">FAQ</h2>
+          <h2 className="text-3xl sm:text-4xl font-serif font-bold mb-12">FAQ</h2>
           <div className="space-y-8">
             {[
               { q: "What's your editorial process?", a: "Research → Interviews → Drafting → Fact-checking → Editing → Publication" },
@@ -240,7 +240,7 @@ export function SplitScreenEditorialTemplate() {
 
         {/* CTA - Editorial Call-Out */}
         <section className="py-24 px-8 bg-blue-600 text-white text-center">
-          <h2 className="text-4xl sm:text-5xl  font-serif font-bold mb-6 break-words">Let's Tell Your Story</h2>
+          <h2 className="text-4xl sm:text-5xl font-serif font-bold mb-6 break-words">Let's Tell Your Story</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">
             Have a story that needs to be told? Let's collaborate on your next editorial project.
           </p>

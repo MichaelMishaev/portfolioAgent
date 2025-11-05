@@ -109,7 +109,7 @@ export function InteractiveAgencyTemplate() {
             transition={{ duration: 0.8 }}
           >
             <motion.h1
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl  lg:text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black mb-6 leading-none break-words"
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl lg:text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black mb-6 leading-none break-words"
               style={{
                 background: "linear-gradient(135deg, #8B5CF6 0%, #06B6D4 100%)",
                 WebkitBackgroundClip: "text",
@@ -170,7 +170,7 @@ export function InteractiveAgencyTemplate() {
                 transition={{ delay: index * 0.1 }}
                 className="text-center p-6 rounded-2xl bg-gradient-to-br from-purple-900/20 to-cyan-900/20 border border-purple-500/20 backdrop-blur-sm"
               >
-                <div className="text-5xl md: text-4xl sm:text-5xl md:text-6xl  font-black mb-2 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent break-words">
+                <div className="text-5xl md:text-4xl sm:text-5xl md:text-6xl font-black mb-2 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent break-words">
                   {stat.value}
                 </div>
                 <div className="text-sm uppercase tracking-wider text-gray-400">{stat.label}</div>
@@ -184,7 +184,7 @@ export function InteractiveAgencyTemplate() {
       <section id="work" className="py-32 relative">
         <div className="container mx-auto px-6">
           <ScrollReveal>
-            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl  font-black mb-16 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent break-words">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-16 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent break-words">
               Featured Work
             </h2>
           </ScrollReveal>
@@ -203,7 +203,7 @@ export function InteractiveAgencyTemplate() {
                 <div className="grid md:grid-cols-2 gap-8 p-8 md:p-12">
                   <div className="flex flex-col justify-center">
                     <div className="text-sm text-cyan-400 font-mono mb-4">{project.category}</div>
-                    <h3 className="text-3xl sm:text-5xl   font-black mb-6 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-cyan-400 group-hover:bg-clip-text transition-all break-words">
+                    <h3 className="text-3xl sm:text-5xl font-black mb-6 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-cyan-400 group-hover:bg-clip-text transition-all break-words">
                       {project.title}
                     </h3>
                     <p className="text-lg text-gray-300 mb-6 leading-relaxed">{project.description}</p>
@@ -238,7 +238,7 @@ export function InteractiveAgencyTemplate() {
       <section id="services" className="py-32 relative">
         <div className="container mx-auto px-6">
           <ScrollReveal>
-            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl  font-black mb-16 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent break-words">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-16 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent break-words">
               What We Do
             </h2>
           </ScrollReveal>
@@ -270,7 +270,7 @@ export function InteractiveAgencyTemplate() {
         <div className="absolute inset-0 bg-gradient-to-br from-purple-900/10 to-cyan-900/10" />
         <div className="container mx-auto px-6 relative z-10">
           <ScrollReveal>
-            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl  font-black mb-16 text-center bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent break-words">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-16 text-center bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent break-words">
               Client Love
             </h2>
           </ScrollReveal>
@@ -310,7 +310,7 @@ export function InteractiveAgencyTemplate() {
           >
             <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAwIDEwIEwgNDAgMTAgTSAxMCAwIEwgMTAgNDAgTSAwIDIwIEwgNDAgMjAgTSAyMCAwIEwgMjAgNDAgTSAwIDMwIEwgNDAgMzAgTSAzMCAwIEwgMzAgNDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwwLjEpIiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=')] opacity-20" />
             <div className="relative z-10">
-              <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl  font-black mb-6 text-white break-words">Ready to Create Magic?</h2>
+              <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-6 text-white break-words">Ready to Create Magic?</h2>
               <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
                 Let's collaborate and build something extraordinary together.
               </p>
@@ -346,7 +346,7 @@ export function InteractiveAgencyTemplate() {
 
           {/* Skills - Interactive Agency */}
           <section className="py-20 border-t border-gray-800">
-            <h3 className="text-3xl sm:text-4xl  font-bold mb-12 text-center">Our Expertise</h3>
+            <h3 className="text-3xl sm:text-4xl font-bold mb-12 text-center">Our Expertise</h3>
             <div className="grid md:grid-cols-4 gap-6">
               {['Interactive Design', 'Motion Graphics', 'Web Development', 'Brand Strategy', 'UX/UI', 'Digital Marketing', 'Animation', '3D Design'].map((skill, i) => (
                 <div key={i} className="bg-gradient-to-br from-purple-600 to-pink-600 p-6 rounded-xl text-center hover:scale-105 transition-transform">
@@ -359,7 +359,7 @@ export function InteractiveAgencyTemplate() {
           {/* About - Interactive Agency */}
           <section className="py-20 border-t border-gray-800 bg-gradient-to-br from-gray-900 to-black">
             <div className="max-w-4xl mx-auto text-center">
-              <h3 className="text-3xl sm:text-4xl  font-bold mb-8">Who We Are</h3>
+              <h3 className="text-3xl sm:text-4xl font-bold mb-8">Who We Are</h3>
               <p className="text-2xl text-gray-300 mb-6 font-semibold">
                 We're an interactive agency creating engaging digital experiences that connect brands with audiences.
               </p>
@@ -371,7 +371,7 @@ export function InteractiveAgencyTemplate() {
 
           {/* Pricing - Interactive Agency */}
           <section className="py-20 border-t border-gray-800">
-            <h3 className="text-3xl sm:text-4xl  font-bold mb-12 text-center">Our Packages</h3>
+            <h3 className="text-3xl sm:text-4xl font-bold mb-12 text-center">Our Packages</h3>
             <div className="grid md:grid-cols-3 gap-8">
               {[
                 { name: 'Interactive Basic', price: '$8,000', features: ['Interactive Website', 'Basic Animations', '3 Revisions', 'Mobile Optimized'] },
@@ -381,7 +381,7 @@ export function InteractiveAgencyTemplate() {
                 <div key={i} className={`bg-gradient-to-br ${pkg.popular ? 'from-purple-600 to-pink-600' : 'from-gray-800 to-gray-900'} p-8 rounded-xl ${pkg.popular ? 'ring-4 ring-yellow-400 scale-105' : ''}`}>
                   {pkg.popular && <div className="text-xs font-bold text-yellow-300 mb-2 uppercase">Best Value</div>}
                   <h4 className="text-2xl font-bold mb-2 text-white">{pkg.name}</h4>
-                  <div className="text-4xl sm:text-5xl  font-bold text-white mb-8 break-words">{pkg.price}</div>
+                  <div className="text-4xl sm:text-5xl font-bold text-white mb-8 break-words">{pkg.price}</div>
                   <ul className="space-y-3 mb-8">
                     {pkg.features.map((f, j) => (
                       <li key={j} className="text-white font-medium">✓ {f}</li>
@@ -397,7 +397,7 @@ export function InteractiveAgencyTemplate() {
 
           {/* Timeline - Interactive Agency */}
           <section className="py-20 border-t border-gray-800">
-            <h3 className="text-3xl sm:text-4xl  font-bold mb-12 text-center">Our Story</h3>
+            <h3 className="text-3xl sm:text-4xl font-bold mb-12 text-center">Our Story</h3>
             <div className="max-w-3xl mx-auto space-y-6">
               {[
                 { year: '2024', title: 'Industry Leaders', desc: 'Recognized as top interactive agency' },

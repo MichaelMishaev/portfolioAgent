@@ -269,10 +269,10 @@ export function PhysicalProductTemplate() {
         <div className="max-w-full mx-auto">
           <FadeIn>
             <div className="text-center mb-12">
-              <h1 className="text-3xl sm:text-5xl md:text-5xl lg:text-6xl  xl:text-5xl sm:text-6xl md:text-7xl lg:text-8xl  font-bold mb-6 tracking-tight break-words">
+              <h1 className="text-3xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-6 tracking-tight break-words">
                 {productData.name}
               </h1>
-              <p className="text-xl sm:text-2xl md:text-3xl  text-gray-600 dark:text-gray-400 mb-8">
+              <p className="text-xl sm:text-2xl md:text-3xl text-gray-600 dark:text-gray-400 mb-8">
                 {productData.tagline}
               </p>
               <p className="text-xl text-gray-500 dark:text-gray-500 mb-8">
@@ -374,7 +374,7 @@ export function PhysicalProductTemplate() {
             <ScrollReveal key={feature.title}>
               <div className={`grid grid-cols-1 md:grid-cols-2 gap-16 items-center ${index % 2 === 1 ? "md:flex-row-reverse" : ""}`}>
                 <div className={index % 2 === 1 ? "md:order-2" : ""}>
-                  <h2 className="text-3xl sm:text-5xl   font-bold mb-6 break-words">
+                  <h2 className="text-3xl sm:text-5xl font-bold mb-6 break-words">
                     {feature.title}
                   </h2>
                   <p className="text-xl text-gray-600 dark:text-gray-400">
@@ -398,7 +398,7 @@ export function PhysicalProductTemplate() {
       <section id="specs" className="container mx-auto px-3 sm:px-3 py-32 bg-gray-50 dark:bg-gray-950">
         <ScrollReveal>
           <div className="max-w-full mx-auto">
-            <h2 className="text-3xl sm:text-5xl   font-bold mb-16 text-center break-words">
+            <h2 className="text-3xl sm:text-5xl font-bold mb-16 text-center break-words">
               {productData.specifications.title}
             </h2>
 
@@ -429,7 +429,7 @@ export function PhysicalProductTemplate() {
       <section className="container mx-auto px-3 sm:px-3 py-32">
         <ScrollReveal>
           <div className="max-w-full mx-auto">
-            <h2 className="text-3xl sm:text-5xl   font-bold mb-16 text-center break-words">
+            <h2 className="text-3xl sm:text-5xl font-bold mb-16 text-center break-words">
               {productData.inTheBox.title}
             </h2>
 
@@ -452,7 +452,7 @@ export function PhysicalProductTemplate() {
         <ScrollReveal>
           <div className="max-w-full mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl sm:text-5xl   font-bold mb-4 break-words">
+              <h2 className="text-3xl sm:text-5xl font-bold mb-4 break-words">
                 What Customers Say
               </h2>
               <div className="flex items-center justify-center gap-2 mb-2">
@@ -503,7 +503,7 @@ export function PhysicalProductTemplate() {
       <section className="container mx-auto px-3 sm:px-3 py-32">
         <ScrollReveal>
           <div className="max-w-full mx-auto">
-            <h2 className="text-3xl sm:text-5xl   font-bold mb-16 text-center break-words">
+            <h2 className="text-3xl sm:text-5xl font-bold mb-16 text-center break-words">
               {productData.comparison.title}
             </h2>
 
@@ -552,7 +552,7 @@ export function PhysicalProductTemplate() {
       <section className="container mx-auto px-3 sm:px-3 py-32 bg-gray-50 dark:bg-gray-950">
         <ScrollReveal>
           <div className="max-w-full mx-auto text-center">
-            <h2 className="text-5xl md: text-4xl sm:text-5xl md:text-6xl  font-bold mb-8 break-words">
+            <h2 className="text-5xl md:text-4xl sm:text-5xl md:text-6xl font-bold mb-8 break-words">
               Ready to experience perfection?
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-400 mb-12">

@@ -131,25 +131,25 @@ export function OnlineBusinessAgencyTemplate() {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <ScrollReveal>
               <div>
-                <div className="text-3xl sm:text-5xl   font-bold text-blue-600 mb-2 break-words">250+</div>
+                <div className="text-3xl sm:text-5xl font-bold text-blue-600 mb-2 break-words">250+</div>
                 <div className="text-gray-600 dark:text-gray-400">{data.stats?.projects || "Projects Completed"}</div>
               </div>
             </ScrollReveal>
             <ScrollReveal delay={0.1}>
               <div>
-                <div className="text-3xl sm:text-5xl   font-bold text-blue-600 mb-2 break-words">98%</div>
+                <div className="text-3xl sm:text-5xl font-bold text-blue-600 mb-2 break-words">98%</div>
                 <div className="text-gray-600 dark:text-gray-400">{data.stats?.satisfaction || "Client Satisfaction"}</div>
               </div>
             </ScrollReveal>
             <ScrollReveal delay={0.2}>
               <div>
-                <div className="text-3xl sm:text-5xl   font-bold text-blue-600 mb-2 break-words">$50M+</div>
+                <div className="text-3xl sm:text-5xl font-bold text-blue-600 mb-2 break-words">$50M+</div>
                 <div className="text-gray-600 dark:text-gray-400">{data.stats?.revenue || "Revenue Generated"}</div>
               </div>
             </ScrollReveal>
             <ScrollReveal delay={0.3}>
               <div>
-                <div className="text-3xl sm:text-5xl   font-bold text-blue-600 mb-2 break-words">15+</div>
+                <div className="text-3xl sm:text-5xl font-bold text-blue-600 mb-2 break-words">15+</div>
                 <div className="text-gray-600 dark:text-gray-400">{data.stats?.experience || "Years Experience"}</div>
               </div>
             </ScrollReveal>
@@ -161,7 +161,7 @@ export function OnlineBusinessAgencyTemplate() {
       <section id="services" className="container mx-auto px-3 md:px-3 max-w-full py-20 md:py-32">
         <ScrollReveal>
           <div className="text-center mb-16">
-            <h2 className="text-3xl md: text-4xl sm:text-5xl  font-bold mb-4 break-words">
+            <h2 className="text-3xl md:text-4xl sm:text-5xl font-bold mb-4 break-words">
               {data.services?.title || "Full-Service Digital Solutions"}
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-300 max-w-full mx-auto">
@@ -213,7 +213,7 @@ export function OnlineBusinessAgencyTemplate() {
       <section id="work" className="container mx-auto px-3 md:px-3 max-w-full py-20 md:py-32 bg-gradient-to-br from-slate-50 to-blue-50 dark:from-gray-800 dark:to-gray-900 rounded-3xl">
         <ScrollReveal>
           <div className="text-center mb-16">
-            <h2 className="text-3xl md: text-4xl sm:text-5xl  font-bold mb-4 break-words">
+            <h2 className="text-3xl md:text-4xl sm:text-5xl font-bold mb-4 break-words">
               {data.work?.title || "Recent Work"}
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-300">
@@ -283,7 +283,7 @@ export function OnlineBusinessAgencyTemplate() {
       <section id="process" className="container mx-auto px-3 md:px-3 max-w-full py-20 md:py-32">
         <ScrollReveal>
           <div className="text-center mb-16">
-            <h2 className="text-3xl md: text-4xl sm:text-5xl  font-bold mb-4 break-words">
+            <h2 className="text-3xl md:text-4xl sm:text-5xl font-bold mb-4 break-words">
               {data.process?.title || "Our Proven Process"}
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-300">
@@ -318,7 +318,7 @@ export function OnlineBusinessAgencyTemplate() {
       <section className="container mx-auto px-3 md:px-3 max-w-full py-20 md:py-32 border-t border-gray-200 dark:border-gray-800">
         <ScrollReveal>
           <div className="text-center mb-16">
-            <h2 className="text-3xl md: text-4xl sm:text-5xl  font-bold mb-4 break-words">
+            <h2 className="text-3xl md:text-4xl sm:text-5xl font-bold mb-4 break-words">
               {data.testimonials?.title || "Trusted by Industry Leaders"}
             </h2>
           </div>
@@ -363,7 +363,7 @@ export function OnlineBusinessAgencyTemplate() {
             <CardContent className="p-8 md:p-16 relative z-10">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                 <div>
-                  <h2 className="text-3xl md: text-3xl sm:text-4xl  font-bold text-white mb-4">
+                  <h2 className="text-3xl md:text-3xl sm:text-4xl font-bold text-white mb-4">
                     {data.cta?.title || "Ready to Scale Your Business?"}
                   </h2>
                   <p className="text-xl text-white/90 mb-6">

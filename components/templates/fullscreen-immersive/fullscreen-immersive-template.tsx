@@ -254,12 +254,12 @@ const containerRef = useRef(null);
 
         <div className="relative z-10 text-center px-3">
           <FadeIn>
-            <h1 className="text-4xl sm: text-4xl sm:text-5xl md:text-6xl lg:text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold mb-6 break-words">
+            <h1 className="text-4xl sm:text-4xl sm:text-5xl md:text-6xl lg:text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold mb-6 break-words">
               {portfolioData.name}
             </h1>
           </FadeIn>
           <FadeIn delay={0.2}>
-            <p className="text-xl sm:text-2xl md:text-3xl  text-gray-300 mb-12">
+            <p className="text-xl sm:text-2xl md:text-3xl text-gray-300 mb-12">
               {portfolioData.title}
             </p>
           </FadeIn>
@@ -301,7 +301,7 @@ const containerRef = useRef(null);
               >
                 {section.subtitle}
               </span>
-              <h2 className="text-3xl sm:text-5xl md:text-5xl lg:text-6xl  xl:text-5xl sm:text-6xl md:text-7xl lg:text-8xl  font-bold mb-6 break-words">
+              <h2 className="text-3xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-6 break-words">
                 {section.title}
               </h2>
               <p className="text-xl md:text-2xl text-gray-300 max-w-full mx-auto mb-4">
@@ -347,7 +347,7 @@ const containerRef = useRef(null);
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-5xl md: text-4xl sm:text-5xl md:text-6xl  font-bold mb-6 break-words">
+              <h2 className="text-5xl md:text-4xl sm:text-5xl md:text-6xl font-bold mb-6 break-words">
                 About Me
               </h2>
               <p className="text-xl text-gray-300 leading-relaxed mb-6">
@@ -380,7 +380,7 @@ const containerRef = useRef(null);
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl sm: text-3xl sm:text-5xl md:text-6xl lg:text-7xl  font-bold mb-4 break-words">
+            <h2 className="text-3xl sm:text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 break-words">
               My Process
             </h2>
             <p className="text-xl text-gray-400">
@@ -417,7 +417,7 @@ const containerRef = useRef(null);
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-5xl md: text-4xl sm:text-5xl md:text-6xl  font-bold mb-16 text-center break-words"
+            className="text-5xl md:text-4xl sm:text-5xl md:text-6xl font-bold mb-16 text-center break-words"
           >
             Services
           </motion.h2>
@@ -452,7 +452,7 @@ const containerRef = useRef(null);
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl sm: text-3xl sm:text-5xl md:text-6xl lg:text-7xl  font-bold mb-12 break-words">
+            <h2 className="text-3xl sm:text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-12 break-words">
               My Gear
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-full mx-auto">
@@ -485,7 +485,7 @@ const containerRef = useRef(null);
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl sm: text-3xl sm:text-5xl md:text-6xl lg:text-7xl  font-bold mb-4 break-words">
+            <h2 className="text-3xl sm:text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 break-words">
               By The Numbers
             </h2>
             <p className="text-xl text-gray-400">
@@ -503,7 +503,7 @@ const containerRef = useRef(null);
                 viewport={{ once: true }}
                 className="text-center"
               >
-                <div className="text-5xl md: text-4xl sm:text-5xl md:text-6xl  font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent break-words">
+                <div className="text-5xl md:text-4xl sm:text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent break-words">
                   {stat.value}
                 </div>
                 <div className="text-lg text-gray-400">{stat.label}</div>
@@ -525,7 +525,7 @@ const containerRef = useRef(null);
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl sm: text-3xl sm:text-5xl md:text-6xl lg:text-7xl  font-bold break-words">
+            <h2 className="text-3xl sm:text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold break-words">
               Expertise
             </h2>
           </motion.div>
@@ -557,7 +557,7 @@ const containerRef = useRef(null);
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl sm: text-3xl sm:text-5xl md:text-6xl lg:text-7xl  font-bold mb-4 break-words">
+            <h2 className="text-3xl sm:text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 break-words">
               Featured Work
             </h2>
             <p className="text-xl text-gray-400">
@@ -604,7 +604,7 @@ const containerRef = useRef(null);
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl sm: text-3xl sm:text-5xl md:text-6xl lg:text-7xl  font-bold break-words">
+            <h2 className="text-3xl sm:text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold break-words">
               Journey
             </h2>
           </motion.div>
@@ -643,7 +643,7 @@ const containerRef = useRef(null);
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl sm: text-3xl sm:text-5xl md:text-6xl lg:text-7xl  font-bold mb-4 break-words">
+            <h2 className="text-3xl sm:text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 break-words">
               Investment
             </h2>
             <p className="text-xl text-gray-400">
@@ -669,7 +669,7 @@ const containerRef = useRef(null);
                   </div>
                 )}
                 <h3 className="text-3xl font-bold mb-4">{plan.name}</h3>
-                <div className="text-3xl sm:text-4xl  font-bold mb-2 text-purple-400">{plan.price}</div>
+                <div className="text-3xl sm:text-4xl font-bold mb-2 text-purple-400">{plan.price}</div>
                 <p className="text-gray-400 mb-2">{plan.duration}</p>
                 <p className="text-sm text-gray-500 mb-6">{plan.deliverables}</p>
                 <ul className="space-y-3 mb-8">
@@ -701,7 +701,7 @@ const containerRef = useRef(null);
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl sm: text-3xl sm:text-5xl md:text-6xl lg:text-7xl  font-bold break-words">
+            <h2 className="text-3xl sm:text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold break-words">
               Kind Words
             </h2>
           </motion.div>
@@ -746,7 +746,7 @@ const containerRef = useRef(null);
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl sm: text-3xl sm:text-5xl md:text-6xl lg:text-7xl  font-bold break-words">
+            <h2 className="text-3xl sm:text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold break-words">
               Questions?
             </h2>
           </motion.div>
@@ -781,7 +781,7 @@ const containerRef = useRef(null);
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl sm:text-5xl md:text-5xl lg:text-6xl  xl:text-5xl sm:text-6xl md:text-7xl lg:text-8xl  font-bold mb-8 break-words">
+            <h2 className="text-3xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-8 break-words">
               Ready to Create?
             </h2>
             <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-2xl mx-auto">
@@ -815,7 +815,7 @@ const containerRef = useRef(null);
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl sm:text-5xl md:text-5xl lg:text-6xl  xl:text-5xl sm:text-6xl md:text-7xl lg:text-8xl  font-bold mb-8 break-words">
+            <h2 className="text-3xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-8 break-words">
               Let's Create
             </h2>
             <p className="text-xl md:text-2xl text-gray-400 mb-12 max-w-full mx-auto">

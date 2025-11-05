@@ -185,7 +185,7 @@ export function LinProfessionalAuthorityTemplate() {
             </ScrollReveal>
 
             <ScrollReveal delay={0.2}>
-              <p className="text-xl sm:text-2xl md:text-3xl  text-[#D4AF37] font-light mb-8">
+              <p className="text-xl sm:text-2xl md:text-3xl text-[#D4AF37] font-light mb-8">
                 {firmData.tagline}
               </p>
             </ScrollReveal>
@@ -212,7 +212,7 @@ export function LinProfessionalAuthorityTemplate() {
             {firmData.stats.map((stat, index) => (
               <ScrollReveal key={index} delay={index * 0.1}>
                 <div className="text-center">
-                  <div className="text-3xl sm:text-5xl   font-bold text-[#D4AF37] mb-2 break-words">
+                  <div className="text-3xl sm:text-5xl font-bold text-[#D4AF37] mb-2 break-words">
                     {stat.number}
                   </div>
                   <div className="text-sm md:text-base text-[#555555]">{stat.label}</div>
@@ -226,7 +226,7 @@ export function LinProfessionalAuthorityTemplate() {
       {/* Services Section */}
       <section id="services" className="container mx-auto px-4 py-20">
         <ScrollReveal>
-          <h2 className="font-['Playfair_Display']  text-3xl sm:text-5xl   font-bold text-center mb-4 text-[#1A1A1A] break-words">
+          <h2 className="font-['Playfair_Display'] text-3xl sm:text-5xl font-bold text-center mb-4 text-[#1A1A1A] break-words">
             Our Services
           </h2>
         </ScrollReveal>
@@ -260,7 +260,7 @@ export function LinProfessionalAuthorityTemplate() {
       <section id="team" className="bg-[#F8F8F8] py-20">
         <div className="container mx-auto px-4">
           <ScrollReveal>
-            <h2 className="font-['Playfair_Display']  text-3xl sm:text-5xl   font-bold text-center mb-4 text-[#1A1A1A] break-words">
+            <h2 className="font-['Playfair_Display'] text-3xl sm:text-5xl font-bold text-center mb-4 text-[#1A1A1A] break-words">
               Our Team
             </h2>
           </ScrollReveal>
@@ -276,7 +276,7 @@ export function LinProfessionalAuthorityTemplate() {
               <ScrollReveal key={index} delay={index * 0.1}>
                 <Card className="text-center p-8 border-0 shadow-md hover:shadow-xl transition-all">
                   <CardContent className="p-0">
-                    <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-br from-[#1A1A2E] to-[#D4AF37] flex items-center justify-center text-white  text-3xl sm:text-4xl  font-bold">
+                    <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-br from-[#1A1A2E] to-[#D4AF37] flex items-center justify-center text-white text-3xl sm:text-4xl font-bold">
                       {member.name.split(" ").map((n) => n[0]).join("")}
                     </div>
                     <h3 className="text-xl font-bold mb-2 text-[#1A1A1A]">{member.name}</h3>
@@ -294,7 +294,7 @@ export function LinProfessionalAuthorityTemplate() {
       <section id="contact" className="bg-gradient-to-br from-[#1A1A2E] to-[#16213E] text-white py-20">
         <div className="container mx-auto px-4 text-center">
           <ScrollReveal>
-            <h2 className="font-['Playfair_Display']  text-3xl sm:text-5xl   font-bold mb-6 break-words">
+            <h2 className="font-['Playfair_Display'] text-3xl sm:text-5xl font-bold mb-6 break-words">
               Ready to Get Started?
             </h2>
           </ScrollReveal>
