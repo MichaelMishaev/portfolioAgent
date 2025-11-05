@@ -346,10 +346,11 @@ export function TemplateGallery() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3, delay: index * 0.03 }}
           >
-            <Card className="h-full flex flex-col hover:shadow-2xl transition-all duration-500 group border-0 bg-card/50 backdrop-blur-sm overflow-hidden">
-              {/* Thumbnail with Enhanced Hover Effects */}
-              <CardHeader className="p-0 flex-shrink-0">
-                <div className="aspect-[4/3] bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 relative overflow-hidden cursor-pointer">
+            <Link href={`/templates/${template.id}`} onClick={handleTemplateClick} className="block h-full">
+              <Card className="h-full flex flex-col hover:shadow-2xl transition-all duration-500 group border-0 bg-card/50 backdrop-blur-sm overflow-hidden cursor-pointer">
+                {/* Thumbnail with Enhanced Hover Effects */}
+                <CardHeader className="p-0 flex-shrink-0">
+                  <div className="aspect-[4/3] bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 relative overflow-hidden">
                   <img
                     src={template.thumbnail}
                     alt={`${template.name} preview`}
@@ -364,18 +365,11 @@ export function TemplateGallery() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
                   {/* Floating Action Buttons */}
-                  <div className="absolute inset-0 flex items-center justify-center gap-3 opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
-                    <Button
-                      size="lg"
-                      variant="secondary"
-                      className="shadow-2xl backdrop-blur-sm bg-white/95 hover:bg-white border-2 border-white/20 font-semibold"
-                      asChild
-                    >
-                      <Link href={`/templates/${template.id}`} onClick={handleTemplateClick}>
-                        <FiEye className="mr-2 h-5 w-5" />
-                        {language === 'en' ? 'Preview' : 'Просмотр'}
-                      </Link>
-                    </Button>
+                  <div className="absolute inset-0 flex items-center justify-center gap-3 opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0 pointer-events-none">
+                    <div className="shadow-2xl backdrop-blur-sm bg-white/95 border-2 border-white/20 font-semibold px-6 py-3 rounded-lg inline-flex items-center gap-2">
+                      <FiEye className="h-5 w-5" />
+                      <span className="font-semibold">{language === 'en' ? 'Preview' : 'Просмотр'}</span>
+                    </div>
                   </div>
 
                   {/* Difficulty Badge - Top Right */}
@@ -398,11 +392,11 @@ export function TemplateGallery() {
               <div className="p-5 flex flex-col flex-grow">
                 {/* Title and Price */}
                 <div className="flex items-start justify-between gap-3 mb-3">
-                  <Link href={`/templates/${template.id}`} onClick={handleTemplateClick} className="flex-1 min-w-0">
+                  <div className="flex-1 min-w-0">
                     <CardTitle className="text-lg font-bold group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors line-clamp-2 leading-tight">
                       {template.name}
                     </CardTitle>
-                  </Link>
+                  </div>
                   <div className="flex flex-col items-end flex-shrink-0">
                     <span className="text-2xl font-bold text-blue-600 dark:text-blue-400">
                       ${template.price}
@@ -450,19 +444,14 @@ export function TemplateGallery() {
 
                 {/* CTA Button - Try It */}
                 <div className="mt-auto">
-                  <Button
-                    asChild
-                    className="w-full h-12 text-base font-bold bg-blue-600 hover:bg-blue-700 shadow-lg hover:shadow-xl transition-all duration-200 rounded-xl"
-                    size="lg"
-                  >
-                    <Link href={`/templates/${template.id}`} onClick={handleTemplateClick} className="flex items-center justify-center gap-2.5">
-                      <FiEye className="h-5 w-5" />
-                      <span>{t.ui.tryIt}</span>
-                    </Link>
-                  </Button>
+                  <div className="w-full h-12 text-base font-bold bg-blue-600 text-white shadow-lg rounded-xl flex items-center justify-center gap-2.5">
+                    <FiEye className="h-5 w-5" />
+                    <span>{t.ui.tryIt}</span>
+                  </div>
                 </div>
               </div>
             </Card>
+            </Link>
           </motion.div>
         ))}
 
