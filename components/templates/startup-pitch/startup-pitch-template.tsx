@@ -122,7 +122,7 @@ export function StartupPitchTemplate() {
                 <FiZap className="text-orange-500" />
                 {portfolioData.badge}
               </div>
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl  font-bold mb-6 leading-tight bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent break-words">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 leading-tight bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent break-words">
                 {portfolioData.headline}
               </h1>
               <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
@@ -193,7 +193,7 @@ export function StartupPitchTemplate() {
                 transition={{ delay: index * 0.1 }}
                 className="text-center"
               >
-                <div className="text-3xl sm:text-5xl   font-bold text-blue-600 mb-2 break-words">
+                <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-blue-600 mb-2 break-words">
                   {counts[metric.key as keyof typeof counts]}{metric.suffix}
                 </div>
                 <div className="text-sm text-gray-600 font-medium">{metric.label}</div>
@@ -208,7 +208,7 @@ export function StartupPitchTemplate() {
         <div className="container mx-auto px-6">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <h2 className="text-3xl sm:text-5xl   font-bold mb-4 break-words">Powerful Features</h2>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 break-words">Powerful Features</h2>
               <p className="text-xl text-gray-600 max-w-2xl mx-auto">
                 Everything you need to grow your business, all in one place
               </p>
@@ -242,7 +242,7 @@ export function StartupPitchTemplate() {
         <div className="container mx-auto px-6">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <h2 className="text-3xl sm:text-5xl   font-bold mb-4 break-words">How It Works</h2>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 break-words">How It Works</h2>
               <p className="text-xl text-gray-600">Get started in 3 simple steps</p>
             </div>
           </ScrollReveal>
@@ -278,7 +278,7 @@ export function StartupPitchTemplate() {
         <div className="container mx-auto px-6">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <h2 className="text-3xl sm:text-5xl   font-bold mb-4 break-words">Simple, Transparent Pricing</h2>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 break-words">Simple, Transparent Pricing</h2>
               <p className="text-xl text-gray-600">Choose the plan that's right for you</p>
             </div>
           </ScrollReveal>
@@ -305,7 +305,7 @@ export function StartupPitchTemplate() {
                 )}
                 <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
                 <div className="mb-6">
-                  <span className="text-4xl sm:text-5xl  font-bold break-words">${plan.price}</span>
+                  <span className="text-3xl sm:text-4xl md:text-5xl font-bold break-words">${plan.price}</span>
                   <span className={plan.popular ? "text-blue-100" : "text-gray-500"}>/month</span>
                 </div>
                 <ul className="space-y-3 mb-8">
@@ -336,7 +336,7 @@ export function StartupPitchTemplate() {
         <div className="container mx-auto px-6">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <h2 className="text-3xl sm:text-5xl   font-bold mb-4 break-words">Loved by Thousands</h2>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 break-words">Loved by Thousands</h2>
               <p className="text-xl text-gray-600">See what our customers have to say</p>
             </div>
           </ScrollReveal>
@@ -375,7 +375,7 @@ export function StartupPitchTemplate() {
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <ScrollReveal>
-              <h2 className="text-3xl sm:text-5xl   font-bold mb-6 text-center break-words">About FlowMetrics</h2>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-center break-words">About FlowMetrics</h2>
               <p className="text-xl text-gray-600 leading-relaxed text-center">
                 {portfolioData.about}
               </p>
@@ -389,7 +389,7 @@ export function StartupPitchTemplate() {
         <div className="container mx-auto px-6">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <h2 className="text-3xl sm:text-5xl   font-bold mb-4 break-words">Our Expertise</h2>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 break-words">Our Expertise</h2>
               <p className="text-xl text-gray-600">Technologies & capabilities that power our platform</p>
             </div>
           </ScrollReveal>
@@ -417,7 +417,7 @@ export function StartupPitchTemplate() {
         <div className="container mx-auto px-6">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <h2 className="text-3xl sm:text-5xl   font-bold mb-4 break-words">Our Journey</h2>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 break-words">Our Journey</h2>
               <p className="text-xl text-gray-600">From startup to scale</p>
             </div>
           </ScrollReveal>
@@ -452,7 +452,7 @@ export function StartupPitchTemplate() {
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
             <ScrollReveal>
-              <h2 className="text-3xl sm:text-5xl   font-bold mb-6 break-words">Get in Touch</h2>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 break-words">Get in Touch</h2>
               <p className="text-xl text-gray-600 mb-8">
                 Have questions? Want to see a demo? Our team is here to help.
               </p>
@@ -487,7 +487,7 @@ export function StartupPitchTemplate() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md: text-4xl sm:text-5xl md:text-6xl  font-bold mb-6 break-words">Ready to Get Started?</h2>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 break-words">Ready to Get Started?</h2>
             <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
               Join thousands of companies already growing with our platform
             </p>
