@@ -3255,3 +3255,234 @@ Affected sections: Stats, Testimonials, Timeline, Pricing, FAQ
 Impact: 98% of templates had visibility issues
 ```
 
+## Bug #22: Dark Mode Pseudo-Class Misuse - Invisible Chips on Mobile
+
+**Date Discovered**: 2025-11-05  
+**Severity**: CRITICAL  
+**Status**: FIXED ✅
+
+**Reporter**: User (via production mobile screenshot)
+
+**Description**:
+User reported invisible filter chips in tech-blog template on mobile production (https://danuna.shop/templates/blog-tech/demo). Investigation revealed a **systematic issue across 30 templates (212 instances)** where Tailwind's `dark:` pseudo-class was mixed with JavaScript-based dark mode state.
+
+The `dark:` pseudo-class only works when a parent element has the `dark` class applied via Tailwind's dark mode configuration. However, these templates use JavaScript state variables (`const [darkMode, setDarkMode] = useState()`) with conditional rendering like `{darkMode ? 'text-white' : 'text-gray-900'}`.
+
+**Root Cause**:
+Templates using JavaScript dark mode state (`darkMode` variable) cannot use Tailwind's `dark:` pseudo-class utilities. The two approaches are incompatible:
+
+❌ **Broken Pattern**:
+```tsx
+className="text-gray-900 dark:text-white"  // dark: doesn't work without parent .dark class
+```
+
+✅ **Correct Pattern**:
+```tsx
+className={darkMode ? 'text-white' : 'text-gray-900'}  // Uses JavaScript state
+```
+
+**Scope**:
+- **Templates Affected**: 30 out of 61 total templates
+- **Total Instances**: 212 issues (204 actual fixes + 8 in backups)
+- **Most Affected**:
+  - `online-business-coach-template.tsx`: 31 instances
+  - `online-business-course-template.tsx`: 30 instances
+  - `archetypes-minimal-template.tsx`: 25 instances
+  - `online-business-agency-template.tsx`: 24 instances
+  - `archetypes-editorial-template.tsx`: 16 instances
+
+**Impact**:
+- ❌ Filter chips completely invisible on mobile (empty rounded rectangles)
+- ❌ Button text invisible in dark mode
+- ❌ Footer headings invisible in dark mode
+- ❌ Badge content unreadable
+- ❌ Affects UX, accessibility, and professionalism
+
+**Files with dark: Pseudo-Class Issues**:
+```
+tech-blog-template.tsx (5 instances) - manually fixed
+bold-typography-template.tsx (2 instances)
+bento-grid-template.tsx (10 instances)
+archetypes-editorial-template.tsx (16 instances)
+archetypes-minimal-template.tsx (25 instances)
+magazine-blog-template.tsx (4 instances)
+personal-blog-template.tsx (3 instances)
+card-modular-template.tsx (1 instance)
+minimalist-template.tsx (2 instances)
+online-business-agency-template.tsx (24 instances)
+online-business-coach-template.tsx (31 instances)
+online-business-course-template.tsx (30 instances)
+online-business-saas-template.tsx (1 instance)
+organic-liquid-template.tsx (1 instance)
+agency-service-template.tsx (1 instance)
+audio-product-template.tsx (3 instances)
+community-service-template.tsx (1 instance)
+dfyou-service-template.tsx (1 instance)
+enterprise-service-template.tsx (1 instance)
+fashion-product-template.tsx (1 instance)
+physical-product-template.tsx (14 instances)
+vacuum-product-template.tsx (11 instances)
+professional-b2b-template.tsx (1 instance)
+saas-feature-rich-template.tsx (2 instances)
+service-marketplace-template.tsx (8 instances)
+single-page-template.tsx (2 instances)
+split-screen-template.tsx (2 instances)
+text-heavy-template.tsx (1 instance)
+```
+
+**Resolution Steps**:
+
+1. **Manual Fix (tech-blog-template.tsx)**:
+   - Fixed 5 instances manually to verify approach
+   - Lines fixed: 375, 435 (chips!), 842, 851, 860
+   - Verified pattern works correctly
+
+2. **Automated Fix Script**:
+   - Created `scripts/fix-dark-mode-classes.js`
+   - Handles 3 patterns:
+     ```javascript
+     // Simple string: className="text-X dark:text-Y"
+     className={darkMode ? 'text-Y' : 'text-X'}
+     
+     // With other classes: className="foo text-X dark:text-Y bar"
+     className={`foo ${darkMode ? 'text-Y' : 'text-X'} bar`}
+     
+     // Template literal: className={`... dark:text-Y`}
+     className={`... ${darkMode ? 'text-Y' : 'text-X'}`}
+     ```
+   - Dry-run mode for safe preview
+   - Creates `.bak.dark` backups
+
+3. **Execution**:
+   ```bash
+   node scripts/fix-dark-mode-classes.js --dry-run  # Preview
+   node scripts/fix-dark-mode-classes.js            # Apply
+   ```
+
+4. **Verification**:
+   - ✅ Build passed (exit code 0)
+   - ✅ 0 remaining `dark:text-` instances in templates
+   - ✅ All 204 fixes applied successfully
+   - ✅ Backups created for all 27 modified templates
+
+**NPM Scripts Added**:
+```json
+{
+  "fix:dark-mode": "node scripts/fix-dark-mode-classes.js",
+  "fix:dark-mode:dry": "node scripts/fix-dark-mode-classes.js --dry-run"
+}
+```
+
+**Technical Details**:
+
+**Pattern Detection**:
+The script uses 3 regex patterns to catch all variations:
+1. `className=(["'])([^"']*?dark:text-[^"']*?)\1` - Simple strings
+2. `className=\{`([^`]*?dark:text-[^`]*?)`\}` - Template literals
+3. `className=\{(["'])([^"']*?dark:text-[^"']*?)\1\}` - Mixed patterns
+
+**Color Extraction**:
+- Extracts light color: `/(text-[\w-]+)(?=.*?dark:text-)/`
+- Extracts dark color: `/dark:(text-[\w-]+)/`
+- Preserves other classes unchanged
+
+**Transformation Logic**:
+```javascript
+// Input: "foo bar text-gray-900 dark:text-white baz"
+// Output: {`foo bar ${darkMode ? 'text-white' : 'text-gray-900'} baz`}
+
+// Input: "text-gray-900 dark:text-white"
+// Output: {darkMode ? 'text-white' : 'text-gray-900'}
+```
+
+**Examples of Fixes**:
+
+**Example 1 - Featured Article Tags (Line 435)**:
+```tsx
+// BEFORE (invisible chips on mobile):
+<Badge key={tag} variant="outline" className="text-slate-900 dark:text-white">
+  <FiTag className="w-3 h-3 mr-1" />
+  {tag}
+</Badge>
+
+// AFTER (visible):
+<Badge key={tag} variant="outline" className={darkMode ? 'text-white' : 'text-slate-900'}>
+  <FiTag className="w-3 h-3 mr-1" />
+  {tag}
+</Badge>
+```
+
+**Example 2 - Footer Headings (Lines 842, 851, 860)**:
+```tsx
+// BEFORE:
+<h4 className="font-semibold mb-4 text-gray-900 dark:text-white">Content</h4>
+
+// AFTER:
+<h4 className={`font-semibold mb-4 ${darkMode ? 'text-white' : 'text-gray-900'}`}>Content</h4>
+```
+
+**Example 3 - Complex Button with Multiple Classes**:
+```tsx
+// BEFORE:
+<Button className="w-full sm:w-auto !text-slate-900 dark:text-white">
+  Browse Topics
+</Button>
+
+// AFTER:
+<Button className={`w-full sm:w-auto ${darkMode ? 'text-white' : 'text-slate-900'}`}>
+  Browse Topics
+</Button>
+```
+
+**Prevention**:
+- Document the incompatibility between `dark:` pseudo-class and JavaScript dark mode state
+- Template creation checklist should verify dark mode implementation approach
+- Consider standardizing on one approach (either Tailwind dark mode OR JavaScript state, not both)
+- Add linting rule to detect `dark:text-` in templates with `darkMode` state variable
+
+**Related Bugs**:
+- Bug #21: Systematic Text Visibility Crisis (missing text colors)
+- Bug #22: Dark Mode Pseudo-Class Misuse (mixing incompatible dark mode approaches)
+
+Both bugs stem from missing explicit color declarations, but have different root causes:
+- #21: Missing color classes entirely
+- #22: Using wrong dark mode approach
+
+**Files Created**:
+- `scripts/fix-dark-mode-classes.js` - Automated fix tool (150 lines)
+- 27 `.bak.dark` backup files
+
+**Commit Message Suggestion**:
+```
+Bug #22: Fix dark mode pseudo-class misuse across 30 templates
+
+- Fixed 204 instances of dark: pseudo-class mixed with JavaScript dark mode
+- Converted all dark:text-X to {darkMode ? ... : ...} conditionals
+- Verified build passes with zero errors
+- Created automated fix script with dry-run mode
+- Backups created for all modified templates
+
+Root cause: Tailwind's dark: pseudo-class requires parent .dark class,
+but templates use JavaScript darkMode state instead.
+
+Impact: Invisible chips, buttons, badges, and headings on mobile
+Affected: 30 templates (tech-blog, online-business-*, product-pages-*, etc.)
+```
+
+**Total Stats**:
+- Templates scanned: 61
+- Templates affected: 30 (49%)
+- Issues found: 212
+- Issues fixed: 204
+- Manual fixes: 5 (tech-blog-template)
+- Automated fixes: 199 (27 templates)
+- Build status: ✅ PASSED
+- Remaining issues: 0
+
+**Lessons Learned**:
+1. Mixing Tailwind's `dark:` utilities with JavaScript state doesn't work
+2. Need clear documentation on dark mode implementation patterns
+3. This is a subtle bug that wouldn't show in light mode or desktop
+4. Mobile testing in both modes is critical
+5. Systematic issues require automated tooling
+

@@ -59,7 +59,7 @@ export function OnlineBusinessAgencyTemplate() {
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 dark:bg-gray-900/90 backdrop-blur-md border-b border-slate-200 dark:border-gray-800">
         <div className="container mx-auto px-3 md:px-3 max-w-full py-4 flex items-center justify-between">
-          <Link href="/" className={`font-medium text-gray-600 hover:text-blue-600 dark:hover:text-blue-400 transition-colors ${darkMode ? 'text-gray-300' : 'text-sm'}`}>
+          <Link href="/" className="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
             {tt.common?.backToGallery || "← Back to Gallery"}
           </Link>
           <div className="flex items-center gap-6">
@@ -85,13 +85,13 @@ export function OnlineBusinessAgencyTemplate() {
       <section className="container mx-auto px-3 md:px-3 max-w-full pt-32 pb-20 md:pt-40 md:pb-32">
         <div className="max-w-full mx-auto text-center">
           <FadeIn>
-            <Badge className={`mb-6 bg-blue-100 dark:bg-blue-900/30 border-0 px-3 py-2 ${darkMode ? 'text-blue-300' : 'text-blue-700'}`}>
+            <Badge className="mb-6 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 border-0 px-3 py-2">
               <FiAward className="mr-2" />
               {data.badge || "Award-Winning Digital Agency"}
             </Badge>
 
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight text-gray-900">
-              <span className={darkMode ? 'text-white' : 'text-gray-900'}>
+              <span className="text-gray-900 dark:text-white">
                 {data.hero?.mainTitle || "We Build Digital"}
               </span>
               <br />
@@ -100,7 +100,7 @@ export function OnlineBusinessAgencyTemplate() {
               </span>
             </h1>
 
-            <p className={`md:text-2xl text-gray-600 mb-12 leading-relaxed max-w-full mx-auto ${darkMode ? 'text-gray-300' : 'text-xl'}`}>
+            <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-12 leading-relaxed max-w-full mx-auto">
               {data.heroSubtitle || "We help ambitious businesses scale with custom web development, strategic marketing, and data-driven growth solutions."}
             </p>
 
@@ -132,25 +132,25 @@ export function OnlineBusinessAgencyTemplate() {
             <ScrollReveal>
               <div>
                 <div className="text-3xl sm:text-5xl font-bold text-blue-600 mb-2 break-words">250+</div>
-                <div className={darkMode ? 'text-gray-400' : 'text-gray-600'}>{data.stats?.projects || "Projects Completed"}</div>
+                <div className="text-gray-600 dark:text-gray-400">{data.stats?.projects || "Projects Completed"}</div>
               </div>
             </ScrollReveal>
             <ScrollReveal delay={0.1}>
               <div>
                 <div className="text-3xl sm:text-5xl font-bold text-blue-600 mb-2 break-words">98%</div>
-                <div className={darkMode ? 'text-gray-400' : 'text-gray-600'}>{data.stats?.satisfaction || "Client Satisfaction"}</div>
+                <div className="text-gray-600 dark:text-gray-400">{data.stats?.satisfaction || "Client Satisfaction"}</div>
               </div>
             </ScrollReveal>
             <ScrollReveal delay={0.2}>
               <div>
                 <div className="text-3xl sm:text-5xl font-bold text-blue-600 mb-2 break-words">$50M+</div>
-                <div className={darkMode ? 'text-gray-400' : 'text-gray-600'}>{data.stats?.revenue || "Revenue Generated"}</div>
+                <div className="text-gray-600 dark:text-gray-400">{data.stats?.revenue || "Revenue Generated"}</div>
               </div>
             </ScrollReveal>
             <ScrollReveal delay={0.3}>
               <div>
                 <div className="text-3xl sm:text-5xl font-bold text-blue-600 mb-2 break-words">15+</div>
-                <div className={darkMode ? 'text-gray-400' : 'text-gray-600'}>{data.stats?.experience || "Years Experience"}</div>
+                <div className="text-gray-600 dark:text-gray-400">{data.stats?.experience || "Years Experience"}</div>
               </div>
             </ScrollReveal>
           </div>
@@ -164,7 +164,7 @@ export function OnlineBusinessAgencyTemplate() {
             <h2 className="text-3xl md:text-4xl sm:text-5xl font-bold mb-4 break-words text-gray-900">
               {data.services?.title || "Full-Service Digital Solutions"}
             </h2>
-            <p className={`text-gray-600 max-w-full mx-auto ${darkMode ? 'text-gray-300' : 'text-lg'}`}>
+            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-full mx-auto">
               {data.services?.subtitle || "From strategy to execution, we handle everything your business needs to thrive online"}
             </p>
           </div>
@@ -184,7 +184,7 @@ export function OnlineBusinessAgencyTemplate() {
                     <service.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-2xl font-bold mb-3 text-gray-900">{service.title}</h3>
-                  <p className={`mb-6 ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+                  <p className="text-gray-600 dark:text-gray-300 mb-6">
                     {service.description}
                   </p>
                   <ul className="space-y-2">
@@ -216,7 +216,7 @@ export function OnlineBusinessAgencyTemplate() {
             <h2 className="text-3xl md:text-4xl sm:text-5xl font-bold mb-4 break-words text-gray-900">
               {data.work?.title || "Recent Work"}
             </h2>
-            <p className={`text-gray-600 ${darkMode ? 'text-gray-300' : 'text-lg'}`}>
+            <p className="text-lg text-gray-600 dark:text-gray-300">
               {data.work?.subtitle || "Case studies from our portfolio"}
             </p>
           </div>
@@ -267,7 +267,7 @@ export function OnlineBusinessAgencyTemplate() {
                 </div>
                 <CardContent className="p-6">
                   <h3 className="text-xl font-bold mb-2 text-gray-900">{project.title}</h3>
-                  <p className={`mb-3 ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>{project.client}</p>
+                  <p className="text-gray-600 dark:text-gray-400 mb-3">{project.client}</p>
                   <div className="flex items-center justify-between">
                     <span className="text-blue-600 font-semibold">{project.result}</span>
                     <FiArrowRight className="group-hover:translate-x-2 transition-transform" />
@@ -286,7 +286,7 @@ export function OnlineBusinessAgencyTemplate() {
             <h2 className="text-3xl md:text-4xl sm:text-5xl font-bold mb-4 break-words text-gray-900">
               {data.process?.title || "Our Proven Process"}
             </h2>
-            <p className={`text-gray-600 ${darkMode ? 'text-gray-300' : 'text-lg'}`}>
+            <p className="text-lg text-gray-600 dark:text-gray-300">
               {data.process?.subtitle || "A systematic approach to delivering exceptional results"}
             </p>
           </div>
@@ -305,7 +305,7 @@ export function OnlineBusinessAgencyTemplate() {
                   {phase.step}
                 </div>
                 <h3 className="text-xl font-bold mb-2 text-gray-900">{phase.title}</h3>
-                <p className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+                <p className="text-gray-600 dark:text-gray-400 text-sm">
                   {phase.description}
                 </p>
               </div>
@@ -338,14 +338,14 @@ export function OnlineBusinessAgencyTemplate() {
                       <FiCheckCircle key={i} className="w-5 h-5 text-blue-500" />
                     ))}
                   </div>
-                  <p className={`mb-6 italic ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>
+                  <p className="text-gray-700 dark:text-gray-300 mb-6 italic">
                     {data.testimonials?.quote || "Working with this agency transformed our digital presence. Professional, efficient, and results-driven. Highly recommended!"}
                   </p>
                   <div className="flex items-center gap-3">
                     <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-400 to-cyan-500"></div>
                     <div>
                       <div className="font-semibold">{testimonial.name}</div>
-                      <div className={`text-gray-600 ${darkMode ? 'text-gray-400' : 'text-sm'}`}>{testimonial.role}</div>
+                      <div className="text-sm text-gray-600 dark:text-gray-400">{testimonial.role}</div>
                     </div>
                   </div>
                 </CardContent>
@@ -383,19 +383,19 @@ export function OnlineBusinessAgencyTemplate() {
                     <input
                       type="text"
                       placeholder={data.cta?.namePlaceholder || "Your Name"}
-                      className={`w-full px-3 py-3 rounded-xl border-0 focus:outline-none focus:ring-2 focus:ring-white/50 bg-white/90 dark:bg-gray-800 ${darkMode ? 'text-white' : 'text-gray-900'}`}
+                      className="w-full px-3 py-3 rounded-xl border-0 focus:outline-none focus:ring-2 focus:ring-white/50 bg-white/90 dark:bg-gray-800 text-gray-900 dark:text-white"
                     />
                     <input
                       type="email"
                       placeholder={data.cta?.emailPlaceholder || "Your Email"}
-                      className={`w-full px-3 py-3 rounded-xl border-0 focus:outline-none focus:ring-2 focus:ring-white/50 bg-white/90 dark:bg-gray-800 ${darkMode ? 'text-white' : 'text-gray-900'}`}
+                      className="w-full px-3 py-3 rounded-xl border-0 focus:outline-none focus:ring-2 focus:ring-white/50 bg-white/90 dark:bg-gray-800 text-gray-900 dark:text-white"
                     />
                     <input
                       type="text"
                       placeholder={data.cta?.websitePlaceholder || "Company Website"}
-                      className={`w-full px-3 py-3 rounded-xl border-0 focus:outline-none focus:ring-2 focus:ring-white/50 bg-white/90 dark:bg-gray-800 ${darkMode ? 'text-white' : 'text-gray-900'}`}
+                      className="w-full px-3 py-3 rounded-xl border-0 focus:outline-none focus:ring-2 focus:ring-white/50 bg-white/90 dark:bg-gray-800 text-gray-900 dark:text-white"
                     />
-                    <select className={`w-full px-3 py-3 rounded-xl border-0 focus:outline-none focus:ring-2 focus:ring-white/50 bg-white/90 dark:bg-gray-800 ${darkMode ? 'text-white' : 'text-gray-900'}`}>
+                    <select className="w-full px-3 py-3 rounded-xl border-0 focus:outline-none focus:ring-2 focus:ring-white/50 bg-white/90 dark:bg-gray-800 text-gray-900 dark:text-white">
                       <option>{data.cta?.budgetLabel || "Project Budget"}</option>
                       <option>$10K - $25K</option>
                       <option>$25K - $50K</option>
@@ -420,7 +420,7 @@ export function OnlineBusinessAgencyTemplate() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
             <div>
               <h3 className="font-bold text-lg mb-4 text-gray-900">{tt.common?.services || "Services"}</h3>
-              <ul className={`space-y-2 text-gray-600 ${darkMode ? 'text-gray-400' : 'text-sm'}`}>
+              <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-400">
                 <li><a href="#" className="hover:text-blue-600 transition-colors">{data.footer?.webDev || "Web Development"}</a></li>
                 <li><a href="#" className="hover:text-blue-600 transition-colors">{data.footer?.digitalMarketing || "Digital Marketing"}</a></li>
                 <li><a href="#" className="hover:text-blue-600 transition-colors">{data.footer?.brandStrategy || "Brand Strategy"}</a></li>
@@ -429,7 +429,7 @@ export function OnlineBusinessAgencyTemplate() {
             </div>
             <div>
               <h3 className="font-bold text-lg mb-4 text-gray-900">Company</h3>
-              <ul className={`space-y-2 text-gray-600 ${darkMode ? 'text-gray-400' : 'text-sm'}`}>
+              <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-400">
                 <li><a href="#" className="hover:text-blue-600 transition-colors">{data.footer?.aboutUs || "About Us"}</a></li>
                 <li><a href="#" className="hover:text-blue-600 transition-colors">{data.footer?.ourTeam || "Our Team"}</a></li>
                 <li><a href="#" className="hover:text-blue-600 transition-colors">{data.footer?.careers || "Careers"}</a></li>
@@ -438,7 +438,7 @@ export function OnlineBusinessAgencyTemplate() {
             </div>
             <div>
               <h3 className="font-bold text-lg mb-4 text-gray-900">Resources</h3>
-              <ul className={`space-y-2 text-gray-600 ${darkMode ? 'text-gray-400' : 'text-sm'}`}>
+              <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-400">
                 <li><a href="#" className="hover:text-blue-600 transition-colors">Blog</a></li>
                 <li><a href="#" className="hover:text-blue-600 transition-colors">{data.footer?.caseStudies || "Case Studies"}</a></li>
                 <li><a href="#" className="hover:text-blue-600 transition-colors">{data.footer?.whitepapers || "Whitepapers"}</a></li>
@@ -461,7 +461,7 @@ export function OnlineBusinessAgencyTemplate() {
             </div>
           </div>
 
-          <div className={`pt-8 border-t border-gray-200 dark:border-gray-800 text-sm text-gray-600 ${darkMode ? 'text-gray-400' : 'text-center'}`}>
+          <div className="pt-8 border-t border-gray-200 dark:border-gray-800 text-center text-sm text-gray-600 dark:text-gray-400">
             <p>{data.footer?.copyright || "© 2025 Digital Agency. All rights reserved. | Privacy Policy • Terms of Service"}</p>
           </div>
         </div>

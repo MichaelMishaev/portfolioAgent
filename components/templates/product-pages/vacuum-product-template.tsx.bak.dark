@@ -272,7 +272,7 @@ export function VacuumProductTemplate() {
             {/* Left: Product Info */}
             <FadeIn>
               <div>
-                <Badge className={`mb-4 bg-blue-100 dark:bg-blue-900/30 border-blue-200 dark:border-blue-800 ${darkMode ? 'text-blue-400' : 'text-blue-700'}`}>
+                <Badge className="mb-4 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 border-blue-200 dark:border-blue-800">
                   New Release
                 </Badge>
                 <h1 className="text-6xl md:text-7xl font-bold mb-6 tracking-tight text-gray-900">
@@ -288,15 +288,15 @@ export function VacuumProductTemplate() {
                 {/* Performance Metrics Grid */}
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8 p-6 bg-gray-100 dark:bg-gray-800 rounded-2xl">
                   <div className="text-center">
-                    <div className={`font-bold text-blue-600 ${darkMode ? 'text-blue-400' : 'text-3xl'}`}>{productData.performanceMetrics.suctionPower}</div>
+                    <div className="text-3xl font-bold text-blue-600 dark:text-blue-400">{productData.performanceMetrics.suctionPower}</div>
                     <div className="text-xs text-muted-foreground mt-1">Suction</div>
                   </div>
                   <div className="text-center">
-                    <div className={`font-bold text-blue-600 ${darkMode ? 'text-blue-400' : 'text-3xl'}`}>{productData.performanceMetrics.runtime}</div>
+                    <div className="text-3xl font-bold text-blue-600 dark:text-blue-400">{productData.performanceMetrics.runtime}</div>
                     <div className="text-xs text-muted-foreground mt-1">Runtime</div>
                   </div>
                   <div className="text-center">
-                    <div className={`font-bold text-blue-600 ${darkMode ? 'text-blue-400' : 'text-3xl'}`}>{productData.performanceMetrics.filtration}</div>
+                    <div className="text-3xl font-bold text-blue-600 dark:text-blue-400">{productData.performanceMetrics.filtration}</div>
                     <div className="text-xs text-muted-foreground mt-1">Filtration</div>
                   </div>
                 </div>
@@ -309,7 +309,7 @@ export function VacuumProductTemplate() {
                   <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
                     Add to Cart
                   </Button>
-                  <Button size="lg" variant="outline" className={darkMode ? 'text-white' : 'text-slate-900'}>
+                  <Button size="lg" variant="outline" className="text-slate-900 dark:text-white">
                     Watch Demo
                   </Button>
                 </div>
@@ -386,7 +386,7 @@ export function VacuumProductTemplate() {
 
                     {/* Stat Display */}
                     <div className="inline-block p-8 bg-white dark:bg-gray-900 rounded-2xl border-2 border-blue-200 dark:border-blue-900">
-                      <div className={`sm:text-5xl font-bold text-blue-600 mb-2 break-words ${darkMode ? 'text-blue-400' : 'text-4xl'}`}>{feature.stat}</div>
+                      <div className="text-4xl sm:text-5xl font-bold text-blue-600 dark:text-blue-400 mb-2 break-words">{feature.stat}</div>
                       <div className="text-sm text-muted-foreground uppercase tracking-wider">{feature.metric}</div>
                     </div>
                   </div>
@@ -449,7 +449,7 @@ export function VacuumProductTemplate() {
                       </div>
                       <div className="flex justify-between">
                         <dt className="text-sm text-muted-foreground">Suction</dt>
-                        <dd className={`font-semibold text-blue-600 ${darkMode ? 'text-blue-400' : 'text-sm'}`}>{mode.suctionPower}</dd>
+                        <dd className="text-sm font-semibold text-blue-600 dark:text-blue-400">{mode.suctionPower}</dd>
                       </div>
                     </dl>
                   </CardContent>
@@ -516,7 +516,7 @@ export function VacuumProductTemplate() {
                   <CardContent className="p-6">
                     <div className="flex items-start gap-4">
                       <div className="w-12 h-12 rounded-lg bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center flex-shrink-0">
-                        <FiCheck className={`w-6 h-6 ${darkMode ? 'text-blue-400' : 'text-blue-600'}`} />
+                        <FiCheck className="w-6 h-6 text-blue-600 dark:text-blue-400" />
                       </div>
                       <div>
                         <h3 className="font-semibold text-lg mb-1 text-gray-900">{accessory.name}</h3>
@@ -549,10 +549,10 @@ export function VacuumProductTemplate() {
                   <tr>
                     <th className="text-left p-4 font-semibold">Feature</th>
                     {productData.comparison.products.map((product) => (
-                      <th key={product.name} className={`p-4 font-semibold ${product.current ? "text-blue-600 " : ""} ${darkMode ? 'text-blue-400' : 'text-center'}`}>
+                      <th key={product.name} className={`p-4 text-center font-semibold ${product.current ? "text-blue-600 dark:text-blue-400" : ""}`}>
                         <div>{product.name}</div>
                         {product.current && (
-                          <Badge className={`mt-2 bg-blue-100 dark:bg-blue-900/30 border-blue-200 dark:border-blue-800 ${darkMode ? 'text-blue-400' : 'text-blue-700'}`}>
+                          <Badge className="mt-2 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 border-blue-200 dark:border-blue-800">
                             Our Pick
                           </Badge>
                         )}
@@ -570,7 +570,7 @@ export function VacuumProductTemplate() {
                   <tr className="border-b border-gray-200 dark:border-gray-800">
                     <td className="p-4 font-medium">Suction Power</td>
                     {productData.comparison.products.map((product) => (
-                      <td key={product.name} className={`p-4 font-semibold text-blue-600 ${darkMode ? 'text-blue-400' : 'text-center'}`}>{product.suction}</td>
+                      <td key={product.name} className="p-4 text-center font-semibold text-blue-600 dark:text-blue-400">{product.suction}</td>
                     ))}
                   </tr>
                   <tr className="border-b border-gray-200 dark:border-gray-800">

@@ -381,7 +381,7 @@ export function DFYouServiceTemplate() {
                   Get Started — ${serviceData.price}/mo
                 </Button>
                 <Button
-                  variant="outline" className={darkMode ? 'text-white' : 'text-slate-900'}
+                  variant="outline" className="text-slate-900 dark:text-white"
                   size="lg"
                   className="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 text-lg px-12 py-6"
                 >

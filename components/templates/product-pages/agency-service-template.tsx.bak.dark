@@ -268,7 +268,7 @@ export function AgencyServiceTemplate() {
                 View Our Work
                 <FiArrowRight className="ml-2" />
               </Button>
-              <Button size="lg" variant="outline" className={`w-full sm:w-auto group ! ${darkMode ? 'text-white' : 'text-slate-900'}`}>
+              <Button size="lg" variant="outline" className="w-full sm:w-auto group !text-slate-900 dark:text-white">
                 <FiPlay className="mr-2 group-hover:scale-110 transition-transform" />
                 Watch Showreel
               </Button>

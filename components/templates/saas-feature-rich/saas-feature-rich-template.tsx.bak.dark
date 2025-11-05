@@ -284,7 +284,7 @@ export function SaasFeatureRichTemplate() {
               <p className="text-gray-400">{data.footer.description}</p>
             </div>
             <div>
-              <h4 className={`font-semibold mb-4 ${darkMode ? 'text-white' : 'text-gray-900'}`}>Product</h4>
+              <h4 className="font-semibold mb-4 text-gray-900 dark:text-white">Product</h4>
               <div className="space-y-2">
                 <a href="#features" className="block text-gray-400 hover:text-white">Features</a>
                 <a href="#pricing" className="block text-gray-400 hover:text-white">Pricing</a>
@@ -292,7 +292,7 @@ export function SaasFeatureRichTemplate() {
               </div>
             </div>
             <div>
-              <h4 className={`font-semibold mb-4 ${darkMode ? 'text-white' : 'text-gray-900'}`}>Connect</h4>
+              <h4 className="font-semibold mb-4 text-gray-900 dark:text-white">Connect</h4>
               <div className="flex gap-4">
                 <a href="#" className="text-gray-400 hover:text-white">
                   <FiTwitter size={20} />

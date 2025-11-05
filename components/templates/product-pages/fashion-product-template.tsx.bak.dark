@@ -329,7 +329,7 @@ export function FashionProductTemplate() {
                     ADD TO BAG
                   </Button>
                   <Button
-                    variant="outline" className={darkMode ? 'text-white' : 'text-slate-900'}
+                    variant="outline" className="text-slate-900 dark:text-white"
                     size="lg"
                     className="w-full text-lg py-6 border-stone-300 text-gray-900"
                     onClick={() => setIsWishlisted(!isWishlisted)}

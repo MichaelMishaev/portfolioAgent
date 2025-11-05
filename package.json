@@ -23,7 +23,9 @@
     "audit:text-colors": "node scripts/audit-text-colors.js",
     "audit:text-colors:ci": "node scripts/audit-text-colors.js --ci",
     "fix:text-colors": "node scripts/fix-text-colors.js",
-    "fix:text-colors:dry": "node scripts/fix-text-colors.js --dry-run"
+    "fix:text-colors:dry": "node scripts/fix-text-colors.js --dry-run",
+    "fix:dark-mode": "node scripts/fix-dark-mode-classes.js",
+    "fix:dark-mode:dry": "node scripts/fix-dark-mode-classes.js --dry-run"
   },
   "dependencies": {
     "@craftjs/core": "^0.2.12",

@@ -379,10 +379,10 @@ export function BoldTypographyTemplate() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button variant="outline" size="icon" className={`h-12 w-12 ! hover:text-slate-900 dark:hover:text-white ${darkMode ? 'text-slate-300' : 'text-slate-700'}`}>
+              <Button variant="outline" size="icon" className="h-12 w-12 !text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">
                 <FiGithub className="h-5 w-5" />
               </Button>
-              <Button variant="outline" size="icon" className={`h-12 w-12 ! hover:text-slate-900 dark:hover:text-white ${darkMode ? 'text-slate-300' : 'text-slate-700'}`}>
+              <Button variant="outline" size="icon" className="h-12 w-12 !text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">
                 <FiLinkedin className="h-5 w-5" />
               </Button>
             </div>

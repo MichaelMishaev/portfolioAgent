@@ -376,7 +376,7 @@ export function ServiceMarketplaceTemplate() {
             {['Web Development', 'Mobile Apps', 'UI/UX Design', 'Backend', 'DevOps', 'Cloud', 'Database', 'API Design', 'Testing', 'Security', 'Analytics', 'AI/ML'].map((skill, i) => (
               <FadeIn key={i} delay={i * 0.05}>
                 <div className="bg-white dark:bg-slate-800 p-4 rounded-lg border border-slate-200 dark:border-slate-700 hover:border-green-500 hover:shadow-md transition-all text-center">
-                  <span className={`font-semibold text-slate-900 ${darkMode ? 'text-white' : 'text-sm'}`}>{skill}</span>
+                  <span className="font-semibold text-sm text-slate-900 dark:text-white">{skill}</span>
                 </div>
               </FadeIn>
             ))}
@@ -389,7 +389,7 @@ export function ServiceMarketplaceTemplate() {
         <div className="container mx-auto max-w-4xl text-center">
           <FadeIn>
             <h2 className="text-3xl sm:text-3xl sm:text-4xl font-bold mb-6 text-gray-900">Get in Touch</h2>
-            <p className={`text-slate-600 mb-8 ${darkMode ? 'text-slate-400' : 'text-lg'}`}>
+            <p className="text-lg text-slate-600 dark:text-slate-400 mb-8">
               Have a project in mind? Let's discuss how we can help you succeed.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -419,11 +419,11 @@ export function ServiceMarketplaceTemplate() {
           <FadeIn>
             <h2 className="text-3xl sm:text-3xl sm:text-4xl font-bold mb-8 text-center text-gray-900">About Our Platform</h2>
             <div className="prose prose-lg max-w-none text-center">
-              <p className={`text-slate-600 mb-6 ${darkMode ? 'text-slate-400' : 'text-lg'}`}>
+              <p className="text-lg text-slate-600 dark:text-slate-400 mb-6">
                 We connect talented professionals with businesses that need their expertise.
                 Our platform has facilitated over 10,000 successful projects worldwide.
               </p>
-              <p className={`text-slate-600 ${darkMode ? 'text-slate-400' : 'text-lg'}`}>
+              <p className="text-lg text-slate-600 dark:text-slate-400">
                 With vetted freelancers, secure payments, and 24/7 support, we make hiring and working remotely seamless.
               </p>
             </div>
@@ -449,8 +449,8 @@ export function ServiceMarketplaceTemplate() {
                 <div className="flex gap-6 items-start">
                   <div className="flex-shrink-0 w-20 text-green-600 font-bold text-lg">{item.year}</div>
                   <div className="flex-1 bg-white dark:bg-slate-800 p-6 rounded-lg border border-slate-200 dark:border-slate-700">
-                    <h3 className={`font-bold mb-2 text-slate-900 ${darkMode ? 'text-white' : 'text-lg'}`}>{item.title}</h3>
-                    <p className={darkMode ? 'text-slate-400' : 'text-slate-600'}>{item.desc}</p>
+                    <h3 className="font-bold text-lg mb-2 text-slate-900 dark:text-white">{item.title}</h3>
+                    <p className="text-slate-600 dark:text-slate-400">{item.desc}</p>
                   </div>
                 </div>
               </FadeIn>
@@ -475,8 +475,8 @@ export function ServiceMarketplaceTemplate() {
             ].map((item, i) => (
               <FadeIn key={i} delay={i * 0.05}>
                 <div className="bg-white dark:bg-slate-800 p-6 rounded-lg border border-slate-200 dark:border-slate-700">
-                  <h3 className={`font-bold mb-3 text-slate-900 ${darkMode ? 'text-white' : 'text-lg'}`}>{item.q}</h3>
-                  <p className={darkMode ? 'text-slate-400' : 'text-slate-600'}>{item.a}</p>
+                  <h3 className="font-bold text-lg mb-3 text-slate-900 dark:text-white">{item.q}</h3>
+                  <p className="text-slate-600 dark:text-slate-400">{item.a}</p>
                 </div>
               </FadeIn>
             ))}

@@ -372,7 +372,7 @@ export function TechBlogTemplate() {
               <Button size="lg" className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700">
                 Start Reading
               </Button>
-              <Button size="lg" variant="outline" className="w-full sm:w-auto !text-slate-900 dark:text-white">
+              <Button size="lg" variant="outline" className={`w-full sm:w-auto ${darkMode ? 'text-white' : 'text-slate-900'}`}>
                 Browse Topics
               </Button>
             </div>
@@ -432,7 +432,7 @@ export function TechBlogTemplate() {
 
                   <div className="flex items-center gap-4 mb-6">
                     {techBlogData.featured.tags.map((tag) => (
-                      <Badge key={tag} variant="outline" className="text-slate-900 dark:text-white">
+                      <Badge key={tag} variant="outline" className={darkMode ? 'text-white' : 'text-slate-900'}>
                         <FiTag className="w-3 h-3 mr-1" />
                         {tag}
                       </Badge>
@@ -839,7 +839,7 @@ export function TechBlogTemplate() {
               </div>
             </div>
             <div>
-              <h4 className="font-semibold mb-4 text-gray-900 dark:text-white">Content</h4>
+              <h4 className={`font-semibold mb-4 ${darkMode ? 'text-white' : 'text-gray-900'}`}>Content</h4>
               <div className={`space-y-2 ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
                 <a href="#" className={`block ${darkMode ? 'hover:text-white' : 'hover:text-gray-900'} transition-colors`}>Articles</a>
                 <a href="#" className={`block ${darkMode ? 'hover:text-white' : 'hover:text-gray-900'} transition-colors`}>Tutorials</a>
@@ -848,7 +848,7 @@ export function TechBlogTemplate() {
               </div>
             </div>
             <div>
-              <h4 className="font-semibold mb-4 text-gray-900 dark:text-white">Community</h4>
+              <h4 className={`font-semibold mb-4 ${darkMode ? 'text-white' : 'text-gray-900'}`}>Community</h4>
               <div className={`space-y-2 ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
                 <a href="#" className={`block ${darkMode ? 'hover:text-white' : 'hover:text-gray-900'} transition-colors`}>Discord</a>
                 <a href="#" className={`block ${darkMode ? 'hover:text-white' : 'hover:text-gray-900'} transition-colors`}>GitHub</a>
@@ -857,7 +857,7 @@ export function TechBlogTemplate() {
               </div>
             </div>
             <div>
-              <h4 className="font-semibold mb-4 text-gray-900 dark:text-white">Company</h4>
+              <h4 className={`font-semibold mb-4 ${darkMode ? 'text-white' : 'text-gray-900'}`}>Company</h4>
               <div className={`space-y-2 ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
                 <a href="#" className={`block ${darkMode ? 'hover:text-white' : 'hover:text-gray-900'} transition-colors`}>About</a>
                 <a href="#" className={`block ${darkMode ? 'hover:text-white' : 'hover:text-gray-900'} transition-colors`}>Sponsor</a>
