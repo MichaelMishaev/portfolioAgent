@@ -5,7 +5,6 @@ import { TemplateGallery } from "@/components/template-gallery";
 import { ErrorBoundary } from "@/components/error-boundary";
 import { Header } from "@/components/shared/header";
 import { Footer } from "@/components/shared/footer";
-import { MobileBottomNav } from "@/components/shared/mobile-bottom-nav";
 import { ScrollToTop } from "@/components/shared/scroll-to-top";
 import { useI18n } from "@/lib/i18n-context";
 import { Button } from "@/components/ui/button";
@@ -79,11 +78,11 @@ export default function Home() {
   ];
 
   return (
-    <main className="min-h-screen pb-20 md:pb-0">
+    <main className="min-h-screen">
       <Header />
 
       {/* Hero Section - Ultra Minimal */}
-      <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50 dark:from-slate-950 dark:via-blue-950 dark:to-purple-950">
+      <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50 dark:from-slate-950 dark:via-blue-950 dark:to-purple-950 pt-20 sm:pt-24">
         {/* Subtle animated background pattern */}
         <div className="absolute inset-0 bg-grid-slate-200/50 dark:bg-grid-slate-800/50 [mask-image:linear-gradient(0deg,transparent,black)]" />
 
@@ -95,29 +94,43 @@ export default function Home() {
             className="text-center max-w-5xl mx-auto"
           >
             {/* Title with enhanced styling */}
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black mb-6 sm:mb-8 leading-[1.15] sm:leading-[1.1] tracking-tight px-4">
+            <h1 className="text-[1.75rem] sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black mb-6 sm:mb-8 leading-[1.2] sm:leading-tight tracking-tight px-3 sm:px-4 max-w-4xl mx-auto">
               <motion.span
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="inline-block bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent break-words"
+                className="block bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent mb-3 sm:mb-2"
+                style={{
+                  wordBreak: 'break-word',
+                  overflowWrap: 'anywhere',
+                  hyphens: 'auto',
+                  WebkitHyphens: 'auto',
+                  MozHyphens: 'auto'
+                }}
               >
-                {language === 'en' ? 'Create the Perfect Portfolio' : 'Создайте идеальное портфолио'}
+                {language === 'en' ? 'Professional Portfolio Templates' : 'Профессиональные шаблоны портфолио'}
               </motion.span>
-              <br />
               <motion.span
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
-                className="inline-block text-slate-900 dark:text-slate-100 break-words relative"
+                className="block text-slate-900 dark:text-slate-100 relative pb-2"
+                style={{
+                  wordBreak: 'break-word',
+                  overflowWrap: 'anywhere',
+                  hyphens: 'auto',
+                  WebkitHyphens: 'auto',
+                  MozHyphens: 'auto'
+                }}
               >
-                {language === 'en' ? 'In Minutes' : 'за несколько минут'}
+                {language === 'en' ? 'Build a Site That Represents You' : 'Создайте сайт, который представляет вас'}
                 {/* Animated underline */}
                 <motion.span
                   initial={{ width: 0 }}
                   animate={{ width: "100%" }}
                   transition={{ duration: 0.8, delay: 0.8 }}
-                  className="absolute bottom-0 left-0 h-2 sm:h-3 bg-gradient-to-r from-blue-500 to-purple-500 opacity-30 rounded-full"
+                  className="absolute bottom-0 left-0 right-0 h-1 sm:h-2 bg-gradient-to-r from-blue-500 to-purple-500 opacity-30 rounded-full mx-auto"
+                  style={{ maxWidth: '100%' }}
                 />
               </motion.span>
             </h1>
@@ -127,12 +140,12 @@ export default function Home() {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: 0.6 }}
-              className="mb-4"
+              className="mb-4 px-2"
             >
-              <span className="inline-block px-4 py-2 bg-gradient-to-r from-blue-100 to-purple-100 dark:from-blue-900/30 dark:to-purple-900/30 text-blue-700 dark:text-blue-300 rounded-full text-sm font-semibold border border-blue-200 dark:border-blue-800 shadow-sm">
-                {language === 'en' ? '39+ Premium Templates' : '39+ премиум шаблонов'}
-                <span className="ml-1.5 inline-block animate-pulse">📈</span>
-                <span className="ml-2 text-xs opacity-75">
+              <span className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 bg-gradient-to-r from-blue-100 to-purple-100 dark:from-blue-900/30 dark:to-purple-900/30 text-blue-700 dark:text-blue-300 rounded-full text-xs sm:text-sm font-semibold border border-blue-200 dark:border-blue-800 shadow-sm">
+                {language === 'en' ? '61+ Premium Templates' : '61+ премиум шаблонов'}
+                <span className="ml-1 sm:ml-1.5 inline-block animate-pulse">📈</span>
+                <span className="ml-1 sm:ml-2 text-[10px] sm:text-xs opacity-75">
                   {language === 'en' ? '(Growing)' : '(Растёт)'}
                 </span>
               </span>
@@ -142,7 +155,7 @@ export default function Home() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.8 }}
-              className="text-lg sm:text-xl md:text-2xl text-slate-600 dark:text-slate-400 max-w-4xl mx-auto leading-relaxed px-4"
+              className="text-base sm:text-lg md:text-xl lg:text-2xl text-slate-600 dark:text-slate-400 max-w-4xl mx-auto leading-relaxed px-4"
             >
               {language === 'en'
                 ? 'Even in the era of AI, we believe a human must review every detail.'
@@ -584,7 +597,6 @@ export default function Home() {
       </section>
 
       <Footer />
-      <MobileBottomNav />
       <ScrollToTop />
 
     </main>

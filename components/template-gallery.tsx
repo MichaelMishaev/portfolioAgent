@@ -380,8 +380,8 @@ export function TemplateGallery() {
                   {/* Premium Gradient Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-                  {/* Floating Action Buttons */}
-                  <div className="absolute inset-0 flex items-center justify-center gap-3 opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0 pointer-events-none">
+                  {/* Floating Action Buttons - Hidden on mobile/touch devices */}
+                  <div className="hidden md:flex absolute inset-0 items-center justify-center gap-3 opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0 pointer-events-none">
                     <div className="shadow-2xl backdrop-blur-sm bg-white/95 border-2 border-white/20 font-semibold px-6 py-3 rounded-lg inline-flex items-center gap-2">
                       <FiEye className="h-5 w-5" />
                       <span className="font-semibold">{language === 'en' ? 'Preview' : 'Просмотр'}</span>

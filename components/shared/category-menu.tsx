@@ -82,6 +82,21 @@ export function CategoryMenu({
   const handleCategoryClick = (category: string) => {
     onCategoryChange(category);
     setIsOpen(false);
+
+    // Scroll to templates section
+    setTimeout(() => {
+      const templatesSection = document.getElementById('templates');
+      if (templatesSection) {
+        const headerOffset = 80; // Account for fixed header
+        const elementPosition = templatesSection.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }
+    }, 100);
   };
 
   const activeCategoryName = categoryLabels[activeCategory] || activeCategory;
@@ -89,40 +104,20 @@ export function CategoryMenu({
 
   return (
     <>
-      {/* Hamburger Button - Sticky */}
+      {/* Categories Button - Aligned with Header */}
       <motion.button
         onClick={() => setIsOpen(!isOpen)}
-        className="category-menu-button fixed top-20 left-4 z-50 flex items-center gap-2 px-4 py-3 bg-foreground text-background rounded-full shadow-lg min-h-[48px] min-w-[48px] touch-manipulation"
-        whileTap={{ scale: 0.95 }}
+        className="category-menu-button fixed top-2 sm:top-3 left-4 z-50 flex items-center gap-2.5 px-3.5 py-2 bg-background border border-border hover:border-foreground/20 text-foreground rounded-xl shadow-sm hover:shadow-md h-10 sm:h-11 touch-manipulation transition-all duration-200"
+        whileHover={{ y: -1 }}
+        whileTap={{ scale: 0.98 }}
         aria-label="Open categories menu"
       >
-        {/* Animated Hamburger Icon */}
-        <div className="flex flex-col gap-1.5 w-5">
-          <motion.span
-            animate={{
-              rotate: isOpen ? 45 : 0,
-              y: isOpen ? 8 : 0,
-            }}
-            className="block h-0.5 w-full bg-background rounded-full"
-          />
-          <motion.span
-            animate={{
-              opacity: isOpen ? 0 : 1,
-            }}
-            className="block h-0.5 w-full bg-background rounded-full"
-          />
-          <motion.span
-            animate={{
-              rotate: isOpen ? -45 : 0,
-              y: isOpen ? -8 : 0,
-            }}
-            className="block h-0.5 w-full bg-background rounded-full"
-          />
-        </div>
-
-        {/* Active Category Name */}
-        <span className="text-sm font-medium hidden sm:inline">
-          {activeCategoryName} ({activeCount})
+        <FiGrid className="w-4 h-4 text-muted-foreground" />
+        <span className="text-sm font-medium capitalize">
+          {activeCategoryName}
+        </span>
+        <span className="text-xs text-muted-foreground font-normal ml-0.5">
+          ({activeCount})
         </span>
       </motion.button>
 
