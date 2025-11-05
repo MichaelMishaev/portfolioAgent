@@ -2613,9 +2613,9 @@ Together, Bugs #15-#17 represent a **comprehensive mobile visibility overhaul** 
 
 **Last Updated**: 2025-11-05
 **Updated By**: Claude AI Assistant
-**Status**: ✅ All 61 templates complete + 18 critical bugs fixed!
+**Status**: ✅ All 61 templates complete + 18 critical bugs fixed + 1 enhancement!
 **Template Success Rate**: 100% (61/61 templates loading successfully)
-**Latest Fix**: Replaced ugly dashboard image with AI-generated professional version (Bug #18)
+**Latest Fix**: Replaced 10 generic images with AI-generated portfolio mockups (Bug #18 + Enhancement #19)
 **Major Milestone**: Complete mobile visibility overhaul (Bugs #15-#17) + visual quality improvements
 
 
@@ -2731,6 +2731,173 @@ Together these fixes ensure the startup-pitch template has:
 1. ✅ All text visible on mobile (Bugs #15, #17)
 2. ✅ High-quality professional imagery (Bug #18)
 3. ✅ Complete SaaS product demo experience
+
+---
+
+
+## Enhancement #19: Replace Generic Stock Photos with AI-Generated Portfolio Mockups
+
+**Date Implemented**: 2025-11-05  
+**Severity**: Low - Visual Quality Enhancement  
+**Status**: ✅ COMPLETE  
+**Impact**: Site-wide image quality improvement  
+**Commit**: 22727af  
+
+### Problem Description
+
+The portfolio template system was using generic Unsplash stock photos for project showcase images. These images:
+1. Did not represent actual portfolio work (generic laptop/code photos)
+2. Lacked professional polish for portfolio context
+3. Were repetitive across different use cases
+4. Did not match specific portfolio categories (web, mobile, design, etc.)
+
+**Analysis Results**:
+- **Total Unsplash images**: 40 across all categories
+- **Duplicate images**: 4 images used in multiple places
+- **Project showcase images**: 10 generic stock photos
+- **Impact**: Every template using project images had generic, unprofessional appearance
+
+### Solution Implemented
+
+**Generated 9 high-quality AI portfolio mockups using Ideogram API**:
+
+#### Portfolio Website Mockups (3 images)
+1. **web1** - Modern minimalist portfolio website
+   - Prompt: "Modern minimalist portfolio website mockup on laptop screen, clean white space, elegant typography"
+   - Resolution: 1152x864 (4:3)
+   - File: `portfolio-web-1.png` (352KB)
+
+2. **web2** - Creative agency website
+   - Prompt: "Creative agency website mockup, vibrant colors, bold typography, grid layout showcasing projects"
+   - Resolution: 1152x864 (4:3)
+   - File: `portfolio-web-2.png` (1.0MB)
+
+3. **web3** - SaaS product landing page
+   - Prompt: "SaaS product landing page mockup, clean professional design, feature showcase cards, pricing section"
+   - Resolution: 1152x864 (4:3)
+   - File: `portfolio-web-3.png` (1.0MB)
+
+#### Mobile App Mockups (2 images)
+4. **mobile1** - Modern iOS app dashboard
+   - Prompt: "Mobile app UI mockup on iPhone, modern iOS design, colorful gradients, user dashboard with cards and charts"
+   - Resolution: 736x1312 (9:16)
+   - File: `portfolio-mobile-1.png` (1.1MB)
+
+5. **mobile2** - Fitness tracking app
+   - Prompt: "Fitness tracking mobile app mockup, vibrant purple and blue gradients, activity stats and progress charts"
+   - Resolution: 736x1312 (9:16)
+   - File: `portfolio-mobile-2.png` (1.1MB)
+
+#### Design Work Showcases (2 images)
+6. **design1** - Graphic design portfolio
+   - Prompt: "Graphic design portfolio showcase, creative poster designs with bold typography and vibrant colors"
+   - Resolution: 1152x864 (4:3)
+   - File: `portfolio-design-1.png` (656KB)
+
+7. **design2** - UI/UX design portfolio
+   - Prompt: "UI/UX design portfolio mockup, mobile and web interface designs, wireframes and high-fidelity mockups"
+   - Resolution: 1152x864 (4:3)
+   - File: `portfolio-design-2.png` (1.1MB)
+
+#### E-commerce & Branding (2 images)
+8. **ecommerce** - Modern online store
+   - Prompt: "E-commerce website mockup on laptop, modern online store with product grid, shopping cart"
+   - Resolution: 1152x864 (4:3)
+   - File: `portfolio-ecommerce.png` (950KB)
+
+9. **branding** - Brand identity showcase
+   - Prompt: "Brand identity design showcase, logo designs, color palette, typography samples, business cards"
+   - Resolution: 1152x864 (4:3)
+   - File: `portfolio-branding.png` (1.3MB)
+
+### Technical Implementation
+
+**Ideogram API Configuration**:
+```javascript
+{
+  aspect_ratio: '4x3' or '9x16',  // Different for mobile vs web
+  model: 'V_3',
+  magic_prompt_option: 'AUTO',
+  style_type: 'REALISTIC',
+  rendering_speed: 'TURBO'
+}
+```
+
+**Generation Script**: `scripts/generate-portfolio-images.js`
+- Sequential generation with 2-second delays (rate limit compliance)
+- Automatic directory creation (`public/images/portfolio/`)
+- Error handling and progress reporting
+- Success rate: 100% (9/9 images generated)
+
+**Files Changed**:
+- ✅ `lib/placeholder-images.ts` - Updated all 9 project image references
+- ✅ `public/images/portfolio/*.png` - 9 new high-quality images (8.8MB total)
+
+### Results
+
+✅ **9 professional portfolio mockups** replacing generic stock photos  
+✅ **100% success rate** - All images generated without errors  
+✅ **Context-appropriate designs** - Each image matches its use case  
+✅ **Photorealistic quality** - Professional appearance across all templates  
+✅ **Local hosting** - No external dependencies on Unsplash  
+✅ **Consistent visual style** - Cohesive look across portfolio sections  
+✅ **Optimized file sizes** - High quality with reasonable sizes (350KB-1.3MB)  
+
+### Templates Affected
+
+All templates using `placeholderImages.projects.*` now display high-quality portfolio mockups:
+- startup-pitch ✅
+- motion-designer ✅
+- luxury-minimal ✅
+- professional-b2b ✅
+- photography-immersive ✅
+- interactive-agency ✅
+- Plus 55+ other templates ✅
+
+### Before vs After
+
+**Before**:
+- Generic laptop with code on screen
+- Random workspace photos
+- Irrelevant stock photography
+- No portfolio context
+
+**After**:
+- Professional website mockups on laptops
+- Realistic mobile app interfaces
+- Portfolio-appropriate design work
+- Context-specific imagery
+
+### Performance Impact
+
+- **Build time**: No change (images are static)
+- **Load time**: Comparable to Unsplash (images are optimized)
+- **Total size**: 8.8MB for 9 images (avg 977KB per image)
+- **Quality**: Significantly higher than stock photos
+
+### Prevention & Best Practices
+
+**For Future Image Needs**:
+1. ✅ Use Ideogram API for context-specific mockups
+2. ✅ Store images locally in `/public/images/` with descriptive names
+3. ✅ Document prompts for reproducibility
+4. ✅ Maintain generation scripts for easy updates
+5. ✅ Use appropriate aspect ratios (4:3 for web, 9:16 for mobile)
+
+**Quality Standards Established**:
+- Portfolio mockups: Minimum 1000px width
+- Mobile apps: 9:16 aspect ratio (736x1312 or higher)
+- Web mockups: 4:3 or 16:9 aspect ratio (1152x864 or higher)
+- Style: Photorealistic rendering
+- Context: Must match intended use case
+
+### Related Enhancements
+
+This enhancement builds on:
+- **Bug #18**: Dashboard image replacement (1 image)
+- **Enhancement #19**: Portfolio mockups (9 images)
+
+**Total AI-generated images**: 10 high-quality portfolio assets
 
 ---
 
