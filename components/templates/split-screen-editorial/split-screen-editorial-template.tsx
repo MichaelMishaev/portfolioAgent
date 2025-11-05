@@ -193,8 +193,8 @@ export function SplitScreenEditorialTemplate() {
               { q: "Consistently delivers award-winning journalism", a: "Sarah Lee", r: "Director, Columbia J-School" }
             ].map((t, i) => (
               <blockquote key={i} className="border-l-4 border-blue-600 pl-6 py-2">
-                <p className="text-2xl font-serif italic mb-4">"{t.q}"</p>
-                <footer className="text-sm"><strong>{t.a}</strong>, {t.r}</footer>
+                <p className="text-2xl font-serif italic mb-4 text-gray-900">"{t.q}"</p>
+                <footer className="text-sm text-gray-700"><strong>{t.a}</strong>, {t.r}</footer>
               </blockquote>
             ))}
           </div>

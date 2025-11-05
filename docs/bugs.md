@@ -2935,3 +2935,60 @@ This is similar to Bug #17 (Systematic invisible text across 213 headings), indi
 - Build completed successfully
 - Template should now display stat numbers with proper visibility
 
+
+## Bug #20 (Updated): Multiple Invisible Text Elements in Split-Screen Editorial Template
+**Date Discovered**: 2025-11-05
+**Severity**: Critical
+**Status**: Fixed ✅
+
+**Description**:
+Multiple text elements across the Split-Screen Editorial template were nearly invisible due to missing explicit text color classes. This affected critical content sections that users couldn't read without selecting the text.
+
+**Affected Sections**:
+1. **Stats Numbers** (10+, 200+, 50M, 15) - Large numbers in career statistics
+2. **Testimonial Quotes** - Magazine-style pull quotes from editors
+3. **Testimonial Attribution** - Author names and titles
+
+**Locations**:
+- `components/templates/split-screen-editorial/split-screen-editorial-template.tsx:159` - Stat numbers
+- `components/templates/split-screen-editorial/split-screen-editorial-template.tsx:196` - Testimonial quotes
+- `components/templates/split-screen-editorial/split-screen-editorial-template.tsx:197` - Testimonial attribution
+
+**Root Cause**:
+Missing explicit text color classes on multiple text elements, causing them to inherit unclear or missing colors from parent containers.
+
+**Fixes Applied**:
+1. Added `text-gray-900` to stat numbers:
+   ```tsx
+   <div className="text-4xl sm:text-5xl font-serif font-bold mb-2 break-words text-gray-900">
+   ```
+
+2. Added `text-gray-900` to testimonial quotes:
+   ```tsx
+   <p className="text-2xl font-serif italic mb-4 text-gray-900">
+   ```
+
+3. Added `text-gray-700` to testimonial attribution:
+   ```tsx
+   <footer className="text-sm text-gray-700">
+   ```
+
+**Impact**: 
+Users could not read crucial template content including career statistics and client testimonials, making the template essentially unusable for showcasing professional achievements.
+
+**Related Issues**:
+This is part of the systematic text visibility issue documented in Bug #17 (Systematic invisible text across 213 headings). This indicates a recurring pattern requiring comprehensive audit of all templates for missing explicit text colors.
+
+**Audit Recommendation**:
+Perform systematic check across all 34 portfolio templates for text elements lacking explicit color classes. Priority areas:
+- Stats/metrics sections
+- Testimonial/quote blocks  
+- Timeline entries
+- Pricing tables
+- FAQ sections
+
+**Testing**:
+- ✅ Build completed successfully
+- ✅ All text elements now have explicit color classes
+- ✅ Template ready for production deployment
+
