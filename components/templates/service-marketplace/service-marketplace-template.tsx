@@ -131,7 +131,7 @@ export function ServiceMarketplaceTemplate() {
             <Badge className="mb-6 bg-green-500/10 text-green-400 border-green-500/20 px-4 py-2">
               {portfolioData.hero?.badge || "Trusted Marketplace"}
             </Badge>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight break-words">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight break-words text-gray-900">
               {portfolioData.hero?.title || "Connect with Professional Service Providers"}
             </h1>
             <p className="text-lg sm:text-xl text-slate-400 mb-8 max-w-3xl mx-auto">
@@ -175,7 +175,7 @@ export function ServiceMarketplaceTemplate() {
         <div className="container mx-auto px-3 max-w-full">
           <div className="text-center mb-16">
             <FadeIn>
-              <h2 className="text-3xl sm:text-3xl sm:text-5xl font-bold mb-4 break-words">
+              <h2 className="text-3xl sm:text-3xl sm:text-5xl font-bold mb-4 break-words text-gray-900">
                 {portfolioData.features?.title || "Why Choose Our Platform"}
               </h2>
               <p className="text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto">
@@ -197,7 +197,7 @@ export function ServiceMarketplaceTemplate() {
                       {idx === 4 && <FiClock className="w-6 h-6 text-green-400" />}
                       {idx === 5 && <FiAward className="w-6 h-6 text-green-400" />}
                     </div>
-                    <h3 className="text-xl font-bold mb-2">{feature.title}</h3>
+                    <h3 className="text-xl font-bold mb-2 text-gray-900">{feature.title}</h3>
                     <p className="text-slate-400">{feature.description}</p>
                   </CardContent>
                 </Card>
@@ -212,7 +212,7 @@ export function ServiceMarketplaceTemplate() {
         <div className="container mx-auto px-3 max-w-full">
           <div className="text-center mb-16">
             <FadeIn>
-              <h2 className="text-3xl sm:text-3xl sm:text-5xl font-bold mb-4 break-words">
+              <h2 className="text-3xl sm:text-3xl sm:text-5xl font-bold mb-4 break-words text-gray-900">
                 {portfolioData.howItWorks?.title || "How It Works"}
               </h2>
               <p className="text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto">
@@ -229,7 +229,7 @@ export function ServiceMarketplaceTemplate() {
                     {idx + 1}
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-2xl font-bold mb-2">{step.title}</h3>
+                    <h3 className="text-2xl font-bold mb-2 text-gray-900">{step.title}</h3>
                     <p className="text-slate-400 text-lg">{step.description}</p>
                   </div>
                 </div>
@@ -244,7 +244,7 @@ export function ServiceMarketplaceTemplate() {
         <div className="container mx-auto px-3 max-w-full">
           <div className="text-center mb-16">
             <FadeIn>
-              <h2 className="text-3xl sm:text-3xl sm:text-5xl font-bold mb-4 break-words">
+              <h2 className="text-3xl sm:text-3xl sm:text-5xl font-bold mb-4 break-words text-gray-900">
                 {portfolioData.testimonials?.title || "What Our Users Say"}
               </h2>
               <p className="text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto">
@@ -286,7 +286,7 @@ export function ServiceMarketplaceTemplate() {
         <div className="container mx-auto px-3 max-w-full">
           <div className="text-center mb-16">
             <FadeIn>
-              <h2 className="text-3xl sm:text-3xl sm:text-5xl font-bold mb-4 break-words">
+              <h2 className="text-3xl sm:text-3xl sm:text-5xl font-bold mb-4 break-words text-gray-900">
                 {portfolioData.pricing?.title || "Simple, Transparent Pricing"}
               </h2>
               <p className="text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto">
@@ -313,7 +313,7 @@ export function ServiceMarketplaceTemplate() {
                     </div>
                   )}
                   <CardContent className="p-8">
-                    <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
+                    <h3 className="text-2xl font-bold mb-2 text-gray-900">{plan.name}</h3>
                     <p className="text-slate-400 mb-6">{plan.description}</p>
                     <div className="mb-6">
                       <span className="text-3xl sm:text-4xl font-bold">{plan.price}</span>
@@ -349,7 +349,7 @@ export function ServiceMarketplaceTemplate() {
         <div className="container mx-auto px-3 max-w-full">
           <div className="max-w-4xl mx-auto text-center">
             <FadeIn>
-              <h2 className="text-3xl sm:text-3xl sm:text-5xl font-bold mb-6 break-words">
+              <h2 className="text-3xl sm:text-3xl sm:text-5xl font-bold mb-6 break-words text-gray-900">
                 {portfolioData.cta?.title || "Ready to Get Started?"}
               </h2>
               <p className="text-lg sm:text-xl text-green-50 mb-8">
@@ -370,7 +370,7 @@ export function ServiceMarketplaceTemplate() {
       <section className="py-20 px-3 bg-slate-50 dark:bg-slate-900">
         <div className="container mx-auto max-w-6xl">
           <FadeIn>
-            <h2 className="text-3xl sm:text-3xl sm:text-4xl font-bold mb-12 text-center">Top Skills</h2>
+            <h2 className="text-3xl sm:text-3xl sm:text-4xl font-bold mb-12 text-center text-gray-900">Top Skills</h2>
           </FadeIn>
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
             {['Web Development', 'Mobile Apps', 'UI/UX Design', 'Backend', 'DevOps', 'Cloud', 'Database', 'API Design', 'Testing', 'Security', 'Analytics', 'AI/ML'].map((skill, i) => (
@@ -388,7 +388,7 @@ export function ServiceMarketplaceTemplate() {
       <section className="py-20 px-3">
         <div className="container mx-auto max-w-4xl text-center">
           <FadeIn>
-            <h2 className="text-3xl sm:text-3xl sm:text-4xl font-bold mb-6">Get in Touch</h2>
+            <h2 className="text-3xl sm:text-3xl sm:text-4xl font-bold mb-6 text-gray-900">Get in Touch</h2>
             <p className="text-lg text-slate-600 dark:text-slate-400 mb-8">
               Have a project in mind? Let's discuss how we can help you succeed.
             </p>
@@ -417,7 +417,7 @@ export function ServiceMarketplaceTemplate() {
       <section className="py-20 px-3 bg-slate-50 dark:bg-slate-900">
         <div className="container mx-auto max-w-4xl">
           <FadeIn>
-            <h2 className="text-3xl sm:text-3xl sm:text-4xl font-bold mb-8 text-center">About Our Platform</h2>
+            <h2 className="text-3xl sm:text-3xl sm:text-4xl font-bold mb-8 text-center text-gray-900">About Our Platform</h2>
             <div className="prose prose-lg max-w-none text-center">
               <p className="text-lg text-slate-600 dark:text-slate-400 mb-6">
                 We connect talented professionals with businesses that need their expertise.
@@ -435,7 +435,7 @@ export function ServiceMarketplaceTemplate() {
       <section className="py-20 px-3">
         <div className="container mx-auto max-w-5xl">
           <FadeIn>
-            <h2 className="text-3xl sm:text-3xl sm:text-4xl font-bold mb-12 text-center">Our Journey</h2>
+            <h2 className="text-3xl sm:text-3xl sm:text-4xl font-bold mb-12 text-center text-gray-900">Our Journey</h2>
           </FadeIn>
           <div className="space-y-8">
             {[
@@ -463,7 +463,7 @@ export function ServiceMarketplaceTemplate() {
       <section className="py-20 px-3 bg-slate-50 dark:bg-slate-900">
         <div className="container mx-auto max-w-4xl">
           <FadeIn>
-            <h2 className="text-3xl sm:text-3xl sm:text-4xl font-bold mb-12 text-center">Frequently Asked Questions</h2>
+            <h2 className="text-3xl sm:text-3xl sm:text-4xl font-bold mb-12 text-center text-gray-900">Frequently Asked Questions</h2>
           </FadeIn>
           <div className="space-y-6">
             {[

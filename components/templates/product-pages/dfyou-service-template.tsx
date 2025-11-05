@@ -365,7 +365,7 @@ export function DFYouServiceTemplate() {
               <Badge className="mb-6 bg-pink-500 text-white text-sm px-3 py-2">
                 {serviceData.speed}
               </Badge>
-              <h1 className="text-3xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-6 tracking-tight break-words">
+              <h1 className="text-3xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-6 tracking-tight break-words text-gray-900">
                 {serviceData.name}
               </h1>
               <p className="text-3xl font-light mb-8 text-stone-700">{serviceData.tagline}</p>
@@ -406,7 +406,7 @@ export function DFYouServiceTemplate() {
       <section className="py-32 bg-stone-50">
         <div className="container mx-auto px-3 sm:px-3">
           <ScrollReveal>
-            <h2 className="text-4xl sm:text-5xl font-bold text-center mb-24 break-words">How It Works</h2>
+            <h2 className="text-4xl sm:text-5xl font-bold text-center mb-24 break-words text-gray-900">How It Works</h2>
           </ScrollReveal>
 
           <div className="max-w-full mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
@@ -417,7 +417,7 @@ export function DFYouServiceTemplate() {
                     {step.step}
                   </div>
                   <step.icon className="w-12 h-12 mx-auto mb-6 text-blue-600" />
-                  <h3 className="text-2xl font-bold mb-4">{step.title}</h3>
+                  <h3 className="text-2xl font-bold mb-4 text-gray-900">{step.title}</h3>
                   <p className="text-lg text-stone-600">{step.description}</p>
                 </div>
               </ScrollReveal>
@@ -430,7 +430,7 @@ export function DFYouServiceTemplate() {
       <section id="work" className="py-32">
         <div className="container mx-auto px-3 sm:px-3">
           <ScrollReveal>
-            <h2 className="text-4xl sm:text-5xl font-bold text-center mb-8 break-words">{serviceData.portfolio.title}</h2>
+            <h2 className="text-4xl sm:text-5xl font-bold text-center mb-8 break-words text-gray-900">{serviceData.portfolio.title}</h2>
             <p className="text-xl text-center text-stone-600 mb-12">
               Real projects. Real fast. All delivered in under 48 hours.
             </p>
@@ -470,7 +470,7 @@ export function DFYouServiceTemplate() {
                     </Badge>
                   </div>
                   <CardContent className="p-6">
-                    <h3 className="text-xl font-bold mb-2">{project.title}</h3>
+                    <h3 className="text-xl font-bold mb-2 text-gray-900">{project.title}</h3>
                     <p className="text-sm text-stone-600">{project.category}</p>
                   </CardContent>
                 </Card>
@@ -485,7 +485,7 @@ export function DFYouServiceTemplate() {
         <div className="container mx-auto px-3 sm:px-3">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <h2 className="text-4xl sm:text-5xl font-bold mb-6 break-words">{serviceData.pricing.title}</h2>
+              <h2 className="text-4xl sm:text-5xl font-bold mb-6 break-words text-gray-900">{serviceData.pricing.title}</h2>
               <p className="text-xl text-stone-600 max-w-full mx-auto">
                 {serviceData.pricing.subtitle}
               </p>
@@ -541,7 +541,7 @@ export function DFYouServiceTemplate() {
       <section className="py-32">
         <div className="container mx-auto px-3 sm:px-3">
           <ScrollReveal>
-            <h2 className="text-4xl sm:text-5xl font-bold text-center mb-24 break-words">Our Guarantees</h2>
+            <h2 className="text-4xl sm:text-5xl font-bold text-center mb-24 break-words text-gray-900">Our Guarantees</h2>
           </ScrollReveal>
 
           <div className="max-w-full mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -550,7 +550,7 @@ export function DFYouServiceTemplate() {
                 <Card className="border-2 border-stone-200 hover:border-blue-600 transition-colors">
                   <CardContent className="p-8">
                     <guarantee.icon className="w-12 h-12 text-blue-600 mb-6" />
-                    <h3 className="text-2xl font-bold mb-4">{guarantee.title}</h3>
+                    <h3 className="text-2xl font-bold mb-4 text-gray-900">{guarantee.title}</h3>
                     <p className="text-lg text-stone-600">{guarantee.description}</p>
                   </CardContent>
                 </Card>
@@ -564,7 +564,7 @@ export function DFYouServiceTemplate() {
       <section className="py-32 bg-stone-50">
         <div className="container mx-auto px-3 sm:px-3">
           <ScrollReveal>
-            <h2 className="text-4xl sm:text-5xl font-bold text-center mb-24 break-words">What Clients Say</h2>
+            <h2 className="text-4xl sm:text-5xl font-bold text-center mb-24 break-words text-gray-900">What Clients Say</h2>
           </ScrollReveal>
 
           <div className="max-w-full mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -596,7 +596,7 @@ export function DFYouServiceTemplate() {
       <section id="faq" className="py-32">
         <div className="container mx-auto px-3 sm:px-3">
           <ScrollReveal>
-            <h2 className="text-4xl sm:text-5xl font-bold text-center mb-24 break-words">Frequently Asked Questions</h2>
+            <h2 className="text-4xl sm:text-5xl font-bold text-center mb-24 break-words text-gray-900">Frequently Asked Questions</h2>
           </ScrollReveal>
 
           <div className="max-w-full mx-auto space-y-6">
@@ -621,7 +621,7 @@ export function DFYouServiceTemplate() {
         <div className="container mx-auto px-3 sm:px-3">
           <ScrollReveal>
             <div className="max-w-full mx-auto text-center">
-              <h2 className="text-5xl md:text-4xl sm:text-5xl md:text-6xl font-bold mb-8 break-words">
+              <h2 className="text-5xl md:text-4xl sm:text-5xl md:text-6xl font-bold mb-8 break-words text-gray-900">
                 Ready for Unlimited Design?
               </h2>
               <p className="text-xl mb-12 max-w-full mx-auto opacity-90">

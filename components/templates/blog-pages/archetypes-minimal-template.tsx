@@ -462,7 +462,7 @@ export function ArchetypesMinimalTemplate() {
       <section className="py-16 sm:py-20 bg-gradient-to-br from-teal-500 to-purple-600 text-white">
         <div className="container mx-auto px-4 sm:px-6 text-center">
           <ScrollReveal>
-            <h2 className="text-3xl sm:text-3xl sm:text-5xl font-bold mb-6 break-words">
+            <h2 className="text-3xl sm:text-3xl sm:text-5xl font-bold mb-6 break-words text-gray-900">
               Ready to Transform Your Creative Journey?
             </h2>
             <p className="text-xl sm:text-2xl mb-8 text-teal-50 max-w-2xl mx-auto">

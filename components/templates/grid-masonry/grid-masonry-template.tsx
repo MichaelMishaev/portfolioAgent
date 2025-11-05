@@ -264,7 +264,7 @@ export function GridMasonryTemplate() {
       {/* Hero Section */}
       <section className="container mx-auto px-3 sm:px-3 pt-32 pb-16 text-center">
         <FadeIn>
-          <h1 className="text-3xl sm:text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 break-words">
+          <h1 className="text-3xl sm:text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 break-words text-gray-900">
             {portfolioData.name}
           </h1>
         </FadeIn>
@@ -341,13 +341,13 @@ export function GridMasonryTemplate() {
       {/* Approach Section */}
       <section className="container mx-auto px-3 sm:px-3 py-20 border-t">
         <ScrollReveal>
-          <h2 className="text-3xl md:text-3xl sm:text-4xl font-bold text-center mb-12">My Approach</h2>
+          <h2 className="text-3xl md:text-3xl sm:text-4xl font-bold text-center mb-12 text-gray-900">My Approach</h2>
         </ScrollReveal>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-full mx-auto">
           {portfolioData.approach.map((item, index) => (
             <ScrollReveal key={item.step} delay={index * 0.1}>
               <div className="text-center">
-                <h3 className="text-xl font-bold mb-2">{item.step}</h3>
+                <h3 className="text-xl font-bold mb-2 text-gray-900">{item.step}</h3>
                 <p className="text-muted-foreground">{item.desc}</p>
               </div>
             </ScrollReveal>
@@ -358,7 +358,7 @@ export function GridMasonryTemplate() {
       {/* Testimonials Section */}
       <section className="container mx-auto px-3 sm:px-3 py-20 border-t">
         <ScrollReveal>
-          <h2 className="text-3xl md:text-3xl sm:text-4xl font-bold text-center mb-12">Client Feedback</h2>
+          <h2 className="text-3xl md:text-3xl sm:text-4xl font-bold text-center mb-12 text-gray-900">Client Feedback</h2>
         </ScrollReveal>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-full mx-auto">
           {portfolioData.testimonials.map((testimonial, index) => (
@@ -379,7 +379,7 @@ export function GridMasonryTemplate() {
       <section id="contact" className="container mx-auto px-3 sm:px-3 py-20 border-t">
         <ScrollReveal>
           <div className="max-w-full mx-auto text-center">
-            <h2 className="text-3xl sm:text-5xl font-bold mb-6 break-words">
+            <h2 className="text-3xl sm:text-5xl font-bold mb-6 break-words text-gray-900">
               Let's Work Together
             </h2>
             <p className="text-xl text-muted-foreground mb-8">
@@ -448,7 +448,7 @@ export function GridMasonryTemplate() {
       <section className="py-20 px-3 sm:px-3 bg-muted/30">
         <div className="container mx-auto max-w-6xl">
           <ScrollReveal>
-            <h2 className="text-3xl sm:text-4xl font-bold mb-12">Skills & Expertise</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold mb-12 text-gray-900">Skills & Expertise</h2>
           </ScrollReveal>
           <div className="columns-2 md:columns-4 gap-4 space-y-4">
             {['React', 'TypeScript', 'Next.js', 'Node.js', 'Tailwind CSS', 'GraphQL', 'PostgreSQL', 'Docker', 'AWS', 'Figma', 'Git', 'REST APIs'].map((skill, i) => (
@@ -466,7 +466,7 @@ export function GridMasonryTemplate() {
       <section className="py-20 px-3 sm:px-3">
         <div className="container mx-auto max-w-4xl">
           <ScrollReveal>
-            <h2 className="text-3xl sm:text-4xl font-bold mb-8">About Me</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold mb-8 text-gray-900">About Me</h2>
             <div className="prose prose-lg max-w-none">
               <p className="text-lg text-muted-foreground mb-6">
                 I'm a full-stack developer with over 6 years of experience building modern web applications.
@@ -485,7 +485,7 @@ export function GridMasonryTemplate() {
       <section className="py-20 px-3 sm:px-3 bg-muted/30">
         <div className="container mx-auto max-w-6xl">
           <ScrollReveal>
-            <h2 className="text-3xl sm:text-4xl font-bold mb-12">Pricing</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold mb-12 text-gray-900">Pricing</h2>
           </ScrollReveal>
           <div className="columns-1 md:columns-3 gap-6 space-y-6">
             {[
@@ -495,7 +495,7 @@ export function GridMasonryTemplate() {
             ].map((plan, i) => (
               <ScrollReveal key={i} delay={i * 0.1}>
                 <div className={`break-inside-avoid bg-background p-8 rounded-lg border hover:shadow-lg transition-shadow ${plan.height}`}>
-                  <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
+                  <h3 className="text-2xl font-bold mb-2 text-gray-900">{plan.name}</h3>
                   <div className="text-3xl sm:text-4xl font-bold mb-6 text-primary">{plan.price}</div>
                   <ul className="space-y-2">
                     {plan.features.map((f, j) => (
@@ -517,7 +517,7 @@ export function GridMasonryTemplate() {
       <section className="py-20 px-3 sm:px-3">
         <div className="container mx-auto max-w-6xl">
           <ScrollReveal>
-            <h2 className="text-3xl sm:text-4xl font-bold mb-12">Gallery</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold mb-12 text-gray-900">Gallery</h2>
           </ScrollReveal>
           <div className="columns-2 md:columns-3 gap-4 space-y-4">
             {[
@@ -538,7 +538,7 @@ export function GridMasonryTemplate() {
       <section className="py-20 px-3 sm:px-3 bg-muted/30">
         <div className="container mx-auto max-w-4xl">
           <ScrollReveal>
-            <h2 className="text-3xl sm:text-4xl font-bold mb-12">Timeline</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold mb-12 text-gray-900">Timeline</h2>
           </ScrollReveal>
           <div className="space-y-6">
             {[
@@ -552,7 +552,7 @@ export function GridMasonryTemplate() {
                   <div className="flex items-start gap-4">
                     <div className="text-sm font-mono text-primary w-16 flex-shrink-0">{item.year}</div>
                     <div className="flex-1">
-                      <h3 className="font-bold text-lg mb-1">{item.title}</h3>
+                      <h3 className="font-bold text-lg mb-1 text-gray-900">{item.title}</h3>
                       <div className="text-sm text-muted-foreground mb-2">{item.company}</div>
                       <p className="text-sm text-muted-foreground">{item.desc}</p>
                     </div>

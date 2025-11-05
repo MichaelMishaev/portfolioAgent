@@ -295,7 +295,7 @@ export function SaaSProductTemplate() {
       <section id="features" className="container mx-auto px-3 sm:px-3 py-20">
         <ScrollReveal>
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-3xl sm:text-5xl font-bold mb-4 break-words">
+            <h2 className="text-3xl sm:text-3xl sm:text-5xl font-bold mb-4 break-words text-gray-900">
               Everything you need to ship faster
             </h2>
             <p className="text-lg sm:text-xl text-muted-foreground max-w-full mx-auto">
@@ -325,7 +325,7 @@ export function SaaSProductTemplate() {
       <section className="container mx-auto px-3 sm:px-3 py-20 bg-muted/30">
         <ScrollReveal>
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-3xl sm:text-5xl font-bold mb-4 break-words">
+            <h2 className="text-3xl sm:text-3xl sm:text-5xl font-bold mb-4 break-words text-gray-900">
               Loved by teams worldwide
             </h2>
             <p className="text-lg sm:text-xl text-muted-foreground">
@@ -367,7 +367,7 @@ export function SaaSProductTemplate() {
       <section id="pricing" className="container mx-auto px-3 sm:px-3 py-20">
         <ScrollReveal>
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-3xl sm:text-5xl font-bold mb-4 break-words">
+            <h2 className="text-3xl sm:text-3xl sm:text-5xl font-bold mb-4 break-words text-gray-900">
               {productData.pricing.title}
             </h2>
             <p className="text-lg sm:text-xl text-muted-foreground mb-8">
@@ -416,7 +416,7 @@ export function SaaSProductTemplate() {
       <section className="container mx-auto px-3 sm:px-3 py-20 bg-muted/30">
         <ScrollReveal>
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-3xl sm:text-5xl font-bold mb-4 break-words">
+            <h2 className="text-3xl sm:text-3xl sm:text-5xl font-bold mb-4 break-words text-gray-900">
               Frequently Asked Questions
             </h2>
           </div>
@@ -441,7 +441,7 @@ export function SaaSProductTemplate() {
         <ScrollReveal>
           <Card className="max-w-full mx-auto bg-gradient-to-r from-blue-600 to-purple-600 text-white border-0">
             <CardContent className="p-8 sm:p-12 text-center">
-              <h2 className="text-3xl sm:text-3xl sm:text-5xl font-bold mb-4 break-words">
+              <h2 className="text-3xl sm:text-3xl sm:text-5xl font-bold mb-4 break-words text-gray-900">
                 {productData.finalCTA.title}
               </h2>
               <p className="text-lg sm:text-xl mb-8 opacity-90">

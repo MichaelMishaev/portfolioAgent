@@ -251,7 +251,7 @@ export function AgencyServiceTemplate() {
           </FadeIn>
 
           <FadeIn delay={0.1}>
-            <h1 className="text-6xl md:text-7xl font-bold mb-6 leading-tight">
+            <h1 className="text-6xl md:text-7xl font-bold mb-6 leading-tight text-gray-900">
               {serviceData.tagline}
             </h1>
           </FadeIn>
@@ -294,7 +294,7 @@ export function AgencyServiceTemplate() {
         <div className="container mx-auto px-3 max-w-full">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <h2 className="text-4xl sm:text-5xl font-bold mb-4 break-words">Our Services</h2>
+              <h2 className="text-4xl sm:text-5xl font-bold mb-4 break-words text-gray-900">Our Services</h2>
               <p className="text-xl text-gray-600">End-to-end solutions for modern brands</p>
             </div>
           </ScrollReveal>
@@ -343,7 +343,7 @@ export function AgencyServiceTemplate() {
         <div className="container mx-auto px-3 max-w-full">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <h2 className="text-4xl sm:text-5xl font-bold mb-4 break-words">Featured Work</h2>
+              <h2 className="text-4xl sm:text-5xl font-bold mb-4 break-words text-gray-900">Featured Work</h2>
               <p className="text-xl text-gray-600">Transforming brands, driving results</p>
             </div>
           </ScrollReveal>
@@ -386,7 +386,7 @@ export function AgencyServiceTemplate() {
         <div className="container mx-auto px-3 max-w-full">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <h2 className="text-4xl sm:text-5xl font-bold mb-4 break-words">Meet the Team</h2>
+              <h2 className="text-4xl sm:text-5xl font-bold mb-4 break-words text-gray-900">Meet the Team</h2>
               <p className="text-xl text-gray-600">World-class talent, focused on your success</p>
             </div>
           </ScrollReveal>
@@ -401,7 +401,7 @@ export function AgencyServiceTemplate() {
                       alt={member.name}
                       className="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-blue-100"
                     />
-                    <h3 className="text-xl font-bold mb-1">{member.name}</h3>
+                    <h3 className="text-xl font-bold mb-1 text-gray-900">{member.name}</h3>
                     <p className="text-blue-600 font-medium mb-2">{member.role}</p>
                     <p className="text-sm text-gray-600">{member.expertise}</p>
                   </CardContent>
@@ -417,7 +417,7 @@ export function AgencyServiceTemplate() {
         <div className="container mx-auto px-3 max-w-full">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <h2 className="text-4xl sm:text-5xl font-bold mb-4 break-words">{serviceData.process.title}</h2>
+              <h2 className="text-4xl sm:text-5xl font-bold mb-4 break-words text-gray-900">{serviceData.process.title}</h2>
               <p className="text-xl text-gray-600">Consistent excellence, every time</p>
             </div>
           </ScrollReveal>
@@ -428,7 +428,7 @@ export function AgencyServiceTemplate() {
                 <Card>
                   <CardContent className="p-8">
                     <div className="text-4xl sm:text-5xl md:text-6xl font-bold text-blue-100 mb-4 break-words">{step.number}</div>
-                    <h3 className="text-2xl font-bold mb-3">{step.name}</h3>
+                    <h3 className="text-2xl font-bold mb-3 text-gray-900">{step.name}</h3>
                     <p className="text-gray-600 mb-4">{step.description}</p>
                     <div className="space-y-2">
                       {step.deliverables.map((deliverable) => (

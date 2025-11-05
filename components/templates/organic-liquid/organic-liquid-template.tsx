@@ -237,7 +237,7 @@ return (
                   >
                     {service.icon}
                   </motion.div>
-                  <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
+                  <h3 className="text-2xl font-bold mb-4 text-gray-900">{service.title}</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     {service.description}
                   </p>
@@ -291,7 +291,7 @@ return (
                         <span className="text-sm text-primary font-semibold uppercase tracking-wide">
                           {project.category}
                         </span>
-                        <h3 className="text-3xl font-bold mt-2 mb-4">
+                        <h3 className="text-3xl font-bold mt-2 mb-4 text-gray-900">
                           {project.title}
                         </h3>
                         <p className="text-lg text-muted-foreground leading-relaxed">
@@ -330,7 +330,7 @@ return (
                   <div className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-rose-600 to-teal-600 bg-clip-text text-transparent mb-4 break-words">
                     {index + 1}
                   </div>
-                  <h3 className="text-xl font-bold mb-3">{step.step}</h3>
+                  <h3 className="text-xl font-bold mb-3 text-gray-900">{step.step}</h3>
                   <p className="text-sm text-muted-foreground">{step.desc}</p>
                 </motion.div>
               </ScrollReveal>
@@ -385,7 +385,7 @@ return (
       <section className="py-20 px-3">
         <div className="max-w-full mx-auto">
           <ScrollReveal>
-            <h3 className="text-3xl md:text-3xl sm:text-4xl font-bold text-center mb-12">
+            <h3 className="text-3xl md:text-3xl sm:text-4xl font-bold text-center mb-12 text-gray-900">
               Core Values
             </h3>
           </ScrollReveal>
@@ -506,7 +506,7 @@ return (
                       Most Popular
                     </div>
                   )}
-                  <h3 className="text-3xl font-bold mb-2">{plan.name}</h3>
+                  <h3 className="text-3xl font-bold mb-2 text-gray-900">{plan.name}</h3>
                   <div className="text-4xl sm:text-5xl font-bold mb-8 break-words">{plan.price}</div>
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((f, j) => (
@@ -557,7 +557,7 @@ return (
         <div className="container mx-auto max-w-4xl text-center">
           <ScrollReveal>
             <div className="bg-white/10 backdrop-blur-xl p-12 rounded-[4rem] border-2 border-white/30">
-              <h2 className="text-4xl md:text-4xl sm:text-5xl md:text-6xl font-bold mb-6 break-words">
+              <h2 className="text-4xl md:text-4xl sm:text-5xl md:text-6xl font-bold mb-6 break-words text-gray-900">
                 Let's Create Something Beautiful
               </h2>
               <p className="text-xl mb-8 opacity-90">

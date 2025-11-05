@@ -141,7 +141,7 @@ export function BentoGridTemplate() {
                   <Badge className="mb-4 bg-white/20 text-white border-0">
                     {portfolioData.availability}
                   </Badge>
-                  <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 leading-tight break-words">
+                  <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 leading-tight break-words text-gray-900">
                     {portfolioData.name}
                   </h1>
                   <p className="text-xl sm:text-2xl md:text-3xl mb-6 opacity-90">
@@ -237,7 +237,7 @@ export function BentoGridTemplate() {
           <ScrollReveal delay={0.3} className="md:col-span-4 lg:col-span-4">
             <Card className="h-full bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-950 dark:to-pink-950 border-purple-200 dark:border-purple-800">
               <CardContent className="p-8">
-                <h3 className="text-2xl font-bold mb-4">About Me</h3>
+                <h3 className="text-2xl font-bold mb-4 text-gray-900">About Me</h3>
                 <p className="text-lg leading-relaxed">{portfolioData.bio}</p>
               </CardContent>
             </Card>
@@ -497,7 +497,7 @@ export function BentoGridTemplate() {
             <Card className="h-full bg-gradient-to-br from-rose-50 to-orange-50 dark:from-rose-950 dark:to-orange-950 border-rose-200 dark:border-rose-800">
               <CardContent className="p-6">
                 <div className="text-4xl mb-3">01</div>
-                <h3 className="font-bold text-lg mb-2">Research</h3>
+                <h3 className="font-bold text-lg mb-2 text-gray-900">Research</h3>
                 <p className="text-sm text-muted-foreground">Understanding user needs and goals</p>
               </CardContent>
             </Card>
@@ -507,7 +507,7 @@ export function BentoGridTemplate() {
             <Card className="h-full bg-gradient-to-br from-sky-50 to-cyan-50 dark:from-sky-950 dark:to-cyan-950 border-sky-200 dark:border-sky-800">
               <CardContent className="p-6">
                 <div className="text-4xl mb-3">02</div>
-                <h3 className="font-bold text-lg mb-2">Design</h3>
+                <h3 className="font-bold text-lg mb-2 text-gray-900">Design</h3>
                 <p className="text-sm text-muted-foreground">Creating beautiful solutions</p>
               </CardContent>
             </Card>
@@ -517,7 +517,7 @@ export function BentoGridTemplate() {
             <Card className="h-full bg-gradient-to-br from-violet-50 to-purple-50 dark:from-violet-950 dark:to-purple-950 border-violet-200 dark:border-violet-800">
               <CardContent className="p-6">
                 <div className="text-4xl mb-3">03</div>
-                <h3 className="font-bold text-lg mb-2">Build</h3>
+                <h3 className="font-bold text-lg mb-2 text-gray-900">Build</h3>
                 <p className="text-sm text-muted-foreground">Bringing ideas to life</p>
               </CardContent>
             </Card>
@@ -549,7 +549,7 @@ export function BentoGridTemplate() {
             <Card className="h-full bg-gradient-to-br from-pink-100 to-rose-100 dark:from-pink-950 dark:to-rose-950 border-pink-200 dark:border-pink-800">
               <CardContent className="p-8 flex flex-col justify-center h-full">
                 <div className="text-5xl mb-4">📬</div>
-                <h3 className="text-2xl font-bold mb-3">Stay in the Loop</h3>
+                <h3 className="text-2xl font-bold mb-3 text-gray-900">Stay in the Loop</h3>
                 <p className="text-muted-foreground mb-6">
                   Get design tips, project updates, and exclusive content delivered monthly
                 </p>
@@ -644,7 +644,7 @@ export function BentoGridTemplate() {
           <ScrollReveal delay={1.45} className="md:col-span-4 lg:col-span-6">
             <Card className="bg-gradient-to-r from-slate-900 to-slate-700 text-white border-0">
               <CardContent className="p-8 text-center">
-                <h3 className="text-3xl font-bold mb-4">Ready to Start Your Project?</h3>
+                <h3 className="text-3xl font-bold mb-4 text-gray-900">Ready to Start Your Project?</h3>
                 <p className="text-lg mb-6 opacity-90">
                   Let's create something amazing together
                 </p>
@@ -672,11 +672,11 @@ export function BentoGridTemplate() {
       {/* Pricing Bento */}
       <section className="py-20 px-3">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-12">Pricing</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold mb-12 text-gray-900">Pricing</h2>
           <div className="grid md:grid-cols-3 gap-6">
             {[{n:"Starter",p:"$49"},{n:"Professional",p:"$149"},{n:"Enterprise",p:"$499"}].map((p,i) => (
               <div key={i} className="rounded-3xl border-2 p-8 hover:shadow-xl transition-shadow">
-                <h3 className="text-2xl font-bold mb-4">{p.n}</h3>
+                <h3 className="text-2xl font-bold mb-4 text-gray-900">{p.n}</h3>
                 <div className="text-4xl sm:text-5xl font-bold mb-6 break-words">{p.p}</div>
                 <Button className="w-full">Choose Plan</Button>
               </div>
@@ -688,7 +688,7 @@ export function BentoGridTemplate() {
       {/* Gallery Bento */}
       <section className="py-20 px-3 bg-muted/20">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-12">Gallery</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold mb-12 text-gray-900">Gallery</h2>
           <div className="grid grid-cols-6 gap-4">
             {[...Array(12)].map((_,i) => (
               <div key={i} className={`rounded-2xl bg-gradient-to-br from-primary/30 to-secondary/30 ${i%5===0?'col-span-3 row-span-2':'col-span-2'} aspect-square`}></div>

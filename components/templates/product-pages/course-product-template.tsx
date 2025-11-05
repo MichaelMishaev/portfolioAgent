@@ -375,7 +375,7 @@ export function CourseProductTemplate() {
                 className="w-32 h-32 rounded-full"
               />
               <div className="flex-1 text-center md:text-left">
-                <h2 className="text-3xl font-bold mb-2">{courseData.instructor.name}</h2>
+                <h2 className="text-3xl font-bold mb-2 text-gray-900">{courseData.instructor.name}</h2>
                 <p className="text-xl text-muted-foreground mb-4">{courseData.instructor.title}</p>
                 <p className="text-lg mb-6">{courseData.instructor.bio}</p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -396,7 +396,7 @@ export function CourseProductTemplate() {
       <section className="container mx-auto px-3 sm:px-3 py-20 bg-gradient-to-r from-blue-100 to-gold-100 dark:from-blue-950 dark:to-gold-950">
         <ScrollReveal>
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-5xl font-bold mb-4 break-words">
+            <h2 className="text-3xl sm:text-5xl font-bold mb-4 break-words text-gray-900">
               {courseData.transformation.title}
             </h2>
           </div>
@@ -470,7 +470,7 @@ export function CourseProductTemplate() {
       <section id="curriculum" className="container mx-auto px-3 sm:px-3 py-20">
         <ScrollReveal>
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-5xl font-bold mb-4 break-words">
+            <h2 className="text-3xl sm:text-5xl font-bold mb-4 break-words text-gray-900">
               {courseData.curriculum.title}
             </h2>
             <p className="text-xl text-muted-foreground">
@@ -519,7 +519,7 @@ export function CourseProductTemplate() {
       <section className="container mx-auto px-3 sm:px-3 py-20 bg-muted/30">
         <ScrollReveal>
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-5xl font-bold mb-4 break-words">
+            <h2 className="text-3xl sm:text-5xl font-bold mb-4 break-words text-gray-900">
               Everything you need to succeed
             </h2>
           </div>
@@ -546,7 +546,7 @@ export function CourseProductTemplate() {
       <section className="container mx-auto px-3 sm:px-3 py-20">
         <ScrollReveal>
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-5xl font-bold mb-4 break-words">
+            <h2 className="text-3xl sm:text-5xl font-bold mb-4 break-words text-gray-900">
               Student Success Stories
             </h2>
             <p className="text-xl text-muted-foreground">
@@ -591,7 +591,7 @@ export function CourseProductTemplate() {
       <section id="pricing" className="container mx-auto px-3 sm:px-3 py-20 bg-muted/30">
         <ScrollReveal>
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-5xl font-bold mb-4 break-words">
+            <h2 className="text-3xl sm:text-5xl font-bold mb-4 break-words text-gray-900">
               {courseData.pricing.title}
             </h2>
             <p className="text-xl text-muted-foreground">
@@ -645,7 +645,7 @@ export function CourseProductTemplate() {
           <Card className="max-w-full mx-auto bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-950 dark:to-emerald-950 border-green-200">
             <CardContent className="p-8 text-center">
               <Badge className="mb-4 bg-green-600 text-white">{courseData.guarantee.badge}</Badge>
-              <h3 className="text-2xl font-bold mb-3">{courseData.guarantee.title}</h3>
+              <h3 className="text-2xl font-bold mb-3 text-gray-900">{courseData.guarantee.title}</h3>
               <p className="text-muted-foreground">{courseData.guarantee.description}</p>
             </CardContent>
           </Card>
@@ -656,7 +656,7 @@ export function CourseProductTemplate() {
       <section className="container mx-auto px-3 sm:px-3 py-20">
         <ScrollReveal>
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-5xl font-bold mb-4 break-words">
+            <h2 className="text-3xl sm:text-5xl font-bold mb-4 break-words text-gray-900">
               Frequently Asked Questions
             </h2>
           </div>
@@ -681,7 +681,7 @@ export function CourseProductTemplate() {
         <ScrollReveal>
           <Card className="max-w-full mx-auto bg-gradient-to-r from-blue-600 to-gold-500 text-white border-0">
             <CardContent className="p-12 text-center">
-              <h2 className="text-3xl sm:text-5xl font-bold mb-4 break-words">
+              <h2 className="text-3xl sm:text-5xl font-bold mb-4 break-words text-gray-900">
                 {courseData.finalCTA.title}
               </h2>
               <p className="text-xl mb-8 opacity-90">

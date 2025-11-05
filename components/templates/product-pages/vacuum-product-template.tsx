@@ -275,7 +275,7 @@ export function VacuumProductTemplate() {
                 <Badge className="mb-4 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 border-blue-200 dark:border-blue-800">
                   New Release
                 </Badge>
-                <h1 className="text-6xl md:text-7xl font-bold mb-6 tracking-tight">
+                <h1 className="text-6xl md:text-7xl font-bold mb-6 tracking-tight text-gray-900">
                   {productData.name}
                 </h1>
                 <p className="text-2xl text-muted-foreground mb-4">
@@ -362,7 +362,7 @@ export function VacuumProductTemplate() {
         <div className="container mx-auto px-3 sm:px-3">
           <ScrollReveal>
             <div className="text-center mb-20">
-              <h2 className="text-5xl md:text-4xl sm:text-5xl md:text-6xl font-bold mb-6 break-words">
+              <h2 className="text-5xl md:text-4xl sm:text-5xl md:text-6xl font-bold mb-6 break-words text-gray-900">
                 Engineered to Outperform
               </h2>
               <p className="text-xl text-muted-foreground max-w-full mx-auto">
@@ -380,7 +380,7 @@ export function VacuumProductTemplate() {
                     <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-blue-600 text-white mb-6">
                       {feature.icon}
                     </div>
-                    <h3 className="text-3xl sm:text-4xl font-bold mb-4">{feature.title}</h3>
+                    <h3 className="text-3xl sm:text-4xl font-bold mb-4 text-gray-900">{feature.title}</h3>
                     <p className="text-xl text-muted-foreground mb-6">{feature.description}</p>
                     <p className="text-sm text-muted-foreground mb-8 leading-relaxed">{feature.detail}</p>
 
@@ -413,7 +413,7 @@ export function VacuumProductTemplate() {
         <div className="container mx-auto px-3 sm:px-3">
           <ScrollReveal>
             <div className="text-center mb-20">
-              <h2 className="text-5xl md:text-4xl sm:text-5xl md:text-6xl font-bold mb-6 break-words">
+              <h2 className="text-5xl md:text-4xl sm:text-5xl md:text-6xl font-bold mb-6 break-words text-gray-900">
                 Three Intelligent Cleaning Modes
               </h2>
               <p className="text-xl text-muted-foreground">
@@ -465,7 +465,7 @@ export function VacuumProductTemplate() {
         <div className="container mx-auto px-3 sm:px-3">
           <ScrollReveal>
             <div className="text-center mb-20">
-              <h2 className="text-5xl md:text-4xl sm:text-5xl md:text-6xl font-bold mb-6 break-words">
+              <h2 className="text-5xl md:text-4xl sm:text-5xl md:text-6xl font-bold mb-6 break-words text-gray-900">
                 Technical Specifications
               </h2>
             </div>
@@ -500,7 +500,7 @@ export function VacuumProductTemplate() {
         <div className="container mx-auto px-3 sm:px-3">
           <ScrollReveal>
             <div className="text-center mb-20">
-              <h2 className="text-5xl md:text-4xl sm:text-5xl md:text-6xl font-bold mb-6 break-words">
+              <h2 className="text-5xl md:text-4xl sm:text-5xl md:text-6xl font-bold mb-6 break-words text-gray-900">
                 Complete Cleaning System
               </h2>
               <p className="text-xl text-muted-foreground">
@@ -519,7 +519,7 @@ export function VacuumProductTemplate() {
                         <FiCheck className="w-6 h-6 text-blue-600 dark:text-blue-400" />
                       </div>
                       <div>
-                        <h3 className="font-semibold text-lg mb-1">{accessory.name}</h3>
+                        <h3 className="font-semibold text-lg mb-1 text-gray-900">{accessory.name}</h3>
                         <p className="text-sm text-muted-foreground">{accessory.description}</p>
                       </div>
                     </div>
@@ -536,7 +536,7 @@ export function VacuumProductTemplate() {
         <div className="container mx-auto px-3 sm:px-3">
           <ScrollReveal>
             <div className="text-center mb-20">
-              <h2 className="text-5xl md:text-4xl sm:text-5xl md:text-6xl font-bold mb-6 break-words">
+              <h2 className="text-5xl md:text-4xl sm:text-5xl md:text-6xl font-bold mb-6 break-words text-gray-900">
                 {productData.comparison.title}
               </h2>
             </div>
@@ -633,7 +633,7 @@ export function VacuumProductTemplate() {
         <div className="container mx-auto px-3 sm:px-3">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <h2 className="text-3xl sm:text-5xl font-bold mb-6 break-words">
+              <h2 className="text-3xl sm:text-5xl font-bold mb-6 break-words text-gray-900">
                 Award-Winning Design
               </h2>
             </div>
@@ -658,7 +658,7 @@ export function VacuumProductTemplate() {
         <div className="container mx-auto px-3 sm:px-3">
           <ScrollReveal>
             <div className="text-center max-w-full mx-auto">
-              <h2 className="text-5xl md:text-4xl sm:text-5xl md:text-6xl font-bold mb-6 break-words">
+              <h2 className="text-5xl md:text-4xl sm:text-5xl md:text-6xl font-bold mb-6 break-words text-gray-900">
                 Ready for Quantum Clean?
               </h2>
               <p className="text-2xl mb-12 opacity-90">

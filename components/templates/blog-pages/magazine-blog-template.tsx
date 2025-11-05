@@ -464,7 +464,7 @@ export function MagazineBlogTemplate() {
                 <Card className="p-6 border-0 shadow-lg">
                   <div className="flex items-center gap-2 mb-4">
                     <FiTrendingUp className="w-5 h-5 text-blue-600" />
-                    <h3 className="text-xl font-bold">Trending Articles</h3>
+                    <h3 className="text-xl font-bold text-gray-900">Trending Articles</h3>
                   </div>
                   <div className="space-y-4">
                     {magazineData.trending.map((article, idx) => (
@@ -547,7 +547,7 @@ export function MagazineBlogTemplate() {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-3 max-w-full">
           <div className="flex items-center justify-between mb-8">
-            <h2 className="text-3xl font-bold">Latest Articles</h2>
+            <h2 className="text-3xl font-bold text-gray-900">Latest Articles</h2>
             <Button variant="ghost">
               View All
               <FiChevronRight className="ml-2 w-4 h-4" />
@@ -612,7 +612,7 @@ export function MagazineBlogTemplate() {
             <div className="lg:col-span-2">
               <div className="flex items-center gap-2 mb-6">
                 <FiAward className="w-6 h-6 text-blue-600" />
-                <h2 className="text-3xl font-bold">Editor's Picks</h2>
+                <h2 className="text-3xl font-bold text-gray-900">Editor's Picks</h2>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {magazineData.editorsPicks.map((pick) => (
@@ -636,7 +636,7 @@ export function MagazineBlogTemplate() {
 
             {/* Popular Tags */}
             <div>
-              <h3 className="text-xl font-bold mb-6">Popular Topics</h3>
+              <h3 className="text-xl font-bold mb-6 text-gray-900">Popular Topics</h3>
               <Card className="p-6">
                 <div className="flex flex-wrap gap-2">
                   {magazineData.popularTags.map((tag) => (
@@ -659,7 +659,7 @@ export function MagazineBlogTemplate() {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-3 max-w-full">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Meet Our Editorial Team</h2>
+            <h2 className="text-3xl font-bold mb-4 text-gray-900">Meet Our Editorial Team</h2>
             <p className="text-xl text-gray-600">
               Expert writers and industry leaders sharing their knowledge
             </p>
@@ -673,7 +673,7 @@ export function MagazineBlogTemplate() {
                     alt={editor.name}
                     className="w-24 h-24 rounded-full mx-auto mb-4 border-4 border-gray-100 group-hover:border-blue-100 transition-colors"
                   />
-                  <h3 className="text-xl font-bold mb-1">{editor.name}</h3>
+                  <h3 className="text-xl font-bold mb-1 text-gray-900">{editor.name}</h3>
                   <p className="text-sm text-gray-600 mb-3">{editor.role}</p>
                   <p className="text-sm text-gray-500 mb-4">{editor.bio}</p>
                   <Badge variant="outline" className="mb-4">{editor.articles} Articles</Badge>
@@ -695,7 +695,7 @@ export function MagazineBlogTemplate() {
       {/* Testimonials */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-3 max-w-full">
-          <h2 className="text-3xl font-bold text-center mb-12">What Readers Say</h2>
+          <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">What Readers Say</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {magazineData.testimonials.map((testimonial) => (
               <Card key={testimonial.name} className="p-8 border-0 shadow-lg">
@@ -765,7 +765,7 @@ export function MagazineBlogTemplate() {
         <div className="container mx-auto px-3 max-w-full">
           <div className="grid md:grid-cols-5 gap-8 mb-8">
             <div className="md:col-span-2">
-              <h3 className="text-2xl font-bold mb-4">CREATIVE<span className="text-blue-500">MAG</span></h3>
+              <h3 className="text-2xl font-bold mb-4 text-gray-900">CREATIVE<span className="text-blue-500">MAG</span></h3>
               <p className="text-gray-400 mb-6">Your source for design and development insights. Join our community of {magazineData.stats.monthlyReaders} monthly readers.</p>
               <div className="flex flex-col sm:flex-row sm:items-center gap-3">
                 <a href="#" className="p-2 bg-gray-800 hover:bg-gray-700 rounded-lg transition-colors">

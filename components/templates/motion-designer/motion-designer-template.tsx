@@ -195,7 +195,7 @@ export function MotionDesignerTemplate() {
       <section id="showreel" className="py-32 relative z-10">
         <div className="container mx-auto px-6">
           <ScrollReveal>
-            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black uppercase mb-16 text-center break-words">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black uppercase mb-16 text-center break-words text-gray-900">
               <span className="text-neon-green">Show</span>
               <span className="text-hot-pink">reel</span>
             </h2>
@@ -271,7 +271,7 @@ export function MotionDesignerTemplate() {
                 </div>
 
                 <div>
-                  <h3 className="text-3xl font-black uppercase mb-3 group-hover:text-neon-green transition-colors">
+                  <h3 className="text-3xl font-black uppercase mb-3 group-hover:text-neon-green transition-colors text-gray-900">
                     {project.title}
                   </h3>
                   <p className="text-gray-400 mb-4 leading-relaxed">{project.description}</p>
@@ -293,7 +293,7 @@ export function MotionDesignerTemplate() {
       <section className="py-32 relative z-10 bg-gradient-to-b from-black via-gray-900 to-black">
         <div className="container mx-auto px-6">
           <ScrollReveal>
-            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black uppercase mb-16 text-center break-words">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black uppercase mb-16 text-center break-words text-gray-900">
               <span className="text-white">Tool</span>
               <span className="text-neon-green">kit</span>
             </h2>
@@ -386,7 +386,7 @@ export function MotionDesignerTemplate() {
       <section className="py-32 relative z-10 bg-gray-900">
         <div className="container mx-auto px-6">
           <ScrollReveal>
-            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black uppercase mb-16 text-center break-words">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black uppercase mb-16 text-center break-words text-gray-900">
               <span className="text-white">Style</span>
               <span className="text-hot-pink">Frames</span>
             </h2>
@@ -442,7 +442,7 @@ export function MotionDesignerTemplate() {
 
             <ScrollReveal delay={0.3}>
               <div>
-                <h2 className="text-6xl md:text-7xl font-black uppercase mb-8">
+                <h2 className="text-6xl md:text-7xl font-black uppercase mb-8 text-gray-900">
                   <span className="text-white">About</span>
                   <span className="text-neon-green"> Me</span>
                 </h2>
@@ -465,7 +465,7 @@ export function MotionDesignerTemplate() {
       <section className="py-32 relative z-10 bg-gradient-to-b from-black via-gray-900 to-black">
         <div className="container mx-auto px-6">
           <ScrollReveal>
-            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black uppercase mb-8 text-center break-words">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black uppercase mb-8 text-center break-words text-gray-900">
               <span className="text-white">Pricing</span>
             </h2>
             <p className="text-center text-gray-400 mb-16 text-xl uppercase tracking-wide">
@@ -515,7 +515,7 @@ export function MotionDesignerTemplate() {
       <section className="py-32 relative z-10">
         <div className="container mx-auto px-6">
           <ScrollReveal>
-            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black uppercase mb-16 text-center break-words">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black uppercase mb-16 text-center break-words text-gray-900">
               <span className="text-white">Client</span>
               <span className="text-neon-green"> Love</span>
             </h2>
@@ -548,7 +548,7 @@ export function MotionDesignerTemplate() {
       <section className="py-32 relative z-10 bg-gray-900">
         <div className="container mx-auto px-6">
           <ScrollReveal>
-            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black uppercase mb-16 text-center break-words">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black uppercase mb-16 text-center break-words text-gray-900">
               <span className="text-white">My</span>
               <span className="text-hot-pink"> Journey</span>
             </h2>

@@ -261,7 +261,7 @@ export function FashionProductTemplate() {
                 <Badge variant="secondary" className="bg-stone-900 text-stone-50">
                   Sustainable Choice
                 </Badge>
-                <h1 className="text-3xl sm:text-5xl font-bold tracking-tight break-words">
+                <h1 className="text-3xl sm:text-5xl font-bold tracking-tight break-words text-gray-900">
                   {productData.name}
                 </h1>
                 <p className="text-xl text-stone-600">{productData.tagline}</p>
@@ -367,7 +367,7 @@ export function FashionProductTemplate() {
         <div className="container mx-auto px-3 sm:px-3">
           <ScrollReveal>
             <div className="max-w-full mx-auto text-center mb-16">
-              <h2 className="text-3xl sm:text-5xl font-bold mb-6 break-words">
+              <h2 className="text-3xl sm:text-5xl font-bold mb-6 break-words text-gray-900">
                 {productData.sustainability.title}
               </h2>
               <p className="text-xl text-stone-600">
@@ -382,7 +382,7 @@ export function FashionProductTemplate() {
                 <Card className="bg-white border-stone-200 h-full">
                   <CardContent className="p-8 text-center">
                     <feature.icon className="w-12 h-12 mx-auto mb-6 text-stone-700" />
-                    <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
+                    <h3 className="text-xl font-semibold mb-3 text-gray-900">{feature.title}</h3>
                     <p className="text-stone-600">{feature.description}</p>
                   </CardContent>
                 </Card>
@@ -404,7 +404,7 @@ export function FashionProductTemplate() {
                   }`}
                 >
                   <div className={index % 2 === 1 ? "md:order-2" : ""}>
-                    <h3 className="text-3xl md:text-3xl sm:text-4xl font-bold mb-4">{feature.title}</h3>
+                    <h3 className="text-3xl md:text-3xl sm:text-4xl font-bold mb-4 text-gray-900">{feature.title}</h3>
                     <p className="text-lg text-stone-600">{feature.description}</p>
                   </div>
                   <div className={index % 2 === 1 ? "md:order-1" : ""}>
@@ -421,7 +421,7 @@ export function FashionProductTemplate() {
       <section className="bg-stone-900 text-stone-50 py-24">
         <div className="container mx-auto px-3 sm:px-3">
           <ScrollReveal>
-            <h2 className="text-3xl sm:text-5xl font-bold text-center mb-4 break-words">
+            <h2 className="text-3xl sm:text-5xl font-bold text-center mb-4 break-words text-gray-900">
               #UrbanStrideStyle
             </h2>
             <p className="text-center text-stone-400 mb-16">
@@ -457,7 +457,7 @@ export function FashionProductTemplate() {
           <div className="max-w-full mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
             <ScrollReveal>
               <div>
-                <h3 className="text-2xl font-bold mb-6">Materials</h3>
+                <h3 className="text-2xl font-bold mb-6 text-gray-900">Materials</h3>
                 <ul className="space-y-3">
                   {productData.productDetails.materials.map((material, index) => (
                     <li key={index} className="flex items-start gap-3">
@@ -471,7 +471,7 @@ export function FashionProductTemplate() {
 
             <ScrollReveal delay={0.2}>
               <div>
-                <h3 className="text-2xl font-bold mb-6">Care Instructions</h3>
+                <h3 className="text-2xl font-bold mb-6 text-gray-900">Care Instructions</h3>
                 <ul className="space-y-3">
                   {productData.productDetails.care.map((instruction, index) => (
                     <li key={index} className="flex items-start gap-3">
@@ -490,7 +490,7 @@ export function FashionProductTemplate() {
       <section className="bg-stone-100 py-24">
         <div className="container mx-auto px-3 sm:px-3">
           <ScrollReveal>
-            <h2 className="text-3xl sm:text-4xl font-bold text-center mb-16">What Our Community Says</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold text-center mb-16 text-gray-900">What Our Community Says</h2>
           </ScrollReveal>
 
           <div className="max-w-full mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -526,7 +526,7 @@ export function FashionProductTemplate() {
       <section className="py-24">
         <div className="container mx-auto px-3 sm:px-3">
           <ScrollReveal>
-            <h2 className="text-3xl sm:text-4xl font-bold text-center mb-16">Complete the Look</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold text-center mb-16 text-gray-900">Complete the Look</h2>
           </ScrollReveal>
 
           <div className="max-w-full mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -539,7 +539,7 @@ export function FashionProductTemplate() {
                     className="w-full aspect-square object-cover group-hover:scale-105 transition-transform"
                   />
                   <CardContent className="p-6">
-                    <h3 className="font-semibold mb-2 text-stone-900">{item.name}</h3>
+                    <h3 className="font-semibold mb-2 text-stone-900 text-gray-900">{item.name}</h3>
                     <div className="text-lg font-semibold">${item.price}</div>
                   </CardContent>
                 </Card>

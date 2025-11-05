@@ -179,7 +179,7 @@ export function LinProfessionalAuthorityTemplate() {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl">
             <ScrollReveal>
-              <h1 className="font-['Playfair_Display'] text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+              <h1 className="font-['Playfair_Display'] text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight text-gray-900">
                 {firmData.name}
               </h1>
             </ScrollReveal>
@@ -226,7 +226,7 @@ export function LinProfessionalAuthorityTemplate() {
       {/* Services Section */}
       <section id="services" className="container mx-auto px-4 py-20">
         <ScrollReveal>
-          <h2 className="font-['Playfair_Display'] text-3xl sm:text-5xl font-bold text-center mb-4 text-[#1A1A1A] break-words">
+          <h2 className="font-['Playfair_Display'] text-3xl sm:text-5xl font-bold text-center mb-4 text-[#1A1A1A] break-words text-gray-900">
             Our Services
           </h2>
         </ScrollReveal>
@@ -245,7 +245,7 @@ export function LinProfessionalAuthorityTemplate() {
                   <div className="text-[#D4AF37] mb-4 group-hover:scale-110 transition-transform">
                     {service.icon}
                   </div>
-                  <h3 className="text-2xl font-bold mb-3 text-[#1A1A1A] font-['Montserrat']">
+                  <h3 className="text-2xl font-bold mb-3 text-[#1A1A1A] font-['Montserrat'] text-gray-900">
                     {service.title}
                   </h3>
                   <p className="text-[#666666] leading-relaxed">{service.description}</p>
@@ -260,7 +260,7 @@ export function LinProfessionalAuthorityTemplate() {
       <section id="team" className="bg-[#F8F8F8] py-20">
         <div className="container mx-auto px-4">
           <ScrollReveal>
-            <h2 className="font-['Playfair_Display'] text-3xl sm:text-5xl font-bold text-center mb-4 text-[#1A1A1A] break-words">
+            <h2 className="font-['Playfair_Display'] text-3xl sm:text-5xl font-bold text-center mb-4 text-[#1A1A1A] break-words text-gray-900">
               Our Team
             </h2>
           </ScrollReveal>
@@ -279,7 +279,7 @@ export function LinProfessionalAuthorityTemplate() {
                     <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-br from-[#1A1A2E] to-[#D4AF37] flex items-center justify-center text-white text-3xl sm:text-4xl font-bold">
                       {member.name.split(" ").map((n) => n[0]).join("")}
                     </div>
-                    <h3 className="text-xl font-bold mb-2 text-[#1A1A1A]">{member.name}</h3>
+                    <h3 className="text-xl font-bold mb-2 text-[#1A1A1A] text-gray-900">{member.name}</h3>
                     <p className="text-[#D4AF37] font-medium mb-3">{member.role}</p>
                     <p className="text-sm text-[#666666] leading-relaxed">{member.description}</p>
                   </CardContent>
@@ -294,7 +294,7 @@ export function LinProfessionalAuthorityTemplate() {
       <section id="contact" className="bg-gradient-to-br from-[#1A1A2E] to-[#16213E] text-white py-20">
         <div className="container mx-auto px-4 text-center">
           <ScrollReveal>
-            <h2 className="font-['Playfair_Display'] text-3xl sm:text-5xl font-bold mb-6 break-words">
+            <h2 className="font-['Playfair_Display'] text-3xl sm:text-5xl font-bold mb-6 break-words text-gray-900">
               Ready to Get Started?
             </h2>
           </ScrollReveal>

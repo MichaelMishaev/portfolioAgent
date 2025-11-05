@@ -383,7 +383,7 @@ export function PremiumProductTemplate() {
           </FadeIn>
 
           <FadeIn delay={0.2}>
-            <h1 className="text-4xl sm:text-4xl sm:text-5xl md:text-6xl lg:text-9xl font-light mb-4 tracking-tight break-words">
+            <h1 className="text-4xl sm:text-4xl sm:text-5xl md:text-6xl lg:text-9xl font-light mb-4 tracking-tight break-words text-gray-900">
               {productData.name}
             </h1>
           </FadeIn>
@@ -441,7 +441,7 @@ export function PremiumProductTemplate() {
       <section id="heritage" className="container mx-auto px-3 max-w-full py-32">
         <ScrollReveal>
           <div className="max-w-full mx-auto text-center mb-20">
-            <h2 className="text-6xl md:text-7xl font-light mb-8 tracking-tight">
+            <h2 className="text-6xl md:text-7xl font-light mb-8 tracking-tight text-gray-900">
               {productData.heritage.title}
             </h2>
             <div className="text-9xl font-light text-gray-800 mb-8">
@@ -481,7 +481,7 @@ export function PremiumProductTemplate() {
       <section className="container mx-auto px-3 max-w-full py-32 bg-gradient-to-b from-transparent via-gray-950/50 to-transparent">
         <ScrollReveal>
           <div className="text-center mb-20">
-            <h2 className="text-6xl md:text-7xl font-light mb-6 tracking-tight">
+            <h2 className="text-6xl md:text-7xl font-light mb-6 tracking-tight text-gray-900">
               {productData.technicalMastery.title}
             </h2>
             <p className="text-xl text-gray-400">
@@ -508,7 +508,7 @@ export function PremiumProductTemplate() {
                     <span className="text-4xl font-light">{feature.stat}</span>
                     <span className="text-sm text-gray-400 ml-3 uppercase tracking-wider">{feature.metric}</span>
                   </div>
-                  <h3 className="text-4xl font-light mb-6">{feature.title}</h3>
+                  <h3 className="text-4xl font-light mb-6 text-gray-900">{feature.title}</h3>
                   <p className="text-lg text-gray-400 leading-relaxed">{feature.description}</p>
                 </div>
               </div>
@@ -521,7 +521,7 @@ export function PremiumProductTemplate() {
       <section id="configure" className="container mx-auto px-3 max-w-full py-32">
         <ScrollReveal>
           <div className="text-center mb-20">
-            <h2 className="text-6xl md:text-7xl font-light mb-6 tracking-tight">
+            <h2 className="text-6xl md:text-7xl font-light mb-6 tracking-tight text-gray-900">
               {productData.configurator.title}
             </h2>
             <p className="text-xl text-gray-400">
@@ -534,7 +534,7 @@ export function PremiumProductTemplate() {
           {/* Material Selection */}
           <ScrollReveal delay={0.1}>
             <div className="mb-16">
-              <h3 className="text-3xl font-light mb-8 text-center">Select Case Material</h3>
+              <h3 className="text-3xl font-light mb-8 text-center text-gray-900">Select Case Material</h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {productData.configurator.materials.map((material, index) => (
                   <motion.div
@@ -583,7 +583,7 @@ export function PremiumProductTemplate() {
           {/* Complications */}
           <ScrollReveal delay={0.2}>
             <div className="mb-16">
-              <h3 className="text-3xl font-light mb-8 text-center">Complications</h3>
+              <h3 className="text-3xl font-light mb-8 text-center text-gray-900">Complications</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-full mx-auto">
                 {productData.configurator.complications.map((complication, index) => (
                   <motion.button
@@ -626,7 +626,7 @@ export function PremiumProductTemplate() {
           {/* Strap Selection */}
           <ScrollReveal delay={0.3}>
             <div className="mb-16">
-              <h3 className="text-3xl font-light mb-8 text-center">Select Strap</h3>
+              <h3 className="text-3xl font-light mb-8 text-center text-gray-900">Select Strap</h3>
               <div className="grid grid-cols-1 md:grid-cols-4 gap-4 max-w-full mx-auto">
                 {productData.configurator.straps.map((strap, index) => (
                   <motion.div
@@ -697,7 +697,7 @@ export function PremiumProductTemplate() {
       <section className="container mx-auto px-3 max-w-full py-32 bg-gradient-to-b from-transparent via-gray-950/50 to-transparent">
         <ScrollReveal>
           <div className="text-center mb-20">
-            <h2 className="text-6xl md:text-7xl font-light mb-6 tracking-tight">
+            <h2 className="text-6xl md:text-7xl font-light mb-6 tracking-tight text-gray-900">
               {productData.craftsmen.title}
             </h2>
             <p className="text-xl text-gray-400">
@@ -718,7 +718,7 @@ export function PremiumProductTemplate() {
                       className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
                     />
                   </div>
-                  <h3 className="text-2xl font-light mb-2">{craftsman.name}</h3>
+                  <h3 className="text-2xl font-light mb-2 text-gray-900">{craftsman.name}</h3>
                   <p className="text-sm text-gray-400 uppercase tracking-wider mb-1">{craftsman.title}</p>
                   <p className="text-sm text-gray-500 mb-4">{craftsman.specialty}</p>
                   <Badge className="bg-white/10 text-white text-xs mb-6">{craftsman.experience}</Badge>
@@ -736,7 +736,7 @@ export function PremiumProductTemplate() {
       <section className="container mx-auto px-3 max-w-full py-32">
         <ScrollReveal>
           <div className="text-center mb-20">
-            <h2 className="text-6xl md:text-7xl font-light mb-6 tracking-tight">
+            <h2 className="text-6xl md:text-7xl font-light mb-6 tracking-tight text-gray-900">
               {productData.specifications.title}
             </h2>
           </div>
@@ -768,7 +768,7 @@ export function PremiumProductTemplate() {
       <section id="ownership" className="container mx-auto px-3 max-w-full py-32 bg-gradient-to-b from-transparent via-gray-950/50 to-transparent">
         <ScrollReveal>
           <div className="text-center mb-20">
-            <h2 className="text-6xl md:text-7xl font-light mb-6 tracking-tight">
+            <h2 className="text-6xl md:text-7xl font-light mb-6 tracking-tight text-gray-900">
               {productData.ownership.title}
             </h2>
             <p className="text-xl text-gray-400">
@@ -785,7 +785,7 @@ export function PremiumProductTemplate() {
                   <div className="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center mb-6">
                     {benefit.icon}
                   </div>
-                  <h3 className="text-xl font-light mb-3">{benefit.title}</h3>
+                  <h3 className="text-xl font-light mb-3 text-gray-900">{benefit.title}</h3>
                   <p className="text-sm text-gray-400 leading-relaxed">{benefit.description}</p>
                 </CardContent>
               </Card>
@@ -798,7 +798,7 @@ export function PremiumProductTemplate() {
       <section className="container mx-auto px-3 max-w-full py-32">
         <ScrollReveal>
           <div className="text-center mb-20">
-            <h2 className="text-6xl md:text-7xl font-light mb-6 tracking-tight">
+            <h2 className="text-6xl md:text-7xl font-light mb-6 tracking-tight text-gray-900">
               Collector Testimonials
             </h2>
           </div>
@@ -842,7 +842,7 @@ export function PremiumProductTemplate() {
           <Card className="max-w-full mx-auto bg-gradient-to-br from-white/10 to-white/5 border-white/20 backdrop-blur-xl">
             <CardContent className="p-16 text-center">
               <FiClock className="w-16 h-16 mx-auto mb-8 text-gray-400" />
-              <h2 className="text-5xl md:text-6xl font-light mb-6 tracking-tight">
+              <h2 className="text-5xl md:text-6xl font-light mb-6 tracking-tight text-gray-900">
                 {productData.finalCTA.title}
               </h2>
               <p className="text-xl text-gray-300 mb-4">

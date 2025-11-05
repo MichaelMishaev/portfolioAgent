@@ -203,7 +203,7 @@ export function InteractiveAgencyTemplate() {
                 <div className="grid md:grid-cols-2 gap-8 p-8 md:p-12">
                   <div className="flex flex-col justify-center">
                     <div className="text-sm text-cyan-400 font-mono mb-4">{project.category}</div>
-                    <h3 className="text-3xl sm:text-5xl font-black mb-6 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-cyan-400 group-hover:bg-clip-text transition-all break-words">
+                    <h3 className="text-3xl sm:text-5xl font-black mb-6 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-cyan-400 group-hover:bg-clip-text transition-all break-words text-gray-900">
                       {project.title}
                     </h3>
                     <p className="text-lg text-gray-300 mb-6 leading-relaxed">{project.description}</p>
@@ -255,7 +255,7 @@ export function InteractiveAgencyTemplate() {
                 className="p-8 rounded-2xl bg-gradient-to-br from-purple-900/20 to-cyan-900/20 border border-purple-500/20 backdrop-blur-sm group"
               >
                 <div className="text-4xl mb-6 group-hover:scale-110 transition-transform">{service.icon}</div>
-                <h3 className="text-2xl font-bold mb-4 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-cyan-400 group-hover:bg-clip-text transition-all">
+                <h3 className="text-2xl font-bold mb-4 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-cyan-400 group-hover:bg-clip-text transition-all text-gray-900">
                   {service.title}
                 </h3>
                 <p className="text-gray-400 leading-relaxed">{service.description}</p>
@@ -346,7 +346,7 @@ export function InteractiveAgencyTemplate() {
 
           {/* Skills - Interactive Agency */}
           <section className="py-20 border-t border-gray-800">
-            <h3 className="text-3xl sm:text-4xl font-bold mb-12 text-center">Our Expertise</h3>
+            <h3 className="text-3xl sm:text-4xl font-bold mb-12 text-center text-gray-900">Our Expertise</h3>
             <div className="grid md:grid-cols-4 gap-6">
               {['Interactive Design', 'Motion Graphics', 'Web Development', 'Brand Strategy', 'UX/UI', 'Digital Marketing', 'Animation', '3D Design'].map((skill, i) => (
                 <div key={i} className="bg-gradient-to-br from-purple-600 to-pink-600 p-6 rounded-xl text-center hover:scale-105 transition-transform">
@@ -359,7 +359,7 @@ export function InteractiveAgencyTemplate() {
           {/* About - Interactive Agency */}
           <section className="py-20 border-t border-gray-800 bg-gradient-to-br from-gray-900 to-black">
             <div className="max-w-4xl mx-auto text-center">
-              <h3 className="text-3xl sm:text-4xl font-bold mb-8">Who We Are</h3>
+              <h3 className="text-3xl sm:text-4xl font-bold mb-8 text-gray-900">Who We Are</h3>
               <p className="text-2xl text-gray-300 mb-6 font-semibold">
                 We're an interactive agency creating engaging digital experiences that connect brands with audiences.
               </p>
@@ -371,7 +371,7 @@ export function InteractiveAgencyTemplate() {
 
           {/* Pricing - Interactive Agency */}
           <section className="py-20 border-t border-gray-800">
-            <h3 className="text-3xl sm:text-4xl font-bold mb-12 text-center">Our Packages</h3>
+            <h3 className="text-3xl sm:text-4xl font-bold mb-12 text-center text-gray-900">Our Packages</h3>
             <div className="grid md:grid-cols-3 gap-8">
               {[
                 { name: 'Interactive Basic', price: '$8,000', features: ['Interactive Website', 'Basic Animations', '3 Revisions', 'Mobile Optimized'] },
@@ -397,7 +397,7 @@ export function InteractiveAgencyTemplate() {
 
           {/* Timeline - Interactive Agency */}
           <section className="py-20 border-t border-gray-800">
-            <h3 className="text-3xl sm:text-4xl font-bold mb-12 text-center">Our Story</h3>
+            <h3 className="text-3xl sm:text-4xl font-bold mb-12 text-center text-gray-900">Our Story</h3>
             <div className="max-w-3xl mx-auto space-y-6">
               {[
                 { year: '2024', title: 'Industry Leaders', desc: 'Recognized as top interactive agency' },

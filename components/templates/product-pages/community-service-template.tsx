@@ -339,7 +339,7 @@ export function CommunityServiceTemplate() {
         <div className="container mx-auto px-3 max-w-full">
           <div className="max-w-full mx-auto text-center">
             <FadeIn>
-              <h1 className="text-6xl md:text-7xl font-bold mb-6 tracking-tight">
+              <h1 className="text-6xl md:text-7xl font-bold mb-6 tracking-tight text-gray-900">
                 {platformData.name}
               </h1>
               <p className="text-3xl font-light mb-8 text-stone-700">{platformData.tagline}</p>
@@ -391,7 +391,7 @@ export function CommunityServiceTemplate() {
                   <Badge className="mb-4 bg-teal-500 text-white">
                     {platformData.valueProps.creators.title}
                   </Badge>
-                  <h2 className="text-4xl sm:text-5xl font-bold mb-4 break-words">
+                  <h2 className="text-4xl sm:text-5xl font-bold mb-4 break-words text-gray-900">
                     {platformData.valueProps.creators.subtitle}
                   </h2>
                 </div>
@@ -403,7 +403,7 @@ export function CommunityServiceTemplate() {
                     <Card className="border-2 border-stone-200 hover:border-teal-500 transition-colors">
                       <CardContent className="p-8">
                         <benefit.icon className="w-12 h-12 text-teal-500 mb-6" />
-                        <h3 className="text-xl font-bold mb-3">{benefit.title}</h3>
+                        <h3 className="text-xl font-bold mb-3 text-gray-900">{benefit.title}</h3>
                         <p className="text-stone-600">{benefit.description}</p>
                       </CardContent>
                     </Card>
@@ -419,7 +419,7 @@ export function CommunityServiceTemplate() {
                   <Badge className="mb-4 bg-purple-600 text-white">
                     {platformData.valueProps.members.title}
                   </Badge>
-                  <h2 className="text-4xl sm:text-5xl font-bold mb-4 break-words">
+                  <h2 className="text-4xl sm:text-5xl font-bold mb-4 break-words text-gray-900">
                     {platformData.valueProps.members.subtitle}
                   </h2>
                 </div>
@@ -431,7 +431,7 @@ export function CommunityServiceTemplate() {
                     <Card className="border-2 border-stone-200 hover:border-purple-600 transition-colors">
                       <CardContent className="p-8">
                         <benefit.icon className="w-12 h-12 text-purple-600 mb-6" />
-                        <h3 className="text-xl font-bold mb-3">{benefit.title}</h3>
+                        <h3 className="text-xl font-bold mb-3 text-gray-900">{benefit.title}</h3>
                         <p className="text-stone-600">{benefit.description}</p>
                       </CardContent>
                     </Card>
@@ -448,7 +448,7 @@ export function CommunityServiceTemplate() {
         <div className="container mx-auto px-3 max-w-full">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <h2 className="text-4xl sm:text-5xl font-bold mb-6 break-words">Success Stories</h2>
+              <h2 className="text-4xl sm:text-5xl font-bold mb-6 break-words text-gray-900">Success Stories</h2>
               <p className="text-xl text-stone-600 max-w-full mx-auto">
                 Real creators building sustainable businesses on our platform.
               </p>
@@ -479,7 +479,7 @@ export function CommunityServiceTemplate() {
                           className="w-16 h-16 rounded-full"
                         />
                         <div>
-                          <h3 className="text-2xl font-bold">{creator.name}</h3>
+                          <h3 className="text-2xl font-bold text-gray-900">{creator.name}</h3>
                           <p className="text-stone-600">{creator.category}</p>
                         </div>
                       </div>
@@ -516,7 +516,7 @@ export function CommunityServiceTemplate() {
         <div className="container mx-auto px-3 max-w-full">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <h2 className="text-4xl sm:text-5xl font-bold mb-6 break-words">{platformData.pricing.title}</h2>
+              <h2 className="text-4xl sm:text-5xl font-bold mb-6 break-words text-gray-900">{platformData.pricing.title}</h2>
               <p className="text-xl text-stone-600 max-w-full mx-auto mb-8">
                 {platformData.pricing.subtitle}
               </p>
@@ -607,7 +607,7 @@ export function CommunityServiceTemplate() {
               <ScrollReveal key={feature.title} delay={index * 0.1}>
                 <div className="text-center">
                   <feature.icon className="w-12 h-12 mx-auto mb-4 text-teal-500" />
-                  <h3 className="text-xl font-bold mb-3">{feature.title}</h3>
+                  <h3 className="text-xl font-bold mb-3 text-gray-900">{feature.title}</h3>
                   <p className="text-stone-600">{feature.description}</p>
                 </div>
               </ScrollReveal>
@@ -621,7 +621,7 @@ export function CommunityServiceTemplate() {
         <div className="container mx-auto px-3 max-w-full">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <h2 className="text-4xl sm:text-5xl font-bold mb-6 break-words">{platformData.onboarding.title}</h2>
+              <h2 className="text-4xl sm:text-5xl font-bold mb-6 break-words text-gray-900">{platformData.onboarding.title}</h2>
             </div>
           </ScrollReveal>
 
@@ -633,7 +633,7 @@ export function CommunityServiceTemplate() {
                     {step.step}
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold mb-2">{step.title}</h3>
+                    <h3 className="text-xl font-bold mb-2 text-gray-900">{step.title}</h3>
                     <p className="text-stone-600">{step.description}</p>
                   </div>
                 </div>
@@ -648,7 +648,7 @@ export function CommunityServiceTemplate() {
         <div className="container mx-auto px-3 max-w-full">
           <ScrollReveal>
             <div className="max-w-full mx-auto text-center">
-              <h2 className="text-5xl md:text-4xl sm:text-5xl md:text-6xl font-bold mb-8 break-words">
+              <h2 className="text-5xl md:text-4xl sm:text-5xl md:text-6xl font-bold mb-8 break-words text-gray-900">
                 Start Building Your Community Today
               </h2>
               <p className="text-xl mb-12 max-w-full mx-auto opacity-90">

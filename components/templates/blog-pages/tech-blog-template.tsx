@@ -358,7 +358,7 @@ export function TechBlogTemplate() {
               <FiZap className="w-3 h-3 mr-1" />
               New: Interactive Code Playgrounds
             </Badge>
-            <h1 className="text-5xl md:text-4xl sm:text-5xl md:text-6xl font-bold mb-6 leading-tight break-words">
+            <h1 className="text-5xl md:text-4xl sm:text-5xl md:text-6xl font-bold mb-6 leading-tight break-words text-gray-900">
               {techBlogData.hero.title}
             </h1>
             <p className={`text-xl mb-8 ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
@@ -389,7 +389,7 @@ export function TechBlogTemplate() {
         <div className="container mx-auto px-3 max-w-full">
           <div className="flex items-center gap-2 mb-8">
             <FiTrendingUp className="w-6 h-6 text-blue-600" />
-            <h2 className="text-3xl font-bold">Featured Tutorial</h2>
+            <h2 className="text-3xl font-bold text-gray-900">Featured Tutorial</h2>
           </div>
 
           <ScrollReveal>
@@ -419,7 +419,7 @@ export function TechBlogTemplate() {
                 </div>
 
                 <CardContent className="p-8 lg:p-10 flex flex-col justify-center">
-                  <h3 className="text-3xl font-bold mb-4 leading-tight">
+                  <h3 className="text-3xl font-bold mb-4 leading-tight text-gray-900">
                     {techBlogData.featured.title}
                   </h3>
                   <p className={`text-lg mb-6 ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
@@ -487,7 +487,7 @@ export function TechBlogTemplate() {
         <div className="container mx-auto px-3 max-w-full">
           <div className="flex items-center justify-between mb-8">
             <div>
-              <h2 className="text-3xl font-bold mb-2">Learning Series</h2>
+              <h2 className="text-3xl font-bold mb-2 text-gray-900">Learning Series</h2>
               <p className={darkMode ? 'text-gray-400' : 'text-gray-600'}>
                 Structured courses to level up your skills
               </p>
@@ -548,7 +548,7 @@ export function TechBlogTemplate() {
       <section className={`py-16 ${darkMode ? 'bg-gray-900' : 'bg-white'}`}>
         <div className="container mx-auto px-3 max-w-full">
           <div className="flex items-center justify-between mb-8">
-            <h2 className="text-3xl font-bold">Latest Articles</h2>
+            <h2 className="text-3xl font-bold text-gray-900">Latest Articles</h2>
             <div className="flex items-center gap-2">
               <Button variant="outline" className="text-slate-900 dark:text-white" size="sm">
                 <FiFilter className="w-4 h-4 mr-2" />
@@ -654,7 +654,7 @@ export function TechBlogTemplate() {
             <div>
               <div className="flex items-center gap-2 mb-6">
                 <FiTrendingUp className="w-6 h-6 text-blue-600" />
-                <h2 className="text-2xl font-bold">Most Popular</h2>
+                <h2 className="text-2xl font-bold text-gray-900">Most Popular</h2>
               </div>
               <div className="space-y-4">
                 {techBlogData.popularArticles.map((article, idx) => (
@@ -684,7 +684,7 @@ export function TechBlogTemplate() {
             <div>
               <div className="flex items-center gap-2 mb-6">
                 <FiUsers className="w-6 h-6 text-blue-600" />
-                <h2 className="text-2xl font-bold">Top Contributors</h2>
+                <h2 className="text-2xl font-bold text-gray-900">Top Contributors</h2>
               </div>
               <div className="grid gap-4">
                 {techBlogData.contributors.map((contributor) => (
@@ -715,7 +715,7 @@ export function TechBlogTemplate() {
       {/* Topics Grid */}
       <section className={`py-16 ${darkMode ? 'bg-gray-900' : 'bg-white'}`}>
         <div className="container mx-auto px-3 max-w-full">
-          <h2 className="text-3xl font-bold mb-8">Explore Topics</h2>
+          <h2 className="text-3xl font-bold mb-8 text-gray-900">Explore Topics</h2>
           <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
             {techBlogData.topics.map((topic, index) => (
               <ScrollReveal key={topic.name} delay={index * 0.05}>

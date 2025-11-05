@@ -238,7 +238,7 @@ export function Y2KRetroTemplate() {
             <div className="bg-white rounded-[2rem] p-10 border-8 border-pink-500 shadow-[12px_12px_0px_0px_rgba(236,72,153,1)]">
               <div className="flex items-center gap-4 mb-6">
                 <div className="text-6xl">🎀</div>
-                <h2 className="text-3xl sm:text-5xl font-black text-purple-900 break-words">
+                <h2 className="text-3xl sm:text-5xl font-black text-purple-900 break-words text-gray-900">
                   about meeee~
                 </h2>
               </div>
@@ -301,7 +301,7 @@ export function Y2KRetroTemplate() {
                 <div className="p-6">
                   <div className="text-7xl mb-4 text-center">{project.emoji}</div>
                   <div className="bg-white rounded-2xl p-4 border-4 border-black">
-                    <h3 className="text-xl font-black text-purple-900 mb-2">
+                    <h3 className="text-xl font-black text-purple-900 mb-2 text-gray-900">
                       {project.title}
                     </h3>
                     <p className="text-sm text-purple-700 mb-2">{project.description}</p>
@@ -317,7 +317,7 @@ export function Y2KRetroTemplate() {
       {/* Achievements Section */}
       <section className="py-16 px-3 bg-white/30 backdrop-blur-sm border-y-4 border-white">
         <ScrollReveal>
-          <h2 className="text-3xl sm:text-5xl font-black text-center mb-12 text-purple-900 break-words">
+          <h2 className="text-3xl sm:text-5xl font-black text-center mb-12 text-purple-900 break-words text-gray-900">
             ~*~ achievements unlocked ~*~
           </h2>
         </ScrollReveal>
@@ -382,7 +382,7 @@ export function Y2KRetroTemplate() {
       {/* Vibes Section */}
       <section className="py-20 px-3 bg-white/30 backdrop-blur-sm border-y-4 border-white">
         <ScrollReveal>
-          <h3 className="text-3xl sm:text-4xl font-black text-center mb-12 text-purple-900">
+          <h3 className="text-3xl sm:text-4xl font-black text-center mb-12 text-purple-900 text-gray-900">
             the vibes~
           </h3>
         </ScrollReveal>
@@ -409,7 +409,7 @@ export function Y2KRetroTemplate() {
           <ScrollReveal>
             <div className="bg-white rounded-3xl p-12 border-8 border-pink-500 shadow-[12px_12px_0px_0px_rgba(236,72,153,1)]">
               <div className="text-7xl mb-6">💌</div>
-              <h2 className="text-5xl md:text-4xl sm:text-5xl md:text-6xl font-black mb-6 text-purple-900 break-words">
+              <h2 className="text-5xl md:text-4xl sm:text-5xl md:text-6xl font-black mb-6 text-purple-900 break-words text-gray-900">
                 let's collab!
               </h2>
               <p className="text-xl text-purple-700 mb-8">
@@ -441,7 +441,7 @@ export function Y2KRetroTemplate() {
               <ScrollReveal key={i} delay={i * 0.1}>
                 <div className={`bg-gradient-to-br from-cyan-300 to-pink-300 p-8 rounded-3xl border-4 border-white shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] ${plan.glow ? 'ring-4 ring-yellow-300 animate-pulse' : ''}`}>
                   <div className="text-6xl mb-4 text-center">{plan.icon}</div>
-                  <h3 className="text-2xl font-black text-center mb-4 text-purple-800">{plan.name}</h3>
+                  <h3 className="text-2xl font-black text-center mb-4 text-purple-800 text-gray-900">{plan.name}</h3>
                   <div className="text-4xl sm:text-5xl font-black text-center mb-8 text-white [text-shadow:3px_3px_0px_rgba(0,0,0,0.3)] break-words">
                     {plan.price}
                   </div>
@@ -464,7 +464,7 @@ export function Y2KRetroTemplate() {
       <section className="py-20 px-3 sm:px-3 bg-gradient-to-br from-yellow-300 via-green-300 to-cyan-300">
         <div className="container mx-auto max-w-6xl">
           <ScrollReveal>
-            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-12 text-center text-purple-800 [text-shadow:4px_4px_0px_rgba(255,255,255,0.8)] break-words">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-12 text-center text-purple-800 [text-shadow:4px_4px_0px_rgba(255,255,255,0.8)] break-words text-gray-900">
               🎨 GALLERY 🎨
             </h2>
           </ScrollReveal>
@@ -492,7 +492,7 @@ export function Y2KRetroTemplate() {
         <div className="container mx-auto max-w-4xl text-center">
           <ScrollReveal>
             <div className="bg-white/20 backdrop-blur-xl p-12 rounded-[3rem] border-4 border-white shadow-[12px_12px_0px_0px_rgba(0,0,0,0.5)]">
-              <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-6 [text-shadow:4px_4px_0px_rgba(0,0,0,0.3)] break-words">
+              <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-6 [text-shadow:4px_4px_0px_rgba(0,0,0,0.3)] break-words text-gray-900">
                 ✨ READY TO GO RETRO? ✨
               </h2>
               <p className="text-2xl mb-8 font-bold">
@@ -515,7 +515,7 @@ export function Y2KRetroTemplate() {
       <section className="py-20 px-3 sm:px-3 bg-gradient-to-br from-green-300 via-cyan-300 to-blue-300">
         <div className="container mx-auto max-w-4xl">
           <ScrollReveal>
-            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-12 text-center text-purple-800 [text-shadow:4px_4px_0px_rgba(255,255,255,0.8)] break-words">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-12 text-center text-purple-800 [text-shadow:4px_4px_0px_rgba(255,255,255,0.8)] break-words text-gray-900">
               ⏰ TIMELINE ⏰
             </h2>
           </ScrollReveal>
@@ -560,7 +560,7 @@ export function Y2KRetroTemplate() {
             ].map((item, i) => (
               <ScrollReveal key={i} delay={i * 0.05}>
                 <div className="bg-gradient-to-r from-cyan-300 to-yellow-300 p-6 rounded-2xl border-4 border-white shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
-                  <h3 className="font-black text-lg mb-3 text-purple-900">{item.q}</h3>
+                  <h3 className="font-black text-lg mb-3 text-purple-900 text-gray-900">{item.q}</h3>
                   <p className="font-bold text-purple-800">{item.a}</p>
                 </div>
               </ScrollReveal>

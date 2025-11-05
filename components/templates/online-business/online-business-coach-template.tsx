@@ -171,7 +171,7 @@ export function OnlineBusinessCoachTemplate() {
       <section id="offerings" className="container mx-auto px-3 md:px-3 max-w-full py-20 md:py-32 bg-gradient-to-br from-amber-50 to-blue-50 dark:from-gray-800 dark:to-gray-900 rounded-3xl">
         <ScrollReveal>
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl sm:text-5xl font-bold mb-4 break-words">
+            <h2 className="text-3xl md:text-4xl sm:text-5xl font-bold mb-4 break-words text-gray-900">
               {data.offerings?.title || "Ways to Work With Me"}
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-300 max-w-full mx-auto">
@@ -193,7 +193,7 @@ export function OnlineBusinessCoachTemplate() {
                 <Badge className="mb-3 bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-400">
                   {data.offerings?.book?.badge || "Bestseller"}
                 </Badge>
-                <h3 className="text-2xl font-bold mb-3">{data.offerings?.book?.title || "Time Magic"}</h3>
+                <h3 className="text-2xl font-bold mb-3 text-gray-900">{data.offerings?.book?.title || "Time Magic"}</h3>
                 <p className="text-gray-600 dark:text-gray-300 mb-4">
                   {data.offerings?.book?.description || "A practical guide to reclaiming your time and energy. Transform how you work and live."}
                 </p>
@@ -217,7 +217,7 @@ export function OnlineBusinessCoachTemplate() {
                 <Badge className="mb-3 bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400">
                   {data.offerings?.course?.badge || "Self-Paced"}
                 </Badge>
-                <h3 className="text-2xl font-bold mb-3">{data.offerings?.course?.title || "Mastery Program"}</h3>
+                <h3 className="text-2xl font-bold mb-3 text-gray-900">{data.offerings?.course?.title || "Mastery Program"}</h3>
                 <p className="text-gray-600 dark:text-gray-300 mb-4">
                   {data.offerings?.course?.description || "8-week online course with video lessons, workbooks, and community support."}
                 </p>
@@ -245,7 +245,7 @@ export function OnlineBusinessCoachTemplate() {
                 <Badge className="mb-3 bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-400">
                   {data.offerings?.coaching?.badge || "Limited Spots"}
                 </Badge>
-                <h3 className="text-2xl font-bold mb-3">{data.offerings?.coaching?.title || "1:1 Coaching"}</h3>
+                <h3 className="text-2xl font-bold mb-3 text-gray-900">{data.offerings?.coaching?.title || "1:1 Coaching"}</h3>
                 <p className="text-gray-600 dark:text-gray-300 mb-4">
                   {data.offerings?.coaching?.description || "Work directly with me for personalized transformation and breakthrough results."}
                 </p>
@@ -269,7 +269,7 @@ export function OnlineBusinessCoachTemplate() {
                 <Badge className="mb-3 bg-pink-100 text-pink-700 dark:bg-pink-900/30 dark:text-pink-400">
                   {data.offerings?.podcast?.badge || "#1 Podcast"}
                 </Badge>
-                <h3 className="text-2xl font-bold mb-3">{data.offerings?.podcast?.title || "The Growth Show"}</h3>
+                <h3 className="text-2xl font-bold mb-3 text-gray-900">{data.offerings?.podcast?.title || "The Growth Show"}</h3>
                 <p className="text-gray-600 dark:text-gray-300 mb-4">
                   {data.offerings?.podcast?.description || "Weekly inspiration, practical tips, and interviews with world-class guests."}
                 </p>
@@ -293,7 +293,7 @@ export function OnlineBusinessCoachTemplate() {
                 <Badge className="mb-3 bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400">
                   {data.offerings?.community?.badge || "Join 10K+ Members"}
                 </Badge>
-                <h3 className="text-2xl font-bold mb-3">{data.offerings?.community?.title || "Inner Circle Community"}</h3>
+                <h3 className="text-2xl font-bold mb-3 text-gray-900">{data.offerings?.community?.title || "Inner Circle Community"}</h3>
                 <p className="text-gray-600 dark:text-gray-300 mb-4">
                   {data.offerings?.community?.description || "Connect with like-minded individuals on the same journey. Monthly coaching calls, resources, and support."}
                 </p>
@@ -311,7 +311,7 @@ export function OnlineBusinessCoachTemplate() {
       <section id="testimonials" className="container mx-auto px-3 md:px-3 max-w-full py-20 md:py-32">
         <ScrollReveal>
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl sm:text-5xl font-bold mb-4 break-words">
+            <h2 className="text-3xl md:text-4xl sm:text-5xl font-bold mb-4 break-words text-gray-900">
               {data.testimonials?.title || "Success Stories"}
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-300 max-w-full mx-auto">
@@ -387,7 +387,7 @@ export function OnlineBusinessCoachTemplate() {
       <section className="container mx-auto px-3 md:px-3 max-w-full py-20 md:py-32 border-t border-gray-200 dark:border-gray-800">
         <ScrollReveal>
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl sm:text-5xl font-bold mb-4 break-words">
+            <h2 className="text-3xl md:text-4xl sm:text-5xl font-bold mb-4 break-words text-gray-900">
               {data.blog?.title || "Latest Insights"}
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-300 max-w-full mx-auto">
@@ -409,7 +409,7 @@ export function OnlineBusinessCoachTemplate() {
                 </div>
                 <CardContent className="p-6">
                   <Badge className="mb-3">Mindset</Badge>
-                  <h3 className="text-xl font-bold mb-2 group-hover:text-amber-600 transition-colors">
+                  <h3 className="text-xl font-bold mb-2 group-hover:text-amber-600 transition-colors text-gray-900">
                     5 Ways to Overcome Impostor Syndrome
                   </h3>
                   <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">
@@ -431,7 +431,7 @@ export function OnlineBusinessCoachTemplate() {
         <ScrollReveal>
           <div className="bg-gradient-to-br from-white to-amber-50 dark:from-gray-800 dark:to-gray-900 rounded-3xl p-8 md:p-12 border border-gray-200 dark:border-gray-700">
             <div className="max-w-full mx-auto text-center">
-              <h2 className="text-3xl md:text-3xl sm:text-4xl font-bold mb-4">
+              <h2 className="text-3xl md:text-3xl sm:text-4xl font-bold mb-4 text-gray-900">
                 {data.contactForm?.title || "Ready to Transform Your Life?"}
               </h2>
               <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">
@@ -494,7 +494,7 @@ export function OnlineBusinessCoachTemplate() {
         <div className="container mx-auto px-3 md:px-3 max-w-full">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
             <div>
-              <h3 className="font-bold text-lg mb-4">{data.footer?.resources || "Resources"}</h3>
+              <h3 className="font-bold text-lg mb-4 text-gray-900">{data.footer?.resources || "Resources"}</h3>
               <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-400">
                 <li><a href="#" className="hover:text-amber-600 transition-colors">{data.footer?.books || "Books"}</a></li>
                 <li><a href="#" className="hover:text-amber-600 transition-colors">{data.footer?.courses || "Courses"}</a></li>
@@ -503,7 +503,7 @@ export function OnlineBusinessCoachTemplate() {
               </ul>
             </div>
             <div>
-              <h3 className="font-bold text-lg mb-4">{data.footer?.workWithMe || "Work With Me"}</h3>
+              <h3 className="font-bold text-lg mb-4 text-gray-900">{data.footer?.workWithMe || "Work With Me"}</h3>
               <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-400">
                 <li><a href="#" className="hover:text-amber-600 transition-colors">{data.footer?.oneOnOne || "1:1 Coaching"}</a></li>
                 <li><a href="#" className="hover:text-amber-600 transition-colors">{data.footer?.groupPrograms || "Group Programs"}</a></li>
@@ -512,7 +512,7 @@ export function OnlineBusinessCoachTemplate() {
               </ul>
             </div>
             <div>
-              <h3 className="font-bold text-lg mb-4">{data.footer?.company || "Company"}</h3>
+              <h3 className="font-bold text-lg mb-4 text-gray-900">{data.footer?.company || "Company"}</h3>
               <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-400">
                 <li><a href="#" className="hover:text-amber-600 transition-colors">{tt.common?.about || "About"}</a></li>
                 <li><a href="#" className="hover:text-amber-600 transition-colors">{data.footer?.press || "Press"}</a></li>
@@ -521,7 +521,7 @@ export function OnlineBusinessCoachTemplate() {
               </ul>
             </div>
             <div>
-              <h3 className="font-bold text-lg mb-4">{data.nav?.connect || "Connect"}</h3>
+              <h3 className="font-bold text-lg mb-4 text-gray-900">{data.nav?.connect || "Connect"}</h3>
               <div className="flex gap-4">
                 <a href="#" className="p-3 bg-gray-100 dark:bg-gray-800 rounded-full hover:bg-amber-100 dark:hover:bg-amber-900/30 transition-colors">
                   <FiInstagram className="w-5 h-5" />

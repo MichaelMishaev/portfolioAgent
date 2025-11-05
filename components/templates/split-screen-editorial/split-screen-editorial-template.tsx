@@ -176,7 +176,7 @@ export function SplitScreenEditorialTemplate() {
               <div key={i} className="relative">
                 <div className="absolute -left-[41px] w-4 h-4 bg-blue-600 rounded-full border-4 border-white"></div>
                 <div className="text-sm text-gray-500 mb-1">{item.y}</div>
-                <h3 className="text-xl font-bold mb-1">{item.t}</h3>
+                <h3 className="text-xl font-bold mb-1 text-gray-900">{item.t}</h3>
                 <p className="text-gray-600">{item.p}</p>
               </div>
             ))}
@@ -211,7 +211,7 @@ export function SplitScreenEditorialTemplate() {
             ].map((srv, i) => (
               <div key={i} className="border-b border-gray-200 pb-6">
                 <div className="flex justify-between items-start mb-2">
-                  <h3 className="text-xl font-bold">{srv.s}</h3>
+                  <h3 className="text-xl font-bold text-gray-900">{srv.s}</h3>
                   <span className="text-lg font-semibold text-blue-600">{srv.p}</span>
                 </div>
                 <p className="text-gray-600">{srv.d}</p>
@@ -231,7 +231,7 @@ export function SplitScreenEditorialTemplate() {
               { q: "What topics do you cover?", a: "Culture, technology, politics, and human interest stories." }
             ].map((faq, i) => (
               <div key={i}>
-                <h3 className="text-lg font-bold mb-3">{faq.q}</h3>
+                <h3 className="text-lg font-bold mb-3 text-gray-900">{faq.q}</h3>
                 <p className="text-gray-700 leading-relaxed">{faq.a}</p>
               </div>
             ))}

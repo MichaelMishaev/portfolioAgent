@@ -316,7 +316,7 @@ export function SplitScreenTemplate() {
             {/* Left Side - Text */}
             <div className="flex flex-col justify-center">
               <FadeIn>
-                <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 leading-tight break-words">
+                <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 leading-tight break-words text-gray-900">
                   {portfolioData.name}
                 </h1>
               </FadeIn>
@@ -359,7 +359,7 @@ export function SplitScreenTemplate() {
         <div className="container mx-auto px-3 sm:px-3">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 break-words">By The Numbers</h2>
+              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 break-words text-gray-900">By The Numbers</h2>
               <p className="text-lg text-muted-foreground">
                 Metrics that matter, results that speak for themselves. Over 8 years of creating exceptional digital experiences.
               </p>
@@ -399,7 +399,7 @@ export function SplitScreenTemplate() {
               </div>
             </div>
             <div className="order-1 md:order-2">
-              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 break-words">Core Skills</h2>
+              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 break-words text-gray-900">Core Skills</h2>
               <p className="text-lg text-muted-foreground">
                 Tools and expertise I bring to every project.
               </p>
@@ -411,7 +411,7 @@ export function SplitScreenTemplate() {
       {/* Projects Split Screen */}
       <section id="work" className="min-h-screen overflow-x-hidden max-w-full py-20 border-t">
         <div className="container mx-auto px-3 sm:px-3 mb-12">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold break-words">Selected Work</h2>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold break-words text-gray-900">Selected Work</h2>
         </div>
 
         <div className="container mx-auto px-3 sm:px-3">
@@ -462,7 +462,7 @@ export function SplitScreenTemplate() {
                     </span>
                   </div>
 
-                  <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 break-words">
+                  <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 break-words text-gray-900">
                     {currentProject.title}
                   </h3>
 
@@ -540,7 +540,7 @@ export function SplitScreenTemplate() {
         <div className="container mx-auto px-3 sm:px-3">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div>
-              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-8 break-words">Client Feedback</h2>
+              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-8 break-words text-gray-900">Client Feedback</h2>
               <p className="text-lg text-muted-foreground">
                 What my clients say about working together.
               </p>
@@ -576,7 +576,7 @@ export function SplitScreenTemplate() {
         <div className="container mx-auto px-3 sm:px-3">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 break-words">Awards & Recognition</h2>
+              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 break-words text-gray-900">Awards & Recognition</h2>
               <p className="text-lg text-muted-foreground">
                 Industry recognition for exceptional work.
               </p>
@@ -602,7 +602,7 @@ export function SplitScreenTemplate() {
       <section className="py-20 border-t bg-muted/20">
         <div className="container mx-auto px-3 sm:px-3">
           <div className="text-center mb-12">
-            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 break-words">Services</h2>
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 break-words text-gray-900">Services</h2>
             <p className="text-lg text-muted-foreground max-w-full mx-auto">
               Comprehensive design solutions tailored to your needs.
             </p>
@@ -612,7 +612,7 @@ export function SplitScreenTemplate() {
             {portfolioData.services.map((service, index) => (
               <FadeIn key={service.title} delay={index * 0.1}>
                 <div className="bg-background p-4 sm:p-6 md:p-8 rounded-lg border hover:shadow-lg transition-shadow h-full flex flex-col">
-                  <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 break-words">{service.title}</h3>
+                  <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 break-words text-gray-900">{service.title}</h3>
                   <p className="text-sm sm:text-base text-muted-foreground mb-4">{service.description}</p>
                   <div className="text-xl sm:text-2xl font-bold text-primary mb-4 break-words">{service.price}</div>
                   <ul className="space-y-2 mb-6 flex-grow">
@@ -636,7 +636,7 @@ export function SplitScreenTemplate() {
         <div className="container mx-auto px-3 sm:px-3">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
             <div>
-              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 break-words">My Process</h2>
+              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 break-words text-gray-900">My Process</h2>
               <p className="text-lg text-muted-foreground">
                 A systematic approach that delivers consistent results across projects of any size.
               </p>
@@ -651,7 +651,7 @@ export function SplitScreenTemplate() {
               <FadeIn key={step.name} delay={index * 0.1}>
                 <div className="bg-muted/30 p-6 rounded-lg hover:bg-muted/50 transition-colors">
                   <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-3 break-words">{step.phase}</div>
-                  <h3 className="text-xl font-bold mb-2">{step.name}</h3>
+                  <h3 className="text-xl font-bold mb-2 text-gray-900">{step.name}</h3>
                   <p className="text-sm text-muted-foreground">{step.desc}</p>
                 </div>
               </FadeIn>
@@ -665,7 +665,7 @@ export function SplitScreenTemplate() {
         <div className="container mx-auto px-3 sm:px-3">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div className="flex flex-col justify-center">
-              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-6 break-words">
+              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-6 break-words text-gray-900">
                 Core Expertise
               </h2>
               <p className="text-lg text-muted-foreground mb-8">
@@ -678,7 +678,7 @@ export function SplitScreenTemplate() {
                 <FadeIn key={skill.area} delay={index * 0.1}>
                   <div className="bg-background p-6 rounded-lg border">
                     <div className="flex justify-between items-start mb-2">
-                      <h3 className="font-bold text-lg">{skill.area}</h3>
+                      <h3 className="font-bold text-lg text-gray-900">{skill.area}</h3>
                       <span className="text-sm text-primary font-semibold">{skill.years} years</span>
                     </div>
                     <p className="text-sm text-muted-foreground">{skill.description}</p>
@@ -695,7 +695,7 @@ export function SplitScreenTemplate() {
         <div className="container mx-auto px-3 sm:px-3">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
             <div>
-              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 break-words">Featured Case Studies</h2>
+              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 break-words text-gray-900">Featured Case Studies</h2>
               <p className="text-lg text-muted-foreground">
                 Detailed breakdowns of successful projects and the strategies behind them.
               </p>
@@ -707,7 +707,7 @@ export function SplitScreenTemplate() {
               <FadeIn key={study.title} delay={index * 0.1}>
                 <div className="bg-muted/30 p-8 rounded-lg hover:bg-muted/50 transition-all cursor-pointer group">
                   <div className="text-xl sm:text-2xl md:text-3xl font-bold text-primary mb-3 break-words">{study.metric}</div>
-                  <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">
+                  <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors text-gray-900">
                     {study.title}
                   </h3>
                   <p className="text-sm text-muted-foreground mb-3">{study.client}</p>
@@ -730,7 +730,7 @@ export function SplitScreenTemplate() {
         <div className="container mx-auto px-3 sm:px-3">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 break-words">
+              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 break-words text-gray-900">
                 Trusted Collaborators
               </h2>
               <p className="text-lg text-muted-foreground">
@@ -759,7 +759,7 @@ export function SplitScreenTemplate() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
               <div className="text-5xl mb-4">📬</div>
-              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 break-words">
+              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 break-words text-gray-900">
                 Design Insights
               </h2>
               <p className="text-lg text-muted-foreground">
@@ -792,7 +792,7 @@ export function SplitScreenTemplate() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             {/* Left Side */}
             <div>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 break-words">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 break-words text-gray-900">
                 Let's Work
                 <br />
                 Together
@@ -821,7 +821,7 @@ export function SplitScreenTemplate() {
       {/* Gallery */}
       <section className="py-20 border-t">
         <div className="container mx-auto px-3">
-          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-12 break-words">Gallery</h2>
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-12 break-words text-gray-900">Gallery</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             {[1,2,3,4,5,6].map(i => (
               <div key={i} className="aspect-square bg-muted rounded-lg hover:scale-105 transition-transform"></div>
@@ -834,7 +834,7 @@ export function SplitScreenTemplate() {
       <section className="py-20 border-t">
         <div className="grid md:grid-cols-2 gap-12 container mx-auto px-3">
           <div>
-            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-8 break-words">Timeline</h2>
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-8 break-words text-gray-900">Timeline</h2>
           </div>
           <div className="space-y-8">
             {[
@@ -846,7 +846,7 @@ export function SplitScreenTemplate() {
               <div key={i} className="flex gap-4">
                 <div className="text-sm font-mono w-16">{item.y}</div>
                 <div>
-                  <h3 className="font-bold">{item.t}</h3>
+                  <h3 className="font-bold text-gray-900">{item.t}</h3>
                   <p className="text-sm text-muted-foreground">{item.c}</p>
                 </div>
               </div>

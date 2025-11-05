@@ -293,7 +293,7 @@ export function EnterpriseServiceTemplate() {
           </FadeIn>
 
           <FadeIn delay={0.1}>
-            <h1 className="text-6xl md:text-7xl font-bold mb-6 leading-tight">
+            <h1 className="text-6xl md:text-7xl font-bold mb-6 leading-tight text-gray-900">
               {serviceData.tagline}
             </h1>
           </FadeIn>
@@ -335,7 +335,7 @@ export function EnterpriseServiceTemplate() {
         <div className="container mx-auto px-3 max-w-full">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <h2 className="text-4xl sm:text-5xl font-bold mb-4 break-words">Enterprise Solutions</h2>
+              <h2 className="text-4xl sm:text-5xl font-bold mb-4 break-words text-gray-900">Enterprise Solutions</h2>
               <p className="text-xl text-gray-600">Built for scale, security, and global operations</p>
             </div>
           </ScrollReveal>
@@ -380,7 +380,7 @@ export function EnterpriseServiceTemplate() {
         <div className="container mx-auto px-3 max-w-full">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <h2 className="text-4xl sm:text-5xl font-bold mb-4 break-words">Seamless Integrations</h2>
+              <h2 className="text-4xl sm:text-5xl font-bold mb-4 break-words text-gray-900">Seamless Integrations</h2>
               <p className="text-xl text-gray-600">Works with your existing enterprise stack</p>
             </div>
           </ScrollReveal>
@@ -406,7 +406,7 @@ export function EnterpriseServiceTemplate() {
         <div className="container mx-auto px-3 max-w-full">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <h2 className="text-4xl sm:text-5xl font-bold mb-4 break-words">Trusted by Industry Leaders</h2>
+              <h2 className="text-4xl sm:text-5xl font-bold mb-4 break-words text-gray-900">Trusted by Industry Leaders</h2>
               <p className="text-xl text-gray-600">Enterprise success stories</p>
             </div>
           </ScrollReveal>
@@ -418,7 +418,7 @@ export function EnterpriseServiceTemplate() {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div className="p-8">
                       <Badge variant="outline" className="mb-4">{client.industry}</Badge>
-                      <h3 className="text-3xl font-bold mb-4">{client.company}</h3>
+                      <h3 className="text-3xl font-bold mb-4 text-gray-900">{client.company}</h3>
                       <div className="space-y-4 mb-6">
                         <div>
                           <h4 className="text-sm font-semibold text-gray-500 uppercase mb-2">Challenge</h4>
@@ -458,7 +458,7 @@ export function EnterpriseServiceTemplate() {
         <div className="container mx-auto px-3 max-w-full">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <h2 className="text-4xl sm:text-5xl font-bold mb-4 break-words">{serviceData.support.title}</h2>
+              <h2 className="text-4xl sm:text-5xl font-bold mb-4 break-words text-gray-900">{serviceData.support.title}</h2>
               <p className="text-xl text-gray-600">World-class support for mission-critical operations</p>
             </div>
           </ScrollReveal>
@@ -473,7 +473,7 @@ export function EnterpriseServiceTemplate() {
                         <feature.icon className="w-6 h-6" />
                       </div>
                       <div>
-                        <h3 className="text-xl font-bold mb-2">{feature.name}</h3>
+                        <h3 className="text-xl font-bold mb-2 text-gray-900">{feature.name}</h3>
                         <p className="text-gray-600">{feature.description}</p>
                       </div>
                     </div>
@@ -490,7 +490,7 @@ export function EnterpriseServiceTemplate() {
         <div className="container mx-auto px-3 max-w-full">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <h2 className="text-4xl sm:text-5xl font-bold mb-4 break-words">Enterprise Pricing</h2>
+              <h2 className="text-4xl sm:text-5xl font-bold mb-4 break-words text-gray-900">Enterprise Pricing</h2>
               <p className="text-xl text-gray-600">Flexible plans that scale with your organization</p>
             </div>
           </ScrollReveal>
@@ -506,7 +506,7 @@ export function EnterpriseServiceTemplate() {
                   )}
                   <CardContent className="p-8">
                     <div className="mb-6">
-                      <h3 className="text-2xl font-bold mb-1">{tier.name}</h3>
+                      <h3 className="text-2xl font-bold mb-1 text-gray-900">{tier.name}</h3>
                       <p className="text-sm text-gray-600">{tier.tagline}</p>
                     </div>
                     <div className="mb-6">

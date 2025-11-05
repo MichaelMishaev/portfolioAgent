@@ -429,7 +429,7 @@ export function KineticTypographyTemplate() {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.2 }}
               >
-                <h3 className="text-3xl font-black mb-6 tracking-tight">{group.cat}</h3>
+                <h3 className="text-3xl font-black mb-6 tracking-tight text-gray-900">{group.cat}</h3>
                 <div className="space-y-4">
                   {group.items.map((item, j) => (
                     <div key={j} className="text-3xl sm:text-4xl font-bold tracking-tight opacity-60 hover:opacity-100 transition-opacity">

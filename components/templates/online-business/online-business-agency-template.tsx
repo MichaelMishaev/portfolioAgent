@@ -90,7 +90,7 @@ export function OnlineBusinessAgencyTemplate() {
               {data.badge || "Award-Winning Digital Agency"}
             </Badge>
 
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight text-gray-900">
               <span className="text-gray-900 dark:text-white">
                 {data.hero?.mainTitle || "We Build Digital"}
               </span>
@@ -161,7 +161,7 @@ export function OnlineBusinessAgencyTemplate() {
       <section id="services" className="container mx-auto px-3 md:px-3 max-w-full py-20 md:py-32">
         <ScrollReveal>
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl sm:text-5xl font-bold mb-4 break-words">
+            <h2 className="text-3xl md:text-4xl sm:text-5xl font-bold mb-4 break-words text-gray-900">
               {data.services?.title || "Full-Service Digital Solutions"}
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-300 max-w-full mx-auto">
@@ -183,7 +183,7 @@ export function OnlineBusinessAgencyTemplate() {
                   <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mb-6">
                     <service.icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold mb-3">{service.title}</h3>
+                  <h3 className="text-2xl font-bold mb-3 text-gray-900">{service.title}</h3>
                   <p className="text-gray-600 dark:text-gray-300 mb-6">
                     {service.description}
                   </p>
@@ -213,7 +213,7 @@ export function OnlineBusinessAgencyTemplate() {
       <section id="work" className="container mx-auto px-3 md:px-3 max-w-full py-20 md:py-32 bg-gradient-to-br from-slate-50 to-blue-50 dark:from-gray-800 dark:to-gray-900 rounded-3xl">
         <ScrollReveal>
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl sm:text-5xl font-bold mb-4 break-words">
+            <h2 className="text-3xl md:text-4xl sm:text-5xl font-bold mb-4 break-words text-gray-900">
               {data.work?.title || "Recent Work"}
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-300">
@@ -266,7 +266,7 @@ export function OnlineBusinessAgencyTemplate() {
                   </Badge>
                 </div>
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-bold mb-2">{project.title}</h3>
+                  <h3 className="text-xl font-bold mb-2 text-gray-900">{project.title}</h3>
                   <p className="text-gray-600 dark:text-gray-400 mb-3">{project.client}</p>
                   <div className="flex items-center justify-between">
                     <span className="text-blue-600 font-semibold">{project.result}</span>
@@ -283,7 +283,7 @@ export function OnlineBusinessAgencyTemplate() {
       <section id="process" className="container mx-auto px-3 md:px-3 max-w-full py-20 md:py-32">
         <ScrollReveal>
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl sm:text-5xl font-bold mb-4 break-words">
+            <h2 className="text-3xl md:text-4xl sm:text-5xl font-bold mb-4 break-words text-gray-900">
               {data.process?.title || "Our Proven Process"}
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-300">
@@ -304,7 +304,7 @@ export function OnlineBusinessAgencyTemplate() {
                 <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center text-2xl font-bold text-white">
                   {phase.step}
                 </div>
-                <h3 className="text-xl font-bold mb-2">{phase.title}</h3>
+                <h3 className="text-xl font-bold mb-2 text-gray-900">{phase.title}</h3>
                 <p className="text-gray-600 dark:text-gray-400 text-sm">
                   {phase.description}
                 </p>
@@ -318,7 +318,7 @@ export function OnlineBusinessAgencyTemplate() {
       <section className="container mx-auto px-3 md:px-3 max-w-full py-20 md:py-32 border-t border-gray-200 dark:border-gray-800">
         <ScrollReveal>
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl sm:text-5xl font-bold mb-4 break-words">
+            <h2 className="text-3xl md:text-4xl sm:text-5xl font-bold mb-4 break-words text-gray-900">
               {data.testimonials?.title || "Trusted by Industry Leaders"}
             </h2>
           </div>
@@ -419,7 +419,7 @@ export function OnlineBusinessAgencyTemplate() {
         <div className="container mx-auto px-3 md:px-3 max-w-full">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
             <div>
-              <h3 className="font-bold text-lg mb-4">{tt.common?.services || "Services"}</h3>
+              <h3 className="font-bold text-lg mb-4 text-gray-900">{tt.common?.services || "Services"}</h3>
               <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-400">
                 <li><a href="#" className="hover:text-blue-600 transition-colors">{data.footer?.webDev || "Web Development"}</a></li>
                 <li><a href="#" className="hover:text-blue-600 transition-colors">{data.footer?.digitalMarketing || "Digital Marketing"}</a></li>
@@ -428,7 +428,7 @@ export function OnlineBusinessAgencyTemplate() {
               </ul>
             </div>
             <div>
-              <h3 className="font-bold text-lg mb-4">Company</h3>
+              <h3 className="font-bold text-lg mb-4 text-gray-900">Company</h3>
               <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-400">
                 <li><a href="#" className="hover:text-blue-600 transition-colors">{data.footer?.aboutUs || "About Us"}</a></li>
                 <li><a href="#" className="hover:text-blue-600 transition-colors">{data.footer?.ourTeam || "Our Team"}</a></li>
@@ -437,7 +437,7 @@ export function OnlineBusinessAgencyTemplate() {
               </ul>
             </div>
             <div>
-              <h3 className="font-bold text-lg mb-4">Resources</h3>
+              <h3 className="font-bold text-lg mb-4 text-gray-900">Resources</h3>
               <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-400">
                 <li><a href="#" className="hover:text-blue-600 transition-colors">Blog</a></li>
                 <li><a href="#" className="hover:text-blue-600 transition-colors">{data.footer?.caseStudies || "Case Studies"}</a></li>
@@ -446,7 +446,7 @@ export function OnlineBusinessAgencyTemplate() {
               </ul>
             </div>
             <div>
-              <h3 className="font-bold text-lg mb-4">Connect</h3>
+              <h3 className="font-bold text-lg mb-4 text-gray-900">Connect</h3>
               <div className="flex gap-4">
                 <a href="#" className="p-3 bg-gray-100 dark:bg-gray-800 rounded-full hover:bg-blue-100 dark:hover:bg-blue-900/30 transition-colors">
                   <FiLinkedin className="w-5 h-5" />

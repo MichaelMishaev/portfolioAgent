@@ -329,7 +329,7 @@ export function ConsultingServiceTemplate() {
             </FadeIn>
 
             <FadeIn delay={0.1}>
-              <h1 className="text-7xl md:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight">
+              <h1 className="text-7xl md:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight text-gray-900">
                 {serviceData.tagline}
               </h1>
             </FadeIn>
@@ -372,7 +372,7 @@ export function ConsultingServiceTemplate() {
         <div className="container mx-auto px-3 max-w-full">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <h2 className="text-4xl sm:text-5xl font-bold mb-4 break-words">Our Services</h2>
+              <h2 className="text-4xl sm:text-5xl font-bold mb-4 break-words text-gray-900">Our Services</h2>
               <p className="text-xl text-gray-600">Strategic solutions for your most critical challenges</p>
             </div>
           </ScrollReveal>
@@ -386,7 +386,7 @@ export function ConsultingServiceTemplate() {
                       <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-emerald-600 to-emerald-700 text-white flex items-center justify-center mb-4">
                         <service.icon className="w-8 h-8" />
                       </div>
-                      <h3 className="text-3xl font-bold mb-2">{service.name}</h3>
+                      <h3 className="text-3xl font-bold mb-2 text-gray-900">{service.name}</h3>
                       <p className="text-emerald-600 font-semibold mb-4">{service.tagline}</p>
                       <p className="text-gray-600 mb-6">{service.description}</p>
                       <div className="space-y-2 text-sm pt-4 border-t border-gray-200">
@@ -441,7 +441,7 @@ export function ConsultingServiceTemplate() {
         <div className="container mx-auto px-3 max-w-full">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <h2 className="text-4xl sm:text-5xl font-bold mb-4 break-words">Client Engagements</h2>
+              <h2 className="text-4xl sm:text-5xl font-bold mb-4 break-words text-gray-900">Client Engagements</h2>
               <p className="text-xl text-gray-600">Transformational results for global enterprises</p>
             </div>
           </ScrollReveal>
@@ -501,7 +501,7 @@ export function ConsultingServiceTemplate() {
         <div className="container mx-auto px-3 max-w-full">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <h2 className="text-4xl sm:text-5xl font-bold mb-4 break-words">Our Partners</h2>
+              <h2 className="text-4xl sm:text-5xl font-bold mb-4 break-words text-gray-900">Our Partners</h2>
               <p className="text-xl text-gray-600">Senior leaders from the world's top firms</p>
             </div>
           </ScrollReveal>
@@ -516,7 +516,7 @@ export function ConsultingServiceTemplate() {
                       alt={member.name}
                       className="w-40 h-40 rounded-full mx-auto mb-4 object-cover border-4 border-emerald-100"
                     />
-                    <h3 className="text-xl font-bold mb-1">{member.name}</h3>
+                    <h3 className="text-xl font-bold mb-1 text-gray-900">{member.name}</h3>
                     <p className="text-emerald-600 font-semibold mb-2 text-sm">{member.role}</p>
                     <p className="text-xs text-gray-600 mb-3">{member.credentials}</p>
                     <Badge variant="outline" className="text-xs">{member.specialization}</Badge>
@@ -533,7 +533,7 @@ export function ConsultingServiceTemplate() {
         <div className="container mx-auto px-3 max-w-full">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <h2 className="text-4xl sm:text-5xl font-bold mb-4 break-words">{serviceData.methodology.title}</h2>
+              <h2 className="text-4xl sm:text-5xl font-bold mb-4 break-words text-gray-900">{serviceData.methodology.title}</h2>
               <p className="text-xl text-gray-600">{serviceData.methodology.description}</p>
             </div>
           </ScrollReveal>
@@ -546,7 +546,7 @@ export function ConsultingServiceTemplate() {
                     <div className="flex items-start gap-4 mb-4">
                       <div className="text-7xl font-bold text-emerald-100">{phase.number}</div>
                       <div className="pt-2">
-                        <h3 className="text-2xl font-bold mb-1">{phase.name}</h3>
+                        <h3 className="text-2xl font-bold mb-1 text-gray-900">{phase.name}</h3>
                         <Badge variant="outline" className="text-xs">{phase.duration}</Badge>
                       </div>
                     </div>
@@ -577,7 +577,7 @@ export function ConsultingServiceTemplate() {
         <div className="container mx-auto px-3 max-w-full">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <h2 className="text-4xl sm:text-5xl font-bold mb-4 break-words">Latest Insights</h2>
+              <h2 className="text-4xl sm:text-5xl font-bold mb-4 break-words text-gray-900">Latest Insights</h2>
               <p className="text-xl text-gray-600">Research and perspectives from our experts</p>
             </div>
           </ScrollReveal>
@@ -595,7 +595,7 @@ export function ConsultingServiceTemplate() {
                     <Badge className="absolute top-4 left-4 bg-emerald-600">{insight.type}</Badge>
                   </div>
                   <CardContent className="p-6">
-                    <h3 className="text-xl font-bold mb-3 group-hover:text-emerald-600 transition-colors">
+                    <h3 className="text-xl font-bold mb-3 group-hover:text-emerald-600 transition-colors text-gray-900">
                       {insight.title}
                     </h3>
                     <p className="text-sm text-gray-600 mb-4">{insight.description}</p>

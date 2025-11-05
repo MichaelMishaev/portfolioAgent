@@ -71,7 +71,7 @@ export function OnlineBusinessCourseTemplate() {
                 <span className="truncate">{data.badge || "100,000+ Students Enrolled"}</span>
               </Badge>
 
-              <h1 className="text-3xl sm:text-3xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 leading-tight break-words">
+              <h1 className="text-3xl sm:text-3xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 leading-tight break-words text-gray-900">
                 <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent break-words">
                   {data.heroTitle || "Master Digital Marketing"}
                 </span>
@@ -204,7 +204,7 @@ export function OnlineBusinessCourseTemplate() {
       <section id="curriculum" className="container mx-auto px-4 md:px-6 max-w-full py-20 md:py-32">
         <ScrollReveal>
           <div className="text-center mb-16">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl sm:text-5xl font-bold mb-4 break-words px-2">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl sm:text-5xl font-bold mb-4 break-words px-2 text-gray-900">
               {data.curriculum?.title || "Complete Course Curriculum"}
             </h2>
             <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 max-w-full mx-auto break-words px-2">
@@ -237,7 +237,7 @@ export function OnlineBusinessCourseTemplate() {
                         {module.locked ? <FiLock /> : module.module}
                       </div>
                       <div className="min-w-0 flex-1">
-                        <h3 className="font-semibold text-sm sm:text-base md:text-lg mb-1 break-words">Module {module.module}: {module.title}</h3>
+                        <h3 className="font-semibold text-sm sm:text-base md:text-lg mb-1 break-words text-gray-900">Module {module.module}: {module.title}</h3>
                         <div className="flex flex-wrap items-center gap-2 sm:gap-4 text-xs sm:text-sm text-gray-600 dark:text-gray-400">
                           <span className="flex items-center gap-1 whitespace-nowrap">
                             <FiPlay className="w-3 h-3 sm:w-4 sm:h-4 flex-shrink-0" />
@@ -268,7 +268,7 @@ export function OnlineBusinessCourseTemplate() {
       <section id="pricing" className="container mx-auto px-4 md:px-6 max-w-full py-20 md:py-32 bg-gradient-to-br from-purple-50 to-pink-50 dark:from-gray-800 dark:to-gray-900 rounded-3xl">
         <ScrollReveal>
           <div className="text-center mb-16">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl sm:text-5xl font-bold mb-4 break-words px-2">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl sm:text-5xl font-bold mb-4 break-words px-2 text-gray-900">
               {data.pricing?.title || "Choose Your Learning Path"}
             </h2>
             <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 max-w-full mx-auto break-words px-2">
@@ -282,7 +282,7 @@ export function OnlineBusinessCourseTemplate() {
           <ScrollReveal delay={0.1}>
             <Card className="hover:shadow-2xl transition-all">
               <CardContent className="p-6 sm:p-8">
-                <h3 className="text-lg sm:text-xl font-bold mb-2 break-words">{data.pricing?.essentials?.title || "Essentials"}</h3>
+                <h3 className="text-lg sm:text-xl font-bold mb-2 break-words text-gray-900">{data.pricing?.essentials?.title || "Essentials"}</h3>
                 <p className="text-gray-600 dark:text-gray-400 mb-6 text-sm break-words">
                   {data.pricing?.essentials?.description || "Perfect for getting started"}
                 </p>
@@ -314,7 +314,7 @@ export function OnlineBusinessCourseTemplate() {
                 </Badge>
               </div>
               <CardContent className="p-6 sm:p-8 pt-8">
-                <h3 className="text-lg sm:text-xl font-bold mb-2 break-words">{data.pricing?.complete?.title || "Complete Course"}</h3>
+                <h3 className="text-lg sm:text-xl font-bold mb-2 break-words text-gray-900">{data.pricing?.complete?.title || "Complete Course"}</h3>
                 <p className="text-gray-600 dark:text-gray-400 mb-6 text-sm break-words">
                   {data.pricing?.complete?.description || "Everything you need to succeed"}
                 </p>
@@ -341,7 +341,7 @@ export function OnlineBusinessCourseTemplate() {
           <ScrollReveal delay={0.3}>
             <Card className="hover:shadow-2xl transition-all bg-gradient-to-br from-gray-900 to-purple-900 text-white">
               <CardContent className="p-6 sm:p-8">
-                <h3 className="text-lg sm:text-xl font-bold mb-2 break-words">{data.pricing?.vip?.title || "VIP Mentorship"}</h3>
+                <h3 className="text-lg sm:text-xl font-bold mb-2 break-words text-gray-900">{data.pricing?.vip?.title || "VIP Mentorship"}</h3>
                 <p className="text-gray-300 mb-6 text-sm break-words">
                   {data.pricing?.vip?.description || "For serious entrepreneurs"}
                 </p>
@@ -374,7 +374,7 @@ export function OnlineBusinessCourseTemplate() {
       <section className="container mx-auto px-4 md:px-6 max-w-full py-20 md:py-32">
         <ScrollReveal>
           <div className="text-center mb-16">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl sm:text-5xl font-bold mb-4 break-words px-2">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl sm:text-5xl font-bold mb-4 break-words px-2 text-gray-900">
               {data.testimonials?.title || "Student Success Stories"}
             </h2>
             <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 break-words px-2">
@@ -443,7 +443,7 @@ export function OnlineBusinessCourseTemplate() {
         <div className="container mx-auto px-4 md:px-6 max-w-full">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mb-8">
             <div>
-              <h3 className="font-bold text-lg mb-4">{data.nav?.courses || "Courses"}</h3>
+              <h3 className="font-bold text-lg mb-4 text-gray-900">{data.nav?.courses || "Courses"}</h3>
               <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-400">
                 <li><a href="#" className="hover:text-purple-600 transition-colors">{data.footer?.allCourses || "All Courses"}</a></li>
                 <li><a href="#" className="hover:text-purple-600 transition-colors">{data.footer?.bundles || "Bundles"}</a></li>
@@ -451,7 +451,7 @@ export function OnlineBusinessCourseTemplate() {
               </ul>
             </div>
             <div>
-              <h3 className="font-bold text-lg mb-4">{tt.common?.services || "Resources"}</h3>
+              <h3 className="font-bold text-lg mb-4 text-gray-900">{tt.common?.services || "Resources"}</h3>
               <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-400">
                 <li><a href="#" className="hover:text-purple-600 transition-colors">{data.footer?.blog || tt.common?.readMore || "Blog"}</a></li>
                 <li><a href="#" className="hover:text-purple-600 transition-colors">{data.footer?.templates || "Templates"}</a></li>
@@ -459,7 +459,7 @@ export function OnlineBusinessCourseTemplate() {
               </ul>
             </div>
             <div>
-              <h3 className="font-bold text-lg mb-4">Support</h3>
+              <h3 className="font-bold text-lg mb-4 text-gray-900">Support</h3>
               <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-400">
                 <li><a href="#" className="hover:text-purple-600 transition-colors">{data.footer?.helpCenter || "Help Center"}</a></li>
                 <li><a href="#" className="hover:text-purple-600 transition-colors">{tt.common?.contact || "Contact"}</a></li>
@@ -467,7 +467,7 @@ export function OnlineBusinessCourseTemplate() {
               </ul>
             </div>
             <div>
-              <h3 className="font-bold text-lg mb-4">Connect</h3>
+              <h3 className="font-bold text-lg mb-4 text-gray-900">Connect</h3>
               <div className="flex gap-4">
                 <a href="#" className="p-3 bg-gray-100 dark:bg-gray-800 rounded-full hover:bg-purple-100 dark:hover:bg-purple-900/30 transition-colors">
                   <FiInstagram className="w-5 h-5" />

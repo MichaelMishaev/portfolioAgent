@@ -62,7 +62,7 @@ export function OnlineBusinessSaasTemplate() {
       {/* Features Grid */}
       <section id="features" className="container mx-auto px-3 py-20">
         <ScrollReveal>
-          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-16">
+          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-16 text-gray-900">
             {data.features?.title || "Powerful features for modern teams"}
           </h2>
         </ScrollReveal>
@@ -93,7 +93,7 @@ export function OnlineBusinessSaasTemplate() {
               <Card className="h-full hover:shadow-lg transition-shadow">
                 <CardContent className="p-6">
                   <div className="text-primary mb-4 text-3xl">{feature.icon}</div>
-                  <h3 className="font-semibold mb-2">{feature.title}</h3>
+                  <h3 className="font-semibold mb-2 text-gray-900">{feature.title}</h3>
                   <p className="text-sm text-muted-foreground">{feature.description}</p>
                 </CardContent>
               </Card>
@@ -105,7 +105,7 @@ export function OnlineBusinessSaasTemplate() {
       {/* Pricing Section */}
       <section id="pricing" className="container mx-auto px-3 py-20">
         <ScrollReveal>
-          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4 text-gray-900">
             {data.pricing?.title || "Simple, transparent pricing"}
           </h2>
           <p className="text-center text-muted-foreground mb-16">
@@ -141,7 +141,7 @@ export function OnlineBusinessSaasTemplate() {
                   </Badge>
                 )}
                 <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
+                  <h3 className="text-2xl font-bold mb-2 text-gray-900">{plan.name}</h3>
                   <div className="text-3xl sm:text-4xl font-bold mb-6">{plan.price}</div>
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, i) => (
@@ -165,7 +165,7 @@ export function OnlineBusinessSaasTemplate() {
       <section className="container mx-auto px-3 py-20 bg-muted/50 rounded-3xl my-20">
         <ScrollReveal>
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-3xl sm:text-4xl font-bold mb-4">
+            <h2 className="text-3xl md:text-3xl sm:text-4xl font-bold mb-4 text-gray-900">
               {data.stats?.title || "Trusted by teams worldwide"}
             </h2>
           </div>
@@ -201,7 +201,7 @@ export function OnlineBusinessSaasTemplate() {
       {/* Testimonials Section */}
       <section className="container mx-auto px-3 py-20">
         <ScrollReveal>
-          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4 text-gray-900">
             {data.testimonials?.title || "Loved by teams everywhere"}
           </h2>
           <p className="text-center text-muted-foreground mb-16">
@@ -259,7 +259,7 @@ export function OnlineBusinessSaasTemplate() {
       {/* Integrations Section */}
       <section className="container mx-auto px-3 py-20">
         <ScrollReveal>
-          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4 text-gray-900">
             {data.integrations?.title || "Integrates with your favorite tools"}
           </h2>
           <p className="text-center text-muted-foreground mb-16">
@@ -290,7 +290,7 @@ export function OnlineBusinessSaasTemplate() {
       {/* FAQ Section */}
       <section className="container mx-auto px-3 py-20 max-w-full">
         <ScrollReveal>
-          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-16">
+          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-16 text-gray-900">
             {data.faq?.title || "Frequently Asked Questions"}
           </h2>
         </ScrollReveal>
@@ -320,7 +320,7 @@ export function OnlineBusinessSaasTemplate() {
             <ScrollReveal key={index} delay={index * 0.1}>
               <Card>
                 <CardContent className="p-6">
-                  <h3 className="font-semibold text-lg mb-2">{faq.question}</h3>
+                  <h3 className="font-semibold text-lg mb-2 text-gray-900">{faq.question}</h3>
                   <p className="text-muted-foreground">{faq.answer}</p>
                 </CardContent>
               </Card>
@@ -333,7 +333,7 @@ export function OnlineBusinessSaasTemplate() {
       <section className="container mx-auto px-3 py-20 text-center">
         <ScrollReveal>
           <Card className="bg-primary text-primary-foreground p-12">
-            <h2 className="text-3xl md:text-4xl sm:text-5xl font-bold mb-4 break-words">
+            <h2 className="text-3xl md:text-4xl sm:text-5xl font-bold mb-4 break-words text-gray-900">
               {data.cta?.title || "Ready to transform your workflow?"}
             </h2>
             <p className="text-xl mb-8 opacity-90">
@@ -351,7 +351,7 @@ export function OnlineBusinessSaasTemplate() {
         <div className="container mx-auto px-3 max-w-full">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
             <div>
-              <h3 className="font-bold text-lg mb-4">{data.name || "ProductFlow"}</h3>
+              <h3 className="font-bold text-lg mb-4 text-gray-900">{data.name || "ProductFlow"}</h3>
               <p className="text-sm text-muted-foreground">
                 {data.footer?.tagline || "Ship products faster with AI-powered project management"}
               </p>

@@ -387,7 +387,7 @@ export function ThreeDImmersiveTemplate() {
       {/* About - 3D Immersive */}
       <section className="py-32 px-3 sm:px-3 bg-gradient-to-br from-indigo-950 to-black">
         <div className="container mx-auto max-w-4xl text-center text-white">
-          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-8 break-words">About</h2>
+          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-8 break-words text-gray-900">About</h2>
           <p className="text-2xl text-gray-300 mb-6">
             Crafting immersive 3D experiences that push the boundaries of web technology.
           </p>
@@ -455,7 +455,7 @@ export function ThreeDImmersiveTemplate() {
       {/* Call to Action - 3D Immersive */}
       <section className="py-32 px-3 sm:px-3 bg-gradient-to-br from-purple-600 via-pink-600 to-blue-600">
         <div className="container mx-auto max-w-4xl text-center text-white">
-          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-8 break-words">Ready to Go 3D?</h2>
+          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-8 break-words text-gray-900">Ready to Go 3D?</h2>
           <p className="text-2xl mb-12 opacity-90">
             Let's create an unforgettable immersive experience
           </p>

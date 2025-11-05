@@ -142,7 +142,7 @@ export function LinPortfolioEleganceTemplate() {
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-20 md:py-32 text-center">
         <ScrollReveal>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-light mb-6 text-[#1A1A1A] tracking-tight break-words">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-light mb-6 text-[#1A1A1A] tracking-tight break-words text-gray-900">
             {portfolioData.name}
           </h1>
         </ScrollReveal>
@@ -163,7 +163,7 @@ export function LinPortfolioEleganceTemplate() {
       {/* Portfolio Grid */}
       <section id="portfolio" className="container mx-auto px-4 py-20">
         <ScrollReveal>
-          <h2 className="text-3xl md:text-5xl font-light text-center mb-16 text-[#1A1A1A]">
+          <h2 className="text-3xl md:text-5xl font-light text-center mb-16 text-[#1A1A1A] text-gray-900">
             Selected Projects
           </h2>
         </ScrollReveal>
@@ -181,7 +181,7 @@ export function LinPortfolioEleganceTemplate() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
                       <p className="text-sm font-light mb-1 text-[#C9A87C]">{project.category}</p>
-                      <h3 className="text-xl font-light">{project.title}</h3>
+                      <h3 className="text-xl font-light text-gray-900">{project.title}</h3>
                     </div>
                   </div>
                 </div>
@@ -196,7 +196,7 @@ export function LinPortfolioEleganceTemplate() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <ScrollReveal>
-              <h2 className="text-3xl md:text-5xl font-light text-center mb-12 text-[#1A1A1A]">
+              <h2 className="text-3xl md:text-5xl font-light text-center mb-12 text-[#1A1A1A] text-gray-900">
                 About
               </h2>
             </ScrollReveal>
@@ -231,7 +231,7 @@ export function LinPortfolioEleganceTemplate() {
       <section id="contact" className="container mx-auto px-4 py-20">
         <div className="max-w-3xl mx-auto text-center">
           <ScrollReveal>
-            <h2 className="text-3xl md:text-5xl font-light mb-6 text-[#1A1A1A]">
+            <h2 className="text-3xl md:text-5xl font-light mb-6 text-[#1A1A1A] text-gray-900">
               Let's Work Together
             </h2>
           </ScrollReveal>

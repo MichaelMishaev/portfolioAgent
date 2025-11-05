@@ -234,7 +234,7 @@ export function DarkModeTemplate() {
       {/* Work Section */}
       <section id="work" className="container mx-auto px-3 sm:px-3 py-32">
         <ScrollReveal>
-          <h2 className="text-sm font-semibold text-cyan-400 mb-12 uppercase tracking-wider">
+          <h2 className="text-sm font-semibold text-cyan-400 mb-12 uppercase tracking-wider text-gray-900">
             Selected Work
           </h2>
         </ScrollReveal>
@@ -276,7 +276,7 @@ export function DarkModeTemplate() {
       {/* Services Section */}
       <section className="container mx-auto px-3 sm:px-3 py-32 border-t border-white/10">
         <ScrollReveal>
-          <h2 className="text-sm font-semibold text-cyan-400 mb-12 uppercase tracking-wider text-center">
+          <h2 className="text-sm font-semibold text-cyan-400 mb-12 uppercase tracking-wider text-center text-gray-900">
             What I Do
           </h2>
         </ScrollReveal>
@@ -299,7 +299,7 @@ export function DarkModeTemplate() {
         <div className="container mx-auto px-3 sm:px-3 relative z-10">
           <div className="max-w-full mx-auto text-center">
             <ScrollReveal>
-              <h2 className="text-sm font-semibold text-cyan-400 mb-8 uppercase tracking-wider">
+              <h2 className="text-sm font-semibold text-cyan-400 mb-8 uppercase tracking-wider text-gray-900">
                 About Me
               </h2>
               <p className="text-xl sm:text-2xl md:text-3xl text-gray-300 leading-relaxed mb-12">
@@ -339,7 +339,7 @@ export function DarkModeTemplate() {
       {/* Testimonials Section */}
       <section className="container mx-auto px-3 sm:px-3 py-32 border-t border-white/10">
         <ScrollReveal>
-          <h2 className="text-sm font-semibold text-cyan-400 mb-16 uppercase tracking-wider text-center">
+          <h2 className="text-sm font-semibold text-cyan-400 mb-16 uppercase tracking-wider text-center text-gray-900">
             Client Testimonials
           </h2>
         </ScrollReveal>
@@ -365,7 +365,7 @@ export function DarkModeTemplate() {
       <section id="contact" className="container mx-auto px-3 sm:px-3 py-32">
         <div className="max-w-full mx-auto text-center">
           <ScrollReveal>
-            <h2 className="text-3xl sm:text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-8 break-words">
+            <h2 className="text-3xl sm:text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-8 break-words text-gray-900">
               Let's Create Something{" "}
               <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
                 Amazing

@@ -201,7 +201,7 @@ export function LinTechPioneerTemplate() {
             </ScrollReveal>
 
             <ScrollReveal delay={0.2}>
-              <h1 className="text-5xl md:text-6xl lg:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-6 leading-none">
+              <h1 className="text-5xl md:text-6xl lg:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-6 leading-none text-gray-900">
                 <span className="bg-gradient-to-r from-[#3B82F6] via-[#06B6D4] to-[#3B82F6] bg-clip-text text-transparent">
                   {companyData.name}
                 </span>
@@ -240,7 +240,7 @@ export function LinTechPioneerTemplate() {
       {/* Features Section */}
       <section id="features" className="container mx-auto px-4 py-20">
         <ScrollReveal>
-          <h2 className="text-3xl sm:text-5xl font-bold text-center mb-4 break-words">
+          <h2 className="text-3xl sm:text-5xl font-bold text-center mb-4 break-words text-gray-900">
             Built for <span className="text-[#3B82F6]">Modern Teams</span>
           </h2>
         </ScrollReveal>
@@ -272,7 +272,7 @@ export function LinTechPioneerTemplate() {
       <section id="products" className="bg-[#0F172A] py-20">
         <div className="container mx-auto px-4">
           <ScrollReveal>
-            <h2 className="text-3xl sm:text-5xl font-bold text-center mb-4 break-words">
+            <h2 className="text-3xl sm:text-5xl font-bold text-center mb-4 break-words text-gray-900">
               Our <span className="text-[#3B82F6]">Products</span>
             </h2>
           </ScrollReveal>
@@ -309,7 +309,7 @@ export function LinTechPioneerTemplate() {
       {/* Tech Stack Section */}
       <section id="tech" className="container mx-auto px-4 py-20">
         <ScrollReveal>
-          <h2 className="text-3xl sm:text-5xl font-bold text-center mb-4 break-words">
+          <h2 className="text-3xl sm:text-5xl font-bold text-center mb-4 break-words text-gray-900">
             Powered by <span className="text-[#3B82F6]">Modern Tech</span>
           </h2>
         </ScrollReveal>

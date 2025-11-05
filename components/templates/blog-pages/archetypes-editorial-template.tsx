@@ -194,7 +194,7 @@ export function ArchetypesEditorialTemplate() {
                 THE ARCHETYPE MASTERY PROGRAM
               </Badge>
 
-              <h1 className="font-playfair text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-tight mb-4 sm:mb-8">
+              <h1 className="font-playfair text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-tight mb-4 sm:mb-8 text-gray-900">
                 Who Are You
                 <br />
                 <span className="text-blue-400">Really</span> Meant To Be?
@@ -309,7 +309,7 @@ export function ArchetypesEditorialTemplate() {
           <div className="text-center mt-12 sm:mt-20">
             <FadeIn delay={0.8}>
               <div className="bg-slate-900 dark:bg-slate-950 text-white p-6 sm:p-12 border-4 border-blue-500 shadow-[12px_12px_0px_0px_rgba(59,130,246,1)] max-w-4xl mx-auto">
-                <h3 className="font-playfair text-2xl sm:text-4xl font-black mb-4 sm:mb-6">
+                <h3 className="font-playfair text-2xl sm:text-4xl font-black mb-4 sm:mb-6 text-gray-900">
                   Ready to Discover Your Dominant Archetype?
                 </h3>
                 <p className="text-base sm:text-xl text-gray-300 mb-6 sm:mb-8">
@@ -332,7 +332,7 @@ export function ArchetypesEditorialTemplate() {
         <div className="container mx-auto px-4 sm:px-6">
           <div className="max-w-6xl mx-auto">
             <FadeIn>
-              <h2 className="font-playfair text-3xl sm:text-3xl sm:text-5xl md:text-5xl sm:text-5xl md:text-6xl font-black text-center mb-6 sm:mb-8 leading-tight break-words">
+              <h2 className="font-playfair text-3xl sm:text-3xl sm:text-5xl md:text-5xl sm:text-5xl md:text-6xl font-black text-center mb-6 sm:mb-8 leading-tight break-words text-gray-900">
                 Is This <span className="text-blue-400">Your Journey</span>?
               </h2>
               <div className="w-16 sm:w-24 h-1 bg-blue-500 mx-auto mb-8 sm:mb-16" />
@@ -344,7 +344,7 @@ export function ArchetypesEditorialTemplate() {
                 <div className="border-4 border-green-500 p-6 sm:p-10 bg-slate-800">
                   <div className="flex items-center gap-4 mb-6 sm:mb-8">
                     <FiCheck className="w-8 h-8 sm:w-12 sm:h-12 text-green-500" />
-                    <h3 className="font-playfair text-2xl sm:text-3xl font-black">This IS For You If...</h3>
+                    <h3 className="font-playfair text-2xl sm:text-3xl font-black text-gray-900">This IS For You If...</h3>
                   </div>
                   <ul className="space-y-4 sm:space-y-6">
                     {[
@@ -371,7 +371,7 @@ export function ArchetypesEditorialTemplate() {
                     <div className="w-8 h-8 sm:w-12 sm:h-12 flex items-center justify-center">
                       <div className="w-full h-1 bg-red-500 rotate-45" />
                     </div>
-                    <h3 className="font-playfair text-2xl sm:text-3xl font-black">This IS NOT For You If...</h3>
+                    <h3 className="font-playfair text-2xl sm:text-3xl font-black text-gray-900">This IS NOT For You If...</h3>
                   </div>
                   <ul className="space-y-4 sm:space-y-6">
                     {[
@@ -496,7 +496,7 @@ export function ArchetypesEditorialTemplate() {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12 sm:mb-20">
               <FadeIn>
-                <h2 className="font-playfair text-3xl sm:text-3xl sm:text-5xl md:text-5xl sm:text-5xl md:text-6xl font-black mb-4 sm:mb-6 leading-tight break-words">
+                <h2 className="font-playfair text-3xl sm:text-3xl sm:text-5xl md:text-5xl sm:text-5xl md:text-6xl font-black mb-4 sm:mb-6 leading-tight break-words text-gray-900">
                   The <span className="text-blue-400">Mastery Program</span>
                 </h2>
                 <div className="w-16 sm:w-24 h-1 bg-blue-500 mx-auto mb-4 sm:mb-6" />
@@ -516,7 +516,7 @@ export function ArchetypesEditorialTemplate() {
                         {String(idx + 1).padStart(2, '0')}
                       </div>
                       <div className="flex-1">
-                        <h3 className="font-playfair text-xl sm:text-2xl font-black mb-2">
+                        <h3 className="font-playfair text-xl sm:text-2xl font-black mb-2 text-gray-900">
                           {module.title}
                         </h3>
                         <Badge className="bg-blue-600 text-white mb-4 text-xs sm:text-sm">
@@ -539,7 +539,7 @@ export function ArchetypesEditorialTemplate() {
                   <Badge className="bg-red-600 text-white px-4 sm:px-6 py-2 text-sm sm:text-lg font-black mb-4 sm:mb-6">
                     LIMITED TIME OFFER
                   </Badge>
-                  <h3 className="font-playfair text-3xl sm:text-3xl sm:text-5xl font-black mb-4 sm:mb-6 break-words">
+                  <h3 className="font-playfair text-3xl sm:text-3xl sm:text-5xl font-black mb-4 sm:mb-6 break-words text-gray-900">
                     Investment Options
                   </h3>
                   <p className="text-base sm:text-xl text-gray-600 dark:text-gray-300 mb-6 sm:mb-8">
@@ -596,7 +596,7 @@ export function ArchetypesEditorialTemplate() {
             {/* Final CTA */}
             <div className="text-center mt-12 sm:mt-20">
               <FadeIn delay={0.7}>
-                <h3 className="font-playfair text-2xl sm:text-4xl font-black mb-4 sm:mb-6">
+                <h3 className="font-playfair text-2xl sm:text-4xl font-black mb-4 sm:mb-6 text-gray-900">
                   Your True Self Is Waiting
                 </h3>
                 <p className="text-base sm:text-xl text-gray-300 mb-6 sm:mb-8 max-w-3xl mx-auto">

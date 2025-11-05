@@ -404,7 +404,7 @@ return (
       {/* Skills Section */}
       <section id="about" className="container mx-auto px-3 sm:px-3 py-12">
         <ScrollReveal>
-          <h2 className="text-3xl md:text-3xl sm:text-4xl font-bold text-center mb-12">
+          <h2 className="text-3xl md:text-3xl sm:text-4xl font-bold text-center mb-12 text-gray-900">
             Skills & Expertise
           </h2>
         </ScrollReveal>
@@ -453,7 +453,7 @@ return (
       {/* Projects Grid */}
       <section id="projects" className="container mx-auto px-3 sm:px-3 py-12">
         <ScrollReveal>
-          <h2 className="text-3xl md:text-3xl sm:text-4xl font-bold text-center mb-12">
+          <h2 className="text-3xl md:text-3xl sm:text-4xl font-bold text-center mb-12 text-gray-900">
             Featured Projects
           </h2>
         </ScrollReveal>
@@ -519,7 +519,7 @@ return (
       {/* Process Cards */}
       <section className="container mx-auto px-3 sm:px-3 py-20">
         <ScrollReveal>
-          <h2 className="text-3xl md:text-3xl sm:text-4xl font-bold text-center mb-12">
+          <h2 className="text-3xl md:text-3xl sm:text-4xl font-bold text-center mb-12 text-gray-900">
             My Process
           </h2>
         </ScrollReveal>
@@ -530,7 +530,7 @@ return (
               <Card className="h-full hover:shadow-lg transition-shadow text-center">
                 <CardContent className="p-6">
                   <div className="text-5xl mb-4">{step.icon}</div>
-                  <h3 className="text-xl font-bold mb-2">{step.title}</h3>
+                  <h3 className="text-xl font-bold mb-2 text-gray-900">{step.title}</h3>
                   <p className="text-sm text-muted-foreground">{step.desc}</p>
                 </CardContent>
               </Card>
@@ -542,7 +542,7 @@ return (
       {/* Awards Section */}
       <section className="container mx-auto px-3 sm:px-3 py-20 border-t">
         <ScrollReveal>
-          <h2 className="text-3xl md:text-3xl sm:text-4xl font-bold text-center mb-12">
+          <h2 className="text-3xl md:text-3xl sm:text-4xl font-bold text-center mb-12 text-gray-900">
             Awards & Recognition
           </h2>
         </ScrollReveal>
@@ -553,7 +553,7 @@ return (
               <Card className="hover:shadow-lg transition-shadow text-center">
                 <CardContent className="p-6">
                   <div className="text-4xl mb-3">🏆</div>
-                  <h3 className="font-bold mb-1">{award.title}</h3>
+                  <h3 className="font-bold mb-1 text-gray-900">{award.title}</h3>
                   <p className="text-sm text-muted-foreground">{award.year}</p>
                 </CardContent>
               </Card>
@@ -565,7 +565,7 @@ return (
       {/* Services Section */}
       <section className="container mx-auto px-3 sm:px-3 py-20 border-t">
         <ScrollReveal>
-          <h2 className="text-3xl md:text-3xl sm:text-4xl font-bold text-center mb-12">
+          <h2 className="text-3xl md:text-3xl sm:text-4xl font-bold text-center mb-12 text-gray-900">
             Services
           </h2>
         </ScrollReveal>
@@ -601,7 +601,7 @@ return (
       {/* Testimonials Cards */}
       <section className="container mx-auto px-3 sm:px-3 py-20 border-t">
         <ScrollReveal>
-          <h2 className="text-3xl md:text-3xl sm:text-4xl font-bold text-center mb-12">
+          <h2 className="text-3xl md:text-3xl sm:text-4xl font-bold text-center mb-12 text-gray-900">
             What Clients Say
           </h2>
         </ScrollReveal>
@@ -633,7 +633,7 @@ return (
       {/* Experience Timeline Section */}
       <section className="container mx-auto px-3 sm:px-3 py-20 border-t">
         <ScrollReveal>
-          <h2 className="text-3xl md:text-3xl sm:text-4xl font-bold text-center mb-12">
+          <h2 className="text-3xl md:text-3xl sm:text-4xl font-bold text-center mb-12 text-gray-900">
             Experience & Journey
           </h2>
         </ScrollReveal>
@@ -646,7 +646,7 @@ return (
                   <div className="flex flex-col md:flex-row md:items-start justify-between gap-4 mb-4">
                     <div className="flex-1">
                       <Badge className="mb-2">{exp.year}</Badge>
-                      <h3 className="text-2xl font-bold mb-1">{exp.title}</h3>
+                      <h3 className="text-2xl font-bold mb-1 text-gray-900">{exp.title}</h3>
                       <p className="text-primary font-semibold">{exp.company}</p>
                     </div>
                   </div>
@@ -674,7 +674,7 @@ return (
       {/* Achievements Section */}
       <section className="container mx-auto px-3 sm:px-3 py-20 border-t bg-muted/20">
         <ScrollReveal>
-          <h2 className="text-3xl md:text-3xl sm:text-4xl font-bold text-center mb-12">
+          <h2 className="text-3xl md:text-3xl sm:text-4xl font-bold text-center mb-12 text-gray-900">
             Achievements & Impact
           </h2>
         </ScrollReveal>
@@ -685,7 +685,7 @@ return (
               <Card className="text-center hover:shadow-lg transition-shadow">
                 <CardContent className="p-6">
                   <div className="text-5xl mb-4">{achievement.icon}</div>
-                  <h3 className="font-bold mb-2">{achievement.title}</h3>
+                  <h3 className="font-bold mb-2 text-gray-900">{achievement.title}</h3>
                   <p className="text-sm text-muted-foreground">{achievement.desc}</p>
                 </CardContent>
               </Card>
@@ -697,7 +697,7 @@ return (
       {/* Clients Logo Grid */}
       <section className="container mx-auto px-3 sm:px-3 py-20 border-t">
         <ScrollReveal>
-          <h2 className="text-3xl md:text-3xl sm:text-4xl font-bold text-center mb-4">
+          <h2 className="text-3xl md:text-3xl sm:text-4xl font-bold text-center mb-4 text-gray-900">
             Trusted By Leading Brands
           </h2>
           <p className="text-center text-muted-foreground mb-12 max-w-full mx-auto">
@@ -723,7 +723,7 @@ return (
       {/* Blog Posts Section */}
       <section className="container mx-auto px-3 sm:px-3 py-20 border-t bg-muted/20">
         <ScrollReveal>
-          <h2 className="text-3xl md:text-3xl sm:text-4xl font-bold text-center mb-4">
+          <h2 className="text-3xl md:text-3xl sm:text-4xl font-bold text-center mb-4 text-gray-900">
             Latest Insights
           </h2>
           <p className="text-center text-muted-foreground mb-12 max-w-full mx-auto">
@@ -765,7 +765,7 @@ return (
       {/* Tools & Technologies Section */}
       <section className="container mx-auto px-3 sm:px-3 py-20 border-t">
         <ScrollReveal>
-          <h2 className="text-3xl md:text-3xl sm:text-4xl font-bold text-center mb-12">
+          <h2 className="text-3xl md:text-3xl sm:text-4xl font-bold text-center mb-12 text-gray-900">
             Tools & Technologies
           </h2>
         </ScrollReveal>
@@ -798,7 +798,7 @@ return (
           <Card className="max-w-full mx-auto bg-gradient-to-br from-primary/10 to-purple-500/10 border-primary/20">
             <CardContent className="p-12 text-center">
               <div className="text-4xl mb-4">📬</div>
-              <h2 className="text-3xl font-bold mb-4">Stay Updated</h2>
+              <h2 className="text-3xl font-bold mb-4 text-gray-900">Stay Updated</h2>
               <p className="text-lg text-muted-foreground mb-8">
                 Get design insights, tips, and updates delivered to your inbox monthly
               </p>
@@ -859,7 +859,7 @@ return (
       {/* Pricing Cards */}
       <section className="py-20 px-3">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-12 text-center">Pricing</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold mb-12 text-center text-gray-900">Pricing</h2>
           <div className="grid md:grid-cols-3 gap-6">
             {[
               {n:"Basic",p:"$99",f:["5 Projects","Basic Support","1 User"]},
@@ -867,7 +867,7 @@ return (
               {n:"Enterprise",p:"Custom",f:["Custom Solutions","24/7 Support","Unlimited Users","Dedicated Manager"]}
             ].map((plan,i) => (
               <Card key={i} className="p-6 hover:shadow-lg transition-shadow">
-                <h3 className="text-2xl font-bold mb-2">{plan.n}</h3>
+                <h3 className="text-2xl font-bold mb-2 text-gray-900">{plan.n}</h3>
                 <div className="text-3xl sm:text-4xl font-bold mb-4">{plan.p}</div>
                 <ul className="space-y-2">{plan.f.map((f,j) => <li key={j} className="text-sm">✓ {f}</li>)}</ul>
               </Card>
@@ -879,7 +879,7 @@ return (
       {/* Gallery Grid */}
       <section className="py-20 px-3 bg-muted/30">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-12 text-center">Gallery</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold mb-12 text-center text-gray-900">Gallery</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[1,2,3,4,5,6,7,8].map(i => (
               <Card key={i} className="aspect-square bg-gradient-to-br from-primary/20 to-secondary/20"></Card>

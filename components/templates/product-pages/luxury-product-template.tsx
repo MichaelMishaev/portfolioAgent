@@ -259,7 +259,7 @@ export function LuxuryProductTemplate() {
               <div className="text-sm tracking-[0.3em] text-amber-500 font-light">
                 {productData.collection}
               </div>
-              <h1 className="text-4xl sm:text-4xl sm:text-5xl md:text-6xl lg:text-9xl font-light tracking-tight break-words">
+              <h1 className="text-4xl sm:text-4xl sm:text-5xl md:text-6xl lg:text-9xl font-light tracking-tight break-words text-gray-900">
                 {productData.name}
               </h1>
               <p className="text-xl sm:text-2xl md:text-3xl font-light text-neutral-400 max-w-full mx-auto">
@@ -276,7 +276,7 @@ export function LuxuryProductTemplate() {
         <div className="container mx-auto px-3 sm:px-3">
           <ScrollReveal>
             <div className="max-w-full mx-auto text-center mb-24">
-              <h2 className="text-5xl md:text-6xl font-light mb-8 tracking-tight">
+              <h2 className="text-5xl md:text-6xl font-light mb-8 tracking-tight text-gray-900">
                 {productData.heritage.title}
               </h2>
               <p className="text-xl text-neutral-400 leading-relaxed">
@@ -291,7 +291,7 @@ export function LuxuryProductTemplate() {
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16 pb-16 border-b border-neutral-800 last:border-0">
                   <div className="text-6xl font-light text-amber-500">{event.year}</div>
                   <div className="md:col-span-3">
-                    <h3 className="text-3xl font-light mb-4">{event.title}</h3>
+                    <h3 className="text-3xl font-light mb-4 text-gray-900">{event.title}</h3>
                     <p className="text-lg text-neutral-400">{event.description}</p>
                   </div>
                 </div>
@@ -305,7 +305,7 @@ export function LuxuryProductTemplate() {
       <section id="craftsmanship" className="py-32 bg-neutral-950">
         <div className="container mx-auto px-3 sm:px-3">
           <ScrollReveal>
-            <h2 className="text-5xl md:text-6xl font-light text-center mb-24 tracking-tight">
+            <h2 className="text-5xl md:text-6xl font-light text-center mb-24 tracking-tight text-gray-900">
               {productData.craftsmanship.title}
             </h2>
           </ScrollReveal>
@@ -319,7 +319,7 @@ export function LuxuryProductTemplate() {
                   }`}
                 >
                   <div className={index % 2 === 1 ? "md:order-2" : ""}>
-                    <h3 className="text-4xl font-light mb-6">{detail.title}</h3>
+                    <h3 className="text-4xl font-light mb-6 text-gray-900">{detail.title}</h3>
                     <p className="text-xl text-neutral-400 leading-relaxed">{detail.description}</p>
                   </div>
                   <div className={index % 2 === 1 ? "md:order-1" : ""}>
@@ -340,7 +340,7 @@ export function LuxuryProductTemplate() {
       <section className="py-32 border-t border-neutral-800">
         <div className="container mx-auto px-3 sm:px-3">
           <ScrollReveal>
-            <h2 className="text-5xl md:text-6xl font-light text-center mb-24 tracking-tight">
+            <h2 className="text-5xl md:text-6xl font-light text-center mb-24 tracking-tight text-gray-900">
               Create Your Masterpiece
             </h2>
           </ScrollReveal>
@@ -439,7 +439,7 @@ export function LuxuryProductTemplate() {
       <section className="py-32 bg-neutral-950">
         <div className="container mx-auto px-3 sm:px-3">
           <ScrollReveal>
-            <h2 className="text-5xl md:text-6xl font-light text-center mb-24 tracking-tight">
+            <h2 className="text-5xl md:text-6xl font-light text-center mb-24 tracking-tight text-gray-900">
               {productData.technical.title}
             </h2>
           </ScrollReveal>
@@ -477,7 +477,7 @@ export function LuxuryProductTemplate() {
       <section className="py-32 border-t border-neutral-800">
         <div className="container mx-auto px-3 sm:px-3">
           <ScrollReveal>
-            <h2 className="text-5xl font-light text-center mb-24 tracking-tight">
+            <h2 className="text-5xl font-light text-center mb-24 tracking-tight text-gray-900">
               Recognition of Excellence
             </h2>
           </ScrollReveal>
@@ -518,7 +518,7 @@ export function LuxuryProductTemplate() {
           <ScrollReveal>
             <div className="max-w-full mx-auto text-center">
               <FiMapPin className="w-16 h-16 mx-auto mb-8 text-amber-500" />
-              <h2 className="text-5xl md:text-6xl font-light mb-8 tracking-tight">
+              <h2 className="text-5xl md:text-6xl font-light mb-8 tracking-tight text-gray-900">
                 Experience Chronos Royal
               </h2>
               <p className="text-xl text-neutral-400 mb-12 max-w-full mx-auto">

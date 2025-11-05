@@ -117,7 +117,7 @@ export function ProfessionalB2bTemplate() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <FadeIn>
               <div className="max-w-2xl">
-                <h1 className="text-4xl sm:text-5xl md:text-5xl sm:text-5xl md:text-6xl font-bold mb-6 leading-tight break-words">
+                <h1 className="text-4xl sm:text-5xl md:text-5xl sm:text-5xl md:text-6xl font-bold mb-6 leading-tight break-words text-gray-900">
                   {data.hero.title}
                 </h1>
                 <p className="text-xl mb-8 text-blue-100">
@@ -158,7 +158,7 @@ export function ProfessionalB2bTemplate() {
         <div className="container mx-auto max-w-7xl px-6">
           <div className="text-center mb-12">
             <div className="text-sm font-semibold text-gray-500 mb-2">TRUSTED BY</div>
-            <h3 className="text-3xl font-bold">{data.socialProof.title}</h3>
+            <h3 className="text-3xl font-bold text-gray-900">{data.socialProof.title}</h3>
           </div>
 
           <div className="flex justify-center gap-8 md:gap-16 flex-wrap">
@@ -178,7 +178,7 @@ export function ProfessionalB2bTemplate() {
       <section id="services" className="py-20 bg-gray-50">
         <div className="container mx-auto max-w-7xl px-6">
           <ScrollReveal>
-            <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4">{data.services.title}</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4 text-gray-900">{data.services.title}</h2>
             <p className="text-xl text-gray-600 text-center mb-16 max-w-2xl mx-auto">
               {data.services.subtitle}
             </p>
@@ -233,7 +233,7 @@ export function ProfessionalB2bTemplate() {
           <ScrollReveal>
             <div className="text-center mb-16">
               <div className="text-blue-600 text-sm font-semibold mb-2">FEATURED CASE STUDY</div>
-              <h2 className="text-3xl sm:text-4xl font-bold">{data.caseStudy.title}</h2>
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">{data.caseStudy.title}</h2>
             </div>
           </ScrollReveal>
 
@@ -246,7 +246,7 @@ export function ProfessionalB2bTemplate() {
                   </div>
                 </div>
                 <CardContent className="p-12">
-                  <h3 className="text-3xl font-bold mb-4">{data.caseStudy.headline}</h3>
+                  <h3 className="text-3xl font-bold mb-4 text-gray-900">{data.caseStudy.headline}</h3>
                   <p className="text-gray-600 mb-8">{data.caseStudy.description}</p>
 
                   <div className="grid grid-cols-2 gap-6 mb-8">
@@ -272,7 +272,7 @@ export function ProfessionalB2bTemplate() {
       <section id="testimonials" className="py-20 bg-gray-50">
         <div className="container mx-auto max-w-7xl px-6">
           <ScrollReveal>
-            <h2 className="text-3xl sm:text-4xl font-bold text-center mb-16">{data.testimonials.title}</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold text-center mb-16 text-gray-900">{data.testimonials.title}</h2>
           </ScrollReveal>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -302,7 +302,7 @@ export function ProfessionalB2bTemplate() {
       <section className="py-20 bg-gradient-to-r from-blue-600 to-blue-800 text-white">
         <div className="container mx-auto max-w-7xl px-6 text-center">
           <ScrollReveal>
-            <h2 className="text-4xl lg:text-4xl sm:text-5xl font-bold mb-6 break-words">
+            <h2 className="text-4xl lg:text-4xl sm:text-5xl font-bold mb-6 break-words text-gray-900">
               {data.cta.title}
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
@@ -320,7 +320,7 @@ export function ProfessionalB2bTemplate() {
         <div className="container mx-auto max-w-7xl px-6">
           <div className="grid md:grid-cols-2 gap-12 mb-12">
             <div>
-              <h3 className="text-2xl font-bold mb-4">{tt.common.getInTouch}</h3>
+              <h3 className="text-2xl font-bold mb-4 text-gray-900">{tt.common.getInTouch}</h3>
               <p className="text-gray-400 mb-6">{data.contact.description}</p>
               <div className="flex gap-4">
                 <a href={`mailto:${data.contact.email}`} className="text-gray-400 hover:text-white transition-colors">
@@ -348,7 +348,7 @@ export function ProfessionalB2bTemplate() {
 
           {/* Skills - B2B Professional */}
           <section className="py-16 border-t border-gray-800">
-            <h3 className="text-3xl font-bold mb-8">Core Competencies</h3>
+            <h3 className="text-3xl font-bold mb-8 text-gray-900">Core Competencies</h3>
             <div className="grid md:grid-cols-3 gap-6">
               {['Lead Generation', 'Sales Automation', 'CRM Integration', 'Email Marketing', 'Analytics & Reporting', 'Account Management'].map((skill, i) => (
                 <div key={i} className="bg-gray-800 p-6 rounded-lg border border-gray-700">
@@ -360,7 +360,7 @@ export function ProfessionalB2bTemplate() {
 
           {/* About - B2B Professional */}
           <section className="py-16 border-t border-gray-800">
-            <h3 className="text-3xl font-bold mb-6">About Our B2B Services</h3>
+            <h3 className="text-3xl font-bold mb-6 text-gray-900">About Our B2B Services</h3>
             <p className="text-lg text-gray-300 mb-4">
               We specialize in helping B2B companies scale their sales and marketing operations through proven strategies and cutting-edge technology.
             </p>
@@ -371,7 +371,7 @@ export function ProfessionalB2bTemplate() {
 
           {/* Pricing - B2B Professional */}
           <section className="py-16 border-t border-gray-800">
-            <h3 className="text-3xl font-bold mb-8 text-center">Service Packages</h3>
+            <h3 className="text-3xl font-bold mb-8 text-center text-gray-900">Service Packages</h3>
             <div className="grid md:grid-cols-3 gap-8">
               {[
                 { name: 'Starter', price: '$2,000/mo', features: ['50 Qualified Leads', 'Basic CRM Setup', 'Email Campaigns', 'Monthly Reports'] },
@@ -400,7 +400,7 @@ export function ProfessionalB2bTemplate() {
 
           {/* Timeline - B2B Professional */}
           <section className="py-16 border-t border-gray-800">
-            <h3 className="text-3xl font-bold mb-8">Company Milestones</h3>
+            <h3 className="text-3xl font-bold mb-8 text-gray-900">Company Milestones</h3>
             <div className="space-y-6">
               {[
                 { year: '2024', title: 'Expanded to Global Markets', desc: 'Opened offices in Europe and Asia' },
@@ -423,7 +423,7 @@ export function ProfessionalB2bTemplate() {
 
           {/* FAQ - B2B Professional */}
           <section className="py-16 border-t border-gray-800">
-            <h3 className="text-3xl font-bold mb-8 text-center">Frequently Asked Questions</h3>
+            <h3 className="text-3xl font-bold mb-8 text-center text-gray-900">Frequently Asked Questions</h3>
             <div className="max-w-3xl mx-auto space-y-6">
               {[
                 { q: 'What industries do you serve?', a: 'We work with B2B companies across all industries including SaaS, manufacturing, professional services, and technology.' },

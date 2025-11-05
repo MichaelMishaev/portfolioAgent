@@ -94,7 +94,7 @@ export function MinimalistTemplate() {
       <section className="container mx-auto px-3 max-w-full pt-40 pb-32">
         <div className="max-w-full">
           <FadeIn>
-            <h1 className="text-4xl sm:text-4xl sm:text-5xl md:text-6xl lg:text-9xl font-light mb-8 tracking-tighter leading-none break-words">
+            <h1 className="text-4xl sm:text-4xl sm:text-5xl md:text-6xl lg:text-9xl font-light mb-8 tracking-tighter leading-none break-words text-gray-900">
               {portfolioData.name}
             </h1>
           </FadeIn>
@@ -120,7 +120,7 @@ export function MinimalistTemplate() {
       <section id="about" className="container mx-auto px-3 max-w-full py-32">
         <div className="max-w-full mx-auto">
           <ScrollReveal>
-            <h2 className="text-xs font-medium text-muted-foreground mb-16 uppercase tracking-widest">
+            <h2 className="text-xs font-medium text-muted-foreground mb-16 uppercase tracking-widest text-gray-900">
               {tt.common.about}
             </h2>
             <p className="text-2xl leading-loose text-foreground/70 font-light">
@@ -165,7 +165,7 @@ export function MinimalistTemplate() {
       <section className="container mx-auto px-3 max-w-full py-20 border-t">
         <div className="max-w-full mx-auto">
           <ScrollReveal>
-            <h2 className="text-xs font-medium text-muted-foreground mb-12 uppercase tracking-widest">
+            <h2 className="text-xs font-medium text-muted-foreground mb-12 uppercase tracking-widest text-gray-900">
               Expertise
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-x-12 gap-y-6">
@@ -183,7 +183,7 @@ export function MinimalistTemplate() {
       <section id="work" className="container mx-auto px-3 max-w-full py-32">
         <div className="max-w-full">
           <ScrollReveal>
-            <h2 className="text-xs font-medium text-muted-foreground mb-16 uppercase tracking-widest">
+            <h2 className="text-xs font-medium text-muted-foreground mb-16 uppercase tracking-widest text-gray-900">
               Selected Work
             </h2>
           </ScrollReveal>
@@ -196,7 +196,7 @@ export function MinimalistTemplate() {
                     {project.year}
                   </div>
                   <div className="col-span-10">
-                    <h3 className="text-3xl font-medium mb-4 tracking-tight">
+                    <h3 className="text-3xl font-medium mb-4 tracking-tight text-gray-900">
                       {project.title}
                     </h3>
                     <p className="text-lg text-foreground/60 mb-6 leading-relaxed">
@@ -219,7 +219,7 @@ export function MinimalistTemplate() {
       <section className="container mx-auto px-3 max-w-full py-32 border-t">
         <div className="max-w-full mx-auto">
           <ScrollReveal>
-            <h2 className="text-xs font-medium text-muted-foreground mb-16 uppercase tracking-widest">
+            <h2 className="text-xs font-medium text-muted-foreground mb-16 uppercase tracking-widest text-gray-900">
               Services
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
@@ -237,7 +237,7 @@ export function MinimalistTemplate() {
       <section className="container mx-auto px-3 max-w-full py-32 border-t">
         <div className="max-w-full mx-auto">
           <ScrollReveal>
-            <h2 className="text-xs font-medium text-muted-foreground mb-16 uppercase tracking-widest text-center">
+            <h2 className="text-xs font-medium text-muted-foreground mb-16 uppercase tracking-widest text-center text-gray-900">
               Selected Clients
             </h2>
             <div className="flex flex-wrap justify-center gap-x-12 gap-y-6">
@@ -255,7 +255,7 @@ export function MinimalistTemplate() {
       <section id="contact" className="container mx-auto px-3 max-w-full py-40 border-t">
         <div className="max-w-full mx-auto">
           <ScrollReveal>
-            <h2 className="text-xs font-medium text-muted-foreground mb-16 uppercase tracking-widest">
+            <h2 className="text-xs font-medium text-muted-foreground mb-16 uppercase tracking-widest text-gray-900">
               {tt.common.contact}
             </h2>
             <p className="text-5xl md:text-6xl font-light mb-16 leading-tight tracking-tight break-words">
@@ -310,7 +310,7 @@ export function MinimalistTemplate() {
       <section className="py-20 px-3 border-t">
         <div className="container mx-auto max-w-5xl">
           <ScrollReveal>
-            <h2 className="text-xs uppercase tracking-widest mb-16 text-center">Pricing</h2>
+            <h2 className="text-xs uppercase tracking-widest mb-16 text-center text-gray-900">Pricing</h2>
           </ScrollReveal>
           <div className="grid md:grid-cols-3 gap-px bg-border">
             {[
@@ -338,7 +338,7 @@ export function MinimalistTemplate() {
       <section className="py-20 px-3 border-t">
         <div className="container mx-auto max-w-4xl">
           <ScrollReveal>
-            <h2 className="text-xs uppercase tracking-widest mb-16 text-center">Testimonials</h2>
+            <h2 className="text-xs uppercase tracking-widest mb-16 text-center text-gray-900">Testimonials</h2>
           </ScrollReveal>
           <div className="space-y-12">
             {[
@@ -363,7 +363,7 @@ export function MinimalistTemplate() {
       <section className="py-20 px-3 border-t">
         <div className="container mx-auto max-w-4xl">
           <ScrollReveal>
-            <h2 className="text-xs uppercase tracking-widest mb-16 text-center">Timeline</h2>
+            <h2 className="text-xs uppercase tracking-widest mb-16 text-center text-gray-900">Timeline</h2>
           </ScrollReveal>
           <div className="space-y-8">
             {[
@@ -390,7 +390,7 @@ export function MinimalistTemplate() {
       <section className="py-20 px-3 border-t">
         <div className="container mx-auto max-w-4xl">
           <ScrollReveal>
-            <h2 className="text-xs uppercase tracking-widest mb-16 text-center">FAQ</h2>
+            <h2 className="text-xs uppercase tracking-widest mb-16 text-center text-gray-900">FAQ</h2>
           </ScrollReveal>
           <div className="space-y-8">
             {[

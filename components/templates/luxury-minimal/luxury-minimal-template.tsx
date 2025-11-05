@@ -100,7 +100,7 @@ export function LuxuryMinimalTemplate() {
             <div className="mb-6 text-[#D4AF37] text-sm uppercase tracking-[0.3em] font-light">
               {portfolioData.category}
             </div>
-            <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl mb-8 font-light tracking-tight leading-none break-words">
+            <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl mb-8 font-light tracking-tight leading-none break-words text-gray-900">
               {portfolioData.name}
             </h1>
             <p className="text-xl md:text-2xl text-white/90 mb-12 font-light max-w-2xl mx-auto leading-relaxed">
@@ -132,7 +132,7 @@ export function LuxuryMinimalTemplate() {
         <div className="container mx-auto px-8 max-w-7xl">
           <ScrollReveal>
             <div className="text-center mb-20">
-              <h2 className="font-serif text-5xl md:text-6xl mb-6 font-light">Selected Works</h2>
+              <h2 className="font-serif text-5xl md:text-6xl mb-6 font-light text-gray-900">Selected Works</h2>
               <div className="w-24 h-px bg-[#D4AF37] mx-auto" />
             </div>
           </ScrollReveal>
@@ -157,7 +157,7 @@ export function LuxuryMinimalTemplate() {
                   />
                 </div>
                 <div className="text-center">
-                  <h3 className="font-serif text-3xl mb-3 font-light group-hover:text-[#D4AF37] transition-colors">
+                  <h3 className="font-serif text-3xl mb-3 font-light group-hover:text-[#D4AF37] transition-colors text-gray-900">
                     {project.title}
                   </h3>
                   <p className="text-black/60 mb-4 leading-relaxed">{project.description}</p>
@@ -175,7 +175,7 @@ export function LuxuryMinimalTemplate() {
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <ScrollReveal>
               <div>
-                <h2 className="font-serif text-5xl md:text-6xl mb-8 font-light">About</h2>
+                <h2 className="font-serif text-5xl md:text-6xl mb-8 font-light text-gray-900">About</h2>
                 <div className="w-16 h-px bg-[#D4AF37] mb-8" />
                 <p className="text-lg text-black/70 leading-relaxed mb-6">{portfolioData.bio}</p>
                 <Button className="bg-black hover:bg-black/80 text-white text-xs uppercase tracking-[0.2em] px-8 py-6">
@@ -202,7 +202,7 @@ export function LuxuryMinimalTemplate() {
         <div className="container mx-auto px-8 max-w-6xl">
           <ScrollReveal>
             <div className="text-center mb-20">
-              <h2 className="font-serif text-5xl md:text-6xl mb-6 font-light">Services</h2>
+              <h2 className="font-serif text-5xl md:text-6xl mb-6 font-light text-gray-900">Services</h2>
               <div className="w-24 h-px bg-[#D4AF37] mx-auto" />
             </div>
           </ScrollReveal>
@@ -218,7 +218,7 @@ export function LuxuryMinimalTemplate() {
                 className="text-center"
               >
                 <div className="text-5xl mb-6 text-[#D4AF37]">{service.icon}</div>
-                <h3 className="font-serif text-2xl mb-4 font-light">{service.title}</h3>
+                <h3 className="font-serif text-2xl mb-4 font-light text-gray-900">{service.title}</h3>
                 <p className="text-black/60 leading-relaxed">{service.description}</p>
               </motion.div>
             ))}
@@ -231,7 +231,7 @@ export function LuxuryMinimalTemplate() {
         <div className="container mx-auto px-8 max-w-6xl">
           <ScrollReveal>
             <div className="text-center mb-20">
-              <h2 className="font-serif text-5xl md:text-6xl mb-6 font-light">Testimonials</h2>
+              <h2 className="font-serif text-5xl md:text-6xl mb-6 font-light text-gray-900">Testimonials</h2>
               <div className="w-24 h-px bg-[#D4AF37] mx-auto" />
             </div>
           </ScrollReveal>
@@ -288,7 +288,7 @@ export function LuxuryMinimalTemplate() {
         <div className="container mx-auto px-8 max-w-7xl">
           <ScrollReveal>
             <div className="text-center mb-20">
-              <h2 className="font-serif text-5xl md:text-6xl mb-6 font-light">Gallery</h2>
+              <h2 className="font-serif text-5xl md:text-6xl mb-6 font-light text-gray-900">Gallery</h2>
               <div className="w-24 h-px bg-[#D4AF37] mx-auto" />
             </div>
           </ScrollReveal>
@@ -345,7 +345,7 @@ export function LuxuryMinimalTemplate() {
         <div className="container mx-auto px-8 max-w-6xl">
           <ScrollReveal>
             <div className="text-center mb-20">
-              <h2 className="font-serif text-5xl md:text-6xl mb-6 font-light">Expertise</h2>
+              <h2 className="font-serif text-5xl md:text-6xl mb-6 font-light text-gray-900">Expertise</h2>
               <div className="w-24 h-px bg-[#D4AF37] mx-auto" />
             </div>
           </ScrollReveal>
@@ -367,7 +367,7 @@ export function LuxuryMinimalTemplate() {
         <div className="container mx-auto px-8 max-w-6xl">
           <ScrollReveal>
             <div className="text-center mb-20">
-              <h2 className="font-serif text-5xl md:text-6xl mb-6 font-light">Investment</h2>
+              <h2 className="font-serif text-5xl md:text-6xl mb-6 font-light text-gray-900">Investment</h2>
               <div className="w-24 h-px bg-[#D4AF37] mx-auto mb-6" />
               <p className="text-black/60 text-lg font-light">Bespoke solutions tailored to your vision</p>
             </div>
@@ -406,7 +406,7 @@ export function LuxuryMinimalTemplate() {
         <div className="container mx-auto px-8 max-w-4xl">
           <ScrollReveal>
             <div className="text-center mb-20">
-              <h2 className="font-serif text-5xl md:text-6xl mb-6 font-light">Journey</h2>
+              <h2 className="font-serif text-5xl md:text-6xl mb-6 font-light text-gray-900">Journey</h2>
               <div className="w-24 h-px bg-[#D4AF37] mx-auto" />
             </div>
           </ScrollReveal>
@@ -439,7 +439,7 @@ export function LuxuryMinimalTemplate() {
         <div className="container mx-auto px-8 max-w-4xl">
           <ScrollReveal>
             <div className="text-center mb-20">
-              <h2 className="font-serif text-5xl md:text-6xl mb-6 font-light">Questions</h2>
+              <h2 className="font-serif text-5xl md:text-6xl mb-6 font-light text-gray-900">Questions</h2>
               <div className="w-24 h-px bg-[#D4AF37] mx-auto" />
             </div>
           </ScrollReveal>

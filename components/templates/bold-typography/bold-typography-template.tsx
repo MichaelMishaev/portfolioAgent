@@ -130,7 +130,7 @@ export function BoldTypographyTemplate() {
       {/* Hero Section - Bold Typography */}
       <section className="container mx-auto px-3 max-w-full pt-32 pb-20 min-h-screen flex flex-col justify-center">
         <FadeIn>
-          <h1 className="text-[clamp(3rem,12vw,12rem)] font-black leading-[0.85] tracking-tight mb-8">
+          <h1 className="text-[clamp(3rem,12vw,12rem)] font-black leading-[0.85] tracking-tight mb-8 text-gray-900">
             {portfolioData.name.split(" ").map((word, i) => (
               <div key={i}>{word}</div>
             ))}
@@ -158,7 +158,7 @@ export function BoldTypographyTemplate() {
         <ScrollReveal>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black mb-6 break-words">
+              <h2 className="text-3xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black mb-6 break-words text-gray-900">
                 About
               </h2>
             </div>
@@ -192,7 +192,7 @@ export function BoldTypographyTemplate() {
       {/* Services Section */}
       <section id="services" className="container mx-auto px-3 max-w-full py-20 border-t">
         <ScrollReveal>
-          <h2 className="text-3xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black mb-16 break-words">
+          <h2 className="text-3xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black mb-16 break-words text-gray-900">
             Services
           </h2>
         </ScrollReveal>
@@ -207,7 +207,7 @@ export function BoldTypographyTemplate() {
                   </span>
                 </div>
                 <div className="md:col-span-4">
-                  <h3 className="text-3xl md:text-3xl sm:text-4xl font-bold">
+                  <h3 className="text-3xl md:text-3xl sm:text-4xl font-bold text-gray-900">
                     {service.title}
                   </h3>
                 </div>
@@ -225,7 +225,7 @@ export function BoldTypographyTemplate() {
       {/* Process Section */}
       <section className="container mx-auto px-3 max-w-full py-20 border-t">
         <ScrollReveal>
-          <h2 className="text-3xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black mb-16 text-center break-words">
+          <h2 className="text-3xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black mb-16 text-center break-words text-gray-900">
             Process
           </h2>
         </ScrollReveal>
@@ -237,7 +237,7 @@ export function BoldTypographyTemplate() {
                 <div className="text-3xl sm:text-4xl font-black text-primary mb-4">
                   {step.step}
                 </div>
-                <h3 className="text-xl font-bold mb-3 uppercase">
+                <h3 className="text-xl font-bold mb-3 uppercase text-gray-900">
                   {step.step}
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -252,7 +252,7 @@ export function BoldTypographyTemplate() {
       {/* Case Studies Section */}
       <section className="container mx-auto px-3 max-w-full py-20 border-t bg-accent/5">
         <ScrollReveal>
-          <h2 className="text-3xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black mb-16 break-words">
+          <h2 className="text-3xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black mb-16 break-words text-gray-900">
             Case Studies
           </h2>
         </ScrollReveal>
@@ -266,7 +266,7 @@ export function BoldTypographyTemplate() {
                   <span className="inline-block text-sm font-bold px-3 py-2 bg-primary text-primary-foreground mb-4 uppercase">
                     {study.category}
                   </span>
-                  <h3 className="text-5xl md:text-4xl sm:text-5xl md:text-6xl font-black mb-6 break-words">
+                  <h3 className="text-5xl md:text-4xl sm:text-5xl md:text-6xl font-black mb-6 break-words text-gray-900">
                     {study.title}
                   </h3>
 
@@ -309,7 +309,7 @@ export function BoldTypographyTemplate() {
       {/* Testimonials Section */}
       <section className="container mx-auto px-3 max-w-full py-20 border-t">
         <ScrollReveal>
-          <h2 className="text-3xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black mb-16 break-words">
+          <h2 className="text-3xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black mb-16 break-words text-gray-900">
             Testimonials
           </h2>
         </ScrollReveal>
@@ -333,7 +333,7 @@ export function BoldTypographyTemplate() {
       {/* Clients Section */}
       <section className="container mx-auto px-3 max-w-full py-20 border-t">
         <ScrollReveal>
-          <h2 className="text-3xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black mb-16 break-words">
+          <h2 className="text-3xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black mb-16 break-words text-gray-900">
             Clients
           </h2>
         </ScrollReveal>
@@ -357,7 +357,7 @@ export function BoldTypographyTemplate() {
       {/* Contact Section */}
       <section id="contact" className="container mx-auto px-3 max-w-full py-32 border-t">
         <ScrollReveal>
-          <h2 className="text-[clamp(3rem,10vw,10rem)] font-black leading-[0.9] mb-12">
+          <h2 className="text-[clamp(3rem,10vw,10rem)] font-black leading-[0.9] mb-12 text-gray-900">
             Let's Create
             <br />
             Something
@@ -394,7 +394,7 @@ export function BoldTypographyTemplate() {
       <section className="py-20 px-3 border-t">
         <div className="container mx-auto max-w-6xl">
           <ScrollReveal>
-            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black mb-16 tracking-tight break-words">SKILLS</h2>
+            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black mb-16 tracking-tight break-words text-gray-900">SKILLS</h2>
           </ScrollReveal>
           <div className="grid md:grid-cols-2 gap-8">
             {[
@@ -405,7 +405,7 @@ export function BoldTypographyTemplate() {
             ].map((group, i) => (
               <ScrollReveal key={i} delay={i * 0.1}>
                 <div className="space-y-4">
-                  <h3 className="text-2xl font-black tracking-tight">{group.cat}</h3>
+                  <h3 className="text-2xl font-black tracking-tight text-gray-900">{group.cat}</h3>
                   <div className="flex flex-wrap gap-3">
                     {group.skills.map((s, j) => (
                       <span key={j} className="px-4 py-2 bg-foreground text-background font-bold text-sm">
@@ -424,7 +424,7 @@ export function BoldTypographyTemplate() {
       <section className="py-20 px-3 bg-foreground text-background">
         <div className="container mx-auto max-w-6xl">
           <ScrollReveal>
-            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black mb-16 tracking-tight break-words">PRICING</h2>
+            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black mb-16 tracking-tight break-words text-gray-900">PRICING</h2>
           </ScrollReveal>
           <div className="grid md:grid-cols-3 gap-8">
             {[
@@ -455,7 +455,7 @@ export function BoldTypographyTemplate() {
       <section className="py-20 px-3">
         <div className="container mx-auto max-w-6xl">
           <ScrollReveal>
-            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black mb-16 tracking-tight break-words">GALLERY</h2>
+            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black mb-16 tracking-tight break-words text-gray-900">GALLERY</h2>
           </ScrollReveal>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             {[1, 2, 3, 4, 5, 6].map((i) => (
@@ -475,10 +475,10 @@ export function BoldTypographyTemplate() {
       <section className="py-32 px-3 bg-foreground text-background">
         <div className="container mx-auto max-w-4xl text-center">
           <ScrollReveal>
-            <h2 className="text-5xl sm:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl lg:text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black mb-8 tracking-tighter leading-none break-words">
+            <h2 className="text-5xl sm:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl lg:text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black mb-8 tracking-tighter leading-none break-words text-gray-900">
               LET'S WORK
             </h2>
-            <h2 className="text-5xl sm:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl lg:text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black mb-12 tracking-tighter leading-none break-words">
+            <h2 className="text-5xl sm:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl lg:text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black mb-12 tracking-tighter leading-none break-words text-gray-900">
               TOGETHER
             </h2>
             <Button size="lg" className="bg-background text-foreground hover:bg-background/90 font-black text-xl px-12 h-16">
@@ -492,7 +492,7 @@ export function BoldTypographyTemplate() {
       <section className="py-20 px-3">
         <div className="container mx-auto max-w-6xl">
           <ScrollReveal>
-            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black mb-16 tracking-tight break-words">TIMELINE</h2>
+            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black mb-16 tracking-tight break-words text-gray-900">TIMELINE</h2>
           </ScrollReveal>
           <div className="space-y-8">
             {[

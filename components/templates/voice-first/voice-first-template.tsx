@@ -549,7 +549,7 @@ export function VoiceFirstTemplate() {
         <div className="container mx-auto max-w-4xl text-center text-white">
           <div className="bg-white/10 backdrop-blur-xl p-12 rounded-3xl border border-white/20">
             <div className="text-6xl mb-6">🎙️</div>
-            <h2 className="text-4xl md:text-4xl sm:text-5xl md:text-6xl font-bold mb-6 break-words">
+            <h2 className="text-4xl md:text-4xl sm:text-5xl md:text-6xl font-bold mb-6 break-words text-gray-900">
               Ready to Go Voice-First?
             </h2>
             <p className="text-xl mb-8 opacity-90">

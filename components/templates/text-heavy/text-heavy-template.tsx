@@ -195,7 +195,7 @@ return (
       {/* Hero Section */}
       <section className="container mx-auto px-3 sm:px-3 pt-32 pb-20 max-w-full">
         <FadeIn>
-          <h1 className="text-3xl sm:text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-serif font-bold mb-6 leading-tight break-words">
+          <h1 className="text-3xl sm:text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-serif font-bold mb-6 leading-tight break-words text-gray-900">
             {portfolioData.name}
           </h1>
         </FadeIn>
@@ -241,7 +241,7 @@ return (
       {/* About Section */}
       <section id="about" className="container mx-auto px-3 sm:px-3 py-20 max-w-full">
         <ScrollReveal>
-          <h2 className="text-3xl sm:text-5xl font-serif font-bold mb-8 break-words">
+          <h2 className="text-3xl sm:text-5xl font-serif font-bold mb-8 break-words text-gray-900">
             About
           </h2>
           <p className="text-xl leading-relaxed text-foreground/90 mb-8">
@@ -251,7 +251,7 @@ return (
 
         {/* Publications */}
         <ScrollReveal delay={0.2}>
-          <h3 className="text-2xl font-bold mb-4">Published In</h3>
+          <h3 className="text-2xl font-bold mb-4 text-gray-900">Published In</h3>
           <div className="flex flex-wrap gap-3">
             {portfolioData.publications.map((pub) => (
               <Badge key={pub} variant="outline" className="text-base py-2 px-3">
@@ -265,7 +265,7 @@ return (
       {/* Expertise Section */}
       <section className="container mx-auto px-3 sm:px-3 py-20 max-w-full bg-accent/5">
         <ScrollReveal>
-          <h2 className="text-3xl sm:text-5xl font-serif font-bold mb-8 break-words">
+          <h2 className="text-3xl sm:text-5xl font-serif font-bold mb-8 break-words text-gray-900">
             Writing Expertise
           </h2>
         </ScrollReveal>
@@ -274,7 +274,7 @@ return (
           {portfolioData.expertise.map((item, index) => (
             <ScrollReveal key={item.topic} delay={index * 0.1}>
               <div className="flex items-center justify-between border-b pb-4">
-                <h3 className="text-xl font-bold">{item.topic}</h3>
+                <h3 className="text-xl font-bold text-gray-900">{item.topic}</h3>
                 <span className="text-muted-foreground">{item.count}</span>
               </div>
             </ScrollReveal>
@@ -285,7 +285,7 @@ return (
       {/* Articles Section */}
       <section id="articles" className="container mx-auto px-3 sm:px-3 py-20 max-w-full">
         <ScrollReveal>
-          <h2 className="text-3xl sm:text-5xl font-serif font-bold mb-12 break-words">
+          <h2 className="text-3xl sm:text-5xl font-serif font-bold mb-12 break-words text-gray-900">
             Recent Articles
           </h2>
         </ScrollReveal>
@@ -302,7 +302,7 @@ return (
                   ))}
                 </div>
 
-                <h3 className="text-3xl md:text-3xl sm:text-4xl font-serif font-bold mb-4 hover:text-primary transition-colors cursor-pointer">
+                <h3 className="text-3xl md:text-3xl sm:text-4xl font-serif font-bold mb-4 hover:text-primary transition-colors cursor-pointer text-gray-900">
                   {article.title}
                 </h3>
 
@@ -333,7 +333,7 @@ return (
       {/* Services Section */}
       <section id="services" className="container mx-auto px-3 sm:px-3 py-20 max-w-full">
         <ScrollReveal>
-          <h2 className="text-3xl sm:text-5xl font-serif font-bold mb-12 break-words">
+          <h2 className="text-3xl sm:text-5xl font-serif font-bold mb-12 break-words text-gray-900">
             Services
           </h2>
         </ScrollReveal>
@@ -342,7 +342,7 @@ return (
           {portfolioData.services.map((service, index) => (
             <ScrollReveal key={service.title} delay={index * 0.1}>
               <div className="border-l-4 border-primary pl-6 py-2">
-                <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-3">
+                <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-3 text-gray-900">
                   {service.title}
                 </h3>
                 <p className="text-lg leading-relaxed text-foreground/80">
@@ -357,7 +357,7 @@ return (
       {/* Case Studies Section */}
       <section id="case-studies" className="container mx-auto px-3 sm:px-3 py-20 max-w-full">
         <ScrollReveal>
-          <h2 className="text-3xl sm:text-5xl font-serif font-bold mb-12 break-words">
+          <h2 className="text-3xl sm:text-5xl font-serif font-bold mb-12 break-words text-gray-900">
             Case Studies
           </h2>
         </ScrollReveal>
@@ -366,7 +366,7 @@ return (
           {portfolioData.caseStudies.map((study, index) => (
             <ScrollReveal key={study.client} delay={index * 0.1}>
               <article className="border-l-4 border-primary pl-6">
-                <h3 className="text-3xl font-bold mb-4">{study.client}</h3>
+                <h3 className="text-3xl font-bold mb-4 text-gray-900">{study.client}</h3>
 
                 <div className="space-y-6">
                   <div>
@@ -407,7 +407,7 @@ return (
       {/* Process Section */}
       <section className="container mx-auto px-3 sm:px-3 py-20 max-w-full bg-accent/5">
         <ScrollReveal>
-          <h2 className="text-3xl sm:text-5xl font-serif font-bold mb-12 text-center break-words">
+          <h2 className="text-3xl sm:text-5xl font-serif font-bold mb-12 text-center break-words text-gray-900">
             My Process
           </h2>
         </ScrollReveal>
@@ -419,7 +419,7 @@ return (
                 <div className="w-16 h-16 mx-auto mb-4 rounded-full border-4 border-primary flex items-center justify-center text-2xl font-bold">
                   {index + 1}
                 </div>
-                <h3 className="text-xl font-bold mb-3">
+                <h3 className="text-xl font-bold mb-3 text-gray-900">
                   {step.step}
                 </h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">
@@ -434,7 +434,7 @@ return (
       {/* Testimonials Section */}
       <section className="container mx-auto px-3 sm:px-3 py-20 max-w-full">
         <ScrollReveal>
-          <h2 className="text-3xl sm:text-5xl font-serif font-bold mb-12 break-words">
+          <h2 className="text-3xl sm:text-5xl font-serif font-bold mb-12 break-words text-gray-900">
             Client Testimonials
           </h2>
         </ScrollReveal>
@@ -460,7 +460,7 @@ return (
       <section id="contact" className="container mx-auto px-3 sm:px-3 py-20 max-w-full">
         <ScrollReveal>
           <div className="border-t pt-12">
-            <h2 className="text-3xl sm:text-5xl font-serif font-bold mb-6 break-words">
+            <h2 className="text-3xl sm:text-5xl font-serif font-bold mb-6 break-words text-gray-900">
               Let's Start a Conversation
             </h2>
             <p className="text-xl leading-relaxed text-foreground/80 mb-8">
@@ -478,18 +478,18 @@ return (
       <section className="py-20 px-3 border-t">
         <div className="container mx-auto max-w-4xl">
           <ScrollReveal>
-            <h2 className="text-3xl sm:text-4xl font-bold mb-8">Services & Pricing</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold mb-8 text-gray-900">Services & Pricing</h2>
             <div className="prose prose-lg max-w-none space-y-8">
               <div className="border-l-4 border-primary pl-6">
-                <h3 className="text-2xl font-bold mb-2">Consulting - $200/hour</h3>
+                <h3 className="text-2xl font-bold mb-2 text-gray-900">Consulting - $200/hour</h3>
                 <p className="text-muted-foreground">Strategic guidance, code review, and technical advisory services for your projects.</p>
               </div>
               <div className="border-l-4 border-primary pl-6">
-                <h3 className="text-2xl font-bold mb-2">Project Work - $5K-$20K</h3>
+                <h3 className="text-2xl font-bold mb-2 text-gray-900">Project Work - $5K-$20K</h3>
                 <p className="text-muted-foreground">Full-stack development from concept to deployment. Fixed-price or milestone-based billing available.</p>
               </div>
               <div className="border-l-4 border-primary pl-6">
-                <h3 className="text-2xl font-bold mb-2">Retainer - $3K/month</h3>
+                <h3 className="text-2xl font-bold mb-2 text-gray-900">Retainer - $3K/month</h3>
                 <p className="text-muted-foreground">Ongoing development support with priority access and dedicated hours each month.</p>
               </div>
             </div>
@@ -501,7 +501,7 @@ return (
       <section className="py-20 px-3 bg-muted/30">
         <div className="container mx-auto max-w-4xl">
           <ScrollReveal>
-            <h2 className="text-3xl sm:text-4xl font-bold mb-12">Professional Timeline</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold mb-12 text-gray-900">Professional Timeline</h2>
             <div className="space-y-12">
               {[
                 {y:"2024",t:"Lead Engineer",c:"Tech Startup",d:"Leading full-stack development team building scalable web applications."},
@@ -512,7 +512,7 @@ return (
                 <div key={i} className="relative pl-8 border-l-2 border-muted-foreground/20">
                   <div className="absolute -left-2 top-0 w-4 h-4 rounded-full bg-primary"></div>
                   <div className="text-sm font-mono text-muted-foreground mb-2">{item.y}</div>
-                  <h3 className="text-xl font-bold mb-1">{item.t}</h3>
+                  <h3 className="text-xl font-bold mb-1 text-gray-900">{item.t}</h3>
                   <div className="text-lg text-muted-foreground mb-2">{item.c}</div>
                   <p className="text-muted-foreground leading-relaxed">{item.d}</p>
                 </div>

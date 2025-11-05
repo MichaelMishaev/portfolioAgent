@@ -305,7 +305,7 @@ export function PersonalBlogTemplate() {
                 className="w-32 h-32 rounded-full object-cover border-4 border-gray-100"
               />
               <div className="text-center md:text-left flex-1">
-                <h1 className="text-3xl sm:text-5xl font-bold mb-3 break-words">{blogData.author.name}</h1>
+                <h1 className="text-3xl sm:text-5xl font-bold mb-3 break-words text-gray-900">{blogData.author.name}</h1>
                 <p className="text-xl text-gray-600 mb-4">{blogData.author.bio}</p>
                 <div className="flex items-center gap-3 justify-center md:justify-start mb-4">
                   <a
@@ -364,7 +364,7 @@ export function PersonalBlogTemplate() {
                 <div className="p-8 flex flex-col justify-center">
                   <div className="mb-4">
                     <Badge variant="outline" className="mb-4">Featured</Badge>
-                    <h2 className="text-3xl font-bold mb-4 leading-tight">{blogData.featured.title}</h2>
+                    <h2 className="text-3xl font-bold mb-4 leading-tight text-gray-900">{blogData.featured.title}</h2>
                     <p className="text-gray-600 mb-6 text-lg">{blogData.featured.excerpt}</p>
                   </div>
                   <div className="flex items-center gap-4 text-sm text-gray-500 mb-6">
@@ -477,7 +477,7 @@ export function PersonalBlogTemplate() {
               {/* Popular Posts */}
               <Card className="border-0 shadow">
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
+                  <h3 className="text-xl font-bold mb-4 flex items-center gap-2 text-gray-900">
                     <FiTrendingUp className="w-5 h-5 text-blue-600" />
                     Popular Posts
                   </h3>
@@ -500,7 +500,7 @@ export function PersonalBlogTemplate() {
               {/* Tags Cloud */}
               <Card className="border-0 shadow">
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
+                  <h3 className="text-xl font-bold mb-4 flex items-center gap-2 text-gray-900">
                     <FiTag className="w-5 h-5 text-blue-600" />
                     Topics
                   </h3>
@@ -518,7 +518,7 @@ export function PersonalBlogTemplate() {
               <Card className="border-0 shadow bg-gradient-to-br from-blue-600 to-purple-600 text-white">
                 <CardContent className="p-6">
                   <FiMail className="w-10 h-10 mb-4" />
-                  <h3 className="text-xl font-bold mb-2">Never Miss an Update</h3>
+                  <h3 className="text-xl font-bold mb-2 text-gray-900">Never Miss an Update</h3>
                   <p className="text-blue-100 mb-4 text-sm">
                     Get the latest articles delivered to your inbox weekly.
                   </p>
@@ -541,7 +541,7 @@ export function PersonalBlogTemplate() {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-3 sm:px-3 max-w-full">
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4 break-words">What Readers Say</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4 break-words text-gray-900">What Readers Say</h2>
             <p className="text-xl text-gray-600">
               Join thousands of designers and developers who trust this blog
             </p>
@@ -580,7 +580,7 @@ export function PersonalBlogTemplate() {
       <section id="resources" className="py-20 bg-gray-50">
         <div className="container mx-auto px-3 sm:px-3 max-w-full">
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4 break-words">Free Resources</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4 break-words text-gray-900">Free Resources</h2>
             <p className="text-xl text-gray-600">
               Downloadable tools and templates to help you in your creative journey
             </p>
@@ -593,7 +593,7 @@ export function PersonalBlogTemplate() {
                     <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center text-white mb-4 group-hover:scale-110 transition-transform">
                       {resource.icon}
                     </div>
-                    <h3 className="text-xl font-bold mb-2">{resource.title}</h3>
+                    <h3 className="text-xl font-bold mb-2 text-gray-900">{resource.title}</h3>
                     <p className="text-gray-600 mb-4">{resource.description}</p>
                     <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
                       <span className="flex items-center gap-1">
@@ -620,7 +620,7 @@ export function PersonalBlogTemplate() {
           <ScrollReveal>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
               <div>
-                <h2 className="text-3xl sm:text-4xl font-bold mb-6 break-words">About Sarah</h2>
+                <h2 className="text-3xl sm:text-4xl font-bold mb-6 break-words text-gray-900">About Sarah</h2>
                 <p className="text-gray-600 mb-4 text-lg leading-relaxed">
                   {blogData.author.fullBio}
                 </p>

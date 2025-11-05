@@ -151,7 +151,7 @@ export function SaasFeatureRichTemplate() {
       <section id="features" className="py-20 bg-white">
         <div className="container mx-auto max-w-7xl px-6">
           <ScrollReveal>
-            <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4">{data.features.title}</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4 text-gray-900">{data.features.title}</h2>
             <p className="text-xl text-gray-600 text-center mb-16 max-w-2xl mx-auto">
               {data.features.subtitle}
             </p>
@@ -168,7 +168,7 @@ export function SaasFeatureRichTemplate() {
                     <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
                       <Icon className="text-3xl text-white" />
                     </div>
-                    <h3 className="text-xl font-bold mb-3">{feature.title}</h3>
+                    <h3 className="text-xl font-bold mb-3 text-gray-900">{feature.title}</h3>
                     <p className="text-gray-600">{feature.description}</p>
                   </div>
                 </ScrollReveal>
@@ -182,7 +182,7 @@ export function SaasFeatureRichTemplate() {
       <section id="pricing" className="py-20 bg-gray-50">
         <div className="container mx-auto max-w-6xl px-6">
           <ScrollReveal>
-            <h2 className="text-3xl sm:text-4xl font-bold text-center mb-16">{data.pricing.title}</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold text-center mb-16 text-gray-900">{data.pricing.title}</h2>
           </ScrollReveal>
 
           <div className="grid lg:grid-cols-3 gap-8">
@@ -202,7 +202,7 @@ export function SaasFeatureRichTemplate() {
                       </div>
                     )}
 
-                    <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
+                    <h3 className="text-2xl font-bold mb-2 text-gray-900">{plan.name}</h3>
                     <div className="mb-6">
                       <span className="text-4xl sm:text-5xl font-bold break-words">${plan.price}</span>
                       <span className="text-gray-500">/month</span>
@@ -238,7 +238,7 @@ export function SaasFeatureRichTemplate() {
       <section id="testimonials" className="py-20 bg-white">
         <div className="container mx-auto max-w-7xl px-6">
           <ScrollReveal>
-            <h2 className="text-3xl sm:text-4xl font-bold text-center mb-16">{data.testimonials.title}</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold text-center mb-16 text-gray-900">{data.testimonials.title}</h2>
           </ScrollReveal>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -266,7 +266,7 @@ export function SaasFeatureRichTemplate() {
       <section className="py-20 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
         <div className="container mx-auto max-w-4xl px-6 text-center">
           <ScrollReveal>
-            <h2 className="text-4xl lg:text-4xl sm:text-5xl font-bold mb-6 break-words">{data.cta.title}</h2>
+            <h2 className="text-4xl lg:text-4xl sm:text-5xl font-bold mb-6 break-words text-gray-900">{data.cta.title}</h2>
             <p className="text-xl mb-8">{data.cta.subtitle}</p>
             <Button size="lg" className="bg-white !text-blue-600 hover:bg-blue-50 px-12 py-6 text-lg">
               {data.cta.buttonText}
@@ -280,7 +280,7 @@ export function SaasFeatureRichTemplate() {
         <div className="container mx-auto max-w-7xl px-6">
           <div className="grid md:grid-cols-4 gap-12 mb-12">
             <div className="md:col-span-2">
-              <h3 className="text-2xl font-bold mb-4">SaaS Platform</h3>
+              <h3 className="text-2xl font-bold mb-4 text-gray-900">SaaS Platform</h3>
               <p className="text-gray-400">{data.footer.description}</p>
             </div>
             <div>
@@ -309,7 +309,7 @@ export function SaasFeatureRichTemplate() {
 
           {/* Skills - SaaS Feature Rich */}
           <section className="py-16 border-t border-gray-800">
-            <h3 className="text-3xl font-bold mb-8 text-center">Platform Capabilities</h3>
+            <h3 className="text-3xl font-bold mb-8 text-center text-gray-900">Platform Capabilities</h3>
             <div className="grid md:grid-cols-4 gap-4">
               {['API Integration', 'Real-time Analytics', 'Cloud Infrastructure', 'Security', 'Scalability', 'Automation', 'Reporting', 'Multi-tenant'].map((skill, i) => (
                 <div key={i} className="bg-gradient-to-br from-blue-500 to-purple-500 p-6 rounded-lg text-center">
@@ -322,7 +322,7 @@ export function SaasFeatureRichTemplate() {
           {/* About - SaaS Feature Rich */}
           <section className="py-16 border-t border-gray-800">
             <div className="max-w-4xl mx-auto text-center">
-              <h3 className="text-3xl font-bold mb-6">About Our Platform</h3>
+              <h3 className="text-3xl font-bold mb-6 text-gray-900">About Our Platform</h3>
               <p className="text-lg text-gray-300 mb-4">
                 Enterprise-grade SaaS platform designed to scale with your business. Built with modern technology and best practices.
               </p>
@@ -334,7 +334,7 @@ export function SaasFeatureRichTemplate() {
 
           {/* Projects - SaaS Feature Rich */}
           <section className="py-16 border-t border-gray-800">
-            <h3 className="text-3xl font-bold mb-8 text-center">Case Studies</h3>
+            <h3 className="text-3xl font-bold mb-8 text-center text-gray-900">Case Studies</h3>
             <div className="grid md:grid-cols-3 gap-6">
               {[
                 { title: 'Enterprise Migration', desc: 'Helped Fortune 500 company migrate 10M users', metric: '10M Users' },
@@ -352,7 +352,7 @@ export function SaasFeatureRichTemplate() {
 
           {/* Timeline - SaaS Feature Rich */}
           <section className="py-16 border-t border-gray-800">
-            <h3 className="text-3xl font-bold mb-8 text-center">Product Roadmap</h3>
+            <h3 className="text-3xl font-bold mb-8 text-center text-gray-900">Product Roadmap</h3>
             <div className="max-w-3xl mx-auto space-y-6">
               {[
                 { quarter: 'Q4 2024', title: 'AI Features', desc: 'Advanced AI-powered analytics and insights' },
@@ -375,7 +375,7 @@ export function SaasFeatureRichTemplate() {
 
           {/* FAQ - SaaS Feature Rich */}
           <section className="py-16 border-t border-gray-800">
-            <h3 className="text-3xl font-bold mb-8 text-center">Frequently Asked Questions</h3>
+            <h3 className="text-3xl font-bold mb-8 text-center text-gray-900">Frequently Asked Questions</h3>
             <div className="max-w-3xl mx-auto space-y-6">
               {[
                 { q: 'What is the uptime guarantee?', a: '99.9% uptime SLA with automatic failover and redundancy.' },

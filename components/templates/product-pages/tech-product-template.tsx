@@ -213,7 +213,7 @@ export function TechProductTemplate() {
           <div>
             <FadeIn delay={0.2}>
               <Badge className="mb-4 bg-yellow-400 text-black font-bold">IN STOCK</Badge>
-              <h1 className="text-5xl md:text-4xl sm:text-5xl md:text-6xl font-black mb-4 tracking-tight uppercase break-words">
+              <h1 className="text-5xl md:text-4xl sm:text-5xl md:text-6xl font-black mb-4 tracking-tight uppercase break-words text-gray-900">
                 {productData.name}
               </h1>
               <p className="text-2xl text-yellow-400 font-bold mb-4 uppercase tracking-widest">
@@ -269,7 +269,7 @@ export function TechProductTemplate() {
                   <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-gradient-to-br from-yellow-400 to-orange-500 flex items-center justify-center text-black text-2xl">
                     {feature.icon}
                   </div>
-                  <h3 className="text-sm font-bold uppercase tracking-wider mb-2 text-yellow-400">
+                  <h3 className="text-sm font-bold uppercase tracking-wider mb-2 text-yellow-400 text-gray-900">
                     {feature.title}
                   </h3>
                   <p className="text-xs text-gray-400">{feature.description}</p>
@@ -283,7 +283,7 @@ export function TechProductTemplate() {
       {/* Tech Specs */}
       <section id="specs" className="container mx-auto px-3 sm:px-3 py-16 border-t border-yellow-500/20">
         <ScrollReveal>
-          <h2 className="text-3xl sm:text-4xl font-black uppercase text-center mb-12 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-black uppercase text-center mb-12 tracking-tight text-gray-900">
             TECHNICAL <span className="text-yellow-400">SPECIFICATIONS</span>
           </h2>
         </ScrollReveal>
@@ -316,7 +316,7 @@ export function TechProductTemplate() {
       {/* Comparison Table */}
       <section className="container mx-auto px-3 sm:px-3 py-16 border-t border-yellow-500/20">
         <ScrollReveal>
-          <h2 className="text-3xl sm:text-4xl font-black uppercase text-center mb-12 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-black uppercase text-center mb-12 tracking-tight text-gray-900">
             HOW WE <span className="text-yellow-400">COMPARE</span>
           </h2>
         </ScrollReveal>
@@ -354,7 +354,7 @@ export function TechProductTemplate() {
       {/* Reviews */}
       <section id="reviews" className="container mx-auto px-3 sm:px-3 py-16 border-t border-yellow-500/20">
         <ScrollReveal>
-          <h2 className="text-3xl sm:text-4xl font-black uppercase text-center mb-4 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-black uppercase text-center mb-4 tracking-tight text-gray-900">
             WHAT <span className="text-yellow-400">PROS SAY</span>
           </h2>
           <div className="flex items-center justify-center gap-2 mb-12">
@@ -390,7 +390,7 @@ export function TechProductTemplate() {
         <ScrollReveal>
           <Card className="max-w-full mx-auto bg-gradient-to-r from-yellow-400 to-orange-500 border-0">
             <CardContent className="p-12 text-center text-black">
-              <h2 className="text-3xl sm:text-5xl font-black uppercase mb-4 tracking-tight break-words">
+              <h2 className="text-3xl sm:text-5xl font-black uppercase mb-4 tracking-tight break-words text-gray-900">
                 READY TO DOMINATE?
               </h2>
               <p className="text-xl mb-8 font-semibold">
