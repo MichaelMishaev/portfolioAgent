@@ -439,10 +439,10 @@ export default function Home() {
             className="text-center mb-6 sm:mb-8"
           >
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 sm:mb-3 px-2">
-              {language === 'en' ? 'Find the ' : 'Найдите '}
+              {language === 'en' ? 'Build Your Website ' : 'Создайте профессиональный сайт '}
               <span className="relative inline-block">
                 <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 dark:from-blue-400 dark:via-purple-400 dark:to-blue-400 bg-clip-text text-transparent">
-                  {language === 'en' ? 'Perfect Template' : 'идеальный шаблон'}
+                  {language === 'en' ? 'Effortlessly' : 'за несколько минут'}
                 </span>
                 <motion.span
                   initial={{ scaleX: 0 }}
@@ -455,8 +455,8 @@ export default function Home() {
             </h2>
             <p className="text-sm sm:text-base md:text-lg text-foreground/70 max-w-2xl mx-auto px-2">
               {language === 'en'
-                ? 'Choose by style or purpose'
-                : 'Выберите по стилю или назначению'}
+                ? 'Choose from professional, ready-to-edit templates'
+                : 'Выберите из профессиональных, готовых к редактированию шаблонов'}
             </p>
           </motion.div>
 

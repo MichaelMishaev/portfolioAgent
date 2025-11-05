@@ -273,6 +273,22 @@ export function TemplateGallery() {
           )}
         </div>
 
+        {/* Subtle explore link */}
+        <div className="max-w-2xl mx-auto text-right mt-2">
+          <button
+            onClick={() => {
+              setSearchQuery("");
+              setSelectedTag(null);
+              router.replace("/?category=all", { scroll: false });
+            }}
+            className="text-sm text-muted-foreground hover:text-foreground transition-colors inline-flex items-center gap-1"
+            style={{ fontSize: '14px' }}
+          >
+            {language === 'en' ? 'or explore all templates' : 'или просмотрите все шаблоны'}
+            <span className="inline-block transition-transform hover:translate-x-0.5">→</span>
+          </button>
+        </div>
+
         {/* Active Filters */}
         {(selectedTag || searchQuery) && (
           <div className="flex flex-wrap gap-2 justify-center mt-4">
