@@ -2901,3 +2901,37 @@ This enhancement builds on:
 
 ---
 
+
+---
+
+## Bug #20: Invisible Stat Numbers in Split-Screen Editorial Template
+**Date Discovered**: 2025-11-05
+**Severity**: High
+**Status**: Fixed ✅
+
+**Description**:
+The stat numbers (10+, 200+, 50M, 15) in the Stats section of the Split-Screen Editorial template were nearly invisible due to missing text color classes. The large numbers had no explicit color defined, causing poor visibility.
+
+**Location**:
+- File: `components/templates/split-screen-editorial/split-screen-editorial-template.tsx:159`
+- Section: Stats - Editorial Numbers
+
+**Root Cause**:
+Missing `text-gray-900` class on the stat number div elements.
+
+**Fix Applied**:
+Added explicit `text-gray-900` class to ensure proper contrast:
+```tsx
+<div className="text-4xl sm:text-5xl font-serif font-bold mb-2 break-words text-gray-900">{s.n}</div>
+```
+
+**Impact**: 
+Users could not read the career statistics (Years, Stories, Readers, Awards), severely impacting the template's usability.
+
+**Related Issues**:
+This is similar to Bug #17 (Systematic invisible text across 213 headings), indicating a recurring pattern of missing explicit text colors in the template system.
+
+**Testing**:
+- Build completed successfully
+- Template should now display stat numbers with proper visibility
+

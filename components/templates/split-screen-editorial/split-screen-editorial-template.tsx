@@ -156,7 +156,7 @@ export function SplitScreenEditorialTemplate() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center border-y border-gray-200 py-12">
             {[{ n: "10+", l: "Years" }, { n: "200+", l: "Stories" }, { n: "50M", l: "Readers" }, { n: "15", l: "Awards" }].map((s, i) => (
               <div key={i}>
-                <div className="text-4xl sm:text-5xl font-serif font-bold mb-2 break-words">{s.n}</div>
+                <div className="text-4xl sm:text-5xl font-serif font-bold mb-2 break-words text-gray-900">{s.n}</div>
                 <div className="text-sm uppercase tracking-widest text-gray-600">{s.l}</div>
               </div>
             ))}
