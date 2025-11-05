@@ -1,0 +1,1282 @@
+{
+  "successful": [
+    {
+      "template": "minimalist",
+      "screenshotNumber": 1,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/minimalist-1.png",
+      "originalPrompt": "A minimalist portfolio website hero section on laptop screen, pure white background (#FFFFFF), singl...",
+      "enhancedPrompt": "A minimalist portfolio website hero section on laptop screen, pure white background (#FFFFFF), singl..."
+    },
+    {
+      "template": "minimalist",
+      "screenshotNumber": 2,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/minimalist-2.png",
+      "originalPrompt": "A minimalist portfolio work section, white background, simple black text, minimal list layout with y...",
+      "enhancedPrompt": "A minimalist portfolio work section, white background, simple black text, minimal list layout with y..."
+    },
+    {
+      "template": "minimalist",
+      "screenshotNumber": 3,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/minimalist-3.png",
+      "originalPrompt": "A minimalist contact page, white background, simple centered large text-5xl headline, minimal email ...",
+      "enhancedPrompt": "A minimalist contact page, white background, simple centered large text-5xl headline, minimal email ..."
+    },
+    {
+      "template": "neo-brutalist",
+      "screenshotNumber": 1,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/neo-brutalist-1.png",
+      "originalPrompt": "A neo-brutalist portfolio hero on laptop screen, bright yellow #FFFF00 background, thick 4px solid b...",
+      "enhancedPrompt": "A neo-brutalist portfolio hero on laptop screen, bright yellow #FFFF00 background, thick 4px solid b..."
+    },
+    {
+      "template": "neo-brutalist",
+      "screenshotNumber": 2,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/neo-brutalist-2.png",
+      "originalPrompt": "A neo-brutalist project grid, white background with yellow #FFFF00 lime #CCFF00 accents, thick 4px b...",
+      "enhancedPrompt": "A neo-brutalist project grid, white background with yellow #FFFF00 lime #CCFF00 accents, thick 4px b..."
+    },
+    {
+      "template": "neo-brutalist",
+      "screenshotNumber": 3,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/neo-brutalist-3.png",
+      "originalPrompt": "A neo-brutalist contact section, lime #CCFF00 background, thick 4px black borders, ALL CAPS monospac...",
+      "enhancedPrompt": "A neo-brutalist contact section, lime #CCFF00 background, thick 4px black borders, ALL CAPS monospac..."
+    },
+    {
+      "template": "glassmorphism-modern",
+      "screenshotNumber": 1,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/glassmorphism-modern-1.png",
+      "originalPrompt": "A glassmorphism portfolio hero on laptop, dark gray #343434 background, frosted glass card with bg-w...",
+      "enhancedPrompt": "A glassmorphism portfolio hero on laptop, dark gray #343434 background, frosted glass card with bg-w..."
+    },
+    {
+      "template": "glassmorphism-modern",
+      "screenshotNumber": 2,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/glassmorphism-modern-2.png",
+      "originalPrompt": "A glassmorphism project showcase, dark #343434 background, multiple frosted glass cards with backdro...",
+      "enhancedPrompt": "A glassmorphism project showcase, dark #343434 background, multiple frosted glass cards with backdro..."
+    },
+    {
+      "template": "glassmorphism-modern",
+      "screenshotNumber": 3,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/glassmorphism-modern-3.png",
+      "originalPrompt": "A glassmorphism pricing section, dark gray background, frosted glass table with bg-white/10 backdrop...",
+      "enhancedPrompt": "A glassmorphism pricing section, dark gray background, frosted glass table with bg-white/10 backdrop..."
+    },
+    {
+      "template": "dark-mode",
+      "screenshotNumber": 1,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/dark-mode-1.png",
+      "originalPrompt": "A dark mode portfolio hero on laptop screen, pure black #0A0A0A background, bg-gradient-to-br from-b...",
+      "enhancedPrompt": "A dark mode portfolio hero on laptop screen, pure black #0A0A0A background, bg-gradient-to-br from-b..."
+    },
+    {
+      "template": "dark-mode",
+      "screenshotNumber": 2,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/dark-mode-2.png",
+      "originalPrompt": "A dark mode work section, black background, grid of project cards with bg-gray-900/50 border-white/1...",
+      "enhancedPrompt": "A dark mode work section, black background, grid of project cards with bg-gray-900/50 border-white/1..."
+    },
+    {
+      "template": "dark-mode",
+      "screenshotNumber": 3,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/dark-mode-3.png",
+      "originalPrompt": "A dark mode contact page, black with gradient-to-b from-black via-gray-900/50, text-5xl font-bold bg...",
+      "enhancedPrompt": "A dark mode contact page, black with gradient-to-b from-black via-gray-900/50, text-5xl font-bold bg..."
+    },
+    {
+      "template": "bold-typography",
+      "screenshotNumber": 1,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/bold-typography-1.png",
+      "originalPrompt": "A bold typography portfolio hero on laptop, white background, text-[clamp(3rem,12vw,12rem)] font-bla...",
+      "enhancedPrompt": "A bold typography portfolio hero on laptop, white background, text-[clamp(3rem,12vw,12rem)] font-bla..."
+    },
+    {
+      "template": "bold-typography",
+      "screenshotNumber": 2,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/bold-typography-2.png",
+      "originalPrompt": "A bold typography case studies section, white background with bg-accent/5 sections, text-5xl font-bl...",
+      "enhancedPrompt": "A bold typography case studies section, white background with bg-accent/5 sections, text-5xl font-bl..."
+    },
+    {
+      "template": "bold-typography",
+      "screenshotNumber": 3,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/bold-typography-3.png",
+      "originalPrompt": "A bold typography contact page, bg-foreground text-background inverted black section, text-8xl font-...",
+      "enhancedPrompt": "A bold typography contact page, bg-foreground text-background inverted black section, text-8xl font-..."
+    },
+    {
+      "template": "grid-masonry",
+      "screenshotNumber": 1,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/grid-masonry-1.png",
+      "originalPrompt": "A masonry grid portfolio hero on laptop screen, light gray #F5F5F5 background, text-5xl font-bold ce...",
+      "enhancedPrompt": "A masonry grid portfolio hero on laptop screen, light gray #F5F5F5 background, text-5xl font-bold ce..."
+    },
+    {
+      "template": "grid-masonry",
+      "screenshotNumber": 2,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/grid-masonry-2.png",
+      "originalPrompt": "A masonry grid project gallery, light background, Pinterest-style masonry layout with varying height...",
+      "enhancedPrompt": "A masonry grid project gallery, light background, Pinterest-style masonry layout with varying height..."
+    },
+    {
+      "template": "grid-masonry",
+      "screenshotNumber": 3,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/grid-masonry-3.png",
+      "originalPrompt": "A masonry grid testimonials section, bg-muted/30 background, border-l-2 border-foreground quote acce...",
+      "enhancedPrompt": "A masonry grid testimonials section, bg-muted/30 background, border-l-2 border-foreground quote acce..."
+    },
+    {
+      "template": "fullscreen-immersive",
+      "screenshotNumber": 1,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/fullscreen-immersive-1.png",
+      "originalPrompt": "A fullscreen immersive portfolio hero on laptop, full h-screen height, black background with bg-[url...",
+      "enhancedPrompt": "A fullscreen immersive portfolio hero on laptop, full h-screen height, black background with bg-[url..."
+    },
+    {
+      "template": "fullscreen-immersive",
+      "screenshotNumber": 2,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/fullscreen-immersive-2.png",
+      "originalPrompt": "A fullscreen immersive project sections, full h-screen per project, parallax bg-images with bg-black...",
+      "enhancedPrompt": "A fullscreen immersive project sections, full h-screen per project, parallax bg-images with bg-black..."
+    },
+    {
+      "template": "fullscreen-immersive",
+      "screenshotNumber": 3,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/fullscreen-immersive-3.png",
+      "originalPrompt": "A fullscreen immersive contact CTA, full h-screen, gradient-to-br from-purple-900 via-black to-pink-...",
+      "enhancedPrompt": "A fullscreen immersive contact CTA, full h-screen, gradient-to-br from-purple-900 via-black to-pink-..."
+    },
+    {
+      "template": "split-screen",
+      "screenshotNumber": 1,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/split-screen-1.png",
+      "originalPrompt": "A split-screen portfolio hero on laptop, grid-cols-2 layout with h-screen height, left side text-8xl...",
+      "enhancedPrompt": "A split-screen portfolio hero on laptop, grid-cols-2 layout with h-screen height, left side text-8xl..."
+    },
+    {
+      "template": "split-screen",
+      "screenshotNumber": 2,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/split-screen-2.png",
+      "originalPrompt": "A split-screen project showcase, grid-cols-2 with animated image left parallax carousel, right side ...",
+      "enhancedPrompt": "A split-screen project showcase, grid-cols-2 with animated image left parallax carousel, right side ..."
+    },
+    {
+      "template": "split-screen",
+      "screenshotNumber": 3,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/split-screen-3.png",
+      "originalPrompt": "A split-screen services section, grid-cols-2 alternating left/right layout, bg-background p-8 rounde...",
+      "enhancedPrompt": "A split-screen services section, grid-cols-2 alternating left/right layout, bg-background p-8 rounde..."
+    },
+    {
+      "template": "luxury-minimal",
+      "screenshotNumber": 1,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/luxury-minimal-1.png",
+      "originalPrompt": "A luxury minimal portfolio hero on laptop, beige #F5F5DC background with full-screen Image bg-black/...",
+      "enhancedPrompt": "A luxury minimal portfolio hero on laptop, beige #F5F5DC background with full-screen Image bg-black/..."
+    },
+    {
+      "template": "luxury-minimal",
+      "screenshotNumber": 2,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/luxury-minimal-2.png",
+      "originalPrompt": "A luxury minimal project gallery, beige #F5F5DC background, grid-cols-2 with h-[500px] images, font-...",
+      "enhancedPrompt": "A luxury minimal project gallery, beige #F5F5DC background, grid-cols-2 with h-[500px] images, font-..."
+    },
+    {
+      "template": "luxury-minimal",
+      "screenshotNumber": 3,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/luxury-minimal-3.png",
+      "originalPrompt": "A luxury minimal contact section, gold #D4AF37 background, font-serif text-7xl font-light black head...",
+      "enhancedPrompt": "A luxury minimal contact section, gold #D4AF37 background, font-serif text-7xl font-light black head..."
+    },
+    {
+      "template": "product-saas",
+      "screenshotNumber": 1,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/product-saas-1.png",
+      "originalPrompt": "A SaaS product landing page hero on laptop, gradient-to-b from-gray-50 to-white background, badge \"N...",
+      "enhancedPrompt": "A SaaS product landing page hero on laptop, gradient-to-b from-gray-50 to-white background, badge \"N..."
+    },
+    {
+      "template": "product-saas",
+      "screenshotNumber": 2,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/product-saas-2.png",
+      "originalPrompt": "A SaaS features section, white background, grid-cols-2 of feature cards, w-12 h-12 rounded-lg gradie...",
+      "enhancedPrompt": "A SaaS features section, white background, grid-cols-2 of feature cards, w-12 h-12 rounded-lg gradie..."
+    },
+    {
+      "template": "product-saas",
+      "screenshotNumber": 3,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/product-saas-3.png",
+      "originalPrompt": "A SaaS pricing section, white background, grid-cols-3 pricing cards with border-primary shadow-lg on...",
+      "enhancedPrompt": "A SaaS pricing section, white background, grid-cols-3 pricing cards with border-primary shadow-lg on..."
+    },
+    {
+      "template": "illustration-focus",
+      "screenshotNumber": 1,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/illustration-focus-1.png",
+      "originalPrompt": "An illustration-focused portfolio hero on laptop screen, soft pastel background with hand-drawn illu...",
+      "enhancedPrompt": "An illustration-focused portfolio hero on laptop screen, soft pastel background with hand-drawn illu..."
+    },
+    {
+      "template": "illustration-focus",
+      "screenshotNumber": 2,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/illustration-focus-2.png",
+      "originalPrompt": "An illustration-focus project gallery, white background with colorful illustrated borders, grid of a...",
+      "enhancedPrompt": "An illustration-focus project gallery, white background with colorful illustrated borders, grid of a..."
+    },
+    {
+      "template": "illustration-focus",
+      "screenshotNumber": 3,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/illustration-focus-3.png",
+      "originalPrompt": "An illustration-focus contact section, pastel gradient background with floating illustrated elements...",
+      "enhancedPrompt": "An illustration-focus contact section, pastel gradient background with floating illustrated elements..."
+    },
+    {
+      "template": "single-page",
+      "screenshotNumber": 1,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/single-page-1.png",
+      "originalPrompt": "A single-page portfolio hero on laptop, full viewport height with smooth scroll navigation dots on r...",
+      "enhancedPrompt": "A single-page portfolio hero on laptop, full viewport height with smooth scroll navigation dots on r..."
+    },
+    {
+      "template": "single-page",
+      "screenshotNumber": 2,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/single-page-2.png",
+      "originalPrompt": "A single-page portfolio sections, continuous scroll layout with distinct full-height sections, about...",
+      "enhancedPrompt": "A single-page portfolio sections, continuous scroll layout with distinct full-height sections, about..."
+    },
+    {
+      "template": "single-page",
+      "screenshotNumber": 3,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/single-page-3.png",
+      "originalPrompt": "A single-page contact section, integrated into one-page layout, inline contact form with smooth scro...",
+      "enhancedPrompt": "A single-page contact section, integrated into one-page layout, inline contact form with smooth scro..."
+    },
+    {
+      "template": "text-heavy",
+      "screenshotNumber": 1,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/text-heavy-1.png",
+      "originalPrompt": "A text-heavy editorial portfolio hero on laptop, magazine-style layout with serif typography, text-8...",
+      "enhancedPrompt": "A text-heavy editorial portfolio hero on laptop, magazine-style layout with serif typography, text-8..."
+    },
+    {
+      "template": "text-heavy",
+      "screenshotNumber": 2,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/text-heavy-2.png",
+      "originalPrompt": "A text-heavy article section, white background with wide text columns, text-4xl font-serif subheadin...",
+      "enhancedPrompt": "A text-heavy article section, white background with wide text columns, text-4xl font-serif subheadin..."
+    },
+    {
+      "template": "text-heavy",
+      "screenshotNumber": 3,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/text-heavy-3.png",
+      "originalPrompt": "A text-heavy about section, multi-column biography text, text-6xl font-serif headline, detailed text...",
+      "enhancedPrompt": "A text-heavy about section, multi-column biography text, text-6xl font-serif headline, detailed text..."
+    },
+    {
+      "template": "card-modular",
+      "screenshotNumber": 1,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/card-modular-1.png",
+      "originalPrompt": "A modular card portfolio hero on laptop screen, grid-cols-3 of equal-sized rounded-xl cards, white b...",
+      "enhancedPrompt": "A modular card portfolio hero on laptop screen, grid-cols-3 of equal-sized rounded-xl cards, white b..."
+    },
+    {
+      "template": "card-modular",
+      "screenshotNumber": 2,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/card-modular-2.png",
+      "originalPrompt": "A card-modular services section, responsive card grid layout, bg-white border rounded-lg cards with ...",
+      "enhancedPrompt": "A card-modular services section, responsive card grid layout, bg-white border rounded-lg cards with ..."
+    },
+    {
+      "template": "card-modular",
+      "screenshotNumber": 3,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/card-modular-3.png",
+      "originalPrompt": "A card-modular portfolio grid, masonry-style card layout with varying content, rounded-xl shadow-md ...",
+      "enhancedPrompt": "A card-modular portfolio grid, masonry-style card layout with varying content, rounded-xl shadow-md ..."
+    },
+    {
+      "template": "kinetic-typography",
+      "screenshotNumber": 1,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/kinetic-typography-1.png",
+      "originalPrompt": "A kinetic typography portfolio hero on laptop, animated text-9xl font-black headline with motion blu...",
+      "enhancedPrompt": "A kinetic typography portfolio hero on laptop, animated text-9xl font-black headline with motion blu..."
+    },
+    {
+      "template": "kinetic-typography",
+      "screenshotNumber": 2,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/kinetic-typography-2.png",
+      "originalPrompt": "A kinetic typography showcase section, text-7xl font-bold project titles with entrance animations, w...",
+      "enhancedPrompt": "A kinetic typography showcase section, text-7xl font-bold project titles with entrance animations, w..."
+    },
+    {
+      "template": "kinetic-typography",
+      "screenshotNumber": 3,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/kinetic-typography-3.png",
+      "originalPrompt": "A kinetic typography contact CTA, animated text-8xl font-black call-to-action with pulsing effects, ...",
+      "enhancedPrompt": "A kinetic typography contact CTA, animated text-8xl font-black call-to-action with pulsing effects, ..."
+    },
+    {
+      "template": "bento-grid",
+      "screenshotNumber": 1,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/bento-grid-1.png",
+      "originalPrompt": "A bento grid portfolio hero on laptop screen, Japanese-inspired asymmetric grid layout, varying size...",
+      "enhancedPrompt": "A bento grid portfolio hero on laptop screen, Japanese-inspired asymmetric grid layout, varying size..."
+    },
+    {
+      "template": "bento-grid",
+      "screenshotNumber": 2,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/bento-grid-2.png",
+      "originalPrompt": "A bento grid content section, asymmetric card layout with 2x2, 1x2, 2x1 sized cells, bg-gradient-to-...",
+      "enhancedPrompt": "A bento grid content section, asymmetric card layout with 2x2, 1x2, 2x1 sized cells, bg-gradient-to-..."
+    },
+    {
+      "template": "bento-grid",
+      "screenshotNumber": 3,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/bento-grid-3.png",
+      "originalPrompt": "A bento grid services showcase, irregular grid with varying card dimensions, text-3xl font-bold serv...",
+      "enhancedPrompt": "A bento grid services showcase, irregular grid with varying card dimensions, text-3xl font-bold serv..."
+    },
+    {
+      "template": "3d-immersive",
+      "screenshotNumber": 1,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/3d-immersive-1.png",
+      "originalPrompt": "A 3D immersive portfolio hero on laptop, dark background with floating 3D geometric shapes, perspect...",
+      "enhancedPrompt": "A 3D immersive portfolio hero on laptop, dark background with floating 3D geometric shapes, perspect..."
+    },
+    {
+      "template": "3d-immersive",
+      "screenshotNumber": 2,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/3d-immersive-2.png",
+      "originalPrompt": "A 3D immersive project showcase, floating card elements with transform-style preserve-3d, rotateY ro...",
+      "enhancedPrompt": "A 3D immersive project showcase, floating card elements with transform-style preserve-3d, rotateY ro..."
+    },
+    {
+      "template": "3d-immersive",
+      "screenshotNumber": 3,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/3d-immersive-3.png",
+      "originalPrompt": "A 3D immersive interactive section, perspective-1000 container with 3D transformed children, floatin...",
+      "enhancedPrompt": "A 3D immersive interactive section, perspective-1000 container with 3D transformed children, floatin..."
+    },
+    {
+      "template": "organic-liquid",
+      "screenshotNumber": 1,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/organic-liquid-1.png",
+      "originalPrompt": "An organic liquid portfolio hero on laptop screen, blob shapes with border-radius-[30%_70%_70%_30%/3...",
+      "enhancedPrompt": "An organic liquid portfolio hero on laptop screen, blob shapes with border-radius-[30%_70%_70%_30%/3..."
+    },
+    {
+      "template": "organic-liquid",
+      "screenshotNumber": 2,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/organic-liquid-2.png",
+      "originalPrompt": "An organic liquid project section, blob-shaped image containers with irregular border-radius, fluid ...",
+      "enhancedPrompt": "An organic liquid project section, blob-shaped image containers with irregular border-radius, fluid ..."
+    },
+    {
+      "template": "organic-liquid",
+      "screenshotNumber": 3,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/organic-liquid-3.png",
+      "originalPrompt": "An organic liquid contact form, blob-shaped input fields with rounded-[30px_50px] borders, gradient-...",
+      "enhancedPrompt": "An organic liquid contact form, blob-shaped input fields with rounded-[30px_50px] borders, gradient-..."
+    },
+    {
+      "template": "data-dashboard",
+      "screenshotNumber": 1,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/data-dashboard-1.png",
+      "originalPrompt": "A data dashboard portfolio hero on laptop, dark gray #1A1A1A background, stats grid with text-5xl fo...",
+      "enhancedPrompt": "A data dashboard portfolio hero on laptop, dark gray #1A1A1A background, stats grid with text-5xl fo..."
+    },
+    {
+      "template": "data-dashboard",
+      "screenshotNumber": 2,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/data-dashboard-2.png",
+      "originalPrompt": "A data dashboard analytics section, grid-cols-4 stat cards, text-3xl font-bold metric values with te...",
+      "enhancedPrompt": "A data dashboard analytics section, grid-cols-4 stat cards, text-3xl font-bold metric values with te..."
+    },
+    {
+      "template": "data-dashboard",
+      "screenshotNumber": 3,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/data-dashboard-3.png",
+      "originalPrompt": "A data dashboard reports section, tabular data layouts with text-sm font-mono values, colored badge ...",
+      "enhancedPrompt": "A data dashboard reports section, tabular data layouts with text-sm font-mono values, colored badge ..."
+    },
+    {
+      "template": "y2k-retro",
+      "screenshotNumber": 1,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/y2k-retro-1.png",
+      "originalPrompt": "A Y2K retro portfolio hero on laptop screen, bright gradient background from-pink-500 via-purple-500...",
+      "enhancedPrompt": "A Y2K retro portfolio hero on laptop screen, bright gradient background from-pink-500 via-purple-500..."
+    },
+    {
+      "template": "y2k-retro",
+      "screenshotNumber": 2,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/y2k-retro-2.png",
+      "originalPrompt": "A Y2K retro project grid, iridescent gradient borders, text-4xl font-black titles with text-stroke e...",
+      "enhancedPrompt": "A Y2K retro project grid, iridescent gradient borders, text-4xl font-black titles with text-stroke e..."
+    },
+    {
+      "template": "y2k-retro",
+      "screenshotNumber": 3,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/y2k-retro-3.png",
+      "originalPrompt": "A Y2K retro contact section, holographic gradient background, chrome metallic input fields, bright n...",
+      "enhancedPrompt": "A Y2K retro contact section, holographic gradient background, chrome metallic input fields, bright n..."
+    },
+    {
+      "template": "ar-spatial",
+      "screenshotNumber": 1,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/ar-spatial-1.png",
+      "originalPrompt": "An AR spatial portfolio hero on laptop, futuristic UI with floating holographic panels, glass morphi...",
+      "enhancedPrompt": "An AR spatial portfolio hero on laptop, futuristic UI with floating holographic panels, glass morphi..."
+    },
+    {
+      "template": "ar-spatial",
+      "screenshotNumber": 2,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/ar-spatial-2.png",
+      "originalPrompt": "An AR spatial project showcase, 3D card layouts with transform-style-3d, floating UI elements with z...",
+      "enhancedPrompt": "An AR spatial project showcase, 3D card layouts with transform-style-3d, floating UI elements with z..."
+    },
+    {
+      "template": "ar-spatial",
+      "screenshotNumber": 3,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/ar-spatial-3.png",
+      "originalPrompt": "An AR spatial contact interface, holographic form fields with glass effects, floating submit button ...",
+      "enhancedPrompt": "An AR spatial contact interface, holographic form fields with glass effects, floating submit button ..."
+    },
+    {
+      "template": "collage-maximalist",
+      "screenshotNumber": 1,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/collage-maximalist-1.png",
+      "originalPrompt": "A maximalist collage portfolio hero on laptop screen, layered overlapping images with rotate-2 -rota...",
+      "enhancedPrompt": "A maximalist collage portfolio hero on laptop screen, layered overlapping images with rotate-2 -rota..."
+    },
+    {
+      "template": "collage-maximalist",
+      "screenshotNumber": 2,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/collage-maximalist-2.png",
+      "originalPrompt": "A collage maximalist project grid, overlapping card layouts with varying z-index, mixed media collag...",
+      "enhancedPrompt": "A collage maximalist project grid, overlapping card layouts with varying z-index, mixed media collag..."
+    },
+    {
+      "template": "collage-maximalist",
+      "screenshotNumber": 3,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/collage-maximalist-3.png",
+      "originalPrompt": "A maximalist collage contact section, layered background images with opacity variations, overlapping...",
+      "enhancedPrompt": "A maximalist collage contact section, layered background images with opacity variations, overlapping..."
+    },
+    {
+      "template": "voice-first",
+      "screenshotNumber": 1,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/voice-first-1.png",
+      "originalPrompt": "A voice-first portfolio hero on laptop, minimal interface with large microphone icon, text-7xl font-...",
+      "enhancedPrompt": "A voice-first portfolio hero on laptop, minimal interface with large microphone icon, text-7xl font-..."
+    },
+    {
+      "template": "voice-first",
+      "screenshotNumber": 2,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/voice-first-2.png",
+      "originalPrompt": "A voice-first interaction section, large pulsing microphone button, voice command suggestions in pil...",
+      "enhancedPrompt": "A voice-first interaction section, large pulsing microphone button, voice command suggestions in pil..."
+    },
+    {
+      "template": "voice-first",
+      "screenshotNumber": 3,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/voice-first-3.png",
+      "originalPrompt": "A voice-first contact interface, voice message recording UI, waveform display during recording, larg...",
+      "enhancedPrompt": "A voice-first contact interface, voice message recording UI, waveform display during recording, larg..."
+    },
+    {
+      "template": "product-course",
+      "screenshotNumber": 1,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/product-course-1.png",
+      "originalPrompt": "An online course product page hero on laptop, gradient-to-br from-blue-600 to-indigo-700 background,...",
+      "enhancedPrompt": "An online course product page hero on laptop, gradient-to-br from-blue-600 to-indigo-700 background,..."
+    },
+    {
+      "template": "product-course",
+      "screenshotNumber": 2,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/product-course-2.png",
+      "originalPrompt": "A course product curriculum section, white background, accordion-style module list with text-2xl fon...",
+      "enhancedPrompt": "A course product curriculum section, white background, accordion-style module list with text-2xl fon..."
+    },
+    {
+      "template": "product-course",
+      "screenshotNumber": 3,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/product-course-3.png",
+      "originalPrompt": "A course product pricing section, comparison table grid-cols-3, basic/pro/premium tiers, text-4xl fo...",
+      "enhancedPrompt": "A course product pricing section, comparison table grid-cols-3, basic/pro/premium tiers, text-4xl fo..."
+    },
+    {
+      "template": "product-tech",
+      "screenshotNumber": 1,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/product-tech-1.png",
+      "originalPrompt": "A tech product landing page hero on laptop, gradient-to-r from-slate-900 to-slate-700 background, te...",
+      "enhancedPrompt": "A tech product landing page hero on laptop, gradient-to-r from-slate-900 to-slate-700 background, te..."
+    },
+    {
+      "template": "product-tech",
+      "screenshotNumber": 2,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/product-tech-2.png",
+      "originalPrompt": "A tech product features section, grid-cols-2 feature blocks, w-16 h-16 gradient-to-br icon container...",
+      "enhancedPrompt": "A tech product features section, grid-cols-2 feature blocks, w-16 h-16 gradient-to-br icon container..."
+    },
+    {
+      "template": "product-tech",
+      "screenshotNumber": 3,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/product-tech-3.png",
+      "originalPrompt": "A tech product pricing tiers, gradient-to-b from-gray-50 to-white background, grid-cols-3 pricing ca...",
+      "enhancedPrompt": "A tech product pricing tiers, gradient-to-b from-gray-50 to-white background, grid-cols-3 pricing ca..."
+    },
+    {
+      "template": "product-physical",
+      "screenshotNumber": 1,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/product-physical-1.png",
+      "originalPrompt": "A physical product e-commerce hero on laptop, clean white background, large high-res product photogr...",
+      "enhancedPrompt": "A physical product e-commerce hero on laptop, clean white background, large high-res product photogr..."
+    },
+    {
+      "template": "product-physical",
+      "screenshotNumber": 2,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/product-physical-2.png",
+      "originalPrompt": "A physical product details section, grid-cols-2 with product images left and details right, text-3xl...",
+      "enhancedPrompt": "A physical product details section, grid-cols-2 with product images left and details right, text-3xl..."
+    },
+    {
+      "template": "product-physical",
+      "screenshotNumber": 3,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/product-physical-3.png",
+      "originalPrompt": "A physical product reviews section, star ratings with text-4xl review scores, customer review cards ...",
+      "enhancedPrompt": "A physical product reviews section, star ratings with text-4xl review scores, customer review cards ..."
+    },
+    {
+      "template": "product-premium",
+      "screenshotNumber": 1,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/product-premium-1.png",
+      "originalPrompt": "A premium product landing hero on laptop, black #000000 background, gold #D4AF37 accent text, text-8...",
+      "enhancedPrompt": "A premium product landing hero on laptop, black #000000 background, gold #D4AF37 accent text, text-8..."
+    },
+    {
+      "template": "product-premium",
+      "screenshotNumber": 2,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/product-premium-2.png",
+      "originalPrompt": "A premium product details section, beige #F5F5DC background, text-4xl font-serif subheadings in Play...",
+      "enhancedPrompt": "A premium product details section, beige #F5F5DC background, text-4xl font-serif subheadings in Play..."
+    },
+    {
+      "template": "product-premium",
+      "screenshotNumber": 3,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/product-premium-3.png",
+      "originalPrompt": "A premium product exclusive offer, gold #D4AF37 background, text-7xl font-serif font-light headline,...",
+      "enhancedPrompt": "A premium product exclusive offer, gold #D4AF37 background, text-7xl font-serif font-light headline,..."
+    },
+    {
+      "template": "product-fashion",
+      "screenshotNumber": 1,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/product-fashion-1.png",
+      "originalPrompt": "A fashion product page hero on laptop, editorial photography with model wearing product, text-7xl fo...",
+      "enhancedPrompt": "A fashion product page hero on laptop, editorial photography with model wearing product, text-7xl fo..."
+    },
+    {
+      "template": "product-fashion",
+      "screenshotNumber": 2,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/product-fashion-2.png",
+      "originalPrompt": "A fashion product grid, masonry layout with varying image sizes, model photography with products, te...",
+      "enhancedPrompt": "A fashion product grid, masonry layout with varying image sizes, model photography with products, te..."
+    },
+    {
+      "template": "product-fashion",
+      "screenshotNumber": 3,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/product-fashion-3.png",
+      "originalPrompt": "A fashion product details, grid-cols-2 with editorial images left, text-4xl font-thin product name, ...",
+      "enhancedPrompt": "A fashion product details, grid-cols-2 with editorial images left, text-4xl font-thin product name, ..."
+    },
+    {
+      "template": "product-luxury",
+      "screenshotNumber": 1,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/product-luxury-1.png",
+      "originalPrompt": "A luxury brand product hero on laptop, dramatic black background with spotlight product photography,...",
+      "enhancedPrompt": "A luxury brand product hero on laptop, dramatic black background with spotlight product photography,..."
+    },
+    {
+      "template": "product-luxury",
+      "screenshotNumber": 2,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/product-luxury-2.png",
+      "originalPrompt": "A luxury product showcase, full-width cinematic product imagery, text-6xl font-serif product names, ...",
+      "enhancedPrompt": "A luxury product showcase, full-width cinematic product imagery, text-6xl font-serif product names, ..."
+    },
+    {
+      "template": "product-luxury",
+      "screenshotNumber": 3,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/product-luxury-3.png",
+      "originalPrompt": "A luxury product inquiry form, black background with gold accents, text-5xl font-serif \"Request Appo...",
+      "enhancedPrompt": "A luxury product inquiry form, black background with gold accents, text-5xl font-serif \"Request Appo..."
+    },
+    {
+      "template": "product-audio",
+      "screenshotNumber": 1,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/product-audio-1.png",
+      "originalPrompt": "An audio product landing hero on laptop, sleek gradient-to-br from-purple-900 to-black background, 3...",
+      "enhancedPrompt": "An audio product landing hero on laptop, sleek gradient-to-br from-purple-900 to-black background, 3..."
+    },
+    {
+      "template": "product-vacuum",
+      "screenshotNumber": 3,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/product-vacuum-3.png",
+      "originalPrompt": "A vacuum product reviews section, text-5xl font-bold rating score, star ratings, customer review car...",
+      "enhancedPrompt": "A vacuum product reviews section, text-5xl font-bold rating score, star ratings, customer review car..."
+    },
+    {
+      "template": "service-b2b",
+      "screenshotNumber": 1,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/service-b2b-1.png",
+      "originalPrompt": "A B2B service landing hero on laptop, gradient-to-r from-blue-900 to-indigo-900 background, text-7xl...",
+      "enhancedPrompt": "A B2B service landing hero on laptop, gradient-to-r from-blue-900 to-indigo-900 background, text-7xl..."
+    },
+    {
+      "template": "service-b2b",
+      "screenshotNumber": 2,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/service-b2b-2.png",
+      "originalPrompt": "A B2B service offerings section, white background, grid-cols-3 service cards with rounded-lg shadow-...",
+      "enhancedPrompt": "A B2B service offerings section, white background, grid-cols-3 service cards with rounded-lg shadow-..."
+    },
+    {
+      "template": "service-b2b",
+      "screenshotNumber": 3,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/service-b2b-3.png",
+      "originalPrompt": "A B2B service case studies section, grid-cols-2 client success cards, text-4xl font-bold client name...",
+      "enhancedPrompt": "A B2B service case studies section, grid-cols-2 client success cards, text-4xl font-bold client name..."
+    },
+    {
+      "template": "service-community",
+      "screenshotNumber": 1,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/service-community-1.png",
+      "originalPrompt": "A community service platform hero on laptop, warm gradient-to-br from-orange-400 to-pink-500 backgro...",
+      "enhancedPrompt": "A community service platform hero on laptop, warm gradient-to-br from-orange-400 to-pink-500 backgro..."
+    },
+    {
+      "template": "service-community",
+      "screenshotNumber": 2,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/service-community-2.png",
+      "originalPrompt": "A community service features section, white background, grid-cols-3 feature cards with community ico...",
+      "enhancedPrompt": "A community service features section, white background, grid-cols-3 feature cards with community ico..."
+    },
+    {
+      "template": "service-community",
+      "screenshotNumber": 3,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/service-community-3.png",
+      "originalPrompt": "A community service pricing tiers, gradient-to-b from-gray-50 to-white background, free/pro/enterpri...",
+      "enhancedPrompt": "A community service pricing tiers, gradient-to-b from-gray-50 to-white background, free/pro/enterpri..."
+    },
+    {
+      "template": "service-dfyou",
+      "screenshotNumber": 1,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/service-dfyou-1.png",
+      "originalPrompt": "A done-for-you service landing hero on laptop, white background, text-7xl font-bold headline \"We Do ...",
+      "enhancedPrompt": "A done-for-you service landing hero on laptop, white background, text-7xl font-bold headline \"We Do ..."
+    },
+    {
+      "template": "service-dfyou",
+      "screenshotNumber": 2,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/service-dfyou-2.png",
+      "originalPrompt": "A DFY service process section, white background with bg-gray-50 alternating sections, numbered step ...",
+      "enhancedPrompt": "A DFY service process section, white background with bg-gray-50 alternating sections, numbered step ..."
+    },
+    {
+      "template": "service-dfyou",
+      "screenshotNumber": 3,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/service-dfyou-3.png",
+      "originalPrompt": "A DFY service packages section, grid-cols-3 service tiers, text-4xl font-bold package names, text-5x...",
+      "enhancedPrompt": "A DFY service packages section, grid-cols-3 service tiers, text-4xl font-bold package names, text-5x..."
+    },
+    {
+      "template": "service-agency",
+      "screenshotNumber": 1,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/service-agency-1.png",
+      "originalPrompt": "A creative agency service hero on laptop, bold gradient-to-r from-purple-600 to-pink-600 background,...",
+      "enhancedPrompt": "A creative agency service hero on laptop, bold gradient-to-r from-purple-600 to-pink-600 background,..."
+    },
+    {
+      "template": "service-agency",
+      "screenshotNumber": 2,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/service-agency-2.png",
+      "originalPrompt": "An agency services section, white background, grid-cols-2 service cards with large icons, text-4xl f...",
+      "enhancedPrompt": "An agency services section, white background, grid-cols-2 service cards with large icons, text-4xl f..."
+    },
+    {
+      "template": "service-agency",
+      "screenshotNumber": 3,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/service-agency-3.png",
+      "originalPrompt": "An agency portfolio showcase, masonry grid with varying project card sizes, client work images with ...",
+      "enhancedPrompt": "An agency portfolio showcase, masonry grid with varying project card sizes, client work images with ..."
+    },
+    {
+      "template": "service-enterprise",
+      "screenshotNumber": 1,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/service-enterprise-1.png",
+      "originalPrompt": "An enterprise service platform hero on laptop, navy blue #0A1F44 background, text-7xl font-bold whit...",
+      "enhancedPrompt": "An enterprise service platform hero on laptop, navy blue #0A1F44 background, text-7xl font-bold whit..."
+    },
+    {
+      "template": "service-enterprise",
+      "screenshotNumber": 2,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/service-enterprise-2.png",
+      "originalPrompt": "An enterprise platform features section, white background, grid-cols-4 capability cards, w-12 h-12 b...",
+      "enhancedPrompt": "An enterprise platform features section, white background, grid-cols-4 capability cards, w-12 h-12 b..."
+    },
+    {
+      "template": "service-enterprise",
+      "screenshotNumber": 3,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/service-enterprise-3.png",
+      "originalPrompt": "An enterprise pricing section, custom pricing card with \"Contact Sales\" CTA, enterprise requirements...",
+      "enhancedPrompt": "An enterprise pricing section, custom pricing card with \"Contact Sales\" CTA, enterprise requirements..."
+    },
+    {
+      "template": "service-consulting",
+      "screenshotNumber": 1,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/service-consulting-1.png",
+      "originalPrompt": "A consulting service landing hero on laptop, gradient-to-br from-slate-800 to-slate-900 background, ...",
+      "enhancedPrompt": "A consulting service landing hero on laptop, gradient-to-br from-slate-800 to-slate-900 background, ..."
+    },
+    {
+      "template": "service-consulting",
+      "screenshotNumber": 2,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/service-consulting-2.png",
+      "originalPrompt": "A consulting services section, white background, grid-cols-3 consulting service cards (Strategy, Ope...",
+      "enhancedPrompt": "A consulting services section, white background, grid-cols-3 consulting service cards (Strategy, Ope..."
+    },
+    {
+      "template": "service-consulting",
+      "screenshotNumber": 3,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/service-consulting-3.png",
+      "originalPrompt": "A consulting approach section, numbered methodology steps with large text-8xl font-bold step numbers...",
+      "enhancedPrompt": "A consulting approach section, numbered methodology steps with large text-8xl font-bold step numbers..."
+    },
+    {
+      "template": "service-marketplace",
+      "screenshotNumber": 1,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/service-marketplace-1.png",
+      "originalPrompt": "A marketplace platform hero on laptop, white background, text-7xl font-bold headline \"Buy & Sell Any...",
+      "enhancedPrompt": "A marketplace platform hero on laptop, white background, text-7xl font-bold headline \"Buy & Sell Any..."
+    },
+    {
+      "template": "service-marketplace",
+      "screenshotNumber": 2,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/service-marketplace-2.png",
+      "originalPrompt": "A marketplace listings grid, white background, grid-cols-4 product cards with images, text-xl font-s...",
+      "enhancedPrompt": "A marketplace listings grid, white background, grid-cols-4 product cards with images, text-xl font-s..."
+    },
+    {
+      "template": "service-marketplace",
+      "screenshotNumber": 3,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/service-marketplace-3.png",
+      "originalPrompt": "A marketplace seller dashboard, white background with stats overview, text-4xl font-bold metrics (Sa...",
+      "enhancedPrompt": "A marketplace seller dashboard, white background with stats overview, text-4xl font-bold metrics (Sa..."
+    },
+    {
+      "template": "blog-personal",
+      "screenshotNumber": 1,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/blog-personal-1.png",
+      "originalPrompt": "A personal blog homepage hero on laptop, white background, text-6xl font-bold blog title in Georgia ...",
+      "enhancedPrompt": "A personal blog homepage hero on laptop, white background, text-6xl font-bold blog title in Georgia ..."
+    },
+    {
+      "template": "blog-personal",
+      "screenshotNumber": 2,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/blog-personal-2.png",
+      "originalPrompt": "A personal blog post layout, white background, centered text-5xl font-bold article title, text-sm te...",
+      "enhancedPrompt": "A personal blog post layout, white background, centered text-5xl font-bold article title, text-sm te..."
+    },
+    {
+      "template": "blog-personal",
+      "screenshotNumber": 3,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/blog-personal-3.png",
+      "originalPrompt": "A personal blog archive page, white background, chronological post list grouped by year, text-3xl fo...",
+      "enhancedPrompt": "A personal blog archive page, white background, chronological post list grouped by year, text-3xl fo..."
+    },
+    {
+      "template": "blog-magazine",
+      "screenshotNumber": 1,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/blog-magazine-1.png",
+      "originalPrompt": "A magazine blog homepage hero on laptop, featured post with large image, text-7xl font-bold headline...",
+      "enhancedPrompt": "A magazine blog homepage hero on laptop, featured post with large image, text-7xl font-bold headline..."
+    },
+    {
+      "template": "blog-magazine",
+      "screenshotNumber": 2,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/blog-magazine-2.png",
+      "originalPrompt": "A magazine blog grid, white background, grid-cols-3 article cards with featured images, text-3xl fon...",
+      "enhancedPrompt": "A magazine blog grid, white background, grid-cols-3 article cards with featured images, text-3xl fon..."
+    },
+    {
+      "template": "blog-magazine",
+      "screenshotNumber": 3,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/blog-magazine-3.png",
+      "originalPrompt": "A magazine blog article page, large hero image with text-8xl font-bold title overlay, text-lg leadin...",
+      "enhancedPrompt": "A magazine blog article page, large hero image with text-8xl font-bold title overlay, text-lg leadin..."
+    },
+    {
+      "template": "blog-tech",
+      "screenshotNumber": 1,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/blog-tech-1.png",
+      "originalPrompt": "A tech blog homepage hero on laptop, dark #1A1A2E background, text-7xl font-bold white headline with...",
+      "enhancedPrompt": "A tech blog homepage hero on laptop, dark #1A1A2E background, text-7xl font-bold white headline with..."
+    },
+    {
+      "template": "blog-tech",
+      "screenshotNumber": 2,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/blog-tech-2.png",
+      "originalPrompt": "A tech blog post layout, dark background, text-6xl font-bold article title, code blocks with bg-gray...",
+      "enhancedPrompt": "A tech blog post layout, dark background, text-6xl font-bold article title, code blocks with bg-gray..."
+    },
+    {
+      "template": "blog-tech",
+      "screenshotNumber": 3,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/blog-tech-3.png",
+      "originalPrompt": "A tech blog tutorial section, dark background, step-by-step numbered sections with large text-5xl fo...",
+      "enhancedPrompt": "A tech blog tutorial section, dark background, step-by-step numbered sections with large text-5xl fo..."
+    },
+    {
+      "template": "online-business-coach",
+      "screenshotNumber": 1,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/online-business-coach-1.png",
+      "originalPrompt": "A business coach landing hero on laptop, gradient-to-br from-teal-500 to-blue-600 background, large ...",
+      "enhancedPrompt": "A business coach landing hero on laptop, gradient-to-br from-teal-500 to-blue-600 background, large ..."
+    },
+    {
+      "template": "online-business-coach",
+      "screenshotNumber": 2,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/online-business-coach-2.png",
+      "originalPrompt": "A coaching services section, white background, grid-cols-3 coaching packages, text-3xl font-bold pac...",
+      "enhancedPrompt": "A coaching services section, white background, grid-cols-3 coaching packages, text-3xl font-bold pac..."
+    },
+    {
+      "template": "online-business-coach",
+      "screenshotNumber": 3,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/online-business-coach-3.png",
+      "originalPrompt": "A coach testimonials section, gradient-to-b from-gray-50 to-white background, video testimonial thum...",
+      "enhancedPrompt": "A coach testimonials section, gradient-to-b from-gray-50 to-white background, video testimonial thum..."
+    },
+    {
+      "template": "online-business-course",
+      "screenshotNumber": 1,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/online-business-course-1.png",
+      "originalPrompt": "An online course landing hero on laptop, gradient-to-r from-orange-500 to-red-600 background, text-7...",
+      "enhancedPrompt": "An online course landing hero on laptop, gradient-to-r from-orange-500 to-red-600 background, text-7..."
+    },
+    {
+      "template": "online-business-course",
+      "screenshotNumber": 2,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/online-business-course-2.png",
+      "originalPrompt": "A course curriculum section, white background, text-6xl font-bold \"What You'll Learn\" headline, numb...",
+      "enhancedPrompt": "A course curriculum section, white background, text-6xl font-bold \"What You'll Learn\" headline, numb..."
+    },
+    {
+      "template": "online-business-course",
+      "screenshotNumber": 3,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/online-business-course-3.png",
+      "originalPrompt": "A course bonuses section, gradient-to-b from-gray-900 to-black background, text-6xl font-bold white ...",
+      "enhancedPrompt": "A course bonuses section, gradient-to-b from-gray-900 to-black background, text-6xl font-bold white ..."
+    },
+    {
+      "template": "online-business-agency",
+      "screenshotNumber": 1,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/online-business-agency-1.png",
+      "originalPrompt": "A digital agency landing hero on laptop, white background, text-8xl font-black headline \"Digital Gro...",
+      "enhancedPrompt": "A digital agency landing hero on laptop, white background, text-8xl font-black headline \"Digital Gro..."
+    },
+    {
+      "template": "online-business-agency",
+      "screenshotNumber": 2,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/online-business-agency-2.png",
+      "originalPrompt": "An agency services section, white background with bg-gray-50 alternating sections, grid-cols-2 servi...",
+      "enhancedPrompt": "An agency services section, white background with bg-gray-50 alternating sections, grid-cols-2 servi..."
+    },
+    {
+      "template": "online-business-agency",
+      "screenshotNumber": 3,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/online-business-agency-3.png",
+      "originalPrompt": "An agency portfolio section, masonry grid with client work, project cards with hover overlay, text-3...",
+      "enhancedPrompt": "An agency portfolio section, masonry grid with client work, project cards with hover overlay, text-3..."
+    },
+    {
+      "template": "online-business-saas",
+      "screenshotNumber": 1,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/online-business-saas-1.png",
+      "originalPrompt": "A SaaS business landing hero on laptop, gradient-to-b from-indigo-50 to-white background, text-7xl f...",
+      "enhancedPrompt": "A SaaS business landing hero on laptop, gradient-to-b from-indigo-50 to-white background, text-7xl f..."
+    },
+    {
+      "template": "online-business-saas",
+      "screenshotNumber": 2,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/online-business-saas-2.png",
+      "originalPrompt": "A SaaS features section, white background, grid-cols-3 feature cards with gradient icon containers, ...",
+      "enhancedPrompt": "A SaaS features section, white background, grid-cols-3 feature cards with gradient icon containers, ..."
+    },
+    {
+      "template": "online-business-saas",
+      "screenshotNumber": 3,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/online-business-saas-3.png",
+      "originalPrompt": "A SaaS pricing section, gradient-to-b from-gray-50 to-white background, grid-cols-3 pricing tiers (S...",
+      "enhancedPrompt": "A SaaS pricing section, gradient-to-b from-gray-50 to-white background, grid-cols-3 pricing tiers (S..."
+    },
+    {
+      "template": "blog-archetypes-minimal",
+      "screenshotNumber": 1,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/blog-archetypes-minimal-1.png",
+      "originalPrompt": "A minimalist archetype blog hero on laptop, pure white background, text-7xl font-thin headline in He...",
+      "enhancedPrompt": "A minimalist archetype blog hero on laptop, pure white background, text-7xl font-thin headline in He..."
+    },
+    {
+      "template": "blog-archetypes-minimal",
+      "screenshotNumber": 2,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/blog-archetypes-minimal-2.png",
+      "originalPrompt": "A minimal archetype blog post, white background, centered text-5xl font-thin article title, text-bas...",
+      "enhancedPrompt": "A minimal archetype blog post, white background, centered text-5xl font-thin article title, text-bas..."
+    },
+    {
+      "template": "blog-archetypes-minimal",
+      "screenshotNumber": 3,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/blog-archetypes-minimal-3.png",
+      "originalPrompt": "A minimal archetype blog archive, white background, simple list of text-3xl font-thin linked titles,...",
+      "enhancedPrompt": "A minimal archetype blog archive, white background, simple list of text-3xl font-thin linked titles,..."
+    },
+    {
+      "template": "blog-archetypes-editorial",
+      "screenshotNumber": 1,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/blog-archetypes-editorial-1.png",
+      "originalPrompt": "An editorial archetype blog hero on laptop, large featured image full-width, text-8xl font-bold head...",
+      "enhancedPrompt": "An editorial archetype blog hero on laptop, large featured image full-width, text-8xl font-bold head..."
+    },
+    {
+      "template": "blog-archetypes-editorial",
+      "screenshotNumber": 2,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/blog-archetypes-editorial-2.png",
+      "originalPrompt": "An editorial archetype blog grid, white background, grid-cols-2 featured articles with large images,...",
+      "enhancedPrompt": "An editorial archetype blog grid, white background, grid-cols-2 featured articles with large images,..."
+    },
+    {
+      "template": "blog-archetypes-editorial",
+      "screenshotNumber": 3,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/blog-archetypes-editorial-3.png",
+      "originalPrompt": "An editorial archetype blog post, full-width hero image, text-7xl font-bold article title centered, ...",
+      "enhancedPrompt": "An editorial archetype blog post, full-width hero image, text-7xl font-bold article title centered, ..."
+    },
+    {
+      "template": "lin-portfolio-elegance",
+      "screenshotNumber": 1,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/lin-portfolio-elegance-1.png",
+      "originalPrompt": "An elegant LinkedIn portfolio hero on laptop, soft cream #FAF9F6 background, text-7xl font-serif hea...",
+      "enhancedPrompt": "An elegant LinkedIn portfolio hero on laptop, soft cream #FAF9F6 background, text-7xl font-serif hea..."
+    },
+    {
+      "template": "lin-portfolio-elegance",
+      "screenshotNumber": 2,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/lin-portfolio-elegance-2.png",
+      "originalPrompt": "An elegant LinkedIn work experience section, white background, timeline layout with text-3xl font-se...",
+      "enhancedPrompt": "An elegant LinkedIn work experience section, white background, timeline layout with text-3xl font-se..."
+    },
+    {
+      "template": "lin-portfolio-elegance",
+      "screenshotNumber": 3,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/lin-portfolio-elegance-3.png",
+      "originalPrompt": "An elegant LinkedIn skills showcase, cream background, text-5xl font-serif section headline, skill c...",
+      "enhancedPrompt": "An elegant LinkedIn skills showcase, cream background, text-5xl font-serif section headline, skill c..."
+    },
+    {
+      "template": "lin-professional-authority",
+      "screenshotNumber": 1,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/lin-professional-authority-1.png",
+      "originalPrompt": "A professional authority LinkedIn hero on laptop, navy blue #1B365D background, text-7xl font-bold w...",
+      "enhancedPrompt": "A professional authority LinkedIn hero on laptop, navy blue #1B365D background, text-7xl font-bold w..."
+    },
+    {
+      "template": "lin-professional-authority",
+      "screenshotNumber": 2,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/lin-professional-authority-2.png",
+      "originalPrompt": "A professional authority experience section, white background, featured achievements grid with text-...",
+      "enhancedPrompt": "A professional authority experience section, white background, featured achievements grid with text-..."
+    },
+    {
+      "template": "lin-professional-authority",
+      "screenshotNumber": 3,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/lin-professional-authority-3.png",
+      "originalPrompt": "A professional authority thought leadership section, white background with bg-blue-50 featured area,...",
+      "enhancedPrompt": "A professional authority thought leadership section, white background with bg-blue-50 featured area,..."
+    },
+    {
+      "template": "lin-tech-pioneer",
+      "screenshotNumber": 1,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/lin-tech-pioneer-1.png",
+      "originalPrompt": "A tech pioneer LinkedIn hero on laptop, gradient-to-r from-purple-900 to-indigo-900 background, text...",
+      "enhancedPrompt": "A tech pioneer LinkedIn hero on laptop, gradient-to-r from-purple-900 to-indigo-900 background, text..."
+    },
+    {
+      "template": "lin-tech-pioneer",
+      "screenshotNumber": 2,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/lin-tech-pioneer-2.png",
+      "originalPrompt": "A tech pioneer projects section, dark background, grid-cols-2 project cards with code screenshots, t...",
+      "enhancedPrompt": "A tech pioneer projects section, dark background, grid-cols-2 project cards with code screenshots, t..."
+    },
+    {
+      "template": "lin-tech-pioneer",
+      "screenshotNumber": 3,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/lin-tech-pioneer-3.png",
+      "originalPrompt": "A tech pioneer skills section, dark background, text-6xl font-bold \"Tech Stack\" headline, grid of te...",
+      "enhancedPrompt": "A tech pioneer skills section, dark background, text-6xl font-bold \"Tech Stack\" headline, grid of te..."
+    },
+    {
+      "template": "professional-b2b",
+      "screenshotNumber": 1,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/professional-b2b-1.png",
+      "originalPrompt": "A professional B2B portfolio hero on laptop, white background, text-6xl font-bold headline in Inter,...",
+      "enhancedPrompt": "A professional B2B portfolio hero on laptop, white background, text-6xl font-bold headline in Inter,..."
+    },
+    {
+      "template": "professional-b2b",
+      "screenshotNumber": 2,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/professional-b2b-2.png",
+      "originalPrompt": "A professional B2B experience section, white background with timeline layout, text-3xl font-bold com...",
+      "enhancedPrompt": "A professional B2B experience section, white background with timeline layout, text-3xl font-bold com..."
+    },
+    {
+      "template": "professional-b2b",
+      "screenshotNumber": 3,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/professional-b2b-3.png",
+      "originalPrompt": "A professional B2B contact section, white background, text-5xl font-bold \"Let's Connect\" headline, c...",
+      "enhancedPrompt": "A professional B2B contact section, white background, text-5xl font-bold \"Let's Connect\" headline, c..."
+    },
+    {
+      "template": "creative-agency-bold",
+      "screenshotNumber": 1,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/creative-agency-bold-1.png",
+      "originalPrompt": "A bold creative agency hero on laptop, black background with bright gradient accents, text-9xl font-...",
+      "enhancedPrompt": "A bold creative agency hero on laptop, black background with bright gradient accents, text-9xl font-..."
+    },
+    {
+      "template": "creative-agency-bold",
+      "screenshotNumber": 2,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/creative-agency-bold-2.png",
+      "originalPrompt": "A bold creative agency work section, grid-cols-2 portfolio projects with large images, text-5xl font...",
+      "enhancedPrompt": "A bold creative agency work section, grid-cols-2 portfolio projects with large images, text-5xl font..."
+    },
+    {
+      "template": "creative-agency-bold",
+      "screenshotNumber": 3,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/creative-agency-bold-3.png",
+      "originalPrompt": "A bold creative agency services, black background with colored section accents, text-7xl font-black ...",
+      "enhancedPrompt": "A bold creative agency services, black background with colored section accents, text-7xl font-black ..."
+    },
+    {
+      "template": "minimal-portfolio-clean",
+      "screenshotNumber": 1,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/minimal-portfolio-clean-1.png",
+      "originalPrompt": "A clean minimal portfolio hero on laptop, white background, text-7xl font-light headline in Inter, t...",
+      "enhancedPrompt": "A clean minimal portfolio hero on laptop, white background, text-7xl font-light headline in Inter, t..."
+    },
+    {
+      "template": "minimal-portfolio-clean",
+      "screenshotNumber": 2,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/minimal-portfolio-clean-2.png",
+      "originalPrompt": "A clean minimal portfolio work grid, white background, grid-cols-3 project cards with subtle shadows...",
+      "enhancedPrompt": "A clean minimal portfolio work grid, white background, grid-cols-3 project cards with subtle shadows..."
+    },
+    {
+      "template": "minimal-portfolio-clean",
+      "screenshotNumber": 3,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/minimal-portfolio-clean-3.png",
+      "originalPrompt": "A clean minimal portfolio contact, white background, centered text-6xl font-light headline, simple e...",
+      "enhancedPrompt": "A clean minimal portfolio contact, white background, centered text-6xl font-light headline, simple e..."
+    },
+    {
+      "template": "split-screen-editorial",
+      "screenshotNumber": 1,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/split-screen-editorial-1.png",
+      "originalPrompt": "A split-screen editorial portfolio hero on laptop, grid-cols-2 layout, left side text-8xl font-bold ...",
+      "enhancedPrompt": "A split-screen editorial portfolio hero on laptop, grid-cols-2 layout, left side text-8xl font-bold ..."
+    },
+    {
+      "template": "split-screen-editorial",
+      "screenshotNumber": 2,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/split-screen-editorial-2.png",
+      "originalPrompt": "A split-screen editorial projects, alternating grid-cols-2 layouts, even rows image-left text-right,...",
+      "enhancedPrompt": "A split-screen editorial projects, alternating grid-cols-2 layouts, even rows image-left text-right,..."
+    },
+    {
+      "template": "split-screen-editorial",
+      "screenshotNumber": 3,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/split-screen-editorial-3.png",
+      "originalPrompt": "A split-screen editorial about, grid-cols-2 with biography text left, large portrait photo right, te...",
+      "enhancedPrompt": "A split-screen editorial about, grid-cols-2 with biography text left, large portrait photo right, te..."
+    },
+    {
+      "template": "saas-feature-rich",
+      "screenshotNumber": 1,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/saas-feature-rich-1.png",
+      "originalPrompt": "A feature-rich SaaS landing hero on laptop, gradient-to-br from-blue-50 to-indigo-100 background, te...",
+      "enhancedPrompt": "A feature-rich SaaS landing hero on laptop, gradient-to-br from-blue-50 to-indigo-100 background, te..."
+    },
+    {
+      "template": "saas-feature-rich",
+      "screenshotNumber": 2,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/saas-feature-rich-2.png",
+      "originalPrompt": "A SaaS feature showcase section, white background, grid-cols-3 feature cards, w-16 h-16 gradient-to-...",
+      "enhancedPrompt": "A SaaS feature showcase section, white background, grid-cols-3 feature cards, w-16 h-16 gradient-to-..."
+    },
+    {
+      "template": "saas-feature-rich",
+      "screenshotNumber": 3,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/saas-feature-rich-3.png",
+      "originalPrompt": "A feature-rich SaaS pricing, white background, grid-cols-4 pricing tiers (Free, Starter, Professiona...",
+      "enhancedPrompt": "A feature-rich SaaS pricing, white background, grid-cols-4 pricing tiers (Free, Starter, Professiona..."
+    },
+    {
+      "template": "personal-brand",
+      "screenshotNumber": 1,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/personal-brand-1.png",
+      "originalPrompt": "A personal brand portfolio hero on laptop, white background, large text-8xl font-bold name headline,...",
+      "enhancedPrompt": "A personal brand portfolio hero on laptop, white background, large text-8xl font-bold name headline,..."
+    },
+    {
+      "template": "personal-brand",
+      "screenshotNumber": 2,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/personal-brand-2.png",
+      "originalPrompt": "A personal brand about section, grid-cols-2 with brand story text left and lifestyle images right, t...",
+      "enhancedPrompt": "A personal brand about section, grid-cols-2 with brand story text left and lifestyle images right, t..."
+    },
+    {
+      "template": "personal-brand",
+      "screenshotNumber": 3,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/personal-brand-3.png",
+      "originalPrompt": "A personal brand services, white background, grid-cols-3 service offerings, text-3xl font-bold servi...",
+      "enhancedPrompt": "A personal brand services, white background, grid-cols-3 service offerings, text-3xl font-bold servi..."
+    },
+    {
+      "template": "experimental-3d",
+      "screenshotNumber": 1,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/experimental-3d-1.png",
+      "originalPrompt": "An experimental 3D portfolio hero on laptop, dark background with Three.js 3D scene, floating geomet...",
+      "enhancedPrompt": "An experimental 3D portfolio hero on laptop, dark background with Three.js 3D scene, floating geomet..."
+    },
+    {
+      "template": "experimental-3d",
+      "screenshotNumber": 2,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/experimental-3d-2.png",
+      "originalPrompt": "An experimental 3D project showcase, 3D card carousel with rotateY transforms, perspective-1500 cont...",
+      "enhancedPrompt": "An experimental 3D project showcase, 3D card carousel with rotateY transforms, perspective-1500 cont..."
+    },
+    {
+      "template": "experimental-3d",
+      "screenshotNumber": 3,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/experimental-3d-3.png",
+      "originalPrompt": "An experimental 3D contact interface, 3D form elements with depth effects, transform-style-preserve-...",
+      "enhancedPrompt": "An experimental 3D contact interface, 3D form elements with depth effects, transform-style-preserve-..."
+    },
+    {
+      "template": "interactive-agency",
+      "screenshotNumber": 1,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/interactive-agency-1.png",
+      "originalPrompt": "An interactive agency portfolio hero on laptop, bold gradient background, animated text-8xl font-bla...",
+      "enhancedPrompt": "An interactive agency portfolio hero on laptop, bold gradient background, animated text-8xl font-bla..."
+    },
+    {
+      "template": "interactive-agency",
+      "screenshotNumber": 2,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/interactive-agency-2.png",
+      "originalPrompt": "An interactive agency work section, grid of interactive project cards with hover state animations, c...",
+      "enhancedPrompt": "An interactive agency work section, grid of interactive project cards with hover state animations, c..."
+    },
+    {
+      "template": "interactive-agency",
+      "screenshotNumber": 3,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/interactive-agency-3.png",
+      "originalPrompt": "An interactive agency contact, animated form with focus state interactions, input labels that animat...",
+      "enhancedPrompt": "An interactive agency contact, animated form with focus state interactions, input labels that animat..."
+    },
+    {
+      "template": "startup-pitch",
+      "screenshotNumber": 1,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/startup-pitch-1.png",
+      "originalPrompt": "A startup pitch landing hero on laptop, gradient-to-r from-purple-600 to-blue-600 background, text-7...",
+      "enhancedPrompt": "A startup pitch landing hero on laptop, gradient-to-r from-purple-600 to-blue-600 background, text-7..."
+    },
+    {
+      "template": "startup-pitch",
+      "screenshotNumber": 2,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/startup-pitch-2.png",
+      "originalPrompt": "A startup pitch problem/solution section, white background with grid-cols-2, left side text-5xl font...",
+      "enhancedPrompt": "A startup pitch problem/solution section, white background with grid-cols-2, left side text-5xl font..."
+    },
+    {
+      "template": "startup-pitch",
+      "screenshotNumber": 3,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/startup-pitch-3.png",
+      "originalPrompt": "A startup pitch traction section, gradient-to-b from-gray-900 to-black background, text-6xl font-bol...",
+      "enhancedPrompt": "A startup pitch traction section, gradient-to-b from-gray-900 to-black background, text-6xl font-bol..."
+    },
+    {
+      "template": "photography-immersive",
+      "screenshotNumber": 1,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/photography-immersive-1.png",
+      "originalPrompt": "A photography immersive portfolio hero on laptop, full-screen background image with opacity-40 overl...",
+      "enhancedPrompt": "A photography immersive portfolio hero on laptop, full-screen background image with opacity-40 overl..."
+    },
+    {
+      "template": "photography-immersive",
+      "screenshotNumber": 2,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/photography-immersive-2.png",
+      "originalPrompt": "A photography immersive gallery, fullscreen image viewer with minimal UI, large high-res photography...",
+      "enhancedPrompt": "A photography immersive gallery, fullscreen image viewer with minimal UI, large high-res photography..."
+    },
+    {
+      "template": "photography-immersive",
+      "screenshotNumber": 3,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/photography-immersive-3.png",
+      "originalPrompt": "A photography immersive categories, grid-cols-3 category cards with full-bleed images, text-5xl font...",
+      "enhancedPrompt": "A photography immersive categories, grid-cols-3 category cards with full-bleed images, text-5xl font..."
+    },
+    {
+      "template": "motion-designer",
+      "screenshotNumber": 1,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/motion-designer-1.png",
+      "originalPrompt": "A motion designer portfolio hero on laptop, dark background with animated gradient shapes, text-8xl ...",
+      "enhancedPrompt": "A motion designer portfolio hero on laptop, dark background with animated gradient shapes, text-8xl ..."
+    },
+    {
+      "template": "motion-designer",
+      "screenshotNumber": 2,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/motion-designer-2.png",
+      "originalPrompt": "A motion designer work section, grid of video project thumbnails with hover video preview, text-4xl ...",
+      "enhancedPrompt": "A motion designer work section, grid of video project thumbnails with hover video preview, text-4xl ..."
+    },
+    {
+      "template": "motion-designer",
+      "screenshotNumber": 3,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/motion-designer-3.png",
+      "originalPrompt": "A motion designer services, dark background with animated icon illustrations, text-6xl font-bold ser...",
+      "enhancedPrompt": "A motion designer services, dark background with animated icon illustrations, text-6xl font-bold ser..."
+    }
+  ],
+  "failed": [
+    {
+      "template": "product-audio",
+      "screenshotNumber": 2,
+      "error": "No image URL in response"
+    },
+    {
+      "template": "product-audio",
+      "screenshotNumber": 3,
+      "error": "Unexpected token '<', \"<html>\r\n<h\"... is not valid JSON"
+    },
+    {
+      "template": "product-vacuum",
+      "screenshotNumber": 1,
+      "error": "No image URL in response"
+    },
+    {
+      "template": "product-vacuum",
+      "screenshotNumber": 2,
+      "error": "Unexpected token '<', \"<html>\r\n<h\"... is not valid JSON"
+    }
+  ],
+  "startTime": "2025-11-05T08:53:41.902Z",
+  "endTime": "2025-11-05T09:18:52.995Z",
+  "durationMinutes": 25
+}
