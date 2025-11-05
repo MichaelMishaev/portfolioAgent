@@ -452,7 +452,7 @@ export function SplitScreenTemplate() {
                 >
                   <div className="flex items-center gap-3 mb-4">
                     <span
-                      className="inline-block text-sm font-semibold px-3 py-2 rounded-full"
+                      className="inline-block text-sm font-semibold px-3 py-2 rounded-full text-gray-900"
                       style={{ backgroundColor: currentProject.color, color: "white" }}
                     >
                       {currentProject.category}
@@ -497,7 +497,7 @@ export function SplitScreenTemplate() {
                     {currentProject.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="text-xs px-3 py-1 bg-muted rounded-full"
+                        className="text-xs px-3 py-1 bg-muted rounded-full text-foreground"
                       >
                         {tag}
                       </span>
@@ -617,7 +617,7 @@ export function SplitScreenTemplate() {
                   <div className="text-xl sm:text-2xl font-bold text-primary mb-4 break-words">{service.price}</div>
                   <ul className="space-y-2 mb-6 flex-grow">
                     {service.includes.map((item, idx) => (
-                      <li key={idx} className="text-sm flex items-start gap-2">
+                      <li key={idx} className="text-sm flex items-start gap-2 text-gray-900">
                         <span className="text-primary mt-1">✓</span>
                         <span>{item}</span>
                       </li>
@@ -804,7 +804,7 @@ export function SplitScreenTemplate() {
 
             {/* Right Side */}
             <div className="space-y-6">
-              <Button size="lg" className="w-full justify-start text-lg">
+              <Button size="lg" className="w-full justify-start text-lg text-gray-900">
                 <FiMail className="mr-2" />
                 hello@davidkim.com
               </Button>
@@ -844,7 +844,7 @@ export function SplitScreenTemplate() {
               {y:"2018",t:"Junior Designer",c:"Studio"}
             ].map((item,i) => (
               <div key={i} className="flex gap-4">
-                <div className="text-sm font-mono w-16">{item.y}</div>
+                <div className="text-sm font-mono w-16 text-gray-900">{item.y}</div>
                 <div>
                   <h3 className="font-bold text-gray-900">{item.t}</h3>
                   <p className="text-sm text-muted-foreground">{item.c}</p>

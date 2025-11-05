@@ -170,7 +170,7 @@ export function SaaSProductTemplate() {
       <nav className="sticky top-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-lg border-b">
         <div className="container mx-auto px-3 sm:px-3 py-4">
           <div className="flex items-center justify-between">
-            <Link href="/" className="text-xl font-bold">
+            <Link href="/" className="text-xl font-bold text-white">
               TaskFlow Pro
             </Link>
 
@@ -228,7 +228,7 @@ export function SaaSProductTemplate() {
           </FadeIn>
 
           <FadeIn delay={0.1}>
-            <h1 className="text-3xl sm:text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent break-words">
+            <h1 className="text-3xl sm:text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent break-words text-white">
               {productData.tagline}
             </h1>
           </FadeIn>
@@ -241,11 +241,11 @@ export function SaaSProductTemplate() {
 
           <FadeIn delay={0.3}>
             <div className="flex flex-col gap-4 justify-center mb-12 sm:flex-row">
-              <Button size="lg" className="text-lg px-8 w-full sm:w-auto min-h-[44px]">
+              <Button size="lg" className="text-lg px-8 w-full sm:w-auto min-h-[44px] text-gray-900">
                 {productData.cta.primary}
                 <FiArrowRight className="ml-2" />
               </Button>
-              <Button size="lg" variant="outline" className="text-lg px-8 w-full sm:w-auto min-h-[44px]">
+              <Button size="lg" variant="outline" className="text-lg px-8 w-full sm:w-auto min-h-[44px] text-gray-900">
                 <FiPlay className="mr-2" />
                 {productData.cta.secondary}
               </Button>
@@ -285,7 +285,7 @@ export function SaaSProductTemplate() {
           </p>
           <div className="flex flex-wrap justify-center items-center gap-8 sm:gap-12 opacity-60">
             {productData.socialProof.companies.map((company) => (
-              <div key={company} className="text-xl sm:text-2xl font-bold">{company}</div>
+              <div key={company} className="text-xl sm:text-2xl font-bold text-gray-900">{company}</div>
             ))}
           </div>
         </ScrollReveal>
@@ -312,8 +312,8 @@ export function SaaSProductTemplate() {
                   <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${feature.color} flex items-center justify-center text-white mb-4`}>
                     {feature.icon}
                   </div>
-                  <CardTitle className="text-2xl">{feature.title}</CardTitle>
-                  <CardDescription className="text-base">{feature.description}</CardDescription>
+                  <CardTitle className="text-2xl text-white">{feature.title}</CardTitle>
+                  <CardDescription className="text-base text-white">{feature.description}</CardDescription>
                 </CardHeader>
               </Card>
             </ScrollReveal>
@@ -344,7 +344,7 @@ export function SaaSProductTemplate() {
                       <FiStar key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
                     ))}
                   </div>
-                  <p className="text-lg mb-6">"{testimonial.quote}"</p>
+                  <p className="text-lg mb-6 text-gray-900">"{testimonial.quote}"</p>
                   <div className="flex items-center gap-3">
                     <img
                       src={testimonial.avatar}
@@ -386,9 +386,9 @@ export function SaaSProductTemplate() {
                   </div>
                 )}
                 <CardHeader>
-                  <CardTitle className="text-2xl">{plan.name}</CardTitle>
+                  <CardTitle className="text-2xl text-white">{plan.name}</CardTitle>
                   <div className="mt-4">
-                    <span className="text-3xl sm:text-4xl font-bold">{plan.price}</span>
+                    <span className="text-3xl sm:text-4xl font-bold text-gray-900">{plan.price}</span>
                     {plan.price !== "Custom" && <span className="text-muted-foreground"> / {plan.period}</span>}
                   </div>
                   <CardDescription className="mt-2">{plan.description}</CardDescription>
@@ -401,7 +401,7 @@ export function SaaSProductTemplate() {
                     {plan.features.map((feature, idx) => (
                       <li key={idx} className="flex items-start gap-2">
                         <FiCheck className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                        <span className="text-sm">{feature}</span>
+                        <span className="text-sm text-gray-900">{feature}</span>
                       </li>
                     ))}
                   </ul>
@@ -427,7 +427,7 @@ export function SaaSProductTemplate() {
             <ScrollReveal key={item.question} delay={index * 0.05}>
               <Card>
                 <CardHeader>
-                  <CardTitle className="text-lg">{item.question}</CardTitle>
+                  <CardTitle className="text-lg text-gray-900">{item.question}</CardTitle>
                   <CardDescription>{item.answer}</CardDescription>
                 </CardHeader>
               </Card>
@@ -444,14 +444,14 @@ export function SaaSProductTemplate() {
               <h2 className="text-3xl sm:text-3xl sm:text-5xl font-bold mb-4 break-words text-gray-900">
                 {productData.finalCTA.title}
               </h2>
-              <p className="text-lg sm:text-xl mb-8 opacity-90">
+              <p className="text-lg sm:text-xl mb-8 opacity-90 text-white">
                 {productData.finalCTA.description}
               </p>
-              <Button size="lg" variant="secondary" className="text-lg px-8 w-full sm:w-auto min-h-[44px]">
+              <Button size="lg" variant="secondary" className="text-lg px-8 w-full sm:w-auto min-h-[44px] text-gray-900">
                 {productData.cta.primary}
                 <FiArrowRight className="ml-2" />
               </Button>
-              <p className="text-sm mt-6 opacity-75">
+              <p className="text-sm mt-6 opacity-75 text-gray-900">
                 {productData.finalCTA.guarantee}
               </p>
             </CardContent>

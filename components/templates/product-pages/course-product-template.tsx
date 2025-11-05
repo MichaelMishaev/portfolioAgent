@@ -257,7 +257,7 @@ export function CourseProductTemplate() {
       <nav className="sticky top-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-lg border-b">
         <div className="container mx-auto px-3 sm:px-3 py-4">
           <div className="flex items-center justify-between">
-            <Link href="/" className="text-xl font-bold">
+            <Link href="/" className="text-xl font-bold text-white">
               Design Mastery
             </Link>
 
@@ -315,7 +315,7 @@ export function CourseProductTemplate() {
           </FadeIn>
 
           <FadeIn delay={0.1}>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent break-words">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent break-words text-white">
               {courseData.tagline}
             </h1>
           </FadeIn>
@@ -328,11 +328,11 @@ export function CourseProductTemplate() {
 
           <FadeIn delay={0.3}>
             <div className="flex flex-col gap-4 sm:flex-row gap-4 justify-center mb-12">
-              <Button size="lg" className="text-lg px-8 bg-gradient-to-r from-blue-600 to-blue-700">
+              <Button size="lg" className="text-lg px-8 bg-gradient-to-r from-blue-600 to-blue-700 text-white">
                 {courseData.cta.primary}
                 <FiArrowRight className="ml-2" />
               </Button>
-              <Button size="lg" variant="outline" className="text-lg px-8">
+              <Button size="lg" variant="outline" className="text-lg px-8 text-white">
                 <FiPlay className="mr-2" />
                 {courseData.cta.secondary}
               </Button>
@@ -377,12 +377,12 @@ export function CourseProductTemplate() {
               <div className="flex-1 text-center md:text-left">
                 <h2 className="text-3xl font-bold mb-2 text-gray-900">{courseData.instructor.name}</h2>
                 <p className="text-xl text-muted-foreground mb-4">{courseData.instructor.title}</p>
-                <p className="text-lg mb-6">{courseData.instructor.bio}</p>
+                <p className="text-lg mb-6 text-gray-900">{courseData.instructor.bio}</p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {courseData.instructor.credentials.map((credential, index) => (
                     <div key={index} className="flex items-start gap-2">
                       <FiCheck className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
-                      <span className="text-sm">{credential}</span>
+                      <span className="text-sm text-gray-900">{credential}</span>
                     </div>
                   ))}
                 </div>
@@ -455,11 +455,11 @@ export function CourseProductTemplate() {
                     className="w-16 h-16 rounded-full border-2 border-white"
                   />
                   <div>
-                    <div className="font-bold text-lg">{courseData.transformation.student.name}</div>
-                    <div className="text-sm opacity-90">Graduate, now at Spotify</div>
+                    <div className="font-bold text-lg text-gray-900">{courseData.transformation.student.name}</div>
+                    <div className="text-sm opacity-90 text-gray-700">Graduate, now at Spotify</div>
                   </div>
                 </div>
-                <p className="text-lg italic">"{courseData.transformation.student.quote}"</p>
+                <p className="text-lg italic text-gray-900">"{courseData.transformation.student.quote}"</p>
               </CardContent>
             </Card>
           </ScrollReveal>
@@ -487,7 +487,7 @@ export function CourseProductTemplate() {
                   <div className="flex items-start justify-between">
                     <div className="flex-1">
                       <Badge className="mb-3">{module.week}</Badge>
-                      <CardTitle className="text-2xl mb-2">{module.title}</CardTitle>
+                      <CardTitle className="text-2xl mb-2 text-gray-900">{module.title}</CardTitle>
                       <div className="flex gap-4 text-sm text-muted-foreground mb-4">
                         <span className="flex items-center gap-1">
                           <FiBook className="w-4 h-4" />
@@ -504,7 +504,7 @@ export function CourseProductTemplate() {
                     {module.topics.map((topic, idx) => (
                       <div key={idx} className="flex items-start gap-2">
                         <FiCheck className="w-4 h-4 text-blue-600 flex-shrink-0 mt-0.5" />
-                        <span className="text-sm">{topic}</span>
+                        <span className="text-sm text-gray-900">{topic}</span>
                       </div>
                     ))}
                   </div>
@@ -533,8 +533,8 @@ export function CourseProductTemplate() {
                   <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${feature.color} flex items-center justify-center text-white mb-4`}>
                     {feature.icon}
                   </div>
-                  <CardTitle className="text-2xl">{feature.title}</CardTitle>
-                  <CardDescription className="text-base">{feature.description}</CardDescription>
+                  <CardTitle className="text-2xl text-white">{feature.title}</CardTitle>
+                  <CardDescription className="text-base text-white">{feature.description}</CardDescription>
                 </CardHeader>
               </Card>
             </ScrollReveal>
@@ -565,7 +565,7 @@ export function CourseProductTemplate() {
                       <FiStar key={i} className="w-5 h-5 fill-gold-400 text-gold-400" />
                     ))}
                   </div>
-                  <p className="text-lg mb-4">"{testimonial.quote}"</p>
+                  <p className="text-lg mb-4 text-gray-900">"{testimonial.quote}"</p>
                   <div className="flex items-center gap-3 mb-4">
                     <img
                       src={testimonial.avatar}
@@ -615,9 +615,9 @@ export function CourseProductTemplate() {
                   </div>
                 )}
                 <CardHeader>
-                  <CardTitle className="text-2xl">{plan.name}</CardTitle>
+                  <CardTitle className="text-2xl text-gray-900">{plan.name}</CardTitle>
                   <div className="mt-4">
-                    <span className="text-3xl sm:text-4xl font-bold">{plan.price}</span>
+                    <span className="text-3xl sm:text-4xl font-bold text-gray-900">{plan.price}</span>
                     <span className="text-muted-foreground"> / {plan.period}</span>
                   </div>
                   <CardDescription className="mt-2">{plan.description}</CardDescription>
@@ -630,7 +630,7 @@ export function CourseProductTemplate() {
                     {plan.features.map((feature, idx) => (
                       <li key={idx} className="flex items-start gap-2">
                         <FiCheck className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
-                        <span className="text-sm">{feature}</span>
+                        <span className="text-sm text-gray-900">{feature}</span>
                       </li>
                     ))}
                   </ul>
@@ -667,7 +667,7 @@ export function CourseProductTemplate() {
             <ScrollReveal key={item.question} delay={index * 0.05}>
               <Card>
                 <CardHeader>
-                  <CardTitle className="text-lg">{item.question}</CardTitle>
+                  <CardTitle className="text-lg text-gray-900">{item.question}</CardTitle>
                   <CardDescription>{item.answer}</CardDescription>
                 </CardHeader>
               </Card>
@@ -684,14 +684,14 @@ export function CourseProductTemplate() {
               <h2 className="text-3xl sm:text-5xl font-bold mb-4 break-words text-gray-900">
                 {courseData.finalCTA.title}
               </h2>
-              <p className="text-xl mb-8 opacity-90">
+              <p className="text-xl mb-8 opacity-90 text-white">
                 {courseData.finalCTA.description}
               </p>
-              <Button size="lg" variant="secondary" className="text-lg px-8">
+              <Button size="lg" variant="secondary" className="text-lg px-8 text-gray-900">
                 {courseData.cta.primary}
                 <FiArrowRight className="ml-2" />
               </Button>
-              <p className="text-sm mt-6 opacity-75">
+              <p className="text-sm mt-6 opacity-75 text-gray-900">
                 {courseData.finalCTA.guarantee}
               </p>
             </CardContent>

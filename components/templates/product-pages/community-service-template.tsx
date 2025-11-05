@@ -261,7 +261,7 @@ export function CommunityServiceTemplate() {
       <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-stone-200">
         <div className="container mx-auto px-3 max-w-full py-4">
           <div className="flex items-center justify-between">
-            <Link href="/" className="text-2xl font-bold bg-gradient-to-r from-teal-500 to-purple-600 bg-clip-text text-transparent">
+            <Link href="/" className="text-2xl font-bold bg-gradient-to-r from-teal-500 to-purple-600 bg-clip-text text-transparent text-white">
             CREATOR COLLECTIVE
           </Link>
 
@@ -368,7 +368,7 @@ export function CommunityServiceTemplate() {
               {platformData.hero.stats.map((stat, index) => (
                 <ScrollReveal key={index} delay={index * 0.1}>
                   <div className="text-center bg-white/50 backdrop-blur-sm rounded-2xl p-6 border border-stone-200">
-                    <div className="text-3xl sm:text-4xl font-bold mb-2 bg-gradient-to-r from-teal-500 to-purple-600 bg-clip-text text-transparent">
+                    <div className="text-3xl sm:text-4xl font-bold mb-2 bg-gradient-to-r from-teal-500 to-purple-600 bg-clip-text text-transparent text-white">
                       {stat.value}
                     </div>
                     <div className="text-sm text-stone-600 font-medium">{stat.label}</div>
@@ -565,9 +565,9 @@ export function CommunityServiceTemplate() {
                     </div>
                   )}
                   <CardHeader className="text-center pb-8 pt-12">
-                    <CardTitle className="text-2xl mb-4">{tier.name}</CardTitle>
+                    <CardTitle className="text-2xl mb-4 text-gray-900">{tier.name}</CardTitle>
                     <div className="mb-4">
-                      <span className="text-4xl sm:text-5xl font-bold break-words">${tier.price}</span>
+                      <span className="text-4xl sm:text-5xl font-bold break-words text-gray-900">${tier.price}</span>
                       <span className="text-stone-600">/{tier.period}</span>
                     </div>
                     <p className="text-stone-600">{tier.description}</p>
@@ -577,7 +577,7 @@ export function CommunityServiceTemplate() {
                       {tier.features.map((feature) => (
                         <li key={feature} className="flex items-start gap-3">
                           <FiCheck className="w-5 h-5 text-teal-500 flex-shrink-0 mt-0.5" />
-                          <span className="text-sm">{feature}</span>
+                          <span className="text-sm text-gray-900">{feature}</span>
                         </li>
                       ))}
                     </ul>
@@ -651,7 +651,7 @@ export function CommunityServiceTemplate() {
               <h2 className="text-5xl md:text-4xl sm:text-5xl md:text-6xl font-bold mb-8 break-words text-gray-900">
                 Start Building Your Community Today
               </h2>
-              <p className="text-xl mb-12 max-w-full mx-auto opacity-90">
+              <p className="text-xl mb-12 max-w-full mx-auto opacity-90 text-gray-900">
                 Join 50,000+ creators who've chosen Creator Collective. No credit card required.
               </p>
               <Button
@@ -660,7 +660,7 @@ export function CommunityServiceTemplate() {
               >
                 Start Free Trial
               </Button>
-              <p className="text-sm mt-6 opacity-75">
+              <p className="text-sm mt-6 opacity-75 text-gray-900">
                 14-day free trial • No credit card required • Cancel anytime
               </p>
             </div>
@@ -672,7 +672,7 @@ export function CommunityServiceTemplate() {
       <footer className="border-t border-stone-200 py-12 bg-white">
         <div className="container mx-auto px-3 max-w-full">
           <div className="text-center">
-            <div className="text-2xl font-bold bg-gradient-to-r from-teal-500 to-purple-600 bg-clip-text text-transparent mb-2">
+            <div className="text-2xl font-bold bg-gradient-to-r from-teal-500 to-purple-600 bg-clip-text text-transparent mb-2 text-white">
               CREATOR COLLECTIVE
             </div>
             <p className="text-sm text-stone-600">

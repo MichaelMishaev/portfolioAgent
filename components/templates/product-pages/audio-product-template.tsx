@@ -183,7 +183,7 @@ export function AudioProductTemplate() {
       <nav className="sticky top-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-lg border-b border-gray-200 dark:border-gray-800">
         <div className="container mx-auto px-3 sm:px-3 py-4">
           <div className="flex items-center justify-between">
-<Link href="/" className="text-xl font-bold">
+<Link href="/" className="text-xl font-bold text-white">
             AURORA
           </Link>
 
@@ -256,7 +256,7 @@ export function AudioProductTemplate() {
               <p className="text-xl text-muted-foreground max-w-full mx-auto mb-8">
                 {productData.description}
               </p>
-              <div className="text-4xl font-semibold mb-8">
+              <div className="text-4xl font-semibold mb-8 text-gray-900">
                 {productData.price.currency}{productData.price.amount}
               </div>
             </div>
@@ -308,10 +308,10 @@ export function AudioProductTemplate() {
           {/* CTA Buttons */}
           <FadeIn delay={0.4}>
             <div className="flex flex-col gap-4 sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="text-lg px-12">
+              <Button size="lg" className="text-lg px-12 text-gray-900">
                 Add to Cart
               </Button>
-              <Button size="lg" variant="outline" className="text-lg px-12">
+              <Button size="lg" variant="outline" className="text-lg px-12 text-gray-900">
                 Try in Store
               </Button>
             </div>
@@ -380,14 +380,14 @@ export function AudioProductTemplate() {
               <ScrollReveal key={category.title} delay={index * 0.1}>
                 <Card className="h-full">
                   <CardHeader>
-                    <CardTitle className="text-2xl">{category.title}</CardTitle>
+                    <CardTitle className="text-2xl text-gray-900">{category.title}</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <dl className="space-y-4">
                       {category.items.map((spec) => (
                         <div key={spec.label} className="flex justify-between items-start border-b border-gray-200 dark:border-gray-800 pb-3 last:border-0">
                           <dt className="text-sm text-muted-foreground font-medium">{spec.label}</dt>
-                          <dd className="text-sm font-semibold text-right">{spec.value}</dd>
+                          <dd className="text-sm font-semibold text-right text-gray-900">{spec.value}</dd>
                         </div>
                       ))}
                     </dl>
@@ -468,7 +468,7 @@ export function AudioProductTemplate() {
                   <tr>
                     <td className="p-4 font-medium">Codecs</td>
                     {productData.comparison.products.map((product) => (
-                      <td key={product.name} className="p-4 text-center text-sm">{product.codecs}</td>
+                      <td key={product.name} className="p-4 text-center text-sm text-gray-900">{product.codecs}</td>
                     ))}
                   </tr>
                 </tbody>
@@ -504,7 +504,7 @@ export function AudioProductTemplate() {
                         </svg>
                       ))}
                     </div>
-                    <p className="text-lg leading-relaxed mb-4 italic">"{review.excerpt}"</p>
+                    <p className="text-lg leading-relaxed mb-4 italic text-gray-900">"{review.excerpt}"</p>
                     <p className="text-sm text-muted-foreground font-semibold">— {review.author}</p>
                   </CardContent>
                 </Card>
@@ -533,7 +533,7 @@ export function AudioProductTemplate() {
                     {productData.inTheBox.map((item, index) => (
                       <li key={index} className="flex flex-col sm:flex-row sm:items-center gap-3">
                         <FiCheck className="w-5 h-5 text-blue-500 flex-shrink-0" />
-                        <span className="text-lg">{item}</span>
+                        <span className="text-lg text-gray-900">{item}</span>
                       </li>
                     ))}
                   </ul>
@@ -552,11 +552,11 @@ export function AudioProductTemplate() {
               <h2 className="text-5xl md:text-4xl sm:text-5xl md:text-6xl font-bold mb-6 break-words text-gray-900">
                 Ready to Experience Aurora?
               </h2>
-              <p className="text-2xl mb-12 opacity-90">
+              <p className="text-2xl mb-12 opacity-90 text-gray-900">
                 Order now and get free 2-day shipping.
               </p>
               <div className="flex flex-col gap-4 sm:flex-row gap-4 justify-center">
-                <Button size="lg" variant="secondary" className="text-lg px-12">
+                <Button size="lg" variant="secondary" className="text-lg px-12 text-gray-900">
                   Buy Now - ${productData.price.amount}
                 </Button>
                 <Button size="lg" variant="outline" className="text-lg px-12 !text-white !bg-transparent border-white hover:bg-white/10">

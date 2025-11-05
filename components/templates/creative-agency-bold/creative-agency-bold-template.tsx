@@ -106,7 +106,7 @@ export function CreativeAgencyBoldTemplate() {
         >
           <div>
             <motion.h1
-              className="text-6xl lg:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black leading-none mb-6"
+              className="text-6xl lg:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black leading-none mb-6 text-white"
               initial={{ y: 50, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.2, duration: 0.8 }}
@@ -301,7 +301,7 @@ export function CreativeAgencyBoldTemplate() {
                   <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-purple-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
                   <motion.div
-                    className="text-5xl mb-4 relative z-10"
+                    className="text-5xl mb-4 relative z-10 text-white"
                     whileHover={{ rotate: [0, -10, 10, -10, 0], scale: 1.2 }}
                     transition={{ duration: 0.5 }}
                   >
@@ -509,7 +509,7 @@ export function CreativeAgencyBoldTemplate() {
                   <input
                     type="email"
                     placeholder={data.newsletter.placeholder}
-                    className="flex-1 px-6 py-4 rounded-full border-2 border-blue-200 focus:border-blue-600 focus:outline-none text-lg"
+                    className="flex-1 px-6 py-4 rounded-full border-2 border-blue-200 focus:border-blue-600 focus:outline-none text-lg text-white"
                   />
                   <Button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full font-bold">
                     {data.newsletter.buttonText}
@@ -656,7 +656,7 @@ export function CreativeAgencyBoldTemplate() {
                     <div className="text-3xl font-black text-white">{item.year}</div>
                   </div>
                   <div className="flex-1 bg-white/5 backdrop-blur-xl p-6 rounded-2xl border border-white/10">
-                    <h4 className="font-black text-xl mb-2">{item.title}</h4>
+                    <h4 className="font-black text-xl mb-2 text-white">{item.title}</h4>
                     <p className="text-gray-400">{item.desc}</p>
                   </div>
                 </div>

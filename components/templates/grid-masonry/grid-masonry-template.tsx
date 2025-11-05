@@ -364,7 +364,7 @@ export function GridMasonryTemplate() {
           {portfolioData.testimonials.map((testimonial, index) => (
             <ScrollReveal key={testimonial.author} delay={index * 0.1}>
               <div className="bg-muted/30 p-6 rounded-lg">
-                <p className="text-lg italic mb-4">"{testimonial.quote}"</p>
+                <p className="text-lg italic mb-4 text-foreground">"{testimonial.quote}"</p>
                 <div className="border-t pt-4">
                   <p className="font-semibold">{testimonial.author}</p>
                   <p className="text-sm text-muted-foreground">{testimonial.role}</p>
@@ -499,7 +499,7 @@ export function GridMasonryTemplate() {
                   <div className="text-3xl sm:text-4xl font-bold mb-6 text-primary">{plan.price}</div>
                   <ul className="space-y-2">
                     {plan.features.map((f, j) => (
-                      <li key={j} className="text-sm flex items-start gap-2">
+                      <li key={j} className="text-sm flex items-start gap-2 text-gray-900">
                         <span className="text-primary mt-0.5">✓</span>
                         <span>{f}</span>
                       </li>

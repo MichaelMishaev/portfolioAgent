@@ -296,7 +296,7 @@ const containerRef = useRef(null);
               viewport={{ once: true }}
             >
               <span
-                className="inline-block text-sm font-semibold px-3 py-2 rounded-full mb-4"
+                className="inline-block text-sm font-semibold px-3 py-2 rounded-full mb-4 text-gray-900"
                 style={{ backgroundColor: section.color }}
               >
                 {section.subtitle}
@@ -357,7 +357,7 @@ const containerRef = useRef(null);
                 {portfolioData.clients.map((client) => (
                   <span
                     key={client}
-                    className="px-3 py-2 bg-white/10 backdrop-blur rounded-lg text-sm"
+                    className="px-3 py-2 bg-white/10 backdrop-blur rounded-lg text-sm text-gray-900"
                   >
                     {client}
                   </span>
@@ -398,7 +398,7 @@ const containerRef = useRef(null);
                 viewport={{ once: true }}
                 className="text-center"
               >
-                <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-3xl font-bold">
+                <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-3xl font-bold text-white">
                   {step.step}
                 </div>
                 <h3 className="text-2xl font-bold mb-3 text-gray-900">{step.title}</h3>
@@ -417,7 +417,7 @@ const containerRef = useRef(null);
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-5xl md:text-4xl sm:text-5xl md:text-6xl font-bold mb-16 text-center break-words"
+            className="text-5xl md:text-4xl sm:text-5xl md:text-6xl font-bold mb-16 text-center break-words text-gray-900"
           >
             Services
           </motion.h2>
@@ -463,7 +463,7 @@ const containerRef = useRef(null);
                   whileInView={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="bg-white/10 backdrop-blur border border-white/20 p-6 text-xl font-semibold"
+                  className="bg-white/10 backdrop-blur border border-white/20 p-6 text-xl font-semibold text-gray-900"
                 >
                   {item}
                 </motion.div>
@@ -503,7 +503,7 @@ const containerRef = useRef(null);
                 viewport={{ once: true }}
                 className="text-center"
               >
-                <div className="text-5xl md:text-4xl sm:text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent break-words">
+                <div className="text-5xl md:text-4xl sm:text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent break-words text-white">
                   {stat.value}
                 </div>
                 <div className="text-lg text-gray-400">{stat.label}</div>
@@ -540,7 +540,7 @@ const containerRef = useRef(null);
                 viewport={{ once: true }}
                 className="bg-white/5 backdrop-blur border border-white/10 p-6 hover:bg-white/10 transition-all text-center"
               >
-                <p className="text-lg font-medium">{skill}</p>
+                <p className="text-lg font-medium text-gray-900">{skill}</p>
               </motion.div>
             ))}
           </div>

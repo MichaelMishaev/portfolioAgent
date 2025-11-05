@@ -371,7 +371,7 @@ export function B2BServiceTemplate() {
                 <Card className="h-full border-2 border-stone-200 hover:border-red-600 transition-colors">
                   <CardHeader>
                     <capability.icon className="w-12 h-12 text-red-600 mb-4" />
-                    <CardTitle className="text-2xl mb-3">{capability.name}</CardTitle>
+                    <CardTitle className="text-2xl mb-3 text-gray-900">{capability.name}</CardTitle>
                     <p className="text-stone-600">{capability.description}</p>
                   </CardHeader>
                   <CardContent>
@@ -379,7 +379,7 @@ export function B2BServiceTemplate() {
                       {capability.features.map((feature) => (
                         <li key={feature} className="flex items-center gap-2">
                           <FiCheckCircle className="w-4 h-4 text-red-600 flex-shrink-0" />
-                          <span className="text-sm">{feature}</span>
+                          <span className="text-sm text-gray-900">{feature}</span>
                         </li>
                       ))}
                     </ul>
@@ -481,12 +481,12 @@ export function B2BServiceTemplate() {
                   }
                 >
                   <CardHeader>
-                    <CardTitle className="text-xl">{industry.name}</CardTitle>
+                    <CardTitle className="text-xl text-gray-900">{industry.name}</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <ul className="space-y-2">
                       {industry.expertise.map((item) => (
-                        <li key={item} className="flex items-center gap-2 text-sm">
+                        <li key={item} className="flex items-center gap-2 text-sm text-gray-900">
                           <FiArrowRight className="w-4 h-4 text-red-600 flex-shrink-0" />
                           {item}
                         </li>

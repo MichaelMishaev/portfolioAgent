@@ -1,0 +1,74 @@
+name: Text Visibility Audit
+
+on:
+  push:
+    branches: [main, develop]
+    paths:
+      - 'components/templates/**/*.tsx'
+      - 'scripts/audit-text-colors.js'
+      - '.github/workflows/text-visibility-audit.yml'
+  pull_request:
+    branches: [main, develop]
+    paths:
+      - 'components/templates/**/*.tsx'
+      - 'scripts/audit-text-colors.js'
+      - '.github/workflows/text-visibility-audit.yml'
+
+jobs:
+  audit:
+    name: Audit Text Colors
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run text color audit
+        run: npm run audit:text-colors:ci
+
+      - name: Upload audit report (on failure)
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: text-visibility-audit-report
+          path: docs/text-visibility-audit.md
+          retention-days: 30
+
+      - name: Comment PR (on failure)
+        if: failure() && github.event_name == 'pull_request'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const report = fs.readFileSync('docs/text-visibility-audit.md', 'utf8');
+            const summary = report.split('\n').slice(0, 30).join('\n');
+
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: `## ❌ Text Visibility Issues Detected
+
+${summary}
+
+**Action Required:** Fix text visibility issues before merging.
+
+Run locally:
+\`\`\`bash
+npm run audit:text-colors
+npm run fix:text-colors:dry  # Preview fixes
+npm run fix:text-colors       # Apply fixes
+\`\`\`
+
+📄 Full report available in workflow artifacts.
+`
+            });

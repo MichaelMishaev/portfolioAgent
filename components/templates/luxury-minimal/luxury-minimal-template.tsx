@@ -33,13 +33,13 @@ export function LuxuryMinimalTemplate() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-12">
-            <a href="#portfolio" className="text-xs uppercase tracking-[0.2em] hover:text-[#D4AF37] transition-colors font-light">
+            <a href="#portfolio" className="text-xs uppercase tracking-[0.2em] hover:text-[#D4AF37] transition-colors font-light text-gray-900">
               {tt.common.portfolio}
             </a>
-            <a href="#about" className="text-xs uppercase tracking-[0.2em] hover:text-[#D4AF37] transition-colors font-light">
+            <a href="#about" className="text-xs uppercase tracking-[0.2em] hover:text-[#D4AF37] transition-colors font-light text-gray-900">
               {tt.common.about}
             </a>
-            <a href="#contact" className="text-xs uppercase tracking-[0.2em] hover:text-[#D4AF37] transition-colors font-light">
+            <a href="#contact" className="text-xs uppercase tracking-[0.2em] hover:text-[#D4AF37] transition-colors font-light text-gray-900">
               {tt.common.contact}
             </a>
             <ThemeToggle />
@@ -64,13 +64,13 @@ export function LuxuryMinimalTemplate() {
             className="md:hidden bg-[#F5F5DC]/98 backdrop-blur-sm border-t border-[#D4AF37]/20"
           >
             <div className="container mx-auto px-8 py-6 flex flex-col gap-6">
-              <a href="#portfolio" className="text-xs uppercase tracking-[0.2em] py-2" onClick={() => setMobileMenuOpen(false)}>
+              <a href="#portfolio" className="text-xs uppercase tracking-[0.2em] py-2 text-gray-900" onClick={() => setMobileMenuOpen(false)}>
                 {tt.common.portfolio}
               </a>
-              <a href="#about" className="text-xs uppercase tracking-[0.2em] py-2" onClick={() => setMobileMenuOpen(false)}>
+              <a href="#about" className="text-xs uppercase tracking-[0.2em] py-2 text-gray-900" onClick={() => setMobileMenuOpen(false)}>
                 {tt.common.about}
               </a>
-              <a href="#contact" className="text-xs uppercase tracking-[0.2em] py-2" onClick={() => setMobileMenuOpen(false)}>
+              <a href="#contact" className="text-xs uppercase tracking-[0.2em] py-2 text-gray-900" onClick={() => setMobileMenuOpen(false)}>
                 {tt.common.contact}
               </a>
             </div>
@@ -97,7 +97,7 @@ export function LuxuryMinimalTemplate() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut" }}
           >
-            <div className="mb-6 text-[#D4AF37] text-sm uppercase tracking-[0.3em] font-light">
+            <div className="mb-6 text-[#D4AF37] text-sm uppercase tracking-[0.3em] font-light text-gray-900">
               {portfolioData.category}
             </div>
             <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl mb-8 font-light tracking-tight leading-none break-words text-gray-900">
@@ -161,7 +161,7 @@ export function LuxuryMinimalTemplate() {
                     {project.title}
                   </h3>
                   <p className="text-black/60 mb-4 leading-relaxed">{project.description}</p>
-                  <div className="text-xs uppercase tracking-[0.2em] text-[#D4AF37]">{project.category}</div>
+                  <div className="text-xs uppercase tracking-[0.2em] text-[#D4AF37] text-gray-900">{project.category}</div>
                 </div>
               </motion.div>
             ))}
@@ -250,7 +250,7 @@ export function LuxuryMinimalTemplate() {
                   "{testimonial.quote}"
                 </p>
                 <div>
-                  <div className="font-light text-lg mb-1">{testimonial.author}</div>
+                  <div className="font-light text-lg mb-1 text-gray-900">{testimonial.author}</div>
                   <div className="text-sm text-white/60 uppercase tracking-[0.2em]">{testimonial.role}</div>
                 </div>
               </motion.div>
@@ -331,7 +331,7 @@ export function LuxuryMinimalTemplate() {
             ].map((stat, i) => (
               <ScrollReveal key={i} delay={i * 0.1}>
                 <div className="text-center border-t border-[#D4AF37]/30 pt-8">
-                  <div className="font-serif text-5xl md:text-6xl mb-4 text-[#D4AF37] font-light">{stat.num}</div>
+                  <div className="font-serif text-5xl md:text-6xl mb-4 text-[#D4AF37] font-light text-gray-900">{stat.num}</div>
                   <div className="text-xs uppercase tracking-[0.3em] text-black/60 font-light">{stat.label}</div>
                 </div>
               </ScrollReveal>
@@ -354,7 +354,7 @@ export function LuxuryMinimalTemplate() {
             {['Brand Strategy', 'Art Direction', 'Editorial Design', 'Luxury Packaging', 'Creative Direction', 'Visual Identity'].map((skill, i) => (
               <ScrollReveal key={i} delay={i * 0.1}>
                 <div className="border border-black/10 p-12 text-center hover:bg-[#F5F5DC] transition-colors duration-500">
-                  <span className="text-xs uppercase tracking-[0.3em] font-light">{skill}</span>
+                  <span className="text-xs uppercase tracking-[0.3em] font-light text-gray-900">{skill}</span>
                 </div>
               </ScrollReveal>
             ))}
@@ -381,8 +381,8 @@ export function LuxuryMinimalTemplate() {
             ].map((pkg, i) => (
               <ScrollReveal key={i} delay={i * 0.15}>
                 <div className={`bg-white p-12 border ${pkg.featured ? 'border-[#D4AF37] shadow-2xl' : 'border-black/10'}`}>
-                  <div className="text-xs uppercase tracking-[0.3em] mb-8 text-[#D4AF37] font-light">{pkg.name}</div>
-                  <div className="font-serif text-5xl mb-12 font-light">{pkg.price}</div>
+                  <div className="text-xs uppercase tracking-[0.3em] mb-8 text-[#D4AF37] font-light text-gray-900">{pkg.name}</div>
+                  <div className="font-serif text-5xl mb-12 font-light text-gray-900">{pkg.price}</div>
                   <ul className="space-y-6 mb-12">
                     {pkg.features.map((f, idx) => (
                       <li key={idx} className="text-sm text-black/70 font-light flex items-center gap-3">
@@ -421,10 +421,10 @@ export function LuxuryMinimalTemplate() {
               <ScrollReveal key={i} delay={i * 0.1}>
                 <div className="flex gap-12 items-start border-t border-black/10 pt-8">
                   <div className="flex-shrink-0 w-24 text-center">
-                    <div className="font-serif text-3xl text-[#D4AF37] font-light">{item.year}</div>
+                    <div className="font-serif text-3xl text-[#D4AF37] font-light text-gray-900">{item.year}</div>
                   </div>
                   <div className="flex-1">
-                    <h4 className="font-serif text-3xl mb-3 font-light">{item.title}</h4>
+                    <h4 className="font-serif text-3xl mb-3 font-light text-gray-900">{item.title}</h4>
                     <p className="text-black/60 font-light leading-relaxed">{item.desc}</p>
                   </div>
                 </div>
@@ -453,7 +453,7 @@ export function LuxuryMinimalTemplate() {
             ].map((faq, i) => (
               <ScrollReveal key={i} delay={i * 0.1}>
                 <div className="bg-white border border-black/10 p-8 md:p-12">
-                  <div className="font-serif text-2xl mb-4 font-light">{faq.q}</div>
+                  <div className="font-serif text-2xl mb-4 font-light text-gray-900">{faq.q}</div>
                   <p className="text-black/60 leading-relaxed font-light">{faq.a}</p>
                 </div>
               </ScrollReveal>

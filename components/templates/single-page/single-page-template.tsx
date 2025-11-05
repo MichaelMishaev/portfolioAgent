@@ -231,7 +231,7 @@ export function SinglePageTemplate() {
         <ScrollReveal delay={0.2}>
           <div className="flex flex-wrap gap-2 sm:gap-3 max-w-full">
             {portfolioData.skills.map((skill) => (
-              <Badge key={skill} variant="secondary" className="text-sm sm:text-base px-3 sm:px-3 py-2">
+              <Badge key={skill} variant="secondary" className="text-sm sm:text-base px-3 sm:px-3 py-2 text-gray-900">
                 {skill}
               </Badge>
             ))}
@@ -309,7 +309,7 @@ export function SinglePageTemplate() {
 
                   <div className="flex flex-wrap gap-2 mb-6">
                     {project.tech.map((tech) => (
-                      <Badge key={tech} variant="secondary" className="text-sm">
+                      <Badge key={tech} variant="secondary" className="text-sm text-gray-900">
                         {tech}
                       </Badge>
                     ))}
@@ -426,12 +426,12 @@ export function SinglePageTemplate() {
                   )}
                   <h3 className="text-2xl font-bold mb-2 text-gray-900">{plan.name}</h3>
                   <div className="mb-6">
-                    <span className="text-3xl sm:text-4xl font-bold">{plan.price}</span>
+                    <span className="text-3xl sm:text-4xl font-bold text-gray-900">{plan.price}</span>
                     <span className="text-muted-foreground">{plan.period}</span>
                   </div>
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((f, j) => (
-                      <li key={j} className="flex items-start gap-2 text-sm">
+                      <li key={j} className="flex items-start gap-2 text-sm text-gray-900">
                         <span className="text-primary mt-0.5">✓</span>
                         <span>{f}</span>
                       </li>
@@ -458,7 +458,7 @@ export function SinglePageTemplate() {
               <ScrollReveal key={i} delay={i * 0.05}>
                 <div className="aspect-square rounded-lg bg-muted hover:bg-muted/80 transition-all cursor-pointer overflow-hidden group">
                   <div className="w-full h-full flex items-center justify-center text-muted-foreground group-hover:scale-110 transition-transform">
-                    <span className="text-sm font-medium">Image {i}</span>
+                    <span className="text-sm font-medium text-foreground">Image {i}</span>
                   </div>
                 </div>
               </ScrollReveal>
@@ -472,7 +472,7 @@ export function SinglePageTemplate() {
         <div className="container mx-auto max-w-4xl text-center">
           <ScrollReveal>
             <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-gray-900">Ready to Start Your Project?</h2>
-            <p className="text-xl mb-8 opacity-90">
+            <p className="text-xl mb-8 opacity-90 text-white">
               Let's work together to bring your ideas to life
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

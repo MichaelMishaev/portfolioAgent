@@ -87,7 +87,7 @@ export function PersonalBrandTemplate() {
                 <Button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-6 text-lg">
                   {data.hero.primaryCta}
                 </Button>
-                <Button variant="outline" className="border-2 px-8 py-6 text-lg">
+                <Button variant="outline" className="border-2 px-8 py-6 text-lg text-white">
                   <FiDownload className="mr-2" />
                   {data.hero.secondaryCta}
                 </Button>
@@ -255,7 +255,7 @@ export function PersonalBrandTemplate() {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-2 px-12 py-6 text-lg"
+                className="border-2 px-12 py-6 text-lg text-gray-900"
               >
                 Schedule a Call
               </Button>
@@ -284,7 +284,7 @@ export function PersonalBrandTemplate() {
                 { num: '4.9', label: 'Avg Rating' }
               ].map((stat, i) => (
                 <div key={i} className="text-center">
-                  <div className="text-3xl sm:text-4xl font-bold mb-2">{stat.num}</div>
+                  <div className="text-3xl sm:text-4xl font-bold mb-2 text-gray-900">{stat.num}</div>
                   <div className="text-sm text-gray-400">{stat.label}</div>
                 </div>
               ))}
@@ -313,7 +313,7 @@ export function PersonalBrandTemplate() {
                 { name: 'Retainer', price: '$10,000/mo', desc: 'Ongoing partnership and support' }
               ].map((option, i) => (
                 <div key={i} className="bg-gray-800 p-8 rounded-lg border border-gray-700">
-                  <h4 className="text-xl font-bold mb-2">{option.name}</h4>
+                  <h4 className="text-xl font-bold mb-2 text-white">{option.name}</h4>
                   <div className="text-3xl font-bold text-blue-400 mb-4">{option.price}</div>
                   <p className="text-gray-400">{option.desc}</p>
                   <Button className="w-full mt-6 bg-blue-600 hover:bg-blue-700">Get Started</Button>
@@ -332,7 +332,7 @@ export function PersonalBrandTemplate() {
                 { text: 'The best investment we made. 10/10 would work with again.', author: 'Mike Chen', role: 'CEO, GrowthLab' }
               ].map((t, i) => (
                 <div key={i} className="bg-gray-800 p-6 rounded-lg border border-gray-700">
-                  <p className="text-lg mb-4 italic">&ldquo;{t.text}&rdquo;</p>
+                  <p className="text-lg mb-4 italic text-foreground">&ldquo;{t.text}&rdquo;</p>
                   <div>
                     <div className="font-bold">{t.author}</div>
                     <div className="text-sm text-gray-400">{t.role}</div>
@@ -357,7 +357,7 @@ export function PersonalBrandTemplate() {
                     <div className="text-2xl font-bold text-blue-400">{item.year}</div>
                   </div>
                   <div className="flex-1 bg-gray-800 p-6 rounded-lg border border-gray-700">
-                    <h4 className="font-bold text-lg mb-2">{item.title}</h4>
+                    <h4 className="font-bold text-lg mb-2 text-foreground">{item.title}</h4>
                     <p className="text-gray-400 text-sm">{item.desc}</p>
                   </div>
                 </div>

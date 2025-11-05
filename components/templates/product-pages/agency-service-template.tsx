@@ -307,7 +307,7 @@ export function AgencyServiceTemplate() {
                     <div className="w-14 h-14 rounded-2xl bg-blue-600 text-white flex items-center justify-center mb-4">
                       <service.icon className="w-7 h-7" />
                     </div>
-                    <CardTitle className="text-2xl">{service.name}</CardTitle>
+                    <CardTitle className="text-2xl text-white">{service.name}</CardTitle>
                     <p className="text-blue-600 font-medium">{service.tagline}</p>
                   </CardHeader>
                   <CardContent>
@@ -316,16 +316,16 @@ export function AgencyServiceTemplate() {
                       {service.features.map((feature) => (
                         <div key={feature} className="flex items-start gap-2">
                           <FiCheckCircle className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
-                          <span className="text-sm">{feature}</span>
+                          <span className="text-sm text-gray-900">{feature}</span>
                         </div>
                       ))}
                     </div>
                     <div className="pt-4 border-t border-gray-200">
-                      <div className="flex justify-between text-sm mb-2">
+                      <div className="flex justify-between text-sm mb-2 text-gray-900">
                         <span className="text-gray-600">Timeline:</span>
                         <span className="font-medium">{service.timeline}</span>
                       </div>
-                      <div className="flex justify-between text-sm">
+                      <div className="flex justify-between text-sm text-gray-900">
                         <span className="text-gray-600">Investment:</span>
                         <span className="font-medium text-blue-600">{service.investment}</span>
                       </div>
@@ -361,14 +361,14 @@ export function AgencyServiceTemplate() {
                   </div>
                   <CardContent className="p-6">
                     <div className="flex items-center gap-2 mb-3">
-                      <span className="font-bold text-lg">{project.client}</span>
+                      <span className="font-bold text-lg text-gray-900">{project.client}</span>
                       <Badge variant="outline">{project.industry}</Badge>
                     </div>
                     <p className="text-sm text-gray-600 mb-2">{project.challenge}</p>
                     <p className="text-sm font-medium text-blue-600 mb-4">{project.result}</p>
                     <div className="flex flex-wrap gap-2">
                       {project.tags.map((tag) => (
-                        <Badge key={tag} variant="secondary" className="text-xs">
+                        <Badge key={tag} variant="secondary" className="text-xs text-gray-900">
                           {tag}
                         </Badge>
                       ))}
@@ -432,7 +432,7 @@ export function AgencyServiceTemplate() {
                     <p className="text-gray-600 mb-4">{step.description}</p>
                     <div className="space-y-2">
                       {step.deliverables.map((deliverable) => (
-                        <div key={deliverable} className="flex items-center gap-2 text-sm">
+                        <div key={deliverable} className="flex items-center gap-2 text-sm text-white">
                           <div className="w-1.5 h-1.5 rounded-full bg-blue-600"></div>
                           <span>{deliverable}</span>
                         </div>
@@ -470,10 +470,10 @@ export function AgencyServiceTemplate() {
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-12">
         <div className="container mx-auto px-3 max-w-full text-center">
-          <div className="text-2xl font-bold mb-4">
+          <div className="text-2xl font-bold mb-4 text-white">
             PIXEL<span className="text-blue-500">PERFECT</span>
           </div>
-          <div className="flex justify-center gap-8 mb-6 text-sm">
+          <div className="flex justify-center gap-8 mb-6 text-sm text-white">
             {serviceData.awards.map((award) => (
               <span key={award} className="text-gray-400">{award}</span>
             ))}

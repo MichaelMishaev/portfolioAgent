@@ -301,7 +301,7 @@ export function VacuumProductTemplate() {
                   </div>
                 </div>
 
-                <div className="text-3xl sm:text-4xl font-bold mb-8">
+                <div className="text-3xl sm:text-4xl font-bold mb-8 text-gray-900">
                   {productData.price.currency}{productData.price.amount}
                 </div>
 
@@ -434,18 +434,18 @@ export function VacuumProductTemplate() {
                   onClick={() => setSelectedMode(mode)}
                 >
                   <CardHeader>
-                    <CardTitle className="text-2xl">{mode.name}</CardTitle>
-                    <CardDescription className="text-base">{mode.useCase}</CardDescription>
+                    <CardTitle className="text-2xl text-gray-900">{mode.name}</CardTitle>
+                    <CardDescription className="text-base text-gray-900">{mode.useCase}</CardDescription>
                   </CardHeader>
                   <CardContent>
                     <dl className="space-y-3">
                       <div className="flex justify-between">
                         <dt className="text-sm text-muted-foreground">Power</dt>
-                        <dd className="text-sm font-semibold">{mode.power}</dd>
+                        <dd className="text-sm font-semibold text-gray-900">{mode.power}</dd>
                       </div>
                       <div className="flex justify-between">
                         <dt className="text-sm text-muted-foreground">Runtime</dt>
-                        <dd className="text-sm font-semibold">{mode.runtime}</dd>
+                        <dd className="text-sm font-semibold text-gray-900">{mode.runtime}</dd>
                       </div>
                       <div className="flex justify-between">
                         <dt className="text-sm text-muted-foreground">Suction</dt>
@@ -476,14 +476,14 @@ export function VacuumProductTemplate() {
               <ScrollReveal key={key} delay={index * 0.1}>
                 <Card>
                   <CardHeader>
-                    <CardTitle className="text-xl capitalize">{key}</CardTitle>
+                    <CardTitle className="text-xl capitalize text-gray-900">{key}</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <dl className="space-y-3">
                       {specs.map((spec) => (
                         <div key={spec.label} className="flex justify-between items-start border-b border-gray-200 dark:border-gray-800 pb-2 last:border-0">
                           <dt className="text-sm text-muted-foreground">{spec.label}</dt>
-                          <dd className="text-sm font-semibold text-right">{spec.value}</dd>
+                          <dd className="text-sm font-semibold text-right text-gray-900">{spec.value}</dd>
                         </div>
                       ))}
                     </dl>
@@ -661,11 +661,11 @@ export function VacuumProductTemplate() {
               <h2 className="text-5xl md:text-4xl sm:text-5xl md:text-6xl font-bold mb-6 break-words text-gray-900">
                 Ready for Quantum Clean?
               </h2>
-              <p className="text-2xl mb-12 opacity-90">
+              <p className="text-2xl mb-12 opacity-90 text-gray-900">
                 Free shipping and 30-day money-back guarantee.
               </p>
               <div className="flex flex-col gap-4 sm:flex-row gap-4 justify-center">
-                <Button size="lg" variant="secondary" className="text-lg px-12">
+                <Button size="lg" variant="secondary" className="text-lg px-12 text-gray-900">
                   Buy Now - ${productData.price.amount}
                 </Button>
                 <Button size="lg" variant="outline" className="text-lg px-12 !text-white !bg-transparent border-white hover:bg-white/10">

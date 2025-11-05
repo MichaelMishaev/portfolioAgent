@@ -254,7 +254,7 @@ return (
           <h3 className="text-2xl font-bold mb-4 text-gray-900">Published In</h3>
           <div className="flex flex-wrap gap-3">
             {portfolioData.publications.map((pub) => (
-              <Badge key={pub} variant="outline" className="text-base py-2 px-3">
+              <Badge key={pub} variant="outline" className="text-base py-2 px-3 text-gray-900">
                 {pub}
               </Badge>
             ))}
@@ -296,7 +296,7 @@ return (
               <article className="border-b pb-12 last:border-0">
                 <div className="flex flex-wrap gap-2 mb-4">
                   {article.tags.map((tag) => (
-                    <Badge key={tag} variant="secondary" className="text-xs">
+                    <Badge key={tag} variant="secondary" className="text-xs text-gray-900">
                       {tag}
                     </Badge>
                   ))}
@@ -370,17 +370,17 @@ return (
 
                 <div className="space-y-6">
                   <div>
-                    <h4 className="text-lg font-bold mb-2">Challenge</h4>
+                    <h4 className="text-lg font-bold mb-2 text-gray-900">Challenge</h4>
                     <p className="text-foreground/80 leading-relaxed">{study.challenge}</p>
                   </div>
 
                   <div>
-                    <h4 className="text-lg font-bold mb-2">Solution</h4>
+                    <h4 className="text-lg font-bold mb-2 text-gray-900">Solution</h4>
                     <p className="text-foreground/80 leading-relaxed">{study.solution}</p>
                   </div>
 
                   <div>
-                    <h4 className="text-lg font-bold mb-2">Results</h4>
+                    <h4 className="text-lg font-bold mb-2 text-gray-900">Results</h4>
                     <p className="text-foreground/80 leading-relaxed mb-4">{study.results}</p>
 
                     {/* Metrics */}
@@ -416,7 +416,7 @@ return (
           {portfolioData.process.map((step, index) => (
             <ScrollReveal key={step.step} delay={index * 0.1}>
               <div className="text-center">
-                <div className="w-16 h-16 mx-auto mb-4 rounded-full border-4 border-primary flex items-center justify-center text-2xl font-bold">
+                <div className="w-16 h-16 mx-auto mb-4 rounded-full border-4 border-primary flex items-center justify-center text-2xl font-bold text-gray-900">
                   {index + 1}
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-gray-900">

@@ -71,7 +71,7 @@ export function OnlineBusinessCoachTemplate() {
                 {data.badge || "Bestselling Author • Speaker • Coach"}
               </Badge>
 
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight bg-gradient-to-r from-gray-900 to-gray-700 dark:from-white dark:to-gray-300 bg-clip-text text-transparent">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight bg-gradient-to-r from-gray-900 to-gray-700 dark:from-white dark:to-gray-300 bg-clip-text text-transparent text-white">
                 {data.heroTitle || "From Overwhelm to Empowerment"}
               </h1>
 
@@ -157,7 +157,7 @@ export function OnlineBusinessCoachTemplate() {
       <section id="about" className="container mx-auto px-3 md:px-3 max-w-full py-20 md:py-32">
         <ScrollReveal>
           <div className="text-center max-w-full mx-auto">
-            <h2 className="text-3xl md:text-4xl sm:text-5xl font-bold mb-6 bg-gradient-to-r from-amber-600 to-blue-600 bg-clip-text text-transparent break-words">
+            <h2 className="text-3xl md:text-4xl sm:text-5xl font-bold mb-6 bg-gradient-to-r from-amber-600 to-blue-600 bg-clip-text text-transparent break-words text-white">
               {data.aboutTitle || "Hi, I'm Your Guide to Transformation"}
             </h2>
             <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 leading-relaxed">

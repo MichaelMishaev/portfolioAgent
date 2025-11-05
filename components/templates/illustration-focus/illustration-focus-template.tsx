@@ -196,7 +196,7 @@ return (
           </FadeIn>
 
           <FadeIn delay={0.2}>
-            <h1 className="text-3xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-6 bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-clip-text text-transparent break-words">
+            <h1 className="text-3xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-6 bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-clip-text text-transparent break-words text-white">
               {portfolioData.name}
             </h1>
           </FadeIn>
@@ -243,7 +243,7 @@ return (
               <Card className="bg-gradient-to-br from-pink-100 to-purple-100 dark:from-pink-900/30 dark:to-purple-900/30 border-2 border-pink-300 dark:border-pink-700 hover:shadow-lg transition-shadow">
                 <CardContent className="p-8 text-center">
                   <div className="text-6xl mb-4">{stat.emoji}</div>
-                  <div className="text-4xl sm:text-5xl font-bold mb-2 bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent break-words">
+                  <div className="text-4xl sm:text-5xl font-bold mb-2 bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent break-words text-white">
                     {stat.value}
                   </div>
                   <div className="text-lg text-foreground/70">{stat.label}</div>
@@ -296,7 +296,7 @@ return (
             <ScrollReveal key={project.title} delay={index * 0.1}>
               <Card className="hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 bg-white/80 dark:bg-gray-800/80 backdrop-blur overflow-hidden group">
                 <div
-                  className="h-48 flex items-center justify-center text-7xl group-hover:scale-110 transition-transform duration-300"
+                  className="h-48 flex items-center justify-center text-7xl group-hover:scale-110 transition-transform duration-300 text-foreground"
                   style={{ backgroundColor: project.color }}
                 >
                   {project.emoji}
@@ -501,12 +501,12 @@ return (
                 }`}>
                   <div className="text-5xl mb-4">{plan.icon}</div>
                   <h3 className="text-2xl font-bold mb-2 text-gray-900">{plan.name}</h3>
-                  <div className="text-3xl sm:text-4xl font-bold mb-6">{plan.price}</div>
+                  <div className="text-3xl sm:text-4xl font-bold mb-6 text-white">{plan.price}</div>
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((f, j) => (
                       <li key={j} className="flex items-start gap-2">
                         <span className={plan.popular ? 'text-white' : 'text-pink-500'}>✓</span>
-                        <span className="text-sm">{f}</span>
+                        <span className="text-sm text-white">{f}</span>
                       </li>
                     ))}
                   </ul>

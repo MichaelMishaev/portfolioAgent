@@ -245,7 +245,7 @@ export function ConsultingServiceTemplate() {
       <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-lg border-b border-gray-200 shadow-sm">
         <div className="container mx-auto px-3 max-w-full py-4">
           <div className="flex items-center justify-between">
-            <Link href="/" className="text-2xl font-bold">
+            <Link href="/" className="text-2xl font-bold text-gray-900">
             APEX<span className="text-emerald-600">CONSULTING</span>
           </Link>
 
@@ -342,11 +342,11 @@ export function ConsultingServiceTemplate() {
 
             <FadeIn delay={0.3}>
               <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
-                <Button size="lg" className="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-700 text-lg px-8">
+                <Button size="lg" className="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-700 text-lg px-8 text-gray-900">
                   Schedule Consultation
                   <FiArrowRight className="ml-2" />
                 </Button>
-                <Button size="lg" variant="outline" className="w-full sm:w-auto text-lg px-8">
+                <Button size="lg" variant="outline" className="w-full sm:w-auto text-lg px-8 text-gray-900">
                   Download Insights
                 </Button>
               </div>
@@ -389,7 +389,7 @@ export function ConsultingServiceTemplate() {
                       <h3 className="text-3xl font-bold mb-2 text-gray-900">{service.name}</h3>
                       <p className="text-emerald-600 font-semibold mb-4">{service.tagline}</p>
                       <p className="text-gray-600 mb-6">{service.description}</p>
-                      <div className="space-y-2 text-sm pt-4 border-t border-gray-200">
+                      <div className="space-y-2 text-sm pt-4 border-t border-gray-200 text-gray-900">
                         <div className="flex justify-between">
                           <span className="text-gray-500">Typical Engagement:</span>
                           <span className="font-medium">{service.engagement}</span>
@@ -519,7 +519,7 @@ export function ConsultingServiceTemplate() {
                     <h3 className="text-xl font-bold mb-1 text-gray-900">{member.name}</h3>
                     <p className="text-emerald-600 font-semibold mb-2 text-sm">{member.role}</p>
                     <p className="text-xs text-gray-600 mb-3">{member.credentials}</p>
-                    <Badge variant="outline" className="text-xs">{member.specialization}</Badge>
+                    <Badge variant="outline" className="text-xs text-gray-900">{member.specialization}</Badge>
                   </CardContent>
                 </Card>
               </ScrollReveal>
@@ -547,13 +547,13 @@ export function ConsultingServiceTemplate() {
                       <div className="text-7xl font-bold text-emerald-100">{phase.number}</div>
                       <div className="pt-2">
                         <h3 className="text-2xl font-bold mb-1 text-gray-900">{phase.name}</h3>
-                        <Badge variant="outline" className="text-xs">{phase.duration}</Badge>
+                        <Badge variant="outline" className="text-xs text-gray-900">{phase.duration}</Badge>
                       </div>
                     </div>
                     <p className="text-gray-600 mb-6">{phase.description}</p>
                     <div className="space-y-2 mb-6">
                       {phase.activities.map((activity) => (
-                        <div key={activity} className="flex items-center gap-2 text-sm">
+                        <div key={activity} className="flex items-center gap-2 text-sm text-gray-900">
                           <div className="w-1.5 h-1.5 rounded-full bg-emerald-600"></div>
                           <span className="text-gray-700">{activity}</span>
                         </div>
@@ -637,7 +637,7 @@ export function ConsultingServiceTemplate() {
       <footer className="bg-gray-900 text-white py-12">
         <div className="container mx-auto px-3 max-w-full">
           <div className="text-center mb-6">
-            <div className="text-2xl font-bold mb-4">
+            <div className="text-2xl font-bold mb-4 text-white">
               APEX<span className="text-emerald-500">CONSULTING</span>
             </div>
             <div className="flex justify-center gap-8 text-sm text-gray-400 mb-4">

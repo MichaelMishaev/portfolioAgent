@@ -139,7 +139,7 @@ export function BoldTypographyTemplate() {
 
         <FadeIn delay={0.2}>
           <div className="max-w-full ml-auto">
-            <p className="text-2xl md:text-3xl sm:text-4xl font-bold mb-4">
+            <p className="text-2xl md:text-3xl sm:text-4xl font-bold mb-4 text-gray-900">
               {portfolioData.tagline}
             </p>
             <p className="text-lg md:text-xl text-muted-foreground mb-8">
@@ -272,17 +272,17 @@ export function BoldTypographyTemplate() {
 
                   <div className="space-y-6">
                     <div>
-                      <h4 className="text-xl font-bold mb-2 uppercase">Challenge</h4>
+                      <h4 className="text-xl font-bold mb-2 uppercase text-gray-900">Challenge</h4>
                       <p className="text-lg text-muted-foreground">{study.challenge}</p>
                     </div>
 
                     <div>
-                      <h4 className="text-xl font-bold mb-2 uppercase">Solution</h4>
+                      <h4 className="text-xl font-bold mb-2 uppercase text-gray-900">Solution</h4>
                       <p className="text-lg text-muted-foreground">{study.solution}</p>
                     </div>
 
                     <div>
-                      <h4 className="text-xl font-bold mb-2 uppercase">Impact</h4>
+                      <h4 className="text-xl font-bold mb-2 uppercase text-gray-900">Impact</h4>
                       <p className="text-lg font-bold text-primary">{study.impact}</p>
                     </div>
                   </div>
@@ -292,12 +292,12 @@ export function BoldTypographyTemplate() {
                 <div className="space-y-6">
                   <div className="border-l-4 border-muted pl-6">
                     <div className="text-sm font-bold uppercase text-muted-foreground mb-2">Before</div>
-                    <p className="text-lg">{study.before}</p>
+                    <p className="text-lg text-gray-900">{study.before}</p>
                   </div>
 
                   <div className="border-l-4 border-primary pl-6">
                     <div className="text-sm font-bold uppercase text-primary mb-2">After</div>
-                    <p className="text-lg font-semibold">{study.after}</p>
+                    <p className="text-lg font-semibold text-gray-900">{study.after}</p>
                   </div>
                 </div>
               </div>
@@ -318,10 +318,10 @@ export function BoldTypographyTemplate() {
           {portfolioData.testimonials.map((testimonial, index) => (
             <ScrollReveal key={testimonial.client} delay={index * 0.1}>
               <div className="border-l-4 border-primary pl-6">
-                <p className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug mb-6">
+                <p className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug mb-6 text-gray-900">
                   "{testimonial.quote}"
                 </p>
-                <p className="text-lg font-semibold">
+                <p className="text-lg font-semibold text-gray-900">
                   {testimonial.client}
                 </p>
               </div>
@@ -345,7 +345,7 @@ export function BoldTypographyTemplate() {
                 key={client}
                 className="aspect-square flex items-center justify-center border hover:bg-accent/50 transition-colors"
               >
-                <span className="text-xl sm:text-2xl md:text-3xl font-bold">
+                <span className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900">
                   {client}
                 </span>
               </div>
@@ -369,7 +369,7 @@ export function BoldTypographyTemplate() {
         <ScrollReveal delay={0.2}>
           <div className="flex flex-col md:flex-row gap-8 items-start justify-between">
             <div className="space-y-4">
-              <Button size="lg" className="text-lg">
+              <Button size="lg" className="text-lg text-gray-900">
                 <FiMail className="mr-2" />
                 {portfolioData.contact.email}
               </Button>
@@ -408,7 +408,7 @@ export function BoldTypographyTemplate() {
                   <h3 className="text-2xl font-black tracking-tight text-gray-900">{group.cat}</h3>
                   <div className="flex flex-wrap gap-3">
                     {group.skills.map((s, j) => (
-                      <span key={j} className="px-4 py-2 bg-foreground text-background font-bold text-sm">
+                      <span key={j} className="px-4 py-2 bg-foreground text-background font-bold text-sm text-gray-900">
                         {s}
                       </span>
                     ))}
@@ -434,11 +434,11 @@ export function BoldTypographyTemplate() {
             ].map((plan, i) => (
               <ScrollReveal key={i} delay={i * 0.1}>
                 <div className="border-4 border-background p-8">
-                  <div className="text-3xl font-black mb-6">{plan.name}</div>
-                  <div className="text-4xl sm:text-5xl font-black mb-8 break-words">{plan.price}</div>
+                  <div className="text-3xl font-black mb-6 text-gray-900">{plan.name}</div>
+                  <div className="text-4xl sm:text-5xl font-black mb-8 break-words text-gray-900">{plan.price}</div>
                   <ul className="space-y-3">
                     {plan.features.map((f, j) => (
-                      <li key={j} className="font-bold text-sm">{f}</li>
+                      <li key={j} className="font-bold text-sm text-gray-900">{f}</li>
                     ))}
                   </ul>
                   <Button className="w-full mt-8 bg-background text-foreground hover:bg-background/90 font-black text-lg h-12">
@@ -461,7 +461,7 @@ export function BoldTypographyTemplate() {
             {[1, 2, 3, 4, 5, 6].map((i) => (
               <ScrollReveal key={i} delay={i * 0.05}>
                 <div className="aspect-square bg-foreground/10 hover:bg-foreground hover:text-background transition-all cursor-pointer flex items-center justify-center group">
-                  <span className="text-4xl sm:text-5xl md:text-6xl font-black opacity-20 group-hover:opacity-100 transition-opacity break-words">
+                  <span className="text-4xl sm:text-5xl md:text-6xl font-black opacity-20 group-hover:opacity-100 transition-opacity break-words text-foreground">
                     {i.toString().padStart(2, '0')}
                   </span>
                 </div>
@@ -503,9 +503,9 @@ export function BoldTypographyTemplate() {
             ].map((item, i) => (
               <ScrollReveal key={i} delay={i * 0.05}>
                 <div className="grid grid-cols-4 gap-8 border-b-4 border-foreground pb-6">
-                  <div className="text-3xl font-black">{item.year}</div>
+                  <div className="text-3xl font-black text-gray-900">{item.year}</div>
                   <div className="col-span-3">
-                    <div className="text-2xl font-black mb-2">{item.title}</div>
+                    <div className="text-2xl font-black mb-2 text-gray-900">{item.title}</div>
                     <div className="text-lg font-bold text-muted-foreground">{item.company}</div>
                   </div>
                 </div>

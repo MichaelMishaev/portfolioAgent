@@ -108,22 +108,22 @@ return (
           {/* Decorative Elements */}
           <div className="absolute top-0 right-20 w-32 h-32 bg-yellow-300 rounded-full border-4 border-black transform rotate-12 opacity-70" />
           <div className="absolute bottom-20 left-10 w-40 h-40 bg-pink-300 border-4 border-black transform -rotate-6 opacity-60" />
-          <div className="absolute top-32 left-1/2 text-6xl transform -rotate-12">★</div>
-          <div className="absolute bottom-32 right-1/4 text-4xl transform rotate-45">✦</div>
+          <div className="absolute top-32 left-1/2 text-6xl transform -rotate-12 text-gray-900">★</div>
+          <div className="absolute bottom-32 right-1/4 text-4xl transform rotate-45 text-gray-900">✦</div>
 
           {/* Main Content */}
           <div className="relative z-10 bg-white border-4 border-black p-8 md:p-12 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transform -rotate-1">
             <div className="bg-red-500 text-white px-3 py-1 inline-block transform -rotate-2 mb-4 border-2 border-black">
-              <span className="text-sm font-bold">{portfolioData.location}</span>
+              <span className="text-sm font-bold text-gray-900">{portfolioData.location}</span>
             </div>
             <h1 className="text-3xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black mb-4 leading-none break-words text-gray-900">
               {portfolioData.name}
             </h1>
             <div className="h-1 w-32 bg-black mb-6" />
-            <p className="text-xl sm:text-2xl md:text-3xl font-bold mb-4">
+            <p className="text-xl sm:text-2xl md:text-3xl font-bold mb-4 text-white">
               {portfolioData.title}
             </p>
-            <p className="text-lg max-w-full leading-relaxed mb-8">
+            <p className="text-lg max-w-full leading-relaxed mb-8 text-white">
               {portfolioData.bio}
             </p>
             <Button className="bg-black hover:bg-gray-800 text-white font-bold border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all">
@@ -149,16 +149,16 @@ return (
                 }`}
               >
                 <div className="text-6xl mb-2">{stat.emoji}</div>
-                <div className="text-3xl sm:text-4xl font-black mb-1">{stat.number}</div>
-                <p className="text-sm font-bold uppercase">{stat.label}</p>
+                <div className="text-3xl sm:text-4xl font-black mb-1 text-gray-900">{stat.number}</div>
+                <p className="text-sm font-bold uppercase text-gray-900">{stat.label}</p>
               </div>
             </ScrollReveal>
           ))}
         </div>
         {/* Scattered Stars */}
-        <div className="absolute top-10 left-20 text-4xl transform rotate-12">★</div>
-        <div className="absolute bottom-10 right-20 text-3xl transform -rotate-12">✦</div>
-        <div className="absolute top-1/2 left-10 text-5xl transform rotate-45">✨</div>
+        <div className="absolute top-10 left-20 text-4xl transform rotate-12 text-gray-900">★</div>
+        <div className="absolute bottom-10 right-20 text-3xl transform -rotate-12 text-gray-900">✦</div>
+        <div className="absolute top-1/2 left-10 text-5xl transform rotate-45 text-gray-900">✨</div>
       </section>
 
       {/* About Section - Torn Paper Effect */}
@@ -174,7 +174,7 @@ return (
               <div className="bg-orange-400 text-white px-3 py-2 inline-block transform -rotate-2 mb-6 border-2 border-black font-black text-xl">
                 ABOUT ME
               </div>
-              <p className="text-xl leading-relaxed mb-6 font-medium">
+              <p className="text-xl leading-relaxed mb-6 font-medium text-gray-900">
                 {portfolioData.bio}
               </p>
 
@@ -234,7 +234,7 @@ return (
                 {/* Polaroid Card */}
                 <div className={`${project.color} border-4 border-black p-6 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] group-hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] group-hover:-translate-y-2 transition-all`}>
                   {/* Image Placeholder */}
-                  <div className="aspect-square bg-gray-300 border-2 border-black mb-4 flex items-center justify-center text-6xl">
+                  <div className="aspect-square bg-gray-300 border-2 border-black mb-4 flex items-center justify-center text-6xl text-foreground">
                     {index % 6 === 0 ? "📷" : index % 6 === 1 ? "✂️" : index % 6 === 2 ? "🎨" : index % 6 === 3 ? "📝" : index % 6 === 4 ? "🖼️" : "🎵"}
                   </div>
 
@@ -242,7 +242,7 @@ return (
                   <h3 className="text-2xl font-black mb-2 text-gray-900">{project.title}</h3>
 
                   {/* Description */}
-                  <p className="text-sm mb-3 font-medium">{project.description}</p>
+                  <p className="text-sm mb-3 font-medium text-gray-900">{project.description}</p>
 
                   {/* Tags */}
                   <div className="flex flex-wrap gap-2">
@@ -322,12 +322,12 @@ return (
                 }`}
               >
                 <div className="text-6xl mb-4">💬</div>
-                <p className="text-xl font-bold mb-6 leading-relaxed">
+                <p className="text-xl font-bold mb-6 leading-relaxed text-gray-900">
                   "{testimonial.quote}"
                 </p>
                 <div className="border-t-2 border-black pt-4">
-                  <p className="font-black text-lg">{testimonial.name}</p>
-                  <p className="text-sm font-bold uppercase">{testimonial.role}</p>
+                  <p className="font-black text-lg text-gray-900">{testimonial.name}</p>
+                  <p className="text-sm font-bold uppercase text-gray-900">{testimonial.role}</p>
                 </div>
               </div>
 
@@ -340,8 +340,8 @@ return (
 
       {/* Hand-drawn Arrow Decoration */}
       <div className="container mx-auto px-3 sm:px-3 py-12 text-center">
-        <div className="text-8xl">↓</div>
-        <p className="text-2xl font-bold mt-4 transform -rotate-2 inline-block bg-yellow-300 px-3 py-2 border-2 border-black">
+        <div className="text-8xl text-gray-900">↓</div>
+        <p className="text-2xl font-bold mt-4 transform -rotate-2 inline-block bg-yellow-300 px-3 py-2 border-2 border-black text-gray-900">
           Let's collaborate!
         </p>
       </div>
@@ -359,7 +359,7 @@ return (
               <h2 className="text-5xl md:text-4xl sm:text-5xl md:text-6xl font-black mb-6 break-words text-gray-900">
                 GET IN TOUCH
               </h2>
-              <p className="text-xl mb-8 max-w-full mx-auto">
+              <p className="text-xl mb-8 max-w-full mx-auto text-gray-900">
                 Available for commissions, collaborations, and creative projects that push boundaries.
               </p>
 
@@ -370,7 +370,7 @@ return (
                 </Button>
                 <Button
                   variant="outline"
-                  className="font-bold text-lg px-8 py-6 h-auto border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all"
+                  className="font-bold text-lg px-8 py-6 h-auto border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all text-gray-900"
                 >
                   <FiInstagram className="mr-2 w-5 h-5" />
                   @luna.collage
@@ -380,10 +380,10 @@ return (
           </div>
 
           {/* Decorative Stickers */}
-          <div className="absolute top-0 left-0 transform -translate-x-8 -translate-y-8 text-6xl rotate-12">
+          <div className="absolute top-0 left-0 transform -translate-x-8 -translate-y-8 text-6xl rotate-12 text-gray-900">
             ⭐
           </div>
-          <div className="absolute bottom-0 right-0 transform translate-x-8 translate-y-8 text-6xl -rotate-12">
+          <div className="absolute bottom-0 right-0 transform translate-x-8 translate-y-8 text-6xl -rotate-12 text-gray-900">
             ✨
           </div>
         </div>
@@ -469,7 +469,7 @@ return (
             <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-6 -rotate-2 [text-shadow:4px_4px_0px_rgba(0,0,0,0.1)] break-words text-gray-900">
               LET'S MAKE SOMETHING WILD!
             </h2>
-            <p className="text-2xl font-bold mb-8 rotate-1">
+            <p className="text-2xl font-bold mb-8 rotate-1 text-gray-900">
               NO BORING WEBSITES HERE! 🎨🔥
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
@@ -514,7 +514,7 @@ return (
       {/* Footer */}
       <footer className="border-t-4 border-black bg-white py-8">
         <div className="container mx-auto px-3 sm:px-3">
-          <p className="text-center font-bold text-sm">
+          <p className="text-center font-bold text-sm text-gray-900">
             © {new Date().getFullYear()} {portfolioData.name} // HANDCRAFTED WITH LOVE
           </p>
         </div>

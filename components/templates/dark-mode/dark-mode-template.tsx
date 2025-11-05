@@ -184,7 +184,7 @@ export function DarkModeTemplate() {
 
         <div className="relative z-10 text-center px-3">
           <FadeIn>
-            <h1 className="text-3xl sm:text-3xl sm:text-5xl md:text-6xl lg:text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent break-words">
+            <h1 className="text-3xl sm:text-3xl sm:text-5xl md:text-6xl lg:text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent break-words text-white">
               {portfolioData.name}
             </h1>
           </FadeIn>
@@ -219,7 +219,7 @@ export function DarkModeTemplate() {
           {portfolioData.stats.map((stat, index) => (
             <ScrollReveal key={stat.label} delay={index * 0.1}>
               <div className="text-center">
-                <div className="text-5xl md:text-4xl sm:text-5xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent mb-3 break-words">
+                <div className="text-5xl md:text-4xl sm:text-5xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent mb-3 break-words text-white">
                   {stat.value}
                 </div>
                 <div className="text-sm text-gray-400 uppercase tracking-wider">
@@ -395,7 +395,7 @@ export function DarkModeTemplate() {
       <section className="py-20 px-3 sm:px-3 bg-black border-t border-white/10">
         <div className="container mx-auto max-w-6xl">
           <ScrollReveal>
-            <h2 className="text-3xl sm:text-4xl font-bold mb-12 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-12 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent text-white">
               Skills & Expertise
             </h2>
           </ScrollReveal>
@@ -431,7 +431,7 @@ export function DarkModeTemplate() {
       <section className="py-20 px-3 sm:px-3 bg-gradient-to-b from-black to-gray-900">
         <div className="container mx-auto max-w-6xl">
           <ScrollReveal>
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-center bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-center bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent text-white">
               Pricing Plans
             </h2>
             <p className="text-gray-400 text-center mb-12">Choose the perfect plan for your needs</p>
@@ -449,7 +449,7 @@ export function DarkModeTemplate() {
                     : 'bg-white/5 border-white/10 hover:border-white/30'
                 }`}>
                   <h3 className="text-2xl font-bold mb-2 text-white">{plan.name}</h3>
-                  <div className="text-4xl sm:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent break-words">
+                  <div className="text-4xl sm:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent break-words text-white">
                     {plan.price}
                   </div>
                   <ul className="space-y-3 mb-8">
@@ -478,7 +478,7 @@ export function DarkModeTemplate() {
       <section className="py-20 px-3 sm:px-3 bg-black">
         <div className="container mx-auto max-w-6xl">
           <ScrollReveal>
-            <h2 className="text-3xl sm:text-4xl font-bold mb-12 text-center bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-12 text-center bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent text-white">
               Gallery
             </h2>
           </ScrollReveal>

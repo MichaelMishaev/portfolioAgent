@@ -349,14 +349,14 @@ export function ARSpatialTemplate() {
               transition={{ duration: 0.8 }}
               className="mb-8"
             >
-              <div className="text-8xl mb-6 filter drop-shadow-[0_0_30px_rgba(6,182,212,0.5)]">
+              <div className="text-8xl mb-6 filter drop-shadow-[0_0_30px_rgba(6,182,212,0.5)] text-gray-900">
                 👁️
               </div>
             </motion.div>
           </FloatingLayer>
 
           <FloatingLayer depth={80} delay={0.2}>
-            <h1 className="text-3xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black mb-6 bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-300 bg-clip-text text-transparent drop-shadow-[0_0_50px_rgba(6,182,212,0.3)] break-words">
+            <h1 className="text-3xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black mb-6 bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-300 bg-clip-text text-transparent drop-shadow-[0_0_50px_rgba(6,182,212,0.3)] break-words text-white">
               {portfolioData.name}
             </h1>
           </FloatingLayer>
@@ -417,7 +417,7 @@ export function ARSpatialTemplate() {
                   whileHover={{ scale: 1.05, z: 50 }}
                   style={{ transformStyle: "preserve-3d" }}
                 >
-                  <div className="text-3xl sm:text-5xl font-black bg-gradient-to-r from-cyan-300 to-purple-300 bg-clip-text text-transparent mb-2 break-words">
+                  <div className="text-3xl sm:text-5xl font-black bg-gradient-to-r from-cyan-300 to-purple-300 bg-clip-text text-transparent mb-2 break-words text-white">
                     {stat.value}
                   </div>
                   <div className="text-sm md:text-base text-gray-400">{stat.label}</div>
@@ -432,7 +432,7 @@ export function ARSpatialTemplate() {
       <section className="relative py-20 px-3">
         <div className="container mx-auto max-w-6xl">
           <ScrollReveal>
-            <h2 className="text-3xl sm:text-5xl font-bold text-center mb-12 bg-gradient-to-r from-cyan-300 to-purple-300 bg-clip-text text-transparent break-words">
+            <h2 className="text-3xl sm:text-5xl font-bold text-center mb-12 bg-gradient-to-r from-cyan-300 to-purple-300 bg-clip-text text-transparent break-words text-white">
               About the Vision
             </h2>
           </ScrollReveal>
@@ -448,7 +448,7 @@ export function ARSpatialTemplate() {
       <section className="relative py-20 px-3 bg-black/10 backdrop-blur-sm">
         <div className="container mx-auto max-w-full">
           <ScrollReveal>
-            <h2 className="text-5xl md:text-4xl sm:text-5xl md:text-6xl font-bold text-center mb-16 bg-gradient-to-r from-cyan-300 to-purple-300 bg-clip-text text-transparent break-words">
+            <h2 className="text-5xl md:text-4xl sm:text-5xl md:text-6xl font-bold text-center mb-16 bg-gradient-to-r from-cyan-300 to-purple-300 bg-clip-text text-transparent break-words text-white">
               Spatial Experiences
             </h2>
           </ScrollReveal>
@@ -471,7 +471,7 @@ export function ARSpatialTemplate() {
                       <p className="text-gray-300 mb-6 leading-relaxed flex-grow">
                         {exp.description}
                       </p>
-                      <div className="flex items-center gap-2 text-sm">
+                      <div className="flex items-center gap-2 text-sm text-gray-900">
                         <div className="px-3 py-1 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 text-gray-300">
                           {exp.tech}
                         </div>
@@ -542,7 +542,7 @@ export function ARSpatialTemplate() {
       <section className="relative py-20 px-3 bg-black/10 backdrop-blur-sm">
         <div className="container mx-auto max-w-full">
           <ScrollReveal>
-            <h2 className="text-3xl sm:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-cyan-300 to-purple-300 bg-clip-text text-transparent break-words">
+            <h2 className="text-3xl sm:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-cyan-300 to-purple-300 bg-clip-text text-transparent break-words text-white">
               Portfolio Gallery
             </h2>
           </ScrollReveal>
@@ -642,7 +642,7 @@ export function ARSpatialTemplate() {
                         {plan.features.map((feature) => (
                           <li key={feature} className="flex items-start gap-2 text-gray-300">
                             <FiZap className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5" />
-                            <span className="text-sm">{feature}</span>
+                            <span className="text-sm text-white">{feature}</span>
                           </li>
                         ))}
                       </ul>
@@ -662,7 +662,7 @@ export function ARSpatialTemplate() {
       <section className="relative py-20 px-3">
         <div className="container mx-auto max-w-full">
           <ScrollReveal>
-            <h2 className="text-3xl sm:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-cyan-300 to-purple-300 bg-clip-text text-transparent break-words">
+            <h2 className="text-3xl sm:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-cyan-300 to-purple-300 bg-clip-text text-transparent break-words text-white">
               Client Experiences
             </h2>
           </ScrollReveal>
@@ -748,7 +748,7 @@ export function ARSpatialTemplate() {
       <section id="contact" className="relative py-20 px-3">
         <div className="container mx-auto max-w-full text-center">
           <ScrollReveal>
-            <h2 className="text-5xl md:text-4xl sm:text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-300 bg-clip-text text-transparent break-words">
+            <h2 className="text-5xl md:text-4xl sm:text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-300 bg-clip-text text-transparent break-words text-white">
               Step Into the Future
             </h2>
           </ScrollReveal>

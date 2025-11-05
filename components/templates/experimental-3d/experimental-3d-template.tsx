@@ -130,7 +130,7 @@ export function Experimental3dTemplate() {
                   transition={{ duration: 0.5 }}
                   className="mb-4"
                 >
-                  <div className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black transform group-hover:scale-110 transition-transform duration-500">
+                  <div className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black transform group-hover:scale-110 transition-transform duration-500 text-gray-900">
                     {project.title}
                   </div>
                 </motion.div>
@@ -184,8 +184,8 @@ export function Experimental3dTemplate() {
                   whileHover={{ scale: 1.1 }}
                   className="p-6 bg-white/5 backdrop-blur-md rounded-lg border border-white/10"
                 >
-                  <div className="text-6xl mb-4">✦</div>
-                  <div className="text-xl font-bold">{skill}</div>
+                  <div className="text-6xl mb-4 text-gray-900">✦</div>
+                  <div className="text-xl font-bold text-gray-900">{skill}</div>
                 </motion.div>
               ))}
             </div>
@@ -203,7 +203,7 @@ export function Experimental3dTemplate() {
                   whileHover={{ scale: 1.1 }}
                   className="text-center"
                 >
-                  <div className="text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 mb-4">
+                  <div className="text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 mb-4 text-white">
                     {stat.value}
                   </div>
                   <div className="text-xl text-white/60">{stat.label}</div>
@@ -286,7 +286,7 @@ export function Experimental3dTemplate() {
               ].map((pkg, i) => (
                 <div key={i} className={`bg-white/5 backdrop-blur-xl p-8 rounded-2xl border ${pkg.popular ? 'border-purple-500 ring-4 ring-purple-500/20' : 'border-white/10'}`}>
                   {pkg.popular && <div className="text-xs font-bold text-purple-400 mb-2 uppercase">Most Popular</div>}
-                  <h4 className="text-2xl font-bold mb-2">{pkg.name}</h4>
+                  <h4 className="text-2xl font-bold mb-2 text-gray-900">{pkg.name}</h4>
                   <div className="text-4xl sm:text-5xl font-bold text-purple-400 mb-8 break-words">{pkg.price}</div>
                   <ul className="space-y-3 mb-8">
                     {pkg.features.map((f, j) => (

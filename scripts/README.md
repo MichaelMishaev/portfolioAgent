@@ -150,3 +150,186 @@ After generating screenshots, they are automatically used in the template galler
 ---
 
 **Last Updated**: October 2025
+
+---
+
+# Text Color Audit & Fix System
+
+## Overview
+
+The text color audit system prevents visibility issues by ensuring all text elements in templates have explicit color classes. This system was created after discovering that 98% of templates had text visibility problems affecting critical sections like Stats, Testimonials, Timeline, Pricing, and FAQ.
+
+## Scripts
+
+### `audit-text-colors.js`
+
+Scans all template files for text elements missing explicit color classes.
+
+**Usage:**
+```bash
+# Run audit locally (generates report)
+npm run audit:text-colors
+
+# Run in CI mode (fails if issues found)
+npm run audit:text-colors:ci
+```
+
+**Features:**
+- Scans 61 templates across all template types
+- Identifies issues in critical sections (Stats, Testimonials, Timeline, Pricing, FAQ)
+- Intelligent filtering to skip emojis, icons, and semantic colors
+- Generates detailed markdown report (docs/text-visibility-audit.md)
+- CI mode exits with error code 1 if issues detected
+
+**CI Integration:**
+- Runs automatically on pushes/PRs to main/develop
+- Only triggers when template files or audit script changes
+- Fails PR if text visibility issues detected
+- Uploads audit report as artifact on failure
+- Posts comment on PR with summary and fix instructions
+
+### `fix-text-colors.js`
+
+Automatically fixes text visibility issues with conservative, context-aware color selection.
+
+**Usage:**
+```bash
+# Preview fixes without applying (dry-run)
+npm run fix:text-colors:dry
+
+# Apply fixes (creates backups)
+npm run fix:text-colors
+```
+
+**Features:**
+- Conservative automated fixing with intelligent filtering
+- Context-aware color selection based on background colors
+- Skips emojis, icons, and decorative elements
+- Creates automatic backups (.bak.auto files)
+- Dry-run mode for safe preview
+
+**Color Selection Logic:**
+- Light backgrounds → `text-gray-900`
+- Dark backgrounds (bg-gray-900, bg-black) → `text-white`
+- Primary/gradient backgrounds → `text-white`
+- Muted backgrounds → `text-foreground`
+
+## NPM Scripts
+
+```json
+{
+  "audit:text-colors": "node scripts/audit-text-colors.js",
+  "audit:text-colors:ci": "node scripts/audit-text-colors.js --ci",
+  "fix:text-colors": "node scripts/fix-text-colors.js",
+  "fix:text-colors:dry": "node scripts/fix-text-colors.js --dry-run"
+}
+```
+
+## GitHub Actions Workflow
+
+File: `.github/workflows/text-visibility-audit.yml`
+
+**Triggers:**
+- Push to main/develop (only on template changes)
+- Pull requests to main/develop (only on template changes)
+
+**Steps:**
+1. Checkout code
+2. Setup Node.js 20
+3. Install dependencies
+4. Run text color audit in CI mode
+5. On failure: Upload audit report as artifact
+6. On failure (PR): Post comment with summary and fix instructions
+
+## Workflow Examples
+
+### Developer Workflow
+
+1. **Make template changes**
+   ```bash
+   # Edit template files
+   vi components/templates/my-template/my-template-template.tsx
+   ```
+
+2. **Run audit before committing**
+   ```bash
+   npm run audit:text-colors
+   ```
+
+3. **If issues found, preview fixes**
+   ```bash
+   npm run fix:text-colors:dry
+   ```
+
+4. **Apply fixes**
+   ```bash
+   npm run fix:text-colors
+   ```
+
+5. **Verify fixes**
+   ```bash
+   npm run audit:text-colors:ci
+   npm run build
+   ```
+
+6. **Commit and push**
+   ```bash
+   git add .
+   git commit -m "Fix text visibility issues"
+   git push
+   ```
+
+### CI/CD Workflow
+
+1. **Developer pushes changes** → GitHub Actions triggered
+2. **CI runs audit** → `npm run audit:text-colors:ci`
+3. **If issues found:**
+   - Build fails with error message
+   - Audit report uploaded as artifact
+   - PR comment posted with instructions
+   - Developer fixes locally and pushes again
+4. **If no issues:** Build continues normally
+
+## Historical Context
+
+**Bug #21: Systematic Text Visibility Crisis**
+
+- **Discovered:** 2025-11-05
+- **Scope:** 60 out of 61 templates (98%)
+- **Total Fixes:** 527 text visibility issues
+- **Impact:** Critical usability issue affecting Stats, Testimonials, Timeline, Pricing, and FAQ sections
+
+**Resolution:**
+- Created automated audit and fix tooling
+- Integrated into CI/CD pipeline
+- Fixed all existing issues
+- Prevented future regressions
+
+## Troubleshooting
+
+**False Positives:**
+
+If audit incorrectly flags elements:
+1. Check if element is icon/emoji → Add to skip pattern
+2. Check if color is semantic → Add to `TEXT_COLOR_PATTERN`
+3. Check if element is decorative → Add to skip conditions
+
+**Fix Script Not Catching Issues:**
+
+The fix script is intentionally conservative. For issues it misses:
+1. Run `npm run fix:text-colors:dry` to see what it would fix
+2. Manually fix remaining issues
+3. Consider updating `shouldFix()` function if pattern is common
+
+## Related Files
+
+- **Audit Script:** `scripts/audit-text-colors.js`
+- **Fix Script:** `scripts/fix-text-colors.js`
+- **CI Workflow:** `.github/workflows/text-visibility-audit.yml`
+- **Audit Report:** `docs/text-visibility-audit.md` (generated)
+- **Bug Documentation:** `docs/bugs.md` (Bug #21)
+- **Package Scripts:** `package.json`
+
+---
+
+**Last Updated**: November 2025

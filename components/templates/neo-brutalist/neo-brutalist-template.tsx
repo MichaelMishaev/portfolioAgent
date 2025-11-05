@@ -62,13 +62,13 @@ return (
               {portfolioData.name}
             </h1>
             <div className="h-2 w-32 bg-red-600 mb-4"></div>
-            <p className="text-xl sm:text-2xl md:text-3xl font-bold uppercase">
+            <p className="text-xl sm:text-2xl md:text-3xl font-bold uppercase text-white">
               {portfolioData.title}
             </p>
           </div>
 
           <div className="bg-red-600 text-white p-8 border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] rotate-1">
-            <p className="text-lg md:text-xl font-bold uppercase leading-tight">
+            <p className="text-lg md:text-xl font-bold uppercase leading-tight text-gray-900">
               {portfolioData.manifesto}
             </p>
           </div>
@@ -81,7 +81,7 @@ return (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             {/* Photo Placeholder */}
             <div className="bg-black border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] aspect-square flex items-center justify-center rotate-2">
-              <span className="text-9xl">⚡</span>
+              <span className="text-9xl text-white">⚡</span>
             </div>
 
             {/* Bio */}
@@ -90,7 +90,7 @@ return (
                 <h2 className="text-3xl sm:text-5xl font-black mb-4 break-words text-gray-900">
                   WHO IS THIS?
                 </h2>
-                <p className="text-lg font-bold uppercase leading-relaxed">
+                <p className="text-lg font-bold uppercase leading-relaxed text-white">
                   {portfolioData.bio}
                 </p>
               </div>
@@ -120,7 +120,7 @@ return (
                 <h3 className="text-2xl font-black mb-2 uppercase text-gray-900">
                   {skill.name}
                 </h3>
-                <p className="text-lg font-bold uppercase">
+                <p className="text-lg font-bold uppercase text-gray-900">
                   {skill.level}
                 </p>
               </div>
@@ -152,7 +152,7 @@ return (
                     {/* Header */}
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 pb-4 border-b-4 border-black">
                       <div className="flex items-baseline gap-4">
-                        <span className="text-3xl sm:text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black break-words">
+                        <span className="text-3xl sm:text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black break-words text-gray-900">
                           {project.id}
                         </span>
                         <div>
@@ -165,13 +165,13 @@ return (
                         </div>
                       </div>
                       <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
-                        <span className="text-xl font-bold">{project.year}</span>
+                        <span className="text-xl font-bold text-gray-900">{project.year}</span>
                         <FiArrowRight className="w-8 h-8 group-hover:translate-x-2 transition-transform" />
                       </div>
                     </div>
 
                     {/* Description */}
-                    <p className="text-lg font-bold uppercase leading-relaxed">
+                    <p className="text-lg font-bold uppercase leading-relaxed text-gray-900">
                       {project.desc}
                     </p>
                   </div>
@@ -201,10 +201,10 @@ return (
                 }}
               >
                 <div className="flex items-baseline gap-4 mb-4">
-                  <span className="text-4xl sm:text-5xl md:text-6xl font-black break-words">{step.step}</span>
+                  <span className="text-4xl sm:text-5xl md:text-6xl font-black break-words text-gray-900">{step.step}</span>
                   <h3 className="text-3xl font-black uppercase text-gray-900">{step.title}</h3>
                 </div>
-                <p className="text-lg font-bold uppercase">
+                <p className="text-lg font-bold uppercase text-gray-900">
                   {step.desc}
                 </p>
               </div>
@@ -231,13 +231,13 @@ return (
                   transform: `rotate(${index % 3 === 0 ? '1deg' : index % 3 === 1 ? '-1deg' : '0deg'})`,
                 }}
               >
-                <p className="text-xl font-bold uppercase mb-4 leading-relaxed">
+                <p className="text-xl font-bold uppercase mb-4 leading-relaxed text-gray-900">
                   "{testimonial.quote}"
                 </p>
                 <div className="flex items-center gap-2 pt-4 border-t-2 border-black">
                   <span className="font-black uppercase">{testimonial.client}</span>
                   <span className="text-gray-600">///</span>
-                  <span className="font-bold uppercase text-sm">{testimonial.role}</span>
+                  <span className="font-bold uppercase text-sm text-gray-900">{testimonial.role}</span>
                 </div>
               </div>
             ))}
@@ -254,7 +254,7 @@ return (
               const rotations = ["rotate-2", "-rotate-1", "rotate-1", "-rotate-2"];
               return (
                 <div key={index} className={`p-6 ${colors[index % colors.length]} border-4 border-white ${rotations[index % rotations.length]}`}>
-                  <p className="text-2xl font-black uppercase">
+                  <p className="text-2xl font-black uppercase text-white">
                     {item}
                   </p>
                 </div>
@@ -294,8 +294,8 @@ return (
               { num: '99%', label: 'SATISFACTION' }
             ].map((stat, i) => (
               <div key={i} className="bg-white p-8 border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
-                <div className="text-4xl sm:text-5xl font-black mb-2 break-words">{stat.num}</div>
-                <div className="text-lg font-bold uppercase">{stat.label}</div>
+                <div className="text-4xl sm:text-5xl font-black mb-2 break-words text-gray-900">{stat.num}</div>
+                <div className="text-lg font-bold uppercase text-gray-900">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -314,10 +314,10 @@ return (
             ].map((plan, i) => (
               <div key={i} className={`${plan.color} text-white p-8 border-8 border-black ${plan.highlight ? 'shadow-[16px_16px_0px_0px_rgba(0,0,0,1)]' : 'shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]'}`}>
                 <h3 className="text-3xl sm:text-4xl font-black mb-4 uppercase text-gray-900">{plan.name}</h3>
-                <div className="text-4xl sm:text-5xl md:text-6xl font-black mb-8 break-words">{plan.price}</div>
+                <div className="text-4xl sm:text-5xl md:text-6xl font-black mb-8 break-words text-white">{plan.price}</div>
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((f, j) => (
-                    <li key={j} className="font-bold text-lg uppercase">/// {f}</li>
+                    <li key={j} className="font-bold text-lg uppercase text-white">/// {f}</li>
                   ))}
                 </ul>
                 <Button className="w-full bg-black hover:bg-gray-800 text-white border-4 border-white font-black uppercase text-lg h-14">
@@ -367,7 +367,7 @@ return (
                 </div>
                 <div className="flex-1 bg-white p-6 border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
                   <h3 className="text-2xl font-black uppercase mb-2 text-gray-900">{item.title}</h3>
-                  <p className="font-bold uppercase text-lg">{item.company}</p>
+                  <p className="font-bold uppercase text-lg text-gray-900">{item.company}</p>
                 </div>
               </div>
             ))}
@@ -378,7 +378,7 @@ return (
       {/* Footer */}
       <footer className="border-t-4 border-black bg-black text-white py-8">
         <div className="container mx-auto px-3 max-w-full">
-          <p className="text-center font-bold uppercase text-sm">
+          <p className="text-center font-bold uppercase text-sm text-white">
             © {new Date().getFullYear()} {portfolioData.name || "ASH WOLF"} /// {"ANTI-DESIGN STUDIO" || "ANTI-DESIGN STUDIO"}
           </p>
         </div>

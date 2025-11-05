@@ -102,7 +102,7 @@ export function Y2KRetroTemplate() {
       {cursorTrail.map((particle) => (
         <motion.div
           key={particle.id}
-          className="fixed pointer-events-none text-2xl z-50"
+          className="fixed pointer-events-none text-2xl z-50 text-gray-900"
           initial={{ opacity: 1, x: particle.x, y: particle.y, scale: 1 }}
           animate={{ opacity: 0, scale: 0 }}
           transition={{ duration: 0.8 }}
@@ -132,9 +132,9 @@ export function Y2KRetroTemplate() {
       {/* Hero Section */}
       <section className="min-h-screen overflow-x-hidden max-w-full flex items-center justify-center px-3 relative">
         {/* Decorative Stars */}
-        <div className="absolute top-20 left-20 text-6xl animate-spin-slow">✨</div>
+        <div className="absolute top-20 left-20 text-6xl animate-spin-slow text-gray-900">✨</div>
         <div className="absolute top-40 right-32 text-5xl animate-bounce">💫</div>
-        <div className="absolute bottom-32 left-40 text-7xl animate-pulse">⭐</div>
+        <div className="absolute bottom-32 left-40 text-7xl animate-pulse text-gray-900">⭐</div>
         <div className="absolute bottom-20 right-20 text-6xl animate-spin-slow">🌟</div>
 
         <div className="text-center max-w-full relative z-10">
@@ -495,7 +495,7 @@ export function Y2KRetroTemplate() {
               <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-6 [text-shadow:4px_4px_0px_rgba(0,0,0,0.3)] break-words text-gray-900">
                 ✨ READY TO GO RETRO? ✨
               </h2>
-              <p className="text-2xl mb-8 font-bold">
+              <p className="text-2xl mb-8 font-bold text-gray-900">
                 LET'S CREATE SOMETHING TOTALLY RADICAL! 🎉
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">

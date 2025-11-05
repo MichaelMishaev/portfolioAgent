@@ -189,7 +189,7 @@ export function OnlineBusinessAgencyTemplate() {
                   </p>
                   <ul className="space-y-2">
                     {service.features.map((feature, j) => (
-                      <li key={j} className="flex items-center gap-2 text-sm">
+                      <li key={j} className="flex items-center gap-2 text-sm text-gray-900">
                         <FiCheckCircle className="text-blue-500 flex-shrink-0" />
                         {feature}
                       </li>

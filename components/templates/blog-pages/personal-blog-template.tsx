@@ -269,7 +269,7 @@ export function PersonalBlogTemplate() {
       {/* Header */}
       <header className="bg-white border-b sticky top-0 z-50">
         <div className="container mx-auto px-3 sm:px-3 py-4 flex items-center justify-between">
-          <Link href="/" className="text-2xl font-bold">
+          <Link href="/" className="text-2xl font-bold text-foreground">
             Sarah Mitchell
           </Link>
           <nav className="hidden md:flex items-center gap-8">
@@ -327,17 +327,17 @@ export function PersonalBlogTemplate() {
                     <FiLinkedin className="w-5 h-5" />
                   </a>
                 </div>
-                <div className="flex items-center gap-6 justify-center md:justify-start text-sm">
+                <div className="flex items-center gap-6 justify-center md:justify-start text-sm text-white">
                   <div>
-                    <div className="font-bold text-lg">{blogData.author.stats.articles}</div>
+                    <div className="font-bold text-lg text-gray-900">{blogData.author.stats.articles}</div>
                     <div className="text-gray-500">Articles</div>
                   </div>
                   <div>
-                    <div className="font-bold text-lg">{blogData.author.stats.subscribers}</div>
+                    <div className="font-bold text-lg text-gray-900">{blogData.author.stats.subscribers}</div>
                     <div className="text-gray-500">Subscribers</div>
                   </div>
                   <div>
-                    <div className="font-bold text-lg">{blogData.author.stats.views}</div>
+                    <div className="font-bold text-lg text-gray-900">{blogData.author.stats.views}</div>
                     <div className="text-gray-500">Total Views</div>
                   </div>
                 </div>
@@ -687,15 +687,15 @@ export function PersonalBlogTemplate() {
             <p className="text-sm text-blue-100 mt-4">No spam. Unsubscribe anytime.</p>
             <div className="flex items-center justify-center gap-8 mt-8 text-white">
               <div>
-                <div className="text-2xl font-bold">{blogData.author.stats.subscribers}</div>
+                <div className="text-2xl font-bold text-gray-900">{blogData.author.stats.subscribers}</div>
                 <div className="text-sm text-blue-100">Subscribers</div>
               </div>
               <div>
-                <div className="text-2xl font-bold">{blogData.author.stats.articles}</div>
+                <div className="text-2xl font-bold text-gray-900">{blogData.author.stats.articles}</div>
                 <div className="text-sm text-blue-100">Articles</div>
               </div>
               <div>
-                <div className="text-2xl font-bold">Weekly</div>
+                <div className="text-2xl font-bold text-gray-900">Weekly</div>
                 <div className="text-sm text-blue-100">Frequency</div>
               </div>
             </div>
@@ -708,7 +708,7 @@ export function PersonalBlogTemplate() {
         <div className="container mx-auto px-3 sm:px-3 max-w-full">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
             <div>
-              <p className="text-2xl font-bold mb-2">{blogData.author.name}</p>
+              <p className="text-2xl font-bold mb-2 text-gray-900">{blogData.author.name}</p>
               <p className="text-gray-600 text-sm mb-4">
                 Sharing insights on design, development, and creativity.
               </p>
@@ -726,7 +726,7 @@ export function PersonalBlogTemplate() {
             </div>
             <div>
               <h4 className="font-semibold mb-4 text-gray-900 dark:text-white">Categories</h4>
-              <ul className="space-y-2 text-sm">
+              <ul className="space-y-2 text-sm text-gray-900">
                 <li><a href="#" className="text-gray-600 hover:text-blue-600 transition-colors">Design</a></li>
                 <li><a href="#" className="text-gray-600 hover:text-blue-600 transition-colors">Development</a></li>
                 <li><a href="#" className="text-gray-600 hover:text-blue-600 transition-colors">Productivity</a></li>
@@ -735,7 +735,7 @@ export function PersonalBlogTemplate() {
             </div>
             <div>
               <h4 className="font-semibold mb-4 text-gray-900 dark:text-white">Resources</h4>
-              <ul className="space-y-2 text-sm">
+              <ul className="space-y-2 text-sm text-gray-900">
                 <li><a href="#" className="text-gray-600 hover:text-blue-600 transition-colors">Free Downloads</a></li>
                 <li><a href="#" className="text-gray-600 hover:text-blue-600 transition-colors">Design Tools</a></li>
                 <li><a href="#" className="text-gray-600 hover:text-blue-600 transition-colors">Tutorials</a></li>
@@ -744,7 +744,7 @@ export function PersonalBlogTemplate() {
             </div>
             <div>
               <h4 className="font-semibold mb-4 text-gray-900 dark:text-white">About</h4>
-              <ul className="space-y-2 text-sm">
+              <ul className="space-y-2 text-sm text-gray-900">
                 <li><a href="#" className="text-gray-600 hover:text-blue-600 transition-colors">About Me</a></li>
                 <li><a href="#" className="text-gray-600 hover:text-blue-600 transition-colors">Contact</a></li>
                 <li><a href="#" className="text-gray-600 hover:text-blue-600 transition-colors">Privacy Policy</a></li>

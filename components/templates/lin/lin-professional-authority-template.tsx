@@ -108,16 +108,16 @@ export function LinProfessionalAuthorityTemplate() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
-            <a href="#services" className="text-sm text-[#1A1A1A] hover:text-[#D4AF37] transition-colors font-medium">
+            <a href="#services" className="text-sm text-[#1A1A1A] hover:text-[#D4AF37] transition-colors font-medium text-gray-900">
               Services
             </a>
-            <a href="#about" className="text-sm text-[#1A1A1A] hover:text-[#D4AF37] transition-colors font-medium">
+            <a href="#about" className="text-sm text-[#1A1A1A] hover:text-[#D4AF37] transition-colors font-medium text-gray-900">
               About
             </a>
-            <a href="#team" className="text-sm text-[#1A1A1A] hover:text-[#D4AF37] transition-colors font-medium">
+            <a href="#team" className="text-sm text-[#1A1A1A] hover:text-[#D4AF37] transition-colors font-medium text-gray-900">
               Team
             </a>
-            <a href="#contact" className="text-sm text-[#1A1A1A] hover:text-[#D4AF37] transition-colors font-medium">
+            <a href="#contact" className="text-sm text-[#1A1A1A] hover:text-[#D4AF37] transition-colors font-medium text-gray-900">
               Contact
             </a>
           </div>
@@ -138,28 +138,28 @@ export function LinProfessionalAuthorityTemplate() {
             <div className="container mx-auto px-4 py-4 flex flex-col gap-4">
               <a
                 href="#services"
-                className="text-sm text-[#1A1A1A] hover:text-[#D4AF37] transition-colors py-2 font-medium"
+                className="text-sm text-[#1A1A1A] hover:text-[#D4AF37] transition-colors py-2 font-medium text-gray-900"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Services
               </a>
               <a
                 href="#about"
-                className="text-sm text-[#1A1A1A] hover:text-[#D4AF37] transition-colors py-2 font-medium"
+                className="text-sm text-[#1A1A1A] hover:text-[#D4AF37] transition-colors py-2 font-medium text-gray-900"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 About
               </a>
               <a
                 href="#team"
-                className="text-sm text-[#1A1A1A] hover:text-[#D4AF37] transition-colors py-2 font-medium"
+                className="text-sm text-[#1A1A1A] hover:text-[#D4AF37] transition-colors py-2 font-medium text-gray-900"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Team
               </a>
               <a
                 href="#contact"
-                className="text-sm text-[#1A1A1A] hover:text-[#D4AF37] transition-colors py-2 font-medium"
+                className="text-sm text-[#1A1A1A] hover:text-[#D4AF37] transition-colors py-2 font-medium text-gray-900"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Contact
@@ -185,7 +185,7 @@ export function LinProfessionalAuthorityTemplate() {
             </ScrollReveal>
 
             <ScrollReveal delay={0.2}>
-              <p className="text-xl sm:text-2xl md:text-3xl text-[#D4AF37] font-light mb-8">
+              <p className="text-xl sm:text-2xl md:text-3xl text-[#D4AF37] font-light mb-8 text-gray-900">
                 {firmData.tagline}
               </p>
             </ScrollReveal>
@@ -197,7 +197,7 @@ export function LinProfessionalAuthorityTemplate() {
             </ScrollReveal>
 
             <ScrollReveal delay={0.6}>
-              <Button className="bg-[#D4AF37] hover:bg-[#C19B2B] text-[#1A1A2E] px-8 py-6 text-base font-semibold shadow-lg hover:shadow-xl transition-all">
+              <Button className="bg-[#D4AF37] hover:bg-[#C19B2B] text-[#1A1A2E] px-8 py-6 text-base font-semibold shadow-lg hover:shadow-xl transition-all text-gray-900">
                 Schedule Consultation
               </Button>
             </ScrollReveal>
@@ -212,10 +212,10 @@ export function LinProfessionalAuthorityTemplate() {
             {firmData.stats.map((stat, index) => (
               <ScrollReveal key={index} delay={index * 0.1}>
                 <div className="text-center">
-                  <div className="text-3xl sm:text-5xl font-bold text-[#D4AF37] mb-2 break-words">
+                  <div className="text-3xl sm:text-5xl font-bold text-[#D4AF37] mb-2 break-words text-gray-900">
                     {stat.number}
                   </div>
-                  <div className="text-sm md:text-base text-[#555555]">{stat.label}</div>
+                  <div className="text-sm md:text-base text-[#555555] text-gray-900">{stat.label}</div>
                 </div>
               </ScrollReveal>
             ))}
@@ -281,7 +281,7 @@ export function LinProfessionalAuthorityTemplate() {
                     </div>
                     <h3 className="text-xl font-bold mb-2 text-[#1A1A1A] text-gray-900">{member.name}</h3>
                     <p className="text-[#D4AF37] font-medium mb-3">{member.role}</p>
-                    <p className="text-sm text-[#666666] leading-relaxed">{member.description}</p>
+                    <p className="text-sm text-[#666666] leading-relaxed text-white">{member.description}</p>
                   </CardContent>
                 </Card>
               </ScrollReveal>
@@ -308,7 +308,7 @@ export function LinProfessionalAuthorityTemplate() {
           <ScrollReveal delay={0.4}>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
               <a href="mailto:office@monarov.co.il">
-                <Button className="bg-[#D4AF37] hover:bg-[#C19B2B] text-[#1A1A2E] px-8 py-6 text-base font-semibold">
+                <Button className="bg-[#D4AF37] hover:bg-[#C19B2B] text-[#1A1A2E] px-8 py-6 text-base font-semibold text-gray-900">
                   <FiMail className="mr-2" />
                   Email Us
                 </Button>
@@ -316,7 +316,7 @@ export function LinProfessionalAuthorityTemplate() {
               <a href="tel:+972501234567">
                 <Button
                   variant="outline"
-                  className="border-2 border-[#D4AF37] text-[#D4AF37] hover:bg-[#D4AF37] hover:text-[#1A1A2E] px-8 py-6 text-base font-semibold"
+                  className="border-2 border-[#D4AF37] text-[#D4AF37] hover:bg-[#D4AF37] hover:text-[#1A1A2E] px-8 py-6 text-base font-semibold text-gray-900"
                 >
                   <FiPhone className="mr-2" />
                   Call Us
@@ -326,7 +326,7 @@ export function LinProfessionalAuthorityTemplate() {
           </ScrollReveal>
 
           <ScrollReveal delay={0.6}>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center text-sm">
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center text-sm text-gray-900">
               <div className="flex items-center gap-2">
                 <FiMapPin />
                 <span>Tel Aviv, Israel</span>

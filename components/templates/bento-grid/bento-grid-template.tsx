@@ -144,10 +144,10 @@ export function BentoGridTemplate() {
                   <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 leading-tight break-words text-gray-900">
                     {portfolioData.name}
                   </h1>
-                  <p className="text-xl sm:text-2xl md:text-3xl mb-6 opacity-90">
+                  <p className="text-xl sm:text-2xl md:text-3xl mb-6 opacity-90 text-gray-900">
                     {portfolioData.title}
                   </p>
-                  <p className="text-lg opacity-80 mb-8">
+                  <p className="text-lg opacity-80 mb-8 text-gray-900">
                     📍 {portfolioData.location}
                   </p>
                 </div>
@@ -168,7 +168,7 @@ export function BentoGridTemplate() {
                 <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center mx-auto mb-4 text-blue-600 dark:text-blue-400">
                   {portfolioData.stats[0].icon}
                 </div>
-                <div className="text-3xl sm:text-4xl font-bold mb-2">{portfolioData.stats[0].value}</div>
+                <div className="text-3xl sm:text-4xl font-bold mb-2 text-white">{portfolioData.stats[0].value}</div>
                 <div className="text-sm text-muted-foreground">{portfolioData.stats[0].label}</div>
               </CardContent>
             </Card>
@@ -181,7 +181,7 @@ export function BentoGridTemplate() {
                 <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900 rounded-lg flex items-center justify-center mx-auto mb-4 text-purple-600 dark:text-purple-400">
                   {portfolioData.stats[1].icon}
                 </div>
-                <div className="text-3xl sm:text-4xl font-bold mb-2">{portfolioData.stats[1].value}</div>
+                <div className="text-3xl sm:text-4xl font-bold mb-2 text-gray-900">{portfolioData.stats[1].value}</div>
                 <div className="text-sm text-muted-foreground">{portfolioData.stats[1].label}</div>
               </CardContent>
             </Card>
@@ -199,8 +199,8 @@ export function BentoGridTemplate() {
               </div>
               <CardHeader>
                 <Badge className="w-fit mb-2">Featured</Badge>
-                <CardTitle className="text-2xl">{portfolioData.projects[0].title}</CardTitle>
-                <CardDescription className="text-base">
+                <CardTitle className="text-2xl text-gray-900">{portfolioData.projects[0].title}</CardTitle>
+                <CardDescription className="text-base text-gray-900">
                   {portfolioData.projects[0].description}
                 </CardDescription>
               </CardHeader>
@@ -214,7 +214,7 @@ export function BentoGridTemplate() {
                 <div className="w-12 h-12 bg-green-100 dark:bg-green-900 rounded-lg flex items-center justify-center mx-auto mb-4 text-green-600 dark:text-green-400">
                   {portfolioData.stats[2].icon}
                 </div>
-                <div className="text-3xl sm:text-4xl font-bold mb-2">{portfolioData.stats[2].value}</div>
+                <div className="text-3xl sm:text-4xl font-bold mb-2 text-gray-900">{portfolioData.stats[2].value}</div>
                 <div className="text-sm text-muted-foreground">{portfolioData.stats[2].label}</div>
               </CardContent>
             </Card>
@@ -227,7 +227,7 @@ export function BentoGridTemplate() {
                 <div className="w-12 h-12 bg-orange-100 dark:bg-orange-900 rounded-lg flex items-center justify-center mx-auto mb-4 text-orange-600 dark:text-orange-400">
                   {portfolioData.stats[3].icon}
                 </div>
-                <div className="text-3xl sm:text-4xl font-bold mb-2">{portfolioData.stats[3].value}</div>
+                <div className="text-3xl sm:text-4xl font-bold mb-2 text-gray-900">{portfolioData.stats[3].value}</div>
                 <div className="text-sm text-muted-foreground">{portfolioData.stats[3].label}</div>
               </CardContent>
             </Card>
@@ -238,7 +238,7 @@ export function BentoGridTemplate() {
             <Card className="h-full bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-950 dark:to-pink-950 border-purple-200 dark:border-purple-800">
               <CardContent className="p-8">
                 <h3 className="text-2xl font-bold mb-4 text-gray-900">About Me</h3>
-                <p className="text-lg leading-relaxed">{portfolioData.bio}</p>
+                <p className="text-lg leading-relaxed text-white">{portfolioData.bio}</p>
               </CardContent>
             </Card>
           </ScrollReveal>
@@ -256,7 +256,7 @@ export function BentoGridTemplate() {
                       <div className="text-3xl">{item.icon}</div>
                       <div>
                         <div className="text-sm font-bold text-primary">{item.year}</div>
-                        <div className="text-sm">{item.event}</div>
+                        <div className="text-sm text-gray-900">{item.event}</div>
                       </div>
                     </div>
                   ))}
@@ -276,8 +276,8 @@ export function BentoGridTemplate() {
                 />
               </div>
               <CardHeader className="p-4">
-                <CardTitle className="text-lg">{portfolioData.projects[1].title}</CardTitle>
-                <CardDescription className="text-sm">
+                <CardTitle className="text-lg text-gray-900">{portfolioData.projects[1].title}</CardTitle>
+                <CardDescription className="text-sm text-gray-900">
                   {portfolioData.projects[1].description}
                 </CardDescription>
               </CardHeader>
@@ -295,8 +295,8 @@ export function BentoGridTemplate() {
                 />
               </div>
               <CardHeader className="p-4">
-                <CardTitle className="text-lg">{portfolioData.projects[2].title}</CardTitle>
-                <CardDescription className="text-sm">
+                <CardTitle className="text-lg text-gray-900">{portfolioData.projects[2].title}</CardTitle>
+                <CardDescription className="text-sm text-gray-900">
                   {portfolioData.projects[2].description}
                 </CardDescription>
               </CardHeader>
@@ -313,7 +313,7 @@ export function BentoGridTemplate() {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                   {portfolioData.services.map((service, index) => (
                     <div key={index} className="space-y-2">
-                      <h4 className="font-bold text-lg">{service.title}</h4>
+                      <h4 className="font-bold text-lg text-gray-900">{service.title}</h4>
                       <p className="text-sm text-muted-foreground">{service.desc}</p>
                     </div>
                   ))}
@@ -358,9 +358,9 @@ export function BentoGridTemplate() {
                           <span key={i} className="text-yellow-500">★</span>
                         ))}
                       </div>
-                      <p className="text-sm italic">"{testimonial.quote}"</p>
+                      <p className="text-sm italic text-gray-900">"{testimonial.quote}"</p>
                       <div>
-                        <div className="text-sm font-semibold">{testimonial.author}</div>
+                        <div className="text-sm font-semibold text-gray-900">{testimonial.author}</div>
                         <div className="text-xs text-muted-foreground">{testimonial.role}</div>
                       </div>
                     </div>
@@ -381,8 +381,8 @@ export function BentoGridTemplate() {
                 />
               </div>
               <CardHeader className="p-4">
-                <CardTitle className="text-lg">{portfolioData.projects[3].title}</CardTitle>
-                <CardDescription className="text-sm">{portfolioData.projects[3].description}</CardDescription>
+                <CardTitle className="text-lg text-gray-900">{portfolioData.projects[3].title}</CardTitle>
+                <CardDescription className="text-sm text-gray-900">{portfolioData.projects[3].description}</CardDescription>
                 <Badge className="mt-2 w-fit" variant="secondary">{portfolioData.projects[3].metrics}</Badge>
               </CardHeader>
             </Card>
@@ -398,8 +398,8 @@ export function BentoGridTemplate() {
                 />
               </div>
               <CardHeader className="p-4">
-                <CardTitle className="text-lg">{portfolioData.projects[4].title}</CardTitle>
-                <CardDescription className="text-sm">{portfolioData.projects[4].description}</CardDescription>
+                <CardTitle className="text-lg text-gray-900">{portfolioData.projects[4].title}</CardTitle>
+                <CardDescription className="text-sm text-gray-900">{portfolioData.projects[4].description}</CardDescription>
                 <Badge className="mt-2 w-fit" variant="secondary">{portfolioData.projects[4].metrics}</Badge>
               </CardHeader>
             </Card>
@@ -415,8 +415,8 @@ export function BentoGridTemplate() {
                 />
               </div>
               <CardHeader className="p-4">
-                <CardTitle className="text-lg">{portfolioData.projects[5].title}</CardTitle>
-                <CardDescription className="text-sm">{portfolioData.projects[5].description}</CardDescription>
+                <CardTitle className="text-lg text-gray-900">{portfolioData.projects[5].title}</CardTitle>
+                <CardDescription className="text-sm text-gray-900">{portfolioData.projects[5].description}</CardDescription>
                 <Badge className="mt-2 w-fit" variant="secondary">{portfolioData.projects[5].metrics}</Badge>
               </CardHeader>
             </Card>
@@ -455,10 +455,10 @@ export function BentoGridTemplate() {
                   {portfolioData.blogPosts.map((post, index) => (
                     <div key={index} className="space-y-1">
                       <div className="flex flex-col sm:flex-row sm:items-center gap-2">
-                        <Badge variant="secondary" className="text-xs">{post.category}</Badge>
+                        <Badge variant="secondary" className="text-xs text-gray-900">{post.category}</Badge>
                         <span className="text-xs text-muted-foreground">{post.readTime}</span>
                       </div>
-                      <h4 className="font-semibold text-sm">{post.title}</h4>
+                      <h4 className="font-semibold text-sm text-gray-900">{post.title}</h4>
                     </div>
                   ))}
                 </div>
@@ -472,20 +472,20 @@ export function BentoGridTemplate() {
               <CardContent className="p-8">
                 <div className="grid grid-cols-1 sm:grid-cols-4 gap-6 text-center">
                   <div>
-                    <div className="text-3xl sm:text-4xl font-bold mb-2">{portfolioData.socialProof.followers}</div>
-                    <div className="text-sm opacity-90">Followers</div>
+                    <div className="text-3xl sm:text-4xl font-bold mb-2 text-white">{portfolioData.socialProof.followers}</div>
+                    <div className="text-sm opacity-90 text-white">Followers</div>
                   </div>
                   <div>
-                    <div className="text-3xl sm:text-4xl font-bold mb-2">{portfolioData.socialProof.articles}</div>
-                    <div className="text-sm opacity-90">Articles</div>
+                    <div className="text-3xl sm:text-4xl font-bold mb-2 text-white">{portfolioData.socialProof.articles}</div>
+                    <div className="text-sm opacity-90 text-white">Articles</div>
                   </div>
                   <div>
-                    <div className="text-3xl sm:text-4xl font-bold mb-2">{portfolioData.socialProof.talks}</div>
-                    <div className="text-sm opacity-90">Talks</div>
+                    <div className="text-3xl sm:text-4xl font-bold mb-2 text-white">{portfolioData.socialProof.talks}</div>
+                    <div className="text-sm opacity-90 text-white">Talks</div>
                   </div>
                   <div>
-                    <div className="text-3xl sm:text-4xl font-bold mb-2">{portfolioData.socialProof.mentees}</div>
-                    <div className="text-sm opacity-90">Mentees</div>
+                    <div className="text-3xl sm:text-4xl font-bold mb-2 text-white">{portfolioData.socialProof.mentees}</div>
+                    <div className="text-sm opacity-90 text-white">Mentees</div>
                   </div>
                 </div>
               </CardContent>
@@ -496,7 +496,7 @@ export function BentoGridTemplate() {
           <ScrollReveal delay={0.9} className="md:col-span-2 lg:col-span-2">
             <Card className="h-full bg-gradient-to-br from-rose-50 to-orange-50 dark:from-rose-950 dark:to-orange-950 border-rose-200 dark:border-rose-800">
               <CardContent className="p-6">
-                <div className="text-4xl mb-3">01</div>
+                <div className="text-4xl mb-3 text-white">01</div>
                 <h3 className="font-bold text-lg mb-2 text-gray-900">Research</h3>
                 <p className="text-sm text-muted-foreground">Understanding user needs and goals</p>
               </CardContent>
@@ -506,7 +506,7 @@ export function BentoGridTemplate() {
           <ScrollReveal delay={0.95} className="md:col-span-2 lg:col-span-2">
             <Card className="h-full bg-gradient-to-br from-sky-50 to-cyan-50 dark:from-sky-950 dark:to-cyan-950 border-sky-200 dark:border-sky-800">
               <CardContent className="p-6">
-                <div className="text-4xl mb-3">02</div>
+                <div className="text-4xl mb-3 text-white">02</div>
                 <h3 className="font-bold text-lg mb-2 text-gray-900">Design</h3>
                 <p className="text-sm text-muted-foreground">Creating beautiful solutions</p>
               </CardContent>
@@ -516,7 +516,7 @@ export function BentoGridTemplate() {
           <ScrollReveal delay={1.0} className="md:col-span-2 lg:col-span-2">
             <Card className="h-full bg-gradient-to-br from-violet-50 to-purple-50 dark:from-violet-950 dark:to-purple-950 border-violet-200 dark:border-violet-800">
               <CardContent className="p-6">
-                <div className="text-4xl mb-3">03</div>
+                <div className="text-4xl mb-3 text-white">03</div>
                 <h3 className="font-bold text-lg mb-2 text-gray-900">Build</h3>
                 <p className="text-sm text-muted-foreground">Bringing ideas to life</p>
               </CardContent>
@@ -535,7 +535,7 @@ export function BentoGridTemplate() {
               <CardContent>
                 <div className="flex flex-wrap gap-2">
                   {portfolioData.tools.map((tool) => (
-                    <Badge key={tool} variant="outline" className="text-sm">
+                    <Badge key={tool} variant="outline" className="text-sm text-gray-900">
                       {tool}
                     </Badge>
                   ))}
@@ -632,7 +632,7 @@ export function BentoGridTemplate() {
             <Card className="h-full bg-gradient-to-r from-slate-100 to-gray-100 dark:from-slate-900 dark:to-gray-900 border-slate-200 dark:border-slate-800">
               <CardContent className="p-8 text-center">
                 <div className="text-5xl mb-4">💭</div>
-                <blockquote className="text-xl italic font-medium mb-4">
+                <blockquote className="text-xl italic font-medium mb-4 text-white">
                   "Design is not just what it looks like and feels like. Design is how it works."
                 </blockquote>
                 <p className="text-sm text-muted-foreground">— Steve Jobs</p>
@@ -645,7 +645,7 @@ export function BentoGridTemplate() {
             <Card className="bg-gradient-to-r from-slate-900 to-slate-700 text-white border-0">
               <CardContent className="p-8 text-center">
                 <h3 className="text-3xl font-bold mb-4 text-gray-900">Ready to Start Your Project?</h3>
-                <p className="text-lg mb-6 opacity-90">
+                <p className="text-lg mb-6 opacity-90 text-white">
                   Let's create something amazing together
                 </p>
                 <div className="flex flex-col gap-4 sm:flex-row gap-4 justify-center items-center">
@@ -677,7 +677,7 @@ export function BentoGridTemplate() {
             {[{n:"Starter",p:"$49"},{n:"Professional",p:"$149"},{n:"Enterprise",p:"$499"}].map((p,i) => (
               <div key={i} className="rounded-3xl border-2 p-8 hover:shadow-xl transition-shadow">
                 <h3 className="text-2xl font-bold mb-4 text-gray-900">{p.n}</h3>
-                <div className="text-4xl sm:text-5xl font-bold mb-6 break-words">{p.p}</div>
+                <div className="text-4xl sm:text-5xl font-bold mb-6 break-words text-gray-900">{p.p}</div>
                 <Button className="w-full">Choose Plan</Button>
               </div>
             ))}

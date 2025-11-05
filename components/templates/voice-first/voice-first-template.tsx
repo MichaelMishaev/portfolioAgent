@@ -163,7 +163,7 @@ export function VoiceFirstTemplate() {
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              className="text-3xl sm:text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent break-words"
+              className="text-3xl sm:text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent break-words text-white"
             >
               {portfolioData.name}
             </motion.h1>
@@ -301,7 +301,7 @@ export function VoiceFirstTemplate() {
                         {msg.type === "assistant" && (
                           <FiMessageSquare className="w-4 h-4 text-blue-400" />
                         )}
-                        <span className="text-xs opacity-70">{msg.timestamp}</span>
+                        <span className="text-xs opacity-70 text-white">{msg.timestamp}</span>
                       </div>
                       <p className="leading-relaxed">{msg.text}</p>
                     </div>
@@ -402,7 +402,7 @@ export function VoiceFirstTemplate() {
       <section id="contact" className="py-20 px-3">
         <div className="container mx-auto max-w-full text-center">
           <ScrollReveal>
-            <h2 className="text-5xl md:text-4xl sm:text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent break-words">
+            <h2 className="text-5xl md:text-4xl sm:text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent break-words text-white">
               Let's Talk About Voice
             </h2>
           </ScrollReveal>
@@ -552,7 +552,7 @@ export function VoiceFirstTemplate() {
             <h2 className="text-4xl md:text-4xl sm:text-5xl md:text-6xl font-bold mb-6 break-words text-gray-900">
               Ready to Go Voice-First?
             </h2>
-            <p className="text-xl mb-8 opacity-90">
+            <p className="text-xl mb-8 opacity-90 text-foreground">
               Let's build the future of voice interaction together
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -251,7 +251,7 @@ export function OnlineBusinessCourseTemplate() {
                       </div>
                     </div>
                     {!module.locked && (
-                      <Button variant="ghost" size="sm" className="self-start sm:self-center flex-shrink-0 text-xs sm:text-sm">
+                      <Button variant="ghost" size="sm" className="self-start sm:self-center flex-shrink-0 text-xs sm:text-sm text-gray-900">
                         <span className="hidden sm:inline">{data.curriculum?.preview || "Preview"}</span>
                         <FiArrowRight className="sm:ml-2" />
                       </Button>
@@ -287,12 +287,12 @@ export function OnlineBusinessCourseTemplate() {
                   {data.pricing?.essentials?.description || "Perfect for getting started"}
                 </p>
                 <div className="mb-6">
-                  <span className="text-3xl sm:text-3xl sm:text-4xl font-bold">$297</span>
+                  <span className="text-3xl sm:text-3xl sm:text-4xl font-bold text-gray-900">$297</span>
                   <span className="text-gray-600 dark:text-gray-400 ml-2 text-sm">{data.pricing?.oneTime || "one-time"}</span>
                 </div>
                 <ul className="space-y-3 mb-8">
                   {["Modules 1-3", "Video Lessons", "Basic Workbooks", "Email Support"].map((feature, i) => (
-                    <li key={i} className="flex items-start gap-2 text-sm">
+                    <li key={i} className="flex items-start gap-2 text-sm text-gray-900">
                       <FiCheckCircle className="text-green-500 flex-shrink-0 mt-0.5" />
                       <span className="break-words">{feature}</span>
                     </li>
@@ -319,12 +319,12 @@ export function OnlineBusinessCourseTemplate() {
                   {data.pricing?.complete?.description || "Everything you need to succeed"}
                 </p>
                 <div className="mb-6">
-                  <span className="text-3xl sm:text-3xl sm:text-4xl font-bold">$697</span>
+                  <span className="text-3xl sm:text-3xl sm:text-4xl font-bold text-gray-900">$697</span>
                   <span className="text-gray-600 dark:text-gray-400 ml-2 line-through text-sm">$997</span>
                 </div>
                 <ul className="space-y-3 mb-8">
                   {["All 8 Modules", "120+ Video Lessons", "Premium Workbooks", "Private Community", "Live Q&A Sessions", "Certificate"].map((feature, i) => (
-                    <li key={i} className="flex items-start gap-2 text-sm">
+                    <li key={i} className="flex items-start gap-2 text-sm text-gray-900">
                       <FiCheckCircle className="text-purple-500 flex-shrink-0 mt-0.5" />
                       <span className="break-words">{feature}</span>
                     </li>
@@ -346,12 +346,12 @@ export function OnlineBusinessCourseTemplate() {
                   {data.pricing?.vip?.description || "For serious entrepreneurs"}
                 </p>
                 <div className="mb-6">
-                  <span className="text-3xl sm:text-3xl sm:text-4xl font-bold">$1,997</span>
+                  <span className="text-3xl sm:text-3xl sm:text-4xl font-bold text-gray-900">$1,997</span>
                   <span className="text-gray-400 ml-2 text-sm">{data.pricing?.oneTime || "one-time"}</span>
                 </div>
                 <ul className="space-y-3 mb-8">
                   {["Everything in Complete", "1-on-1 Coaching Calls", "Personalized Feedback", "Implementation Support", "Bonus Templates", "Priority Support"].map((feature, i) => (
-                    <li key={i} className="flex items-start gap-2 text-sm">
+                    <li key={i} className="flex items-start gap-2 text-sm text-gray-900">
                       <FiCheckCircle className="text-yellow-400 flex-shrink-0 mt-0.5" />
                       <span className="break-words">{feature}</span>
                     </li>

@@ -144,7 +144,7 @@ export function KineticTypographyTemplate() {
           viewport={{ once: true }}
         >
           <motion.p
-            className="text-3xl sm:text-4xl md:text-6xl font-light leading-tight"
+            className="text-3xl sm:text-4xl md:text-6xl font-light leading-tight text-gray-900"
             animate={{
               fontWeight: [300, 700, 300],
             }}
@@ -173,7 +173,7 @@ export function KineticTypographyTemplate() {
               className="border-b border-white/20 pb-8 cursor-pointer"
             >
               <motion.h3
-                className="text-3xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black break-words"
+                className="text-3xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black break-words text-gray-900"
                 animate={{
                   textShadow: [
                     "0 0 0px rgba(255,255,255,0)",
@@ -220,7 +220,7 @@ export function KineticTypographyTemplate() {
                 {stat.number}{stat.suffix}
               </motion.div>
               <motion.div
-                className="text-2xl tracking-widest"
+                className="text-2xl tracking-widest text-gray-900"
                 animate={{
                   opacity: [0.5, 1, 0.5],
                 }}
@@ -241,7 +241,7 @@ export function KineticTypographyTemplate() {
       <section className="min-h-screen overflow-x-hidden max-w-full flex items-center justify-center px-3">
         <div className="space-y-16 max-w-full w-full">
           <motion.h2
-            className="text-3xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-center mb-20 break-words"
+            className="text-3xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-center mb-20 break-words text-gray-900"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -260,7 +260,7 @@ export function KineticTypographyTemplate() {
             >
               <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                 <motion.h3
-                  className="text-3xl sm:text-5xl md:text-6xl font-black break-words"
+                  className="text-3xl sm:text-5xl md:text-6xl font-black break-words text-gray-900"
                   whileHover={{
                     scaleX: 1.05,
                     letterSpacing: "0.05em",
@@ -269,7 +269,7 @@ export function KineticTypographyTemplate() {
                 >
                   {project.title}
                 </motion.h3>
-                <div className="flex gap-8 text-xl font-mono">
+                <div className="flex gap-8 text-xl font-mono text-gray-900">
                   <span className="text-gray-500">{project.year}</span>
                   <span className="text-gray-400">{project.type}</span>
                 </div>
@@ -283,7 +283,7 @@ export function KineticTypographyTemplate() {
       <section className="min-h-screen overflow-x-hidden max-w-full flex items-center justify-center px-3">
         <div className="max-w-full w-full">
           <motion.h2
-            className="text-3xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-center mb-20 break-words"
+            className="text-3xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-center mb-20 break-words text-gray-900"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -306,7 +306,7 @@ export function KineticTypographyTemplate() {
                 className="border border-white/20 p-8 text-center transition-colors"
               >
                 <motion.h3
-                  className="text-3xl font-black"
+                  className="text-3xl font-black text-gray-900"
                   animate={{
                     textShadow: [
                       "0 0 0px rgba(255,255,255,0)",
@@ -341,7 +341,7 @@ export function KineticTypographyTemplate() {
               className="border border-white/20 p-12"
             >
               <motion.p
-                className="text-3xl sm:text-4xl md:text-5xl font-light mb-8 leading-tight"
+                className="text-3xl sm:text-4xl md:text-5xl font-light mb-8 leading-tight text-gray-900"
                 animate={{
                   opacity: [1, 0.8, 1],
                 }}
@@ -354,7 +354,7 @@ export function KineticTypographyTemplate() {
                 "{testimonial.quote}"
               </motion.p>
               <motion.div
-                className="text-2xl font-black tracking-widest"
+                className="text-2xl font-black tracking-widest text-gray-900"
                 animate={{
                   letterSpacing: ["0.2em", "0.3em", "0.2em"],
                 }}
@@ -409,7 +409,7 @@ export function KineticTypographyTemplate() {
       <section className="py-32 px-3 sm:px-3 bg-white text-black">
         <div className="container mx-auto max-w-6xl">
           <motion.h2
-            className="text-5xl sm:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl lg:text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black mb-20 tracking-tighter break-words"
+            className="text-5xl sm:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl lg:text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black mb-20 tracking-tighter break-words text-gray-900"
             initial={{ opacity: 0, x: -100 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -432,7 +432,7 @@ export function KineticTypographyTemplate() {
                 <h3 className="text-3xl font-black mb-6 tracking-tight text-gray-900">{group.cat}</h3>
                 <div className="space-y-4">
                   {group.items.map((item, j) => (
-                    <div key={j} className="text-3xl sm:text-4xl font-bold tracking-tight opacity-60 hover:opacity-100 transition-opacity">
+                    <div key={j} className="text-3xl sm:text-4xl font-bold tracking-tight opacity-60 hover:opacity-100 transition-opacity text-gray-900">
                       {item}
                     </div>
                   ))}
@@ -475,7 +475,7 @@ export function KineticTypographyTemplate() {
       <section className="py-32 px-3 sm:px-3 bg-white text-black">
         <div className="container mx-auto max-w-6xl">
           <motion.h2
-            className="text-5xl sm:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl lg:text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black mb-20 tracking-tighter break-words"
+            className="text-5xl sm:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl lg:text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black mb-20 tracking-tighter break-words text-gray-900"
             initial={{ opacity: 0, x: 100 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -497,11 +497,11 @@ export function KineticTypographyTemplate() {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.15 }}
               >
-                <div className="text-3xl sm:text-4xl font-black mb-4">{plan.name}</div>
-                <div className="text-4xl sm:text-5xl md:text-6xl font-black mb-8 break-words">{plan.price}</div>
+                <div className="text-3xl sm:text-4xl font-black mb-4 text-gray-900">{plan.name}</div>
+                <div className="text-4xl sm:text-5xl md:text-6xl font-black mb-8 break-words text-gray-900">{plan.price}</div>
                 <ul className="space-y-4">
                   {plan.features.map((f, j) => (
-                    <li key={j} className="text-lg font-bold">{f}</li>
+                    <li key={j} className="text-lg font-bold text-gray-900">{f}</li>
                   ))}
                 </ul>
               </motion.div>
@@ -542,7 +542,7 @@ export function KineticTypographyTemplate() {
       <section className="py-32 px-3 sm:px-3 bg-white text-black">
         <div className="container mx-auto max-w-6xl text-center">
           <motion.h2
-            className="text-6xl md:text-[12rem] font-black tracking-tighter leading-none mb-12"
+            className="text-6xl md:text-[12rem] font-black tracking-tighter leading-none mb-12 text-gray-900"
             initial={{ opacity: 0, scale: 0.5 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}

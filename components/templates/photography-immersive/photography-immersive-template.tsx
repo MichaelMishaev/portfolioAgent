@@ -76,13 +76,13 @@ export function PhotographyImmersiveTemplate() {
             className="md:hidden bg-black/95 backdrop-blur-sm"
           >
             <div className="container mx-auto px-6 py-6 flex flex-col gap-4">
-              <a href="#gallery" className="text-xs uppercase tracking-widest py-2" onClick={() => setMobileMenuOpen(false)}>
+              <a href="#gallery" className="text-xs uppercase tracking-widest py-2 text-white" onClick={() => setMobileMenuOpen(false)}>
                 Gallery
               </a>
-              <a href="#about" className="text-xs uppercase tracking-widest py-2" onClick={() => setMobileMenuOpen(false)}>
+              <a href="#about" className="text-xs uppercase tracking-widest py-2 text-gray-900" onClick={() => setMobileMenuOpen(false)}>
                 {tt.common.about}
               </a>
-              <a href="#contact" className="text-xs uppercase tracking-widest py-2" onClick={() => setMobileMenuOpen(false)}>
+              <a href="#contact" className="text-xs uppercase tracking-widest py-2 text-gray-900" onClick={() => setMobileMenuOpen(false)}>
                 {tt.common.contact}
               </a>
             </div>
@@ -363,7 +363,7 @@ export function PhotographyImmersiveTemplate() {
             {['Portrait Photography', 'Landscape Photography', 'Wedding Photography', 'Commercial Photography', 'Fine Art Photography', 'Editorial Photography'].map((skill, i) => (
               <ScrollReveal key={i} delay={i * 0.1}>
                 <div className="border border-white/10 p-8 text-center hover:bg-white/5 transition-colors duration-300">
-                  <span className="text-sm font-light tracking-wide">{skill}</span>
+                  <span className="text-sm font-light tracking-wide text-gray-900">{skill}</span>
                 </div>
               </ScrollReveal>
             ))}
@@ -390,7 +390,7 @@ export function PhotographyImmersiveTemplate() {
               <ScrollReveal key={i} delay={i * 0.15}>
                 <div className={`border ${pkg.featured ? 'border-white' : 'border-white/20'} p-10 hover:border-white/60 transition-colors`}>
                   <div className="text-xs uppercase tracking-widest mb-8 text-white/60">{pkg.name}</div>
-                  <div className="text-5xl font-light mb-12">{pkg.price}</div>
+                  <div className="text-5xl font-light mb-12 text-gray-900">{pkg.price}</div>
                   <ul className="space-y-4 mb-12">
                     {pkg.features.map((f, idx) => (
                       <li key={idx} className="text-sm text-white/70 flex items-center gap-3">
@@ -456,7 +456,7 @@ export function PhotographyImmersiveTemplate() {
                     <div className="text-3xl font-light text-white/60">{item.year}</div>
                   </div>
                   <div className="md:col-span-4 border-l border-white/20 pl-8">
-                    <h4 className="text-2xl font-light mb-2">{item.title}</h4>
+                    <h4 className="text-2xl font-light mb-2 text-gray-900">{item.title}</h4>
                     <p className="text-white/60 leading-relaxed">{item.desc}</p>
                   </div>
                 </div>

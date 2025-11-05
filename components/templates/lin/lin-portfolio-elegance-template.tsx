@@ -88,13 +88,13 @@ export function LinPortfolioEleganceTemplate() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
-            <a href="#about" className="text-sm text-[#1A1A1A] hover:text-[#C9A87C] transition-colors">
+            <a href="#about" className="text-sm text-[#1A1A1A] hover:text-[#C9A87C] transition-colors text-gray-900">
               About
             </a>
-            <a href="#portfolio" className="text-sm text-[#1A1A1A] hover:text-[#C9A87C] transition-colors">
+            <a href="#portfolio" className="text-sm text-[#1A1A1A] hover:text-[#C9A87C] transition-colors text-gray-900">
               Portfolio
             </a>
-            <a href="#contact" className="text-sm text-[#1A1A1A] hover:text-[#C9A87C] transition-colors">
+            <a href="#contact" className="text-sm text-[#1A1A1A] hover:text-[#C9A87C] transition-colors text-gray-900">
               Contact
             </a>
           </div>
@@ -115,21 +115,21 @@ export function LinPortfolioEleganceTemplate() {
             <div className="container mx-auto px-4 py-4 flex flex-col gap-4">
               <a
                 href="#about"
-                className="text-sm text-[#1A1A1A] hover:text-[#C9A87C] transition-colors py-2"
+                className="text-sm text-[#1A1A1A] hover:text-[#C9A87C] transition-colors py-2 text-gray-900"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 About
               </a>
               <a
                 href="#portfolio"
-                className="text-sm text-[#1A1A1A] hover:text-[#C9A87C] transition-colors py-2"
+                className="text-sm text-[#1A1A1A] hover:text-[#C9A87C] transition-colors py-2 text-gray-900"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Portfolio
               </a>
               <a
                 href="#contact"
-                className="text-sm text-[#1A1A1A] hover:text-[#C9A87C] transition-colors py-2"
+                className="text-sm text-[#1A1A1A] hover:text-[#C9A87C] transition-colors py-2 text-gray-900"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Contact
@@ -148,13 +148,13 @@ export function LinPortfolioEleganceTemplate() {
         </ScrollReveal>
 
         <ScrollReveal delay={0.2}>
-          <p className="text-xl md:text-2xl text-[#C9A87C] font-light mb-8">
+          <p className="text-xl md:text-2xl text-[#C9A87C] font-light mb-8 text-gray-900">
             {portfolioData.tagline}
           </p>
         </ScrollReveal>
 
         <ScrollReveal delay={0.4}>
-          <p className="text-base md:text-lg text-[#666666] max-w-2xl mx-auto leading-relaxed">
+          <p className="text-base md:text-lg text-[#666666] max-w-2xl mx-auto leading-relaxed text-gray-900">
             {portfolioData.bio}
           </p>
         </ScrollReveal>
@@ -180,7 +180,7 @@ export function LinPortfolioEleganceTemplate() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                      <p className="text-sm font-light mb-1 text-[#C9A87C]">{project.category}</p>
+                      <p className="text-sm font-light mb-1 text-[#C9A87C] text-white">{project.category}</p>
                       <h3 className="text-xl font-light text-gray-900">{project.title}</h3>
                     </div>
                   </div>

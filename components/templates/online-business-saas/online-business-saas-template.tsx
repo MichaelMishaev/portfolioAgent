@@ -42,7 +42,7 @@ export function OnlineBusinessSaasTemplate() {
           <Badge className="mb-6" variant="secondary">
             {data.badge || "Trusted by 10,000+ teams"}
           </Badge>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-primary to-primary/50 bg-clip-text text-transparent break-words">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-primary to-primary/50 bg-clip-text text-transparent break-words text-white">
             {data.name || "ProductFlow"}
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-full mx-auto">
@@ -142,12 +142,12 @@ export function OnlineBusinessSaasTemplate() {
                 )}
                 <CardContent className="p-8">
                   <h3 className="text-2xl font-bold mb-2 text-gray-900">{plan.name}</h3>
-                  <div className="text-3xl sm:text-4xl font-bold mb-6">{plan.price}</div>
+                  <div className="text-3xl sm:text-4xl font-bold mb-6 text-gray-900">{plan.price}</div>
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, i) => (
                       <li key={i} className="flex items-start gap-2">
                         <FiCheck className="text-primary mt-1 flex-shrink-0" />
-                        <span className="text-sm">{feature}</span>
+                        <span className="text-sm text-gray-900">{feature}</span>
                       </li>
                     ))}
                   </ul>
@@ -279,7 +279,7 @@ export function OnlineBusinessSaasTemplate() {
               <Card className="hover:shadow-lg transition-all hover:scale-105 cursor-pointer">
                 <CardContent className="p-6 text-center">
                   <div className="text-primary mb-2 flex justify-center">{integration.icon}</div>
-                  <p className="text-sm font-medium">{integration.name}</p>
+                  <p className="text-sm font-medium text-gray-900">{integration.name}</p>
                 </CardContent>
               </Card>
             </ScrollReveal>
@@ -336,7 +336,7 @@ export function OnlineBusinessSaasTemplate() {
             <h2 className="text-3xl md:text-4xl sm:text-5xl font-bold mb-4 break-words text-gray-900">
               {data.cta?.title || "Ready to transform your workflow?"}
             </h2>
-            <p className="text-xl mb-8 opacity-90">
+            <p className="text-xl mb-8 opacity-90 text-white">
               {data.cta?.subtitle || "Join thousands of teams shipping better products, faster."}
             </p>
             <Button size="lg" variant="secondary">

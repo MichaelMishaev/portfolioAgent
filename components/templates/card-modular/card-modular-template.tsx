@@ -361,10 +361,10 @@ return (
               <div className="w-24 h-24 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full mx-auto mb-6 flex items-center justify-center text-white text-3xl font-bold">
                 {portfolioData.name.split(" ").map(n => n[0]).join("")}
               </div>
-              <CardTitle className="text-5xl md:text-4xl sm:text-5xl md:text-6xl font-bold mb-4 break-words">
+              <CardTitle className="text-5xl md:text-4xl sm:text-5xl md:text-6xl font-bold mb-4 break-words text-white">
                 {portfolioData.name}
               </CardTitle>
-              <CardDescription className="text-2xl">
+              <CardDescription className="text-2xl text-gray-900">
                 {portfolioData.title}
               </CardDescription>
             </CardHeader>
@@ -425,7 +425,7 @@ return (
                 <CardContent>
                   {/* Progress Bar */}
                   <div className="mb-4">
-                    <div className="flex justify-between text-xs mb-1">
+                    <div className="flex justify-between text-xs mb-1 text-foreground">
                       <span className="text-muted-foreground">Proficiency</span>
                       <span className="font-semibold">{skill.percentage}%</span>
                     </div>
@@ -438,7 +438,7 @@ return (
                   </div>
                   <div className="flex flex-wrap gap-2">
                     {skill.tools.map((tool) => (
-                      <Badge key={tool} variant="outline" className="text-xs">
+                      <Badge key={tool} variant="outline" className="text-xs text-gray-900">
                         {tool}
                       </Badge>
                     ))}
@@ -504,7 +504,7 @@ return (
                   {/* Tags */}
                   <div className="flex flex-wrap gap-2 pt-2">
                     {project.tags.map((tag) => (
-                      <Badge key={tag} variant="outline" className="text-xs">
+                      <Badge key={tag} variant="outline" className="text-xs text-gray-900">
                         {tag}
                       </Badge>
                     ))}
@@ -575,7 +575,7 @@ return (
             <ScrollReveal key={service.title} delay={index * 0.1}>
               <Card className="h-full hover:shadow-xl transition-shadow">
                 <CardHeader>
-                  <CardTitle className="text-2xl">{service.title}</CardTitle>
+                  <CardTitle className="text-2xl text-gray-900">{service.title}</CardTitle>
                   <CardDescription>{service.description}</CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -584,7 +584,7 @@ return (
                   </div>
                   <ul className="space-y-2">
                     {service.features.map((feature, idx) => (
-                      <li key={idx} className="text-sm flex items-center gap-2">
+                      <li key={idx} className="text-sm flex items-center gap-2 text-gray-900">
                         <span className="text-primary">✓</span>
                         {feature}
                       </li>
@@ -617,7 +617,7 @@ return (
                       <span key={i} className="text-yellow-500">★</span>
                     ))}
                   </div>
-                  <p className="text-lg italic mb-6">"{testimonial.quote}"</p>
+                  <p className="text-lg italic mb-6 text-gray-900">"{testimonial.quote}"</p>
                   <div className="border-t pt-4">
                     <p className="font-bold">{testimonial.author}</p>
                     <p className="text-sm text-muted-foreground">{testimonial.role}</p>
@@ -654,10 +654,10 @@ return (
                     {exp.description}
                   </p>
                   <div className="space-y-2">
-                    <p className="text-sm font-semibold">Key Achievements:</p>
+                    <p className="text-sm font-semibold text-gray-900">Key Achievements:</p>
                     <ul className="space-y-1">
                       {exp.achievements.map((achievement, idx) => (
-                        <li key={idx} className="text-sm flex items-start gap-2">
+                        <li key={idx} className="text-sm flex items-start gap-2 text-gray-900">
                           <span className="text-primary mt-1">✓</span>
                           <span>{achievement}</span>
                         </li>
@@ -737,7 +737,7 @@ return (
               <Card className="h-full hover:shadow-xl transition-shadow cursor-pointer group">
                 <CardHeader>
                   <div className="flex items-center gap-2 mb-2">
-                    <Badge variant="secondary" className="text-xs">{post.category}</Badge>
+                    <Badge variant="secondary" className="text-xs text-gray-900">{post.category}</Badge>
                     <span className="text-xs text-muted-foreground">{post.readTime}</span>
                   </div>
                   <CardTitle className="text-xl group-hover:text-primary transition-colors">
@@ -780,7 +780,7 @@ return (
                 <CardContent>
                   <div className="flex flex-wrap gap-3">
                     {tools.map((tool) => (
-                      <Badge key={tool} variant="secondary" className="px-3 py-2 text-sm">
+                      <Badge key={tool} variant="secondary" className="px-3 py-2 text-sm text-gray-900">
                         {tool}
                       </Badge>
                     ))}
@@ -825,10 +825,10 @@ return (
         <ScrollReveal>
           <Card className="max-w-full mx-auto">
             <CardHeader className="text-center">
-              <CardTitle className="text-3xl sm:text-5xl font-bold mb-4 break-words">
+              <CardTitle className="text-3xl sm:text-5xl font-bold mb-4 break-words text-gray-900">
                 Let's Connect
               </CardTitle>
-              <CardDescription className="text-lg">
+              <CardDescription className="text-lg text-gray-900">
                 I'm always open to discussing new projects, creative ideas, or opportunities.
               </CardDescription>
             </CardHeader>
@@ -868,8 +868,8 @@ return (
             ].map((plan,i) => (
               <Card key={i} className="p-6 hover:shadow-lg transition-shadow">
                 <h3 className="text-2xl font-bold mb-2 text-gray-900">{plan.n}</h3>
-                <div className="text-3xl sm:text-4xl font-bold mb-4">{plan.p}</div>
-                <ul className="space-y-2">{plan.f.map((f,j) => <li key={j} className="text-sm">✓ {f}</li>)}</ul>
+                <div className="text-3xl sm:text-4xl font-bold mb-4 text-gray-900">{plan.p}</div>
+                <ul className="space-y-2">{plan.f.map((f,j) => <li key={j} className="text-sm text-gray-900">✓ {f}</li>)}</ul>
               </Card>
             ))}
           </div>

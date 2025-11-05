@@ -293,7 +293,7 @@ export function ArchetypesEditorialTemplate() {
                         <Badge
                           key={tIdx}
                           variant="outline"
-                          className="border-2 border-slate-900 dark:border-white font-bold text-xs"
+                          className="border-2 border-slate-900 dark:border-white font-bold text-xs text-gray-900"
                         >
                           {trait}
                         </Badge>
@@ -357,7 +357,7 @@ export function ArchetypesEditorialTemplate() {
                     ].map((item, idx) => (
                       <li key={idx} className="flex items-start gap-4">
                         <FiCheck className="w-5 h-5 sm:w-6 sm:h-6 text-green-500 flex-shrink-0 mt-1" />
-                        <span className="text-base sm:text-lg leading-relaxed">{item}</span>
+                        <span className="text-base sm:text-lg leading-relaxed text-gray-900">{item}</span>
                       </li>
                     ))}
                   </ul>
@@ -387,7 +387,7 @@ export function ArchetypesEditorialTemplate() {
                           <div className="w-full h-0.5 bg-red-500 rotate-45 relative top-2.5" />
                           <div className="w-full h-0.5 bg-red-500 -rotate-45 relative -top-0" />
                         </div>
-                        <span className="text-base sm:text-lg leading-relaxed">{item}</span>
+                        <span className="text-base sm:text-lg leading-relaxed text-gray-900">{item}</span>
                       </li>
                     ))}
                   </ul>
@@ -472,16 +472,16 @@ export function ArchetypesEditorialTemplate() {
               <div className="bg-blue-600 text-white p-6 sm:p-10 border-4 border-slate-900 dark:border-white shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] dark:shadow-[8px_8px_0px_0px_rgba(255,255,255,1)] max-w-4xl mx-auto">
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 text-center">
                   <div>
-                    <div className="text-3xl sm:text-3xl sm:text-5xl font-black mb-2 break-words">4.9/5</div>
-                    <div className="text-sm sm:text-base font-bold">Average Rating</div>
+                    <div className="text-3xl sm:text-3xl sm:text-5xl font-black mb-2 break-words text-white">4.9/5</div>
+                    <div className="text-sm sm:text-base font-bold text-white">Average Rating</div>
                   </div>
                   <div>
-                    <div className="text-3xl sm:text-3xl sm:text-5xl font-black mb-2 break-words">2,847</div>
-                    <div className="text-sm sm:text-base font-bold">Success Stories</div>
+                    <div className="text-3xl sm:text-3xl sm:text-5xl font-black mb-2 break-words text-gray-900">2,847</div>
+                    <div className="text-sm sm:text-base font-bold text-gray-900">Success Stories</div>
                   </div>
                   <div>
-                    <div className="text-3xl sm:text-3xl sm:text-5xl font-black mb-2 break-words">98%</div>
-                    <div className="text-sm sm:text-base font-bold">Would Recommend</div>
+                    <div className="text-3xl sm:text-3xl sm:text-5xl font-black mb-2 break-words text-gray-900">98%</div>
+                    <div className="text-sm sm:text-base font-bold text-gray-900">Would Recommend</div>
                   </div>
                 </div>
               </div>
@@ -551,7 +551,7 @@ export function ArchetypesEditorialTemplate() {
                   {/* Pay in Full */}
                   <div className="border-4 border-slate-900 dark:border-white p-6 sm:p-8 text-center bg-blue-50 dark:bg-slate-800">
                     <div className="text-sm font-bold mb-2 text-gray-600 dark:text-gray-400">PAY IN FULL</div>
-                    <div className="text-4xl sm:text-5xl md:text-6xl font-black mb-2 break-words">{programDetails.investment.full}</div>
+                    <div className="text-4xl sm:text-5xl md:text-6xl font-black mb-2 break-words text-white">{programDetails.investment.full}</div>
                     <div className="text-sm sm:text-base font-bold text-green-600 mb-4">Save $781</div>
                     <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-black border-4 border-slate-900 dark:border-white py-4 sm:py-6 text-base sm:text-lg">
                       ENROLL NOW
@@ -561,7 +561,7 @@ export function ArchetypesEditorialTemplate() {
                   {/* Payment Plan */}
                   <div className="border-4 border-slate-900 dark:border-white p-6 sm:p-8 text-center">
                     <div className="text-sm font-bold mb-2 text-gray-600 dark:text-gray-400">PAYMENT PLAN</div>
-                    <div className="text-4xl sm:text-5xl md:text-6xl font-black mb-2 break-words">{programDetails.investment.payment}</div>
+                    <div className="text-4xl sm:text-5xl md:text-6xl font-black mb-2 break-words text-white">{programDetails.investment.payment}</div>
                     <div className="text-sm sm:text-base font-bold text-gray-600 dark:text-gray-400 mb-4">12 Monthly Payments</div>
                     <Button
                       variant="outline"
@@ -575,14 +575,14 @@ export function ArchetypesEditorialTemplate() {
                 {/* Bonus */}
                 <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-6 sm:p-8 border-4 border-slate-900 dark:border-white text-center">
                   <FiAward className="w-10 h-10 sm:w-12 sm:h-12 mx-auto mb-4" />
-                  <p className="text-xl sm:text-2xl font-black mb-2">{programDetails.investment.bonus}</p>
-                  <p className="text-sm sm:text-base">1-on-1 Strategy Session + Lifetime Community Access + Bonus Workshops</p>
+                  <p className="text-xl sm:text-2xl font-black mb-2 text-white">{programDetails.investment.bonus}</p>
+                  <p className="text-sm sm:text-base text-white">1-on-1 Strategy Session + Lifetime Community Access + Bonus Workshops</p>
                 </div>
 
                 {/* Guarantee */}
                 <div className="text-center mt-8 sm:mt-12 p-6 sm:p-8 border-4 border-green-500 bg-green-50 dark:bg-slate-800">
                   <FiShield className="w-10 h-10 sm:w-12 sm:h-12 mx-auto mb-4 text-green-600" />
-                  <h4 className="font-playfair text-xl sm:text-2xl font-black mb-3">
+                  <h4 className="font-playfair text-xl sm:text-2xl font-black mb-3 text-foreground">
                     100% Satisfaction Guarantee
                   </h4>
                   <p className="text-sm sm:text-base text-gray-700 dark:text-gray-300">
@@ -620,7 +620,7 @@ export function ArchetypesEditorialTemplate() {
       {/* Footer */}
       <footer className="bg-slate-950 text-white py-8 sm:py-12 border-t-4 border-blue-500">
         <div className="container mx-auto px-4 sm:px-6 text-center">
-          <p className="text-xl sm:text-2xl font-playfair font-black mb-3 sm:mb-4">
+          <p className="text-xl sm:text-2xl font-playfair font-black mb-3 sm:mb-4 text-foreground">
             ARCHETYPES JOURNAL
           </p>
           <p className="text-sm sm:text-base text-gray-400 mb-4 sm:mb-6">

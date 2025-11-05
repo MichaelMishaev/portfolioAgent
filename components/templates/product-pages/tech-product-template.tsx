@@ -177,7 +177,7 @@ export function TechProductTemplate() {
                   </video>
                   <button
                     onClick={() => setShowVideo(false)}
-                    className="absolute bottom-4 right-4 px-3 py-2 bg-black/70 hover:bg-black text-sm rounded"
+                    className="absolute bottom-4 right-4 px-3 py-2 bg-black/70 hover:bg-black text-sm rounded text-white"
                   >
                     View Images
                   </button>
@@ -223,7 +223,7 @@ export function TechProductTemplate() {
                 {productData.description}
               </p>
 
-              <div className="text-3xl sm:text-4xl font-black mb-8">
+              <div className="text-3xl sm:text-4xl font-black mb-8 text-gray-900">
                 <span className="text-yellow-400">${productData.price}</span>
               </div>
 
@@ -302,7 +302,7 @@ export function TechProductTemplate() {
                     {specs.map((spec) => (
                       <div key={spec.label} className="flex justify-between items-center border-b border-gray-800 pb-2">
                         <span className="text-sm text-gray-400 uppercase tracking-wide">{spec.label}</span>
-                        <span className="text-sm font-bold">{spec.value}</span>
+                        <span className="text-sm font-bold text-gray-900">{spec.value}</span>
                       </div>
                     ))}
                   </div>
@@ -325,10 +325,10 @@ export function TechProductTemplate() {
           <table className="w-full">
             <thead>
               <tr className="border-b-2 border-yellow-500">
-                <th className="text-left py-4 px-3 uppercase text-sm tracking-wider">Feature</th>
-                <th className="text-center py-4 px-3 uppercase text-sm tracking-wider bg-yellow-400/10">HyperX Ultra</th>
-                <th className="text-center py-4 px-3 uppercase text-sm tracking-wider">Competitor A</th>
-                <th className="text-center py-4 px-3 uppercase text-sm tracking-wider">Competitor B</th>
+                <th className="text-left py-4 px-3 uppercase text-sm tracking-wider text-gray-900">Feature</th>
+                <th className="text-center py-4 px-3 uppercase text-sm tracking-wider bg-yellow-400/10 text-gray-900">HyperX Ultra</th>
+                <th className="text-center py-4 px-3 uppercase text-sm tracking-wider text-gray-900">Competitor A</th>
+                <th className="text-center py-4 px-3 uppercase text-sm tracking-wider text-gray-900">Competitor B</th>
               </tr>
             </thead>
             <tbody>
@@ -393,7 +393,7 @@ export function TechProductTemplate() {
               <h2 className="text-3xl sm:text-5xl font-black uppercase mb-4 tracking-tight break-words text-gray-900">
                 READY TO DOMINATE?
               </h2>
-              <p className="text-xl mb-8 font-semibold">
+              <p className="text-xl mb-8 font-semibold text-white">
                 Free shipping • 2-year warranty • 30-day returns
               </p>
               <Button size="lg" variant="secondary" className="text-lg px-12 py-6 bg-black !text-yellow-400 hover:bg-gray-900 font-bold">

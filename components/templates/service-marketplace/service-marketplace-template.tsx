@@ -316,7 +316,7 @@ export function ServiceMarketplaceTemplate() {
                     <h3 className="text-2xl font-bold mb-2 text-gray-900">{plan.name}</h3>
                     <p className="text-slate-400 mb-6">{plan.description}</p>
                     <div className="mb-6">
-                      <span className="text-3xl sm:text-4xl font-bold">{plan.price}</span>
+                      <span className="text-3xl sm:text-4xl font-bold text-gray-900">{plan.price}</span>
                       {plan.period && <span className="text-slate-400">/{plan.period}</span>}
                     </div>
                     <Button

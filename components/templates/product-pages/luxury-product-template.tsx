@@ -173,7 +173,7 @@ export function LuxuryProductTemplate() {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-md border-b border-neutral-800">
         <div className="container mx-auto px-3 sm:px-3 py-4">
           <div className="flex items-center justify-between">
-            <Link href="/" className="text-xl font-light tracking-[0.2em]">
+            <Link href="/" className="text-xl font-light tracking-[0.2em] text-white">
             CHRONOS
           </Link>
 
@@ -363,7 +363,7 @@ export function LuxuryProductTemplate() {
                         : "border-neutral-800 hover:border-neutral-600"
                     } ${!material.available ? "opacity-30 cursor-not-allowed" : "cursor-pointer"}`}
                   >
-                    <div className="text-lg font-light mb-2">{material.name}</div>
+                    <div className="text-lg font-light mb-2 text-gray-900">{material.name}</div>
                     {material.premium > 0 && (
                       <div className="text-sm text-amber-500">+${material.premium.toLocaleString()}</div>
                     )}
@@ -387,7 +387,7 @@ export function LuxuryProductTemplate() {
                         : "border-neutral-800 hover:border-neutral-600"
                     } ${!dial.available ? "opacity-30 cursor-not-allowed" : "cursor-pointer"}`}
                   >
-                    <div className="text-lg font-light mb-2">{dial.name}</div>
+                    <div className="text-lg font-light mb-2 text-gray-900">{dial.name}</div>
                     {dial.premium > 0 && (
                       <div className="text-sm text-amber-500">+${dial.premium.toLocaleString()}</div>
                     )}
@@ -411,7 +411,7 @@ export function LuxuryProductTemplate() {
                         : "border-neutral-800 hover:border-neutral-600"
                     } ${!strap.available ? "opacity-30 cursor-not-allowed" : "cursor-pointer"}`}
                   >
-                    <div className="text-lg font-light mb-2">{strap.name}</div>
+                    <div className="text-lg font-light mb-2 text-gray-900">{strap.name}</div>
                     {strap.premium > 0 && (
                       <div className="text-sm text-amber-500">+${strap.premium.toLocaleString()}</div>
                     )}
@@ -423,7 +423,7 @@ export function LuxuryProductTemplate() {
             {/* Investment Summary */}
             <div className="border-t border-neutral-800 pt-8 text-center">
               <div className="text-sm tracking-wider text-neutral-400 mb-2">YOUR INVESTMENT</div>
-              <div className="text-5xl font-light mb-8">${totalInvestment.toLocaleString()}</div>
+              <div className="text-5xl font-light mb-8 text-gray-900">${totalInvestment.toLocaleString()}</div>
               <Button
                 size="lg"
                 className="bg-amber-600 hover:bg-amber-500 text-black text-lg px-12"
@@ -454,7 +454,7 @@ export function LuxuryProductTemplate() {
                       <div className="text-sm tracking-wider text-neutral-400 mb-2">
                         {spec.label}
                       </div>
-                      <div className="text-xl font-light">{spec.value}</div>
+                      <div className="text-xl font-light text-gray-900">{spec.value}</div>
                     </CardContent>
                   </Card>
                 </ScrollReveal>
@@ -489,7 +489,7 @@ export function LuxuryProductTemplate() {
                   <Card className="bg-neutral-950 border-neutral-800 text-center">
                     <CardContent className="p-8">
                       <FiAward className="w-12 h-12 mx-auto mb-6 text-amber-500" />
-                      <div className="text-xl font-light mb-2">{award.title}</div>
+                      <div className="text-xl font-light mb-2 text-gray-900">{award.title}</div>
                       <div className="text-sm text-neutral-400 mb-1">{award.year}</div>
                       <div className="text-sm text-neutral-500">{award.category}</div>
                     </CardContent>
@@ -502,7 +502,7 @@ export function LuxuryProductTemplate() {
               {productData.press.map((item, index) => (
                 <ScrollReveal key={index}>
                   <blockquote className="border-l-2 border-amber-500 pl-8 py-4">
-                    <p className="text-2xl font-light italic mb-4">"{item.quote}"</p>
+                    <p className="text-2xl font-light italic mb-4 text-gray-900">"{item.quote}"</p>
                     <cite className="text-sm text-neutral-400 not-italic">— {item.source}</cite>
                   </blockquote>
                 </ScrollReveal>
@@ -549,7 +549,7 @@ export function LuxuryProductTemplate() {
       <footer className="border-t border-neutral-800 py-16">
         <div className="container mx-auto px-3 sm:px-3">
           <div className="text-center">
-            <div className="text-2xl font-light tracking-[0.2em] mb-4">CHRONOS</div>
+            <div className="text-2xl font-light tracking-[0.2em] mb-4 text-gray-900">CHRONOS</div>
             <p className="text-sm text-neutral-500">
               © 2024 Chronos Manufacture. Geneva, Switzerland.
             </p>

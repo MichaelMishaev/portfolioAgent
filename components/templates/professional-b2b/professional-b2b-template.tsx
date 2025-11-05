@@ -380,7 +380,7 @@ export function ProfessionalB2bTemplate() {
               ].map((pkg, i) => (
                 <div key={i} className={`bg-gray-800 p-8 rounded-xl border-2 ${pkg.popular ? 'border-blue-500' : 'border-gray-700'}`}>
                   {pkg.popular && <div className="text-xs font-bold text-blue-400 mb-2 uppercase">Most Popular</div>}
-                  <h4 className="text-2xl font-bold mb-2">{pkg.name}</h4>
+                  <h4 className="text-2xl font-bold mb-2 text-foreground">{pkg.name}</h4>
                   <div className="text-3xl sm:text-4xl font-bold text-blue-400 mb-6">{pkg.price}</div>
                   <ul className="space-y-3 mb-8">
                     {pkg.features.map((f, j) => (
@@ -413,7 +413,7 @@ export function ProfessionalB2bTemplate() {
                     <div className="text-2xl font-bold text-blue-400">{item.year}</div>
                   </div>
                   <div className="flex-1 bg-gray-800 p-6 rounded-lg border border-gray-700">
-                    <h4 className="font-bold text-lg mb-2">{item.title}</h4>
+                    <h4 className="font-bold text-lg mb-2 text-foreground">{item.title}</h4>
                     <p className="text-gray-400 text-sm">{item.desc}</p>
                   </div>
                 </div>
@@ -432,7 +432,7 @@ export function ProfessionalB2bTemplate() {
                 { q: 'Do you integrate with our existing CRM?', a: 'Yes, we integrate with all major CRMs including Salesforce, HubSpot, and Microsoft Dynamics.' }
               ].map((item, i) => (
                 <div key={i} className="bg-gray-800 p-6 rounded-lg border border-gray-700">
-                  <h4 className="font-bold text-lg mb-3">{item.q}</h4>
+                  <h4 className="font-bold text-lg mb-3 text-foreground">{item.q}</h4>
                   <p className="text-gray-400">{item.a}</p>
                 </div>
               ))}

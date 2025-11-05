@@ -49,19 +49,19 @@ export function MotionDesignerTemplate() {
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-xl border-b border-neon-green/20">
         <div className="container mx-auto px-6 py-4 flex items-center justify-between">
-          <Link href="/" className="text-sm font-bold text-neon-green hover:text-hot-pink transition-colors">
+          <Link href="/" className="text-sm font-bold text-neon-green hover:text-hot-pink transition-colors text-white">
             {tt.common.backToGallery}
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
-            <a href="#work" className="text-sm font-bold hover:text-neon-green transition-colors uppercase">
+            <a href="#work" className="text-sm font-bold hover:text-neon-green transition-colors uppercase text-gray-900">
               {tt.common.work}
             </a>
-            <a href="#showreel" className="text-sm font-bold hover:text-neon-green transition-colors uppercase">
+            <a href="#showreel" className="text-sm font-bold hover:text-neon-green transition-colors uppercase text-gray-900">
               Showreel
             </a>
-            <a href="#contact" className="text-sm font-bold hover:text-neon-green transition-colors uppercase">
+            <a href="#contact" className="text-sm font-bold hover:text-neon-green transition-colors uppercase text-gray-900">
               {tt.common.contact}
             </a>
             <ThemeToggle />
@@ -89,13 +89,13 @@ export function MotionDesignerTemplate() {
             className="md:hidden bg-black/95 backdrop-blur-xl border-t border-neon-green/20"
           >
             <div className="container mx-auto px-6 py-6 flex flex-col gap-4">
-              <a href="#work" className="text-sm font-bold py-2 uppercase" onClick={() => setMobileMenuOpen(false)}>
+              <a href="#work" className="text-sm font-bold py-2 uppercase text-white" onClick={() => setMobileMenuOpen(false)}>
                 {tt.common.work}
               </a>
-              <a href="#showreel" className="text-sm font-bold py-2 uppercase" onClick={() => setMobileMenuOpen(false)}>
+              <a href="#showreel" className="text-sm font-bold py-2 uppercase text-gray-900" onClick={() => setMobileMenuOpen(false)}>
                 Showreel
               </a>
-              <a href="#contact" className="text-sm font-bold py-2 uppercase" onClick={() => setMobileMenuOpen(false)}>
+              <a href="#contact" className="text-sm font-bold py-2 uppercase text-gray-900" onClick={() => setMobileMenuOpen(false)}>
                 {tt.common.contact}
               </a>
             </div>
@@ -118,7 +118,7 @@ export function MotionDesignerTemplate() {
                 initial={{ y: 100 }}
                 animate={{ y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className="text-7xl md:text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black uppercase leading-none"
+                className="text-7xl md:text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black uppercase leading-none text-gray-900"
                 style={{
                   background: "linear-gradient(135deg, #00FF00 0%, #FF006E 100%)",
                   WebkitBackgroundClip: "text",
@@ -159,7 +159,7 @@ export function MotionDesignerTemplate() {
               <Button size="lg" className="bg-neon-green text-black hover:bg-neon-green/90 font-bold uppercase text-lg px-8">
                 <FiPlay className="mr-2" /> Watch Showreel
               </Button>
-              <Button size="lg" variant="outline" className="border-2 border-hot-pink text-hot-pink hover:bg-hot-pink/10 font-bold uppercase text-lg px-8">
+              <Button size="lg" variant="outline" className="border-2 border-hot-pink text-hot-pink hover:bg-hot-pink/10 font-bold uppercase text-lg px-8 text-gray-900">
                 View Projects
               </Button>
             </motion.div>
@@ -179,7 +179,7 @@ export function MotionDesignerTemplate() {
                   transition={{ delay: 1.4 + index * 0.1, type: "spring" }}
                   className="text-center"
                 >
-                  <div className="text-4xl sm:text-5xl font-black text-neon-green mb-2 break-words">{stat.value}</div>
+                  <div className="text-4xl sm:text-5xl font-black text-neon-green mb-2 break-words text-gray-900">{stat.value}</div>
                   <div className="text-sm uppercase tracking-wider text-gray-500">{stat.label}</div>
                 </motion.div>
               ))}
@@ -265,7 +265,7 @@ export function MotionDesignerTemplate() {
                     </motion.div>
                   </div>
                   {/* Category Badge */}
-                  <div className="absolute top-4 left-4 bg-hot-pink px-4 py-2 rounded-full text-xs font-bold uppercase">
+                  <div className="absolute top-4 left-4 bg-hot-pink px-4 py-2 rounded-full text-xs font-bold uppercase text-gray-900">
                     {project.category}
                   </div>
                 </div>
@@ -277,7 +277,7 @@ export function MotionDesignerTemplate() {
                   <p className="text-gray-400 mb-4 leading-relaxed">{project.description}</p>
                   <div className="flex flex-wrap gap-2">
                     {project.tags.map((tag) => (
-                      <span key={tag} className="px-3 py-1 bg-gray-900 text-neon-green text-xs font-bold uppercase rounded border border-neon-green/30">
+                      <span key={tag} className="px-3 py-1 bg-gray-900 text-neon-green text-xs font-bold uppercase rounded border border-neon-green/30 text-white">
                         {tag}
                       </span>
                     ))}
@@ -309,7 +309,7 @@ export function MotionDesignerTemplate() {
                 transition={{ delay: index * 0.1 }}
               >
                 <div className="flex items-center justify-between mb-3">
-                  <span className="text-xl font-bold uppercase">{skill.name}</span>
+                  <span className="text-xl font-bold uppercase text-foreground">{skill.name}</span>
                   <span className="text-neon-green font-bold">{skill.level}%</span>
                 </div>
                 <div className="h-3 bg-gray-800 rounded-full overflow-hidden">
@@ -374,7 +374,7 @@ export function MotionDesignerTemplate() {
               <p className="text-xl text-black/80 mb-8 font-bold uppercase tracking-wide">
                 Available for freelance projects
               </p>
-              <Button size="lg" className="bg-black text-neon-green hover:bg-gray-900 font-bold uppercase text-lg px-12">
+              <Button size="lg" className="bg-black text-neon-green hover:bg-gray-900 font-bold uppercase text-lg px-12 text-white">
                 Hire Me Now <FiArrowRight className="ml-2" />
               </Button>
             </div>
@@ -485,12 +485,12 @@ export function MotionDesignerTemplate() {
                   className={`bg-gray-900 p-10 rounded-2xl border-4 ${pkg.popular ? 'border-hot-pink shadow-2xl shadow-hot-pink/20' : 'border-neon-green/20'} relative`}
                 >
                   {pkg.popular && (
-                    <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-hot-pink px-6 py-2 rounded-full text-sm font-black uppercase">
+                    <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-hot-pink px-6 py-2 rounded-full text-sm font-black uppercase text-white">
                       MOST POPULAR
                     </div>
                   )}
                   <div className="text-sm uppercase tracking-widest mb-8 text-gray-500 font-bold">{pkg.name}</div>
-                  <div className="text-4xl sm:text-5xl md:text-6xl font-black mb-12 break-words" style={{ color: pkg.color === 'neon-green' ? '#00FF00' : '#FF006E' }}>
+                  <div className="text-4xl sm:text-5xl md:text-6xl font-black mb-12 break-words text-gray-900" style={{ color: pkg.color === 'neon-green' ? '#00FF00' : '#FF006E' }}>
                     {pkg.price}
                   </div>
                   <ul className="space-y-4 mb-12">
@@ -534,7 +534,7 @@ export function MotionDesignerTemplate() {
                 >
                   <p className="text-xl font-bold mb-6 text-gray-300 leading-relaxed">&ldquo;{t.text}&rdquo;</p>
                   <div className="border-t border-gray-800 pt-6">
-                    <div className="text-sm font-black uppercase text-neon-green">{t.author}</div>
+                    <div className="text-sm font-black uppercase text-neon-green text-white">{t.author}</div>
                     <div className="text-xs text-gray-500 uppercase tracking-wider">{t.role}</div>
                   </div>
                 </motion.div>
@@ -567,7 +567,7 @@ export function MotionDesignerTemplate() {
                   className="flex gap-8 items-start border-l-4 border-neon-green pl-8 hover:border-hot-pink transition-colors"
                 >
                   <div className="flex-shrink-0 w-32 text-center">
-                    <div className="text-4xl sm:text-5xl font-black text-neon-green break-words">{item.year}</div>
+                    <div className="text-4xl sm:text-5xl font-black text-neon-green break-words text-gray-900">{item.year}</div>
                   </div>
                   <div className="flex-1">
                     <h4 className="text-3xl font-black uppercase mb-3 text-white">{item.title}</h4>
@@ -602,7 +602,7 @@ export function MotionDesignerTemplate() {
                   whileHover={{ x: 10 }}
                   className="bg-gray-900 p-8 rounded-xl border-2 border-neon-green/20 hover:border-neon-green/50 transition-colors"
                 >
-                  <div className="text-2xl font-black uppercase mb-4 text-neon-green">{faq.q}</div>
+                  <div className="text-2xl font-black uppercase mb-4 text-neon-green text-white">{faq.q}</div>
                   <p className="text-gray-400 text-lg leading-relaxed">{faq.a}</p>
                 </motion.div>
               </ScrollReveal>

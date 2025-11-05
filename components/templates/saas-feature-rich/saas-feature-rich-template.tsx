@@ -204,7 +204,7 @@ export function SaasFeatureRichTemplate() {
 
                     <h3 className="text-2xl font-bold mb-2 text-gray-900">{plan.name}</h3>
                     <div className="mb-6">
-                      <span className="text-4xl sm:text-5xl font-bold break-words">${plan.price}</span>
+                      <span className="text-4xl sm:text-5xl font-bold break-words text-gray-900">${plan.price}</span>
                       <span className="text-gray-500">/month</span>
                     </div>
 
@@ -267,7 +267,7 @@ export function SaasFeatureRichTemplate() {
         <div className="container mx-auto max-w-4xl px-6 text-center">
           <ScrollReveal>
             <h2 className="text-4xl lg:text-4xl sm:text-5xl font-bold mb-6 break-words text-gray-900">{data.cta.title}</h2>
-            <p className="text-xl mb-8">{data.cta.subtitle}</p>
+            <p className="text-xl mb-8 text-white">{data.cta.subtitle}</p>
             <Button size="lg" className="bg-white !text-blue-600 hover:bg-blue-50 px-12 py-6 text-lg">
               {data.cta.buttonText}
             </Button>
@@ -365,7 +365,7 @@ export function SaasFeatureRichTemplate() {
                     <div className="text-sm font-bold text-white">{item.quarter}</div>
                   </div>
                   <div className="flex-1 bg-gray-800 p-6 rounded-lg border border-gray-700">
-                    <h4 className="font-bold text-lg mb-2">{item.title}</h4>
+                    <h4 className="font-bold text-lg mb-2 text-white">{item.title}</h4>
                     <p className="text-gray-400 text-sm">{item.desc}</p>
                   </div>
                 </div>

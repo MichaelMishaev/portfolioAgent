@@ -409,7 +409,7 @@ export function PremiumProductTemplate() {
           <FadeIn delay={0.6}>
             <div className="flex flex-col items-center gap-4">
               <span className="text-sm text-gray-400 uppercase tracking-widest">{productData.price.starting}</span>
-              <span className="text-5xl font-light tracking-tight">
+              <span className="text-5xl font-light tracking-tight text-foreground">
                 {productData.price.currency}{productData.price.amount.toLocaleString()}
               </span>
               <Button size="lg" className="mt-4 bg-white text-black hover:bg-gray-200 px-8 py-6 text-sm tracking-wider">
@@ -505,7 +505,7 @@ export function PremiumProductTemplate() {
                 </div>
                 <div className={index % 2 === 1 ? 'lg:col-start-1 lg:row-start-1' : ''}>
                   <div className="inline-block px-3 py-3 bg-white/5 rounded-full mb-6">
-                    <span className="text-4xl font-light">{feature.stat}</span>
+                    <span className="text-4xl font-light text-gray-900">{feature.stat}</span>
                     <span className="text-sm text-gray-400 ml-3 uppercase tracking-wider">{feature.metric}</span>
                   </div>
                   <h3 className="text-4xl font-light mb-6 text-gray-900">{feature.title}</h3>
@@ -569,10 +569,10 @@ export function PremiumProductTemplate() {
                           className="w-4 h-4 rounded-full border border-white/20"
                           style={{ backgroundColor: material.color }}
                         />
-                        <h4 className="text-lg font-light">{material.name}</h4>
+                        <h4 className="text-lg font-light text-gray-900">{material.name}</h4>
                       </div>
                       <p className="text-sm text-gray-400 mb-3">{material.description}</p>
-                      <p className="text-2xl font-light">${material.price.toLocaleString()}</p>
+                      <p className="text-2xl font-light text-gray-900">${material.price.toLocaleString()}</p>
                     </div>
                   </motion.div>
                 ))}
@@ -601,7 +601,7 @@ export function PremiumProductTemplate() {
                     }`}
                   >
                     <div className="flex items-start justify-between mb-2">
-                      <span className="text-base font-light">{complication.name}</span>
+                      <span className="text-base font-light text-gray-900">{complication.name}</span>
                       {complication.included ? (
                         <Badge className="bg-white/10 text-white text-xs">Included</Badge>
                       ) : (
@@ -656,7 +656,7 @@ export function PremiumProductTemplate() {
                       )}
                     </div>
                     <div className="p-3 bg-gray-900/50 backdrop-blur">
-                      <p className="text-sm font-light mb-1">{strap.name}</p>
+                      <p className="text-sm font-light mb-1 text-white">{strap.name}</p>
                       <p className="text-xs text-gray-400">
                         {strap.price === 0 ? 'Included' : `+$${strap.price.toLocaleString()}`}
                       </p>
@@ -672,7 +672,7 @@ export function PremiumProductTemplate() {
             <Card className="max-w-full mx-auto bg-gradient-to-br from-white/5 to-white/[0.02] border-white/10 backdrop-blur">
               <CardContent className="p-10 text-center">
                 <p className="text-sm uppercase tracking-widest text-gray-400 mb-4">Your Configuration</p>
-                <div className="text-6xl font-light mb-8">
+                <div className="text-6xl font-light mb-8 text-white">
                   ${calculatePrice()}
                 </div>
                 <div className="space-y-2 mb-8 text-sm text-gray-400">
@@ -747,7 +747,7 @@ export function PremiumProductTemplate() {
             <ScrollReveal key={section.title} delay={index * 0.1}>
               <Card className="h-full bg-white/5 border-white/10 backdrop-blur">
                 <CardHeader>
-                  <CardTitle className="text-2xl font-light">{section.title}</CardTitle>
+                  <CardTitle className="text-2xl font-light text-gray-900">{section.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-3">
@@ -869,7 +869,7 @@ export function PremiumProductTemplate() {
       <footer className="border-t border-white/5 py-16">
         <div className="container mx-auto px-3 max-w-full">
           <div className="text-center">
-            <div className="text-3xl font-light tracking-[0.2em] mb-6">CHRONOS</div>
+            <div className="text-3xl font-light tracking-[0.2em] mb-6 text-gray-900">CHRONOS</div>
             <p className="text-xs text-gray-500 uppercase tracking-widest mb-8">Geneva · Since 1824</p>
             <div className="flex justify-center gap-8 text-xs text-gray-500 uppercase tracking-wider">
               <a href="#" className="hover:text-white transition-colors">Heritage</a>

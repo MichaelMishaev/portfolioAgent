@@ -191,7 +191,7 @@ export function ThreeDImmersiveTemplate() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-3xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent break-words"
+            className="text-3xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent break-words text-white"
           >
             {portfolioData.name}
           </motion.h1>
@@ -244,7 +244,7 @@ export function ThreeDImmersiveTemplate() {
       <section className="relative py-20 px-3 bg-gradient-to-b from-black via-gray-900 to-black">
         <div className="container mx-auto max-w-full">
           <ScrollReveal>
-            <h2 className="text-5xl md:text-4xl sm:text-5xl md:text-6xl font-bold text-center mb-16 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent break-words">
+            <h2 className="text-5xl md:text-4xl sm:text-5xl md:text-6xl font-bold text-center mb-16 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent break-words text-white">
               Featured Projects
             </h2>
           </ScrollReveal>
@@ -321,7 +321,7 @@ export function ThreeDImmersiveTemplate() {
       <section id="contact" className="relative py-20 px-3 bg-gradient-to-b from-black to-gray-900">
         <div className="container mx-auto max-w-full text-center">
           <ScrollReveal>
-            <h2 className="text-5xl md:text-4xl sm:text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent break-words">
+            <h2 className="text-5xl md:text-4xl sm:text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent break-words text-white">
               Let's Create Together
             </h2>
           </ScrollReveal>
@@ -456,7 +456,7 @@ export function ThreeDImmersiveTemplate() {
       <section className="py-32 px-3 sm:px-3 bg-gradient-to-br from-purple-600 via-pink-600 to-blue-600">
         <div className="container mx-auto max-w-4xl text-center text-white">
           <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-8 break-words text-gray-900">Ready to Go 3D?</h2>
-          <p className="text-2xl mb-12 opacity-90">
+          <p className="text-2xl mb-12 opacity-90 text-white">
             Let's create an unforgettable immersive experience
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

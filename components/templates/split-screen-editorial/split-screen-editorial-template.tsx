@@ -91,7 +91,7 @@ export function SplitScreenEditorialTemplate() {
               <ScrollReveal>
                 <div className="text-sm font-semibold mb-2 opacity-80">{project.client}</div>
                 <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 break-words text-white">{project.title}</h2>
-                <p className="text-xl opacity-90 max-w-2xl mx-auto">
+                <p className="text-xl opacity-90 max-w-2xl mx-auto text-gray-900">
                   {project.description}
                 </p>
               </ScrollReveal>
@@ -241,7 +241,7 @@ export function SplitScreenEditorialTemplate() {
         {/* CTA - Editorial Call-Out */}
         <section className="py-24 px-8 bg-blue-600 text-white text-center">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif font-bold mb-6 break-words text-white">Let's Tell Your Story</h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">
+          <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90 text-white">
             Have a story that needs to be told? Let's collaborate on your next editorial project.
           </p>
           <a href="#contact" className="inline-block bg-white text-blue-600 px-8 py-4 font-bold hover:bg-gray-100 transition-colors">

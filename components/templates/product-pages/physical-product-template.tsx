@@ -212,7 +212,7 @@ export function PhysicalProductTemplate() {
       <nav className="sticky top-0 z-50 bg-white/80 dark:bg-black/80 backdrop-blur-lg border-b border-gray-200 dark:border-gray-800">
         <div className="container mx-auto px-3 sm:px-3 py-4">
           <div className="flex items-center justify-between">
-<Link href="/" className="text-xl font-semibold">
+<Link href="/" className="text-xl font-semibold text-white">
             AirWave
           </Link>
 
@@ -278,7 +278,7 @@ export function PhysicalProductTemplate() {
               <p className="text-xl text-gray-500 dark:text-gray-500 mb-8">
                 {productData.description}
               </p>
-              <div className="text-4xl font-semibold mb-8">
+              <div className="text-4xl font-semibold mb-8 text-gray-900">
                 ${productData.price.amount}
               </div>
 
@@ -349,19 +349,19 @@ export function PhysicalProductTemplate() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
             <div className="flex flex-col items-center">
               <FiTruck className="w-6 h-6 mb-2" />
-              <div className="font-semibold text-sm">{productData.shipping.freeShipping}</div>
+              <div className="font-semibold text-sm text-foreground">{productData.shipping.freeShipping}</div>
             </div>
             <div className="flex flex-col items-center">
               <FiRefreshCw className="w-6 h-6 mb-2" />
-              <div className="font-semibold text-sm">{productData.shipping.returns}</div>
+              <div className="font-semibold text-sm text-gray-900">{productData.shipping.returns}</div>
             </div>
             <div className="flex flex-col items-center">
               <FiShield className="w-6 h-6 mb-2" />
-              <div className="font-semibold text-sm">{productData.shipping.warranty}</div>
+              <div className="font-semibold text-sm text-gray-900">{productData.shipping.warranty}</div>
             </div>
             <div className="flex flex-col items-center">
               <FiBox className="w-6 h-6 mb-2" />
-              <div className="font-semibold text-sm">In Stock - Ships in {productData.shipping.deliveryTime}</div>
+              <div className="font-semibold text-sm text-gray-900">In Stock - Ships in {productData.shipping.deliveryTime}</div>
             </div>
           </div>
         </div>
@@ -406,14 +406,14 @@ export function PhysicalProductTemplate() {
               {productData.specifications.categories.map((category) => (
                 <Card key={category.name} className="bg-white dark:bg-black border-gray-200 dark:border-gray-800">
                   <CardHeader>
-                    <CardTitle className="text-2xl">{category.name}</CardTitle>
+                    <CardTitle className="text-2xl text-white">{category.name}</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <div className="space-y-4">
                       {category.specs.map((spec) => (
                         <div key={spec.label} className="flex justify-between items-start border-b border-gray-100 dark:border-gray-900 pb-3 last:border-0">
                           <span className="text-gray-600 dark:text-gray-400 text-sm">{spec.label}</span>
-                          <span className="font-medium text-sm text-right">{spec.value}</span>
+                          <span className="font-medium text-sm text-right text-gray-900">{spec.value}</span>
                         </div>
                       ))}
                     </div>
@@ -438,7 +438,7 @@ export function PhysicalProductTemplate() {
                 <Card key={item.name} className="text-center hover:shadow-lg transition-all border-gray-200 dark:border-gray-800">
                   <CardContent className="p-8">
                     <div className="text-5xl mb-4">{item.icon}</div>
-                    <p className="text-sm font-medium">{item.name}</p>
+                    <p className="text-sm font-medium text-gray-900">{item.name}</p>
                   </CardContent>
                 </Card>
               ))}
@@ -473,7 +473,7 @@ export function PhysicalProductTemplate() {
                           <FiStar key={i} className="w-5 h-5 fill-black dark:fill-white text-black dark:text-white" />
                         ))}
                       </div>
-                      <p className="text-lg mb-6">"{review.quote}"</p>
+                      <p className="text-lg mb-6 text-gray-900">"{review.quote}"</p>
                       <div className="flex flex-col sm:flex-row sm:items-center gap-3">
                         {review.withPhoto && review.photo && (
                           <img
@@ -485,7 +485,7 @@ export function PhysicalProductTemplate() {
                         <div>
                           <div className="font-semibold">{review.author}</div>
                           <div className="text-sm text-gray-600 dark:text-gray-400">
-                            {review.verified && <Badge variant="secondary" className="text-xs">Verified Purchase</Badge>}
+                            {review.verified && <Badge variant="secondary" className="text-xs text-gray-900">Verified Purchase</Badge>}
                             {" "}{review.date}
                           </div>
                         </div>

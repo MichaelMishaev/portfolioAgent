@@ -195,7 +195,7 @@ export function LinTechPioneerTemplate() {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <ScrollReveal>
-              <div className="inline-block px-4 py-2 bg-[#3B82F6]/20 border border-[#3B82F6]/50 rounded-full text-sm mb-6">
+              <div className="inline-block px-4 py-2 bg-[#3B82F6]/20 border border-[#3B82F6]/50 rounded-full text-sm mb-6 text-gray-900">
                 <span className="text-[#3B82F6]">●</span> Enterprise-Grade Solutions
               </div>
             </ScrollReveal>
@@ -342,11 +342,11 @@ export function LinTechPioneerTemplate() {
             <div className="bg-[#0F172A] border border-[#3B82F6]/30 rounded-lg overflow-hidden">
               <div className="flex items-center justify-between px-4 py-3 bg-[#1E293B] border-b border-[#3B82F6]/20">
                 <span className="text-sm text-gray-400">example.ts</span>
-                <button className="text-xs text-[#3B82F6] hover:text-[#06B6D4] transition-colors">
+                <button className="text-xs text-[#3B82F6] hover:text-[#06B6D4] transition-colors text-gray-900">
                   Copy
                 </button>
               </div>
-              <pre className="p-6 text-sm overflow-x-auto">
+              <pre className="p-6 text-sm overflow-x-auto text-gray-900">
                 <code className="text-gray-300">
                   {`import { Unilink } from '@unilink/sdk';
 
@@ -388,7 +388,7 @@ await client.sync();`}
           <ScrollReveal delay={0.4}>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
               <a href="mailto:info@unilink.co.il">
-                <Button className="bg-white text-[#3B82F6] hover:bg-gray-100 px-8 py-6 text-base font-semibold shadow-lg">
+                <Button className="bg-white text-[#3B82F6] hover:bg-gray-100 px-8 py-6 text-base font-semibold shadow-lg text-foreground">
                   <FiMail className="mr-2" />
                   Contact Sales
                 </Button>

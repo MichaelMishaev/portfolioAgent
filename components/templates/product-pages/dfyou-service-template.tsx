@@ -287,7 +287,7 @@ export function DFYouServiceTemplate() {
       <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-stone-200">
         <div className="container mx-auto px-3 sm:px-3 py-4">
           <div className="flex items-center justify-between">
-            <Link href="/" className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-pink-500 bg-clip-text text-transparent">
+            <Link href="/" className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-pink-500 bg-clip-text text-transparent text-white">
             DESIGN ON TAP
           </Link>
 
@@ -389,7 +389,7 @@ export function DFYouServiceTemplate() {
                 </Button>
               </div>
 
-              <div className="flex flex-wrap justify-center gap-8 text-sm">
+              <div className="flex flex-wrap justify-center gap-8 text-sm text-gray-900">
                 {serviceData.hero.badges.map((badge, index) => (
                   <div key={index} className="flex items-center gap-2">
                     <badge.icon className="w-5 h-5 text-blue-600" />
@@ -496,9 +496,9 @@ export function DFYouServiceTemplate() {
             <ScrollReveal>
               <Card className="border-4 border-blue-600 shadow-2xl">
                 <CardHeader className="text-center pb-8 pt-12 bg-gradient-to-br from-blue-50 to-pink-50">
-                  <CardTitle className="text-3xl mb-6">{serviceData.pricing.plan.name}</CardTitle>
+                  <CardTitle className="text-3xl mb-6 text-white">{serviceData.pricing.plan.name}</CardTitle>
                   <div className="mb-6">
-                    <span className="text-4xl sm:text-5xl md:text-6xl font-bold break-words">${serviceData.pricing.plan.price}</span>
+                    <span className="text-4xl sm:text-5xl md:text-6xl font-bold break-words text-white">${serviceData.pricing.plan.price}</span>
                     <span className="text-xl text-stone-600">/{serviceData.pricing.plan.period}</span>
                   </div>
                   <Button
@@ -514,7 +514,7 @@ export function DFYouServiceTemplate() {
                     {serviceData.pricing.plan.features.map((feature) => (
                       <div key={feature} className="flex items-start gap-3">
                         <FiCheck className="w-6 h-6 text-blue-600 flex-shrink-0 mt-0.5" />
-                        <span className="text-lg">{feature}</span>
+                        <span className="text-lg text-gray-900">{feature}</span>
                       </div>
                     ))}
                   </div>
@@ -604,7 +604,7 @@ export function DFYouServiceTemplate() {
               <ScrollReveal key={index} delay={index * 0.05}>
                 <Card className="border-2 border-stone-200">
                   <CardHeader>
-                    <CardTitle className="text-xl">{item.question}</CardTitle>
+                    <CardTitle className="text-xl text-gray-900">{item.question}</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p className="text-stone-600">{item.answer}</p>
@@ -624,7 +624,7 @@ export function DFYouServiceTemplate() {
               <h2 className="text-5xl md:text-4xl sm:text-5xl md:text-6xl font-bold mb-8 break-words text-gray-900">
                 Ready for Unlimited Design?
               </h2>
-              <p className="text-xl mb-12 max-w-full mx-auto opacity-90">
+              <p className="text-xl mb-12 max-w-full mx-auto opacity-90 text-gray-900">
                 Subscribe today and get your first design delivered in 48 hours. Pause or cancel
                 anytime.
               </p>
@@ -634,7 +634,7 @@ export function DFYouServiceTemplate() {
               >
                 Subscribe for ${serviceData.price}/month
               </Button>
-              <p className="text-sm mt-6 opacity-75">
+              <p className="text-sm mt-6 opacity-75 text-gray-900">
                 75% refund guarantee • Pause anytime • No contracts
               </p>
             </div>
@@ -646,7 +646,7 @@ export function DFYouServiceTemplate() {
       <footer className="border-t border-stone-200 py-12 bg-white">
         <div className="container mx-auto px-3 sm:px-3">
           <div className="text-center">
-            <div className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-pink-500 bg-clip-text text-transparent mb-2">
+            <div className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-pink-500 bg-clip-text text-transparent mb-2 text-white">
               DESIGN ON TAP
             </div>
             <p className="text-sm text-stone-600">

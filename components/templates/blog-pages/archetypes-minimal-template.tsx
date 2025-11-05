@@ -207,7 +207,7 @@ export function ArchetypesMinimalTemplate() {
             >
               Transform Your Creative Journey
             </Badge>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-teal-600 to-purple-600 dark:from-teal-400 dark:to-purple-400 bg-clip-text text-transparent leading-tight">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-teal-600 to-purple-600 dark:from-teal-400 dark:to-purple-400 bg-clip-text text-transparent leading-tight text-white">
               {archetypesData.hero.title}
             </h1>
             <p className="text-xl sm:text-2xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
@@ -427,7 +427,7 @@ export function ArchetypesMinimalTemplate() {
                             <span className="text-2xl line-through opacity-60">
                               {archetypesData.program.pricing.original}
                             </span>
-                            <span className="text-4xl sm:text-5xl font-bold break-words">
+                            <span className="text-4xl sm:text-5xl font-bold break-words text-gray-900">
                               {archetypesData.program.pricing.current}
                             </span>
                           </div>

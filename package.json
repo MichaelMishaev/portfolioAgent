@@ -19,7 +19,11 @@
     "test:unit:watch": "jest --watch",
     "test:unit:coverage": "jest --coverage",
     "test:integrity": "jest __tests__/template-translation-integrity.test.ts",
-    "test:all": "npm run test:integrity && npm run test"
+    "test:all": "npm run test:integrity && npm run test",
+    "audit:text-colors": "node scripts/audit-text-colors.js",
+    "audit:text-colors:ci": "node scripts/audit-text-colors.js --ci",
+    "fix:text-colors": "node scripts/fix-text-colors.js",
+    "fix:text-colors:dry": "node scripts/fix-text-colors.js --dry-run"
   },
   "dependencies": {
     "@craftjs/core": "^0.2.12",

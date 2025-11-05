@@ -176,7 +176,7 @@ export function FashionProductTemplate() {
       <nav className="sticky top-0 z-50 bg-stone-50/95 backdrop-blur-sm border-b border-stone-200">
         <div className="container mx-auto px-3 sm:px-3 py-4">
           <div className="flex items-center justify-between">
-            <Link href="/" className="text-xl font-medium tracking-wide">
+            <Link href="/" className="text-xl font-medium tracking-wide text-gray-900">
             URBAN STRIDE
           </Link>
 
@@ -273,7 +273,7 @@ export function FashionProductTemplate() {
 
                 {/* Color Selector */}
                 <div>
-                  <label className="text-sm font-medium mb-3 block">
+                  <label className="text-sm font-medium mb-3 block text-gray-900">
                     Color: {selectedColor.name}
                   </label>
                   <div className="flex flex-col sm:flex-row gap-3">
@@ -295,7 +295,7 @@ export function FashionProductTemplate() {
 
                 {/* Size Selector */}
                 <div>
-                  <label className="text-sm font-medium mb-3 block">
+                  <label className="text-sm font-medium mb-3 block text-gray-900">
                     Size: {selectedSize.size}
                   </label>
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
@@ -331,7 +331,7 @@ export function FashionProductTemplate() {
                   <Button
                     variant="outline" className="text-slate-900 dark:text-white"
                     size="lg"
-                    className="w-full text-lg py-6 border-stone-300"
+                    className="w-full text-lg py-6 border-stone-300 text-gray-900"
                     onClick={() => setIsWishlisted(!isWishlisted)}
                   >
                     <FiHeart
@@ -342,7 +342,7 @@ export function FashionProductTemplate() {
                 </div>
 
                 {/* Shipping Info */}
-                <div className="border-t border-stone-200 pt-6 space-y-3 text-sm">
+                <div className="border-t border-stone-200 pt-6 space-y-3 text-sm text-gray-900">
                   <div className="flex flex-col sm:flex-row sm:items-center gap-3">
                     <FiTruck className="w-5 h-5 text-stone-600" />
                     <span>{productData.shipping.freeShipping}</span>
@@ -507,7 +507,7 @@ export function FashionProductTemplate() {
                       <div>
                         <div className="font-semibold">{review.author}</div>
                         {review.verified && (
-                          <Badge variant="secondary" className="text-xs">
+                          <Badge variant="secondary" className="text-xs text-gray-900">
                             Verified
                           </Badge>
                         )}
@@ -540,7 +540,7 @@ export function FashionProductTemplate() {
                   />
                   <CardContent className="p-6">
                     <h3 className="font-semibold mb-2 text-stone-900 text-gray-900">{item.name}</h3>
-                    <div className="text-lg font-semibold">${item.price}</div>
+                    <div className="text-lg font-semibold text-gray-900">${item.price}</div>
                   </CardContent>
                 </Card>
               </ScrollReveal>

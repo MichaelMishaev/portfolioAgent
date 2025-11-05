@@ -285,7 +285,7 @@ export function EnterpriseServiceTemplate() {
                 SOC 2 Type II Certified
               </Badge>
               {serviceData.certifications.slice(1).map((cert) => (
-                <Badge key={cert.name} variant="outline" className="text-xs">
+                <Badge key={cert.name} variant="outline" className="text-xs text-gray-900">
                   {cert.name}
                 </Badge>
               ))}
@@ -348,7 +348,7 @@ export function EnterpriseServiceTemplate() {
                     <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-600 to-blue-700 text-white flex items-center justify-center mb-4">
                       <solution.icon className="w-8 h-8" />
                     </div>
-                    <CardTitle className="text-2xl mb-2">{solution.name}</CardTitle>
+                    <CardTitle className="text-2xl mb-2 text-white">{solution.name}</CardTitle>
                     <p className="text-blue-600 font-semibold text-sm">{solution.tagline}</p>
                   </CardHeader>
                   <CardContent>
@@ -357,7 +357,7 @@ export function EnterpriseServiceTemplate() {
                       {solution.features.map((feature) => (
                         <div key={feature} className="flex items-start gap-2">
                           <FiCheckCircle className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
-                          <span className="text-sm">{feature}</span>
+                          <span className="text-sm text-gray-900">{feature}</span>
                         </div>
                       ))}
                     </div>
@@ -510,7 +510,7 @@ export function EnterpriseServiceTemplate() {
                       <p className="text-sm text-gray-600">{tier.tagline}</p>
                     </div>
                     <div className="mb-6">
-                      <span className="text-4xl sm:text-5xl font-bold break-words">{tier.price}</span>
+                      <span className="text-4xl sm:text-5xl font-bold break-words text-white">{tier.price}</span>
                       {tier.period && <span className="text-gray-600">{tier.period}</span>}
                     </div>
                     <Button
@@ -523,7 +523,7 @@ export function EnterpriseServiceTemplate() {
                       {tier.features.map((feature) => (
                         <div key={feature} className="flex items-start gap-2">
                           <FiCheckCircle className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
-                          <span className="text-sm">{feature}</span>
+                          <span className="text-sm text-gray-900">{feature}</span>
                         </div>
                       ))}
                     </div>
@@ -562,7 +562,7 @@ export function EnterpriseServiceTemplate() {
       <footer className="bg-gray-900 text-white py-12">
         <div className="container mx-auto px-3 max-w-full">
           <div className="flex flex-col md:flex-row items-center justify-between">
-            <div className="text-2xl font-bold mb-4 md:mb-0">
+            <div className="text-2xl font-bold mb-4 md:mb-0 text-white">
               ENTERPRISE<span className="text-blue-500">CLOUD</span>
             </div>
             <div className="flex items-center gap-6 mb-4 md:mb-0">

@@ -266,7 +266,7 @@ export function DataDashboardTemplate() {
       <section className="pt-32 pb-16 px-3">
         <div className="container mx-auto max-w-full">
           <div className="text-center mb-12">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-6 bg-gradient-to-r from-blue-400 via-cyan-400 to-teal-400 bg-clip-text text-transparent break-words">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-6 bg-gradient-to-r from-blue-400 via-cyan-400 to-teal-400 bg-clip-text text-transparent break-words text-white">
               {portfolioData.name}
             </h1>
             <p className="text-xl sm:text-2xl md:text-3xl text-gray-300 mb-4">
@@ -291,7 +291,7 @@ export function DataDashboardTemplate() {
             {portfolioData.stats.map((stat, index) => (
               <ScrollReveal key={stat.label} delay={index * 0.1}>
                 <div className="text-center">
-                  <div className="text-3xl sm:text-5xl font-black bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent mb-2 break-words">
+                  <div className="text-3xl sm:text-5xl font-black bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent mb-2 break-words text-white">
                     {stat.value}
                   </div>
                   <div className="text-sm md:text-base text-gray-400">{stat.label}</div>
@@ -608,7 +608,7 @@ export function DataDashboardTemplate() {
                       {plan.features.map((feature) => (
                         <li key={feature} className="flex items-start gap-2 text-gray-300">
                           <FiActivity className="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" />
-                          <span className="text-sm">{feature}</span>
+                          <span className="text-sm text-white">{feature}</span>
                         </li>
                       ))}
                     </ul>
@@ -710,7 +710,7 @@ export function DataDashboardTemplate() {
       <section id="contact" className="py-20 px-3">
         <div className="container mx-auto max-w-full text-center">
           <ScrollReveal>
-            <h2 className="text-5xl md:text-4xl sm:text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent break-words">
+            <h2 className="text-5xl md:text-4xl sm:text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent break-words text-white">
               Let's Analyze Your Data
             </h2>
           </ScrollReveal>

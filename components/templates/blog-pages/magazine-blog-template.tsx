@@ -310,7 +310,7 @@ export function MagazineBlogTemplate() {
     <div className="min-h-screen bg-white overflow-x-hidden max-w-full">
       {/* Top Bar */}
       <div className="bg-gray-900 text-white py-2">
-        <div className="container mx-auto px-3 max-w-full flex items-center justify-between text-sm">
+        <div className="container mx-auto px-3 max-w-full flex items-center justify-between text-sm text-white">
           <div className="flex flex-col sm:flex-row sm:items-center gap-6">
             <span className="flex items-center gap-2">
               <FiTrendingUp className="w-4 h-4" />
@@ -329,7 +329,7 @@ export function MagazineBlogTemplate() {
       <header className="bg-white border-b sticky top-0 z-50">
         <div className="container mx-auto px-3 max-w-full py-4">
           <div className="flex items-center justify-between">
-            <Link href="/" className="text-xl sm:text-3xl font-bold">
+            <Link href="/" className="text-xl sm:text-3xl font-bold text-gray-900">
               <span className="hidden sm:inline">CREATIVE<span className="text-blue-600">MAG</span></span>
               <span className="inline sm:hidden">C<span className="text-blue-600">M</span></span>
             </Link>
@@ -354,7 +354,7 @@ export function MagazineBlogTemplate() {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-6 text-sm mt-4">
+          <nav className="hidden md:flex items-center gap-6 text-sm mt-4 text-gray-900">
             {["Latest", "Trending", "Design", "Development", "UX", "Tools", "Career"].map((item) => (
               <a
                 key={item}
@@ -475,7 +475,7 @@ export function MagazineBlogTemplate() {
                             {article.title}
                           </h4>
                           <div className="flex items-center gap-2 text-xs text-gray-600">
-                            <Badge variant="outline" className="text-xs">{article.category}</Badge>
+                            <Badge variant="outline" className="text-xs text-gray-900">{article.category}</Badge>
                             <span>•</span>
                             <span>{article.readTime}</span>
                             <span>•</span>
@@ -582,7 +582,7 @@ export function MagazineBlogTemplate() {
                             className="w-10 h-10 rounded-full"
                           />
                           <div>
-                            <p className="text-sm font-medium">{article.author.name}</p>
+                            <p className="text-sm font-medium text-gray-900">{article.author.name}</p>
                             <p className="text-xs text-gray-500">{article.date} • {article.readTime}</p>
                           </div>
                         </div>
@@ -744,15 +744,15 @@ export function MagazineBlogTemplate() {
             <p className="text-sm text-blue-100 mb-8">Join {magazineData.stats.subscribers} designers and developers</p>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-8 max-w-full mx-auto text-white">
               <div>
-                <div className="text-2xl font-bold mb-1">Weekly</div>
+                <div className="text-2xl font-bold mb-1 text-gray-900">Weekly</div>
                 <div className="text-sm text-blue-100">Frequency</div>
               </div>
               <div>
-                <div className="text-2xl font-bold mb-1">No Spam</div>
+                <div className="text-2xl font-bold mb-1 text-gray-900">No Spam</div>
                 <div className="text-sm text-blue-100">Guaranteed</div>
               </div>
               <div>
-                <div className="text-2xl font-bold mb-1">Free</div>
+                <div className="text-2xl font-bold mb-1 text-gray-900">Free</div>
                 <div className="text-sm text-blue-100">Always</div>
               </div>
             </div>

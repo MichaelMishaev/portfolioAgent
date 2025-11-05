@@ -93,13 +93,13 @@ export function StartupPitchTemplate() {
             className="md:hidden bg-white border-t"
           >
             <div className="container mx-auto px-6 py-6 flex flex-col gap-4">
-              <a href="#features" className="text-sm font-medium py-2" onClick={() => setMobileMenuOpen(false)}>
+              <a href="#features" className="text-sm font-medium py-2 text-gray-900" onClick={() => setMobileMenuOpen(false)}>
                 {tt.common.features}
               </a>
-              <a href="#pricing" className="text-sm font-medium py-2" onClick={() => setMobileMenuOpen(false)}>
+              <a href="#pricing" className="text-sm font-medium py-2 text-gray-900" onClick={() => setMobileMenuOpen(false)}>
                 {tt.common.pricing}
               </a>
-              <a href="#testimonials" className="text-sm font-medium py-2" onClick={() => setMobileMenuOpen(false)}>
+              <a href="#testimonials" className="text-sm font-medium py-2 text-gray-900" onClick={() => setMobileMenuOpen(false)}>
                 {tt.common.testimonials}
               </a>
             </div>
@@ -122,7 +122,7 @@ export function StartupPitchTemplate() {
                 <FiZap className="text-orange-500" />
                 {portfolioData.badge}
               </div>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 leading-tight bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent break-words">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 leading-tight bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent break-words text-white">
                 {portfolioData.headline}
               </h1>
               <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
@@ -136,7 +136,7 @@ export function StartupPitchTemplate() {
                   placeholder="Enter your email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="w-full sm:w-80 h-12 text-base"
+                  className="w-full sm:w-80 h-12 text-base text-white"
                 />
                 <Button size="lg" className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 h-12 px-8">
                   Start Free Trial <FiArrowRight className="ml-2" />
@@ -173,7 +173,7 @@ export function StartupPitchTemplate() {
                 <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
                   <FiCheck className="text-white" />
                 </div>
-                <div className="text-sm font-semibold">+2,400 Users</div>
+                <div className="text-sm font-semibold text-gray-900">+2,400 Users</div>
               </div>
             </motion.div>
           </motion.div>
@@ -465,7 +465,7 @@ export function StartupPitchTemplate() {
                 </a>
               </div>
               <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-lg px-12">
+                <Button size="lg" className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-lg px-12 text-white">
                   Schedule a Demo
                 </Button>
                 <Button size="lg" variant="outline" className="text-lg px-12 border-2 border-blue-600 !text-blue-600 hover:bg-blue-50">

@@ -318,13 +318,13 @@ export function TechBlogTemplate() {
       <header className={`sticky top-0 z-50 ${darkMode ? 'bg-gray-900 border-gray-800' : 'bg-white border-gray-200'} border-b backdrop-blur-lg bg-opacity-90`}>
         <div className="container mx-auto px-3 max-w-full py-4">
           <div className="flex items-center justify-between">
-            <Link href="/" className="text-lg sm:text-2xl font-bold flex items-center gap-1 sm:gap-2">
+            <Link href="/" className={`text-lg sm:text-2xl font-bold flex items-center gap-1 sm:gap-2 ${darkMode ? 'text-white' : 'text-gray-900'}`}>
               <FiCode className="w-5 h-5 sm:w-7 sm:h-7 text-blue-600" />
               <span className="hidden sm:inline">DEV<span className="text-blue-600">INSIGHTS</span></span>
               <span className="inline sm:hidden text-blue-600">DI</span>
             </Link>
 
-            <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
+            <nav className={`hidden md:flex items-center gap-6 text-sm font-medium ${darkMode ? 'text-gray-300' : 'text-gray-900'}`}>
               <a href="#articles" className={`hover:text-blue-600 transition-colors`}>Articles</a>
               <a href="#series" className={`hover:text-blue-600 transition-colors`}>Series</a>
               <a href="#tutorials" className={`hover:text-blue-600 transition-colors`}>Tutorials</a>
@@ -332,12 +332,16 @@ export function TechBlogTemplate() {
             </nav>
 
             <div className="flex flex-col sm:flex-row sm:items-center gap-3">
-              <button className={`p-2 rounded-lg ${darkMode ? 'hover:bg-gray-800' : 'hover:bg-gray-100'} transition-colors`}>
+              <button
+                aria-label="Search articles"
+                className={`p-2 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none ${darkMode ? 'hover:bg-gray-800' : 'hover:bg-gray-100'} transition-colors`}
+              >
                 <FiSearch className="w-5 h-5" />
               </button>
               <button
                 onClick={() => setDarkMode(!darkMode)}
-                className={`p-2 rounded-lg ${darkMode ? 'hover:bg-gray-800' : 'hover:bg-gray-100'} transition-colors`}
+                aria-label={darkMode ? "Switch to light mode" : "Switch to dark mode"}
+                className={`p-2 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none ${darkMode ? 'hover:bg-gray-800' : 'hover:bg-gray-100'} transition-colors`}
               >
                 {darkMode ? <FiSun className="w-5 h-5" /> : <FiMoon className="w-5 h-5" />}
               </button>
@@ -358,7 +362,7 @@ export function TechBlogTemplate() {
               <FiZap className="w-3 h-3 mr-1" />
               New: Interactive Code Playgrounds
             </Badge>
-            <h1 className="text-5xl md:text-4xl sm:text-5xl md:text-6xl font-bold mb-6 leading-tight break-words text-gray-900">
+            <h1 className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight break-words ${darkMode ? 'text-white' : 'text-gray-900'}`}>
               {techBlogData.hero.title}
             </h1>
             <p className={`text-xl mb-8 ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
@@ -389,7 +393,7 @@ export function TechBlogTemplate() {
         <div className="container mx-auto px-3 max-w-full">
           <div className="flex items-center gap-2 mb-8">
             <FiTrendingUp className="w-6 h-6 text-blue-600" />
-            <h2 className="text-3xl font-bold text-gray-900">Featured Tutorial</h2>
+            <h2 className={`text-3xl font-bold ${darkMode ? 'text-white' : 'text-gray-900'}`}>Featured Tutorial</h2>
           </div>
 
           <ScrollReveal>
@@ -419,7 +423,7 @@ export function TechBlogTemplate() {
                 </div>
 
                 <CardContent className="p-8 lg:p-10 flex flex-col justify-center">
-                  <h3 className="text-3xl font-bold mb-4 leading-tight text-gray-900">
+                  <h3 className={`text-3xl font-bold mb-4 leading-tight ${darkMode ? 'text-white' : 'text-gray-900'}`}>
                     {techBlogData.featured.title}
                   </h3>
                   <p className={`text-lg mb-6 ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
@@ -442,7 +446,7 @@ export function TechBlogTemplate() {
                       className="w-12 h-12 rounded-full"
                     />
                     <div>
-                      <p className="font-semibold">{techBlogData.featured.author.name}</p>
+                      <p className={`font-semibold ${darkMode ? 'text-white' : 'text-gray-900'}`}>{techBlogData.featured.author.name}</p>
                       <p className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
                         {techBlogData.featured.author.role}
                       </p>
@@ -468,10 +472,20 @@ export function TechBlogTemplate() {
                     <Button className="flex-1 bg-blue-600 hover:bg-blue-700">
                       Read Full Tutorial
                     </Button>
-                    <Button variant="outline" className="text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white" size="icon">
+                    <Button
+                      variant="outline"
+                      className={darkMode ? 'text-gray-300 hover:text-white border-gray-600' : 'text-gray-700 hover:text-gray-900 border-gray-300'}
+                      size="icon"
+                      aria-label="Bookmark article"
+                    >
                       <FiBookmark className="w-4 h-4" />
                     </Button>
-                    <Button variant="outline" className="text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white" size="icon">
+                    <Button
+                      variant="outline"
+                      className={darkMode ? 'text-gray-300 hover:text-white border-gray-600' : 'text-gray-700 hover:text-gray-900 border-gray-300'}
+                      size="icon"
+                      aria-label="Share article"
+                    >
                       <FiShare2 className="w-4 h-4" />
                     </Button>
                   </div>
@@ -487,7 +501,7 @@ export function TechBlogTemplate() {
         <div className="container mx-auto px-3 max-w-full">
           <div className="flex items-center justify-between mb-8">
             <div>
-              <h2 className="text-3xl font-bold mb-2 text-gray-900">Learning Series</h2>
+              <h2 className={`text-3xl font-bold mb-2 ${darkMode ? 'text-white' : 'text-gray-900'}`}>Learning Series</h2>
               <p className={darkMode ? 'text-gray-400' : 'text-gray-600'}>
                 Structured courses to level up your skills
               </p>
@@ -513,7 +527,7 @@ export function TechBlogTemplate() {
                     </div>
                   </div>
                   <CardContent className="p-6">
-                    <h3 className="text-xl font-bold mb-3 group-hover:text-blue-600 transition-colors">
+                    <h3 className={`text-xl font-bold mb-3 group-hover:text-blue-600 transition-colors ${darkMode ? 'text-white' : 'text-gray-900'}`}>
                       {series.title}
                     </h3>
                     {series.progress > 0 && (
@@ -548,9 +562,9 @@ export function TechBlogTemplate() {
       <section className={`py-16 ${darkMode ? 'bg-gray-900' : 'bg-white'}`}>
         <div className="container mx-auto px-3 max-w-full">
           <div className="flex items-center justify-between mb-8">
-            <h2 className="text-3xl font-bold text-gray-900">Latest Articles</h2>
+            <h2 className={`text-3xl font-bold ${darkMode ? 'text-white' : 'text-gray-900'}`}>Latest Articles</h2>
             <div className="flex items-center gap-2">
-              <Button variant="outline" className="text-slate-900 dark:text-white" size="sm">
+              <Button variant="outline" className={darkMode ? 'text-white border-gray-600' : 'text-gray-900 border-gray-300'} size="sm">
                 <FiFilter className="w-4 h-4 mr-2" />
                 Filter
               </Button>
@@ -565,27 +579,27 @@ export function TechBlogTemplate() {
                     <div className="flex items-start gap-6">
                       <div className="flex-1">
                         <div className="flex items-center gap-2 mb-3">
-                          <Badge variant="outline" className="text-slate-900 dark:text-white">{article.category}</Badge>
+                          <Badge variant="outline" className={darkMode ? 'text-white border-gray-600' : 'text-gray-900 border-gray-300'}>{article.category}</Badge>
                           <Badge
                             className={
                               article.difficulty === "Beginner"
-                                ? "bg-green-100 text-green-700"
+                                ? darkMode ? "bg-green-900 text-green-300" : "bg-green-100 text-green-700"
                                 : article.difficulty === "Intermediate"
-                                ? "bg-blue-100 text-blue-700"
-                                : "bg-red-100 text-red-700"
+                                ? darkMode ? "bg-blue-900 text-blue-300" : "bg-blue-100 text-blue-700"
+                                : darkMode ? "bg-red-900 text-red-300" : "bg-red-100 text-red-700"
                             }
                           >
                             {article.difficulty}
                           </Badge>
                           {article.hasCode && (
-                            <Badge className="bg-purple-100 text-purple-700">
+                            <Badge className={darkMode ? 'bg-purple-900 text-purple-300' : 'bg-purple-100 text-purple-700'}>
                               <FiCode className="w-3 h-3 mr-1" />
                               Code
                             </Badge>
                           )}
                         </div>
 
-                        <h3 className="text-2xl font-bold mb-3 group-hover:text-blue-600 transition-colors">
+                        <h3 className={`text-2xl font-bold mb-3 group-hover:text-blue-600 transition-colors ${darkMode ? 'text-white' : 'text-gray-900'}`}>
                           {article.title}
                         </h3>
                         <p className={`mb-4 ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
@@ -594,21 +608,21 @@ export function TechBlogTemplate() {
 
                         <div className="flex flex-wrap items-center gap-2 mb-4">
                           {article.tags.map((tag) => (
-                            <Badge key={tag} variant="secondary" className="text-xs">
+                            <Badge key={tag} variant="secondary" className={`text-xs ${darkMode ? 'text-gray-300' : 'text-gray-900'}`}>
                               {tag}
                             </Badge>
                           ))}
                         </div>
 
-                        <div className="flex items-center justify-between">
-                          <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
+                        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                          <div className="flex items-center gap-4">
                             <img
                               src={article.author.avatar}
                               alt={article.author.name}
                               className="w-10 h-10 rounded-full"
                             />
                             <div>
-                              <p className="font-medium text-sm">{article.author.name}</p>
+                              <p className={`font-medium text-sm ${darkMode ? 'text-white' : 'text-gray-900'}`}>{article.author.name}</p>
                               <div className={`flex items-center gap-3 text-xs ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
                                 <span>{article.date}</span>
                                 <span>•</span>
@@ -623,11 +637,17 @@ export function TechBlogTemplate() {
                           </div>
 
                           <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
-                            <button className={`flex items-center gap-1 text-sm ${darkMode ? 'text-gray-400 hover:text-red-500' : 'text-gray-600 hover:text-red-600'} transition-colors`}>
+                            <button
+                              aria-label={`Like article (${article.likes} likes)`}
+                              className={`flex items-center gap-1 text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none rounded px-2 py-1 ${darkMode ? 'text-gray-400 hover:text-red-400' : 'text-gray-600 hover:text-red-600'} transition-colors`}
+                            >
                               <FiHeart className="w-4 h-4" />
                               <span>{article.likes}</span>
                             </button>
-                            <button className={`flex items-center gap-1 text-sm ${darkMode ? 'text-gray-400 hover:text-blue-500' : 'text-gray-600 hover:text-blue-600'} transition-colors`}>
+                            <button
+                              aria-label={`View comments (${article.comments} comments)`}
+                              className={`flex items-center gap-1 text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none rounded px-2 py-1 ${darkMode ? 'text-gray-400 hover:text-blue-400' : 'text-gray-600 hover:text-blue-600'} transition-colors`}
+                            >
                               <FiMessageCircle className="w-4 h-4" />
                               <span>{article.comments}</span>
                             </button>
@@ -654,15 +674,15 @@ export function TechBlogTemplate() {
             <div>
               <div className="flex items-center gap-2 mb-6">
                 <FiTrendingUp className="w-6 h-6 text-blue-600" />
-                <h2 className="text-2xl font-bold text-gray-900">Most Popular</h2>
+                <h2 className={`text-2xl font-bold ${darkMode ? 'text-white' : 'text-gray-900'}`}>Most Popular</h2>
               </div>
               <div className="space-y-4">
                 {techBlogData.popularArticles.map((article, idx) => (
                   <Card key={idx} className={`p-6 ${darkMode ? 'bg-gray-900 border-gray-700' : 'bg-white'} hover:shadow-lg transition-shadow cursor-pointer group`}>
                     <div className="flex items-start gap-4">
-                      <span className="text-3xl font-bold text-gray-300">{String(idx + 1).padStart(2, '0')}</span>
+                      <span className={`text-3xl font-bold ${darkMode ? 'text-gray-600' : 'text-gray-300'}`}>{String(idx + 1).padStart(2, '0')}</span>
                       <div className="flex-1">
-                        <h3 className="font-bold mb-2 group-hover:text-blue-600 transition-colors">{article.title}</h3>
+                        <h3 className={`font-bold mb-2 group-hover:text-blue-600 transition-colors ${darkMode ? 'text-white' : 'text-gray-900'}`}>{article.title}</h3>
                         <div className={`flex items-center gap-4 text-sm ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
                           <span className="flex items-center gap-1">
                             <FiEye className="w-4 h-4" />
@@ -684,7 +704,7 @@ export function TechBlogTemplate() {
             <div>
               <div className="flex items-center gap-2 mb-6">
                 <FiUsers className="w-6 h-6 text-blue-600" />
-                <h2 className="text-2xl font-bold text-gray-900">Top Contributors</h2>
+                <h2 className={`text-2xl font-bold ${darkMode ? 'text-white' : 'text-gray-900'}`}>Top Contributors</h2>
               </div>
               <div className="grid gap-4">
                 {techBlogData.contributors.map((contributor) => (
@@ -696,10 +716,10 @@ export function TechBlogTemplate() {
                         className="w-16 h-16 rounded-full border-2 border-blue-600"
                       />
                       <div className="flex-1">
-                        <h3 className="font-bold text-gray-900 dark:text-white">{contributor.name}</h3>
+                        <h3 className={`font-bold ${darkMode ? 'text-white' : 'text-gray-900'}`}>{contributor.name}</h3>
                         <p className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-600'} mb-1`}>{contributor.role}</p>
                         <div className="flex items-center gap-3 text-sm">
-                          <Badge variant="outline">{contributor.specialty}</Badge>
+                          <Badge variant="outline" className={darkMode ? 'text-white border-gray-600' : 'text-gray-900 border-gray-300'}>{contributor.specialty}</Badge>
                           <span className={darkMode ? 'text-gray-400' : 'text-gray-600'}>{contributor.articles} articles</span>
                         </div>
                       </div>
@@ -715,7 +735,7 @@ export function TechBlogTemplate() {
       {/* Topics Grid */}
       <section className={`py-16 ${darkMode ? 'bg-gray-900' : 'bg-white'}`}>
         <div className="container mx-auto px-3 max-w-full">
-          <h2 className="text-3xl font-bold mb-8 text-gray-900">Explore Topics</h2>
+          <h2 className={`text-3xl font-bold mb-8 ${darkMode ? 'text-white' : 'text-gray-900'}`}>Explore Topics</h2>
           <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
             {techBlogData.topics.map((topic, index) => (
               <ScrollReveal key={topic.name} delay={index * 0.05}>
@@ -766,15 +786,15 @@ export function TechBlogTemplate() {
             <p className="text-sm text-blue-100 mb-8">Free forever. No spam. Unsubscribe anytime.</p>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-full mx-auto text-white">
               <div>
-                <div className="text-2xl font-bold mb-1">Weekly</div>
+                <div className="text-2xl font-bold mb-1 text-white">Weekly</div>
                 <div className="text-sm text-blue-100">Updates</div>
               </div>
               <div>
-                <div className="text-2xl font-bold mb-1">Exclusive</div>
+                <div className="text-2xl font-bold mb-1 text-white">Exclusive</div>
                 <div className="text-sm text-blue-100">Content</div>
               </div>
               <div>
-                <div className="text-2xl font-bold mb-1">Free</div>
+                <div className="text-2xl font-bold mb-1 text-white">Free</div>
                 <div className="text-sm text-blue-100">Always</div>
               </div>
             </div>
@@ -787,7 +807,7 @@ export function TechBlogTemplate() {
         <div className="container mx-auto px-3 max-w-full">
           <div className="grid md:grid-cols-5 gap-8 mb-8">
             <div className="md:col-span-2">
-              <div className="flex items-center gap-2 text-xl font-bold mb-4">
+              <div className={`flex items-center gap-2 text-xl font-bold mb-4 ${darkMode ? 'text-white' : 'text-gray-900'}`}>
                 <FiCode className="w-6 h-6 text-blue-600" />
                 <span>DEV<span className="text-blue-600">INSIGHTS</span></span>
               </div>
@@ -795,13 +815,25 @@ export function TechBlogTemplate() {
                 Empowering developers with knowledge. Join our community of 50K+ developers learning and growing together.
               </p>
               <div className="flex flex-col sm:flex-row sm:items-center gap-3">
-                <a href="#" className={`p-2 ${darkMode ? 'bg-gray-800 hover:bg-gray-700' : 'bg-gray-100 hover:bg-gray-200'} rounded-lg transition-colors`}>
+                <a
+                  href="#"
+                  aria-label="Follow us on GitHub"
+                  className={`p-2 ${darkMode ? 'bg-gray-800 hover:bg-gray-700' : 'bg-gray-100 hover:bg-gray-200'} rounded-lg transition-colors focus:ring-2 focus:ring-blue-500 focus:outline-none`}
+                >
                   <FiGithub className="w-5 h-5" />
                 </a>
-                <a href="#" className={`p-2 ${darkMode ? 'bg-gray-800 hover:bg-gray-700' : 'bg-gray-100 hover:bg-gray-200'} rounded-lg transition-colors`}>
+                <a
+                  href="#"
+                  aria-label="Follow us on Twitter"
+                  className={`p-2 ${darkMode ? 'bg-gray-800 hover:bg-gray-700' : 'bg-gray-100 hover:bg-gray-200'} rounded-lg transition-colors focus:ring-2 focus:ring-blue-500 focus:outline-none`}
+                >
                   <FiTwitter className="w-5 h-5" />
                 </a>
-                <a href="#" className={`p-2 ${darkMode ? 'bg-gray-800 hover:bg-gray-700' : 'bg-gray-100 hover:bg-gray-200'} rounded-lg transition-colors`}>
+                <a
+                  href="#"
+                  aria-label="Follow us on LinkedIn"
+                  className={`p-2 ${darkMode ? 'bg-gray-800 hover:bg-gray-700' : 'bg-gray-100 hover:bg-gray-200'} rounded-lg transition-colors focus:ring-2 focus:ring-blue-500 focus:outline-none`}
+                >
                   <FiLinkedin className="w-5 h-5" />
                 </a>
               </div>

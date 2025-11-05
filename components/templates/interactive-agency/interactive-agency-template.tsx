@@ -109,7 +109,7 @@ export function InteractiveAgencyTemplate() {
             transition={{ duration: 0.8 }}
           >
             <motion.h1
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl lg:text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black mb-6 leading-none break-words"
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl lg:text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black mb-6 leading-none break-words text-gray-900"
               style={{
                 background: "linear-gradient(135deg, #8B5CF6 0%, #06B6D4 100%)",
                 WebkitBackgroundClip: "text",
@@ -135,7 +135,7 @@ export function InteractiveAgencyTemplate() {
               transition={{ delay: 0.6 }}
               className="flex flex-wrap gap-4 justify-center"
             >
-              <Button size="lg" className="bg-gradient-to-r from-purple-600 to-cyan-500 hover:from-purple-500 hover:to-cyan-400 text-lg px-8">
+              <Button size="lg" className="bg-gradient-to-r from-purple-600 to-cyan-500 hover:from-purple-500 hover:to-cyan-400 text-lg px-8 text-white">
                 {tt.common.viewAll} <FiArrowRight className="ml-2" />
               </Button>
               <Button size="lg" variant="outline" className="border-2 border-purple-500 !text-white !bg-transparent hover:bg-purple-500/10 text-lg px-8">
@@ -170,7 +170,7 @@ export function InteractiveAgencyTemplate() {
                 transition={{ delay: index * 0.1 }}
                 className="text-center p-6 rounded-2xl bg-gradient-to-br from-purple-900/20 to-cyan-900/20 border border-purple-500/20 backdrop-blur-sm"
               >
-                <div className="text-5xl md:text-4xl sm:text-5xl md:text-6xl font-black mb-2 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent break-words">
+                <div className="text-5xl md:text-4xl sm:text-5xl md:text-6xl font-black mb-2 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent break-words text-white">
                   {stat.value}
                 </div>
                 <div className="text-sm uppercase tracking-wider text-gray-400">{stat.label}</div>
@@ -184,7 +184,7 @@ export function InteractiveAgencyTemplate() {
       <section id="work" className="py-32 relative">
         <div className="container mx-auto px-6">
           <ScrollReveal>
-            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-16 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent break-words">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-16 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent break-words text-white">
               Featured Work
             </h2>
           </ScrollReveal>
@@ -238,7 +238,7 @@ export function InteractiveAgencyTemplate() {
       <section id="services" className="py-32 relative">
         <div className="container mx-auto px-6">
           <ScrollReveal>
-            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-16 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent break-words">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-16 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent break-words text-white">
               What We Do
             </h2>
           </ScrollReveal>
@@ -270,7 +270,7 @@ export function InteractiveAgencyTemplate() {
         <div className="absolute inset-0 bg-gradient-to-br from-purple-900/10 to-cyan-900/10" />
         <div className="container mx-auto px-6 relative z-10">
           <ScrollReveal>
-            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-16 text-center bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent break-words">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-16 text-center bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent break-words text-white">
               Client Love
             </h2>
           </ScrollReveal>

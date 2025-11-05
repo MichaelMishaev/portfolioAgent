@@ -165,7 +165,7 @@ export function MinimalPortfolioCleanTemplate() {
             <div className="mt-12 grid md:grid-cols-3 gap-8">
               {data.about.skills.map((skill: string, index: number) => (
                 <div key={index} className="text-center">
-                  <div className="text-4xl mb-2">✓</div>
+                  <div className="text-4xl mb-2 text-gray-900">✓</div>
                   <div className="font-medium text-gray-900">{skill}</div>
                 </div>
               ))}
@@ -318,7 +318,7 @@ export function MinimalPortfolioCleanTemplate() {
               <ScrollReveal key={index} delay={index * 0.1}>
                 <blockquote className="border-l-2 border-gray-900 pl-6">
                   <p className="text-xl text-gray-700 mb-4">"{testimonial.quote}"</p>
-                  <footer className="text-sm">
+                  <footer className="text-sm text-gray-900">
                     <span className="text-gray-900 font-medium">{testimonial.author}</span>
                     <span className="text-gray-500"> — {testimonial.role}</span>
                   </footer>
