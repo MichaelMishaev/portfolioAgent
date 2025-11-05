@@ -365,7 +365,7 @@ export function DFYouServiceTemplate() {
               <Badge className="mb-6 bg-pink-500 text-white text-sm px-3 py-2">
                 {serviceData.speed}
               </Badge>
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold mb-6 tracking-tight">
+              <h1 className="text-3xl sm:text-5xl md:text-5xl lg:text-6xl  xl:text-5xl sm:text-6xl md:text-7xl lg:text-8xl  font-bold mb-6 tracking-tight break-words">
                 {serviceData.name}
               </h1>
               <p className="text-3xl font-light mb-8 text-stone-700">{serviceData.tagline}</p>
@@ -406,7 +406,7 @@ export function DFYouServiceTemplate() {
       <section className="py-32 bg-stone-50">
         <div className="container mx-auto px-3 sm:px-3">
           <ScrollReveal>
-            <h2 className="text-5xl font-bold text-center mb-24">How It Works</h2>
+            <h2 className="text-4xl sm:text-5xl  font-bold text-center mb-24 break-words">How It Works</h2>
           </ScrollReveal>
 
           <div className="max-w-full mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
@@ -430,7 +430,7 @@ export function DFYouServiceTemplate() {
       <section id="work" className="py-32">
         <div className="container mx-auto px-3 sm:px-3">
           <ScrollReveal>
-            <h2 className="text-5xl font-bold text-center mb-8">{serviceData.portfolio.title}</h2>
+            <h2 className="text-4xl sm:text-5xl  font-bold text-center mb-8 break-words">{serviceData.portfolio.title}</h2>
             <p className="text-xl text-center text-stone-600 mb-12">
               Real projects. Real fast. All delivered in under 48 hours.
             </p>
@@ -485,7 +485,7 @@ export function DFYouServiceTemplate() {
         <div className="container mx-auto px-3 sm:px-3">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <h2 className="text-5xl font-bold mb-6">{serviceData.pricing.title}</h2>
+              <h2 className="text-4xl sm:text-5xl  font-bold mb-6 break-words">{serviceData.pricing.title}</h2>
               <p className="text-xl text-stone-600 max-w-full mx-auto">
                 {serviceData.pricing.subtitle}
               </p>
@@ -498,7 +498,7 @@ export function DFYouServiceTemplate() {
                 <CardHeader className="text-center pb-8 pt-12 bg-gradient-to-br from-blue-50 to-pink-50">
                   <CardTitle className="text-3xl mb-6">{serviceData.pricing.plan.name}</CardTitle>
                   <div className="mb-6">
-                    <span className="text-6xl font-bold">${serviceData.pricing.plan.price}</span>
+                    <span className="text-4xl sm:text-5xl md:text-6xl  font-bold break-words">${serviceData.pricing.plan.price}</span>
                     <span className="text-xl text-stone-600">/{serviceData.pricing.plan.period}</span>
                   </div>
                   <Button
@@ -541,7 +541,7 @@ export function DFYouServiceTemplate() {
       <section className="py-32">
         <div className="container mx-auto px-3 sm:px-3">
           <ScrollReveal>
-            <h2 className="text-5xl font-bold text-center mb-24">Our Guarantees</h2>
+            <h2 className="text-4xl sm:text-5xl  font-bold text-center mb-24 break-words">Our Guarantees</h2>
           </ScrollReveal>
 
           <div className="max-w-full mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -564,7 +564,7 @@ export function DFYouServiceTemplate() {
       <section className="py-32 bg-stone-50">
         <div className="container mx-auto px-3 sm:px-3">
           <ScrollReveal>
-            <h2 className="text-5xl font-bold text-center mb-24">What Clients Say</h2>
+            <h2 className="text-4xl sm:text-5xl  font-bold text-center mb-24 break-words">What Clients Say</h2>
           </ScrollReveal>
 
           <div className="max-w-full mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -596,7 +596,7 @@ export function DFYouServiceTemplate() {
       <section id="faq" className="py-32">
         <div className="container mx-auto px-3 sm:px-3">
           <ScrollReveal>
-            <h2 className="text-5xl font-bold text-center mb-24">Frequently Asked Questions</h2>
+            <h2 className="text-4xl sm:text-5xl  font-bold text-center mb-24 break-words">Frequently Asked Questions</h2>
           </ScrollReveal>
 
           <div className="max-w-full mx-auto space-y-6">
@@ -621,7 +621,7 @@ export function DFYouServiceTemplate() {
         <div className="container mx-auto px-3 sm:px-3">
           <ScrollReveal>
             <div className="max-w-full mx-auto text-center">
-              <h2 className="text-5xl md:text-6xl font-bold mb-8">
+              <h2 className="text-5xl md: text-4xl sm:text-5xl md:text-6xl  font-bold mb-8 break-words">
                 Ready for Unlimited Design?
               </h2>
               <p className="text-xl mb-12 max-w-full mx-auto opacity-90">

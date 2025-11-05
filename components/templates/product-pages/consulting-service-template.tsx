@@ -329,7 +329,7 @@ export function ConsultingServiceTemplate() {
             </FadeIn>
 
             <FadeIn delay={0.1}>
-              <h1 className="text-7xl md:text-8xl font-bold mb-6 leading-tight">
+              <h1 className="text-7xl md:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight">
                 {serviceData.tagline}
               </h1>
             </FadeIn>
@@ -357,7 +357,7 @@ export function ConsultingServiceTemplate() {
               <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mt-20">
                 {serviceData.hero.stats.map((stat) => (
                   <div key={stat.label} className="border-l-4 border-emerald-600 pl-4">
-                    <div className="text-5xl font-bold text-emerald-600 mb-1">{stat.value}</div>
+                    <div className="text-4xl sm:text-5xl  font-bold text-emerald-600 mb-1 break-words">{stat.value}</div>
                     <div className="text-sm text-gray-600 font-medium">{stat.label}</div>
                   </div>
                 ))}
@@ -372,7 +372,7 @@ export function ConsultingServiceTemplate() {
         <div className="container mx-auto px-3 max-w-full">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <h2 className="text-5xl font-bold mb-4">Our Services</h2>
+              <h2 className="text-4xl sm:text-5xl  font-bold mb-4 break-words">Our Services</h2>
               <p className="text-xl text-gray-600">Strategic solutions for your most critical challenges</p>
             </div>
           </ScrollReveal>
@@ -441,7 +441,7 @@ export function ConsultingServiceTemplate() {
         <div className="container mx-auto px-3 max-w-full">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <h2 className="text-5xl font-bold mb-4">Client Engagements</h2>
+              <h2 className="text-4xl sm:text-5xl  font-bold mb-4 break-words">Client Engagements</h2>
               <p className="text-xl text-gray-600">Transformational results for global enterprises</p>
             </div>
           </ScrollReveal>
@@ -501,7 +501,7 @@ export function ConsultingServiceTemplate() {
         <div className="container mx-auto px-3 max-w-full">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <h2 className="text-5xl font-bold mb-4">Our Partners</h2>
+              <h2 className="text-4xl sm:text-5xl  font-bold mb-4 break-words">Our Partners</h2>
               <p className="text-xl text-gray-600">Senior leaders from the world's top firms</p>
             </div>
           </ScrollReveal>
@@ -533,7 +533,7 @@ export function ConsultingServiceTemplate() {
         <div className="container mx-auto px-3 max-w-full">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <h2 className="text-5xl font-bold mb-4">{serviceData.methodology.title}</h2>
+              <h2 className="text-4xl sm:text-5xl  font-bold mb-4 break-words">{serviceData.methodology.title}</h2>
               <p className="text-xl text-gray-600">{serviceData.methodology.description}</p>
             </div>
           </ScrollReveal>
@@ -577,7 +577,7 @@ export function ConsultingServiceTemplate() {
         <div className="container mx-auto px-3 max-w-full">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <h2 className="text-5xl font-bold mb-4">Latest Insights</h2>
+              <h2 className="text-4xl sm:text-5xl  font-bold mb-4 break-words">Latest Insights</h2>
               <p className="text-xl text-gray-600">Research and perspectives from our experts</p>
             </div>
           </ScrollReveal>
@@ -614,7 +614,7 @@ export function ConsultingServiceTemplate() {
       <section className="bg-gradient-to-r from-emerald-600 to-emerald-800 py-24">
         <div className="container mx-auto px-3 max-w-full text-center">
           <ScrollReveal>
-            <h2 className="text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl sm:text-5xl  font-bold text-white mb-6 break-words">
               Let's Discuss Your Strategic Priorities
             </h2>
             <p className="text-xl text-emerald-100 mb-8 max-w-full mx-auto">

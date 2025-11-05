@@ -72,7 +72,7 @@ export function MinimalPortfolioCleanTemplate() {
       <section className="min-h-screen flex items-center justify-center px-6 pt-20">
         <div className="max-w-3xl text-center">
           <FadeIn>
-            <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-6 tracking-tight">
+            <h1 className="text-4xl sm:text-5xl md:text-5xl sm:text-5xl md:text-6xl   font-bold text-gray-900 mb-6 tracking-tight break-words">
               {data.hero.greeting}
             </h1>
           </FadeIn>
@@ -395,7 +395,7 @@ export function MinimalPortfolioCleanTemplate() {
       <section className="py-24 px-6 bg-white border-t border-gray-200">
         <div className="max-w-4xl mx-auto text-center">
           <ScrollReveal>
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">Let's work together</h2>
+            <h2 className="text-3xl sm:text-4xl  font-bold text-gray-900 mb-6">Let's work together</h2>
             <p className="text-xl text-gray-600 mb-12">Available for select projects starting Q2 2025.</p>
             <a
               href="#contact"

@@ -280,7 +280,7 @@ export function AgencyServiceTemplate() {
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mt-16">
               {serviceData.hero.stats.map((stat) => (
                 <div key={stat.label}>
-                  <div className="text-4xl font-bold text-blue-600">{stat.value}</div>
+                  <div className="text-3xl sm:text-4xl  font-bold text-blue-600">{stat.value}</div>
                   <div className="text-sm text-gray-600 mt-1">{stat.label}</div>
                 </div>
               ))}
@@ -294,7 +294,7 @@ export function AgencyServiceTemplate() {
         <div className="container mx-auto px-3 max-w-full">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <h2 className="text-5xl font-bold mb-4">Our Services</h2>
+              <h2 className="text-4xl sm:text-5xl  font-bold mb-4 break-words">Our Services</h2>
               <p className="text-xl text-gray-600">End-to-end solutions for modern brands</p>
             </div>
           </ScrollReveal>
@@ -343,7 +343,7 @@ export function AgencyServiceTemplate() {
         <div className="container mx-auto px-3 max-w-full">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <h2 className="text-5xl font-bold mb-4">Featured Work</h2>
+              <h2 className="text-4xl sm:text-5xl  font-bold mb-4 break-words">Featured Work</h2>
               <p className="text-xl text-gray-600">Transforming brands, driving results</p>
             </div>
           </ScrollReveal>
@@ -386,7 +386,7 @@ export function AgencyServiceTemplate() {
         <div className="container mx-auto px-3 max-w-full">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <h2 className="text-5xl font-bold mb-4">Meet the Team</h2>
+              <h2 className="text-4xl sm:text-5xl  font-bold mb-4 break-words">Meet the Team</h2>
               <p className="text-xl text-gray-600">World-class talent, focused on your success</p>
             </div>
           </ScrollReveal>
@@ -417,7 +417,7 @@ export function AgencyServiceTemplate() {
         <div className="container mx-auto px-3 max-w-full">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <h2 className="text-5xl font-bold mb-4">{serviceData.process.title}</h2>
+              <h2 className="text-4xl sm:text-5xl  font-bold mb-4 break-words">{serviceData.process.title}</h2>
               <p className="text-xl text-gray-600">Consistent excellence, every time</p>
             </div>
           </ScrollReveal>
@@ -427,7 +427,7 @@ export function AgencyServiceTemplate() {
               <ScrollReveal key={step.number} delay={index * 0.1}>
                 <Card>
                   <CardContent className="p-8">
-                    <div className="text-6xl font-bold text-blue-100 mb-4">{step.number}</div>
+                    <div className="text-4xl sm:text-5xl md:text-6xl  font-bold text-blue-100 mb-4 break-words">{step.number}</div>
                     <h3 className="text-2xl font-bold mb-3">{step.name}</h3>
                     <p className="text-gray-600 mb-4">{step.description}</p>
                     <div className="space-y-2">
@@ -450,7 +450,7 @@ export function AgencyServiceTemplate() {
       <section className="bg-gradient-to-r from-blue-600 to-blue-700 py-24">
         <div className="container mx-auto px-3 max-w-full text-center">
           <ScrollReveal>
-            <h2 className="text-5xl font-bold text-white mb-6">Ready to Transform Your Brand?</h2>
+            <h2 className="text-4xl sm:text-5xl  font-bold text-white mb-6 break-words">Ready to Transform Your Brand?</h2>
             <p className="text-xl text-blue-100 mb-8 max-w-full mx-auto">
               Let's create something extraordinary together. Book a free strategy call today.
             </p>

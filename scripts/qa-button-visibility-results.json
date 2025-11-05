@@ -1,0 +1,317 @@
+{
+  "passed": [
+    "bold-typography",
+    "grid-masonry",
+    "illustration-focus",
+    "kinetic-typography",
+    "neo-brutalist",
+    "data-dashboard",
+    "y2k-retro",
+    "ar-spatial",
+    "collage-maximalist",
+    "product-saas",
+    "product-course",
+    "product-tech",
+    "product-physical",
+    "product-luxury",
+    "service-b2b",
+    "service-community",
+    "service-dfyou",
+    "blog-personal",
+    "lin-portfolio-elegance",
+    "lin-professional-authority",
+    "split-screen-editorial",
+    "photography-immersive",
+    "motion-designer"
+  ],
+  "warnings": [
+    {
+      "template": "minimalist",
+      "buttons": [
+        "Toggle theme",
+        "Toggle language",
+        "✏️ Customize Template"
+      ]
+    },
+    {
+      "template": "dark-mode",
+      "buttons": [
+        "Get Started",
+        "Get Started"
+      ]
+    },
+    {
+      "template": "fullscreen-immersive",
+      "buttons": [
+        "View Portfolio"
+      ]
+    },
+    {
+      "template": "split-screen",
+      "buttons": [
+        "Read Case Study",
+        "Read Case Study",
+        "Read Case Study"
+      ]
+    },
+    {
+      "template": "single-page",
+      "buttons": [
+        "View Portfolio"
+      ]
+    },
+    {
+      "template": "text-heavy",
+      "buttons": [
+        "Read More →",
+        "Read More →",
+        "Read More →",
+        "Read More →"
+      ]
+    },
+    {
+      "template": "card-modular",
+      "buttons": [
+        "Read More",
+        "Read More",
+        "Read More"
+      ]
+    },
+    {
+      "template": "bento-grid",
+      "buttons": [
+        "Schedule Meeting",
+        "GitHub",
+        "LinkedIn"
+      ]
+    },
+    {
+      "template": "3d-immersive",
+      "buttons": [
+        "Select Plan",
+        "Select Plan",
+        "View Demo"
+      ]
+    },
+    {
+      "template": "organic-liquid",
+      "buttons": [
+        "Choose Plan",
+        "Choose Plan",
+        "Choose Plan",
+        "View Portfolio"
+      ]
+    },
+    {
+      "template": "product-premium",
+      "buttons": [
+        "Flying TourbillonIncluded",
+        "Perpetual CalendarIncluded",
+        "Moon PhaseIncluded",
+        "Download Brochure"
+      ]
+    },
+    {
+      "template": "voice-first",
+      "buttons": [
+        "See Demo"
+      ]
+    },
+    {
+      "template": "product-fashion",
+      "buttons": [
+        "US 7EU 38",
+        "US 8EU 39",
+        "US 10EU 41",
+        "US 11EU 42",
+        "US 12EU 43"
+      ]
+    },
+    {
+      "template": "product-audio",
+      "buttons": [
+        "Find a Store"
+      ]
+    },
+    {
+      "template": "product-vacuum",
+      "buttons": [
+        "Watch Video Demo"
+      ]
+    },
+    {
+      "template": "service-agency",
+      "buttons": [
+        "View Pricing"
+      ]
+    },
+    {
+      "template": "service-enterprise",
+      "buttons": [
+        "Download White Paper"
+      ]
+    },
+    {
+      "template": "service-consulting",
+      "buttons": [
+        "Request Proposal"
+      ]
+    },
+    {
+      "template": "blog-magazine",
+      "buttons": [
+        "View All"
+      ]
+    },
+    {
+      "template": "blog-tech",
+      "buttons": [
+        "View All",
+        "Read",
+        "Read",
+        "Read",
+        "Read",
+        "Read",
+        "Read",
+        "Read",
+        "Read"
+      ]
+    },
+    {
+      "template": "blog-archetypes-minimal",
+      "buttons": [
+        "Toggle theme",
+        "Toggle language"
+      ]
+    },
+    {
+      "template": "blog-archetypes-editorial",
+      "buttons": [
+        "TAKE FREE QUIZ"
+      ]
+    },
+    {
+      "template": "lin-tech-pioneer",
+      "buttons": [
+        "Start Free Trial"
+      ]
+    },
+    {
+      "template": "online-business-coach",
+      "buttons": [
+        "Toggle theme",
+        "Toggle language"
+      ]
+    },
+    {
+      "template": "online-business-course",
+      "buttons": [
+        "Toggle theme",
+        "Toggle language",
+        "Preview",
+        "Preview",
+        "Preview"
+      ]
+    },
+    {
+      "template": "online-business-agency",
+      "buttons": [
+        "Toggle theme",
+        "Toggle language"
+      ]
+    },
+    {
+      "template": "online-business-saas",
+      "buttons": [
+        "Toggle theme",
+        "Toggle language"
+      ]
+    },
+    {
+      "template": "professional-b2b",
+      "buttons": [
+        "Toggle theme",
+        "Toggle language",
+        "Кейсы"
+      ]
+    },
+    {
+      "template": "minimal-portfolio-clean",
+      "buttons": [
+        "Toggle theme",
+        "Toggle language"
+      ]
+    },
+    {
+      "template": "glassmorphism-modern",
+      "buttons": [
+        "Toggle theme",
+        "Toggle language",
+        "Смотреть работы",
+        "Узнать больше"
+      ]
+    },
+    {
+      "template": "saas-feature-rich",
+      "buttons": [
+        "Toggle theme",
+        "Toggle language"
+      ]
+    },
+    {
+      "template": "personal-brand",
+      "buttons": [
+        "Toggle theme",
+        "Toggle language",
+        "What is your typical project timeline?+",
+        "Do you offer ongoing support?+",
+        "What is your design process?+",
+        "Can you work with existing brands?+",
+        "What technologies do you use?+",
+        "Do you provide training?+"
+      ]
+    },
+    {
+      "template": "experimental-3d",
+      "buttons": [
+        "Войти в опыт",
+        "Начать проект",
+        "Get Started",
+        "Get Started"
+      ]
+    },
+    {
+      "template": "interactive-agency",
+      "buttons": [
+        "Watch Showreel"
+      ]
+    },
+    {
+      "template": "luxury-minimal",
+      "buttons": [
+        "Toggle theme",
+        "Toggle language"
+      ]
+    },
+    {
+      "template": "startup-pitch",
+      "buttons": [
+        "Toggle theme",
+        "Toggle language"
+      ]
+    },
+    {
+      "template": "service-marketplace",
+      "buttons": [
+        "Open menu",
+        "Learn More"
+      ]
+    }
+  ],
+  "failed": [
+    {
+      "template": "creative-agency-bold",
+      "error": "page.$$eval: Execution context was destroyed, most likely because of a navigation"
+    }
+  ]
+}

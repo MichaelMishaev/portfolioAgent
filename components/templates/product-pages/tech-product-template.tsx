@@ -213,7 +213,7 @@ export function TechProductTemplate() {
           <div>
             <FadeIn delay={0.2}>
               <Badge className="mb-4 bg-yellow-400 text-black font-bold">IN STOCK</Badge>
-              <h1 className="text-5xl md:text-6xl font-black mb-4 tracking-tight uppercase">
+              <h1 className="text-5xl md: text-4xl sm:text-5xl md:text-6xl  font-black mb-4 tracking-tight uppercase break-words">
                 {productData.name}
               </h1>
               <p className="text-2xl text-yellow-400 font-bold mb-4 uppercase tracking-widest">
@@ -223,7 +223,7 @@ export function TechProductTemplate() {
                 {productData.description}
               </p>
 
-              <div className="text-4xl font-black mb-8">
+              <div className="text-3xl sm:text-4xl  font-black mb-8">
                 <span className="text-yellow-400">${productData.price}</span>
               </div>
 
@@ -283,7 +283,7 @@ export function TechProductTemplate() {
       {/* Tech Specs */}
       <section id="specs" className="container mx-auto px-3 sm:px-3 py-16 border-t border-yellow-500/20">
         <ScrollReveal>
-          <h2 className="text-4xl font-black uppercase text-center mb-12 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl  font-black uppercase text-center mb-12 tracking-tight">
             TECHNICAL <span className="text-yellow-400">SPECIFICATIONS</span>
           </h2>
         </ScrollReveal>
@@ -316,7 +316,7 @@ export function TechProductTemplate() {
       {/* Comparison Table */}
       <section className="container mx-auto px-3 sm:px-3 py-16 border-t border-yellow-500/20">
         <ScrollReveal>
-          <h2 className="text-4xl font-black uppercase text-center mb-12 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl  font-black uppercase text-center mb-12 tracking-tight">
             HOW WE <span className="text-yellow-400">COMPARE</span>
           </h2>
         </ScrollReveal>
@@ -354,7 +354,7 @@ export function TechProductTemplate() {
       {/* Reviews */}
       <section id="reviews" className="container mx-auto px-3 sm:px-3 py-16 border-t border-yellow-500/20">
         <ScrollReveal>
-          <h2 className="text-4xl font-black uppercase text-center mb-4 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl  font-black uppercase text-center mb-4 tracking-tight">
             WHAT <span className="text-yellow-400">PROS SAY</span>
           </h2>
           <div className="flex items-center justify-center gap-2 mb-12">
@@ -390,7 +390,7 @@ export function TechProductTemplate() {
         <ScrollReveal>
           <Card className="max-w-full mx-auto bg-gradient-to-r from-yellow-400 to-orange-500 border-0">
             <CardContent className="p-12 text-center text-black">
-              <h2 className="text-4xl md:text-5xl font-black uppercase mb-4 tracking-tight">
+              <h2 className="text-3xl sm:text-5xl   font-black uppercase mb-4 tracking-tight break-words">
                 READY TO DOMINATE?
               </h2>
               <p className="text-xl mb-8 font-semibold">

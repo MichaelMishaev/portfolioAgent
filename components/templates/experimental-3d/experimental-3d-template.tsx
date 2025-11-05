@@ -56,7 +56,7 @@ export function Experimental3dTemplate() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1 }}
             >
-              <h1 className="text-7xl lg:text-9xl font-black text-white mb-6 tracking-tighter">
+              <h1 className="text-7xl lg:text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black text-white mb-6 tracking-tighter">
                 {data.hero.name}
               </h1>
             </motion.div>
@@ -130,7 +130,7 @@ export function Experimental3dTemplate() {
                   transition={{ duration: 0.5 }}
                   className="mb-4"
                 >
-                  <div className="text-9xl font-black transform group-hover:scale-110 transition-transform duration-500">
+                  <div className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black transform group-hover:scale-110 transition-transform duration-500">
                     {project.title}
                   </div>
                 </motion.div>
@@ -142,7 +142,7 @@ export function Experimental3dTemplate() {
             </div>
 
             {/* Parallax Number */}
-            <div className="absolute top-8 right-8 text-white/20 text-9xl font-black">
+            <div className="absolute top-8 right-8 text-white/20 text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black">
               {String(index + 1).padStart(2, '0')}
             </div>
 
@@ -167,7 +167,7 @@ export function Experimental3dTemplate() {
       <section className="min-h-screen flex items-center justify-center px-6 bg-gradient-to-br from-black via-purple-900/20 to-black">
         <div className="max-w-4xl mx-auto text-center">
           <ScrollReveal>
-            <h2 className="text-5xl lg:text-7xl font-black mb-8">{tt.common.about}</h2>
+            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl  font-black mb-8 break-words">{tt.common.about}</h2>
           </ScrollReveal>
 
           <ScrollReveal delay={0.2}>
@@ -220,7 +220,7 @@ export function Experimental3dTemplate() {
 
         <div className="max-w-3xl mx-auto text-center relative z-10">
           <ScrollReveal>
-            <h2 className="text-6xl lg:text-8xl font-black mb-8">
+            <h2 className="text-6xl lg:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black mb-8">
               {tt.common.letsWorkTogether}
             </h2>
           </ScrollReveal>
@@ -277,7 +277,7 @@ export function Experimental3dTemplate() {
 
           {/* Pricing - Experimental 3D */}
           <section className="py-20 border-t border-white/10">
-            <h3 className="text-5xl font-bold mb-12 text-center">Pricing</h3>
+            <h3 className="text-4xl sm:text-5xl  font-bold mb-12 text-center break-words">Pricing</h3>
             <div className="grid md:grid-cols-3 gap-8">
               {[
                 { name: '3D Starter', price: '$1,999', features: ['Basic 3D Scene', 'WebGL Implementation', '2 Revisions', 'Performance Optimization'] },
@@ -287,7 +287,7 @@ export function Experimental3dTemplate() {
                 <div key={i} className={`bg-white/5 backdrop-blur-xl p-8 rounded-2xl border ${pkg.popular ? 'border-purple-500 ring-4 ring-purple-500/20' : 'border-white/10'}`}>
                   {pkg.popular && <div className="text-xs font-bold text-purple-400 mb-2 uppercase">Most Popular</div>}
                   <h4 className="text-2xl font-bold mb-2">{pkg.name}</h4>
-                  <div className="text-5xl font-bold text-purple-400 mb-8">{pkg.price}</div>
+                  <div className="text-4xl sm:text-5xl  font-bold text-purple-400 mb-8 break-words">{pkg.price}</div>
                   <ul className="space-y-3 mb-8">
                     {pkg.features.map((f, j) => (
                       <li key={j} className="flex items-start gap-2 text-sm text-white/70">
@@ -306,7 +306,7 @@ export function Experimental3dTemplate() {
 
           {/* Testimonials - Experimental 3D */}
           <section className="py-20 border-t border-white/10">
-            <h3 className="text-5xl font-bold mb-12 text-center">Client Feedback</h3>
+            <h3 className="text-4xl sm:text-5xl  font-bold mb-12 text-center break-words">Client Feedback</h3>
             <div className="max-w-4xl mx-auto space-y-8">
               {[
                 { text: 'Mind-blowing 3D work. Our website engagement increased 400%!', author: 'David Kim', role: 'CEO, TechVision' },
@@ -326,7 +326,7 @@ export function Experimental3dTemplate() {
 
           {/* Gallery - Experimental 3D */}
           <section className="py-20 border-t border-white/10">
-            <h3 className="text-5xl font-bold mb-12 text-center">3D Gallery</h3>
+            <h3 className="text-4xl sm:text-5xl  font-bold mb-12 text-center break-words">3D Gallery</h3>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
               {[1, 2, 3, 4, 5, 6].map((i) => (
                 <div key={i} className="aspect-square bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-2xl border border-white/10 hover:scale-105 transition-transform cursor-pointer backdrop-blur-xl"></div>
@@ -336,7 +336,7 @@ export function Experimental3dTemplate() {
 
           {/* Timeline - Experimental 3D */}
           <section className="py-20 border-t border-white/10">
-            <h3 className="text-5xl font-bold mb-12 text-center">Evolution</h3>
+            <h3 className="text-4xl sm:text-5xl  font-bold mb-12 text-center break-words">Evolution</h3>
             <div className="max-w-3xl mx-auto space-y-6">
               {[
                 { year: '2024', title: '3D Innovation Leader', desc: 'Pioneering WebGL experiences' },
@@ -359,7 +359,7 @@ export function Experimental3dTemplate() {
 
           {/* FAQ - Experimental 3D */}
           <section className="py-20 border-t border-white/10">
-            <h3 className="text-5xl font-bold mb-12 text-center">FAQ</h3>
+            <h3 className="text-4xl sm:text-5xl  font-bold mb-12 text-center break-words">FAQ</h3>
             <div className="max-w-3xl mx-auto space-y-6">
               {[
                 { q: 'What technologies do you use?', a: 'Three.js, WebGL, GLSL shaders, and modern 3D web frameworks.' },

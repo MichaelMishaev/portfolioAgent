@@ -321,7 +321,7 @@ export function EnterpriseServiceTemplate() {
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mt-16 pt-16 border-t border-gray-200">
               {serviceData.hero.stats.map((stat) => (
                 <div key={stat.label}>
-                  <div className="text-4xl font-bold text-blue-600 mb-1">{stat.value}</div>
+                  <div className="text-3xl sm:text-4xl  font-bold text-blue-600 mb-1">{stat.value}</div>
                   <div className="text-sm text-gray-600">{stat.label}</div>
                 </div>
               ))}
@@ -335,7 +335,7 @@ export function EnterpriseServiceTemplate() {
         <div className="container mx-auto px-3 max-w-full">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <h2 className="text-5xl font-bold mb-4">Enterprise Solutions</h2>
+              <h2 className="text-4xl sm:text-5xl  font-bold mb-4 break-words">Enterprise Solutions</h2>
               <p className="text-xl text-gray-600">Built for scale, security, and global operations</p>
             </div>
           </ScrollReveal>
@@ -380,7 +380,7 @@ export function EnterpriseServiceTemplate() {
         <div className="container mx-auto px-3 max-w-full">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <h2 className="text-5xl font-bold mb-4">Seamless Integrations</h2>
+              <h2 className="text-4xl sm:text-5xl  font-bold mb-4 break-words">Seamless Integrations</h2>
               <p className="text-xl text-gray-600">Works with your existing enterprise stack</p>
             </div>
           </ScrollReveal>
@@ -406,7 +406,7 @@ export function EnterpriseServiceTemplate() {
         <div className="container mx-auto px-3 max-w-full">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <h2 className="text-5xl font-bold mb-4">Trusted by Industry Leaders</h2>
+              <h2 className="text-4xl sm:text-5xl  font-bold mb-4 break-words">Trusted by Industry Leaders</h2>
               <p className="text-xl text-gray-600">Enterprise success stories</p>
             </div>
           </ScrollReveal>
@@ -458,7 +458,7 @@ export function EnterpriseServiceTemplate() {
         <div className="container mx-auto px-3 max-w-full">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <h2 className="text-5xl font-bold mb-4">{serviceData.support.title}</h2>
+              <h2 className="text-4xl sm:text-5xl  font-bold mb-4 break-words">{serviceData.support.title}</h2>
               <p className="text-xl text-gray-600">World-class support for mission-critical operations</p>
             </div>
           </ScrollReveal>
@@ -490,7 +490,7 @@ export function EnterpriseServiceTemplate() {
         <div className="container mx-auto px-3 max-w-full">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <h2 className="text-5xl font-bold mb-4">Enterprise Pricing</h2>
+              <h2 className="text-4xl sm:text-5xl  font-bold mb-4 break-words">Enterprise Pricing</h2>
               <p className="text-xl text-gray-600">Flexible plans that scale with your organization</p>
             </div>
           </ScrollReveal>
@@ -510,7 +510,7 @@ export function EnterpriseServiceTemplate() {
                       <p className="text-sm text-gray-600">{tier.tagline}</p>
                     </div>
                     <div className="mb-6">
-                      <span className="text-5xl font-bold">{tier.price}</span>
+                      <span className="text-4xl sm:text-5xl  font-bold break-words">{tier.price}</span>
                       {tier.period && <span className="text-gray-600">{tier.period}</span>}
                     </div>
                     <Button
@@ -539,7 +539,7 @@ export function EnterpriseServiceTemplate() {
       <section className="bg-gradient-to-r from-blue-600 to-blue-800 py-24">
         <div className="container mx-auto px-3 max-w-full text-center">
           <ScrollReveal>
-            <h2 className="text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl sm:text-5xl  font-bold text-white mb-6 break-words">
               Ready to Scale Your Enterprise?
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-full mx-auto">

@@ -1,0 +1,52 @@
+{
+  "filesProcessed": 61,
+  "filesModified": 61,
+  "totalFixes": 890,
+  "fixesByPattern": {
+    "0": {
+      "description": "text-6xl md:text-9xl -> add sm: breakpoint and break-words",
+      "count": 8
+    },
+    "1": {
+      "description": "text-5xl md:text-7xl -> add sm: breakpoint and break-words",
+      "count": 42
+    },
+    "2": {
+      "description": "text-4xl md:text-5xl -> add sm: breakpoint",
+      "count": 151
+    },
+    "3": {
+      "description": "text-4xl sm:text-5xl md:text-6xl lg:text-8xl -> improve scaling and add break-words",
+      "count": 23
+    },
+    "4": {
+      "description": "text-5xl lg:text-7xl -> add sm: and md: breakpoints",
+      "count": 28
+    },
+    "5": {
+      "description": "text-6xl md:text-8xl -> add sm: breakpoint and break-words",
+      "count": 24
+    },
+    "7": {
+      "description": "text-5xl lg:text-6xl -> add intermediate breakpoints",
+      "count": 35
+    },
+    "8": {
+      "description": "text-2xl md:text-3xl -> add sm: breakpoint",
+      "count": 24
+    },
+    "9": {
+      "description": "text-6xl alone -> add responsive breakpoints",
+      "count": 130
+    },
+    "10": {
+      "description": "text-5xl alone -> add responsive breakpoints",
+      "count": 243
+    },
+    "11": {
+      "description": "text-4xl alone -> add responsive breakpoints",
+      "count": 182
+    }
+  },
+  "errors": []
+}

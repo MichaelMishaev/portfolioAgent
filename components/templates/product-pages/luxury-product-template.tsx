@@ -259,10 +259,10 @@ export function LuxuryProductTemplate() {
               <div className="text-sm tracking-[0.3em] text-amber-500 font-light">
                 {productData.collection}
               </div>
-              <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-9xl font-light tracking-tight">
+              <h1 className="text-4xl sm: text-4xl sm:text-5xl md:text-6xl lg:text-9xl font-light tracking-tight break-words">
                 {productData.name}
               </h1>
-              <p className="text-2xl md:text-3xl font-light text-neutral-400 max-w-full mx-auto">
+              <p className="text-xl sm:text-2xl md:text-3xl  font-light text-neutral-400 max-w-full mx-auto">
                 {productData.tagline}
               </p>
               <p className="text-lg text-neutral-500 max-w-full mx-auto">{productData.description}</p>

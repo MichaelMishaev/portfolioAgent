@@ -727,7 +727,7 @@ export function MagazineBlogTemplate() {
         <div className="container mx-auto px-3 max-w-full text-center">
           <ScrollReveal>
             <FiMail className="w-16 h-16 mx-auto mb-6 text-white" />
-            <h2 className="text-4xl font-bold text-white mb-4">Stay in the Loop</h2>
+            <h2 className="text-3xl sm:text-4xl  font-bold text-white mb-4">Stay in the Loop</h2>
             <p className="text-xl text-blue-100 mb-8">
               Get the best articles, insights, and news delivered to your inbox weekly.
             </p>

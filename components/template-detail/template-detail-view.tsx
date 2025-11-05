@@ -78,10 +78,6 @@ export function TemplateDetailView({ template }: TemplateDetailViewProps) {
                 alt={`${template.name} screenshot ${currentScreenshot + 1}`}
                 fill
                 className="object-cover"
-                onError={(e) => {
-                  // Fallback to thumbnail if screenshot doesn't exist
-                  e.currentTarget.src = template.thumbnail;
-                }}
               />
 
               {/* Carousel Controls */}

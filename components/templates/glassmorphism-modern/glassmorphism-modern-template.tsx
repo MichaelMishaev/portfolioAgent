@@ -129,7 +129,7 @@ export function GlassmorphismModernTemplate() {
         <div className="max-w-5xl mx-auto text-center relative z-10">
           <FadeIn>
             <motion.h1
-              className="text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight"
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl  font-bold text-white mb-6 leading-tight break-words"
               style={{ textShadow: '0 0 80px rgba(255,255,255,0.3)' }}
             >
               {data.hero.title}
@@ -176,7 +176,7 @@ export function GlassmorphismModernTemplate() {
       <section id="features" className="py-20 px-6">
         <div className="container mx-auto max-w-7xl">
           <ScrollReveal>
-            <h2 className="text-4xl font-bold text-white text-center mb-16">{data.features.title}</h2>
+            <h2 className="text-3xl sm:text-4xl  font-bold text-white text-center mb-16">{data.features.title}</h2>
           </ScrollReveal>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -203,7 +203,7 @@ export function GlassmorphismModernTemplate() {
       <section id="pricing" className="py-20 px-6">
         <div className="container mx-auto max-w-6xl">
           <ScrollReveal>
-            <h2 className="text-4xl font-bold text-white text-center mb-16">{data.pricing.title}</h2>
+            <h2 className="text-3xl sm:text-4xl  font-bold text-white text-center mb-16">{data.pricing.title}</h2>
           </ScrollReveal>
 
           <ScrollReveal delay={0.2}>
@@ -251,7 +251,7 @@ export function GlassmorphismModernTemplate() {
       <section id="work" className="py-20 px-6">
         <div className="container mx-auto max-w-7xl">
           <ScrollReveal>
-            <h2 className="text-4xl font-bold text-white text-center mb-16">{data.work.title}</h2>
+            <h2 className="text-3xl sm:text-4xl  font-bold text-white text-center mb-16">{data.work.title}</h2>
           </ScrollReveal>
 
           <div className="grid md:grid-cols-2 gap-8">
@@ -309,7 +309,7 @@ export function GlassmorphismModernTemplate() {
         <div className="container mx-auto max-w-4xl">
           <ScrollReveal>
             <div className="bg-gradient-to-br from-purple-500/10 via-cyan-500/10 to-blue-500/10 backdrop-blur-3xl rounded-3xl p-12 border border-white/20">
-              <h2 className="text-4xl font-bold text-white mb-6">About</h2>
+              <h2 className="text-3xl sm:text-4xl  font-bold text-white mb-6">About</h2>
               <p className="text-xl text-white/80 leading-relaxed mb-6">
                 Creating next-generation digital experiences with modern web technologies.
                 Specialized in glassmorphism design, 3D interactions, and immersive user interfaces.
@@ -326,7 +326,7 @@ export function GlassmorphismModernTemplate() {
       <section className="py-20 px-6">
         <div className="container mx-auto max-w-6xl">
           <ScrollReveal>
-            <h2 className="text-4xl font-bold text-white mb-12 text-center">Skills & Technologies</h2>
+            <h2 className="text-3xl sm:text-4xl  font-bold text-white mb-12 text-center">Skills & Technologies</h2>
           </ScrollReveal>
           <div className="flex flex-wrap justify-center gap-4">
             {[
@@ -347,7 +347,7 @@ export function GlassmorphismModernTemplate() {
       <section className="py-20 px-6">
         <div className="container mx-auto max-w-4xl">
           <ScrollReveal>
-            <h2 className="text-4xl font-bold text-white mb-12 text-center">Journey</h2>
+            <h2 className="text-3xl sm:text-4xl  font-bold text-white mb-12 text-center">Journey</h2>
           </ScrollReveal>
           <div className="space-y-6">
             {[
@@ -376,7 +376,7 @@ export function GlassmorphismModernTemplate() {
       <section className="py-20 px-6">
         <div className="container mx-auto max-w-6xl">
           <ScrollReveal>
-            <h2 className="text-4xl font-bold text-white mb-12 text-center">Testimonials</h2>
+            <h2 className="text-3xl sm:text-4xl  font-bold text-white mb-12 text-center">Testimonials</h2>
           </ScrollReveal>
           <div className="grid md:grid-cols-3 gap-6">
             {[
@@ -400,7 +400,7 @@ export function GlassmorphismModernTemplate() {
       <section className="py-20 px-6">
         <div className="container mx-auto max-w-4xl">
           <ScrollReveal>
-            <h2 className="text-4xl font-bold text-white mb-12 text-center">FAQ</h2>
+            <h2 className="text-3xl sm:text-4xl  font-bold text-white mb-12 text-center">FAQ</h2>
           </ScrollReveal>
           <div className="space-y-4">
             {[

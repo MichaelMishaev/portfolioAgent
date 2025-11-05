@@ -131,7 +131,7 @@ return (
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold mb-6 bg-gradient-to-r from-rose-600 via-amber-600 to-teal-600 bg-clip-text text-transparent">
+            <h1 className="text-3xl sm:text-5xl md:text-5xl lg:text-6xl  xl:text-5xl sm:text-6xl md:text-7xl lg:text-8xl  font-bold mb-6 bg-gradient-to-r from-rose-600 via-amber-600 to-teal-600 bg-clip-text text-transparent break-words">
               {portfolioData.name}
             </h1>
           </motion.div>
@@ -140,7 +140,7 @@ return (
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-2xl md:text-3xl text-foreground/80 mb-8"
+            className="text-xl sm:text-2xl md:text-3xl  text-foreground/80 mb-8"
           >
             {portfolioData.title}
           </motion.p>
@@ -186,7 +186,7 @@ return (
 
         <div className="max-w-full mx-auto relative z-10">
           <ScrollReveal>
-            <h2 className="text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-rose-600 to-teal-600 bg-clip-text text-transparent">
+            <h2 className="text-3xl sm:text-5xl   font-bold mb-8 bg-gradient-to-r from-rose-600 to-teal-600 bg-clip-text text-transparent break-words">
               About Me
             </h2>
             <p className="text-xl leading-relaxed text-foreground/80 mb-12">
@@ -206,7 +206,7 @@ return (
                   }}
                   transition={{ type: "spring", stiffness: 300 }}
                 >
-                  <div className="text-4xl font-bold bg-gradient-to-r from-rose-600 to-teal-600 bg-clip-text text-transparent mb-2">
+                  <div className="text-3xl sm:text-4xl  font-bold bg-gradient-to-r from-rose-600 to-teal-600 bg-clip-text text-transparent mb-2">
                     {stat.number}
                   </div>
                   <p className="text-sm text-muted-foreground">{stat.label}</p>
@@ -220,7 +220,7 @@ return (
       {/* Services with Liquid Cards */}
       <section className="py-20 px-3">
         <ScrollReveal>
-          <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold text-center mb-16 bg-gradient-to-r from-rose-600 to-teal-600 bg-clip-text text-transparent">
+          <h2 className="text-3xl sm:text-5xl md:text-6xl  font-bold text-center mb-16 bg-gradient-to-r from-rose-600 to-teal-600 bg-clip-text text-transparent break-words">
             What I Do
           </h2>
         </ScrollReveal>
@@ -265,7 +265,7 @@ return (
 
         <div className="max-w-full mx-auto relative z-10">
           <ScrollReveal>
-            <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold text-center mb-16 bg-gradient-to-r from-rose-600 to-teal-600 bg-clip-text text-transparent">
+            <h2 className="text-3xl sm:text-5xl md:text-6xl  font-bold text-center mb-16 bg-gradient-to-r from-rose-600 to-teal-600 bg-clip-text text-transparent break-words">
               Selected Work
             </h2>
           </ScrollReveal>
@@ -311,7 +311,7 @@ return (
       <section className="py-20 px-3">
         <div className="max-w-full mx-auto">
           <ScrollReveal>
-            <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold text-center mb-16 bg-gradient-to-r from-rose-600 to-teal-600 bg-clip-text text-transparent">
+            <h2 className="text-3xl sm:text-5xl md:text-6xl  font-bold text-center mb-16 bg-gradient-to-r from-rose-600 to-teal-600 bg-clip-text text-transparent break-words">
               My Process
             </h2>
           </ScrollReveal>
@@ -327,7 +327,7 @@ return (
                   }}
                   transition={{ type: "spring", stiffness: 300 }}
                 >
-                  <div className="text-5xl font-bold bg-gradient-to-r from-rose-600 to-teal-600 bg-clip-text text-transparent mb-4">
+                  <div className="text-4xl sm:text-5xl  font-bold bg-gradient-to-r from-rose-600 to-teal-600 bg-clip-text text-transparent mb-4 break-words">
                     {index + 1}
                   </div>
                   <h3 className="text-xl font-bold mb-3">{step.step}</h3>
@@ -356,7 +356,7 @@ return (
 
         <div className="max-w-full mx-auto relative z-10">
           <ScrollReveal>
-            <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold text-center mb-16 bg-gradient-to-r from-rose-600 to-teal-600 bg-clip-text text-transparent">
+            <h2 className="text-3xl sm:text-5xl md:text-6xl  font-bold text-center mb-16 bg-gradient-to-r from-rose-600 to-teal-600 bg-clip-text text-transparent break-words">
               Kind Words
             </h2>
           </ScrollReveal>
@@ -385,7 +385,7 @@ return (
       <section className="py-20 px-3">
         <div className="max-w-full mx-auto">
           <ScrollReveal>
-            <h3 className="text-3xl md:text-4xl font-bold text-center mb-12">
+            <h3 className="text-3xl md: text-3xl sm:text-4xl  font-bold text-center mb-12">
               Core Values
             </h3>
           </ScrollReveal>
@@ -430,7 +430,7 @@ return (
 
         <div className="relative z-10 max-w-full mx-auto text-center">
           <ScrollReveal>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-8 bg-gradient-to-r from-rose-600 to-teal-600 bg-clip-text text-transparent">
+            <h2 className="text-3xl sm: text-3xl sm:text-5xl md:text-6xl lg:text-7xl  font-bold mb-8 bg-gradient-to-r from-rose-600 to-teal-600 bg-clip-text text-transparent break-words">
               Let's Create
               <br />
               Together
@@ -459,7 +459,7 @@ return (
       <section className="py-20 px-3 sm:px-3 bg-gradient-to-br from-rose-50 via-amber-50 to-emerald-50 dark:from-gray-900 dark:via-rose-950 dark:to-gray-900">
         <div className="container mx-auto max-w-6xl">
           <ScrollReveal>
-            <h2 className="text-4xl md:text-6xl font-bold mb-12 text-center bg-gradient-to-r from-rose-600 via-amber-600 to-emerald-600 bg-clip-text text-transparent">
+            <h2 className="text-4xl md: text-4xl sm:text-5xl md:text-6xl  font-bold mb-12 text-center bg-gradient-to-r from-rose-600 via-amber-600 to-emerald-600 bg-clip-text text-transparent break-words">
               Skills & Expertise
             </h2>
           </ScrollReveal>
@@ -488,7 +488,7 @@ return (
       <section className="py-20 px-3 sm:px-3">
         <div className="container mx-auto max-w-6xl">
           <ScrollReveal>
-            <h2 className="text-4xl md:text-6xl font-bold mb-4 text-center bg-gradient-to-r from-rose-600 via-amber-600 to-emerald-600 bg-clip-text text-transparent">
+            <h2 className="text-4xl md: text-4xl sm:text-5xl md:text-6xl  font-bold mb-4 text-center bg-gradient-to-r from-rose-600 via-amber-600 to-emerald-600 bg-clip-text text-transparent break-words">
               Pricing
             </h2>
             <p className="text-center text-lg text-muted-foreground mb-12">Flexible plans for every need</p>
@@ -507,7 +507,7 @@ return (
                     </div>
                   )}
                   <h3 className="text-3xl font-bold mb-2">{plan.name}</h3>
-                  <div className="text-5xl font-bold mb-8">{plan.price}</div>
+                  <div className="text-4xl sm:text-5xl  font-bold mb-8 break-words">{plan.price}</div>
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((f, j) => (
                       <li key={j} className="flex items-start gap-2 text-sm">
@@ -530,7 +530,7 @@ return (
       <section className="py-20 px-3 sm:px-3 bg-gradient-to-br from-amber-50 via-rose-50 to-purple-50 dark:from-gray-900 dark:via-amber-950 dark:to-gray-900">
         <div className="container mx-auto max-w-6xl">
           <ScrollReveal>
-            <h2 className="text-4xl md:text-6xl font-bold mb-12 text-center bg-gradient-to-r from-amber-600 via-rose-600 to-purple-600 bg-clip-text text-transparent">
+            <h2 className="text-4xl md: text-4xl sm:text-5xl md:text-6xl  font-bold mb-12 text-center bg-gradient-to-r from-amber-600 via-rose-600 to-purple-600 bg-clip-text text-transparent break-words">
               Gallery
             </h2>
           </ScrollReveal>
@@ -557,7 +557,7 @@ return (
         <div className="container mx-auto max-w-4xl text-center">
           <ScrollReveal>
             <div className="bg-white/10 backdrop-blur-xl p-12 rounded-[4rem] border-2 border-white/30">
-              <h2 className="text-4xl md:text-6xl font-bold mb-6">
+              <h2 className="text-4xl md: text-4xl sm:text-5xl md:text-6xl  font-bold mb-6 break-words">
                 Let's Create Something Beautiful
               </h2>
               <p className="text-xl mb-8 opacity-90">

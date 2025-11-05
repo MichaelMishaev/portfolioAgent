@@ -73,7 +73,7 @@ export function PersonalBrandTemplate() {
         <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
           <FadeIn>
             <div>
-              <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+              <h1 className="text-4xl sm:text-5xl md:text-5xl sm:text-5xl md:text-6xl   font-bold text-gray-900 mb-6 break-words">
                 {data.hero.greeting}
               </h1>
               <p className="text-2xl text-gray-700 mb-8 leading-relaxed">
@@ -149,7 +149,7 @@ export function PersonalBrandTemplate() {
       <section id="work" className="py-20 px-6 bg-gradient-to-br from-yellow-50 to-orange-50">
         <div className="max-w-6xl mx-auto">
           <ScrollReveal>
-            <h2 className="text-4xl font-bold mb-16 text-center">Selected Work</h2>
+            <h2 className="text-3xl sm:text-4xl  font-bold mb-16 text-center">Selected Work</h2>
           </ScrollReveal>
 
           <div className="grid md:grid-cols-2 gap-8">
@@ -184,7 +184,7 @@ export function PersonalBrandTemplate() {
       <section id="faq" className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-6">
           <ScrollReveal>
-            <h2 className="text-4xl font-bold text-center mb-4">Frequently Asked Questions</h2>
+            <h2 className="text-3xl sm:text-4xl  font-bold text-center mb-4">Frequently Asked Questions</h2>
             <p className="text-xl text-gray-600 text-center mb-16">
               {data.faq.subtitle}
             </p>
@@ -221,7 +221,7 @@ export function PersonalBrandTemplate() {
       <section id="about" className="py-20 bg-gradient-to-br from-yellow-50 to-orange-50">
         <div className="max-w-4xl mx-auto px-6">
           <ScrollReveal>
-            <h2 className="text-4xl font-bold mb-8 text-center">{tt.common.about}</h2>
+            <h2 className="text-3xl sm:text-4xl  font-bold mb-8 text-center">{tt.common.about}</h2>
           </ScrollReveal>
 
           <ScrollReveal delay={0.2}>
@@ -241,7 +241,7 @@ export function PersonalBrandTemplate() {
       <section id="contact" className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <ScrollReveal>
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+            <h2 className="text-4xl lg: text-4xl sm:text-5xl  font-bold mb-6 break-words">
               {tt.common.letsWorkTogether}
             </h2>
             <p className="text-xl text-gray-600 mb-12">
@@ -284,7 +284,7 @@ export function PersonalBrandTemplate() {
                 { num: '4.9', label: 'Avg Rating' }
               ].map((stat, i) => (
                 <div key={i} className="text-center">
-                  <div className="text-4xl font-bold mb-2">{stat.num}</div>
+                  <div className="text-3xl sm:text-4xl  font-bold mb-2">{stat.num}</div>
                   <div className="text-sm text-gray-400">{stat.label}</div>
                 </div>
               ))}

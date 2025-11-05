@@ -247,10 +247,10 @@ export function AudioProductTemplate() {
               <Badge className="mb-4 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 border-blue-200 dark:border-blue-800">
                 New
               </Badge>
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold mb-6 tracking-tight">
+              <h1 className="text-3xl sm:text-5xl md:text-5xl lg:text-6xl  xl:text-5xl sm:text-6xl md:text-7xl lg:text-8xl  font-bold mb-6 tracking-tight break-words">
                 {productData.name}
               </h1>
-              <p className="text-2xl md:text-3xl text-muted-foreground mb-4 font-light">
+              <p className="text-xl sm:text-2xl md:text-3xl  text-muted-foreground mb-4 font-light">
                 {productData.tagline}
               </p>
               <p className="text-xl text-muted-foreground max-w-full mx-auto mb-8">
@@ -324,7 +324,7 @@ export function AudioProductTemplate() {
         <div className="container mx-auto px-3 sm:px-3">
           <ScrollReveal>
             <div className="text-center mb-20">
-              <h2 className="text-5xl md:text-6xl font-bold mb-6">
+              <h2 className="text-5xl md: text-4xl sm:text-5xl md:text-6xl  font-bold mb-6 break-words">
                 Engineered for Excellence
               </h2>
               <p className="text-xl text-muted-foreground max-w-full mx-auto">
@@ -366,7 +366,7 @@ export function AudioProductTemplate() {
         <div className="container mx-auto px-3 sm:px-3">
           <ScrollReveal>
             <div className="text-center mb-20">
-              <h2 className="text-5xl md:text-6xl font-bold mb-6">
+              <h2 className="text-5xl md: text-4xl sm:text-5xl md:text-6xl  font-bold mb-6 break-words">
                 Technical Specifications
               </h2>
               <p className="text-xl text-muted-foreground">
@@ -404,7 +404,7 @@ export function AudioProductTemplate() {
         <div className="container mx-auto px-3 sm:px-3">
           <ScrollReveal>
             <div className="text-center mb-20">
-              <h2 className="text-5xl md:text-6xl font-bold mb-6">
+              <h2 className="text-5xl md: text-4xl sm:text-5xl md:text-6xl  font-bold mb-6 break-words">
                 {productData.comparison.title}
               </h2>
             </div>
@@ -483,7 +483,7 @@ export function AudioProductTemplate() {
         <div className="container mx-auto px-3 sm:px-3">
           <ScrollReveal>
             <div className="text-center mb-20">
-              <h2 className="text-5xl md:text-6xl font-bold mb-6">
+              <h2 className="text-5xl md: text-4xl sm:text-5xl md:text-6xl  font-bold mb-6 break-words">
                 What Experts Say
               </h2>
             </div>
@@ -520,7 +520,7 @@ export function AudioProductTemplate() {
           <div className="max-w-full mx-auto">
             <ScrollReveal>
               <div className="text-center mb-16">
-                <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                <h2 className="text-3xl sm:text-5xl   font-bold mb-6 break-words">
                   In the Box
                 </h2>
               </div>
@@ -549,7 +549,7 @@ export function AudioProductTemplate() {
         <div className="container mx-auto px-3 sm:px-3">
           <ScrollReveal>
             <div className="text-center max-w-full mx-auto">
-              <h2 className="text-5xl md:text-6xl font-bold mb-6">
+              <h2 className="text-5xl md: text-4xl sm:text-5xl md:text-6xl  font-bold mb-6 break-words">
                 Ready to Experience Aurora?
               </h2>
               <p className="text-2xl mb-12 opacity-90">

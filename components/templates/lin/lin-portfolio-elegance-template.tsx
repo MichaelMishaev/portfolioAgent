@@ -142,7 +142,7 @@ export function LinPortfolioEleganceTemplate() {
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-20 md:py-32 text-center">
         <ScrollReveal>
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-light mb-6 text-[#1A1A1A] tracking-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-light mb-6 text-[#1A1A1A] tracking-tight break-words">
             {portfolioData.name}
           </h1>
         </ScrollReveal>

@@ -315,7 +315,7 @@ export function CourseProductTemplate() {
           </FadeIn>
 
           <FadeIn delay={0.1}>
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl  font-bold mb-6 leading-tight bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent break-words">
               {courseData.tagline}
             </h1>
           </FadeIn>
@@ -396,7 +396,7 @@ export function CourseProductTemplate() {
       <section className="container mx-auto px-3 sm:px-3 py-20 bg-gradient-to-r from-blue-100 to-gold-100 dark:from-blue-950 dark:to-gold-950">
         <ScrollReveal>
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            <h2 className="text-3xl sm:text-5xl   font-bold mb-4 break-words">
               {courseData.transformation.title}
             </h2>
           </div>
@@ -470,7 +470,7 @@ export function CourseProductTemplate() {
       <section id="curriculum" className="container mx-auto px-3 sm:px-3 py-20">
         <ScrollReveal>
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            <h2 className="text-3xl sm:text-5xl   font-bold mb-4 break-words">
               {courseData.curriculum.title}
             </h2>
             <p className="text-xl text-muted-foreground">
@@ -519,7 +519,7 @@ export function CourseProductTemplate() {
       <section className="container mx-auto px-3 sm:px-3 py-20 bg-muted/30">
         <ScrollReveal>
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            <h2 className="text-3xl sm:text-5xl   font-bold mb-4 break-words">
               Everything you need to succeed
             </h2>
           </div>
@@ -546,7 +546,7 @@ export function CourseProductTemplate() {
       <section className="container mx-auto px-3 sm:px-3 py-20">
         <ScrollReveal>
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            <h2 className="text-3xl sm:text-5xl   font-bold mb-4 break-words">
               Student Success Stories
             </h2>
             <p className="text-xl text-muted-foreground">
@@ -591,7 +591,7 @@ export function CourseProductTemplate() {
       <section id="pricing" className="container mx-auto px-3 sm:px-3 py-20 bg-muted/30">
         <ScrollReveal>
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            <h2 className="text-3xl sm:text-5xl   font-bold mb-4 break-words">
               {courseData.pricing.title}
             </h2>
             <p className="text-xl text-muted-foreground">
@@ -617,7 +617,7 @@ export function CourseProductTemplate() {
                 <CardHeader>
                   <CardTitle className="text-2xl">{plan.name}</CardTitle>
                   <div className="mt-4">
-                    <span className="text-4xl font-bold">{plan.price}</span>
+                    <span className="text-3xl sm:text-4xl  font-bold">{plan.price}</span>
                     <span className="text-muted-foreground"> / {plan.period}</span>
                   </div>
                   <CardDescription className="mt-2">{plan.description}</CardDescription>
@@ -656,7 +656,7 @@ export function CourseProductTemplate() {
       <section className="container mx-auto px-3 sm:px-3 py-20">
         <ScrollReveal>
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            <h2 className="text-3xl sm:text-5xl   font-bold mb-4 break-words">
               Frequently Asked Questions
             </h2>
           </div>
@@ -681,7 +681,7 @@ export function CourseProductTemplate() {
         <ScrollReveal>
           <Card className="max-w-full mx-auto bg-gradient-to-r from-blue-600 to-gold-500 text-white border-0">
             <CardContent className="p-12 text-center">
-              <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              <h2 className="text-3xl sm:text-5xl   font-bold mb-4 break-words">
                 {courseData.finalCTA.title}
               </h2>
               <p className="text-xl mb-8 opacity-90">

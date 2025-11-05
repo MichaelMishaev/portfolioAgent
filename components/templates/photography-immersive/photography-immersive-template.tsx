@@ -107,7 +107,7 @@ export function PhotographyImmersiveTemplate() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.3 }}
           >
-            <h1 className="text-6xl md:text-8xl font-light mb-6 tracking-tight">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl  font-light mb-6 tracking-tight break-words">
               {portfolioData.name}
             </h1>
             <p className="text-xl md:text-2xl text-white/80 font-light tracking-wide">
@@ -267,7 +267,7 @@ export function PhotographyImmersiveTemplate() {
 
             <ScrollReveal delay={0.3}>
               <div>
-                <h2 className="text-4xl md:text-5xl font-light mb-8 tracking-tight">{tt.common.about}</h2>
+                <h2 className="text-3xl sm:text-4xl md:text-5xl  font-light mb-8 tracking-tight">{tt.common.about}</h2>
                 <p className="text-lg text-white/70 leading-relaxed mb-6">
                   {portfolioData.bio}
                 </p>
@@ -289,7 +289,7 @@ export function PhotographyImmersiveTemplate() {
       <section className="py-32 border-t border-white/10">
         <div className="container mx-auto px-6">
           <ScrollReveal>
-            <h2 className="text-4xl md:text-5xl font-light mb-16 text-center tracking-tight">Services</h2>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl  font-light mb-16 text-center tracking-tight">Services</h2>
           </ScrollReveal>
 
           <div className="grid md:grid-cols-3 gap-12 max-w-5xl mx-auto">
@@ -315,7 +315,7 @@ export function PhotographyImmersiveTemplate() {
             viewport={{ once: true }}
             className="text-center max-w-3xl mx-auto"
           >
-            <h2 className="text-5xl md:text-7xl font-light mb-8 tracking-tight">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl  font-light mb-8 tracking-tight break-words">
               {tt.common.letsWorkTogether}
             </h2>
             <p className="text-xl text-white/70 mb-12">
@@ -356,7 +356,7 @@ export function PhotographyImmersiveTemplate() {
       <section className="py-32 border-t border-white/10">
         <div className="container mx-auto px-6">
           <ScrollReveal>
-            <h2 className="text-4xl md:text-5xl font-light mb-16 text-center tracking-tight">Specializations</h2>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl  font-light mb-16 text-center tracking-tight">Specializations</h2>
           </ScrollReveal>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -375,7 +375,7 @@ export function PhotographyImmersiveTemplate() {
       <section className="py-32 border-t border-white/10">
         <div className="container mx-auto px-6">
           <ScrollReveal>
-            <h2 className="text-4xl md:text-5xl font-light mb-8 text-center tracking-tight">Packages</h2>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl  font-light mb-8 text-center tracking-tight">Packages</h2>
             <p className="text-center text-white/60 mb-16 max-w-2xl mx-auto">
               Tailored photography experiences to capture your moments
             </p>
@@ -413,7 +413,7 @@ export function PhotographyImmersiveTemplate() {
       <section className="py-32 border-t border-white/10">
         <div className="container mx-auto px-6">
           <ScrollReveal>
-            <h2 className="text-4xl md:text-5xl font-light mb-16 text-center tracking-tight">Kind Words</h2>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl  font-light mb-16 text-center tracking-tight">Kind Words</h2>
           </ScrollReveal>
 
           <div className="max-w-5xl mx-auto space-y-12">
@@ -440,7 +440,7 @@ export function PhotographyImmersiveTemplate() {
       <section className="py-32 border-t border-white/10">
         <div className="container mx-auto px-6">
           <ScrollReveal>
-            <h2 className="text-4xl md:text-5xl font-light mb-16 text-center tracking-tight">Journey</h2>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl  font-light mb-16 text-center tracking-tight">Journey</h2>
           </ScrollReveal>
 
           <div className="max-w-4xl mx-auto space-y-16">
@@ -470,7 +470,7 @@ export function PhotographyImmersiveTemplate() {
       <section className="py-32 border-t border-white/10">
         <div className="container mx-auto px-6">
           <ScrollReveal>
-            <h2 className="text-4xl md:text-5xl font-light mb-16 text-center tracking-tight">FAQ</h2>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl  font-light mb-16 text-center tracking-tight">FAQ</h2>
           </ScrollReveal>
 
           <div className="max-w-4xl mx-auto space-y-8">

@@ -201,7 +201,7 @@ export function LinTechPioneerTemplate() {
             </ScrollReveal>
 
             <ScrollReveal delay={0.2}>
-              <h1 className="text-5xl md:text-6xl lg:text-8xl font-bold mb-6 leading-none">
+              <h1 className="text-5xl md:text-6xl lg:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-6 leading-none">
                 <span className="bg-gradient-to-r from-[#3B82F6] via-[#06B6D4] to-[#3B82F6] bg-clip-text text-transparent">
                   {companyData.name}
                 </span>
@@ -209,7 +209,7 @@ export function LinTechPioneerTemplate() {
             </ScrollReveal>
 
             <ScrollReveal delay={0.4}>
-              <p className="text-2xl md:text-3xl text-gray-300 font-light mb-8">
+              <p className="text-xl sm:text-2xl md:text-3xl  text-gray-300 font-light mb-8">
                 {companyData.tagline}
               </p>
             </ScrollReveal>
@@ -240,7 +240,7 @@ export function LinTechPioneerTemplate() {
       {/* Features Section */}
       <section id="features" className="container mx-auto px-4 py-20">
         <ScrollReveal>
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
+          <h2 className="text-3xl sm:text-5xl   font-bold text-center mb-4 break-words">
             Built for <span className="text-[#3B82F6]">Modern Teams</span>
           </h2>
         </ScrollReveal>
@@ -272,7 +272,7 @@ export function LinTechPioneerTemplate() {
       <section id="products" className="bg-[#0F172A] py-20">
         <div className="container mx-auto px-4">
           <ScrollReveal>
-            <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
+            <h2 className="text-3xl sm:text-5xl   font-bold text-center mb-4 break-words">
               Our <span className="text-[#3B82F6]">Products</span>
             </h2>
           </ScrollReveal>
@@ -309,7 +309,7 @@ export function LinTechPioneerTemplate() {
       {/* Tech Stack Section */}
       <section id="tech" className="container mx-auto px-4 py-20">
         <ScrollReveal>
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
+          <h2 className="text-3xl sm:text-5xl   font-bold text-center mb-4 break-words">
             Powered by <span className="text-[#3B82F6]">Modern Tech</span>
           </h2>
         </ScrollReveal>
@@ -374,7 +374,7 @@ await client.sync();`}
       <section id="contact" className="bg-gradient-to-br from-[#3B82F6] via-[#2563EB] to-[#1D4ED8] py-20">
         <div className="container mx-auto px-4 text-center">
           <ScrollReveal>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+            <h2 className="text-3xl sm:text-5xl   font-bold mb-6 text-white break-words">
               Ready to Transform Your Business?
             </h2>
           </ScrollReveal>

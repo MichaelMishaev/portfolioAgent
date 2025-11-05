@@ -42,7 +42,7 @@ export function OnlineBusinessSaasTemplate() {
           <Badge className="mb-6" variant="secondary">
             {data.badge || "Trusted by 10,000+ teams"}
           </Badge>
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-primary to-primary/50 bg-clip-text text-transparent">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl  font-bold mb-6 bg-gradient-to-r from-primary to-primary/50 bg-clip-text text-transparent break-words">
             {data.name || "ProductFlow"}
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-full mx-auto">
@@ -62,7 +62,7 @@ export function OnlineBusinessSaasTemplate() {
       {/* Features Grid */}
       <section id="features" className="container mx-auto px-3 py-20">
         <ScrollReveal>
-          <h2 className="text-4xl font-bold text-center mb-16">
+          <h2 className="text-3xl sm:text-4xl  font-bold text-center mb-16">
             {data.features?.title || "Powerful features for modern teams"}
           </h2>
         </ScrollReveal>
@@ -105,7 +105,7 @@ export function OnlineBusinessSaasTemplate() {
       {/* Pricing Section */}
       <section id="pricing" className="container mx-auto px-3 py-20">
         <ScrollReveal>
-          <h2 className="text-4xl font-bold text-center mb-4">
+          <h2 className="text-3xl sm:text-4xl  font-bold text-center mb-4">
             {data.pricing?.title || "Simple, transparent pricing"}
           </h2>
           <p className="text-center text-muted-foreground mb-16">
@@ -142,7 +142,7 @@ export function OnlineBusinessSaasTemplate() {
                 )}
                 <CardContent className="p-8">
                   <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
-                  <div className="text-4xl font-bold mb-6">{plan.price}</div>
+                  <div className="text-3xl sm:text-4xl  font-bold mb-6">{plan.price}</div>
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, i) => (
                       <li key={i} className="flex items-start gap-2">
@@ -165,7 +165,7 @@ export function OnlineBusinessSaasTemplate() {
       <section className="container mx-auto px-3 py-20 bg-muted/50 rounded-3xl my-20">
         <ScrollReveal>
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            <h2 className="text-3xl md: text-3xl sm:text-4xl  font-bold mb-4">
               {data.stats?.title || "Trusted by teams worldwide"}
             </h2>
           </div>
@@ -173,25 +173,25 @@ export function OnlineBusinessSaasTemplate() {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-center max-w-full mx-auto">
           <ScrollReveal delay={0.1}>
             <div>
-              <div className="text-4xl md:text-5xl font-bold text-primary mb-2">10,000+</div>
+              <div className="text-3xl sm:text-5xl   font-bold text-primary mb-2 break-words">10,000+</div>
               <p className="text-muted-foreground">{data.stats?.teams || "Active Teams"}</p>
             </div>
           </ScrollReveal>
           <ScrollReveal delay={0.2}>
             <div>
-              <div className="text-4xl md:text-5xl font-bold text-primary mb-2">98%</div>
+              <div className="text-3xl sm:text-5xl   font-bold text-primary mb-2 break-words">98%</div>
               <p className="text-muted-foreground">{data.stats?.satisfaction || "Customer Satisfaction"}</p>
             </div>
           </ScrollReveal>
           <ScrollReveal delay={0.3}>
             <div>
-              <div className="text-4xl md:text-5xl font-bold text-primary mb-2">500K+</div>
+              <div className="text-3xl sm:text-5xl   font-bold text-primary mb-2 break-words">500K+</div>
               <p className="text-muted-foreground">{data.stats?.projects || "Projects Completed"}</p>
             </div>
           </ScrollReveal>
           <ScrollReveal delay={0.4}>
             <div>
-              <div className="text-4xl md:text-5xl font-bold text-primary mb-2">50+</div>
+              <div className="text-3xl sm:text-5xl   font-bold text-primary mb-2 break-words">50+</div>
               <p className="text-muted-foreground">{data.stats?.countries || "Countries"}</p>
             </div>
           </ScrollReveal>
@@ -201,7 +201,7 @@ export function OnlineBusinessSaasTemplate() {
       {/* Testimonials Section */}
       <section className="container mx-auto px-3 py-20">
         <ScrollReveal>
-          <h2 className="text-4xl font-bold text-center mb-4">
+          <h2 className="text-3xl sm:text-4xl  font-bold text-center mb-4">
             {data.testimonials?.title || "Loved by teams everywhere"}
           </h2>
           <p className="text-center text-muted-foreground mb-16">
@@ -259,7 +259,7 @@ export function OnlineBusinessSaasTemplate() {
       {/* Integrations Section */}
       <section className="container mx-auto px-3 py-20">
         <ScrollReveal>
-          <h2 className="text-4xl font-bold text-center mb-4">
+          <h2 className="text-3xl sm:text-4xl  font-bold text-center mb-4">
             {data.integrations?.title || "Integrates with your favorite tools"}
           </h2>
           <p className="text-center text-muted-foreground mb-16">
@@ -290,7 +290,7 @@ export function OnlineBusinessSaasTemplate() {
       {/* FAQ Section */}
       <section className="container mx-auto px-3 py-20 max-w-full">
         <ScrollReveal>
-          <h2 className="text-4xl font-bold text-center mb-16">
+          <h2 className="text-3xl sm:text-4xl  font-bold text-center mb-16">
             {data.faq?.title || "Frequently Asked Questions"}
           </h2>
         </ScrollReveal>
@@ -333,7 +333,7 @@ export function OnlineBusinessSaasTemplate() {
       <section className="container mx-auto px-3 py-20 text-center">
         <ScrollReveal>
           <Card className="bg-primary text-primary-foreground p-12">
-            <h2 className="text-3xl md:text-5xl font-bold mb-4">
+            <h2 className="text-3xl md: text-4xl sm:text-5xl  font-bold mb-4 break-words">
               {data.cta?.title || "Ready to transform your workflow?"}
             </h2>
             <p className="text-xl mb-8 opacity-90">

@@ -195,13 +195,13 @@ return (
       {/* Hero Section */}
       <section className="container mx-auto px-3 sm:px-3 pt-32 pb-20 max-w-full">
         <FadeIn>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-serif font-bold mb-6 leading-tight">
+          <h1 className="text-3xl sm: text-3xl sm:text-5xl md:text-6xl lg:text-7xl  font-serif font-bold mb-6 leading-tight break-words">
             {portfolioData.name}
           </h1>
         </FadeIn>
 
         <FadeIn delay={0.2}>
-          <p className="text-2xl md:text-3xl text-muted-foreground mb-8 font-serif">
+          <p className="text-xl sm:text-2xl md:text-3xl  text-muted-foreground mb-8 font-serif">
             {portfolioData.title}
           </p>
         </FadeIn>
@@ -226,7 +226,7 @@ return (
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
             {portfolioData.stats.map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="text-4xl md:text-5xl font-bold text-primary mb-2 font-serif">
+                <div className="text-3xl sm:text-5xl   font-bold text-primary mb-2 font-serif break-words">
                   {stat.number}
                 </div>
                 <p className="text-sm text-muted-foreground">
@@ -241,7 +241,7 @@ return (
       {/* About Section */}
       <section id="about" className="container mx-auto px-3 sm:px-3 py-20 max-w-full">
         <ScrollReveal>
-          <h2 className="text-4xl md:text-5xl font-serif font-bold mb-8">
+          <h2 className="text-3xl sm:text-5xl   font-serif font-bold mb-8 break-words">
             About
           </h2>
           <p className="text-xl leading-relaxed text-foreground/90 mb-8">
@@ -265,7 +265,7 @@ return (
       {/* Expertise Section */}
       <section className="container mx-auto px-3 sm:px-3 py-20 max-w-full bg-accent/5">
         <ScrollReveal>
-          <h2 className="text-4xl md:text-5xl font-serif font-bold mb-8">
+          <h2 className="text-3xl sm:text-5xl   font-serif font-bold mb-8 break-words">
             Writing Expertise
           </h2>
         </ScrollReveal>
@@ -285,7 +285,7 @@ return (
       {/* Articles Section */}
       <section id="articles" className="container mx-auto px-3 sm:px-3 py-20 max-w-full">
         <ScrollReveal>
-          <h2 className="text-4xl md:text-5xl font-serif font-bold mb-12">
+          <h2 className="text-3xl sm:text-5xl   font-serif font-bold mb-12 break-words">
             Recent Articles
           </h2>
         </ScrollReveal>
@@ -302,7 +302,7 @@ return (
                   ))}
                 </div>
 
-                <h3 className="text-3xl md:text-4xl font-serif font-bold mb-4 hover:text-primary transition-colors cursor-pointer">
+                <h3 className="text-3xl md: text-3xl sm:text-4xl  font-serif font-bold mb-4 hover:text-primary transition-colors cursor-pointer">
                   {article.title}
                 </h3>
 
@@ -333,7 +333,7 @@ return (
       {/* Services Section */}
       <section id="services" className="container mx-auto px-3 sm:px-3 py-20 max-w-full">
         <ScrollReveal>
-          <h2 className="text-4xl md:text-5xl font-serif font-bold mb-12">
+          <h2 className="text-3xl sm:text-5xl   font-serif font-bold mb-12 break-words">
             Services
           </h2>
         </ScrollReveal>
@@ -342,7 +342,7 @@ return (
           {portfolioData.services.map((service, index) => (
             <ScrollReveal key={service.title} delay={index * 0.1}>
               <div className="border-l-4 border-primary pl-6 py-2">
-                <h3 className="text-2xl md:text-3xl font-bold mb-3">
+                <h3 className="text-xl sm:text-2xl md:text-3xl  font-bold mb-3">
                   {service.title}
                 </h3>
                 <p className="text-lg leading-relaxed text-foreground/80">
@@ -357,7 +357,7 @@ return (
       {/* Case Studies Section */}
       <section id="case-studies" className="container mx-auto px-3 sm:px-3 py-20 max-w-full">
         <ScrollReveal>
-          <h2 className="text-4xl md:text-5xl font-serif font-bold mb-12">
+          <h2 className="text-3xl sm:text-5xl   font-serif font-bold mb-12 break-words">
             Case Studies
           </h2>
         </ScrollReveal>
@@ -407,7 +407,7 @@ return (
       {/* Process Section */}
       <section className="container mx-auto px-3 sm:px-3 py-20 max-w-full bg-accent/5">
         <ScrollReveal>
-          <h2 className="text-4xl md:text-5xl font-serif font-bold mb-12 text-center">
+          <h2 className="text-3xl sm:text-5xl   font-serif font-bold mb-12 text-center break-words">
             My Process
           </h2>
         </ScrollReveal>
@@ -434,7 +434,7 @@ return (
       {/* Testimonials Section */}
       <section className="container mx-auto px-3 sm:px-3 py-20 max-w-full">
         <ScrollReveal>
-          <h2 className="text-4xl md:text-5xl font-serif font-bold mb-12">
+          <h2 className="text-3xl sm:text-5xl   font-serif font-bold mb-12 break-words">
             Client Testimonials
           </h2>
         </ScrollReveal>
@@ -460,7 +460,7 @@ return (
       <section id="contact" className="container mx-auto px-3 sm:px-3 py-20 max-w-full">
         <ScrollReveal>
           <div className="border-t pt-12">
-            <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6">
+            <h2 className="text-3xl sm:text-5xl   font-serif font-bold mb-6 break-words">
               Let's Start a Conversation
             </h2>
             <p className="text-xl leading-relaxed text-foreground/80 mb-8">
@@ -478,7 +478,7 @@ return (
       <section className="py-20 px-3 border-t">
         <div className="container mx-auto max-w-4xl">
           <ScrollReveal>
-            <h2 className="text-4xl font-bold mb-8">Services & Pricing</h2>
+            <h2 className="text-3xl sm:text-4xl  font-bold mb-8">Services & Pricing</h2>
             <div className="prose prose-lg max-w-none space-y-8">
               <div className="border-l-4 border-primary pl-6">
                 <h3 className="text-2xl font-bold mb-2">Consulting - $200/hour</h3>
@@ -501,7 +501,7 @@ return (
       <section className="py-20 px-3 bg-muted/30">
         <div className="container mx-auto max-w-4xl">
           <ScrollReveal>
-            <h2 className="text-4xl font-bold mb-12">Professional Timeline</h2>
+            <h2 className="text-3xl sm:text-4xl  font-bold mb-12">Professional Timeline</h2>
             <div className="space-y-12">
               {[
                 {y:"2024",t:"Lead Engineer",c:"Tech Startup",d:"Leading full-stack development team building scalable web applications."},

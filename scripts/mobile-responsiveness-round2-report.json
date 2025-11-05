@@ -1,0 +1,27 @@
+{
+  "filesProcessed": 61,
+  "filesModified": 50,
+  "totalFixes": 442,
+  "fixesByPattern": {
+    "0": {
+      "description": "Clean up duplicate and malformed text size classes",
+      "count": 197
+    },
+    "1": {
+      "description": "Fix text-8xl without breakpoints (content text)",
+      "count": 41
+    },
+    "2": {
+      "description": "Fix text-9xl without breakpoints (content text)",
+      "count": 17
+    },
+    "3": {
+      "description": "Remove duplicate sm: breakpoints",
+      "count": 181
+    },
+    "5": {
+      "description": "Remove duplicate lg: breakpoints",
+      "count": 6
+    }
+  }
+}

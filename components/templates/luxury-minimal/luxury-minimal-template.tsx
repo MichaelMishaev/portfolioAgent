@@ -100,7 +100,7 @@ export function LuxuryMinimalTemplate() {
             <div className="mb-6 text-[#D4AF37] text-sm uppercase tracking-[0.3em] font-light">
               {portfolioData.category}
             </div>
-            <h1 className="font-serif text-6xl md:text-8xl mb-8 font-light tracking-tight leading-none">
+            <h1 className="font-serif  text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl  mb-8 font-light tracking-tight leading-none break-words">
               {portfolioData.name}
             </h1>
             <p className="text-xl md:text-2xl text-white/90 mb-12 font-light max-w-2xl mx-auto leading-relaxed">
@@ -120,7 +120,7 @@ export function LuxuryMinimalTemplate() {
       <section className="py-32 bg-white">
         <div className="container mx-auto px-8 max-w-4xl">
           <ScrollReveal>
-            <p className="font-serif text-4xl md:text-5xl text-center leading-relaxed text-black/80 font-light">
+            <p className="font-serif  text-3xl sm:text-4xl md:text-5xl  text-center leading-relaxed text-black/80 font-light">
               {portfolioData.statement}
             </p>
           </ScrollReveal>
@@ -267,7 +267,7 @@ export function LuxuryMinimalTemplate() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="font-serif text-5xl md:text-7xl mb-8 font-light text-black">
+            <h2 className="font-serif  text-4xl sm:text-5xl md:text-6xl lg:text-7xl  mb-8 font-light text-black break-words">
               {tt.common.letsWorkTogether}
             </h2>
             <p className="text-xl text-black/80 mb-12 font-light">

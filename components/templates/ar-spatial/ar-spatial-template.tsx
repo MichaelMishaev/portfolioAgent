@@ -356,13 +356,13 @@ export function ARSpatialTemplate() {
           </FloatingLayer>
 
           <FloatingLayer depth={80} delay={0.2}>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-black mb-6 bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-300 bg-clip-text text-transparent drop-shadow-[0_0_50px_rgba(6,182,212,0.3)]">
+            <h1 className="text-3xl sm:text-5xl md:text-5xl lg:text-6xl  xl:text-5xl sm:text-6xl md:text-7xl lg:text-8xl  font-black mb-6 bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-300 bg-clip-text text-transparent drop-shadow-[0_0_50px_rgba(6,182,212,0.3)] break-words">
               {portfolioData.name}
             </h1>
           </FloatingLayer>
 
           <FloatingLayer depth={60} delay={0.4}>
-            <p className="text-2xl md:text-3xl text-gray-300 mb-4 font-light">
+            <p className="text-xl sm:text-2xl md:text-3xl  text-gray-300 mb-4 font-light">
               {portfolioData.title}
             </p>
           </FloatingLayer>
@@ -405,7 +405,7 @@ export function ARSpatialTemplate() {
       <section className="relative py-16 px-3 bg-black/20 backdrop-blur-sm">
         <div className="container mx-auto max-w-full">
           <ScrollReveal>
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-white">
+            <h2 className="text-3xl md: text-3xl sm:text-4xl  font-bold text-center mb-12 text-white">
               Impact in Spatial Computing
             </h2>
           </ScrollReveal>
@@ -417,7 +417,7 @@ export function ARSpatialTemplate() {
                   whileHover={{ scale: 1.05, z: 50 }}
                   style={{ transformStyle: "preserve-3d" }}
                 >
-                  <div className="text-4xl md:text-5xl font-black bg-gradient-to-r from-cyan-300 to-purple-300 bg-clip-text text-transparent mb-2">
+                  <div className="text-3xl sm:text-5xl   font-black bg-gradient-to-r from-cyan-300 to-purple-300 bg-clip-text text-transparent mb-2 break-words">
                     {stat.value}
                   </div>
                   <div className="text-sm md:text-base text-gray-400">{stat.label}</div>
@@ -432,7 +432,7 @@ export function ARSpatialTemplate() {
       <section className="relative py-20 px-3">
         <div className="container mx-auto max-w-6xl">
           <ScrollReveal>
-            <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 bg-gradient-to-r from-cyan-300 to-purple-300 bg-clip-text text-transparent">
+            <h2 className="text-3xl sm:text-5xl   font-bold text-center mb-12 bg-gradient-to-r from-cyan-300 to-purple-300 bg-clip-text text-transparent break-words">
               About the Vision
             </h2>
           </ScrollReveal>
@@ -448,7 +448,7 @@ export function ARSpatialTemplate() {
       <section className="relative py-20 px-3 bg-black/10 backdrop-blur-sm">
         <div className="container mx-auto max-w-full">
           <ScrollReveal>
-            <h2 className="text-5xl md:text-6xl font-bold text-center mb-16 bg-gradient-to-r from-cyan-300 to-purple-300 bg-clip-text text-transparent">
+            <h2 className="text-5xl md: text-4xl sm:text-5xl md:text-6xl  font-bold text-center mb-16 bg-gradient-to-r from-cyan-300 to-purple-300 bg-clip-text text-transparent break-words">
               Spatial Experiences
             </h2>
           </ScrollReveal>
@@ -489,7 +489,7 @@ export function ARSpatialTemplate() {
       <section className="relative py-20 px-3">
         <div className="container mx-auto max-w-full">
           <ScrollReveal>
-            <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-white">
+            <h2 className="text-3xl sm:text-5xl   font-bold text-center mb-16 text-white break-words">
               Spatial Tech Stack
             </h2>
           </ScrollReveal>
@@ -513,7 +513,7 @@ export function ARSpatialTemplate() {
       <section className="relative py-20 px-3 bg-black/20 backdrop-blur-sm">
         <div className="container mx-auto max-w-full">
           <ScrollReveal>
-            <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-white">
+            <h2 className="text-3xl sm:text-5xl   font-bold text-center mb-16 text-white break-words">
               Spatial Computing Capabilities
             </h2>
           </ScrollReveal>
@@ -542,7 +542,7 @@ export function ARSpatialTemplate() {
       <section className="relative py-20 px-3 bg-black/10 backdrop-blur-sm">
         <div className="container mx-auto max-w-full">
           <ScrollReveal>
-            <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-cyan-300 to-purple-300 bg-clip-text text-transparent">
+            <h2 className="text-3xl sm:text-5xl   font-bold text-center mb-16 bg-gradient-to-r from-cyan-300 to-purple-300 bg-clip-text text-transparent break-words">
               Portfolio Gallery
             </h2>
           </ScrollReveal>
@@ -576,7 +576,7 @@ export function ARSpatialTemplate() {
       <section className="relative py-20 px-3">
         <div className="container mx-auto max-w-4xl">
           <ScrollReveal>
-            <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-white">
+            <h2 className="text-3xl sm:text-5xl   font-bold text-center mb-16 text-white break-words">
               Journey Through Dimensions
             </h2>
           </ScrollReveal>
@@ -610,7 +610,7 @@ export function ARSpatialTemplate() {
       <section className="relative py-20 px-3 bg-black/20 backdrop-blur-sm">
         <div className="container mx-auto max-w-full">
           <ScrollReveal>
-            <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-white">
+            <h2 className="text-3xl sm:text-5xl   font-bold text-center mb-4 text-white break-words">
               Investment Packages
             </h2>
           </ScrollReveal>
@@ -635,7 +635,7 @@ export function ARSpatialTemplate() {
                     <div className="p-8">
                       <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                       <div className="mb-6">
-                        <span className="text-4xl font-black text-white">{plan.price}</span>
+                        <span className="text-3xl sm:text-4xl  font-black text-white">{plan.price}</span>
                         <span className="text-gray-400 ml-2">{plan.period}</span>
                       </div>
                       <ul className="space-y-3 mb-8">
@@ -662,7 +662,7 @@ export function ARSpatialTemplate() {
       <section className="relative py-20 px-3">
         <div className="container mx-auto max-w-full">
           <ScrollReveal>
-            <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-cyan-300 to-purple-300 bg-clip-text text-transparent">
+            <h2 className="text-3xl sm:text-5xl   font-bold text-center mb-16 bg-gradient-to-r from-cyan-300 to-purple-300 bg-clip-text text-transparent break-words">
               Client Experiences
             </h2>
           </ScrollReveal>
@@ -691,7 +691,7 @@ export function ARSpatialTemplate() {
       <section className="relative py-20 px-3 bg-black/10 backdrop-blur-sm">
         <div className="container mx-auto max-w-4xl">
           <ScrollReveal>
-            <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-white">
+            <h2 className="text-3xl sm:text-5xl   font-bold text-center mb-12 text-white break-words">
               Frequently Asked
             </h2>
           </ScrollReveal>
@@ -722,7 +722,7 @@ export function ARSpatialTemplate() {
               whileHover={{ scale: 1.02 }}
               style={{ transformStyle: "preserve-3d" }}
             >
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+              <h2 className="text-3xl sm:text-5xl   font-bold mb-6 text-white break-words">
                 Ready to Build the Future?
               </h2>
               <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
@@ -748,7 +748,7 @@ export function ARSpatialTemplate() {
       <section id="contact" className="relative py-20 px-3">
         <div className="container mx-auto max-w-full text-center">
           <ScrollReveal>
-            <h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-300 bg-clip-text text-transparent">
+            <h2 className="text-5xl md: text-4xl sm:text-5xl md:text-6xl  font-bold mb-8 bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-300 bg-clip-text text-transparent break-words">
               Step Into the Future
             </h2>
           </ScrollReveal>

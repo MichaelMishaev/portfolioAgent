@@ -141,10 +141,10 @@ export function BentoGridTemplate() {
                   <Badge className="mb-4 bg-white/20 text-white border-0">
                     {portfolioData.availability}
                   </Badge>
-                  <h1 className="text-5xl md:text-7xl font-bold mb-4 leading-tight break-words">
+                  <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl  font-bold mb-4 leading-tight break-words">
                     {portfolioData.name}
                   </h1>
-                  <p className="text-2xl md:text-3xl mb-6 opacity-90">
+                  <p className="text-xl sm:text-2xl md:text-3xl  mb-6 opacity-90">
                     {portfolioData.title}
                   </p>
                   <p className="text-lg opacity-80 mb-8">
@@ -168,7 +168,7 @@ export function BentoGridTemplate() {
                 <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center mx-auto mb-4 text-blue-600 dark:text-blue-400">
                   {portfolioData.stats[0].icon}
                 </div>
-                <div className="text-4xl font-bold mb-2">{portfolioData.stats[0].value}</div>
+                <div className="text-3xl sm:text-4xl  font-bold mb-2">{portfolioData.stats[0].value}</div>
                 <div className="text-sm text-muted-foreground">{portfolioData.stats[0].label}</div>
               </CardContent>
             </Card>
@@ -181,7 +181,7 @@ export function BentoGridTemplate() {
                 <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900 rounded-lg flex items-center justify-center mx-auto mb-4 text-purple-600 dark:text-purple-400">
                   {portfolioData.stats[1].icon}
                 </div>
-                <div className="text-4xl font-bold mb-2">{portfolioData.stats[1].value}</div>
+                <div className="text-3xl sm:text-4xl  font-bold mb-2">{portfolioData.stats[1].value}</div>
                 <div className="text-sm text-muted-foreground">{portfolioData.stats[1].label}</div>
               </CardContent>
             </Card>
@@ -214,7 +214,7 @@ export function BentoGridTemplate() {
                 <div className="w-12 h-12 bg-green-100 dark:bg-green-900 rounded-lg flex items-center justify-center mx-auto mb-4 text-green-600 dark:text-green-400">
                   {portfolioData.stats[2].icon}
                 </div>
-                <div className="text-4xl font-bold mb-2">{portfolioData.stats[2].value}</div>
+                <div className="text-3xl sm:text-4xl  font-bold mb-2">{portfolioData.stats[2].value}</div>
                 <div className="text-sm text-muted-foreground">{portfolioData.stats[2].label}</div>
               </CardContent>
             </Card>
@@ -227,7 +227,7 @@ export function BentoGridTemplate() {
                 <div className="w-12 h-12 bg-orange-100 dark:bg-orange-900 rounded-lg flex items-center justify-center mx-auto mb-4 text-orange-600 dark:text-orange-400">
                   {portfolioData.stats[3].icon}
                 </div>
-                <div className="text-4xl font-bold mb-2">{portfolioData.stats[3].value}</div>
+                <div className="text-3xl sm:text-4xl  font-bold mb-2">{portfolioData.stats[3].value}</div>
                 <div className="text-sm text-muted-foreground">{portfolioData.stats[3].label}</div>
               </CardContent>
             </Card>
@@ -472,19 +472,19 @@ export function BentoGridTemplate() {
               <CardContent className="p-8">
                 <div className="grid grid-cols-1 sm:grid-cols-4 gap-6 text-center">
                   <div>
-                    <div className="text-4xl font-bold mb-2">{portfolioData.socialProof.followers}</div>
+                    <div className="text-3xl sm:text-4xl  font-bold mb-2">{portfolioData.socialProof.followers}</div>
                     <div className="text-sm opacity-90">Followers</div>
                   </div>
                   <div>
-                    <div className="text-4xl font-bold mb-2">{portfolioData.socialProof.articles}</div>
+                    <div className="text-3xl sm:text-4xl  font-bold mb-2">{portfolioData.socialProof.articles}</div>
                     <div className="text-sm opacity-90">Articles</div>
                   </div>
                   <div>
-                    <div className="text-4xl font-bold mb-2">{portfolioData.socialProof.talks}</div>
+                    <div className="text-3xl sm:text-4xl  font-bold mb-2">{portfolioData.socialProof.talks}</div>
                     <div className="text-sm opacity-90">Talks</div>
                   </div>
                   <div>
-                    <div className="text-4xl font-bold mb-2">{portfolioData.socialProof.mentees}</div>
+                    <div className="text-3xl sm:text-4xl  font-bold mb-2">{portfolioData.socialProof.mentees}</div>
                     <div className="text-sm opacity-90">Mentees</div>
                   </div>
                 </div>
@@ -672,12 +672,12 @@ export function BentoGridTemplate() {
       {/* Pricing Bento */}
       <section className="py-20 px-3">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-4xl font-bold mb-12">Pricing</h2>
+          <h2 className="text-3xl sm:text-4xl  font-bold mb-12">Pricing</h2>
           <div className="grid md:grid-cols-3 gap-6">
             {[{n:"Starter",p:"$49"},{n:"Professional",p:"$149"},{n:"Enterprise",p:"$499"}].map((p,i) => (
               <div key={i} className="rounded-3xl border-2 p-8 hover:shadow-xl transition-shadow">
                 <h3 className="text-2xl font-bold mb-4">{p.n}</h3>
-                <div className="text-5xl font-bold mb-6">{p.p}</div>
+                <div className="text-4xl sm:text-5xl  font-bold mb-6 break-words">{p.p}</div>
                 <Button className="w-full">Choose Plan</Button>
               </div>
             ))}
@@ -688,7 +688,7 @@ export function BentoGridTemplate() {
       {/* Gallery Bento */}
       <section className="py-20 px-3 bg-muted/20">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-4xl font-bold mb-12">Gallery</h2>
+          <h2 className="text-3xl sm:text-4xl  font-bold mb-12">Gallery</h2>
           <div className="grid grid-cols-6 gap-4">
             {[...Array(12)].map((_,i) => (
               <div key={i} className={`rounded-2xl bg-gradient-to-br from-primary/30 to-secondary/30 ${i%5===0?'col-span-3 row-span-2':'col-span-2'} aspect-square`}></div>

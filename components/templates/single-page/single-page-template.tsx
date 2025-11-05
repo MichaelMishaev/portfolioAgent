@@ -172,12 +172,12 @@ export function SinglePageTemplate() {
       <section className="container mx-auto px-3 sm:px-3 pt-32 pb-20 min-h-screen flex items-center">
         <div className="max-w-full">
           <FadeIn>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-6">
+            <h1 className="text-3xl sm: text-3xl sm:text-5xl md:text-6xl lg:text-7xl  font-bold mb-6 break-words">
               Hi, I'm {portfolioData.name}
             </h1>
           </FadeIn>
           <FadeIn delay={0.2}>
-            <p className="text-xl sm:text-2xl md:text-3xl text-muted-foreground mb-8">
+            <p className="text-xl sm: text-xl sm:text-2xl md:text-3xl  text-muted-foreground mb-8">
               {portfolioData.title}
             </p>
           </FadeIn>
@@ -198,7 +198,7 @@ export function SinglePageTemplate() {
       {/* About Section */}
       <section id="about" className="container mx-auto px-3 sm:px-3 py-20 scroll-mt-20">
         <ScrollReveal>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-8">About Me</h2>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl sm:text-5xl  font-bold mb-8 break-words">About Me</h2>
           <p className="text-lg sm:text-xl leading-relaxed text-foreground/80 max-w-full">
             {portfolioData.bio}
           </p>
@@ -211,7 +211,7 @@ export function SinglePageTemplate() {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
             {portfolioData.stats.map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary mb-2">
+                <div className="text-3xl sm: text-3xl sm:text-5xl   font-bold text-primary mb-2 break-words">
                   {stat.number}
                 </div>
                 <p className="text-xs sm:text-sm text-muted-foreground">
@@ -226,7 +226,7 @@ export function SinglePageTemplate() {
       {/* Skills Section */}
       <section id="skills" className="container mx-auto px-3 sm:px-3 py-20 scroll-mt-20">
         <ScrollReveal>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-12">Skills & Technologies</h2>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl sm:text-5xl  font-bold mb-12 break-words">Skills & Technologies</h2>
         </ScrollReveal>
         <ScrollReveal delay={0.2}>
           <div className="flex flex-wrap gap-2 sm:gap-3 max-w-full">
@@ -242,7 +242,7 @@ export function SinglePageTemplate() {
       {/* Experience Timeline Section */}
       <section id="experience" className="container mx-auto px-3 sm:px-3 py-20 scroll-mt-20">
         <ScrollReveal>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-12">Experience</h2>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl sm:text-5xl  font-bold mb-12 break-words">Experience</h2>
         </ScrollReveal>
 
         <div className="max-w-full space-y-8">
@@ -270,7 +270,7 @@ export function SinglePageTemplate() {
       {/* Process Section */}
       <section className="container mx-auto px-3 sm:px-3 py-20 bg-accent/5">
         <ScrollReveal>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-12 text-center">How I Work</h2>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl sm:text-5xl  font-bold mb-12 text-center break-words">How I Work</h2>
         </ScrollReveal>
 
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-full mx-auto">
@@ -295,7 +295,7 @@ export function SinglePageTemplate() {
       {/* Projects Section */}
       <section id="projects" className="container mx-auto px-3 sm:px-3 py-20 scroll-mt-20">
         <ScrollReveal>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-12">Recent Projects</h2>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl sm:text-5xl  font-bold mb-12 break-words">Recent Projects</h2>
         </ScrollReveal>
 
         <div className="space-y-16 max-w-full">
@@ -330,7 +330,7 @@ export function SinglePageTemplate() {
       {/* Testimonials Section */}
       <section className="container mx-auto px-3 sm:px-3 py-20 bg-accent/5">
         <ScrollReveal>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-12 text-center">What People Say</h2>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl sm:text-5xl  font-bold mb-12 text-center break-words">What People Say</h2>
         </ScrollReveal>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-full mx-auto">
@@ -361,7 +361,7 @@ export function SinglePageTemplate() {
       <section id="contact" className="container mx-auto px-3 sm:px-3 py-20 scroll-mt-20">
         <ScrollReveal>
           <div className="max-w-full mx-auto text-center">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+            <h2 className="text-3xl sm: text-3xl sm:text-5xl md:text-5xl sm:text-5xl md:text-6xl   font-bold mb-6 break-words">
               Let's Work Together
             </h2>
             <p className="text-xl text-muted-foreground mb-12">
@@ -409,7 +409,7 @@ export function SinglePageTemplate() {
       <section id="pricing" className="py-20 px-3 sm:px-3 bg-muted/30">
         <div className="container mx-auto max-w-6xl">
           <ScrollReveal>
-            <h2 className="text-4xl font-bold mb-12 text-center">Pricing</h2>
+            <h2 className="text-3xl sm:text-4xl  font-bold mb-12 text-center">Pricing</h2>
           </ScrollReveal>
           <div className="grid md:grid-cols-3 gap-8">
             {[
@@ -426,7 +426,7 @@ export function SinglePageTemplate() {
                   )}
                   <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
                   <div className="mb-6">
-                    <span className="text-4xl font-bold">{plan.price}</span>
+                    <span className="text-3xl sm:text-4xl  font-bold">{plan.price}</span>
                     <span className="text-muted-foreground">{plan.period}</span>
                   </div>
                   <ul className="space-y-3 mb-8">
@@ -451,7 +451,7 @@ export function SinglePageTemplate() {
       <section id="gallery" className="py-20 px-3 sm:px-3">
         <div className="container mx-auto max-w-6xl">
           <ScrollReveal>
-            <h2 className="text-4xl font-bold mb-12 text-center">Gallery</h2>
+            <h2 className="text-3xl sm:text-4xl  font-bold mb-12 text-center">Gallery</h2>
           </ScrollReveal>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[1, 2, 3, 4, 5, 6, 7, 8].map((i) => (
@@ -471,7 +471,7 @@ export function SinglePageTemplate() {
       <section className="py-20 px-3 sm:px-3 bg-primary text-primary-foreground">
         <div className="container mx-auto max-w-4xl text-center">
           <ScrollReveal>
-            <h2 className="text-4xl font-bold mb-6">Ready to Start Your Project?</h2>
+            <h2 className="text-3xl sm:text-4xl  font-bold mb-6">Ready to Start Your Project?</h2>
             <p className="text-xl mb-8 opacity-90">
               Let's work together to bring your ideas to life
             </p>

@@ -1,0 +1,40 @@
+{
+  "successful": [
+    {
+      "template": "Professional Authority",
+      "id": "lin-professional-authority",
+      "screenshotNumber": 1,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/lin-professional-authority-1.png",
+      "url": "https://ideogram.ai/api/images/ephemeral/DuB-roNZS-eOlhjnqAb5Pw.png?exp=1762385298&sig=34efbdf2daec7d30352b1511e2793b58ef6432cddba430295528fd68c6de3272"
+    },
+    {
+      "template": "Professional Authority",
+      "id": "lin-professional-authority",
+      "screenshotNumber": 2,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/lin-professional-authority-2.png",
+      "url": "https://ideogram.ai/api/images/ephemeral/GQfu98P3RUK26kBDhuDiHA.png?exp=1762385319&sig=8b65d6ec0aea7915a5356f7e0d435815915d25ca9de3d6f6b1b1200beddf74b3"
+    },
+    {
+      "template": "Professional Authority",
+      "id": "lin-professional-authority",
+      "screenshotNumber": 3,
+      "path": "/Users/michaelmishayev/Desktop/Projects/portfolioWeb/public/screenshots/lin-professional-authority-3.png",
+      "url": "https://ideogram.ai/api/images/ephemeral/i7DjmWu-S2q7vK904PeK4A.png?exp=1762385341&sig=6f5a02535a5eb258d69a62c8f246719346f73ba38cdc2f9ecca7d23f89c655eb"
+    }
+  ],
+  "failed": [],
+  "imageUrls": [
+    {
+      "screenshotNumber": 1,
+      "url": "https://ideogram.ai/api/images/ephemeral/DuB-roNZS-eOlhjnqAb5Pw.png?exp=1762385298&sig=34efbdf2daec7d30352b1511e2793b58ef6432cddba430295528fd68c6de3272"
+    },
+    {
+      "screenshotNumber": 2,
+      "url": "https://ideogram.ai/api/images/ephemeral/GQfu98P3RUK26kBDhuDiHA.png?exp=1762385319&sig=8b65d6ec0aea7915a5356f7e0d435815915d25ca9de3d6f6b1b1200beddf74b3"
+    },
+    {
+      "screenshotNumber": 3,
+      "url": "https://ideogram.ai/api/images/ephemeral/i7DjmWu-S2q7vK904PeK4A.png?exp=1762385341&sig=6f5a02535a5eb258d69a62c8f246719346f73ba38cdc2f9ecca7d23f89c655eb"
+    }
+  ]
+}

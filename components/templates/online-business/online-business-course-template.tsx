@@ -71,7 +71,7 @@ export function OnlineBusinessCourseTemplate() {
                 <span className="truncate">{data.badge || "100,000+ Students Enrolled"}</span>
               </Badge>
 
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 leading-tight break-words">
+              <h1 className="text-3xl sm: text-3xl sm:text-5xl md:text-5xl lg:text-6xl  xl:text-7xl font-bold mb-6 leading-tight break-words">
                 <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent break-words">
                   {data.heroTitle || "Master Digital Marketing"}
                 </span>
@@ -204,7 +204,7 @@ export function OnlineBusinessCourseTemplate() {
       <section id="curriculum" className="container mx-auto px-4 md:px-6 max-w-full py-20 md:py-32">
         <ScrollReveal>
           <div className="text-center mb-16">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 break-words px-2">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl sm:text-5xl  font-bold mb-4 break-words px-2">
               {data.curriculum?.title || "Complete Course Curriculum"}
             </h2>
             <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 max-w-full mx-auto break-words px-2">
@@ -268,7 +268,7 @@ export function OnlineBusinessCourseTemplate() {
       <section id="pricing" className="container mx-auto px-4 md:px-6 max-w-full py-20 md:py-32 bg-gradient-to-br from-purple-50 to-pink-50 dark:from-gray-800 dark:to-gray-900 rounded-3xl">
         <ScrollReveal>
           <div className="text-center mb-16">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 break-words px-2">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl sm:text-5xl  font-bold mb-4 break-words px-2">
               {data.pricing?.title || "Choose Your Learning Path"}
             </h2>
             <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 max-w-full mx-auto break-words px-2">
@@ -287,7 +287,7 @@ export function OnlineBusinessCourseTemplate() {
                   {data.pricing?.essentials?.description || "Perfect for getting started"}
                 </p>
                 <div className="mb-6">
-                  <span className="text-3xl sm:text-4xl font-bold">$297</span>
+                  <span className="text-3xl sm: text-3xl sm:text-4xl  font-bold">$297</span>
                   <span className="text-gray-600 dark:text-gray-400 ml-2 text-sm">{data.pricing?.oneTime || "one-time"}</span>
                 </div>
                 <ul className="space-y-3 mb-8">
@@ -319,7 +319,7 @@ export function OnlineBusinessCourseTemplate() {
                   {data.pricing?.complete?.description || "Everything you need to succeed"}
                 </p>
                 <div className="mb-6">
-                  <span className="text-3xl sm:text-4xl font-bold">$697</span>
+                  <span className="text-3xl sm: text-3xl sm:text-4xl  font-bold">$697</span>
                   <span className="text-gray-600 dark:text-gray-400 ml-2 line-through text-sm">$997</span>
                 </div>
                 <ul className="space-y-3 mb-8">
@@ -346,7 +346,7 @@ export function OnlineBusinessCourseTemplate() {
                   {data.pricing?.vip?.description || "For serious entrepreneurs"}
                 </p>
                 <div className="mb-6">
-                  <span className="text-3xl sm:text-4xl font-bold">$1,997</span>
+                  <span className="text-3xl sm: text-3xl sm:text-4xl  font-bold">$1,997</span>
                   <span className="text-gray-400 ml-2 text-sm">{data.pricing?.oneTime || "one-time"}</span>
                 </div>
                 <ul className="space-y-3 mb-8">
@@ -374,7 +374,7 @@ export function OnlineBusinessCourseTemplate() {
       <section className="container mx-auto px-4 md:px-6 max-w-full py-20 md:py-32">
         <ScrollReveal>
           <div className="text-center mb-16">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 break-words px-2">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl sm:text-5xl  font-bold mb-4 break-words px-2">
               {data.testimonials?.title || "Student Success Stories"}
             </h2>
             <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 break-words px-2">
@@ -420,7 +420,7 @@ export function OnlineBusinessCourseTemplate() {
           <Card className="bg-gradient-to-br from-purple-600 to-pink-600 border-0 overflow-hidden relative">
             <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10"></div>
             <CardContent className="p-6 sm:p-8 md:p-12 lg:p-16 relative z-10 text-center">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 break-words">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl sm:text-5xl  font-bold text-white mb-6 break-words">
                 {data.cta?.title || "Ready to Transform Your Life?"}
               </h2>
               <p className="text-base sm:text-lg md:text-xl text-white/90 mb-8 max-w-full mx-auto break-words">

@@ -344,7 +344,7 @@ export function B2BServiceTemplate() {
             {serviceData.hero.stats.map((stat, index) => (
               <ScrollReveal key={index} delay={index * 0.1}>
                 <div className="text-center">
-                  <div className="text-5xl font-bold mb-2 text-blue-100">{stat.value}</div>
+                  <div className="text-4xl sm:text-5xl  font-bold mb-2 text-blue-100 break-words">{stat.value}</div>
                   <div className="text-sm text-blue-300 font-medium">{stat.label}</div>
                 </div>
               </ScrollReveal>
@@ -358,7 +358,7 @@ export function B2BServiceTemplate() {
         <div className="container mx-auto px-3 max-w-full">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <h2 className="text-5xl font-bold mb-6">Our Capabilities</h2>
+              <h2 className="text-4xl sm:text-5xl  font-bold mb-6 break-words">Our Capabilities</h2>
               <p className="text-xl text-stone-600 max-w-full mx-auto">
                 Integrated services that deliver measurable business impact across your organization.
               </p>
@@ -396,7 +396,7 @@ export function B2BServiceTemplate() {
         <div className="container mx-auto px-3 max-w-full">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <h2 className="text-5xl font-bold mb-6">Proven Results</h2>
+              <h2 className="text-4xl sm:text-5xl  font-bold mb-6 break-words">Proven Results</h2>
               <p className="text-xl text-stone-600 max-w-full mx-auto">
                 Real transformations. Real impact. Real ROI.
               </p>
@@ -462,7 +462,7 @@ export function B2BServiceTemplate() {
         <div className="container mx-auto px-3 max-w-full">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <h2 className="text-5xl font-bold mb-6">Industry Expertise</h2>
+              <h2 className="text-4xl sm:text-5xl  font-bold mb-6 break-words">Industry Expertise</h2>
               <p className="text-xl text-stone-600 max-w-full mx-auto">
                 Deep sector knowledge combined with cross-industry best practices.
               </p>
@@ -505,7 +505,7 @@ export function B2BServiceTemplate() {
         <div className="container mx-auto px-3 max-w-full">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <h2 className="text-5xl font-bold mb-6">Insights & Research</h2>
+              <h2 className="text-4xl sm:text-5xl  font-bold mb-6 break-words">Insights & Research</h2>
               <p className="text-xl text-stone-600 max-w-full mx-auto">
                 Download our latest thinking on critical business challenges.
               </p>
@@ -564,7 +564,7 @@ export function B2BServiceTemplate() {
         <div className="container mx-auto px-3 max-w-full">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <h2 className="text-5xl font-bold mb-6">{serviceData.applicationProcess.title}</h2>
+              <h2 className="text-4xl sm:text-5xl  font-bold mb-6 break-words">{serviceData.applicationProcess.title}</h2>
               <p className="text-xl text-stone-600 max-w-full mx-auto">
                 A rigorous, collaborative approach designed to deliver lasting impact.
               </p>
@@ -575,7 +575,7 @@ export function B2BServiceTemplate() {
             {serviceData.applicationProcess.steps.map((step, index) => (
               <ScrollReveal key={step.number} delay={index * 0.1}>
                 <div className="flex gap-8 mb-12 last:mb-0">
-                  <div className="text-6xl font-bold text-red-600/20 flex-shrink-0">
+                  <div className="text-4xl sm:text-5xl md:text-6xl  font-bold text-red-600/20 flex-shrink-0 break-words">
                     {step.number}
                   </div>
                   <div>
@@ -594,7 +594,7 @@ export function B2BServiceTemplate() {
         <div className="container mx-auto px-3 max-w-full">
           <ScrollReveal>
             <div className="max-w-full mx-auto text-center">
-              <h2 className="text-5xl md:text-6xl font-bold mb-8">Ready to Transform?</h2>
+              <h2 className="text-5xl md: text-4xl sm:text-5xl md:text-6xl  font-bold mb-8 break-words">Ready to Transform?</h2>
               <p className="text-xl mb-12 text-blue-100 max-w-full mx-auto">
                 Schedule a complimentary consultation to explore how we can help you achieve your
                 strategic objectives.

@@ -266,10 +266,10 @@ export function DataDashboardTemplate() {
       <section className="pt-32 pb-16 px-3">
         <div className="container mx-auto max-w-full">
           <div className="text-center mb-12">
-            <h1 className="text-5xl md:text-7xl font-black mb-6 bg-gradient-to-r from-blue-400 via-cyan-400 to-teal-400 bg-clip-text text-transparent">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl  font-black mb-6 bg-gradient-to-r from-blue-400 via-cyan-400 to-teal-400 bg-clip-text text-transparent break-words">
               {portfolioData.name}
             </h1>
-            <p className="text-2xl md:text-3xl text-gray-300 mb-4">
+            <p className="text-xl sm:text-2xl md:text-3xl  text-gray-300 mb-4">
               {portfolioData.title}
             </p>
             <p className="text-lg text-gray-400">
@@ -283,7 +283,7 @@ export function DataDashboardTemplate() {
       <section className="py-12 px-3 bg-gray-900/30">
         <div className="container mx-auto max-w-full">
           <ScrollReveal>
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-white">
+            <h2 className="text-3xl md: text-3xl sm:text-4xl  font-bold text-center mb-12 text-white">
               Track Record
             </h2>
           </ScrollReveal>
@@ -291,7 +291,7 @@ export function DataDashboardTemplate() {
             {portfolioData.stats.map((stat, index) => (
               <ScrollReveal key={stat.label} delay={index * 0.1}>
                 <div className="text-center">
-                  <div className="text-4xl md:text-5xl font-black bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent mb-2">
+                  <div className="text-3xl sm:text-5xl   font-black bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent mb-2 break-words">
                     {stat.value}
                   </div>
                   <div className="text-sm md:text-base text-gray-400">{stat.label}</div>
@@ -487,7 +487,7 @@ export function DataDashboardTemplate() {
       <section className="py-16 px-3 bg-gray-900/50">
         <div className="container mx-auto max-w-6xl">
           <ScrollReveal>
-            <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-white">
+            <h2 className="text-3xl sm:text-5xl   font-bold text-center mb-12 text-white break-words">
               About Me
             </h2>
           </ScrollReveal>
@@ -503,7 +503,7 @@ export function DataDashboardTemplate() {
       <section className="py-16 px-3">
         <div className="container mx-auto max-w-full">
           <ScrollReveal>
-            <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-white">
+            <h2 className="text-3xl sm:text-5xl   font-bold text-center mb-12 text-white break-words">
               Technical Skills
             </h2>
           </ScrollReveal>
@@ -523,7 +523,7 @@ export function DataDashboardTemplate() {
       <section className="py-16 px-3 bg-gray-900/30">
         <div className="container mx-auto max-w-full">
           <ScrollReveal>
-            <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-white">
+            <h2 className="text-3xl sm:text-5xl   font-bold text-center mb-12 text-white break-words">
               Featured Dashboards
             </h2>
           </ScrollReveal>
@@ -549,7 +549,7 @@ export function DataDashboardTemplate() {
       <section className="py-16 px-3">
         <div className="container mx-auto max-w-4xl">
           <ScrollReveal>
-            <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-white">
+            <h2 className="text-3xl sm:text-5xl   font-bold text-center mb-16 text-white break-words">
               Career Journey
             </h2>
           </ScrollReveal>
@@ -580,7 +580,7 @@ export function DataDashboardTemplate() {
       <section className="py-16 px-3 bg-gray-900/50">
         <div className="container mx-auto max-w-full">
           <ScrollReveal>
-            <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-white">
+            <h2 className="text-3xl sm:text-5xl   font-bold text-center mb-4 text-white break-words">
               Pricing Plans
             </h2>
           </ScrollReveal>
@@ -601,7 +601,7 @@ export function DataDashboardTemplate() {
                   <CardContent className="p-8">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                     <div className="mb-6">
-                      <span className="text-4xl font-black text-white">{plan.price}</span>
+                      <span className="text-3xl sm:text-4xl  font-black text-white">{plan.price}</span>
                       <span className="text-gray-400 ml-2">{plan.period}</span>
                     </div>
                     <ul className="space-y-3 mb-8">
@@ -627,7 +627,7 @@ export function DataDashboardTemplate() {
       <section className="py-16 px-3">
         <div className="container mx-auto max-w-full">
           <ScrollReveal>
-            <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-white">
+            <h2 className="text-3xl sm:text-5xl   font-bold text-center mb-12 text-white break-words">
               Client Testimonials
             </h2>
           </ScrollReveal>
@@ -654,7 +654,7 @@ export function DataDashboardTemplate() {
       <section className="py-16 px-3 bg-gray-900/30">
         <div className="container mx-auto max-w-4xl">
           <ScrollReveal>
-            <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-white">
+            <h2 className="text-3xl sm:text-5xl   font-bold text-center mb-12 text-white break-words">
               Frequently Asked Questions
             </h2>
           </ScrollReveal>
@@ -677,7 +677,7 @@ export function DataDashboardTemplate() {
       <section className="py-20 px-3 bg-gradient-to-r from-blue-600/20 to-cyan-600/20">
         <div className="container mx-auto max-w-4xl text-center">
           <ScrollReveal>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+            <h2 className="text-3xl sm:text-5xl   font-bold mb-6 text-white break-words">
               Ready to Transform Your Data?
             </h2>
           </ScrollReveal>
@@ -710,7 +710,7 @@ export function DataDashboardTemplate() {
       <section id="contact" className="py-20 px-3">
         <div className="container mx-auto max-w-full text-center">
           <ScrollReveal>
-            <h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+            <h2 className="text-5xl md: text-4xl sm:text-5xl md:text-6xl  font-bold mb-8 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent break-words">
               Let's Analyze Your Data
             </h2>
           </ScrollReveal>
