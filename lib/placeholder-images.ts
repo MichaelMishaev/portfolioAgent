@@ -14,18 +14,18 @@ export const placeholderImages = {
     city: 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=1920&h=1080&fit=crop',
   },
 
-  // Project showcase images
+  // Project showcase images - AI-generated high-quality portfolio mockups
   projects: {
-    web1: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop',
-    web2: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=600&fit=crop',
-    web3: 'https://images.unsplash.com/photo-1547658719-da2b51169166?w=800&h=600&fit=crop',
-    mobile1: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=600&fit=crop',
-    mobile2: 'https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800&h=600&fit=crop',
-    design1: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&h=600&fit=crop',
-    design2: 'https://images.unsplash.com/photo-1558655146-364adaf1fcc9?w=800&h=600&fit=crop',
+    web1: '/images/portfolio/portfolio-web-1.png',
+    web2: '/images/portfolio/portfolio-web-2.png',
+    web3: '/images/portfolio/portfolio-web-3.png',
+    mobile1: '/images/portfolio/portfolio-mobile-1.png',
+    mobile2: '/images/portfolio/portfolio-mobile-2.png',
+    design1: '/images/portfolio/portfolio-design-1.png',
+    design2: '/images/portfolio/portfolio-design-2.png',
     dashboard: '/images/dashboard-hero.png',
-    ecommerce: 'https://images.unsplash.com/photo-1472851294608-062f824d29cc?w=800&h=600&fit=crop',
-    branding: 'https://images.unsplash.com/photo-1561070791-36c11767b26a?w=800&h=600&fit=crop',
+    ecommerce: '/images/portfolio/portfolio-ecommerce.png',
+    branding: '/images/portfolio/portfolio-branding.png',
   },
 
   // Team/People photos
