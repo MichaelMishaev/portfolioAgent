@@ -1,0 +1,21 @@
+{
+  "mcpServers": {
+    "playwright": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@playwright/mcp"
+      ],
+      "description": "Playwright MCP Server for browser automation and testing",
+      "capabilities": [
+        "Navigate to URLs",
+        "Click elements",
+        "Fill forms",
+        "Take screenshots",
+        "Execute JavaScript",
+        "Wait for elements",
+        "Assert page content"
+      ]
+    }
+  }
+}
