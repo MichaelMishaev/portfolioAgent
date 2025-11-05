@@ -19,9 +19,6 @@ export function Header() {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-3">
-          <Link href="/#templates" className="text-sm font-medium hover:text-primary transition-colors px-3 py-2">
-            Templates
-          </Link>
           <Link href="/#contact" className="text-sm font-medium hover:text-primary transition-colors px-3 py-2">
             Contact
           </Link>

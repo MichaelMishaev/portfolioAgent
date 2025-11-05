@@ -83,34 +83,71 @@ export default function Home() {
       <Header />
 
       {/* Hero Section - Ultra Minimal */}
-      <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50 dark:from-slate-950 dark:via-blue-950 dark:to-purple-950">
+      <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50 dark:from-slate-950 dark:via-blue-950 dark:to-purple-950">
         {/* Subtle animated background pattern */}
         <div className="absolute inset-0 bg-grid-slate-200/50 dark:bg-grid-slate-800/50 [mask-image:linear-gradient(0deg,transparent,black)]" />
 
-        <div className="relative container mx-auto px-4 sm:px-6 py-16 sm:py-20">
+        <div className="relative container mx-auto px-4 sm:px-6 py-8 sm:py-12">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center max-w-5xl mx-auto"
           >
-            {/* Title */}
+            {/* Title with enhanced styling */}
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black mb-6 sm:mb-8 leading-[1.15] sm:leading-[1.1] tracking-tight px-4">
-              <span className="text-blue-600 dark:text-blue-400 break-words">
-                {language === 'en' ? 'Professional' : 'Профессиональные'}
-              </span>
+              <motion.span
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="inline-block bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent break-words"
+              >
+                {language === 'en' ? 'Create the Perfect Portfolio' : 'Создайте идеальное портфолио'}
+              </motion.span>
               <br />
-              <span className="text-slate-900 dark:text-slate-100 break-words">
-                {language === 'en' ? 'Portfolio Templates' : 'Шаблоны Портфолио'}
-              </span>
+              <motion.span
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                className="inline-block text-slate-900 dark:text-slate-100 break-words relative"
+              >
+                {language === 'en' ? 'In Minutes' : 'за несколько минут'}
+                {/* Animated underline */}
+                <motion.span
+                  initial={{ width: 0 }}
+                  animate={{ width: "100%" }}
+                  transition={{ duration: 0.8, delay: 0.8 }}
+                  className="absolute bottom-0 left-0 h-2 sm:h-3 bg-gradient-to-r from-blue-500 to-purple-500 opacity-30 rounded-full"
+                />
+              </motion.span>
             </h1>
 
-            {/* Description */}
-            <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-slate-600 dark:text-slate-400 max-w-4xl mx-auto leading-relaxed px-4">
+            {/* Description with badge */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: 0.6 }}
+              className="mb-4"
+            >
+              <span className="inline-block px-4 py-2 bg-gradient-to-r from-blue-100 to-purple-100 dark:from-blue-900/30 dark:to-purple-900/30 text-blue-700 dark:text-blue-300 rounded-full text-sm font-semibold border border-blue-200 dark:border-blue-800 shadow-sm">
+                {language === 'en' ? '39+ Premium Templates' : '39+ премиум шаблонов'}
+                <span className="ml-1.5 inline-block animate-pulse">📈</span>
+                <span className="ml-2 text-xs opacity-75">
+                  {language === 'en' ? '(Growing)' : '(Растёт)'}
+                </span>
+              </span>
+            </motion.div>
+
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.8 }}
+              className="text-lg sm:text-xl md:text-2xl text-slate-600 dark:text-slate-400 max-w-4xl mx-auto leading-relaxed px-4"
+            >
               {language === 'en'
                 ? 'Even in the era of AI, we believe a human must review every detail.'
                 : 'Даже в эпоху ИИ мы верим, что человек должен проверить каждую деталь.'}
-            </p>
+            </motion.p>
           </motion.div>
         </div>
       </section>
@@ -299,76 +336,92 @@ export default function Home() {
               </motion.div>
             </div>
 
-            {/* Detailed Explanation */}
+            {/* Full-Service Highlight - New Prominent Section */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.5 }}
-              className="mt-8 bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border-2 border-blue-200 dark:border-blue-800"
+              transition={{ duration: 0.5, delay: 0.6 }}
+              className="mt-8 bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 rounded-2xl p-6 sm:p-8 border-2 border-blue-300 dark:border-blue-700 shadow-xl"
             >
-              <div className="flex items-start gap-4 mb-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-500 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <span className="text-2xl">💡</span>
+              <div className="text-center mb-6">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-2xl mb-4 shadow-lg">
+                  <span className="text-3xl">🌟</span>
                 </div>
-                <div>
-                  <h3 className="text-xl font-bold mb-2">
-                    {language === 'en' ? 'Fast & Complete Solution' : 'Быстрое и полное решение'}
-                  </h3>
-                  <p className="text-foreground/70 mb-4">
+                <h3 className="text-2xl sm:text-3xl font-bold mb-2">
+                  {language === 'en' ? 'We Take Care of ' : 'Мы позаботимся о '}
+                  <span className="bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 bg-clip-text text-transparent">
+                    {language === 'en' ? 'Everything' : 'всём'}
+                  </span>
+                </h3>
+                <p className="text-foreground/70 text-base sm:text-lg">
+                  {language === 'en'
+                    ? 'Focus on your work, we handle the technical details'
+                    : 'Сосредоточьтесь на работе, мы разберёмся с технической стороной'}
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                {/* Domain Service */}
+                <div className="bg-white dark:bg-gray-800 rounded-xl p-5 shadow-md hover:shadow-lg transition-all hover:-translate-y-1 border border-blue-200 dark:border-blue-800">
+                  <div className="text-4xl mb-3 text-center">🌐</div>
+                  <h4 className="font-bold text-lg mb-2 text-center">
+                    {language === 'en' ? 'Domain Setup' : 'Настройка домена'}
+                  </h4>
+                  <p className="text-sm text-foreground/70 text-center">
                     {language === 'en'
-                      ? 'Get your professional website live in minutes with our marketplace approach:'
-                      : 'Запустите свой профессиональный сайт за минуты с нашим маркетплейс подходом:'}
+                      ? 'Custom domain registration and configuration'
+                      : 'Регистрация и настройка персонального домена'}
                   </p>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
-                    <div className="flex items-start gap-2">
-                      <span className="text-lg">⚡</span>
-                      <div>
-                        <strong>{language === 'en' ? 'Instant Download:' : 'Мгновенная загрузка:'}</strong>
-                        <p className="text-foreground/60">
-                          {language === 'en'
-                            ? 'Get template files immediately after purchase'
-                            : 'Получите файлы шаблона сразу после покупки'}
-                        </p>
-                      </div>
-                    </div>
-                    <div className="flex items-start gap-2">
-                      <span className="text-lg">🛠️</span>
-                      <div>
-                        <strong>{language === 'en' ? 'Optional Services:' : 'Дополнительные услуги:'}</strong>
-                        <p className="text-foreground/60">
-                          {language === 'en'
-                            ? 'Add hosting, domain, installation, or branding'
-                            : 'Добавьте хостинг, домен, установку или брендинг'}
-                        </p>
-                      </div>
-                    </div>
-                    <div className="flex items-start gap-2">
-                      <span className="text-lg">🎨</span>
-                      <div>
-                        <strong>{language === 'en' ? 'Advanced Builder:' : 'Расширенный конструктор:'}</strong>
-                        <p className="text-foreground/60">
-                          {language === 'en'
-                            ? 'Optional tool for advanced users to customize layout'
-                            : 'Опциональный инструмент для продвинутых пользователей'}
-                        </p>
-                      </div>
-                    </div>
-                    <div className="flex items-start gap-2">
-                      <span className="text-lg">✅</span>
-                      <div>
-                        <strong>{language === 'en' ? 'Ready to Use:' : 'Готово к использованию:'}</strong>
-                        <p className="text-foreground/60">
-                          {language === 'en'
-                            ? 'All templates are production-ready and optimized'
-                            : 'Все шаблоны готовы к работе и оптимизированы'}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
+                </div>
+
+                {/* Hosting Service */}
+                <div className="bg-white dark:bg-gray-800 rounded-xl p-5 shadow-md hover:shadow-lg transition-all hover:-translate-y-1 border border-purple-200 dark:border-purple-800">
+                  <div className="text-4xl mb-3 text-center">☁️</div>
+                  <h4 className="font-bold text-lg mb-2 text-center">
+                    {language === 'en' ? 'Hosting & Deployment' : 'Хостинг и развёртывание'}
+                  </h4>
+                  <p className="text-sm text-foreground/70 text-center">
+                    {language === 'en'
+                      ? 'Fast, reliable hosting with automatic deployment'
+                      : 'Быстрый, надёжный хостинг с автоматическим развёртыванием'}
+                  </p>
+                </div>
+
+                {/* Content Service */}
+                <div className="bg-white dark:bg-gray-800 rounded-xl p-5 shadow-md hover:shadow-lg transition-all hover:-translate-y-1 border border-pink-200 dark:border-pink-800">
+                  <div className="text-4xl mb-3 text-center">✍️</div>
+                  <h4 className="font-bold text-lg mb-2 text-center">
+                    {language === 'en' ? 'Content Creation' : 'Создание контента'}
+                  </h4>
+                  <p className="text-sm text-foreground/70 text-center">
+                    {language === 'en'
+                      ? 'Professional copywriting and content optimization'
+                      : 'Профессиональный копирайтинг и оптимизация контента'}
+                  </p>
                 </div>
               </div>
+
+              {/* Additional Services Badges */}
+              <div className="mt-6 flex flex-wrap justify-center gap-2">
+                <span className="px-3 py-1.5 bg-white dark:bg-gray-800 rounded-full text-xs font-semibold border border-blue-200 dark:border-blue-800">
+                  🔒 {language === 'en' ? 'SSL Certificate' : 'SSL Сертификат'}
+                </span>
+                <span className="px-3 py-1.5 bg-white dark:bg-gray-800 rounded-full text-xs font-semibold border border-blue-200 dark:border-blue-800">
+                  📧 {language === 'en' ? 'Email Setup' : 'Настройка Email'}
+                </span>
+                <span className="px-3 py-1.5 bg-white dark:bg-gray-800 rounded-full text-xs font-semibold border border-blue-200 dark:border-blue-800">
+                  🎨 {language === 'en' ? 'Logo Design' : 'Дизайн логотипа'}
+                </span>
+                <span className="px-3 py-1.5 bg-white dark:bg-gray-800 rounded-full text-xs font-semibold border border-blue-200 dark:border-blue-800">
+                  📊 {language === 'en' ? 'Analytics' : 'Аналитика'}
+                </span>
+                <span className="px-3 py-1.5 bg-white dark:bg-gray-800 rounded-full text-xs font-semibold border border-blue-200 dark:border-blue-800">
+                  🚀 {language === 'en' ? 'SEO Optimization' : 'SEO Оптимизация'}
+                </span>
+              </div>
             </motion.div>
+
               </motion.div>
             )}
           </AnimatePresence>
@@ -386,15 +439,24 @@ export default function Home() {
             className="text-center mb-6 sm:mb-8"
           >
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 sm:mb-3 px-2">
-              {language === 'en' ? 'Browse ' : 'Просмотрите '}
-              <span className="text-blue-600 dark:text-blue-400">
-                {language === 'en' ? 'All Templates' : 'все шаблоны'}
+              {language === 'en' ? 'Find the ' : 'Найдите '}
+              <span className="relative inline-block">
+                <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 dark:from-blue-400 dark:via-purple-400 dark:to-blue-400 bg-clip-text text-transparent">
+                  {language === 'en' ? 'Perfect Template' : 'идеальный шаблон'}
+                </span>
+                <motion.span
+                  initial={{ scaleX: 0 }}
+                  whileInView={{ scaleX: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.3 }}
+                  className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-purple-500 opacity-30 origin-left"
+                />
               </span>
             </h2>
             <p className="text-sm sm:text-base md:text-lg text-foreground/70 max-w-2xl mx-auto px-2">
               {language === 'en'
-                ? 'Filter by category, style, and features to find the perfect template for your needs'
-                : 'Фильтруйте по категории, стилю и функциям, чтобы найти идеальный шаблон'}
+                ? 'Choose by style or purpose'
+                : 'Выберите по стилю или назначению'}
             </p>
           </motion.div>
 
