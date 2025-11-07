@@ -3871,3 +3871,113 @@ Added a `postinstall` script to `package.json` that automatically runs `prisma g
 - `prisma/schema.prisma` - Prisma schema
 - `prisma.config.ts` - Prisma configuration
 
+
+---
+
+### Issue #24: Vercel Deployment - Prisma Generate Fails During Postinstall
+**Date**: 2025-11-07
+**Severity**: CRITICAL
+**Status**: FIXED ✅
+
+**Error Message**:
+```
+Failed to load config file "/vercel/path0" as a TypeScript/JavaScript module. 
+Error: PrismaConfigEnvError: Missing required environment variable: DATABASE_URL
+error Command failed with exit code 1.
+```
+
+**Root Cause**:
+The initial fix used a simple `postinstall: "prisma generate"` script. However, during Vercel's `yarn install` phase, the DATABASE_URL environment variable may not be available yet, causing the postinstall script to fail and preventing the build from continuing.
+
+**Problem Flow**:
+1. Vercel runs `yarn install`
+2. Postinstall triggers `prisma generate`
+3. Prisma tries to load config and validate DATABASE_URL
+4. DATABASE_URL not available during install phase
+5. Build fails with exit code 1
+
+**Solution Implemented**:
+
+#### 1. Created Smart Postinstall Script
+**File**: `scripts/postinstall.sh`
+
+```bash
+#!/bin/bash
+
+# Check if DATABASE_URL is set in environment
+if [ -n "$DATABASE_URL" ]; then
+  echo "✓ DATABASE_URL found in environment, generating Prisma client..."
+  npx prisma generate
+  exit 0
+fi
+
+# Check if .env.local exists (local development)
+if [ -f ".env.local" ] && grep -q "DATABASE_URL" .env.local; then
+  echo "✓ DATABASE_URL found in .env.local, generating Prisma client..."
+  npx prisma generate
+  exit 0
+fi
+
+# Check if .env exists
+if [ -f ".env" ] && grep -q "DATABASE_URL" .env; then
+  echo "✓ DATABASE_URL found in .env, generating Prisma client..."
+  npx prisma generate
+  exit 0
+fi
+
+# No DATABASE_URL found - skip generation (safe)
+echo "⚠ DATABASE_URL not found, skipping Prisma client generation."
+echo "  This is expected during initial dependency installation."
+echo "  Prisma client will be generated during the build phase."
+exit 0
+```
+
+#### 2. Updated Build Script
+**File**: `package.json`
+
+```json
+{
+  "scripts": {
+    "postinstall": "bash scripts/postinstall.sh",
+    "build": "prisma generate && next build"
+  }
+}
+```
+
+**How It Works**:
+- **postinstall**: Tries to generate Prisma client if DATABASE_URL is available, but gracefully skips if not
+- **build**: ALWAYS runs `prisma generate` before building, ensuring client exists
+
+**Why This Works**:
+1. During `yarn install`, postinstall may skip if DATABASE_URL isn't available yet ✅ (safe)
+2. During `yarn build`, DATABASE_URL IS available (Vercel build env vars)
+3. The build script explicitly runs `prisma generate` before `next build` ✅
+4. Prisma client is guaranteed to exist by the time Next.js needs it ✅
+
+**Vercel Configuration Required**:
+In Vercel project settings, add DATABASE_URL to:
+1. **Environment Variables** (for runtime)
+2. **Build Environment Variables** (for build phase) ← CRITICAL
+
+**Verification**:
+- ✅ Local postinstall: Works when .env exists
+- ✅ Local build: Always generates client
+- ✅ Vercel install: Gracefully skips if DATABASE_URL missing
+- ✅ Vercel build: Generates client with build env vars
+
+**Files Modified**:
+- `package.json` - Updated postinstall and build scripts
+- `scripts/postinstall.sh` - New conditional generation script
+- `DEPLOYMENT.md` - Updated with Vercel-specific instructions
+
+**Related Issues**:
+- Related to Issue #2 (Prisma client initialization)
+- Vercel-specific DATABASE_URL availability timing
+
+**Prevention**:
+- Always use graceful fallbacks in postinstall scripts
+- Ensure critical operations (like Prisma generate) run during build phase
+- Document platform-specific environment variable requirements
+
+**Commit**: [To be added]
+

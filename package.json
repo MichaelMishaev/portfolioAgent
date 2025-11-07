@@ -4,10 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack -p 3500",
-    "build": "next build",
+    "build": "prisma generate && next build",
     "start": "next start -p 3500",
     "lint": "next lint",
-    "postinstall": "prisma generate",
+    "postinstall": "bash scripts/postinstall.sh",
     "generate-previews": "tsx scripts/generate-previews.ts",
     "regenerate-service": "tsx scripts/regenerate-service-previews.ts",
     "regenerate-single": "tsx scripts/regenerate-single.ts",
