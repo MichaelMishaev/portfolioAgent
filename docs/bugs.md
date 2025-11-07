@@ -3768,3 +3768,68 @@ Created and executed an automated Node.js script (`fix-darkmode.js`) that:
 
 **Commit**: [To be added after commit]
 
+
+---
+
+### Build Errors Fixed - November 7, 2025
+
+#### Error 1: Prisma Client Not Initialized
+**Severity**: CRITICAL
+**Status**: FIXED ✅
+
+**Error Message**:
+```
+Error: @prisma/client did not initialize yet. Please run "prisma generate" and try to import it again.
+```
+
+**Fix**:
+```bash
+npx prisma generate
+```
+
+**Root Cause**: Prisma client was not generated after dependencies were installed or schema changes were made.
+
+**Prevention**: Add `postinstall` script to package.json to automatically run `prisma generate` after npm install.
+
+---
+
+#### Error 2: useSearchParams Missing Suspense Boundary
+**Severity**: CRITICAL
+**Status**: FIXED ✅
+
+**Location**: `/app/admin/discounts/page.tsx`
+
+**Error Message**:
+```
+⨯ useSearchParams() should be wrapped in a suspense boundary at page "/admin/discounts"
+```
+
+**Root Cause**: 
+Next.js 15 requires `useSearchParams()` to be wrapped in a Suspense boundary because it causes the component to render on the client side and can trigger dynamic rendering.
+
+**Fix Applied**:
+1. Imported `Suspense` from React
+2. Extracted component content to `DiscountCodesContent()`
+3. Wrapped it in a Suspense boundary in the default export:
+
+```tsx
+import { Suspense } from 'react';
+
+function DiscountCodesContent() {
+  const searchParams = useSearchParams();
+  // ... component logic
+}
+
+export default function DiscountCodesPage() {
+  return (
+    <Suspense fallback={<div className="flex items-center justify-center min-h-screen">Loading...</div>}>
+      <DiscountCodesContent />
+    </Suspense>
+  );
+}
+```
+
+**Related Documentation**: https://nextjs.org/docs/messages/missing-suspense-with-csr-bailout
+
+---
+

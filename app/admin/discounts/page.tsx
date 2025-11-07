@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, Suspense } from 'react';
 import { useAdminAuth } from '@/components/admin/admin-auth-provider';
 import { AdminSidebar } from '@/components/admin/admin-sidebar';
 import { DiscountCodesTable } from '@/components/admin/discount-codes-table';
@@ -17,7 +17,7 @@ import {
 import { Plus, Search, Filter } from 'lucide-react';
 import { useSearchParams } from 'next/navigation';
 
-export default function DiscountCodesPage() {
+function DiscountCodesContent() {
   const { isAuthenticated, apiKey } = useAdminAuth();
   const searchParams = useSearchParams();
   const [codes, setCodes] = useState<any[]>([]);
@@ -231,5 +231,13 @@ export default function DiscountCodesPage() {
         </div>
       </main>
     </div>
+  );
+}
+
+export default function DiscountCodesPage() {
+  return (
+    <Suspense fallback={<div className="flex items-center justify-center min-h-screen">Loading...</div>}>
+      <DiscountCodesContent />
+    </Suspense>
   );
 }
