@@ -3833,3 +3833,41 @@ export default function DiscountCodesPage() {
 
 ---
 
+
+## Prisma Client Generation Fix for Vercel
+
+### Issue
+Vercel deployment was failing with:
+```
+Error: @prisma/client did not initialize yet. Please run "prisma generate" and try to import it again.
+```
+
+### Root Cause
+The Prisma client needs to be generated during the build process. While it worked locally after running `npx prisma generate`, Vercel's build environment didn't have the generated client.
+
+### Solution
+Added a `postinstall` script to `package.json` that automatically runs `prisma generate` after dependencies are installed:
+
+```json
+{
+  "scripts": {
+    "postinstall": "prisma generate"
+  }
+}
+```
+
+### How It Works
+- When Vercel (or any deployment platform) runs `npm install` or `yarn install`
+- The `postinstall` script automatically executes after all dependencies are installed
+- Prisma client is generated before the build starts
+- Build succeeds with the properly initialized Prisma client
+
+### Verification
+✅ Local test: `npm run postinstall` - Works correctly
+✅ Generates client to `./node_modules/@prisma/client`
+
+### Related Files
+- `package.json` - Added postinstall script
+- `prisma/schema.prisma` - Prisma schema
+- `prisma.config.ts` - Prisma configuration
+

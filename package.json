@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start -p 3500",
     "lint": "next lint",
+    "postinstall": "prisma generate",
     "generate-previews": "tsx scripts/generate-previews.ts",
     "regenerate-service": "tsx scripts/regenerate-service-previews.ts",
     "regenerate-single": "tsx scripts/regenerate-single.ts",

@@ -4,6 +4,10 @@ import { calculateDiscount } from '@/lib/discount/calculator';
 import { sanitizeDiscountCode } from '@/lib/discount/validator';
 import { Prisma } from '@prisma/client';
 
+// Force dynamic rendering - never static
+export const dynamic = 'force-dynamic';
+export const runtime = 'nodejs';
+
 export async function POST(request: NextRequest) {
   try {
     // Parse request body

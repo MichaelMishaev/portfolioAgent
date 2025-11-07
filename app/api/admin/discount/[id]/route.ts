@@ -1,6 +1,10 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { prisma } from '@/lib/prisma';
 
+// Force dynamic rendering - never static
+export const dynamic = 'force-dynamic';
+export const runtime = 'nodejs';
+
 // Simple API key authentication
 function validateAdminAuth(request: NextRequest): boolean {
   const apiKey = request.headers.get('x-api-key');
