@@ -106,3 +106,5 @@ research/
 
 # API documentation with sensitive keys
 docs/apis/nanoBanana.md
+
+/lib/generated/prisma

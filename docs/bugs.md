@@ -3486,3 +3486,179 @@ Affected: 30 templates (tech-blog, online-business-*, product-pages-*, etc.)
 4. Mobile testing in both modes is critical
 5. Systematic issues require automated tooling
 
+
+
+## Discount System API Bugs - 2025-11-07
+
+### Bug #1: Foreign Key Constraint Violation in Purchase Creation
+**Severity**: High
+**Status**: Fixed
+
+**Description**:
+When creating purchases through `/api/discount/apply`, the endpoint was attempting to create Purchase records with mock user IDs (e.g., "test-user-1") that didn't exist in the users table, causing foreign key constraint violations.
+
+**Error Message**:
+```
+Foreign key constraint violated on the constraint: purchases_userId_fkey
+```
+
+**Root Cause**:
+Test scripts were using hardcoded mock user IDs instead of fetching actual user IDs from the database.
+
+**Fix**:
+1. Created `scripts/get-user-ids.ts` helper to fetch real user IDs from database
+2. Updated all test scripts to use actual user IDs from the database query
+3. Changed test script user references from "test-user-1" to actual CUID values (e.g., "cmhnm9at80001xgckgo1edrlt")
+
+**Files Modified**:
+- `scripts/get-user-ids.ts` (created)
+- `scripts/test-api.sh` (updated all userId references)
+- `scripts/test-checkout.sh` (updated all userId references)
+
+---
+
+### Bug #2: Prisma Relationship Name Mismatch in Checkout Endpoint
+**Severity**: High
+**Status**: Fixed
+
+**Description**:
+The checkout endpoint was trying to access `discountUsages` (plural) relationship on Purchase model, but the actual relationship name in Prisma schema was `discountUsage` (singular).
+
+**Error Message**:
+```
+Unknown field 'discountUsages' for include statement on model 'Purchase'. Available options are marked with ?.
+```
+
+**Root Cause**:
+Assumed plural relationship name without checking the Prisma schema. The Purchase-DiscountUsage relationship is one-to-one, not one-to-many.
+
+**Fix**:
+Changed `purchase.discountUsages[0]` to `purchase.discountUsage` and updated the include statement in the query.
+
+**Files Modified**:
+- `app/api/checkout/route.ts` (lines 103-113, 133-135)
+
+---
+
+### Bug #3: Invalid Nested Relationship in DiscountUsage Include
+**Severity**: Medium
+**Status**: Fixed
+
+**Description**:
+When fetching DiscountUsage with related DiscountCode, was using `code` as the relationship name instead of `discountCode`.
+
+**Error Message**:
+```
+Unknown field 'code' for include statement on model 'DiscountUsage'. Available options are marked with ?.
+```
+
+**Root Cause**:
+Inconsistent naming - the field is `codeId` and relationship is `discountCode` in the Prisma schema.
+
+**Fix**:
+Changed `include: { code: { ... } }` to `include: { discountCode: { ... } }` in checkout endpoint.
+
+**Files Modified**:
+- `app/api/checkout/route.ts` (line 105)
+
+---
+
+### Bug #4: Non-existent Field in Purchase Update
+**Severity**: High
+**Status**: Fixed
+
+**Description**:
+Checkout endpoint was trying to set `stripeSessionId` field on Purchase model, but this field doesn't exist in the Prisma schema.
+
+**Error Message**:
+```
+PrismaClientValidationError: Unknown argument 'stripeSessionId'
+```
+
+**Root Cause**:
+Assumed field existed for Stripe session tracking without verifying against schema. Schema only has `stripePaymentIntentId`, `stripeCustomerId`, and `stripeInvoiceId`.
+
+**Fix**:
+Temporarily used `stripeInvoiceId` field to store mock checkout session ID. Added TODO comment to add proper `stripeSessionId` field to schema for full Stripe integration.
+
+**Files Modified**:
+- `app/api/checkout/route.ts` (line 179 - changed stripeSessionId to stripeInvoiceId with comment)
+
+---
+
+### Bug #5: Invalid AuditAction Enum Value
+**Severity**: Medium
+**Status**: Fixed
+
+**Description**:
+Audit log creation was using 'CHECKOUT_INITIATED' action, which doesn't exist in the AuditAction enum.
+
+**Error Message**:
+```
+Invalid value for argument 'action'. Expected AuditAction.
+```
+
+**Root Cause**:
+Used custom action value without checking available enum values. AuditAction enum only has: CREATED, UPDATED, ACTIVATED, DEACTIVATED, DELETED, USAGE_INCREMENTED, USAGE_DECREMENTED, MANUAL_ADJUSTMENT, EXPIRED.
+
+**Fix**:
+Temporarily used 'MANUAL_ADJUSTMENT' action with descriptive reason field. Added TODO comment to add CHECKOUT_INITIATED to AuditAction enum.
+
+**Files Modified**:
+- `app/api/checkout/route.ts` (line 189 - changed to MANUAL_ADJUSTMENT with TODO)
+
+---
+
+### Bug #6: Invalid Field in DiscountAuditLog Creation
+**Severity**: Medium  
+**Status**: Fixed
+
+**Description**:
+Audit log creation was trying to use `metadata` field which doesn't exist in DiscountAuditLog model.
+
+**Error Message**:
+```
+Unknown argument 'metadata'. Available options are marked with ?.
+```
+
+**Root Cause**:
+Assumed metadata field existed without checking schema. DiscountAuditLog has `reason` field for contextual information, not `metadata`.
+
+**Fix**:
+Changed from structured metadata object to string-based `reason` field with formatted message containing all relevant information.
+
+**Files Modified**:
+- `app/api/checkout/route.ts` (line 194 - changed metadata to reason with formatted string)
+
+---
+
+## Testing Results
+
+### Automation Test Suite
+- **Total Tests**: 11
+- **Passed**: 10 ✅
+- **Failed**: 1 ❌
+- **Success Rate**: 90.9%
+
+### Test Coverage
+✅ Discount code validation (valid, invalid, expired, inactive)
+✅ Discount application with price calculation
+✅ Duplicate usage prevention
+✅ Minimum purchase validation
+✅ Edge case validation (missing fields, negative amounts, price mismatch)
+⚠️ Checkout flow (partial - one test failing due to code reuse)
+
+### Files Created
+- `tests/api/discount.test.ts` - Comprehensive API test suite
+- `tests/run-tests.sh` - Test runner script
+- Added `npm run test:api` and `npm run test:api:watch` commands
+
+---
+
+## Next Steps
+1. Add `CHECKOUT_INITIATED` to AuditAction enum in schema
+2. Add `stripeSessionId` field to Purchase model
+3. Improve test data management (prevent code reuse in tests)
+4. Build admin CRUD endpoints for discount code management
+
+

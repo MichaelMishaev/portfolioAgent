@@ -4,8 +4,10 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useI18n } from "@/lib/i18n-context";
 import { FiX, FiShoppingCart } from "react-icons/fi";
+import { FaTelegramPlane } from "react-icons/fa";
 import { getTemplateById } from "@/lib/template-registry";
 import { useState, useEffect } from "react";
+import { TELEGRAM_CONTACT_LINK } from "@/components/shared/contact-us-floating-button";
 
 interface TemplateLayoutProps {
   children: React.ReactNode;
@@ -52,18 +54,29 @@ export function TemplateLayout({ children }: TemplateLayoutProps) {
               </div>
             </div>
 
-            {/* Right: Buy Now Button - ThemeForest Green */}
-            <Link
-              href={`/checkout/${templateId}`}
-              className="flex-shrink-0 flex items-center gap-1.5 sm:gap-2 px-3 sm:px-5 py-2 sm:py-2.5 bg-[#82b541] hover:bg-[#6fa32d] text-white text-sm sm:text-base font-semibold rounded-md shadow-md hover:shadow-lg transition-all duration-200"
-            >
-              <FiShoppingCart className="w-4 h-4 sm:w-5 sm:h-5" />
-              <span>
-                {language === 'ru'
-                  ? `Купить - $${templateData.price}`
-                  : `Buy Now - $${templateData.price}`}
-              </span>
-            </Link>
+            {/* Right: Contact + Buy Buttons */}
+            <div className="flex items-center gap-2">
+              <a
+                href={TELEGRAM_CONTACT_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-shrink-0 flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-2 sm:py-2.5 bg-[#229ED9] hover:bg-[#1c8cbf] text-white text-sm sm:text-base font-semibold rounded-md shadow-md hover:shadow-lg transition-all duration-200"
+              >
+                <FaTelegramPlane className="w-4 h-4 sm:w-5 sm:h-5" />
+                <span>{language === 'ru' ? 'Связаться' : 'Contact Us'}</span>
+              </a>
+              <Link
+                href={`/checkout/${templateId}`}
+                className="flex-shrink-0 flex items-center gap-1.5 sm:gap-2 px-3 sm:px-5 py-2 sm:py-2.5 bg-[#82b541] hover:bg-[#6fa32d] text-white text-sm sm:text-base font-semibold rounded-md shadow-md hover:shadow-lg transition-all duration-200"
+              >
+                <FiShoppingCart className="w-4 h-4 sm:w-5 sm:h-5" />
+                <span>
+                  {language === 'ru'
+                    ? `Купить - $${templateData.price}`
+                    : `Buy Now - $${templateData.price}`}
+                </span>
+              </Link>
+            </div>
           </div>
         </div>
       )}

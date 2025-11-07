@@ -8,11 +8,14 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Badge } from "@/components/ui/badge";
+import { Input } from "@/components/ui/input";
 import {
   FiCheck,
   FiChevronLeft,
   FiShoppingCart,
-  FiInfo
+  FiInfo,
+  FiTag,
+  FiX
 } from "react-icons/fi";
 import { useI18n } from "@/lib/i18n-context";
 import { useRouter } from "next/navigation";
@@ -26,8 +29,23 @@ export function CheckoutView({ template }: CheckoutViewProps) {
   const router = useRouter();
   const [includeContentMaker, setIncludeContentMaker] = useState(false);
 
+  // Discount code state
+  const [discountCode, setDiscountCode] = useState("");
+  const [appliedDiscount, setAppliedDiscount] = useState<any>(null);
+  const [discountError, setDiscountError] = useState("");
+  const [isValidatingCode, setIsValidatingCode] = useState(false);
+
   const contentMakerPrice = 39;
-  const totalPrice = template.price + (includeContentMaker ? contentMakerPrice : 0);
+  const basePrice = template.price + (includeContentMaker ? contentMakerPrice : 0);
+
+  // Calculate discount
+  const discountAmount = appliedDiscount
+    ? appliedDiscount.discountType === 'PERCENTAGE'
+      ? (basePrice * appliedDiscount.discountValue) / 100
+      : appliedDiscount.discountValue
+    : 0;
+
+  const totalPrice = basePrice - discountAmount;
 
   const t = {
     en: {
@@ -48,6 +66,14 @@ export function CheckoutView({ template }: CheckoutViewProps) {
       close: "Close",
       whatsIncluded: "What's Included",
       secureCheckout: "Secure Checkout",
+      discountCode: "Discount Code",
+      discountCodePlaceholder: "Enter discount code",
+      applyCode: "Apply",
+      validatingCode: "Validating...",
+      removeCode: "Remove",
+      discountApplied: "Discount applied!",
+      subtotal: "Subtotal",
+      discount: "Discount",
     },
     ru: {
       title: "Оформление заказа",
@@ -67,12 +93,51 @@ export function CheckoutView({ template }: CheckoutViewProps) {
       close: "Закрыть",
       whatsIncluded: "Что включено",
       secureCheckout: "Безопасная оплата",
+      discountCode: "Код скидки",
+      discountCodePlaceholder: "Введите код скидки",
+      applyCode: "Применить",
+      validatingCode: "Проверка...",
+      removeCode: "Удалить",
+      discountApplied: "Скидка применена!",
+      subtotal: "Подытог",
+      discount: "Скидка",
     }
   };
 
   const text = language === 'ru' ? t.ru : t.en;
   const [showPaymentModal, setShowPaymentModal] = useState(false);
   const [isProcessing, setIsProcessing] = useState(false);
+
+  const handleApplyDiscount = async () => {
+    if (!discountCode.trim()) return;
+
+    setIsValidatingCode(true);
+    setDiscountError("");
+
+    try {
+      const response = await fetch(`/api/discount/validate?code=${discountCode.toUpperCase()}`);
+      const data = await response.json();
+
+      if (data.valid) {
+        setAppliedDiscount(data.code);
+        setDiscountError("");
+      } else {
+        setDiscountError(data.message || "Invalid discount code");
+        setAppliedDiscount(null);
+      }
+    } catch (error) {
+      setDiscountError("Failed to validate code");
+      setAppliedDiscount(null);
+    } finally {
+      setIsValidatingCode(false);
+    }
+  };
+
+  const handleRemoveDiscount = () => {
+    setAppliedDiscount(null);
+    setDiscountCode("");
+    setDiscountError("");
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
@@ -145,6 +210,86 @@ export function CheckoutView({ template }: CheckoutViewProps) {
                     </div>
                   </div>
                 </div>
+              </Card>
+
+              {/* Discount Code Section */}
+              <Card className="p-4 sm:p-6">
+                <h2 className="text-lg sm:text-xl font-bold mb-4 flex items-center gap-2">
+                  <FiTag className="w-4 h-4 sm:w-5 sm:h-5" />
+                  {text.discountCode}
+                </h2>
+
+                {!appliedDiscount ? (
+                  <div className="space-y-3">
+                    <div className="flex gap-2">
+                      <Input
+                        value={discountCode}
+                        onChange={(e) => setDiscountCode(e.target.value.toUpperCase())}
+                        placeholder={text.discountCodePlaceholder}
+                        className="flex-1 uppercase"
+                        disabled={isValidatingCode}
+                        onKeyDown={(e) => {
+                          if (e.key === 'Enter') {
+                            handleApplyDiscount();
+                          }
+                        }}
+                      />
+                      <Button
+                        onClick={handleApplyDiscount}
+                        disabled={!discountCode.trim() || isValidatingCode}
+                        variant="outline"
+                        className="shrink-0"
+                      >
+                        {isValidatingCode ? text.validatingCode : text.applyCode}
+                      </Button>
+                    </div>
+
+                    {discountError && (
+                      <div className="text-sm text-destructive flex items-center gap-2">
+                        <FiX className="w-4 h-4" />
+                        {discountError}
+                      </div>
+                    )}
+                  </div>
+                ) : (
+                  <div className="bg-green-50 dark:bg-green-950 border-2 border-green-500 rounded-lg p-4">
+                    <div className="flex items-start justify-between gap-3">
+                      <div className="flex-1">
+                        <div className="flex items-center gap-2 mb-2">
+                          <FiCheck className="w-5 h-5 text-green-600 dark:text-green-400" />
+                          <span className="font-semibold text-green-900 dark:text-green-100">
+                            {text.discountApplied}
+                          </span>
+                        </div>
+                        <div className="space-y-1">
+                          <div className="text-sm">
+                            <span className="font-mono font-bold text-green-900 dark:text-green-100">
+                              {appliedDiscount.code}
+                            </span>
+                          </div>
+                          {appliedDiscount.description && (
+                            <div className="text-sm text-green-700 dark:text-green-300">
+                              {appliedDiscount.description}
+                            </div>
+                          )}
+                          <div className="text-lg font-bold text-green-600 dark:text-green-400">
+                            -{appliedDiscount.discountType === 'PERCENTAGE'
+                              ? `${appliedDiscount.discountValue}%`
+                              : `$${appliedDiscount.discountValue}`}
+                          </div>
+                        </div>
+                      </div>
+                      <Button
+                        variant="ghost"
+                        size="sm"
+                        onClick={handleRemoveDiscount}
+                        className="text-green-700 hover:text-green-900 dark:text-green-300 dark:hover:text-green-100"
+                      >
+                        <FiX className="w-4 h-4" />
+                      </Button>
+                    </div>
+                  </div>
+                )}
               </Card>
 
               {/* Optional Add-Ons */}
@@ -223,9 +368,25 @@ export function CheckoutView({ template }: CheckoutViewProps) {
                     </div>
                   )}
 
+                  {appliedDiscount && (
+                    <>
+                      <div className="flex justify-between text-xs sm:text-sm pt-2 border-t">
+                        <span className="text-muted-foreground">{text.subtotal}</span>
+                        <span className="font-medium">${basePrice}</span>
+                      </div>
+                      <div className="flex justify-between text-xs sm:text-sm text-green-600 dark:text-green-400">
+                        <span className="flex items-center gap-1">
+                          <FiTag className="w-3 h-3" />
+                          {text.discount} ({appliedDiscount.code})
+                        </span>
+                        <span className="font-medium">-${discountAmount.toFixed(2)}</span>
+                      </div>
+                    </>
+                  )}
+
                   <div className="border-t pt-3 flex justify-between text-lg sm:text-xl font-bold">
                     <span>{text.total}</span>
-                    <span className="text-green-600 dark:text-green-400">${totalPrice}</span>
+                    <span className="text-green-600 dark:text-green-400">${totalPrice.toFixed(2)}</span>
                   </div>
                 </div>
 

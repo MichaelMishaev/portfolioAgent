@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { I18nProvider } from "@/lib/i18n-context";
+import { ContactUsFloatingButton } from "@/components/shared/contact-us-floating-button";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -30,6 +31,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <I18nProvider>
+            <ContactUsFloatingButton />
             {children}
           </I18nProvider>
         </ThemeProvider>

@@ -16,7 +16,9 @@ import {
   FiChevronLeft,
   FiChevronRight
 } from "react-icons/fi";
+import { FaTelegramPlane } from "react-icons/fa";
 import { useI18n } from "@/lib/i18n-context";
+import { TELEGRAM_CONTACT_LINK } from "@/components/shared/contact-us-floating-button";
 
 interface TemplateDetailViewProps {
   template: TemplateConfig;
@@ -173,6 +175,22 @@ export function TemplateDetailView({ template }: TemplateDetailViewProps) {
                   <FiEdit3 className="w-5 h-5" />
                   <span>{language === 'en' ? 'Try Builder' : 'Попробовать Билдер'}</span>
                 </Link>
+              </Button>
+
+              <Button
+                asChild
+                size="lg"
+                className="h-14 text-base font-semibold bg-[#229ED9] hover:bg-[#1c8cbf] text-white shadow-lg hover:shadow-xl transition-all duration-200 rounded-xl"
+              >
+                <a
+                  href={TELEGRAM_CONTACT_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2.5"
+                >
+                  <FaTelegramPlane className="w-5 h-5" />
+                  <span>{language === 'en' ? 'Contact Us' : 'Связаться'}</span>
+                </a>
               </Button>
 
               <Button
@@ -448,6 +466,21 @@ export function TemplateDetailView({ template }: TemplateDetailViewProps) {
       {/* Sticky Bottom Bar (Mobile) */}
       <div className="fixed bottom-0 left-0 right-0 z-50 lg:hidden bg-background/95 backdrop-blur-sm border-t shadow-2xl">
         <div className="p-3">
+          <Button
+            asChild
+            className="mb-3 w-full h-11 bg-[#229ED9] hover:bg-[#1c8cbf] text-white font-semibold shadow-md hover:shadow-xl rounded-lg"
+          >
+            <a
+              href={TELEGRAM_CONTACT_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-2"
+            >
+              <FaTelegramPlane className="w-4 h-4" />
+              <span>{language === 'en' ? 'Contact Us' : 'Связаться'}</span>
+            </a>
+          </Button>
+
           {/* Price and Buy Button Row */}
           <div className="flex items-center justify-between gap-3 mb-3">
             <div>

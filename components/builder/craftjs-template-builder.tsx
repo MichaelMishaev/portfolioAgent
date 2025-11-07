@@ -18,7 +18,7 @@ import {
 } from "@/components/ui/alert-dialog";
 import Link from "next/link";
 import { ArrowLeft, Eye, Trash2, Settings, ImageIcon, Send, Plus, FileText } from "lucide-react";
-import { FaWhatsapp } from "react-icons/fa";
+import { FaTelegramPlane } from "react-icons/fa";
 import type { TemplateConfig } from "@/lib/template-registry";
 import { TooltipHint } from "@/components/ui/tooltip-hint";
 import { OnboardingTour, TourStep } from "@/components/onboarding-tour";
@@ -26,6 +26,7 @@ import { SendToTelegramModal } from "@/components/send-to-telegram-modal";
 import { SendToWhatsAppModal } from "@/components/send-to-whatsapp-modal";
 import { useI18n } from "@/lib/i18n-context";
 import { BuilderTutorialAnimation } from "@/components/builder-tutorial-animation";
+import { TELEGRAM_CONTACT_LINK } from "@/components/shared/contact-us-floating-button";
 
 // Import touch polyfill for mobile drag & drop support
 import "drag-drop-touch";
@@ -2721,6 +2722,16 @@ export function CraftJSTemplateBuilder({ template }: { template: TemplateConfig 
             <Eye className="w-4 h-4" />
             <span className="hidden sm:inline">{language === 'ru' ? 'Демо' : 'Live Demo'}</span>
           </Link>
+
+          {/* Contact Us Button */}
+          <Button
+            onClick={() => window.open(TELEGRAM_CONTACT_LINK, '_blank', 'noopener,noreferrer')}
+            className="flex items-center gap-2 bg-[#229ED9] hover:bg-[#1c8cbf] text-white px-4 sm:px-6 py-2.5 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-105 active:scale-95"
+          >
+            <FaTelegramPlane className="w-4 h-4" />
+            <span className="hidden sm:inline">{language === 'ru' ? 'Связаться' : 'Contact Us'}</span>
+            <span className="sm:hidden">{language === 'ru' ? 'Связь' : 'Contact'}</span>
+          </Button>
 
           {/* Buy Now Button - ThemeForest Green */}
           <Button
