@@ -19,6 +19,7 @@ import {
   FiX,
 } from "react-icons/fi";
 import Link from "next/link";
+import { useTheme } from "next-themes";
 
 const serviceData = {
   name: "PIXEL PERFECT AGENCY",
@@ -172,6 +173,8 @@ const serviceData = {
 
 export function AgencyServiceTemplate() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { theme } = useTheme();
+  const darkMode = theme === 'dark';
 
   return (
     <div className="min-h-screen overflow-x-hidden max-w-full bg-white text-gray-900">

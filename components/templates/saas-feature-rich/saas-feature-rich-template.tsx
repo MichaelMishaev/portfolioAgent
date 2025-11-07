@@ -21,11 +21,14 @@ import { ThemeToggle } from "@/components/theme-toggle";
 import { LanguageToggle } from "@/components/language-toggle";
 import Link from "next/link";
 import { useI18n } from "@/lib/i18n-context";
+import { useTheme } from "next-themes";
 
 export function SaasFeatureRichTemplate() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [email, setEmail] = useState("");
   const { tt } = useI18n();
+  const { theme } = useTheme();
+  const darkMode = theme === 'dark';
   const data = tt?.saasFeatureRich;
 
   if (!data) {

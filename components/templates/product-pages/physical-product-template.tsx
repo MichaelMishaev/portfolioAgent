@@ -11,6 +11,7 @@ import { FiCheck, FiStar, FiTruck, FiShield, FiRefreshCw, FiBox ,
   FiX,
 } from "react-icons/fi";
 import Link from "next/link";
+import { useTheme } from "next-themes";
 
 const productData = {
   name: "AirWave Pro",
@@ -205,6 +206,8 @@ export function PhysicalProductTemplate() {
   const [selectedColor, setSelectedColor] = useState(productData.colors[0]);  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const [selectedImage, setSelectedImage] = useState(0);
+  const { theme } = useTheme();
+  const darkMode = theme === 'dark';
 
   return (
     <div className={`min-h-screen overflow-x-hidden max-w-full bg-white dark:bg-black ${darkMode ? 'text-white' : 'text-black'}`}>

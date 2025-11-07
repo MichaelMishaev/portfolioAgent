@@ -10,9 +10,12 @@ import { LanguageToggle } from "@/components/language-toggle";
 import Link from "next/link";
 import { useI18n } from "@/lib/i18n-context";
 import { FiCheck, FiZap, FiShield, FiTrendingUp, FiUsers, FiArrowRight, FiStar, FiSlack, FiGithub, FiChrome, FiMail, FiLinkedin, FiTwitter, FiMessageCircle, FiClock, FiTarget } from "react-icons/fi";
+import { useTheme } from "next-themes";
 
 export function OnlineBusinessSaasTemplate() {
   const { tt } = useI18n();
+  const { theme } = useTheme();
+  const darkMode = theme === 'dark';
   const data = tt.onlineBusinessSaas || {};
 
   return (

@@ -27,12 +27,15 @@ import { LanguageToggle } from "@/components/language-toggle";
 import Link from "next/link";
 import { useI18n } from "@/lib/i18n-context";
 import { useState } from "react";
+import { useTheme } from "next-themes";
 
 export function OnlineBusinessCoachTemplate() {
   const { tt } = useI18n();
   const data = tt.onlineBusiness || {};
   const [email, setEmail] = useState("");
   const [formStep, setFormStep] = useState(1);
+  const { theme } = useTheme();
+  const darkMode = theme === 'dark';
 
   return (
     <div className="min-h-screen overflow-x-hidden max-w-full bg-gradient-to-br from-amber-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">

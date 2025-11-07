@@ -25,6 +25,7 @@ import Link from "next/link";
 import { useI18n } from "@/lib/i18n-context";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { LanguageToggle } from "@/components/language-toggle";
+import { useTheme } from "next-themes";
 
 // 7 Transformational Archetypes
 const archetypes = [
@@ -157,6 +158,8 @@ const programDetails = {
 export function ArchetypesEditorialTemplate() {
   const { tt } = useI18n();
   const [email, setEmail] = useState("");
+  const { theme } = useTheme();
+  const darkMode = theme === 'dark';
 
   return (
     <div className="min-h-screen bg-white dark:bg-slate-950 overflow-x-hidden max-w-full">

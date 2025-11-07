@@ -27,10 +27,13 @@ import Link from "next/link";
 import { useI18n } from "@/lib/i18n-context";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { LanguageToggle } from "@/components/language-toggle";
+import { useTheme } from "next-themes";
 
 export function ServiceMarketplaceTemplate() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { tt } = useI18n();
+  const { theme } = useTheme();
+  const darkMode = theme === 'dark';
   const portfolioData = tt.serviceMarketplace || {};
 
   return (

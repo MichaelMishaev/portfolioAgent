@@ -30,6 +30,7 @@ import {
   FiX,
 } from "react-icons/fi";
 import Link from "next/link";
+import { useTheme } from "next-themes";
 
 const magazineData = {
   featured: [
@@ -305,6 +306,8 @@ const magazineData = {
 export function MagazineBlogTemplate() {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { theme } = useTheme();
+  const darkMode = theme === 'dark';
 
   return (
     <div className="min-h-screen bg-white overflow-x-hidden max-w-full">

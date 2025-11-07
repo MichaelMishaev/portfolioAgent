@@ -12,6 +12,7 @@ import { FiCheck, FiMusic, FiHeadphones, FiZap, FiSettings, FiTrendingUp, FiRadi
 } from "react-icons/fi";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { useTheme } from "next-themes";
 
 const productData = {
   name: "Aurora Pro Headphones",
@@ -175,6 +176,8 @@ const productData = {
 
 export function AudioProductTemplate() {
   const [selectedColor, setSelectedColor] = useState(productData.colors[0]);  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { theme } = useTheme();
+  const darkMode = theme === 'dark';
 
 
   return (

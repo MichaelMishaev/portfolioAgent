@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { FiMail, FiCalendar, FiClock , FiMenu, FiX } from "react-icons/fi";
 import Link from "next/link";
+import { useTheme } from "next-themes";
 
 const portfolioData = {
   name: "Olivia Chen",
@@ -113,6 +114,8 @@ const portfolioData = {
 
 export function TextHeavyTemplate() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { theme } = useTheme();
+  const darkMode = theme === 'dark';
 return (
     <div className="min-h-screen overflow-x-hidden max-w-full bg-background">
       {/* Navigation */}

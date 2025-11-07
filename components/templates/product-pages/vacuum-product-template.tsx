@@ -12,6 +12,7 @@ import { FiCheck, FiZap, FiWind, FiBattery, FiActivity, FiAward, FiTrendingUp, F
 } from "react-icons/fi";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { useTheme } from "next-themes";
 
 const productData = {
   name: "V20 Quantum Vacuum",
@@ -202,6 +203,8 @@ export function VacuumProductTemplate() {
   const [selectedMode, setSelectedMode] = useState(productData.modes[1]);  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const [selectedColor, setSelectedColor] = useState(productData.colors[0]);
+  const { theme } = useTheme();
+  const darkMode = theme === 'dark';
 
   return (
     <div className="min-h-screen overflow-x-hidden max-w-full bg-white dark:bg-gray-900">

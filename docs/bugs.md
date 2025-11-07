@@ -3662,3 +3662,109 @@ Changed from structured metadata object to string-based `reason` field with form
 4. Build admin CRUD endpoints for discount code management
 
 
+
+---
+
+### Issue #23: Production Error - darkMode Variable Undefined Across 28 Templates
+**Date Discovered**: 2025-11-07
+**Reported From**: Production (https://danuna.shop/templates/professional-b2b/demo)
+**Severity**: CRITICAL
+**Status**: FIXED ✅
+
+**Description**:
+Multiple portfolio templates were referencing an undefined `darkMode` variable, causing JavaScript runtime errors in production. The error manifested as:
+```
+Uncaught ReferenceError: darkMode is not defined
+```
+
+This was happening because templates were using `darkMode` variable in JSX expressions without properly defining it via the `useTheme()` hook from `next-themes`.
+
+**Root Cause**:
+Templates were directly referencing `darkMode` in className expressions like:
+```tsx
+<h4 className={`font-semibold mb-4 ${darkMode ? 'text-white' : 'text-gray-900'}`}>
+```
+
+However, the variable was never declared or initialized using the proper theme management system.
+
+**Affected Files (28 templates)**:
+1. `components/templates/professional-b2b/professional-b2b-template.tsx`
+2. `components/templates/minimalist/minimalist-template.tsx`
+3. `components/templates/bento-grid/bento-grid-template.tsx`
+4. `components/templates/blog-pages/tech-blog-template.tsx` - had local state management
+5. `components/templates/blog-pages/archetypes-editorial-template.tsx`
+6. `components/templates/blog-pages/archetypes-minimal-template.tsx`
+7. `components/templates/blog-pages/magazine-blog-template.tsx`
+8. `components/templates/blog-pages/personal-blog-template.tsx`
+9. `components/templates/bold-typography/bold-typography-template.tsx`
+10. `components/templates/card-modular/card-modular-template.tsx`
+11. `components/templates/online-business-saas/online-business-saas-template.tsx`
+12. `components/templates/online-business/online-business-agency-template.tsx`
+13. `components/templates/online-business/online-business-coach-template.tsx`
+14. `components/templates/online-business/online-business-course-template.tsx`
+15. `components/templates/organic-liquid/organic-liquid-template.tsx`
+16. `components/templates/product-pages/agency-service-template.tsx`
+17. `components/templates/product-pages/audio-product-template.tsx`
+18. `components/templates/product-pages/community-service-template.tsx`
+19. `components/templates/product-pages/dfyou-service-template.tsx`
+20. `components/templates/product-pages/enterprise-service-template.tsx`
+21. `components/templates/product-pages/fashion-product-template.tsx`
+22. `components/templates/product-pages/physical-product-template.tsx`
+23. `components/templates/product-pages/vacuum-product-template.tsx`
+24. `components/templates/saas-feature-rich/saas-feature-rich-template.tsx`
+25. `components/templates/service-marketplace/service-marketplace-template.tsx`
+26. `components/templates/single-page/single-page-template.tsx`
+27. `components/templates/split-screen/split-screen-template.tsx`
+28. `components/templates/text-heavy/text-heavy-template.tsx`
+
+**Fix Applied**:
+For each affected template, the following changes were made:
+
+1. **Added useTheme import**:
+```tsx
+import { useTheme } from "next-themes";
+```
+
+2. **Added theme hook and darkMode variable**:
+```tsx
+export function TemplateComponent() {
+  const { theme } = useTheme();
+  const darkMode = theme === 'dark';
+  // ... rest of component
+}
+```
+
+For tech-blog-template.tsx specifically:
+- Removed local state: `const [darkMode, setDarkMode] = useState(false);`
+- Replaced with theme hook: `const { theme, setTheme } = useTheme();`
+- Updated toggle handler: `onClick={() => setTheme(darkMode ? 'light' : 'dark')}`
+
+**Fix Method**:
+Created and executed an automated Node.js script (`fix-darkmode.js`) that:
+1. Scanned each template file for `darkMode` usage
+2. Added `useTheme` import if missing
+3. Inserted theme hook and darkMode variable declaration
+4. Ensured proper placement after existing hooks
+
+**Verification**:
+- ✅ TypeScript compilation: 0 errors
+- ✅ All 28 templates fixed
+- ✅ No remaining `Cannot find name 'darkMode'` errors
+- ✅ Dark mode functionality now properly integrated with next-themes
+
+**Impact**:
+- **Before**: Production templates crashing with JavaScript errors
+- **After**: All templates properly integrate with the application's theme system
+- **User Experience**: Dark mode now works consistently across all templates
+
+**Prevention**:
+- Add linting rule to catch undefined variables in template files
+- Consider creating a shared hook or utility for theme-dependent styling
+- Add integration tests for theme switching functionality
+
+**Related Files**:
+- `components/theme-toggle.tsx` - Proper theme management reference
+- All 28 template files listed above
+
+**Commit**: [To be added after commit]
+

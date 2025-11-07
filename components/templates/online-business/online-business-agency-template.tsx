@@ -27,11 +27,14 @@ import { LanguageToggle } from "@/components/language-toggle";
 import Link from "next/link";
 import { useI18n } from "@/lib/i18n-context";
 import { useState } from "react";
+import { useTheme } from "next-themes";
 
 export function OnlineBusinessAgencyTemplate() {
   const { tt } = useI18n();
   const data = tt.onlineBusinessAgency || {};
   const [selectedService, setSelectedService] = useState(0);
+  const { theme } = useTheme();
+  const darkMode = theme === 'dark';
 
   const services = [
     {

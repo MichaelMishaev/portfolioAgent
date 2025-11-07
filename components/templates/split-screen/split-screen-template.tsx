@@ -6,6 +6,7 @@ import { FadeIn } from "@/components/animations/fade-in";
 import { Button } from "@/components/ui/button";
 import { FiMail, FiArrowRight, FiChevronLeft, FiChevronRight , FiMenu, FiX } from "react-icons/fi";
 import Link from "next/link";
+import { useTheme } from "next-themes";
 
 const portfolioData = {
   name: "David Kim",
@@ -237,6 +238,8 @@ export function SplitScreenTemplate() {
   const [activeProject, setActiveProject] = useState(0);  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const [direction, setDirection] = useState(0);
+  const { theme } = useTheme();
+  const darkMode = theme === 'dark';
 
   const nextProject = () => {
     setDirection(1);

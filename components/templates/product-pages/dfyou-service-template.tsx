@@ -19,6 +19,7 @@ import {
   FiX,
 } from "react-icons/fi";
 import Link from "next/link";
+import { useTheme } from "next-themes";
 
 const serviceData = {
   name: "DESIGN ON TAP",
@@ -275,6 +276,8 @@ export function DFYouServiceTemplate() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const [selectedCategory, setSelectedCategory] = useState("All");
+  const { theme } = useTheme();
+  const darkMode = theme === 'dark';
 
   const filteredProjects =
     selectedCategory === "All"

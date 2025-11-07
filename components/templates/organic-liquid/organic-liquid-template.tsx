@@ -10,6 +10,7 @@ import { FiMail, FiHeart, FiSun, FiWind ,
   FiX,
 } from "react-icons/fi";
 import Link from "next/link";
+import { useTheme } from "next-themes";
 
 const portfolioData = {
   name: "Willow Hayes",
@@ -81,6 +82,8 @@ const portfolioData = {
 
 export function OrganicLiquidTemplate() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { theme } = useTheme();
+  const darkMode = theme === 'dark';
 return (
     <div className="min-h-screen overflow-x-hidden max-w-full bg-gradient-to-br from-amber-50 via-rose-50 to-teal-50 dark:from-gray-900 dark:via-purple-900 dark:to-gray-900 overflow-hidden">
       {/* Navigation */}

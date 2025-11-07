@@ -36,6 +36,7 @@ import {
   FiLinkedin,
 } from "react-icons/fi";
 import Link from "next/link";
+import { useTheme } from "next-themes";
 
 const techBlogData = {
   hero: {
@@ -290,7 +291,8 @@ const techBlogData = {
 };
 
 export function TechBlogTemplate() {
-  const [darkMode, setDarkMode] = useState(false);
+  const { theme, setTheme } = useTheme();
+  const darkMode = theme === 'dark';
   const [scrollProgress, setScrollProgress] = useState(0);
 
   useEffect(() => {
@@ -339,7 +341,7 @@ export function TechBlogTemplate() {
                 <FiSearch className="w-5 h-5" />
               </button>
               <button
-                onClick={() => setDarkMode(!darkMode)}
+                onClick={() => setTheme(darkMode ? 'light' : 'dark')}
                 aria-label={darkMode ? "Switch to light mode" : "Switch to dark mode"}
                 className={`p-2 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none ${darkMode ? 'hover:bg-gray-800' : 'hover:bg-gray-100'} transition-colors`}
               >

@@ -11,6 +11,7 @@ import { FiCheck, FiHeart, FiTruck, FiRefreshCw, FiPackage, FiFeather ,
   FiX,
 } from "react-icons/fi";
 import Link from "next/link";
+import { useTheme } from "next-themes";
 
 const productData = {
   name: "URBAN STRIDE SNEAKERS",
@@ -169,6 +170,8 @@ export function FashionProductTemplate() {
   const [selectedColor, setSelectedColor] = useState(productData.colors[0]);
   const [selectedSize, setSelectedSize] = useState(productData.sizes[2]);
   const [isWishlisted, setIsWishlisted] = useState(false);
+  const { theme } = useTheme();
+  const darkMode = theme === 'dark';
 
   return (
     <div className="min-h-screen overflow-x-hidden max-w-full bg-stone-50 text-stone-900">

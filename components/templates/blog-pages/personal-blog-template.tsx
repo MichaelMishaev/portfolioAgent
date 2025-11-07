@@ -28,6 +28,7 @@ import {
   FiBookOpen,
 } from "react-icons/fi";
 import Link from "next/link";
+import { useTheme } from "next-themes";
 
 const blogData = {
   author: {
@@ -263,7 +264,9 @@ const blogData = {
   ],
 };
 
-export function PersonalBlogTemplate() {
+export function PersonalBlogTemplate() {  const { theme } = useTheme();
+  const darkMode = theme === 'dark';
+
   return (
     <div className="min-h-screen overflow-x-hidden max-w-full bg-gray-50">
       {/* Header */}

@@ -25,12 +25,14 @@ import { useI18n } from "@/lib/i18n-context";
 import { placeholderImages } from "@/lib/placeholder-images";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { useTheme } from "next-themes";
 
 export function ProfessionalB2bTemplate() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const { tt } = useI18n();
   const data = tt?.professionalB2b;
+  const { theme } = useTheme();
 
   const { scrollYProgress } = useScroll();
   const y = useTransform(scrollYProgress, [0, 1], [0, -200]);
@@ -336,7 +338,7 @@ export function ProfessionalB2bTemplate() {
             </div>
 
             <div>
-              <h4 className={`font-semibold mb-4 ${darkMode ? 'text-white' : 'text-gray-900'}`}>Quick Links</h4>
+              <h4 className={`font-semibold mb-4 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>Quick Links</h4>
               <div className="grid grid-cols-2 gap-4">
                 <a href="#services" className="text-gray-400 hover:text-white transition-colors">Services</a>
                 <a href="#case-studies" className="text-gray-400 hover:text-white transition-colors">Case Studies</a>

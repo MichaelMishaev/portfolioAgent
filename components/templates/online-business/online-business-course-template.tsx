@@ -28,11 +28,14 @@ import { LanguageToggle } from "@/components/language-toggle";
 import Link from "next/link";
 import { useI18n } from "@/lib/i18n-context";
 import { useState } from "react";
+import { useTheme } from "next-themes";
 
 export function OnlineBusinessCourseTemplate() {
   const { tt } = useI18n();
   const data = tt.onlineBusinessCourse || {};
   const [selectedPlan, setSelectedPlan] = useState("premium");
+  const { theme } = useTheme();
+  const darkMode = theme === 'dark';
 
   return (
     <div className="min-h-screen overflow-x-hidden max-w-full bg-gradient-to-br from-purple-50 via-white to-pink-50 dark:from-gray-900 dark:via-gray-800 dark:to-purple-900">

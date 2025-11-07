@@ -20,6 +20,7 @@ import {
   FiX,
 } from "react-icons/fi";
 import Link from "next/link";
+import { useTheme } from "next-themes";
 
 const platformData = {
   name: "CREATOR COLLECTIVE",
@@ -254,6 +255,8 @@ export function CommunityServiceTemplate() {
 
   const [selectedPlan, setSelectedPlan] = useState(1);
   const [billingPeriod, setBillingPeriod] = useState<"monthly" | "annual">("monthly");
+  const { theme } = useTheme();
+  const darkMode = theme === 'dark';
 
   return (
     <div className="min-h-screen overflow-x-hidden max-w-full bg-white text-stone-900">

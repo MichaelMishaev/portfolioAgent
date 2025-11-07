@@ -12,11 +12,13 @@ import { LanguageToggle } from "@/components/language-toggle";
 import Link from "next/link";
 import { useI18n } from "@/lib/i18n-context";
 import { CustomizeTemplateButton } from "@/components/customize-template-button";
+import { useTheme } from "next-themes";
 
 export function MinimalistTemplate() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { tt } = useI18n();
   const portfolioData = tt?.minimalist;
+  const { theme } = useTheme();
 
   if (!portfolioData) {
     return <div className="min-h-screen flex items-center justify-center">Loading...</div>;
@@ -44,7 +46,7 @@ export function MinimalistTemplate() {
             </a>
             <ThemeToggle />
             <LanguageToggle />
-            <CustomizeTemplateButton variant="outline" className={darkMode ? 'text-white' : 'text-slate-900'} size="sm" />
+            <CustomizeTemplateButton variant="outline" className={theme === 'dark' ? 'text-white' : 'text-slate-900'} size="sm" />
           </div>
 
           {/* Mobile Menu Button */}
@@ -83,7 +85,7 @@ export function MinimalistTemplate() {
                 {tt.common.contact}
               </a>
               <div className="pt-2">
-                <CustomizeTemplateButton variant="outline" size="sm" className={`w-full ! ${darkMode ? 'text-white' : 'text-slate-900'}`} />
+                <CustomizeTemplateButton variant="outline" size="sm" className={`w-full ! ${theme === 'dark' ? 'text-white' : 'text-slate-900'}`} />
               </div>
             </div>
           </div>

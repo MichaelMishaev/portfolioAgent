@@ -22,6 +22,7 @@ import {
 import Link from "next/link";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { LanguageToggle } from "@/components/language-toggle";
+import { useTheme } from "next-themes";
 
 const archetypesData = {
   hero: {
@@ -165,6 +166,8 @@ const archetypesData = {
 
 export function ArchetypesMinimalTemplate() {
   const { tt } = useI18n();
+  const { theme } = useTheme();
+  const darkMode = theme === 'dark';
 
   return (
     <div className="min-h-screen overflow-x-hidden max-w-full bg-white dark:bg-gray-950">

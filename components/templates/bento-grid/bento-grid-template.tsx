@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { FiMail, FiGithub, FiLinkedin, FiCode, FiLayers, FiZap, FiTrendingUp } from "react-icons/fi";
 import Link from "next/link";
+import { useTheme } from "next-themes";
 
 const portfolioData = {
   name: "Riley Chen",
@@ -115,6 +116,9 @@ const portfolioData = {
 };
 
 export function BentoGridTemplate() {
+  const { theme } = useTheme();
+  const darkMode = theme === 'dark';
+
   return (
     <div className="min-h-screen overflow-x-hidden max-w-full bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
       {/* Navigation */}
