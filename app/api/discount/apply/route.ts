@@ -12,7 +12,15 @@ export async function POST(request: NextRequest) {
   try {
     // Parse request body
     const body = await request.json();
-    const { code: codeInput, templateId, cartTotal, userId, userEmail } = body;
+    const {
+      code: codeInput,
+      templateId,
+      cartTotal, // Total including add-ons
+      templatePrice, // Base template price (for discount calculation)
+      addOnsTotal = 0, // Add-ons price (never discounted)
+      userId,
+      userEmail
+    } = body;
 
     // Validation
     if (!codeInput || !templateId || !cartTotal) {
@@ -28,6 +36,10 @@ export async function POST(request: NextRequest) {
         { status: 400 }
       );
     }
+
+    // Use templatePrice if provided, otherwise fall back to cartTotal (backwards compatibility)
+    const basePriceForDiscount = templatePrice || cartTotal;
+    const addOnsAmount = addOnsTotal || 0;
 
     // For now, we'll use mock user data if not provided
     // In production, you'd get this from session/auth
@@ -63,10 +75,19 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Verify cart total matches template price
-    if (Math.abs(template.price - cartTotal) > 0.01) {
+    // Verify template price matches (only check base template price, not add-ons)
+    if (Math.abs(template.price - basePriceForDiscount) > 0.01) {
       return NextResponse.json(
         { error: 'Price mismatch' },
+        { status: 400 }
+      );
+    }
+
+    // Verify cart total is correct (template + add-ons)
+    const expectedTotal = template.price + addOnsAmount;
+    if (Math.abs(expectedTotal - cartTotal) > 0.01) {
+      return NextResponse.json(
+        { error: 'Cart total mismatch' },
         { status: 400 }
       );
     }
@@ -77,6 +98,8 @@ export async function POST(request: NextRequest) {
       userId: mockUserId,
       userEmail: mockUserEmail,
       templateId,
+      templatePrice: template.price, // Only template price gets discounted
+      addOnsTotal: addOnsAmount, // Add-ons never discounted
       cartTotal,
       metadata: {
         ipAddress: request.headers.get('x-forwarded-for') || request.headers.get('x-real-ip') || 'unknown',
@@ -95,13 +118,25 @@ export async function POST(request: NextRequest) {
       discount: {
         code: result.code.code,
         description: result.code.description,
-        discountAmount: result.discountAmount,
+        discountAmount: result.discountAmount, // Discount applied to template only
         discountType: result.code.discountType,
         discountValue: result.code.discountValue
       },
       template: {
         id: template.id,
-        name: template.name
+        name: template.name,
+        originalPrice: template.price,
+        discountedPrice: result.discountedTemplatePrice
+      },
+      addOns: {
+        total: result.addOnsTotal // Add-ons are never discounted
+      },
+      breakdown: {
+        templatePrice: template.price,
+        templateDiscount: result.discountAmount,
+        templateAfterDiscount: result.discountedTemplatePrice,
+        addOnsTotal: result.addOnsTotal,
+        finalTotal: result.purchase.finalPrice
       }
     });
 
@@ -150,7 +185,9 @@ interface ApplyDiscountParams {
   userId: string;
   userEmail: string;
   templateId: string;
-  cartTotal: number;
+  templatePrice: number; // Base template price (discountable)
+  addOnsTotal: number; // Add-ons total (never discounted)
+  cartTotal: number; // Total (template + add-ons)
   metadata: {
     ipAddress: string;
     userAgent: string;
@@ -158,7 +195,16 @@ interface ApplyDiscountParams {
 }
 
 async function applyDiscountCode(params: ApplyDiscountParams) {
-  const { code: codeStr, userId, userEmail, templateId, cartTotal, metadata } = params;
+  const {
+    code: codeStr,
+    userId,
+    userEmail,
+    templateId,
+    templatePrice,
+    addOnsTotal,
+    cartTotal,
+    metadata
+  } = params;
 
   // Use transaction with serializable isolation
   const result = await prisma.$transaction(async (tx) => {
@@ -216,35 +262,38 @@ async function applyDiscountCode(params: ApplyDiscountParams) {
       }
     }
 
-    // 5. Check minimum purchase requirement
-    if (code.minPurchaseAmount && cartTotal < code.minPurchaseAmount) {
+    // 5. Check minimum purchase requirement (based on template price only, not add-ons)
+    if (code.minPurchaseAmount && templatePrice < code.minPurchaseAmount) {
       throw new Error(
         `Minimum purchase of $${code.minPurchaseAmount} required for this code`
       );
     }
 
-    // 6. Calculate discount amount
-    const { discountAmount, finalTotal } = calculateDiscount({
+    // 6. Calculate discount amount - ONLY on template price, NOT on add-ons
+    const { discountAmount, finalTotal: discountedTemplatePrice } = calculateDiscount({
       discountType: code.discountType as 'PERCENTAGE' | 'FIXED',
       discountValue: code.discountValue,
       maxDiscountAmount: code.maxDiscountAmount,
-      cartTotal
+      cartTotal: templatePrice // Only discount the template price!
     });
 
-    // 7. Create purchase record
+    // 7. Calculate final total = discounted template price + add-ons (never discounted)
+    const finalTotal = discountedTemplatePrice + addOnsTotal;
+
+    // 8. Create purchase record
     const purchase = await tx.purchase.create({
       data: {
         userId,
         templateId,
-        basePrice: cartTotal,
-        finalPrice: finalTotal,
+        basePrice: templatePrice, // Base template price (before discount)
+        finalPrice: finalTotal, // Discounted template + add-ons
         status: 'PENDING',
         customerEmail: userEmail,
         currency: 'USD'
       }
     });
 
-    // 8. Atomic increment of usage counter (CRITICAL)
+    // 9. Atomic increment of usage counter (CRITICAL)
     await tx.discountCode.update({
       where: { id: code.id },
       data: {
@@ -253,7 +302,7 @@ async function applyDiscountCode(params: ApplyDiscountParams) {
       }
     });
 
-    // 9. Create discount usage record
+    // 10. Create discount usage record
     const expiresAt = new Date(Date.now() + 15 * 60 * 1000); // 15 minutes
 
     const usage = await tx.discountUsage.create({
@@ -264,9 +313,9 @@ async function applyDiscountCode(params: ApplyDiscountParams) {
         status: 'RESERVED',
         reservedAt: new Date(),
         expiresAt,
-        originalAmount: cartTotal,
-        discountAmount,
-        finalAmount: finalTotal,
+        originalAmount: templatePrice, // Original template price (not including add-ons)
+        discountAmount, // Discount applied to template only
+        finalAmount: finalTotal, // Discounted template + add-ons
         discountSnapshot: code as any, // Snapshot of code config
         ipAddress: metadata.ipAddress,
         userAgent: metadata.userAgent,
@@ -275,7 +324,7 @@ async function applyDiscountCode(params: ApplyDiscountParams) {
       }
     });
 
-    // 10. Audit log
+    // 11. Audit log
     await tx.discountAuditLog.create({
       data: {
         codeId: code.id,
@@ -291,7 +340,9 @@ async function applyDiscountCode(params: ApplyDiscountParams) {
       purchase,
       usage,
       code,
-      discountAmount
+      discountAmount,
+      discountedTemplatePrice,
+      addOnsTotal
     };
   }, {
     isolationLevel: Prisma.TransactionIsolationLevel.Serializable,

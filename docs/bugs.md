@@ -3981,3 +3981,118 @@ In Vercel project settings, add DATABASE_URL to:
 
 **Commit**: [To be added]
 
+
+---
+
+### Issue #25: Discount Code Incorrectly Applied to Add-On Services
+**Date Discovered**: 2025-11-07
+**Reported By**: User testing
+**Severity**: CRITICAL - Business Logic Error
+**Status**: FIXED ✅
+
+**Description**:
+Discount codes were being applied to the ENTIRE cart total (template + add-on services), instead of only applying to the base template price. This resulted in users getting unintended discounts on add-on services.
+
+**Example of Bug:**
+```
+Template: Marketplace Service - $89
+Add-on: Content Maker Service - $39
+Subtotal: $128
+
+Discount Code: MICHAEL100 (100% off)
+❌ WRONG: Discount applied to $128 = -$128 (Final: $0.00)
+✅ CORRECT: Discount should apply to $89 only = -$89 (Final: $39.00)
+```
+
+**Root Cause**:
+The discount calculation in `/app/api/discount/apply/route.ts` was using `cartTotal` (which included add-ons) instead of just the template price.
+
+```typescript
+// BEFORE (Bug)
+const { discountAmount, finalTotal } = calculateDiscount({
+  cartTotal  // ❌ This included template + add-ons
+});
+```
+
+**Business Impact**:
+- Users could get 100% discount on add-on services (revenue loss)
+- Add-on services should NEVER be discounted
+- Only template base price should receive discounts
+
+**Solution Implemented**:
+
+1. **Updated API Request Interface**:
+   ```typescript
+   {
+     code: string,
+     templateId: string,
+     cartTotal: number,         // Total including add-ons
+     templatePrice: number,     // NEW: Base template price
+     addOnsTotal: number,       // NEW: Add-ons total (never discounted)
+     userId?: string,
+     userEmail?: string
+   }
+   ```
+
+2. **Fixed Discount Calculation Logic**:
+   ```typescript
+   // AFTER (Fixed)
+   // Calculate discount ONLY on template price
+   const { discountAmount, finalTotal: discountedTemplatePrice } = calculateDiscount({
+     discountType: code.discountType,
+     discountValue: code.discountValue,
+     maxDiscountAmount: code.maxDiscountAmount,
+     cartTotal: templatePrice  // ✅ Only template price!
+   });
+
+   // Add non-discounted add-ons to final total
+   const finalTotal = discountedTemplatePrice + addOnsTotal;
+   ```
+
+3. **Added Price Breakdown to Response**:
+   ```typescript
+   {
+     breakdown: {
+       templatePrice: 89,           // Original template price
+       templateDiscount: 89,        // Discount applied to template
+       templateAfterDiscount: 0,    // Template after discount
+       addOnsTotal: 39,             // Add-ons (never discounted)
+       finalTotal: 39               // Total user pays
+     }
+   }
+   ```
+
+**Verification**:
+- ✅ Discount applies ONLY to template price
+- ✅ Add-on services never receive discount
+- ✅ Cart total validation includes both template and add-ons
+- ✅ Purchase record stores correct basePrice (template only)
+- ✅ Response includes detailed breakdown
+
+**Files Modified**:
+- `/app/api/discount/apply/route.ts` - Complete discount logic rewrite
+
+**Test Cases**:
+1. Template $89 + Add-on $39 = $128
+   - 100% discount should result in $39 final (not $0)
+2. Template $89 + No add-ons = $89
+   - 100% discount should result in $0 final
+3. Template $89 + Add-on $39 = $128
+   - 50% discount should result in $83.50 final ($44.50 + $39)
+
+**API Backwards Compatibility**:
+- If `templatePrice` not provided, falls back to `cartTotal` (old behavior)
+- Frontend must be updated to send `templatePrice` and `addOnsTotal`
+
+**Prevention**:
+- Add integration tests for discount calculations
+- Document business rule: "Discounts apply ONLY to template base price"
+- Add validation that ensures add-ons are never discounted
+
+**Related Issues**:
+- Affects all discount codes (percentage and fixed amount)
+- Impacts revenue reporting
+- Critical for business model integrity
+
+**Commit**: [To be added]
+

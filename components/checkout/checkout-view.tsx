@@ -36,16 +36,20 @@ export function CheckoutView({ template }: CheckoutViewProps) {
   const [isValidatingCode, setIsValidatingCode] = useState(false);
 
   const contentMakerPrice = 39;
-  const basePrice = template.price + (includeContentMaker ? contentMakerPrice : 0);
+  const addOnsTotal = includeContentMaker ? contentMakerPrice : 0;
 
-  // Calculate discount
+  // IMPORTANT: Discounts apply ONLY to template price, NOT to add-ons
+  const templatePrice = template.price;
+
+  // Calculate discount (only on template price)
   const discountAmount = appliedDiscount
     ? appliedDiscount.discountType === 'PERCENTAGE'
-      ? (basePrice * appliedDiscount.discountValue) / 100
-      : appliedDiscount.discountValue
+      ? (templatePrice * appliedDiscount.discountValue) / 100 // Only discount template
+      : Math.min(appliedDiscount.discountValue, templatePrice) // Fixed discount capped at template price
     : 0;
 
-  const totalPrice = basePrice - discountAmount;
+  const templateAfterDiscount = templatePrice - discountAmount;
+  const totalPrice = templateAfterDiscount + addOnsTotal; // Add non-discounted add-ons
 
   const t = {
     en: {
@@ -372,7 +376,7 @@ export function CheckoutView({ template }: CheckoutViewProps) {
                     <>
                       <div className="flex justify-between text-xs sm:text-sm pt-2 border-t">
                         <span className="text-muted-foreground">{text.subtotal}</span>
-                        <span className="font-medium">${basePrice}</span>
+                        <span className="font-medium">${templatePrice + addOnsTotal}</span>
                       </div>
                       <div className="flex justify-between text-xs sm:text-sm text-green-600 dark:text-green-400">
                         <span className="flex items-center gap-1">

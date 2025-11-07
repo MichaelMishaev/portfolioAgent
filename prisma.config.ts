@@ -1,5 +1,5 @@
 import "dotenv/config";
-import { defineConfig, env } from "prisma/config";
+import { defineConfig } from "prisma/config";
 
 export default defineConfig({
   schema: "prisma/schema.prisma",
@@ -7,7 +7,6 @@ export default defineConfig({
     path: "prisma/migrations",
   },
   engine: "classic",
-  datasource: {
-    url: env("DATABASE_URL"),
-  },
+  // Don't specify datasource URL here - let schema.prisma handle it
+  // This prevents build errors when DATABASE_URL isn't available during postinstall
 });
