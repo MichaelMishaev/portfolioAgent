@@ -9,7 +9,7 @@ import { ScrollToTop } from "@/components/shared/scroll-to-top";
 import { useI18n } from "@/lib/i18n-context";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
-import { FiGrid, FiZap, FiLayers, FiCode, FiTrendingUp, FiCheck, FiMail, FiGithub, FiLinkedin, FiTwitter, FiChevronDown, FiChevronUp, FiFolder } from "react-icons/fi";
+import { FiGrid, FiZap, FiLayers, FiCode, FiTrendingUp, FiCheck, FiMail, FiGithub, FiLinkedin, FiTwitter, FiChevronDown, FiChevronUp, FiFolder, FiSend } from "react-icons/fi";
 import Link from "next/link";
 import { HowItWorksModal } from "@/components/how-it-works-modal";
 
@@ -20,7 +20,7 @@ function HowItWorksModalWrapper() {
 
 export default function Home() {
   const { t, language } = useI18n();
-  const [isHowItWorksExpanded, setIsHowItWorksExpanded] = useState(true);
+  const [isHowItWorksExpanded, setIsHowItWorksExpanded] = useState(false);
 
   // Load saved state from localStorage
   useEffect(() => {
@@ -553,6 +553,17 @@ export default function Home() {
                 <a href="mailto:345287biz@gmail.com">
                   <FiMail className="mr-2 w-4 h-4 group-hover:scale-110 transition-transform" />
                   Send Email
+                </a>
+              </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                className="text-base px-6 py-6 h-auto min-h-[48px] touch-manipulation group shadow-lg hover:shadow-xl bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white border-blue-600"
+                asChild
+              >
+                <a href="https://t.me/MichaelMishaev" target="_blank" rel="noopener noreferrer">
+                  <FiSend className="mr-2 w-4 h-4 group-hover:scale-110 transition-transform" />
+                  Telegram
                 </a>
               </Button>
               <Button
