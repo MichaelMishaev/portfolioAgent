@@ -26,18 +26,18 @@ export function ContactUsFloatingButton({ className }: ContactUsFloatingButtonPr
   return (
     <div
       className={cn(
-        "fixed bottom-6 right-6 z-[10000] flex flex-col items-end gap-2",
+        "hidden md:flex fixed bottom-6 right-6 z-[10000] flex-col items-end gap-2",
         "md:bottom-8 md:right-8",
         className,
       )}
     >
       <Button
-        size="lg"
+        size="default"
         onClick={handleClick}
-        className="bg-[#229ED9] hover:bg-[#1c8cbf] text-white shadow-lg hover:shadow-xl transition-all duration-200 min-w-[160px] justify-center"
+        className="bg-[#229ED9] hover:bg-[#1c8cbf] text-white shadow-lg hover:shadow-xl transition-all duration-200 px-4 py-2 justify-center"
         aria-label={ariaLabel}
       >
-        <FaTelegramPlane className="mr-2 h-5 w-5" />
+        <FaTelegramPlane className="mr-2 h-4 w-4" />
         {label}
       </Button>
     </div>
