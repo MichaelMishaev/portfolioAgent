@@ -9,6 +9,7 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { FiCheck, FiDownload, FiCheckCircle, FiClock, FiZap, FiShield, FiTrendingUp } from "react-icons/fi";
 import { useI18n } from "@/lib/i18n-context";
+import { ALL_SERVICES, formatServicePrice } from "@/lib/services-types";
 
 interface ThankYouViewProps {
   template: TemplateConfig;
@@ -36,98 +37,19 @@ export function ThankYouView({ template, contentMaker }: ThankYouViewProps) {
 
   const totalPrice = template.price + (contentMaker ? 39 : 0);
 
-  // All 8 post-purchase offers from templates.md spec
-  const postPurchaseOffers = [
-    {
-      id: 1,
-      priority: "1️⃣",
-      title: language === 'en' ? "Hosting Service" : "Хостинг",
-      type: language === 'en' ? "Subscription" : "Подписка",
-      price: "$5-19/mo",
-      description: language === 'en'
-        ? "We'll host your website on secure servers so it's always live — no setup needed."
-        : "Мы разместим ваш сайт на защищенных серверах, чтобы он всегда был онлайн — без настройки.",
-      icon: "☁️"
-    },
-    {
-      id: 2,
-      priority: "2️⃣",
-      title: language === 'en' ? "Domain Assistance" : "Помощь с доменом",
-      type: language === 'en' ? "One-time" : "Единоразово",
-      price: "$10",
-      description: language === 'en'
-        ? "We'll help you choose, register, and connect a domain like yourbrand.com."
-        : "Мы поможем выбрать, зарегистрировать и подключить домен типа yourbrand.com.",
-      icon: "🌍"
-    },
-    {
-      id: 3,
-      priority: "3️⃣",
-      title: language === 'en' ? "Installation & Launch" : "Установка и запуск",
-      type: language === 'en' ? "One-time" : "Единоразово",
-      price: "$29-49",
-      description: language === 'en'
-        ? "We'll install your template, connect hosting + domain, and launch your site within 24 hours."
-        : "Мы установим ваш шаблон, подключим хостинг + домен, и запустим сайт за 24 часа.",
-      icon: "🚀",
-      featured: true // This is the most popular one
-    },
-    {
-      id: 4,
-      priority: "4️⃣",
-      title: language === 'en' ? "Admin Panel Service" : "Админ-панель",
-      type: language === 'en' ? "One-time" : "Единоразово",
-      price: "$99",
-      description: language === 'en'
-        ? "Get a private dashboard to edit texts & images without touching code."
-        : "Получите приватную панель для редактирования текстов и изображений без кода.",
-      icon: "💼"
-    },
-    {
-      id: 5,
-      priority: "5️⃣",
-      title: language === 'en' ? "Branding Pack" : "Пакет брендинга",
-      type: language === 'en' ? "One-time" : "Единоразово",
-      price: "$19-39",
-      description: language === 'en'
-        ? "We'll design a simple logo + color palette that matches your new site."
-        : "Мы разработаем простой логотип + цветовую палитру, подходящую вашему сайту.",
-      icon: "🎨"
-    },
-    {
-      id: 6,
-      priority: "6️⃣",
-      title: language === 'en' ? "Stock Image Pack" : "Пакет изображений",
-      type: language === 'en' ? "One-time" : "Единоразово",
-      price: "$15-25",
-      description: language === 'en'
-        ? "We'll fill your pages with professional, license-free images that fit your business."
-        : "Мы заполним ваши страницы профессиональными изображениями, подходящими вашему бизнесу.",
-      icon: "📸"
-    },
-    {
-      id: 7,
-      priority: "7️⃣",
-      title: language === 'en' ? "Security & Backup Plan" : "Безопасность",
-      type: language === 'en' ? "Subscription" : "Подписка",
-      price: "$5-9/mo",
-      description: language === 'en'
-        ? "Daily backups + malware protection to keep your site safe."
-        : "Ежедневные резервные копии + защита от вредоносного ПО для безопасности сайта.",
-      icon: "🔒"
-    },
-    {
-      id: 8,
-      priority: "8️⃣",
-      title: language === 'en' ? "Maintenance Plan" : "План обслуживания",
-      type: language === 'en' ? "Subscription" : "Подписка",
-      price: "$9-19/mo",
-      description: language === 'en'
-        ? "We'll update plugins, monitor performance, and keep everything running smoothly."
-        : "Мы будем обновлять плагины, следить за производительностью и поддерживать всё в рабочем состоянии.",
-      icon: "🔧"
-    }
-  ];
+  // Get services from centralized source
+  const postPurchaseOffers = ALL_SERVICES.map(service => ({
+    id: service.id,
+    priority: service.priority,
+    title: language === 'en' ? service.title : service.title_ru,
+    type: language === 'en'
+      ? (service.type === 'subscription' ? 'Subscription' : 'One-time')
+      : (service.type === 'subscription' ? 'Подписка' : 'Единоразово'),
+    price: formatServicePrice(service) + (service.type === 'subscription' ? '/mo' : ''),
+    description: language === 'en' ? service.description : service.description_ru,
+    icon: service.icon,
+    featured: service.featured
+  }));
 
   const [selectedOffers, setSelectedOffers] = useState<number[]>([]);
 
@@ -389,6 +311,10 @@ export function ThankYouView({ template, contentMaker }: ThankYouViewProps) {
                   <Button
                     size="lg"
                     className="bg-green-600 hover:bg-green-700 text-white shadow-lg text-base sm:text-lg px-8 py-6 font-bold"
+                    onClick={() => {
+                      const serviceParams = selectedOffers.join(',');
+                      window.location.href = `/checkout-services?services=${serviceParams}&template=${template.id}`;
+                    }}
                   >
                     <FiZap className="w-5 h-5 mr-2" />
                     {language === 'en' ? 'Add to Order' : 'Добавить к заказу'}
