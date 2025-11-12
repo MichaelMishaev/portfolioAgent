@@ -638,17 +638,32 @@
         "webDev": {
           "title": "Web Development",
           "description": "Custom websites and web applications built with modern technologies",
-          "features": ["React & Next.js", "E-commerce", "API Integration", "Performance Optimization"]
+          "features": [
+            "React & Next.js",
+            "E-commerce",
+            "API Integration",
+            "Performance Optimization"
+          ]
         },
         "marketing": {
           "title": "Digital Marketing",
           "description": "Data-driven marketing strategies that deliver measurable results",
-          "features": ["SEO & SEM", "Social Media", "Content Marketing", "Analytics"]
+          "features": [
+            "SEO & SEM",
+            "Social Media",
+            "Content Marketing",
+            "Analytics"
+          ]
         },
         "growth": {
           "title": "Growth Strategy",
           "description": "Comprehensive growth plans tailored to your business goals",
-          "features": ["Market Research", "Competitor Analysis", "Growth Hacking", "Conversion Optimization"]
+          "features": [
+            "Market Research",
+            "Competitor Analysis",
+            "Growth Hacking",
+            "Conversion Optimization"
+          ]
         }
       },
       "work": {
@@ -4418,17 +4433,29 @@
           {
             "name": "Unilink Connect",
             "description": "API integration platform connecting your systems seamlessly",
-            "features": ["Real-time sync", "100+ integrations", "Custom webhooks"]
+            "features": [
+              "Real-time sync",
+              "100+ integrations",
+              "Custom webhooks"
+            ]
           },
           {
             "name": "Unilink Analytics",
             "description": "Business intelligence and data visualization suite",
-            "features": ["Custom dashboards", "AI insights", "Export to any format"]
+            "features": [
+              "Custom dashboards",
+              "AI insights",
+              "Export to any format"
+            ]
           },
           {
             "name": "Unilink Security",
             "description": "Enterprise-grade security and compliance management",
-            "features": ["SOC 2 certified", "GDPR compliant", "24/7 monitoring"]
+            "features": [
+              "SOC 2 certified",
+              "GDPR compliant",
+              "24/7 monitoring"
+            ]
           }
         ]
       },
@@ -4465,6 +4492,776 @@
       "Tailwind CSS": "Built with Tailwind CSS utility framework for rapid styling and consistent design. Easily customize colors, spacing, and typography with simple configuration changes.",
       "Framer Motion": "Smooth, professional animations powered by Framer Motion library. Your portfolio will feel polished and modern with buttery-smooth transitions and interactive effects.",
       "Production Ready": "Tested, optimized, and ready to deploy immediately to Vercel, Netlify, or any hosting platform. Includes all necessary configuration files and documentation to get you online fast."
+    },
+    "serviceAgency": {
+      "name": "PIXEL PERFECT AGENCY",
+      "tagline": "Where Creativity Meets Performance",
+      "description": "Award-winning digital agency specializing in brand strategy, creative design, and performance marketing for ambitious brands.",
+      "nav": {
+        "services": "Services",
+        "portfolio": "Portfolio",
+        "process": "Process",
+        "cta": "Start a Project"
+      },
+      "hero": {
+        "badge": "Award-Winning Agency",
+        "viewWork": "View Our Work",
+        "watchShowreel": "Watch Showreel"
+      },
+      "servicesSection": {
+        "title": "Our Services",
+        "subtitle": "End-to-end solutions for modern brands",
+        "timeline": "Timeline:",
+        "investment": "Investment:"
+      },
+      "portfolioSection": {
+        "title": "Featured Work",
+        "subtitle": "Transforming brands, driving results"
+      },
+      "teamSection": {
+        "title": "Meet the Team",
+        "subtitle": "World-class talent, focused on your success"
+      },
+      "processSection": {
+        "title": "Our Proven Process",
+        "subtitle": "Consistent excellence, every time"
+      },
+      "cta": {
+        "title": "Ready to Transform Your Brand?",
+        "subtitle": "Let's create something extraordinary together. Book a free strategy call today.",
+        "startProject": "Start Your Project",
+        "viewPricing": "View Pricing"
+      },
+      "footer": {
+        "copyright": "© 2025 Pixel Perfect Agency. New York • London • Tokyo"
+      }
+    },
+    "serviceB2b": {
+      "name": "STRATEX CONSULTING",
+      "tagline": "Strategy. Execution. Excellence.",
+      "description": "We partner with Fortune 500 companies to drive transformational change and measurable results.",
+      "nav": {
+        "capabilities": "Capabilities",
+        "caseStudies": "Case Studies",
+        "insights": "Insights",
+        "cta": "Apply Now"
+      },
+      "hero": {
+        "scheduleConsultation": "Schedule Consultation"
+      },
+      "capabilitiesSection": {
+        "title": "Our Capabilities",
+        "subtitle": "Integrated services that deliver measurable business impact across your organization."
+      },
+      "caseStudiesSection": {
+        "title": "Proven Results",
+        "subtitle": "Real transformations. Real impact. Real ROI.",
+        "challenge": "Challenge",
+        "solution": "Solution"
+      },
+      "industrySection": {
+        "title": "Industry Expertise",
+        "subtitle": "Deep sector knowledge combined with cross-industry best practices."
+      },
+      "insightsSection": {
+        "title": "Insights & Research",
+        "subtitle": "Download our latest thinking on critical business challenges.",
+        "download": "Download"
+      },
+      "clientsSection": {
+        "title": "Trusted by Industry Leaders"
+      },
+      "processSection": {
+        "title": "Our Engagement Process",
+        "subtitle": "A rigorous, collaborative approach designed to deliver lasting impact."
+      },
+      "cta": {
+        "title": "Ready to Transform?",
+        "subtitle": "Schedule a complimentary consultation to explore how we can help you achieve your strategic objectives.",
+        "apply": "Apply for Engagement",
+        "note": "Application review typically takes 3-5 business days"
+      },
+      "footer": {
+        "copyright": "© 2024 StratEx Consulting. Offices in New York, London, Singapore."
+      }
+    },
+    "serviceCommunity": {
+      "name": "CREATOR COLLECTIVE",
+      "tagline": "Where Creators Connect, Grow, and Thrive",
+      "description": "Join 50,000+ creators building sustainable businesses through community, collaboration, and continuous learning.",
+      "nav": {
+        "features": "Features",
+        "successStories": "Success Stories",
+        "pricing": "Pricing",
+        "cta": "Start Free Trial"
+      },
+      "hero": {
+        "startTrial": "Start Free Trial",
+        "watchDemo": "Watch Demo"
+      },
+      "forCreatorsSection": {
+        "badge": "For Creators",
+        "title": "Build, Grow, and Monetize Your Community"
+      },
+      "forMembersSection": {
+        "badge": "For Members",
+        "title": "Connect with Creators You Love"
+      },
+      "successStoriesSection": {
+        "title": "Success Stories",
+        "subtitle": "Real creators building sustainable businesses on our platform.",
+        "members": "Members",
+        "earnings": "Earnings"
+      },
+      "pricingSection": {
+        "title": "Choose Your Plan",
+        "subtitle": "Start free. Upgrade as you grow. Cancel anytime.",
+        "monthly": "Monthly",
+        "annual": "Annual",
+        "save": "Save 20%",
+        "mostPopular": "Most Popular"
+      },
+      "platformSection": {
+        "reliability": "Built for Reliability",
+        "reliabilityDesc": "99.9% uptime SLA. Enterprise-grade infrastructure.",
+        "mobile": "Mobile-First",
+        "mobileDesc": "Beautiful native apps for iOS and Android.",
+        "payments": "Global Payments",
+        "paymentsDesc": "Accept payments in 135+ currencies. Instant payouts."
+      },
+      "onboardingSection": {
+        "title": "Get Started in Minutes"
+      },
+      "cta": {
+        "title": "Start Building Your Community Today",
+        "subtitle": "Join 50,000+ creators who've chosen Creator Collective. No credit card required.",
+        "startTrial": "Start Free Trial",
+        "note": "14-day free trial • No credit card required • Cancel anytime"
+      },
+      "footer": {
+        "copyright": "© 2024 Creator Collective. Empowering creators worldwide."
+      }
+    },
+    "serviceConsulting": {
+      "name": "APEX STRATEGIC CONSULTING",
+      "tagline": "Transform. Execute. Excel.",
+      "description": "Elite management consulting for CEOs and boards. We partner with global leaders to solve their most critical challenges and capture their greatest opportunities.",
+      "nav": {
+        "services": "Services",
+        "caseStudies": "Case Studies",
+        "team": "Our Team",
+        "insights": "Insights",
+        "cta": "Contact Us"
+      },
+      "hero": {
+        "badge": "Trusted by Fortune 500 Leaders",
+        "scheduleConsultation": "Schedule Consultation",
+        "downloadInsights": "Download Insights"
+      },
+      "servicesSection": {
+        "title": "Our Services",
+        "subtitle": "Strategic solutions for your most critical challenges",
+        "coreCapabilities": "Core Capabilities",
+        "ourApproach": "Our Approach",
+        "typicalEngagement": "Typical Engagement:",
+        "investmentRange": "Investment Range:"
+      },
+      "engagementsSection": {
+        "title": "Client Engagements",
+        "subtitle": "Transformational results for global enterprises",
+        "situation": "Situation",
+        "intervention": "Our Intervention"
+      },
+      "teamSection": {
+        "title": "Our Partners",
+        "subtitle": "Senior leaders from the world's top firms"
+      },
+      "methodologySection": {
+        "title": "The Apex Method",
+        "subtitle": "Battle-tested methodology refined over 1,000+ engagements"
+      },
+      "insightsSection": {
+        "title": "Latest Insights",
+        "subtitle": "Research and perspectives from our experts",
+        "downloadPdf": "Download PDF"
+      },
+      "cta": {
+        "title": "Let's Discuss Your Strategic Priorities",
+        "subtitle": "Schedule a confidential consultation with one of our senior partners.",
+        "scheduleConsultation": "Schedule Consultation",
+        "requestProposal": "Request Proposal"
+      },
+      "footer": {
+        "copyright": "© 2025 Apex Strategic Consulting. New York • London • Dubai • Singapore • Hong Kong"
+      }
+    },
+    "serviceDfyou": {
+      "name": "DESIGN ON TAP",
+      "tagline": "Unlimited Design. Fixed Price. Blazing Fast.",
+      "description": "Subscribe to unlimited graphic design, branding, and web design. Pause or cancel anytime. No surprises.",
+      "speed": "48-hour turnaround",
+      "nav": {
+        "work": "Work",
+        "pricing": "Pricing",
+        "faq": "FAQ",
+        "cta": "Subscribe Now"
+      },
+      "hero": {
+        "getStarted": "Get Started",
+        "viewExamples": "View Examples",
+        "badges": {
+          "turnaround": "48hr avg. turnaround",
+          "revisions": "Unlimited revisions",
+          "pause": "Pause or cancel anytime"
+        }
+      },
+      "howItWorksSection": {
+        "title": "How It Works"
+      },
+      "portfolioSection": {
+        "title": "Recent Work",
+        "subtitle": "Real projects. Real fast. All delivered in under 48 hours.",
+        "all": "All",
+        "branding": "Branding",
+        "webDesign": "Web Design",
+        "socialMedia": "Social Media",
+        "marketing": "Marketing"
+      },
+      "pricingSection": {
+        "title": "Simple, Transparent Pricing",
+        "subtitle": "One flat monthly fee. Unlimited requests. Pause or cancel anytime.",
+        "subscribeNow": "Subscribe Now",
+        "pauseNote": "Pause or cancel anytime",
+        "notIncluded": "Not Included:"
+      },
+      "guaranteesSection": {
+        "title": "Our Guarantees"
+      },
+      "testimonialsSection": {
+        "title": "What Clients Say"
+      },
+      "faqSection": {
+        "title": "Frequently Asked Questions"
+      },
+      "cta": {
+        "title": "Ready for Unlimited Design?",
+        "subtitle": "Subscribe today and get your first design delivered in 48 hours. Pause or cancel anytime.",
+        "subscribe": "Subscribe for $2,995/month",
+        "note": "75% refund guarantee • Pause anytime • No contracts"
+      },
+      "footer": {
+        "copyright": "© 2024 Design on Tap. Unlimited design for modern teams."
+      }
+    },
+    "serviceEnterprise": {
+      "name": "ENTERPRISE CLOUD PLATFORM",
+      "tagline": "Enterprise-Grade Solutions That Scale",
+      "description": "Trusted by Fortune 500 companies worldwide. Secure, compliant, and built for global enterprise operations.",
+      "nav": {
+        "solutions": "Solutions",
+        "clients": "Clients",
+        "pricing": "Pricing",
+        "cta": "Contact Sales"
+      },
+      "hero": {
+        "badge": "SOC 2 Type II Certified",
+        "scheduleDemo": "Schedule Demo",
+        "viewCaseStudies": "View Case Studies"
+      },
+      "solutionsSection": {
+        "title": "Enterprise Solutions",
+        "subtitle": "Built for scale, security, and global operations"
+      },
+      "integrationsSection": {
+        "title": "Seamless Integrations",
+        "subtitle": "Works with your existing enterprise stack"
+      },
+      "clientsSection": {
+        "title": "Trusted by Industry Leaders",
+        "subtitle": "Enterprise success stories",
+        "challenge": "Challenge",
+        "result": "Result"
+      },
+      "supportSection": {
+        "title": "Enterprise Support That Never Sleeps",
+        "subtitle": "World-class support for mission-critical operations"
+      },
+      "pricingSection": {
+        "title": "Enterprise Pricing",
+        "subtitle": "Flexible plans that scale with your organization",
+        "mostPopular": "MOST POPULAR"
+      },
+      "cta": {
+        "title": "Ready to Scale Your Enterprise?",
+        "subtitle": "Join 500+ enterprise clients who trust us with their mission-critical operations.",
+        "scheduleDemo": "Schedule Demo",
+        "downloadWhitepaper": "Download White Paper"
+      },
+      "footer": {
+        "copyright": "© 2025 EnterpriseCloud Platform. San Francisco • London • Singapore • Tokyo"
+      }
+    },
+    "productAudio": {
+      "nav": {
+        "home": "Home",
+        "about": "About",
+        "services": "Services",
+        "portfolio": "Portfolio",
+        "contact": "Contact"
+      },
+      "hero": {
+        "title": "Welcome",
+        "subtitle": "Demo Template",
+        "cta": "Get Started"
+      }
+    },
+    "productCourse": {
+      "nav": {
+        "home": "Home",
+        "about": "About",
+        "services": "Services",
+        "portfolio": "Portfolio",
+        "contact": "Contact"
+      },
+      "hero": {
+        "title": "Welcome",
+        "subtitle": "Demo Template",
+        "cta": "Get Started"
+      }
+    },
+    "productFashion": {
+      "nav": {
+        "home": "Home",
+        "about": "About",
+        "services": "Services",
+        "portfolio": "Portfolio",
+        "contact": "Contact"
+      },
+      "hero": {
+        "title": "Welcome",
+        "subtitle": "Demo Template",
+        "cta": "Get Started"
+      }
+    },
+    "productLuxury": {
+      "nav": {
+        "home": "Home",
+        "about": "About",
+        "services": "Services",
+        "portfolio": "Portfolio",
+        "contact": "Contact"
+      },
+      "hero": {
+        "title": "Welcome",
+        "subtitle": "Demo Template",
+        "cta": "Get Started"
+      }
+    },
+    "productPhysical": {
+      "nav": {
+        "home": "Home",
+        "about": "About",
+        "services": "Services",
+        "portfolio": "Portfolio",
+        "contact": "Contact"
+      },
+      "hero": {
+        "title": "Welcome",
+        "subtitle": "Demo Template",
+        "cta": "Get Started"
+      }
+    },
+    "productPremium": {
+      "nav": {
+        "home": "Home",
+        "about": "About",
+        "services": "Services",
+        "portfolio": "Portfolio",
+        "contact": "Contact"
+      },
+      "hero": {
+        "title": "Welcome",
+        "subtitle": "Demo Template",
+        "cta": "Get Started"
+      }
+    },
+    "productSaas": {
+      "nav": {
+        "home": "Home",
+        "about": "About",
+        "services": "Services",
+        "portfolio": "Portfolio",
+        "contact": "Contact"
+      },
+      "hero": {
+        "title": "Welcome",
+        "subtitle": "Demo Template",
+        "cta": "Get Started"
+      }
+    },
+    "productTech": {
+      "nav": {
+        "home": "Home",
+        "about": "About",
+        "services": "Services",
+        "portfolio": "Portfolio",
+        "contact": "Contact"
+      },
+      "hero": {
+        "title": "Welcome",
+        "subtitle": "Demo Template",
+        "cta": "Get Started"
+      }
+    },
+    "productVacuum": {
+      "nav": {
+        "home": "Home",
+        "about": "About",
+        "services": "Services",
+        "portfolio": "Portfolio",
+        "contact": "Contact"
+      },
+      "hero": {
+        "title": "Welcome",
+        "subtitle": "Demo Template",
+        "cta": "Get Started"
+      }
+    },
+    "blogMagazine": {
+      "nav": {
+        "home": "Home",
+        "about": "About",
+        "services": "Services",
+        "portfolio": "Portfolio",
+        "contact": "Contact"
+      },
+      "hero": {
+        "title": "Welcome",
+        "subtitle": "Demo Template",
+        "cta": "Get Started"
+      }
+    },
+    "blogPersonal": {
+      "nav": {
+        "home": "Home",
+        "about": "About",
+        "services": "Services",
+        "portfolio": "Portfolio",
+        "contact": "Contact"
+      },
+      "hero": {
+        "title": "Welcome",
+        "subtitle": "Demo Template",
+        "cta": "Get Started"
+      }
+    },
+    "blogTech": {
+      "nav": {
+        "home": "Home",
+        "about": "About",
+        "services": "Services",
+        "portfolio": "Portfolio",
+        "contact": "Contact"
+      },
+      "hero": {
+        "title": "Welcome",
+        "subtitle": "Demo Template",
+        "cta": "Get Started"
+      }
+    },
+    "immersive3d": {
+      "nav": {
+        "home": "Home",
+        "about": "About",
+        "services": "Services",
+        "portfolio": "Portfolio",
+        "contact": "Contact"
+      },
+      "hero": {
+        "title": "Welcome",
+        "subtitle": "Demo Template",
+        "cta": "Get Started"
+      }
+    },
+    "arSpatial": {
+      "nav": {
+        "home": "Home",
+        "about": "About",
+        "services": "Services",
+        "portfolio": "Portfolio",
+        "contact": "Contact"
+      },
+      "hero": {
+        "title": "Welcome",
+        "subtitle": "Demo Template",
+        "cta": "Get Started"
+      }
+    },
+    "bentoGrid": {
+      "nav": {
+        "home": "Home",
+        "about": "About",
+        "services": "Services",
+        "portfolio": "Portfolio",
+        "contact": "Contact"
+      },
+      "hero": {
+        "title": "Welcome",
+        "subtitle": "Demo Template",
+        "cta": "Get Started"
+      }
+    },
+    "boldTypography": {
+      "nav": {
+        "home": "Home",
+        "about": "About",
+        "services": "Services",
+        "portfolio": "Portfolio",
+        "contact": "Contact"
+      },
+      "hero": {
+        "title": "Welcome",
+        "subtitle": "Demo Template",
+        "cta": "Get Started"
+      }
+    },
+    "cardModular": {
+      "nav": {
+        "home": "Home",
+        "about": "About",
+        "services": "Services",
+        "portfolio": "Portfolio",
+        "contact": "Contact"
+      },
+      "hero": {
+        "title": "Welcome",
+        "subtitle": "Demo Template",
+        "cta": "Get Started"
+      }
+    },
+    "collageMaximalist": {
+      "nav": {
+        "home": "Home",
+        "about": "About",
+        "services": "Services",
+        "portfolio": "Portfolio",
+        "contact": "Contact"
+      },
+      "hero": {
+        "title": "Welcome",
+        "subtitle": "Demo Template",
+        "cta": "Get Started"
+      }
+    },
+    "darkModeTemplate": {
+      "nav": {
+        "home": "Home",
+        "about": "About",
+        "services": "Services",
+        "portfolio": "Portfolio",
+        "contact": "Contact"
+      },
+      "hero": {
+        "title": "Welcome",
+        "subtitle": "Demo Template",
+        "cta": "Get Started"
+      }
+    },
+    "dataDashboard": {
+      "nav": {
+        "home": "Home",
+        "about": "About",
+        "services": "Services",
+        "portfolio": "Portfolio",
+        "contact": "Contact"
+      },
+      "hero": {
+        "title": "Welcome",
+        "subtitle": "Demo Template",
+        "cta": "Get Started"
+      }
+    },
+    "fullscreenImmersive": {
+      "nav": {
+        "home": "Home",
+        "about": "About",
+        "services": "Services",
+        "portfolio": "Portfolio",
+        "contact": "Contact"
+      },
+      "hero": {
+        "title": "Welcome",
+        "subtitle": "Demo Template",
+        "cta": "Get Started"
+      }
+    },
+    "gridMasonry": {
+      "nav": {
+        "home": "Home",
+        "about": "About",
+        "services": "Services",
+        "portfolio": "Portfolio",
+        "contact": "Contact"
+      },
+      "hero": {
+        "title": "Welcome",
+        "subtitle": "Demo Template",
+        "cta": "Get Started"
+      }
+    },
+    "illustrationFocus": {
+      "nav": {
+        "home": "Home",
+        "about": "About",
+        "services": "Services",
+        "portfolio": "Portfolio",
+        "contact": "Contact"
+      },
+      "hero": {
+        "title": "Welcome",
+        "subtitle": "Demo Template",
+        "cta": "Get Started"
+      }
+    },
+    "kineticTypography": {
+      "nav": {
+        "home": "Home",
+        "about": "About",
+        "services": "Services",
+        "portfolio": "Portfolio",
+        "contact": "Contact"
+      },
+      "hero": {
+        "title": "Welcome",
+        "subtitle": "Demo Template",
+        "cta": "Get Started"
+      }
+    },
+    "neoBrutalistTemplate": {
+      "nav": {
+        "home": "Home",
+        "about": "About",
+        "services": "Services",
+        "portfolio": "Portfolio",
+        "contact": "Contact"
+      },
+      "hero": {
+        "title": "Welcome",
+        "subtitle": "Demo Template",
+        "cta": "Get Started"
+      }
+    },
+    "organicLiquid": {
+      "nav": {
+        "home": "Home",
+        "about": "About",
+        "services": "Services",
+        "portfolio": "Portfolio",
+        "contact": "Contact"
+      },
+      "hero": {
+        "title": "Welcome",
+        "subtitle": "Demo Template",
+        "cta": "Get Started"
+      }
+    },
+    "linPortfolioElegance": {
+      "nav": {
+        "home": "Home",
+        "about": "About",
+        "services": "Services",
+        "portfolio": "Portfolio",
+        "contact": "Contact"
+      },
+      "hero": {
+        "title": "Welcome",
+        "subtitle": "Demo Template",
+        "cta": "Get Started"
+      }
+    },
+    "linProfessionalAuthority": {
+      "nav": {
+        "home": "Home",
+        "about": "About",
+        "services": "Services",
+        "portfolio": "Portfolio",
+        "contact": "Contact"
+      },
+      "hero": {
+        "title": "Welcome",
+        "subtitle": "Demo Template",
+        "cta": "Get Started"
+      }
+    },
+    "singlePage": {
+      "nav": {
+        "home": "Home",
+        "about": "About",
+        "services": "Services",
+        "portfolio": "Portfolio",
+        "contact": "Contact"
+      },
+      "hero": {
+        "title": "Welcome",
+        "subtitle": "Demo Template",
+        "cta": "Get Started"
+      }
+    },
+    "splitScreenTemplate": {
+      "nav": {
+        "home": "Home",
+        "about": "About",
+        "services": "Services",
+        "portfolio": "Portfolio",
+        "contact": "Contact"
+      },
+      "hero": {
+        "title": "Welcome",
+        "subtitle": "Demo Template",
+        "cta": "Get Started"
+      }
+    },
+    "textHeavy": {
+      "nav": {
+        "home": "Home",
+        "about": "About",
+        "services": "Services",
+        "portfolio": "Portfolio",
+        "contact": "Contact"
+      },
+      "hero": {
+        "title": "Welcome",
+        "subtitle": "Demo Template",
+        "cta": "Get Started"
+      }
+    },
+    "voiceFirst": {
+      "nav": {
+        "home": "Home",
+        "about": "About",
+        "services": "Services",
+        "portfolio": "Portfolio",
+        "contact": "Contact"
+      },
+      "hero": {
+        "title": "Welcome",
+        "subtitle": "Demo Template",
+        "cta": "Get Started"
+      }
+    },
+    "y2kRetro": {
+      "nav": {
+        "home": "Home",
+        "about": "About",
+        "services": "Services",
+        "portfolio": "Portfolio",
+        "contact": "Contact"
+      },
+      "hero": {
+        "title": "Welcome",
+        "subtitle": "Demo Template",
+        "cta": "Get Started"
+      }
     }
   },
   "ru": {
@@ -8420,17 +9217,32 @@
         "webDev": {
           "title": "Веб-разработка",
           "description": "Кастомные веб-сайты и веб-приложения на современных технологиях",
-          "features": ["React & Next.js", "E-commerce", "Интеграция API", "Оптимизация производительности"]
+          "features": [
+            "React & Next.js",
+            "E-commerce",
+            "Интеграция API",
+            "Оптимизация производительности"
+          ]
         },
         "marketing": {
           "title": "Цифровой маркетинг",
           "description": "Маркетинговые стратегии на основе данных с измеримыми результатами",
-          "features": ["SEO & SEM", "Социальные сети", "Контент-маркетинг", "Аналитика"]
+          "features": [
+            "SEO & SEM",
+            "Социальные сети",
+            "Контент-маркетинг",
+            "Аналитика"
+          ]
         },
         "growth": {
           "title": "Стратегия роста",
           "description": "Комплексные планы роста, адаптированные к вашим бизнес-целям",
-          "features": ["Исследование рынка", "Анализ конкурентов", "Growth Hacking", "Оптимизация конверсии"]
+          "features": [
+            "Исследование рынка",
+            "Анализ конкурентов",
+            "Growth Hacking",
+            "Оптимизация конверсии"
+          ]
         }
       },
       "work": {
@@ -8724,17 +9536,29 @@
           {
             "name": "Unilink Connect",
             "description": "Платформа интеграции API, бесшовно соединяющая ваши системы",
-            "features": ["Синхронизация в реальном времени", "100+ интеграций", "Пользовательские вебхуки"]
+            "features": [
+              "Синхронизация в реальном времени",
+              "100+ интеграций",
+              "Пользовательские вебхуки"
+            ]
           },
           {
             "name": "Unilink Analytics",
             "description": "Набор инструментов бизнес-аналитики и визуализации данных",
-            "features": ["Пользовательские дашборды", "ИИ-инсайты", "Экспорт в любой формат"]
+            "features": [
+              "Пользовательские дашборды",
+              "ИИ-инсайты",
+              "Экспорт в любой формат"
+            ]
           },
           {
             "name": "Unilink Security",
             "description": "Управление безопасностью и соответствием корпоративного уровня",
-            "features": ["Сертифицировано SOC 2", "Соответствует GDPR", "Мониторинг 24/7"]
+            "features": [
+              "Сертифицировано SOC 2",
+              "Соответствует GDPR",
+              "Мониторинг 24/7"
+            ]
           }
         ]
       },
@@ -8771,6 +9595,776 @@
       "Tailwind CSS": "Создано с помощью утилитарного фреймворка Tailwind CSS для быстрой стилизации и последовательного дизайна. Легко настраивайте цвета, отступы и типографику с помощью простых изменений конфигурации.",
       "Framer Motion": "Плавные, профессиональные анимации на базе библиотеки Framer Motion. Ваше портфолио будет выглядеть отполированным и современным с плавными переходами и интерактивными эффектами.",
       "Production Ready": "Протестировано, оптимизировано и готово к немедленному развертыванию на Vercel, Netlify или любой другой хостинговой платформе. Включает все необходимые файлы конфигурации и документацию для быстрого запуска онлайн."
+    },
+    "serviceAgency": {
+      "name": "PIXEL PERFECT AGENCY",
+      "tagline": "Где Креативность Встречается с Эффективностью",
+      "description": "Отмеченное наградами цифровое агентство, специализирующееся на бренд-стратегии, креативном дизайне и performance-маркетинге для амбициозных брендов.",
+      "nav": {
+        "services": "Услуги",
+        "portfolio": "Портфолио",
+        "process": "Процесс",
+        "cta": "Начать Проект"
+      },
+      "hero": {
+        "badge": "Агентство с Наградами",
+        "viewWork": "Посмотреть Работы",
+        "watchShowreel": "Смотреть Шоурил"
+      },
+      "servicesSection": {
+        "title": "Наши Услуги",
+        "subtitle": "Комплексные решения для современных брендов",
+        "timeline": "Сроки:",
+        "investment": "Инвестиции:"
+      },
+      "portfolioSection": {
+        "title": "Избранные Работы",
+        "subtitle": "Трансформируем бренды, обеспечиваем результаты"
+      },
+      "teamSection": {
+        "title": "Познакомьтесь с Командой",
+        "subtitle": "Мировой уровень таланта, сосредоточенный на вашем успехе"
+      },
+      "processSection": {
+        "title": "Наш Проверенный Процесс",
+        "subtitle": "Последовательное совершенство, каждый раз"
+      },
+      "cta": {
+        "title": "Готовы Преобразовать Ваш Бренд?",
+        "subtitle": "Давайте создадим что-то выдающееся вместе. Забронируйте бесплатную стратегическую консультацию сегодня.",
+        "startProject": "Начать Ваш Проект",
+        "viewPricing": "Посмотреть Цены"
+      },
+      "footer": {
+        "copyright": "© 2025 Pixel Perfect Agency. Нью-Йорк • Лондон • Токио"
+      }
+    },
+    "serviceB2b": {
+      "name": "STRATEX CONSULTING",
+      "tagline": "Стратегия. Исполнение. Совершенство.",
+      "description": "Мы сотрудничаем с компаниями из списка Fortune 500 для обеспечения трансформационных изменений и измеримых результатов.",
+      "nav": {
+        "capabilities": "Возможности",
+        "caseStudies": "Кейсы",
+        "insights": "Аналитика",
+        "cta": "Подать Заявку"
+      },
+      "hero": {
+        "scheduleConsultation": "Записаться на Консультацию"
+      },
+      "capabilitiesSection": {
+        "title": "Наши Возможности",
+        "subtitle": "Интегрированные услуги, обеспечивающие измеримое влияние на бизнес во всей вашей организации."
+      },
+      "caseStudiesSection": {
+        "title": "Проверенные Результаты",
+        "subtitle": "Реальные трансформации. Реальное влияние. Реальная окупаемость инвестиций.",
+        "challenge": "Проблема",
+        "solution": "Решение"
+      },
+      "industrySection": {
+        "title": "Отраслевая Экспертиза",
+        "subtitle": "Глубокие знания секторов в сочетании с межотраслевыми лучшими практиками."
+      },
+      "insightsSection": {
+        "title": "Аналитика и Исследования",
+        "subtitle": "Загрузите наши последние размышления о критических бизнес-вызовах.",
+        "download": "Скачать"
+      },
+      "clientsSection": {
+        "title": "Доверяют Лидеры Индустрии"
+      },
+      "processSection": {
+        "title": "Наш Процесс Взаимодействия",
+        "subtitle": "Строгий, совместный подход, разработанный для обеспечения долгосрочного эффекта."
+      },
+      "cta": {
+        "title": "Готовы к Трансформации?",
+        "subtitle": "Запланируйте бесплатную консультацию, чтобы узнать, как мы можем помочь вам достичь ваших стратегических целей.",
+        "apply": "Подать Заявку на Сотрудничество",
+        "note": "Рассмотрение заявки обычно занимает 3-5 рабочих дней"
+      },
+      "footer": {
+        "copyright": "© 2024 StratEx Consulting. Офисы в Нью-Йорке, Лондоне, Сингапуре."
+      }
+    },
+    "serviceCommunity": {
+      "name": "CREATOR COLLECTIVE",
+      "tagline": "Где Создатели Соединяются, Растут и Процветают",
+      "description": "Присоединяйтесь к 50,000+ создателям, строящим устойчивый бизнес через сообщество, сотрудничество и непрерывное обучение.",
+      "nav": {
+        "features": "Возможности",
+        "successStories": "Истории Успеха",
+        "pricing": "Цены",
+        "cta": "Начать Бесплатный Пробный Период"
+      },
+      "hero": {
+        "startTrial": "Начать Бесплатный Пробный Период",
+        "watchDemo": "Посмотреть Демо"
+      },
+      "forCreatorsSection": {
+        "badge": "Для Создателей",
+        "title": "Создавайте, Развивайте и Монетизируйте Ваше Сообщество"
+      },
+      "forMembersSection": {
+        "badge": "Для Участников",
+        "title": "Общайтесь с Любимыми Создателями"
+      },
+      "successStoriesSection": {
+        "title": "Истории Успеха",
+        "subtitle": "Реальные создатели, строящие устойчивый бизнес на нашей платформе.",
+        "members": "Участники",
+        "earnings": "Доход"
+      },
+      "pricingSection": {
+        "title": "Выберите Ваш План",
+        "subtitle": "Начните бесплатно. Обновляйтесь по мере роста. Отменяйте в любое время.",
+        "monthly": "Месячно",
+        "annual": "Годовой",
+        "save": "Экономия 20%",
+        "mostPopular": "Самый Популярный"
+      },
+      "platformSection": {
+        "reliability": "Создано для Надежности",
+        "reliabilityDesc": "SLA 99.9% времени безотказной работы. Инфраструктура корпоративного уровня.",
+        "mobile": "Мобильная Ориентация",
+        "mobileDesc": "Красивые нативные приложения для iOS и Android.",
+        "payments": "Глобальные Платежи",
+        "paymentsDesc": "Принимайте платежи в 135+ валютах. Мгновенные выплаты."
+      },
+      "onboardingSection": {
+        "title": "Начните за Минуты"
+      },
+      "cta": {
+        "title": "Начните Строить Ваше Сообщество Сегодня",
+        "subtitle": "Присоединяйтесь к 50,000+ создателям, выбравшим Creator Collective. Кредитная карта не требуется.",
+        "startTrial": "Начать Бесплатный Пробный Период",
+        "note": "14-дневный бесплатный пробный период • Без кредитной карты • Отменяйте в любое время"
+      },
+      "footer": {
+        "copyright": "© 2024 Creator Collective. Расширяем возможности создателей по всему миру."
+      }
+    },
+    "serviceConsulting": {
+      "name": "APEX STRATEGIC CONSULTING",
+      "tagline": "Трансформируем. Исполняем. Превосходим.",
+      "description": "Элитный управленческий консалтинг для генеральных директоров и советов директоров. Мы партнеры глобальных лидеров в решении их самых критических задач и использовании величайших возможностей.",
+      "nav": {
+        "services": "Услуги",
+        "caseStudies": "Кейсы",
+        "team": "Наша Команда",
+        "insights": "Аналитика",
+        "cta": "Связаться с Нами"
+      },
+      "hero": {
+        "badge": "Доверяют Лидеры Fortune 500",
+        "scheduleConsultation": "Записаться на Консультацию",
+        "downloadInsights": "Скачать Аналитику"
+      },
+      "servicesSection": {
+        "title": "Наши Услуги",
+        "subtitle": "Стратегические решения для ваших самых критических задач",
+        "coreCapabilities": "Основные Возможности",
+        "ourApproach": "Наш Подход",
+        "typicalEngagement": "Типичное Взаимодействие:",
+        "investmentRange": "Диапазон Инвестиций:"
+      },
+      "engagementsSection": {
+        "title": "Клиентское Взаимодействие",
+        "subtitle": "Трансформационные результаты для глобальных предприятий",
+        "situation": "Ситуация",
+        "intervention": "Наше Вмешательство"
+      },
+      "teamSection": {
+        "title": "Наши Партнеры",
+        "subtitle": "Старшие руководители из ведущих мировых компаний"
+      },
+      "methodologySection": {
+        "title": "Метод Apex",
+        "subtitle": "Проверенная в боях методология, отточенная на более чем 1000 проектах"
+      },
+      "insightsSection": {
+        "title": "Последняя Аналитика",
+        "subtitle": "Исследования и перспективы от наших экспертов",
+        "downloadPdf": "Скачать PDF"
+      },
+      "cta": {
+        "title": "Обсудим Ваши Стратегические Приоритеты",
+        "subtitle": "Запланируйте конфиденциальную консультацию с одним из наших старших партнеров.",
+        "scheduleConsultation": "Записаться на Консультацию",
+        "requestProposal": "Запросить Предложение"
+      },
+      "footer": {
+        "copyright": "© 2025 Apex Strategic Consulting. Нью-Йорк • Лондон • Дубай • Сингапур • Гонконг"
+      }
+    },
+    "serviceDfyou": {
+      "name": "DESIGN ON TAP",
+      "tagline": "Безлимитный Дизайн. Фиксированная Цена. Молниеносно Быстро.",
+      "description": "Подпишитесь на безлимитный графический дизайн, брендинг и веб-дизайн. Приостановите или отмените в любое время. Без сюрпризов.",
+      "speed": "Срок выполнения 48 часов",
+      "nav": {
+        "work": "Работы",
+        "pricing": "Цены",
+        "faq": "FAQ",
+        "cta": "Подписаться Сейчас"
+      },
+      "hero": {
+        "getStarted": "Начать",
+        "viewExamples": "Посмотреть Примеры",
+        "badges": {
+          "turnaround": "Средний срок 48 ч.",
+          "revisions": "Безлимитные правки",
+          "pause": "Приостановите или отмените в любое время"
+        }
+      },
+      "howItWorksSection": {
+        "title": "Как Это Работает"
+      },
+      "portfolioSection": {
+        "title": "Недавние Работы",
+        "subtitle": "Реальные проекты. Реально быстро. Все выполнено менее чем за 48 часов.",
+        "all": "Все",
+        "branding": "Брендинг",
+        "webDesign": "Веб-дизайн",
+        "socialMedia": "Социальные Сети",
+        "marketing": "Маркетинг"
+      },
+      "pricingSection": {
+        "title": "Простая, Прозрачная Цена",
+        "subtitle": "Одна фиксированная ежемесячная плата. Безлимитные запросы. Приостановите или отмените в любое время.",
+        "subscribeNow": "Подписаться Сейчас",
+        "pauseNote": "Приостановите или отмените в любое время",
+        "notIncluded": "Не Включено:"
+      },
+      "guaranteesSection": {
+        "title": "Наши Гарантии"
+      },
+      "testimonialsSection": {
+        "title": "Что Говорят Клиенты"
+      },
+      "faqSection": {
+        "title": "Часто Задаваемые Вопросы"
+      },
+      "cta": {
+        "title": "Готовы к Безлимитному Дизайну?",
+        "subtitle": "Подпишитесь сегодня и получите ваш первый дизайн за 48 часов. Приостановите или отмените в любое время.",
+        "subscribe": "Подписаться за $2,995/месяц",
+        "note": "75% гарантия возврата • Приостановка в любое время • Без контрактов"
+      },
+      "footer": {
+        "copyright": "© 2024 Design on Tap. Безлимитный дизайн для современных команд."
+      }
+    },
+    "serviceEnterprise": {
+      "name": "ENTERPRISE CLOUD PLATFORM",
+      "tagline": "Решения Корпоративного Уровня, Которые Масштабируются",
+      "description": "Доверяют компании Fortune 500 по всему миру. Безопасно, соответствует требованиям и создано для глобальных корпоративных операций.",
+      "nav": {
+        "solutions": "Решения",
+        "clients": "Клиенты",
+        "pricing": "Цены",
+        "cta": "Связаться с Продажами"
+      },
+      "hero": {
+        "badge": "Сертифицировано SOC 2 Type II",
+        "scheduleDemo": "Записаться на Демо",
+        "viewCaseStudies": "Посмотреть Кейсы"
+      },
+      "solutionsSection": {
+        "title": "Корпоративные Решения",
+        "subtitle": "Создано для масштаба, безопасности и глобальных операций"
+      },
+      "integrationsSection": {
+        "title": "Бесшовные Интеграции",
+        "subtitle": "Работает с вашим существующим корпоративным стеком"
+      },
+      "clientsSection": {
+        "title": "Доверяют Лидеры Индустрии",
+        "subtitle": "Истории успеха корпоративных клиентов",
+        "challenge": "Проблема",
+        "result": "Результат"
+      },
+      "supportSection": {
+        "title": "Корпоративная Поддержка, Которая Никогда Не Спит",
+        "subtitle": "Поддержка мирового класса для критически важных операций"
+      },
+      "pricingSection": {
+        "title": "Корпоративные Цены",
+        "subtitle": "Гибкие планы, масштабирующиеся с вашей организацией",
+        "mostPopular": "САМЫЙ ПОПУЛЯРНЫЙ"
+      },
+      "cta": {
+        "title": "Готовы Масштабировать Ваше Предприятие?",
+        "subtitle": "Присоединяйтесь к 500+ корпоративным клиентам, доверяющим нам свои критически важные операции.",
+        "scheduleDemo": "Записаться на Демо",
+        "downloadWhitepaper": "Скачать Белую Книгу"
+      },
+      "footer": {
+        "copyright": "© 2025 EnterpriseCloud Platform. Сан-Франциско • Лондон • Сингапур • Токио"
+      }
+    },
+    "productAudio": {
+      "nav": {
+        "home": "Главная",
+        "about": "О нас",
+        "services": "Услуги",
+        "portfolio": "Портфолио",
+        "contact": "Контакты"
+      },
+      "hero": {
+        "title": "Добро пожаловать",
+        "subtitle": "Демо шаблон",
+        "cta": "Начать"
+      }
+    },
+    "productCourse": {
+      "nav": {
+        "home": "Главная",
+        "about": "О нас",
+        "services": "Услуги",
+        "portfolio": "Портфолио",
+        "contact": "Контакты"
+      },
+      "hero": {
+        "title": "Добро пожаловать",
+        "subtitle": "Демо шаблон",
+        "cta": "Начать"
+      }
+    },
+    "productFashion": {
+      "nav": {
+        "home": "Главная",
+        "about": "О нас",
+        "services": "Услуги",
+        "portfolio": "Портфолио",
+        "contact": "Контакты"
+      },
+      "hero": {
+        "title": "Добро пожаловать",
+        "subtitle": "Демо шаблон",
+        "cta": "Начать"
+      }
+    },
+    "productLuxury": {
+      "nav": {
+        "home": "Главная",
+        "about": "О нас",
+        "services": "Услуги",
+        "portfolio": "Портфолио",
+        "contact": "Контакты"
+      },
+      "hero": {
+        "title": "Добро пожаловать",
+        "subtitle": "Демо шаблон",
+        "cta": "Начать"
+      }
+    },
+    "productPhysical": {
+      "nav": {
+        "home": "Главная",
+        "about": "О нас",
+        "services": "Услуги",
+        "portfolio": "Портфолио",
+        "contact": "Контакты"
+      },
+      "hero": {
+        "title": "Добро пожаловать",
+        "subtitle": "Демо шаблон",
+        "cta": "Начать"
+      }
+    },
+    "productPremium": {
+      "nav": {
+        "home": "Главная",
+        "about": "О нас",
+        "services": "Услуги",
+        "portfolio": "Портфолио",
+        "contact": "Контакты"
+      },
+      "hero": {
+        "title": "Добро пожаловать",
+        "subtitle": "Демо шаблон",
+        "cta": "Начать"
+      }
+    },
+    "productSaas": {
+      "nav": {
+        "home": "Главная",
+        "about": "О нас",
+        "services": "Услуги",
+        "portfolio": "Портфолио",
+        "contact": "Контакты"
+      },
+      "hero": {
+        "title": "Добро пожаловать",
+        "subtitle": "Демо шаблон",
+        "cta": "Начать"
+      }
+    },
+    "productTech": {
+      "nav": {
+        "home": "Главная",
+        "about": "О нас",
+        "services": "Услуги",
+        "portfolio": "Портфолио",
+        "contact": "Контакты"
+      },
+      "hero": {
+        "title": "Добро пожаловать",
+        "subtitle": "Демо шаблон",
+        "cta": "Начать"
+      }
+    },
+    "productVacuum": {
+      "nav": {
+        "home": "Главная",
+        "about": "О нас",
+        "services": "Услуги",
+        "portfolio": "Портфолио",
+        "contact": "Контакты"
+      },
+      "hero": {
+        "title": "Добро пожаловать",
+        "subtitle": "Демо шаблон",
+        "cta": "Начать"
+      }
+    },
+    "blogMagazine": {
+      "nav": {
+        "home": "Главная",
+        "about": "О нас",
+        "services": "Услуги",
+        "portfolio": "Портфолио",
+        "contact": "Контакты"
+      },
+      "hero": {
+        "title": "Добро пожаловать",
+        "subtitle": "Демо шаблон",
+        "cta": "Начать"
+      }
+    },
+    "blogPersonal": {
+      "nav": {
+        "home": "Главная",
+        "about": "О нас",
+        "services": "Услуги",
+        "portfolio": "Портфолио",
+        "contact": "Контакты"
+      },
+      "hero": {
+        "title": "Добро пожаловать",
+        "subtitle": "Демо шаблон",
+        "cta": "Начать"
+      }
+    },
+    "blogTech": {
+      "nav": {
+        "home": "Главная",
+        "about": "О нас",
+        "services": "Услуги",
+        "portfolio": "Портфолио",
+        "contact": "Контакты"
+      },
+      "hero": {
+        "title": "Добро пожаловать",
+        "subtitle": "Демо шаблон",
+        "cta": "Начать"
+      }
+    },
+    "immersive3d": {
+      "nav": {
+        "home": "Главная",
+        "about": "О нас",
+        "services": "Услуги",
+        "portfolio": "Портфолио",
+        "contact": "Контакты"
+      },
+      "hero": {
+        "title": "Добро пожаловать",
+        "subtitle": "Демо шаблон",
+        "cta": "Начать"
+      }
+    },
+    "arSpatial": {
+      "nav": {
+        "home": "Главная",
+        "about": "О нас",
+        "services": "Услуги",
+        "portfolio": "Портфолио",
+        "contact": "Контакты"
+      },
+      "hero": {
+        "title": "Добро пожаловать",
+        "subtitle": "Демо шаблон",
+        "cta": "Начать"
+      }
+    },
+    "bentoGrid": {
+      "nav": {
+        "home": "Главная",
+        "about": "О нас",
+        "services": "Услуги",
+        "portfolio": "Портфолио",
+        "contact": "Контакты"
+      },
+      "hero": {
+        "title": "Добро пожаловать",
+        "subtitle": "Демо шаблон",
+        "cta": "Начать"
+      }
+    },
+    "boldTypography": {
+      "nav": {
+        "home": "Главная",
+        "about": "О нас",
+        "services": "Услуги",
+        "portfolio": "Портфолио",
+        "contact": "Контакты"
+      },
+      "hero": {
+        "title": "Добро пожаловать",
+        "subtitle": "Демо шаблон",
+        "cta": "Начать"
+      }
+    },
+    "cardModular": {
+      "nav": {
+        "home": "Главная",
+        "about": "О нас",
+        "services": "Услуги",
+        "portfolio": "Портфолио",
+        "contact": "Контакты"
+      },
+      "hero": {
+        "title": "Добро пожаловать",
+        "subtitle": "Демо шаблон",
+        "cta": "Начать"
+      }
+    },
+    "collageMaximalist": {
+      "nav": {
+        "home": "Главная",
+        "about": "О нас",
+        "services": "Услуги",
+        "portfolio": "Портфолио",
+        "contact": "Контакты"
+      },
+      "hero": {
+        "title": "Добро пожаловать",
+        "subtitle": "Демо шаблон",
+        "cta": "Начать"
+      }
+    },
+    "darkModeTemplate": {
+      "nav": {
+        "home": "Главная",
+        "about": "О нас",
+        "services": "Услуги",
+        "portfolio": "Портфолио",
+        "contact": "Контакты"
+      },
+      "hero": {
+        "title": "Добро пожаловать",
+        "subtitle": "Демо шаблон",
+        "cta": "Начать"
+      }
+    },
+    "dataDashboard": {
+      "nav": {
+        "home": "Главная",
+        "about": "О нас",
+        "services": "Услуги",
+        "portfolio": "Портфолио",
+        "contact": "Контакты"
+      },
+      "hero": {
+        "title": "Добро пожаловать",
+        "subtitle": "Демо шаблон",
+        "cta": "Начать"
+      }
+    },
+    "fullscreenImmersive": {
+      "nav": {
+        "home": "Главная",
+        "about": "О нас",
+        "services": "Услуги",
+        "portfolio": "Портфолио",
+        "contact": "Контакты"
+      },
+      "hero": {
+        "title": "Добро пожаловать",
+        "subtitle": "Демо шаблон",
+        "cta": "Начать"
+      }
+    },
+    "gridMasonry": {
+      "nav": {
+        "home": "Главная",
+        "about": "О нас",
+        "services": "Услуги",
+        "portfolio": "Портфолио",
+        "contact": "Контакты"
+      },
+      "hero": {
+        "title": "Добро пожаловать",
+        "subtitle": "Демо шаблон",
+        "cta": "Начать"
+      }
+    },
+    "illustrationFocus": {
+      "nav": {
+        "home": "Главная",
+        "about": "О нас",
+        "services": "Услуги",
+        "portfolio": "Портфолио",
+        "contact": "Контакты"
+      },
+      "hero": {
+        "title": "Добро пожаловать",
+        "subtitle": "Демо шаблон",
+        "cta": "Начать"
+      }
+    },
+    "kineticTypography": {
+      "nav": {
+        "home": "Главная",
+        "about": "О нас",
+        "services": "Услуги",
+        "portfolio": "Портфолио",
+        "contact": "Контакты"
+      },
+      "hero": {
+        "title": "Добро пожаловать",
+        "subtitle": "Демо шаблон",
+        "cta": "Начать"
+      }
+    },
+    "neoBrutalistTemplate": {
+      "nav": {
+        "home": "Главная",
+        "about": "О нас",
+        "services": "Услуги",
+        "portfolio": "Портфолио",
+        "contact": "Контакты"
+      },
+      "hero": {
+        "title": "Добро пожаловать",
+        "subtitle": "Демо шаблон",
+        "cta": "Начать"
+      }
+    },
+    "organicLiquid": {
+      "nav": {
+        "home": "Главная",
+        "about": "О нас",
+        "services": "Услуги",
+        "portfolio": "Портфолио",
+        "contact": "Контакты"
+      },
+      "hero": {
+        "title": "Добро пожаловать",
+        "subtitle": "Демо шаблон",
+        "cta": "Начать"
+      }
+    },
+    "linPortfolioElegance": {
+      "nav": {
+        "home": "Главная",
+        "about": "О нас",
+        "services": "Услуги",
+        "portfolio": "Портфолио",
+        "contact": "Контакты"
+      },
+      "hero": {
+        "title": "Добро пожаловать",
+        "subtitle": "Демо шаблон",
+        "cta": "Начать"
+      }
+    },
+    "linProfessionalAuthority": {
+      "nav": {
+        "home": "Главная",
+        "about": "О нас",
+        "services": "Услуги",
+        "portfolio": "Портфолио",
+        "contact": "Контакты"
+      },
+      "hero": {
+        "title": "Добро пожаловать",
+        "subtitle": "Демо шаблон",
+        "cta": "Начать"
+      }
+    },
+    "singlePage": {
+      "nav": {
+        "home": "Главная",
+        "about": "О нас",
+        "services": "Услуги",
+        "portfolio": "Портфолио",
+        "contact": "Контакты"
+      },
+      "hero": {
+        "title": "Добро пожаловать",
+        "subtitle": "Демо шаблон",
+        "cta": "Начать"
+      }
+    },
+    "splitScreenTemplate": {
+      "nav": {
+        "home": "Главная",
+        "about": "О нас",
+        "services": "Услуги",
+        "portfolio": "Портфолио",
+        "contact": "Контакты"
+      },
+      "hero": {
+        "title": "Добро пожаловать",
+        "subtitle": "Демо шаблон",
+        "cta": "Начать"
+      }
+    },
+    "textHeavy": {
+      "nav": {
+        "home": "Главная",
+        "about": "О нас",
+        "services": "Услуги",
+        "portfolio": "Портфолио",
+        "contact": "Контакты"
+      },
+      "hero": {
+        "title": "Добро пожаловать",
+        "subtitle": "Демо шаблон",
+        "cta": "Начать"
+      }
+    },
+    "voiceFirst": {
+      "nav": {
+        "home": "Главная",
+        "about": "О нас",
+        "services": "Услуги",
+        "portfolio": "Портфолио",
+        "contact": "Контакты"
+      },
+      "hero": {
+        "title": "Добро пожаловать",
+        "subtitle": "Демо шаблон",
+        "cta": "Начать"
+      }
+    },
+    "y2kRetro": {
+      "nav": {
+        "home": "Главная",
+        "about": "О нас",
+        "services": "Услуги",
+        "portfolio": "Портфолио",
+        "contact": "Контакты"
+      },
+      "hero": {
+        "title": "Добро пожаловать",
+        "subtitle": "Демо шаблон",
+        "cta": "Начать"
+      }
     }
   }
 }

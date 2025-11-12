@@ -1,0 +1,323 @@
+{
+  "timestamp": "2025-11-12T18:36:20.177Z",
+  "summary": {
+    "totalIds": 61,
+    "totalFiles": 61,
+    "mapped": 61,
+    "withI18n": 22,
+    "needingI18n": 39,
+    "unmappedIds": 0,
+    "unmappedFiles": 0
+  },
+  "needI18n": [
+    {
+      "id": "3d-immersive",
+      "path": "components/templates/3d-immersive/3d-immersive-template.tsx",
+      "hasI18n": false
+    },
+    {
+      "id": "ar-spatial",
+      "path": "components/templates/ar-spatial/ar-spatial-template.tsx",
+      "hasI18n": false
+    },
+    {
+      "id": "bento-grid",
+      "path": "components/templates/bento-grid/bento-grid-template.tsx",
+      "hasI18n": false
+    },
+    {
+      "id": "blog-magazine",
+      "path": "components/templates/blog-pages/magazine-blog-template.tsx",
+      "hasI18n": false
+    },
+    {
+      "id": "blog-personal",
+      "path": "components/templates/blog-pages/personal-blog-template.tsx",
+      "hasI18n": false
+    },
+    {
+      "id": "blog-tech",
+      "path": "components/templates/blog-pages/tech-blog-template.tsx",
+      "hasI18n": false
+    },
+    {
+      "id": "bold-typography",
+      "path": "components/templates/bold-typography/bold-typography-template.tsx",
+      "hasI18n": false
+    },
+    {
+      "id": "card-modular",
+      "path": "components/templates/card-modular/card-modular-template.tsx",
+      "hasI18n": false
+    },
+    {
+      "id": "collage-maximalist",
+      "path": "components/templates/collage-maximalist/collage-maximalist-template.tsx",
+      "hasI18n": false
+    },
+    {
+      "id": "dark-mode",
+      "path": "components/templates/dark-mode/dark-mode-template.tsx",
+      "hasI18n": false
+    },
+    {
+      "id": "data-dashboard",
+      "path": "components/templates/data-dashboard/data-dashboard-template.tsx",
+      "hasI18n": false
+    },
+    {
+      "id": "fullscreen-immersive",
+      "path": "components/templates/fullscreen-immersive/fullscreen-immersive-template.tsx",
+      "hasI18n": false
+    },
+    {
+      "id": "grid-masonry",
+      "path": "components/templates/grid-masonry/grid-masonry-template.tsx",
+      "hasI18n": false
+    },
+    {
+      "id": "illustration-focus",
+      "path": "components/templates/illustration-focus/illustration-focus-template.tsx",
+      "hasI18n": false
+    },
+    {
+      "id": "kinetic-typography",
+      "path": "components/templates/kinetic-typography/kinetic-typography-template.tsx",
+      "hasI18n": false
+    },
+    {
+      "id": "lin-portfolio-elegance",
+      "path": "components/templates/lin/lin-portfolio-elegance-template.tsx",
+      "hasI18n": false
+    },
+    {
+      "id": "lin-professional-authority",
+      "path": "components/templates/lin/lin-professional-authority-template.tsx",
+      "hasI18n": false
+    },
+    {
+      "id": "neo-brutalist",
+      "path": "components/templates/neo-brutalist/neo-brutalist-template.tsx",
+      "hasI18n": false
+    },
+    {
+      "id": "organic-liquid",
+      "path": "components/templates/organic-liquid/organic-liquid-template.tsx",
+      "hasI18n": false
+    },
+    {
+      "id": "product-audio",
+      "path": "components/templates/product-pages/audio-product-template.tsx",
+      "hasI18n": false
+    },
+    {
+      "id": "product-course",
+      "path": "components/templates/product-pages/course-product-template.tsx",
+      "hasI18n": false
+    },
+    {
+      "id": "product-fashion",
+      "path": "components/templates/product-pages/fashion-product-template.tsx",
+      "hasI18n": false
+    },
+    {
+      "id": "product-luxury",
+      "path": "components/templates/product-pages/luxury-product-template.tsx",
+      "hasI18n": false
+    },
+    {
+      "id": "product-physical",
+      "path": "components/templates/product-pages/physical-product-template.tsx",
+      "hasI18n": false
+    },
+    {
+      "id": "product-premium",
+      "path": "components/templates/product-pages/premium-product-template.tsx",
+      "hasI18n": false
+    },
+    {
+      "id": "product-saas",
+      "path": "components/templates/product-pages/saas-product-template.tsx",
+      "hasI18n": false
+    },
+    {
+      "id": "product-tech",
+      "path": "components/templates/product-pages/tech-product-template.tsx",
+      "hasI18n": false
+    },
+    {
+      "id": "product-vacuum",
+      "path": "components/templates/product-pages/vacuum-product-template.tsx",
+      "hasI18n": false
+    },
+    {
+      "id": "service-agency",
+      "path": "components/templates/product-pages/agency-service-template.tsx",
+      "hasI18n": false
+    },
+    {
+      "id": "service-b2b",
+      "path": "components/templates/product-pages/b2b-service-template.tsx",
+      "hasI18n": false
+    },
+    {
+      "id": "service-community",
+      "path": "components/templates/product-pages/community-service-template.tsx",
+      "hasI18n": false
+    },
+    {
+      "id": "service-consulting",
+      "path": "components/templates/product-pages/consulting-service-template.tsx",
+      "hasI18n": false
+    },
+    {
+      "id": "service-dfyou",
+      "path": "components/templates/product-pages/dfyou-service-template.tsx",
+      "hasI18n": false
+    },
+    {
+      "id": "service-enterprise",
+      "path": "components/templates/product-pages/enterprise-service-template.tsx",
+      "hasI18n": false
+    },
+    {
+      "id": "single-page",
+      "path": "components/templates/single-page/single-page-template.tsx",
+      "hasI18n": false
+    },
+    {
+      "id": "split-screen",
+      "path": "components/templates/split-screen/split-screen-template.tsx",
+      "hasI18n": false
+    },
+    {
+      "id": "text-heavy",
+      "path": "components/templates/text-heavy/text-heavy-template.tsx",
+      "hasI18n": false
+    },
+    {
+      "id": "voice-first",
+      "path": "components/templates/voice-first/voice-first-template.tsx",
+      "hasI18n": false
+    },
+    {
+      "id": "y2k-retro",
+      "path": "components/templates/y2k-retro/y2k-retro-template.tsx",
+      "hasI18n": false
+    }
+  ],
+  "haveI18n": [
+    {
+      "id": "blog-archetypes-editorial",
+      "path": "components/templates/blog-pages/archetypes-editorial-template.tsx",
+      "hasI18n": true
+    },
+    {
+      "id": "blog-archetypes-minimal",
+      "path": "components/templates/blog-pages/archetypes-minimal-template.tsx",
+      "hasI18n": true
+    },
+    {
+      "id": "creative-agency-bold",
+      "path": "components/templates/creative-agency-bold/creative-agency-bold-template.tsx",
+      "hasI18n": true
+    },
+    {
+      "id": "experimental-3d",
+      "path": "components/templates/experimental-3d/experimental-3d-template.tsx",
+      "hasI18n": true
+    },
+    {
+      "id": "glassmorphism-modern",
+      "path": "components/templates/glassmorphism-modern/glassmorphism-modern-template.tsx",
+      "hasI18n": true
+    },
+    {
+      "id": "interactive-agency",
+      "path": "components/templates/interactive-agency/interactive-agency-template.tsx",
+      "hasI18n": true
+    },
+    {
+      "id": "lin-tech-pioneer",
+      "path": "components/templates/lin/lin-tech-pioneer-template.tsx",
+      "hasI18n": true
+    },
+    {
+      "id": "luxury-minimal",
+      "path": "components/templates/luxury-minimal/luxury-minimal-template.tsx",
+      "hasI18n": true
+    },
+    {
+      "id": "minimal-portfolio-clean",
+      "path": "components/templates/minimal-portfolio-clean/minimal-portfolio-clean-template.tsx",
+      "hasI18n": true
+    },
+    {
+      "id": "minimalist",
+      "path": "components/templates/minimalist/minimalist-template.tsx",
+      "hasI18n": true
+    },
+    {
+      "id": "motion-designer",
+      "path": "components/templates/motion-designer/motion-designer-template.tsx",
+      "hasI18n": true
+    },
+    {
+      "id": "online-business-agency",
+      "path": "components/templates/online-business/online-business-agency-template.tsx",
+      "hasI18n": true
+    },
+    {
+      "id": "online-business-coach",
+      "path": "components/templates/online-business/online-business-coach-template.tsx",
+      "hasI18n": true
+    },
+    {
+      "id": "online-business-course",
+      "path": "components/templates/online-business/online-business-course-template.tsx",
+      "hasI18n": true
+    },
+    {
+      "id": "online-business-saas",
+      "path": "components/templates/online-business-saas/online-business-saas-template.tsx",
+      "hasI18n": true
+    },
+    {
+      "id": "personal-brand",
+      "path": "components/templates/personal-brand/personal-brand-template.tsx",
+      "hasI18n": true
+    },
+    {
+      "id": "photography-immersive",
+      "path": "components/templates/photography-immersive/photography-immersive-template.tsx",
+      "hasI18n": true
+    },
+    {
+      "id": "professional-b2b",
+      "path": "components/templates/professional-b2b/professional-b2b-template.tsx",
+      "hasI18n": true
+    },
+    {
+      "id": "saas-feature-rich",
+      "path": "components/templates/saas-feature-rich/saas-feature-rich-template.tsx",
+      "hasI18n": true
+    },
+    {
+      "id": "service-marketplace",
+      "path": "components/templates/service-marketplace/service-marketplace-template.tsx",
+      "hasI18n": true
+    },
+    {
+      "id": "split-screen-editorial",
+      "path": "components/templates/split-screen-editorial/split-screen-editorial-template.tsx",
+      "hasI18n": true
+    },
+    {
+      "id": "startup-pitch",
+      "path": "components/templates/startup-pitch/startup-pitch-template.tsx",
+      "hasI18n": true
+    }
+  ],
+  "unmappedIds": [],
+  "unmappedFiles": []
+}

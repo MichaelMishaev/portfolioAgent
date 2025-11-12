@@ -58,19 +58,19 @@ export function StartupPitchTemplate() {
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-xl shadow-sm">
         <div className="container mx-auto px-6 py-4 flex items-center justify-between">
-          <Link href="/" className="text-sm font-semibold text-blue-600 hover:text-blue-700 transition-colors">
+          <Link href="/" className="text-sm font-semibold text-blue-600 hover:text-blue-700 transition-colors tracking-wide">
             {tt.common.backToGallery}
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
-            <a href="#features" className="text-sm font-medium hover:text-blue-600 transition-colors">
+            <a href="#features" className="text-sm font-semibold hover:text-blue-600 transition-colors tracking-wide">
               {tt.common.features}
             </a>
-            <a href="#pricing" className="text-sm font-medium hover:text-blue-600 transition-colors">
+            <a href="#pricing" className="text-sm font-semibold hover:text-blue-600 transition-colors tracking-wide">
               {tt.common.pricing}
             </a>
-            <a href="#testimonials" className="text-sm font-medium hover:text-blue-600 transition-colors">
+            <a href="#testimonials" className="text-sm font-semibold hover:text-blue-600 transition-colors tracking-wide">
               {tt.common.testimonials}
             </a>
             <ThemeToggle />
@@ -123,14 +123,14 @@ export function StartupPitchTemplate() {
               animate={{ opacity: 1, y: 0 }}
               transition={prefersReducedMotion ? {} : { duration: 0.6 }}
             >
-              <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-medium mb-6">
+              <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-semibold mb-6 tracking-wide uppercase">
                 <FiZap className="text-orange-500" />
                 {portfolioData.badge}
               </div>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 leading-tight bg-gradient-to-r from-blue-600 to-orange-500 bg-clip-text text-transparent break-words text-white">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-6 leading-[1.1] tracking-tight bg-gradient-to-r from-blue-600 via-blue-700 to-orange-500 bg-clip-text text-transparent break-words font-sans">
                 {portfolioData.headline}
               </h1>
-              <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+              <p className="text-lg sm:text-xl md:text-2xl text-gray-700 mb-8 max-w-2xl mx-auto leading-relaxed font-medium">
                 {portfolioData.subheadline}
               </p>
 
@@ -141,7 +141,7 @@ export function StartupPitchTemplate() {
                   placeholder="Enter your email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="w-full sm:w-80 h-12 text-base text-white"
+                  className="w-full sm:w-80 h-12 text-base text-gray-900 placeholder:text-gray-500 font-medium border-2 border-gray-300 focus:border-blue-500"
                   aria-label="Email address"
                   autoComplete="email"
                 />
@@ -150,7 +150,7 @@ export function StartupPitchTemplate() {
                 </Button>
               </div>
 
-              <p className="text-sm text-gray-500">No credit card required • 14-day free trial</p>
+              <p className="text-sm text-gray-600 font-medium">No credit card required • 14-day free trial</p>
             </motion.div>
           </div>
 
@@ -200,10 +200,10 @@ export function StartupPitchTemplate() {
                 transition={prefersReducedMotion ? {} : { delay: index * 0.1 }}
                 className="text-center"
               >
-                <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-blue-600 mb-2 break-words">
+                <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-blue-600 mb-2 break-words tracking-tight font-sans">
                   {counts[metric.key as keyof typeof counts]}{metric.suffix}
                 </div>
-                <div className="text-sm text-gray-600 font-medium">{metric.label}</div>
+                <div className="text-sm sm:text-base text-gray-700 font-semibold uppercase tracking-wide">{metric.label}</div>
               </motion.div>
             ))}
           </div>
@@ -215,8 +215,8 @@ export function StartupPitchTemplate() {
         <div className="container mx-auto px-6">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <h2 className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>Powerful Features</h2>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              <h2 className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 break-words tracking-tight leading-tight font-sans ${isDark ? 'text-white' : 'text-gray-900'}`}>Powerful Features</h2>
+              <p className="text-lg sm:text-xl md:text-2xl text-gray-700 max-w-2xl mx-auto font-medium leading-relaxed">
                 Everything you need to grow your business, all in one place
               </p>
             </div>
@@ -236,8 +236,8 @@ export function StartupPitchTemplate() {
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-orange-500 rounded-xl flex items-center justify-center text-white text-2xl mb-6">
                   {feature.icon}
                 </div>
-                <h3 className={`text-base sm:text-lg md:text-xl font-bold mb-3 break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>{feature.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{feature.description}</p>
+                <h3 className={`text-lg sm:text-xl md:text-2xl font-bold mb-3 break-words tracking-tight font-sans ${isDark ? 'text-white' : 'text-gray-900'}`}>{feature.title}</h3>
+                <p className="text-base sm:text-lg text-gray-700 leading-relaxed font-normal">{feature.description}</p>
               </motion.div>
             ))}
           </div>
@@ -249,8 +249,8 @@ export function StartupPitchTemplate() {
         <div className="container mx-auto px-6">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <h2 className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>How It Works</h2>
-              <p className="text-xl text-gray-600">Get started in 3 simple steps</p>
+              <h2 className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 break-words tracking-tight leading-tight font-sans ${isDark ? 'text-white' : 'text-gray-900'}`}>How It Works</h2>
+              <p className="text-lg sm:text-xl md:text-2xl text-gray-700 font-medium">Get started in 3 simple steps</p>
             </div>
           </ScrollReveal>
 
@@ -268,8 +268,8 @@ export function StartupPitchTemplate() {
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-orange-500 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-6">
                     {step.number}
                   </div>
-                  <h3 className={`text-lg sm:text-xl md:text-2xl font-bold mb-3 break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>{step.title}</h3>
-                  <p className="text-gray-600">{step.description}</p>
+                  <h3 className={`text-xl sm:text-2xl md:text-3xl font-bold mb-3 break-words tracking-tight font-sans ${isDark ? 'text-white' : 'text-gray-900'}`}>{step.title}</h3>
+                  <p className="text-base sm:text-lg text-gray-700 leading-relaxed font-normal">{step.description}</p>
                 </div>
                 {index < portfolioData.steps.length - 1 && (
                   <div className="hidden md:block absolute top-8 left-[60%] w-full h-0.5 bg-gradient-to-r from-blue-200 to-orange-200" />
@@ -285,8 +285,8 @@ export function StartupPitchTemplate() {
         <div className="container mx-auto px-6">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <h2 className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>Simple, Transparent Pricing</h2>
-              <p className="text-xl text-gray-600">Choose the plan that's right for you</p>
+              <h2 className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 break-words tracking-tight leading-tight font-sans ${isDark ? 'text-white' : 'text-gray-900'}`}>Simple, Transparent Pricing</h2>
+              <p className="text-lg sm:text-xl md:text-2xl text-gray-700 font-medium">Choose the plan that's right for you</p>
             </div>
           </ScrollReveal>
 
@@ -310,16 +310,16 @@ export function StartupPitchTemplate() {
                     Most Popular
                   </div>
                 )}
-                <h3 className={`text-lg sm:text-xl md:text-2xl font-bold mb-2 break-words ${plan.popular ? "text-white" : "text-gray-900"}`}>{plan.name}</h3>
+                <h3 className={`text-xl sm:text-2xl md:text-3xl font-bold mb-2 break-words tracking-tight font-sans ${plan.popular ? "text-white" : "text-gray-900"}`}>{plan.name}</h3>
                 <div className="mb-6">
-                  <span className={`text-3xl sm:text-4xl md:text-5xl font-bold break-words ${plan.popular ? "text-white" : "text-gray-900"}`}>${plan.price}</span>
-                  <span className={plan.popular ? "text-blue-100" : "text-gray-500"}>/month</span>
+                  <span className={`text-4xl sm:text-5xl md:text-6xl font-bold break-words tracking-tight font-sans ${plan.popular ? "text-white" : "text-gray-900"}`}>${plan.price}</span>
+                  <span className={`text-lg sm:text-xl ${plan.popular ? "text-blue-100 font-medium" : "text-gray-600 font-semibold"}`}>/month</span>
                 </div>
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature) => (
                     <li key={feature} className="flex items-start gap-3">
                       <FiCheck className={`mt-1 flex-shrink-0 ${plan.popular ? "text-orange-300" : "text-blue-600"}`} />
-                      <span className={plan.popular ? "text-blue-50" : "text-gray-600"}>{feature}</span>
+                      <span className={`${plan.popular ? "text-blue-50" : "text-gray-700"} font-medium`}>{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -343,8 +343,8 @@ export function StartupPitchTemplate() {
         <div className="container mx-auto px-6">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <h2 className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>Loved by Thousands</h2>
-              <p className="text-xl text-gray-600">See what our customers have to say</p>
+              <h2 className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 break-words tracking-tight leading-tight font-sans ${isDark ? 'text-white' : 'text-gray-900'}`}>Loved by Thousands</h2>
+              <p className="text-lg sm:text-xl md:text-2xl text-gray-700 font-medium">See what our customers have to say</p>
             </div>
           </ScrollReveal>
 
@@ -363,12 +363,12 @@ export function StartupPitchTemplate() {
                     <FiStar key={i} className="text-orange-500 fill-orange-500" />
                   ))}
                 </div>
-                <p className="text-gray-700 mb-6 leading-relaxed">"{testimonial.quote}"</p>
+                <p className="text-base sm:text-lg text-gray-700 mb-6 leading-relaxed font-normal">"{testimonial.quote}"</p>
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-orange-500 rounded-full" />
                   <div>
-                    <div className="font-bold">{testimonial.author}</div>
-                    <div className="text-sm text-gray-500">{testimonial.role}</div>
+                    <div className="font-bold text-gray-900 text-base">{testimonial.author}</div>
+                    <div className="text-sm text-gray-600 font-medium">{testimonial.role}</div>
                   </div>
                 </div>
               </motion.div>
@@ -382,8 +382,8 @@ export function StartupPitchTemplate() {
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <ScrollReveal>
-              <h2 className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-center break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>About FlowMetrics</h2>
-              <p className="text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed text-center">
+              <h2 className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-center break-words tracking-tight leading-tight font-sans ${isDark ? 'text-white' : 'text-gray-900'}`}>About FlowMetrics</h2>
+              <p className="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed text-center font-normal">
                 {portfolioData.about}
               </p>
             </ScrollReveal>
@@ -396,8 +396,8 @@ export function StartupPitchTemplate() {
         <div className="container mx-auto px-6">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <h2 className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>Our Expertise</h2>
-              <p className="text-xl text-gray-600">Technologies & capabilities that power our platform</p>
+              <h2 className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 break-words tracking-tight leading-tight font-sans ${isDark ? 'text-white' : 'text-gray-900'}`}>Our Expertise</h2>
+              <p className="text-lg sm:text-xl md:text-2xl text-gray-700 font-medium">Technologies & capabilities that power our platform</p>
             </div>
           </ScrollReveal>
 
@@ -412,7 +412,7 @@ export function StartupPitchTemplate() {
                 whileHover={prefersReducedMotion ? {} : { scale: 1.05 }}
                 className="bg-white rounded-xl p-6 shadow-md border border-gray-100 text-center"
               >
-                <p className="text-sm font-semibold text-gray-800">{skill}</p>
+                <p className="text-sm sm:text-base font-semibold text-gray-800 tracking-wide">{skill}</p>
               </motion.div>
             ))}
           </div>
@@ -424,8 +424,8 @@ export function StartupPitchTemplate() {
         <div className="container mx-auto px-6">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <h2 className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>Our Journey</h2>
-              <p className="text-xl text-gray-600">From startup to scale</p>
+              <h2 className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 break-words tracking-tight leading-tight font-sans ${isDark ? 'text-white' : 'text-gray-900'}`}>Our Journey</h2>
+              <p className="text-lg sm:text-xl md:text-2xl text-gray-700 font-medium">From startup to scale</p>
             </div>
           </ScrollReveal>
 
@@ -445,8 +445,8 @@ export function StartupPitchTemplate() {
                   </div>
                 </div>
                 <div className="flex-1 border-l-4 border-blue-200 pl-8 pb-8">
-                  <h3 className={`text-xl sm:text-2xl font-bold mb-3 ${isDark ? 'text-white' : 'text-gray-900'}`}>{item.title}</h3>
-                  <p className="text-gray-600 leading-relaxed">{item.description}</p>
+                  <h3 className={`text-xl sm:text-2xl md:text-3xl font-bold mb-3 tracking-tight font-sans ${isDark ? 'text-white' : 'text-gray-900'}`}>{item.title}</h3>
+                  <p className="text-base sm:text-lg text-gray-700 leading-relaxed font-normal">{item.description}</p>
                 </div>
               </motion.div>
             ))}
@@ -459,14 +459,14 @@ export function StartupPitchTemplate() {
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
             <ScrollReveal>
-              <h2 className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>Get in Touch</h2>
-              <p className="text-xl text-gray-600 mb-8">
+              <h2 className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 break-words tracking-tight leading-tight font-sans ${isDark ? 'text-white' : 'text-gray-900'}`}>Get in Touch</h2>
+              <p className="text-lg sm:text-xl md:text-2xl text-gray-700 mb-8 font-medium">
                 Have questions? Want to see a demo? Our team is here to help.
               </p>
               <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
                 <a
                   href={`mailto:${portfolioData.email}`}
-                  className="text-2xl font-semibold text-blue-600 hover:text-blue-700 transition-colors"
+                  className="text-xl sm:text-2xl md:text-3xl font-bold text-blue-600 hover:text-blue-700 transition-colors tracking-tight font-sans"
                 >
                   {portfolioData.email}
                 </a>
@@ -494,8 +494,8 @@ export function StartupPitchTemplate() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 break-words text-white">Ready to Get Started?</h2>
-            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 break-words text-white tracking-tight leading-tight font-sans">Ready to Get Started?</h2>
+            <p className="text-lg sm:text-xl md:text-2xl text-blue-100 mb-8 max-w-2xl mx-auto font-medium leading-relaxed">
               Join thousands of companies already growing with our platform
             </p>
             <Button size="lg" className="bg-white !text-blue-600 hover:bg-blue-50 text-lg px-12">

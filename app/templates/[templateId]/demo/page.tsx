@@ -4,12 +4,13 @@ import { getTemplateById } from "@/lib/template-registry";
 import { TemplateLayout } from "@/components/shared/template-layout";
 import { notFound, useParams } from "next/navigation";
 import { useI18n } from "@/lib/i18n-context";
+import { TemplateErrorBoundary } from "@/components/template-error-boundary";
 import dynamic from "next/dynamic";
 
 // Map template IDs to their component imports
 const templateComponents: Record<string, any> = {
   "3d-immersive": dynamic(() => import("@/components/templates/3d-immersive/3d-immersive-template").then(mod => mod.ThreeDImmersiveTemplate)),
-  "ar-spatial": dynamic(() => import("@/components/templates/ar-spatial/ar-spatial-template").then(mod => mod.ArSpatialTemplate)),
+  "ar-spatial": dynamic(() => import("@/components/templates/ar-spatial/ar-spatial-template").then(mod => mod.ARSpatialTemplate)),
   "bento-grid": dynamic(() => import("@/components/templates/bento-grid/bento-grid-template").then(mod => mod.BentoGridTemplate)),
   "blog-archetypes-editorial": dynamic(() => import("@/components/templates/blog-pages/archetypes-editorial-template").then(mod => mod.ArchetypesEditorialTemplate)),
   "blog-archetypes-minimal": dynamic(() => import("@/components/templates/blog-pages/archetypes-minimal-template").then(mod => mod.ArchetypesMinimalTemplate)),
@@ -85,7 +86,13 @@ export default function TemplateDemoPage() {
 
   return (
     <TemplateLayout>
-      <TemplateComponent />
+      <TemplateErrorBoundary
+        templateId={template.id}
+        templateName={template.name}
+        templateCategory={template.category}
+      >
+        <TemplateComponent />
+      </TemplateErrorBoundary>
     </TemplateLayout>
   );
 }

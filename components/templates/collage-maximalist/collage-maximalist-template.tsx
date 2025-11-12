@@ -10,6 +10,7 @@ import { FiMail, FiInstagram, FiArrowRight ,
 } from "react-icons/fi";
 import Link from "next/link";
 import { useTheme } from "next-themes";
+import { useI18n } from "@/lib/i18n-context";
 
 const portfolioData = {
   name: "Luna Martinez",
@@ -79,6 +80,9 @@ const portfolioData = {
 };
 
 export function CollageMaximalistTemplate() {
+  const { tt } = useI18n();
+  const data = tt?.collageMaximalist;
+
   const { theme } = useTheme();
   const isDark = theme === 'dark';
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);

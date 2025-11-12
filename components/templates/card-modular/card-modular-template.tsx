@@ -9,6 +9,7 @@ import { Badge } from "@/components/ui/badge";
 import { FiMail, FiGithub, FiLinkedin, FiExternalLink, FiCode, FiLayout, FiDatabase , FiMenu, FiX } from "react-icons/fi";
 import Link from "next/link";
 import { useTheme } from "next-themes";
+import { useI18n } from "@/lib/i18n-context";
 
 const portfolioData = {
   name: "Taylor Morgan",
@@ -284,6 +285,9 @@ const portfolioData = {
 };
 
 export function CardModularTemplate() {
+  const { tt } = useI18n();
+  const data = tt?.cardModular;
+
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { theme } = useTheme();
   const darkMode = theme === 'dark';

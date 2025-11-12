@@ -2,6 +2,7 @@
 
 import { Suspense, useState, useEffect } from "react";
 import { TemplateGallery } from "@/components/template-gallery";
+import { TemplateGalleryOnboarding } from "@/components/template-gallery-onboarding";
 import { ErrorBoundary } from "@/components/error-boundary";
 import { Header } from "@/components/shared/header";
 import { Footer } from "@/components/shared/footer";
@@ -472,6 +473,9 @@ export default function Home() {
                 : 'Выберите из профессиональных, готовых к редактированию шаблонов'}
             </p>
           </motion.div>
+
+          {/* Onboarding Instructions */}
+          <TemplateGalleryOnboarding />
 
           <ErrorBoundary>
             <Suspense fallback={

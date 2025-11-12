@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { FiMail , FiMenu, FiX } from "react-icons/fi";
 import Link from "next/link";
 import { useTheme } from "next-themes";
+import { useI18n } from "@/lib/i18n-context";
 
 const portfolioData = {
   name: "MOTION",
@@ -32,6 +33,9 @@ const portfolioData = {
 };
 
 export function KineticTypographyTemplate() {
+  const { tt } = useI18n();
+  const data = tt?.kineticTypography;
+
   const { theme } = useTheme();
   const isDark = theme === 'dark';
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);

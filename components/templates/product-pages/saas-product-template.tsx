@@ -9,6 +9,7 @@ import { Badge } from "@/components/ui/badge";
 import { FiCheck, FiZap, FiShield, FiTrendingUp, FiUsers, FiStar, FiArrowRight, FiPlay, FiMenu, FiX } from "react-icons/fi";
 import Link from "next/link";
 import { useTheme } from "next-themes";
+import { useI18n } from "@/lib/i18n-context";
 
 const productData = {
   name: "TaskFlow Pro",
@@ -162,6 +163,9 @@ const productData = {
 };
 
 export function SaaSProductTemplate() {
+  const { tt } = useI18n();
+  const data = tt?.productSaas;
+
   const { theme } = useTheme();
   const isDark = theme === 'dark';
   const [activePlan, setActivePlan] = useState<"monthly" | "annual">("monthly");

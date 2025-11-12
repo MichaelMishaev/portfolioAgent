@@ -330,3 +330,21 @@ export function getTemplatesByDifficulty(
   const templates = getTemplates(language);
   return templates.filter((template) => template.difficulty === difficulty);
 }
+
+/**
+ * Get similar templates from the same category, excluding the specified template
+ * Used by error boundaries to show alternative templates when one fails to load
+ */
+export function getSimilarTemplates(
+  templateId: string,
+  category: string,
+  language: "en" | "ru" = "en",
+  limit: number = 3
+): TemplateConfig[] {
+  const categoryTemplates = getTemplatesByCategory(category, language);
+
+  // Filter out the current template and return up to the specified limit
+  return categoryTemplates
+    .filter((template) => template.id !== templateId)
+    .slice(0, limit);
+}

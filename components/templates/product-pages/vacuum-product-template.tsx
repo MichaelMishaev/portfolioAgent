@@ -14,6 +14,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { useReducedMotion } from "@/lib/hooks/use-reduced-motion";
 import { useTheme } from "next-themes";
+import { useI18n } from "@/lib/i18n-context";
 
 const productData = {
   name: "V20 Quantum Vacuum",
@@ -201,6 +202,9 @@ const productData = {
 };
 
 export function VacuumProductTemplate() {
+  const { tt } = useI18n();
+  const data = tt?.productVacuum;
+
   const [selectedMode, setSelectedMode] = useState(productData.modes[1]);  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const prefersReducedMotion = useReducedMotion();
 

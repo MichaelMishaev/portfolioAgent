@@ -29,6 +29,7 @@ import {
 } from "react-icons/fi";
 import Link from "next/link";
 import { useTheme } from "next-themes";
+import { useI18n } from "@/lib/i18n-context";
 
 const blogData = {
   author: {
@@ -264,7 +265,10 @@ const blogData = {
   ],
 };
 
-export function PersonalBlogTemplate() {  const { theme } = useTheme();
+export function PersonalBlogTemplate() {  const { tt } = useI18n();
+  const data = tt?.blogPersonal;
+
+  const { theme } = useTheme();
   const darkMode = theme === 'dark';
 
   return (

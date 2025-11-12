@@ -10,6 +10,8 @@ import { FiMail, FiInstagram, FiTwitter, FiX , FiMenu } from "react-icons/fi";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { useReducedMotion } from "@/lib/hooks/use-reduced-motion";
+import { useI18n } from "@/lib/i18n-context";
+import { useTheme } from "next-themes";
 
 const portfolioData = {
   name: "Emma Wilson",
@@ -204,6 +206,9 @@ const breakpointColumns = {
 };
 
 export function GridMasonryTemplate() {
+  const { tt } = useI18n();
+  const data = tt?.gridMasonry;
+
   const { theme } = useTheme();
   const isDark = theme === 'dark';
   const [selectedCategory, setSelectedCategory] = useState("All");  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);

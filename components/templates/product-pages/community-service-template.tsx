@@ -21,6 +21,7 @@ import {
 } from "react-icons/fi";
 import Link from "next/link";
 import { useTheme } from "next-themes";
+import { useI18n } from "@/lib/i18n-context";
 
 const platformData = {
   name: "CREATOR COLLECTIVE",
@@ -251,6 +252,9 @@ const platformData = {
 };
 
 export function CommunityServiceTemplate() {
+  const { tt } = useI18n();
+  const data = tt?.serviceCommunity;
+
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const [selectedPlan, setSelectedPlan] = useState(1);

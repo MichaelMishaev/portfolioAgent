@@ -24,6 +24,7 @@ import {
 } from "react-icons/fi";
 import Link from "next/link";
 import { useTheme } from "next-themes";
+import { useI18n } from "@/lib/i18n-context";
 
 const serviceData = {
   name: "APEX STRATEGIC CONSULTING",
@@ -238,6 +239,9 @@ const serviceData = {
 };
 
 export function ConsultingServiceTemplate() {
+  const { tt } = useI18n();
+  const data = tt?.serviceConsulting;
+
   const { theme } = useTheme();
   const isDark = theme === 'dark';
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);

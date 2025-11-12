@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { FiMail, FiGithub, FiLinkedin, FiCode, FiLayers, FiZap, FiTrendingUp } from "react-icons/fi";
 import Link from "next/link";
 import { useTheme } from "next-themes";
+import { useI18n } from "@/lib/i18n-context";
 
 const portfolioData = {
   name: "Riley Chen",
@@ -116,6 +117,9 @@ const portfolioData = {
 };
 
 export function BentoGridTemplate() {
+  const { tt } = useI18n();
+  const data = tt?.bentoGrid;
+
   const { theme } = useTheme();
   const darkMode = theme === 'dark';
 

@@ -12,6 +12,7 @@ import { FiCheck, FiStar, FiZap, FiCpu, FiActivity, FiTrendingUp ,
 } from "react-icons/fi";
 import Link from "next/link";
 import { useTheme } from "next-themes";
+import { useI18n } from "@/lib/i18n-context";
 
 const productData = {
   name: "HYPERX CLOUD ULTRA",
@@ -97,6 +98,9 @@ const productData = {
 };
 
 export function TechProductTemplate() {
+  const { tt } = useI18n();
+  const data = tt?.productTech;
+
   const { theme } = useTheme();
   const isDark = theme === 'dark';
   const [selectedColor, setSelectedColor] = useState(productData.configuration.colors[0]);  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);

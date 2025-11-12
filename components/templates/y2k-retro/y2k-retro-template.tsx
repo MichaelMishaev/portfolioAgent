@@ -12,6 +12,7 @@ import { FiMail, FiStar ,
 import Link from "next/link";
 import { useReducedMotion } from "@/lib/hooks/use-reduced-motion";
 import { useTheme } from "next-themes";
+import { useI18n } from "@/lib/i18n-context";
 
 const portfolioData = {
   name: "⭐ PIXEL DREAMS ⭐",
@@ -83,6 +84,9 @@ const portfolioData = {
 };
 
 export function Y2KRetroTemplate() {
+  const { tt } = useI18n();
+  const data = tt?.y2kRetro;
+
   const { theme } = useTheme();
   const isDark = theme === 'dark';
   const [cursorTrail, setCursorTrail] = useState<{ x: number; y: number; id: number }[]>([]);

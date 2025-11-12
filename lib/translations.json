@@ -95,6 +95,27 @@
       "customizeAndBuild": "Start Building",
       "tryIt": "Try It"
     },
+    "onboarding": {
+      "title": "How to Get Your Perfect Website",
+      "subtitle": "Find and customize your ideal template in 4 easy steps",
+      "dismissButton": "Got it!",
+      "step1": {
+        "title": "Browse & Search",
+        "description": "Explore 61+ templates by category or use the search bar to find exactly what you need"
+      },
+      "step2": {
+        "title": "Preview Template",
+        "description": "Click any card to view full details, screenshots, and live demo of the template"
+      },
+      "step3": {
+        "title": "Customize Design",
+        "description": "Use our visual builder to adjust colors, fonts, and sections to match your brand"
+      },
+      "step4": {
+        "title": "Purchase & Download",
+        "description": "Complete checkout with optional add-ons and get instant access to your template files"
+      }
+    },
     "featureExplanations": {
       "Responsive Design": "Works perfectly on all devices - mobile phones, tablets, and desktop computers. The layout automatically adjusts to provide the best viewing experience on any screen size.",
       "Dark Mode Support": "Includes a built-in dark mode that users can toggle. Reduces eye strain in low-light conditions and provides a modern, sleek appearance.",
@@ -3806,7 +3827,11 @@
     },
     "errors": {
       "somethingWentWrong": "Something went wrong",
-      "tryAgain": "Try Again"
+      "tryAgain": "Try Again",
+      "templateUnderConstruction": "Template Under Construction",
+      "templateLoadError": "We're working on",
+      "tryAlternativeTemplates": "Try one of these alternatives",
+      "viewSimilarTemplates": "View Similar Templates"
     },
     "buttons": {
       "customizeTemplate": "Customize Template"
@@ -3907,6 +3932,27 @@
       "showLess": "Свернуть",
       "customizeAndBuild": "Начать Создание",
       "tryIt": "Попробовать"
+    },
+    "onboarding": {
+      "title": "Как получить ваш идеальный сайт",
+      "subtitle": "Найдите и настройте идеальный шаблон за 4 простых шага",
+      "dismissButton": "Понятно!",
+      "step1": {
+        "title": "Просмотр и поиск",
+        "description": "Изучите 61+ шаблонов по категориям или используйте поиск, чтобы найти именно то, что нужно"
+      },
+      "step2": {
+        "title": "Просмотр шаблона",
+        "description": "Нажмите на любую карточку, чтобы увидеть полные детали, скриншоты и живую демо-версию"
+      },
+      "step3": {
+        "title": "Настройка дизайна",
+        "description": "Используйте визуальный редактор для настройки цветов, шрифтов и секций под ваш бренд"
+      },
+      "step4": {
+        "title": "Покупка и загрузка",
+        "description": "Завершите оформление с дополнительными услугами и получите мгновенный доступ к файлам"
+      }
     },
     "featureExplanations": {
       "Minimal Design System": "Тщательно продуманная дизайн-система с акцентом на простоту и ясность. Включает согласованные отступы, типографику и использование цветов для чистого, профессионального вида.",
@@ -7382,7 +7428,11 @@
     },
     "errors": {
       "somethingWentWrong": "Что-то пошло не так",
-      "tryAgain": "Попробовать снова"
+      "tryAgain": "Попробовать снова",
+      "templateUnderConstruction": "Шаблон в разработке",
+      "templateLoadError": "Мы работаем над",
+      "tryAlternativeTemplates": "Попробуйте одну из этих альтернатив",
+      "viewSimilarTemplates": "Посмотреть похожие шаблоны"
     },
     "buttons": {
       "customizeTemplate": "Настроить шаблон"

@@ -20,6 +20,7 @@ import {
 } from "react-icons/fi";
 import Link from "next/link";
 import { useTheme } from "next-themes";
+import { useI18n } from "@/lib/i18n-context";
 
 const serviceData = {
   name: "PIXEL PERFECT AGENCY",
@@ -175,6 +176,12 @@ export function AgencyServiceTemplate() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { theme } = useTheme();
   const darkMode = theme === 'dark';
+  const { tt } = useI18n();
+  const data = tt?.serviceAgency;
+
+  if (!data) {
+    return <div className="min-h-screen flex items-center justify-center">Loading...</div>;
+  }
 
   return (
     <div className="min-h-screen overflow-x-hidden max-w-full bg-white text-gray-900">
@@ -189,15 +196,15 @@ export function AgencyServiceTemplate() {
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center gap-8">
               <a href="#services" className="text-sm font-medium hover:text-blue-600 transition-colors">
-                Services
+                {data.nav?.services || "Services"}
               </a>
               <a href="#portfolio" className="text-sm font-medium hover:text-blue-600 transition-colors">
-                Portfolio
+                {data.nav.portfolio}
               </a>
               <a href="#process" className="text-sm font-medium hover:text-blue-600 transition-colors">
-                Process
+                {data.nav.process}
               </a>
-              <Button className="bg-blue-600 hover:bg-blue-700">Start a Project</Button>
+              <Button className="bg-blue-600 hover:bg-blue-700">{data.nav.cta}</Button>
             </div>
 
             {/* Mobile Menu Button */}

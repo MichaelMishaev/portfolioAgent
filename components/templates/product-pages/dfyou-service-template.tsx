@@ -20,6 +20,7 @@ import {
 } from "react-icons/fi";
 import Link from "next/link";
 import { useTheme } from "next-themes";
+import { useI18n } from "@/lib/i18n-context";
 
 const serviceData = {
   name: "DESIGN ON TAP",
@@ -273,6 +274,9 @@ const serviceData = {
 };
 
 export function DFYouServiceTemplate() {
+  const { tt } = useI18n();
+  const data = tt?.serviceDfyou;
+
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const [selectedCategory, setSelectedCategory] = useState("All");

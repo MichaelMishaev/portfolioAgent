@@ -14,6 +14,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { useReducedMotion } from "@/lib/hooks/use-reduced-motion";
 import { useTheme } from "next-themes";
+import { useI18n } from "@/lib/i18n-context";
 
 const productData = {
   name: "Aurora Pro Headphones",
@@ -180,6 +181,12 @@ export function AudioProductTemplate() {
   const prefersReducedMotion = useReducedMotion();
   const { theme } = useTheme();
   const darkMode = theme === 'dark';
+  const { tt } = useI18n();
+  const data = tt?.productAudio;
+
+  if (!data) {
+    return <div className="min-h-screen flex items-center justify-center">Loading...</div>;
+  }
 
 
   return (

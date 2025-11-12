@@ -8,6 +8,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { FiMail, FiHeart, FiStar, FiZap , FiMenu, FiX } from "react-icons/fi";
 import Link from "next/link";
+import { useI18n } from "@/lib/i18n-context";
+import { useTheme } from "next-themes";
 
 const portfolioData = {
   name: "Luna Martinez",
@@ -113,6 +115,9 @@ const portfolioData = {
 };
 
 export function IllustrationFocusTemplate() {
+  const { tt } = useI18n();
+  const data = tt?.illustrationFocus;
+
   const { theme } = useTheme();
   const isDark = theme === 'dark';
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);

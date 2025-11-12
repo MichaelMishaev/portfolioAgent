@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { FiMail, FiGithub, FiLinkedin, FiInstagram, FiExternalLink , FiMenu, FiX } from "react-icons/fi";
 import Link from "next/link";
+import { useI18n } from "@/lib/i18n-context";
 
 const portfolioData = {
   name: "Sarah Chen",
@@ -84,6 +85,9 @@ const portfolioData = {
 };
 
 export function DarkModeTemplate() {
+  const { tt } = useI18n();
+  const data = tt?.darkModeTemplate;
+
   const [mounted, setMounted] = useState(false);  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
 

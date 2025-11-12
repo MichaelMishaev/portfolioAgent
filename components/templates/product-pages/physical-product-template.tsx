@@ -12,6 +12,7 @@ import { FiCheck, FiStar, FiTruck, FiShield, FiRefreshCw, FiBox ,
 } from "react-icons/fi";
 import Link from "next/link";
 import { useTheme } from "next-themes";
+import { useI18n } from "@/lib/i18n-context";
 
 const productData = {
   name: "AirWave Pro",
@@ -203,6 +204,9 @@ const productData = {
 };
 
 export function PhysicalProductTemplate() {
+  const { tt } = useI18n();
+  const data = tt?.productPhysical;
+
   const [selectedColor, setSelectedColor] = useState(productData.colors[0]);  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const [selectedImage, setSelectedImage] = useState(0);

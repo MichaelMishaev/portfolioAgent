@@ -12,6 +12,7 @@ import { FiMail, FiHeart, FiSun, FiWind ,
 } from "react-icons/fi";
 import Link from "next/link";
 import { useTheme } from "next-themes";
+import { useI18n } from "@/lib/i18n-context";
 
 const portfolioData = {
   name: "Willow Hayes",
@@ -82,6 +83,9 @@ const portfolioData = {
 };
 
 export function OrganicLiquidTemplate() {
+  const { tt } = useI18n();
+  const data = tt?.organicLiquid;
+
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const prefersReducedMotion = useReducedMotion();
   const { theme } = useTheme();

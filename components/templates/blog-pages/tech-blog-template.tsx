@@ -37,6 +37,7 @@ import {
 } from "react-icons/fi";
 import Link from "next/link";
 import { useTheme } from "next-themes";
+import { useI18n } from "@/lib/i18n-context";
 
 const techBlogData = {
   hero: {
@@ -291,6 +292,9 @@ const techBlogData = {
 };
 
 export function TechBlogTemplate() {
+  const { tt } = useI18n();
+  const data = tt?.blogTech;
+
   const { theme, setTheme } = useTheme();
   const darkMode = theme === 'dark';
   const [scrollProgress, setScrollProgress] = useState(0);

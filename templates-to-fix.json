@@ -1,0 +1,205 @@
+{
+  "timestamp": "2025-11-12T18:35:31.236Z",
+  "summary": {
+    "total": 61,
+    "withI18n": 22,
+    "needingFix": 21,
+    "notFound": 18
+  },
+  "templatesNeedingFix": [
+    {
+      "id": "3d-immersive",
+      "path": "components/templates/3d-immersive/3d-immersive-template.tsx"
+    },
+    {
+      "id": "ar-spatial",
+      "path": "components/templates/ar-spatial/ar-spatial-template.tsx"
+    },
+    {
+      "id": "bento-grid",
+      "path": "components/templates/bento-grid/bento-grid-template.tsx"
+    },
+    {
+      "id": "bold-typography",
+      "path": "components/templates/bold-typography/bold-typography-template.tsx"
+    },
+    {
+      "id": "card-modular",
+      "path": "components/templates/card-modular/card-modular-template.tsx"
+    },
+    {
+      "id": "collage-maximalist",
+      "path": "components/templates/collage-maximalist/collage-maximalist-template.tsx"
+    },
+    {
+      "id": "dark-mode",
+      "path": "components/templates/dark-mode/dark-mode-template.tsx"
+    },
+    {
+      "id": "data-dashboard",
+      "path": "components/templates/data-dashboard/data-dashboard-template.tsx"
+    },
+    {
+      "id": "fullscreen-immersive",
+      "path": "components/templates/fullscreen-immersive/fullscreen-immersive-template.tsx"
+    },
+    {
+      "id": "grid-masonry",
+      "path": "components/templates/grid-masonry/grid-masonry-template.tsx"
+    },
+    {
+      "id": "illustration-focus",
+      "path": "components/templates/illustration-focus/illustration-focus-template.tsx"
+    },
+    {
+      "id": "kinetic-typography",
+      "path": "components/templates/kinetic-typography/kinetic-typography-template.tsx"
+    },
+    {
+      "id": "lin-portfolio-elegance",
+      "path": "components/templates/lin/lin-portfolio-elegance-template.tsx"
+    },
+    {
+      "id": "lin-professional-authority",
+      "path": "components/templates/lin/lin-professional-authority-template.tsx"
+    },
+    {
+      "id": "neo-brutalist",
+      "path": "components/templates/neo-brutalist/neo-brutalist-template.tsx"
+    },
+    {
+      "id": "organic-liquid",
+      "path": "components/templates/organic-liquid/organic-liquid-template.tsx"
+    },
+    {
+      "id": "single-page",
+      "path": "components/templates/single-page/single-page-template.tsx"
+    },
+    {
+      "id": "split-screen",
+      "path": "components/templates/split-screen/split-screen-template.tsx"
+    },
+    {
+      "id": "text-heavy",
+      "path": "components/templates/text-heavy/text-heavy-template.tsx"
+    },
+    {
+      "id": "voice-first",
+      "path": "components/templates/voice-first/voice-first-template.tsx"
+    },
+    {
+      "id": "y2k-retro",
+      "path": "components/templates/y2k-retro/y2k-retro-template.tsx"
+    }
+  ],
+  "templatesWithI18n": [
+    {
+      "id": "blog-archetypes-editorial",
+      "path": "components/templates/blog-pages/archetypes-editorial-template.tsx"
+    },
+    {
+      "id": "blog-archetypes-minimal",
+      "path": "components/templates/blog-pages/archetypes-minimal-template.tsx"
+    },
+    {
+      "id": "creative-agency-bold",
+      "path": "components/templates/creative-agency-bold/creative-agency-bold-template.tsx"
+    },
+    {
+      "id": "experimental-3d",
+      "path": "components/templates/experimental-3d/experimental-3d-template.tsx"
+    },
+    {
+      "id": "glassmorphism-modern",
+      "path": "components/templates/glassmorphism-modern/glassmorphism-modern-template.tsx"
+    },
+    {
+      "id": "interactive-agency",
+      "path": "components/templates/interactive-agency/interactive-agency-template.tsx"
+    },
+    {
+      "id": "lin-tech-pioneer",
+      "path": "components/templates/lin/lin-tech-pioneer-template.tsx"
+    },
+    {
+      "id": "luxury-minimal",
+      "path": "components/templates/luxury-minimal/luxury-minimal-template.tsx"
+    },
+    {
+      "id": "minimal-portfolio-clean",
+      "path": "components/templates/minimal-portfolio-clean/minimal-portfolio-clean-template.tsx"
+    },
+    {
+      "id": "minimalist",
+      "path": "components/templates/minimalist/minimalist-template.tsx"
+    },
+    {
+      "id": "motion-designer",
+      "path": "components/templates/motion-designer/motion-designer-template.tsx"
+    },
+    {
+      "id": "online-business-agency",
+      "path": "components/templates/online-business/online-business-agency-template.tsx"
+    },
+    {
+      "id": "online-business-coach",
+      "path": "components/templates/online-business/online-business-coach-template.tsx"
+    },
+    {
+      "id": "online-business-course",
+      "path": "components/templates/online-business/online-business-course-template.tsx"
+    },
+    {
+      "id": "online-business-saas",
+      "path": "components/templates/online-business-saas/online-business-saas-template.tsx"
+    },
+    {
+      "id": "personal-brand",
+      "path": "components/templates/personal-brand/personal-brand-template.tsx"
+    },
+    {
+      "id": "photography-immersive",
+      "path": "components/templates/photography-immersive/photography-immersive-template.tsx"
+    },
+    {
+      "id": "professional-b2b",
+      "path": "components/templates/professional-b2b/professional-b2b-template.tsx"
+    },
+    {
+      "id": "saas-feature-rich",
+      "path": "components/templates/saas-feature-rich/saas-feature-rich-template.tsx"
+    },
+    {
+      "id": "service-marketplace",
+      "path": "components/templates/service-marketplace/service-marketplace-template.tsx"
+    },
+    {
+      "id": "split-screen-editorial",
+      "path": "components/templates/split-screen-editorial/split-screen-editorial-template.tsx"
+    },
+    {
+      "id": "startup-pitch",
+      "path": "components/templates/startup-pitch/startup-pitch-template.tsx"
+    }
+  ],
+  "templatesNotFound": [
+    "blog-magazine",
+    "blog-personal",
+    "blog-tech",
+    "product-audio",
+    "product-course",
+    "product-fashion",
+    "product-luxury",
+    "product-physical",
+    "product-premium",
+    "product-saas",
+    "product-tech",
+    "product-vacuum",
+    "service-agency",
+    "service-b2b",
+    "service-community",
+    "service-consulting",
+    "service-dfyou",
+    "service-enterprise"
+  ]
+}

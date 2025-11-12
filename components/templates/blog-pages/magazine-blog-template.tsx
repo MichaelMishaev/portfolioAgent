@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useI18n } from "@/lib/i18n-context";
 import { FadeIn } from "@/components/animations/fade-in";
 import { ScrollReveal } from "@/components/animations/scroll-reveal";
 import { Button } from "@/components/ui/button";
@@ -32,282 +33,17 @@ import {
 import Link from "next/link";
 import { useTheme } from "next-themes";
 
-const magazineData = {
-  featured: [
-    {
-      id: 1,
-      title: "The Complete Guide to Modern Web Performance",
-      excerpt: "Deep dive into performance optimization techniques that matter in 2025. Learn how to make your websites blazingly fast.",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=700&fit=crop",
-      category: "Development",
-      author: {
-        name: "Alex Rivera",
-        avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop",
-      },
-      date: "Jan 18, 2025",
-      readTime: "12 min",
-      comments: 45,
-      views: "15.2K",
-      featured: true,
-    },
-    {
-      id: 2,
-      title: "Designing for Accessibility: A Practical Framework",
-      excerpt: "Make your designs inclusive for everyone with this comprehensive accessibility guide.",
-      image: "https://images.unsplash.com/photo-1558403194-611308249627?w=600&h=400&fit=crop",
-      category: "Design",
-      author: {
-        name: "Emma Chen",
-        avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100&h=100&fit=crop",
-      },
-      date: "Jan 17, 2025",
-      readTime: "10 min",
-      comments: 32,
-      views: "12.8K",
-    },
-  ],
-  trending: [
-    {
-      id: 3,
-      title: "AI Tools That Changed My Design Workflow",
-      category: "Tools",
-      author: "Marcus Wong",
-      readTime: "8 min",
-      views: "12.5K",
-    },
-    {
-      id: 4,
-      title: "Building Scalable Design Systems from Scratch",
-      category: "Design",
-      author: "Lisa Park",
-      readTime: "15 min",
-      views: "10.2K",
-    },
-    {
-      id: 5,
-      title: "The Future of CSS: What's Coming in 2025",
-      category: "Development",
-      author: "David Kim",
-      readTime: "7 min",
-      views: "9.8K",
-    },
-    {
-      id: 6,
-      title: "Remote Team Collaboration Best Practices",
-      category: "Career",
-      author: "Jessica Moore",
-      readTime: "9 min",
-      views: "8.4K",
-    },
-  ],
-  latest: [
-    {
-      id: 7,
-      title: "Micro-interactions: The Details That Make a Difference",
-      excerpt: "Small animations and interactions can transform the user experience. Here's how to get them right.",
-      image: "https://images.unsplash.com/photo-1559028012-481c04fa702d?w=600&h=400&fit=crop",
-      category: "UX Design",
-      author: {
-        name: "Sarah Thompson",
-        avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop",
-      },
-      date: "Jan 16, 2025",
-      readTime: "9 min",
-      comments: 28,
-      views: "7.2K",
-    },
-    {
-      id: 8,
-      title: "Server Components vs Client Components: A Complete Guide",
-      excerpt: "Understanding the difference and when to use each in your Next.js applications.",
-      image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&h=400&fit=crop",
-      category: "Development",
-      author: {
-        name: "James Wilson",
-        avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop",
-      },
-      date: "Jan 15, 2025",
-      readTime: "11 min",
-      comments: 52,
-      views: "9.1K",
-    },
-    {
-      id: 9,
-      title: "Color Psychology in Product Design",
-      excerpt: "How color choices influence user behavior and emotion in digital products.",
-      image: "https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=600&h=400&fit=crop",
-      category: "Design",
-      author: {
-        name: "Nina Patel",
-        avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&h=100&fit=crop",
-      },
-      date: "Jan 14, 2025",
-      readTime: "6 min",
-      comments: 19,
-      views: "6.5K",
-    },
-    {
-      id: 10,
-      title: "TypeScript Best Practices for Large Codebases",
-      excerpt: "Proven patterns and practices for maintaining type safety in enterprise applications.",
-      image: "https://images.unsplash.com/photo-1516116216624-53e697fedbea?w=600&h=400&fit=crop",
-      category: "Development",
-      author: {
-        name: "Robert Chang",
-        avatar: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&h=100&fit=crop",
-      },
-      date: "Jan 13, 2025",
-      readTime: "14 min",
-      comments: 67,
-      views: "11.3K",
-    },
-    {
-      id: 11,
-      title: "Mobile-First Design Strategies for 2025",
-      excerpt: "Creating exceptional mobile experiences in an increasingly mobile-first world.",
-      image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&h=400&fit=crop",
-      category: "UX Design",
-      author: {
-        name: "Maria Garcia",
-        avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop",
-      },
-      date: "Jan 12, 2025",
-      readTime: "10 min",
-      comments: 41,
-      views: "8.7K",
-    },
-    {
-      id: 12,
-      title: "Advanced React Patterns for Scalable Applications",
-      excerpt: "Master advanced React patterns to build maintainable and scalable applications.",
-      image: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=600&h=400&fit=crop",
-      category: "Development",
-      author: {
-        name: "Tom Anderson",
-        avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop",
-      },
-      date: "Jan 11, 2025",
-      readTime: "13 min",
-      comments: 58,
-      views: "10.5K",
-    },
-    {
-      id: 13,
-      title: "Creating Engaging Motion Design",
-      excerpt: "Learn how to use motion design to create engaging and memorable user experiences.",
-      image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=600&h=400&fit=crop",
-      category: "Design",
-      author: {
-        name: "Sophie Laurent",
-        avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop",
-      },
-      date: "Jan 10, 2025",
-      readTime: "8 min",
-      comments: 35,
-      views: "7.9K",
-    },
-    {
-      id: 14,
-      title: "Career Growth for Senior Developers",
-      excerpt: "Navigate the path from senior developer to tech lead and beyond.",
-      image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&h=400&fit=crop",
-      category: "Career",
-      author: {
-        name: "Michael Brown",
-        avatar: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=100&h=100&fit=crop",
-      },
-      date: "Jan 9, 2025",
-      readTime: "11 min",
-      comments: 72,
-      views: "13.4K",
-    },
-  ],
-  editorsPicks: [
-    {
-      id: 15,
-      title: "The Art of Code Review",
-      category: "Development",
-      readTime: "7 min",
-      views: "5.8K",
-    },
-    {
-      id: 16,
-      title: "Figma Plugins That Save Hours",
-      category: "Tools",
-      readTime: "5 min",
-      views: "6.2K",
-    },
-    {
-      id: 17,
-      title: "Building Your Personal Brand",
-      category: "Career",
-      readTime: "9 min",
-      views: "7.5K",
-    },
-  ],
-  categories: [
-    { name: "All", count: 234 },
-    { name: "Design", count: 89 },
-    { name: "Development", count: 102 },
-    { name: "UX Design", count: 43 },
-    { name: "Tools", count: 31 },
-    { name: "Career", count: 28 },
-  ],
-  popularTags: [
-    "React", "Next.js", "UI/UX", "TypeScript", "Figma", "CSS",
-    "JavaScript", "Design Systems", "Performance", "Accessibility",
-    "Career Advice", "Remote Work"
-  ],
-  editors: [
-    {
-      name: "Alex Rivera",
-      role: "Editor in Chief",
-      avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop",
-      articles: 45,
-      bio: "Tech leader with 15 years in web development and digital product design.",
-    },
-    {
-      name: "Emma Chen",
-      role: "Design Lead",
-      avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100&h=100&fit=crop",
-      articles: 38,
-      bio: "Award-winning designer passionate about inclusive and beautiful interfaces.",
-    },
-    {
-      name: "Sarah Thompson",
-      role: "UX Writer",
-      avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop",
-      articles: 52,
-      bio: "Expert in UX writing and content strategy for digital products.",
-    },
-  ],
-  testimonials: [
-    {
-      name: "Jennifer Lee",
-      role: "Product Designer at Google",
-      quote: "The best resource for staying current with design and development trends. Essential reading.",
-      avatar: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=100&h=100&fit=crop",
-    },
-    {
-      name: "David Park",
-      role: "Senior Engineer at Stripe",
-      quote: "In-depth technical articles that actually help me in my day-to-day work. Highly recommended!",
-      avatar: "https://images.unsplash.com/photo-1463453091185-61582044d556?w=100&h=100&fit=crop",
-    },
-  ],
-  stats: {
-    subscribers: "50,000+",
-    articles: "2,500+",
-    authors: "125",
-    monthlyReaders: "1.2M",
-  },
-};
-
 export function MagazineBlogTemplate() {
+  const { tt } = useI18n();
+  const magazineData = tt?.blogMagazine;
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { theme } = useTheme();
   const darkMode = theme === 'dark';
+
+  if (!magazineData) {
+    return <div className="min-h-screen flex items-center justify-center">Loading...</div>;
+  }
 
   return (
     <div className="min-h-screen bg-white overflow-x-hidden max-w-full">
@@ -317,13 +53,13 @@ export function MagazineBlogTemplate() {
           <div className="flex flex-col sm:flex-row sm:items-center gap-6">
             <span className="flex items-center gap-2">
               <FiTrendingUp className="w-4 h-4" />
-              Trending Now
+              {magazineData.ui?.trendingNow || "Trending Now"}
             </span>
           </div>
           <div className="hidden md:flex items-center gap-4">
-            <span>Jan 18, 2025</span>
+            <span>{magazineData.ui?.currentDate || "Jan 18, 2025"}</span>
             <span>|</span>
-            <a href="#newsletter" className="hover:text-blue-400 transition-colors">Subscribe</a>
+            <a href="#newsletter" className="hover:text-blue-400 transition-colors">{magazineData.ui?.subscribe || "Subscribe"}</a>
           </div>
         </div>
       </div>

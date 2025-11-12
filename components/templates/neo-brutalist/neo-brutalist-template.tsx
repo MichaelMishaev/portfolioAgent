@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { FiMail, FiArrowRight } from "react-icons/fi";
 import Link from "next/link";
 import { useTheme } from "next-themes";
+import { useI18n } from "@/lib/i18n-context";
 
 const portfolioData = {
   name: "ASH WOLF",
@@ -40,6 +41,9 @@ const portfolioData = {
 };
 
 export function NeoBrutalistTemplate() {
+  const { tt } = useI18n();
+  const data = tt?.neoBrutalistTemplate;
+
   const { theme } = useTheme();
   const isDark = theme === 'dark';
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);

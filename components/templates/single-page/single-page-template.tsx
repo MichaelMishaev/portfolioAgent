@@ -9,6 +9,7 @@ import { Badge } from "@/components/ui/badge";
 import { FiMail, FiGithub, FiLinkedin, FiTwitter, FiMenu, FiX } from "react-icons/fi";
 import Link from "next/link";
 import { useTheme } from "next-themes";
+import { useI18n } from "@/lib/i18n-context";
 
 const portfolioData = {
   name: "Jamie Taylor",
@@ -93,6 +94,9 @@ const portfolioData = {
 };
 
 export function SinglePageTemplate() {
+  const { tt } = useI18n();
+  const data = tt?.singlePage;
+
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { theme } = useTheme();
   const darkMode = theme === 'dark';

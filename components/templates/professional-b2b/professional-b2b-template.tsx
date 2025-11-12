@@ -33,6 +33,7 @@ export function ProfessionalB2bTemplate() {
   const { tt } = useI18n();
   const data = tt?.professionalB2b;
   const { theme } = useTheme();
+  const isDark = theme === "dark";
 
   const { scrollYProgress } = useScroll();
   const y = useTransform(scrollYProgress, [0, 1], [0, -200]);
@@ -126,7 +127,7 @@ export function ProfessionalB2bTemplate() {
                   {data.hero.subtitle}
                 </p>
                 <div className="flex gap-4 flex-wrap">
-                  <Button size="lg" className="bg-white !text-blue-600 hover:bg-blue-50 px-8 py-6 text-lg font-semibold">
+                  <Button size="lg" className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-6 text-lg font-semibold" style={{ color: '#2563eb' }}>
                     {data.hero.primaryCta}
                   </Button>
                   <Button
@@ -141,14 +142,44 @@ export function ProfessionalB2bTemplate() {
             </FadeIn>
 
             <FadeIn delay={0.2}>
-              <div className="relative h-96 lg:h-[500px] rounded-xl overflow-hidden shadow-2xl">
-                <Image
-                  src={placeholderImages.projects.dashboard}
-                  alt="B2B Dashboard"
-                  fill
-                  className="object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-blue-900/50 to-transparent" />
+              <div className="relative h-96 lg:h-[500px] rounded-xl overflow-hidden shadow-2xl bg-gradient-to-br from-blue-500 via-blue-600 to-blue-800">
+                <div className="absolute inset-0 flex items-center justify-center">
+                  {/* Dashboard Mockup Illustration */}
+                  <div className="w-full h-full p-8 md:p-12">
+                    <div className="w-full h-full bg-white/10 backdrop-blur-sm rounded-lg border border-white/20 p-6 md:p-8">
+                      {/* Mock dashboard elements */}
+                      <div className="flex items-center justify-between mb-6">
+                        <div className="space-y-2">
+                          <div className="h-3 w-32 bg-white/30 rounded"></div>
+                          <div className="h-2 w-24 bg-white/20 rounded"></div>
+                        </div>
+                        <div className="h-8 w-8 bg-white/30 rounded-full"></div>
+                      </div>
+
+                      {/* Stats grid */}
+                      <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-6">
+                        {[...Array(3)].map((_, i) => (
+                          <div key={i} className="bg-white/10 rounded-lg p-4 space-y-2">
+                            <div className="h-2 w-16 bg-white/20 rounded"></div>
+                            <div className="h-4 w-20 bg-white/40 rounded"></div>
+                          </div>
+                        ))}
+                      </div>
+
+                      {/* Chart area */}
+                      <div className="bg-white/10 rounded-lg p-4 h-32 flex items-end justify-between gap-2">
+                        {[40, 65, 45, 80, 55, 70, 60].map((height, i) => (
+                          <div
+                            key={i}
+                            className="bg-white/40 rounded-t flex-1"
+                            style={{ height: `${height}%` }}
+                          ></div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-blue-900/30 to-transparent" />
               </div>
             </FadeIn>
           </div>
@@ -242,9 +273,43 @@ export function ProfessionalB2bTemplate() {
           <ScrollReveal delay={0.2}>
             <Card className="overflow-hidden border-0 shadow-xl">
               <div className="grid lg:grid-cols-2">
-                <div className="bg-gradient-to-br from-blue-500 to-blue-700 h-64 lg:h-auto flex items-center justify-center">
-                  <div className="text-white text-8xl opacity-20">
-                    <FiAward />
+                <div className="bg-gradient-to-br from-blue-500 to-blue-700 h-64 lg:h-auto flex items-center justify-center relative overflow-hidden">
+                  {/* Success/Growth Illustration */}
+                  <div className="absolute inset-0 flex items-center justify-center p-8">
+                    {/* Trophy/Award Graphic */}
+                    <div className="relative">
+                      {/* Trophy Cup */}
+                      <div className="w-32 h-32 relative">
+                        {/* Cup body */}
+                        <div className="absolute top-8 left-1/2 -translate-x-1/2 w-20 h-16 bg-yellow-400/30 rounded-b-full border-4 border-yellow-300/40"></div>
+                        {/* Cup handles */}
+                        <div className="absolute top-10 left-2 w-6 h-8 border-4 border-yellow-300/40 rounded-l-full"></div>
+                        <div className="absolute top-10 right-2 w-6 h-8 border-4 border-yellow-300/40 rounded-r-full"></div>
+                        {/* Cup base */}
+                        <div className="absolute bottom-2 left-1/2 -translate-x-1/2 w-16 h-3 bg-yellow-400/30 rounded-full"></div>
+                        <div className="absolute bottom-5 left-1/2 -translate-x-1/2 w-12 h-4 bg-yellow-400/30"></div>
+
+                        {/* Award ribbon */}
+                        <div className="absolute top-6 left-1/2 -translate-x-1/2 w-16 h-20">
+                          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-12 h-12 bg-yellow-300/40 rounded-full flex items-center justify-center border-4 border-yellow-200/30">
+                            <FiAward className="text-white text-2xl" />
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Floating stats around trophy */}
+                      <div className="absolute -top-4 -right-12 bg-white/10 backdrop-blur-sm rounded-lg px-3 py-2 border border-white/20">
+                        <div className="text-white text-xl font-bold">247%</div>
+                      </div>
+                      <div className="absolute -bottom-4 -left-12 bg-white/10 backdrop-blur-sm rounded-lg px-3 py-2 border border-white/20">
+                        <div className="text-white text-xl font-bold">$2.1M</div>
+                      </div>
+
+                      {/* Sparkle effects */}
+                      <div className="absolute top-0 right-0 w-2 h-2 bg-yellow-300 rounded-full animate-pulse"></div>
+                      <div className="absolute bottom-4 left-2 w-1.5 h-1.5 bg-yellow-200 rounded-full animate-pulse delay-150"></div>
+                      <div className="absolute top-8 right-8 w-1 h-1 bg-white rounded-full animate-pulse delay-300"></div>
+                    </div>
                   </div>
                 </div>
                 <CardContent className="p-12">
@@ -310,7 +375,7 @@ export function ProfessionalB2bTemplate() {
             <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
               {data.cta.subtitle}
             </p>
-            <Button size="lg" className="bg-white !text-blue-600 hover:bg-blue-50 px-10 py-6 text-lg">
+            <Button size="lg" className="bg-white text-blue-600 hover:bg-blue-50 px-10 py-6 text-lg font-semibold" style={{ color: '#2563eb' }}>
               {data.cta.buttonText}
             </Button>
           </ScrollReveal>

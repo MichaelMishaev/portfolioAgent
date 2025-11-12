@@ -19,6 +19,7 @@ import {
 } from "react-icons/fi";
 import Link from "next/link";
 import { useTheme } from "next-themes";
+import { useI18n } from "@/lib/i18n-context";
 
 const portfolioData = {
   name: "VoiceUX Pro",
@@ -115,6 +116,9 @@ function CommandChip({ text, onClick }: { text: string; onClick: () => void }) {
 }
 
 export function VoiceFirstTemplate() {
+  const { tt } = useI18n();
+  const data = tt?.voiceFirst;
+
   const { theme } = useTheme();
   const isDark = theme === 'dark';
   const [isListening, setIsListening] = useState(false);  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);

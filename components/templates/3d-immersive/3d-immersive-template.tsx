@@ -12,6 +12,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useReducedMotion } from "@/lib/hooks/use-reduced-motion";
 import * as THREE from "three";
 import { useTheme } from "next-themes";
+import { useI18n } from "@/lib/i18n-context";
 
 const portfolioData = {
   name: "Alex Quantum",
@@ -150,6 +151,9 @@ function Scene3D() {
 }
 
 export function ThreeDImmersiveTemplate() {
+  const { tt } = useI18n();
+  const data = tt?.immersive3d;
+
   const { theme } = useTheme();
   const isDark = theme === 'dark';
   const prefersReducedMotion = useReducedMotion();

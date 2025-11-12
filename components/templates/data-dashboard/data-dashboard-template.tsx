@@ -15,6 +15,7 @@ import {
   FiArrowDown,
 } from "react-icons/fi";
 import Link from "next/link";
+import { useI18n } from "@/lib/i18n-context";
 import {
   LineChart,
   Line,
@@ -242,6 +243,9 @@ const kpiData = [
 ];
 
 export function DataDashboardTemplate() {
+  const { tt } = useI18n();
+  const data = tt?.dataDashboard;
+
   return (
     <div className="min-h-screen overflow-x-hidden max-w-full bg-gray-950 text-white">
       {/* Navigation */}

@@ -20,6 +20,7 @@ import {
 } from "react-icons/fi";
 import Link from "next/link";
 import { useTheme } from "next-themes";
+import { useI18n } from "@/lib/i18n-context";
 
 const serviceData = {
   name: "STRATEX CONSULTING",
@@ -241,6 +242,9 @@ const serviceData = {
 };
 
 export function B2BServiceTemplate() {
+  const { tt } = useI18n();
+  const data = tt?.serviceB2b;
+
   const { theme } = useTheme();
   const isDark = theme === 'dark';
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);

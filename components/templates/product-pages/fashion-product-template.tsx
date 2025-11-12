@@ -12,6 +12,7 @@ import { FiCheck, FiHeart, FiTruck, FiRefreshCw, FiPackage, FiFeather ,
 } from "react-icons/fi";
 import Link from "next/link";
 import { useTheme } from "next-themes";
+import { useI18n } from "@/lib/i18n-context";
 
 const productData = {
   name: "URBAN STRIDE SNEAKERS",
@@ -165,6 +166,9 @@ const productData = {
 };
 
 export function FashionProductTemplate() {
+  const { tt } = useI18n();
+  const data = tt?.productFashion;
+
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const [selectedColor, setSelectedColor] = useState(productData.colors[0]);

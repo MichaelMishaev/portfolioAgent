@@ -7,8 +7,12 @@ import { Card, CardContent } from "@/components/ui/card";
 import { FiMail, FiInstagram, FiFacebook, FiPhone, FiMenu, FiX, FiExternalLink } from "react-icons/fi";
 import Link from "next/link";
 import { useTheme } from "next-themes";
+import { useI18n } from "@/lib/i18n-context";
 
 export function LinPortfolioEleganceTemplate() {
+  const { tt } = useI18n();
+  const data = tt?.linPortfolioElegance;
+
   const { theme } = useTheme();
   const isDark = theme === 'dark';
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);

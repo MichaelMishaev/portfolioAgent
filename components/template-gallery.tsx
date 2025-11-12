@@ -20,6 +20,7 @@ import {
 } from "react-icons/fi";
 import { useI18n } from "@/lib/i18n-context";
 import { TooltipHint } from "@/components/ui/tooltip-hint";
+import { TemplateErrorBoundary } from "@/components/template-error-boundary";
 
 // Priority order for categories
 const categoryOrder = [
@@ -356,13 +357,18 @@ export function TemplateGallery() {
       {/* Template Grid - ThemeForest Style */}
       <div id="templates-grid" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
         {filteredTemplates.map((template, index) => (
-          <motion.div
+          <TemplateErrorBoundary
             key={template.id}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3, delay: index * 0.03 }}
+            templateId={template.id}
+            templateName={template.name}
+            templateCategory={template.category}
           >
-            <Link href={`/templates/${template.id}`} onClick={handleTemplateClick} className="block h-full">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3, delay: index * 0.03 }}
+            >
+              <Link href={`/templates/${template.id}`} onClick={handleTemplateClick} className="block h-full">
               <Card className="h-full flex flex-col hover:shadow-2xl transition-all duration-500 group border-0 bg-card/50 backdrop-blur-sm overflow-hidden cursor-pointer">
                 {/* Thumbnail with Enhanced Hover Effects */}
                 <CardHeader className="p-0 flex-shrink-0">
@@ -468,7 +474,8 @@ export function TemplateGallery() {
               </div>
             </Card>
             </Link>
-          </motion.div>
+            </motion.div>
+          </TemplateErrorBoundary>
         ))}
 
         {/* Empty State */}

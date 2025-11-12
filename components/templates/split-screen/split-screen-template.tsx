@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { FiMail, FiArrowRight, FiChevronLeft, FiChevronRight , FiMenu, FiX } from "react-icons/fi";
 import Link from "next/link";
 import { useTheme } from "next-themes";
+import { useI18n } from "@/lib/i18n-context";
 
 const portfolioData = {
   name: "David Kim",
@@ -236,6 +237,9 @@ const portfolioData = {
 };
 
 export function SplitScreenTemplate() {
+  const { tt } = useI18n();
+  const data = tt?.splitScreenTemplate;
+
   const [activeProject, setActiveProject] = useState(0);  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const prefersReducedMotion = useReducedMotion();
 
