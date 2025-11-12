@@ -224,7 +224,7 @@ export function ArchetypesMinimalTemplate() {
               className="bg-gradient-to-r from-teal-500 to-purple-600 hover:from-teal-600 hover:to-purple-700 text-white px-8 py-6 text-lg rounded-full shadow-lg hover:shadow-xl transition-all"
             >
               Discover Your Archetype
-              <FiArrowRight className="ml-2 w-5 h-5" />
+              <FiArrowRight className="ml-2 w-5 h-5" aria-hidden="true" />
             </Button>
           </FadeIn>
         </div>
@@ -273,7 +273,7 @@ export function ArchetypesMinimalTemplate() {
                     <div className="space-y-2">
                       {archetype.traits.map((trait, idx) => (
                         <div key={idx} className={`flex items-center gap-2 text-gray-500 ${darkMode ? 'text-gray-400' : 'text-sm'}`}>
-                          <FiCheck className="w-4 h-4 text-teal-500 flex-shrink-0" />
+                          <FiCheck className="w-4 h-4 text-teal-500 flex-shrink-0" aria-hidden="true" />
                           <span>{trait}</span>
                         </div>
                       ))}
@@ -405,7 +405,7 @@ export function ArchetypesMinimalTemplate() {
                         {archetypesData.program.features.map((feature, index) => (
                           <div key={index} className="flex items-start gap-3">
                             <div className="w-6 h-6 rounded-full bg-gradient-to-br from-teal-500 to-purple-600 flex items-center justify-center flex-shrink-0 mt-0.5">
-                              <FiCheck className="w-4 h-4 text-white" />
+                              <FiCheck className="w-4 h-4 text-white" aria-hidden="true" />
                             </div>
                             <span className={`leading-relaxed ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>
                               {feature}
@@ -444,11 +444,11 @@ export function ArchetypesMinimalTemplate() {
                           className="w-full bg-white text-teal-600 hover:bg-gray-100 font-semibold py-6 text-lg rounded-full shadow-lg hover:shadow-xl transition-all mb-4"
                         >
                           {archetypesData.program.cta}
-                          <FiArrowRight className="ml-2 w-5 h-5" />
+                          <FiArrowRight className="ml-2 w-5 h-5" aria-hidden="true" />
                         </Button>
 
                         <p className="text-center text-sm text-teal-100">
-                          <FiCheck className="inline w-4 h-4 mr-1" />
+                          <FiCheck className="inline w-4 h-4 mr-1" aria-hidden="true" />
                           {archetypesData.program.guarantee}
                         </p>
                       </div>
@@ -476,7 +476,7 @@ export function ArchetypesMinimalTemplate() {
               className="bg-white text-teal-600 hover:bg-gray-100 font-semibold px-10 py-7 text-lg rounded-full shadow-xl hover:shadow-2xl transition-all"
             >
               Start Your Journey Now
-              <FiArrowRight className="ml-2 w-5 h-5" />
+              <FiArrowRight className="ml-2 w-5 h-5" aria-hidden="true" />
             </Button>
           </ScrollReveal>
         </div>

@@ -10,20 +10,26 @@ import { ThemeToggle } from "@/components/theme-toggle";
 import { LanguageToggle } from "@/components/language-toggle";
 import Link from "next/link";
 import Image from "next/image";
+import { useTheme } from "next-themes";
 import { useI18n } from "@/lib/i18n-context";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
+import { useReducedMotion } from "@/lib/hooks/use-reduced-motion";
 import { CustomizeTemplateButton } from "@/components/customize-template-button";
 
 export function CreativeAgencyBoldTemplate() {
+  const { theme } = useTheme();
+  const isDark = theme === 'dark';
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const prefersReducedMotion = useReducedMotion();
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const { tt } = useI18n();
   const data = tt?.creativeAgencyBold;
 
   const { scrollYProgress } = useScroll();
-  const y = useTransform(scrollYProgress, [0, 1], [0, -300]);
-  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
-  const scale = useTransform(scrollYProgress, [0, 0.5], [1, 0.8]);
+  const y = useTransform(scrollYProgress, [0, 1], prefersReducedMotion ? [0, 0] : [0, -300]);
+  const opacity = useTransform(scrollYProgress, [0, 0.5], prefersReducedMotion ? [1, 1] : [1, 0]);
+  const scale = useTransform(scrollYProgress, [0, 0.5], prefersReducedMotion ? [1, 1] : [1, 0.8]);
+  const y2 = useTransform(scrollYProgress, [0, 0.5], prefersReducedMotion ? [0, 0] : [0, 150]);
 
   const accentColors = ['border-blue-500', 'border-green-500', 'border-pink-500', 'border-yellow-400'];
 
@@ -69,7 +75,7 @@ export function CreativeAgencyBoldTemplate() {
           <button
             className="md:hidden p-2"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            aria-label="Toggle menu"
+            aria-label={mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
           >
             {mobileMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
           </button>
@@ -98,18 +104,18 @@ export function CreativeAgencyBoldTemplate() {
       {/* Split-Screen Hero with Parallax */}
       <section className="min-h-screen grid lg:grid-cols-2 mt-16 relative overflow-hidden">
         <motion.div
-          initial={{ x: -100, opacity: 0 }}
+          initial={prefersReducedMotion ? {} : { x: -100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.8 }}
+          transition={prefersReducedMotion ? {} : { duration: 0.8 }}
           style={{ y: y, opacity, scale }}
           className="bg-gradient-to-br from-blue-600 via-blue-700 to-purple-600 text-white flex items-center p-8 lg:p-20 relative z-10"
         >
           <div>
             <motion.h1
               className="text-6xl lg:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black leading-none mb-6 text-white"
-              initial={{ y: 50, opacity: 0 }}
+              initial={prefersReducedMotion ? {} : { y: 50, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 0.2, duration: 0.8 }}
+              transition={prefersReducedMotion ? {} : { delay: 0.2, duration: 0.8 }}
             >
               {data.hero.line1}
               <br />
@@ -119,16 +125,16 @@ export function CreativeAgencyBoldTemplate() {
             </motion.h1>
             <motion.p
               className="text-2xl text-blue-100 mb-8 max-w-lg"
-              initial={{ y: 50, opacity: 0 }}
+              initial={prefersReducedMotion ? {} : { y: 50, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 0.4, duration: 0.8 }}
+              transition={prefersReducedMotion ? {} : { delay: 0.4, duration: 0.8 }}
             >
               {data.hero.subtitle}
             </motion.p>
             <motion.div
-              initial={{ y: 50, opacity: 0 }}
+              initial={prefersReducedMotion ? {} : { y: 50, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 0.6, duration: 0.8 }}
+              transition={prefersReducedMotion ? {} : { delay: 0.6, duration: 0.8 }}
             >
               <Button
                 size="lg"
@@ -137,9 +143,9 @@ export function CreativeAgencyBoldTemplate() {
                 <span className="relative z-10">{data.hero.cta}</span>
                 <motion.div
                   className="absolute inset-0 bg-gradient-to-r from-yellow-300 to-pink-400"
-                  initial={{ x: "-100%" }}
-                  whileHover={{ x: "0%" }}
-                  transition={{ duration: 0.3 }}
+                  initial={prefersReducedMotion ? {} : { x: "-100%" }}
+                  whileHover={prefersReducedMotion ? {} : { x: "0%" }}
+                  transition={prefersReducedMotion ? {} : { duration: 0.3 }}
                 />
               </Button>
             </motion.div>
@@ -147,19 +153,19 @@ export function CreativeAgencyBoldTemplate() {
         </motion.div>
 
         <motion.div
-          initial={{ x: 100, opacity: 0 }}
+          initial={prefersReducedMotion ? {} : { x: 100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.8 }}
-          style={{ y: useTransform(scrollYProgress, [0, 0.5], [0, 150]) }}
+          transition={prefersReducedMotion ? {} : { duration: 0.8 }}
+          style={{ y: y2 }}
           className="bg-gradient-to-br from-yellow-300 via-yellow-400 to-orange-400 relative overflow-hidden flex items-center justify-center"
         >
           <motion.div
             className="text-9xl text-yellow-500/20"
-            animate={{
+            animate={prefersReducedMotion ? {} : {
               rotate: [0, 10, -10, 0],
               scale: [1, 1.1, 1]
             }}
-            transition={{
+            transition={prefersReducedMotion ? {} : {
               duration: 4,
               repeat: Infinity,
               repeatType: "reverse"
@@ -177,11 +183,11 @@ export function CreativeAgencyBoldTemplate() {
                 left: `${20 + i * 15}%`,
                 top: `${30 + i * 10}%`,
               }}
-              animate={{
+              animate={prefersReducedMotion ? {} : {
                 y: [0, -30, 0],
                 opacity: [0.3, 0.7, 0.3],
               }}
-              transition={{
+              transition={prefersReducedMotion ? {} : {
                 duration: 3 + i * 0.5,
                 repeat: Infinity,
                 delay: i * 0.2,
@@ -211,7 +217,7 @@ export function CreativeAgencyBoldTemplate() {
       <section id="work" className="py-20">
         <div className="container mx-auto max-w-7xl px-6">
           <ScrollReveal>
-            <h2 className="text-4xl sm:text-5xl font-black mb-20 text-center break-words text-gray-900">{data.portfolio.title}</h2>
+            <h2 className={`text-4xl sm:text-5xl font-black mb-20 text-center break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>{data.portfolio.title}</h2>
           </ScrollReveal>
 
           {data.portfolio.projects.map((project: any, index: number) => (
@@ -222,9 +228,9 @@ export function CreativeAgencyBoldTemplate() {
                 <div className={`${index % 2 === 1 ? 'lg:order-2' : ''}`}>
                   <motion.div
                     className="w-16 h-1 bg-blue-600 mb-6"
-                    initial={{ width: 0 }}
+                    initial={prefersReducedMotion ? {} : { width: 0 }}
                     whileInView={{ width: 64 }}
-                    transition={{ duration: 0.8 }}
+                    transition={prefersReducedMotion ? {} : { duration: 0.8 }}
                     viewport={{ once: true }}
                   />
                   <h3 className="text-4xl lg:text-4xl sm:text-5xl font-bold mb-6 hover:text-blue-600 transition-colors duration-300 break-words">{project.title}</h3>
@@ -234,10 +240,10 @@ export function CreativeAgencyBoldTemplate() {
                   <motion.a
                     href="#"
                     className="text-blue-600 text-lg font-bold hover:underline inline-flex items-center gap-2 group"
-                    whileHover={{ x: 10 }}
-                    transition={{ duration: 0.2 }}
+                    whileHover={prefersReducedMotion ? {} : { x: 10 }}
+                    transition={prefersReducedMotion ? {} : { duration: 0.2 }}
                   >
-                    {tt.common.viewProject} <FiArrowRight className="group-hover:translate-x-2 transition-transform" />
+                    {tt.common.viewProject} <FiArrowRight className="group-hover:translate-x-2 transition-transform" aria-hidden="true" />
                   </motion.a>
                 </div>
                 <motion.div
@@ -284,7 +290,7 @@ export function CreativeAgencyBoldTemplate() {
       <section id="services" className="py-20 bg-gray-50">
         <div className="container mx-auto max-w-7xl px-6">
           <ScrollReveal>
-            <h2 className="text-4xl sm:text-5xl font-black text-center mb-16 break-words text-gray-900">{data.services.title}</h2>
+            <h2 className={`text-4xl sm:text-5xl font-black text-center mb-16 break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>{data.services.title}</h2>
           </ScrollReveal>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -294,16 +300,16 @@ export function CreativeAgencyBoldTemplate() {
                   className={`bg-white p-8 rounded-lg border-l-4 ${
                     accentColors[index % 4]
                   } shadow-[0_2px_10px_rgba(0,0,0,0.1),0_8px_30px_rgba(0,0,0,0.12)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.25)] cursor-pointer relative overflow-hidden group`}
-                  whileHover={{ y: -12, scale: 1.02 }}
-                  transition={{ duration: 0.3 }}
+                  whileHover={prefersReducedMotion ? {} : { y: -12, scale: 1.02 }}
+                  transition={prefersReducedMotion ? {} : { duration: 0.3 }}
                 >
                   {/* Background gradient on hover */}
                   <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-purple-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
                   <motion.div
                     className="text-5xl mb-4 relative z-10 text-white"
-                    whileHover={{ rotate: [0, -10, 10, -10, 0], scale: 1.2 }}
-                    transition={{ duration: 0.5 }}
+                    whileHover={prefersReducedMotion ? {} : { rotate: [0, -10, 10, -10, 0], scale: 1.2 }}
+                    transition={prefersReducedMotion ? {} : { duration: 0.5 }}
                   >
                     {service.icon}
                   </motion.div>
@@ -313,9 +319,9 @@ export function CreativeAgencyBoldTemplate() {
                   {/* Animated corner accent */}
                   <motion.div
                     className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-blue-400/20 to-purple-400/20 rounded-bl-full"
-                    initial={{ scale: 0, opacity: 0 }}
+                    initial={prefersReducedMotion ? {} : { scale: 0, opacity: 0 }}
                     whileInView={{ scale: 1, opacity: 1 }}
-                    transition={{ delay: index * 0.1 + 0.5, duration: 0.5 }}
+                    transition={prefersReducedMotion ? {} : { delay: index * 0.1 + 0.5, duration: 0.5 }}
                   />
                 </motion.div>
               </ScrollReveal>
@@ -330,7 +336,7 @@ export function CreativeAgencyBoldTemplate() {
           <div className="container mx-auto max-w-7xl px-6">
             <ScrollReveal>
               <div className="text-center mb-16">
-                <h2 className="text-4xl sm:text-5xl font-black mb-4 break-words text-gray-900">{data.process.title}</h2>
+                <h2 className={`text-4xl sm:text-5xl font-black mb-4 break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>{data.process.title}</h2>
                 <p className="text-xl text-gray-600">{data.process.subtitle}</p>
               </div>
             </ScrollReveal>
@@ -340,8 +346,8 @@ export function CreativeAgencyBoldTemplate() {
                 <ScrollReveal key={index} delay={index * 0.1}>
                   <motion.div
                     className="text-center group cursor-pointer"
-                    whileHover={{ y: -10 }}
-                    transition={{ duration: 0.3 }}
+                    whileHover={prefersReducedMotion ? {} : { y: -10 }}
+                    transition={prefersReducedMotion ? {} : { duration: 0.3 }}
                   >
                     <div className="text-4xl sm:text-5xl md:text-6xl font-black text-blue-600/20 mb-4 group-hover:text-blue-600/40 transition-colors break-words">{step.number}</div>
                     <h3 className="text-xl font-bold mb-3 group-hover:text-blue-600 transition-colors">{step.title}</h3>
@@ -361,7 +367,7 @@ export function CreativeAgencyBoldTemplate() {
           <div className="container mx-auto max-w-7xl px-6">
             <ScrollReveal>
               <div className="text-center mb-16">
-                <h2 className="text-4xl sm:text-5xl font-black mb-4 break-words text-gray-900">{data.team.title}</h2>
+                <h2 className={`text-4xl sm:text-5xl font-black mb-4 break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>{data.team.title}</h2>
                 <p className="text-xl text-gray-600">{data.team.subtitle}</p>
               </div>
             </ScrollReveal>
@@ -371,8 +377,8 @@ export function CreativeAgencyBoldTemplate() {
                 <ScrollReveal key={index} delay={index * 0.1}>
                   <motion.div
                     className="text-center group cursor-pointer"
-                    whileHover={{ y: -10 }}
-                    transition={{ duration: 0.3 }}
+                    whileHover={prefersReducedMotion ? {} : { y: -10 }}
+                    transition={prefersReducedMotion ? {} : { duration: 0.3 }}
                   >
                     <div className="mb-6 relative overflow-hidden rounded-2xl aspect-square">
                       <img
@@ -399,7 +405,7 @@ export function CreativeAgencyBoldTemplate() {
           <div className="container mx-auto max-w-7xl px-6">
             <ScrollReveal>
               <div className="text-center mb-16">
-                <h2 className="text-4xl sm:text-5xl font-black mb-4 break-words text-gray-900">{data.blog.title}</h2>
+                <h2 className={`text-4xl sm:text-5xl font-black mb-4 break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>{data.blog.title}</h2>
                 <p className="text-xl text-gray-600">{data.blog.subtitle}</p>
               </div>
             </ScrollReveal>
@@ -409,8 +415,8 @@ export function CreativeAgencyBoldTemplate() {
                 <ScrollReveal key={index} delay={index * 0.1}>
                   <motion.article
                     className="bg-white rounded-2xl shadow-lg overflow-hidden group cursor-pointer"
-                    whileHover={{ y: -10, scale: 1.02 }}
-                    transition={{ duration: 0.3 }}
+                    whileHover={prefersReducedMotion ? {} : { y: -10, scale: 1.02 }}
+                    transition={prefersReducedMotion ? {} : { duration: 0.3 }}
                   >
                     <div className="aspect-video overflow-hidden">
                       <img
@@ -442,7 +448,7 @@ export function CreativeAgencyBoldTemplate() {
           <div className="container mx-auto max-w-7xl px-6">
             <ScrollReveal>
               <div className="text-center mb-16">
-                <h2 className="text-4xl sm:text-5xl font-black mb-4 break-words text-gray-900">{data.awards.title}</h2>
+                <h2 className="text-4xl sm:text-5xl font-black mb-4 break-words text-white">{data.awards.title}</h2>
                 <p className="text-xl text-gray-400">{data.awards.subtitle}</p>
               </div>
             </ScrollReveal>
@@ -452,8 +458,8 @@ export function CreativeAgencyBoldTemplate() {
                 <ScrollReveal key={index} delay={index * 0.1}>
                   <motion.div
                     className="p-8 bg-white/5 rounded-2xl border border-white/10 group cursor-pointer"
-                    whileHover={{ y: -5, backgroundColor: "rgba(255, 255, 255, 0.1)" }}
-                    transition={{ duration: 0.3 }}
+                    whileHover={prefersReducedMotion ? {} : { y: -5, backgroundColor: "rgba(255, 255, 255, 0.1)" }}
+                    transition={prefersReducedMotion ? {} : { duration: 0.3 }}
                   >
                     <div className="flex items-start gap-6">
                       <div className="text-4xl">🏆</div>
@@ -476,7 +482,7 @@ export function CreativeAgencyBoldTemplate() {
         <section className="py-20 bg-white">
           <div className="container mx-auto max-w-4xl px-6">
             <ScrollReveal>
-              <h2 className="text-4xl sm:text-5xl font-black text-center mb-16 break-words text-gray-900">{data.faq.title}</h2>
+              <h2 className={`text-4xl sm:text-5xl font-black text-center mb-16 break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>{data.faq.title}</h2>
             </ScrollReveal>
 
             <div className="space-y-6">
@@ -484,8 +490,8 @@ export function CreativeAgencyBoldTemplate() {
                 <ScrollReveal key={index} delay={index * 0.05}>
                   <motion.div
                     className="p-6 bg-gray-50 rounded-2xl hover:bg-gray-100 transition-colors"
-                    whileHover={{ x: 10 }}
-                    transition={{ duration: 0.2 }}
+                    whileHover={prefersReducedMotion ? {} : { x: 10 }}
+                    transition={prefersReducedMotion ? {} : { duration: 0.2 }}
                   >
                     <h3 className="text-xl font-bold mb-3 text-blue-600">{item.question}</h3>
                     <p className="text-gray-600 leading-relaxed">{item.answer}</p>
@@ -503,7 +509,7 @@ export function CreativeAgencyBoldTemplate() {
           <div className="container mx-auto max-w-3xl px-6">
             <ScrollReveal>
               <div className="text-center">
-                <h2 className="text-4xl sm:text-5xl font-black mb-4 break-words text-gray-900">{data.newsletter.title}</h2>
+                <h2 className={`text-4xl sm:text-5xl font-black mb-4 break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>{data.newsletter.title}</h2>
                 <p className="text-xl text-gray-600 mb-8">{data.newsletter.subtitle}</p>
                 <div className="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
                   <input
@@ -526,7 +532,7 @@ export function CreativeAgencyBoldTemplate() {
       <section className="py-32 bg-gradient-to-br from-pink-500 via-blue-600 to-purple-600 text-white">
         <div className="container mx-auto max-w-4xl px-6 text-center">
           <ScrollReveal>
-            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-8 leading-tight break-words text-gray-900">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-8 leading-tight break-words text-white">
               {data.cta.title}
             </h2>
             <p className="text-2xl mb-12 text-white/90">
@@ -546,7 +552,7 @@ export function CreativeAgencyBoldTemplate() {
       <footer id="contact" className="py-16 bg-gray-900 text-white">
         <div className="container mx-auto max-w-7xl px-6">
           <div className="text-center mb-12">
-            <h3 className="text-3xl sm:text-4xl font-black mb-4 text-gray-900">{tt.common.getInTouch}</h3>
+            <h3 className="text-3xl sm:text-4xl font-black mb-4 text-white">{tt.common.getInTouch}</h3>
             <p className="text-xl text-gray-400 mb-8">{data.contact.description}</p>
             <div className="flex gap-6 justify-center">
               <a
@@ -572,7 +578,7 @@ export function CreativeAgencyBoldTemplate() {
 
           {/* Skills - Creative Agency Bold */}
           <section className="py-20 border-t border-gray-800">
-            <h3 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-12 text-center break-words text-gray-900">OUR SKILLS</h3>
+            <h3 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-12 text-center break-words text-white">OUR SKILLS</h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {['Branding', 'Design', 'Strategy', 'Development', 'Marketing', 'Content', 'Video', 'Photography'].map((skill, i) => (
                 <div key={i} className="bg-gradient-to-br from-red-500 to-orange-500 p-8 rounded-2xl text-center transform hover:scale-105 transition-transform">
@@ -585,7 +591,7 @@ export function CreativeAgencyBoldTemplate() {
           {/* About - Creative Agency Bold */}
           <section className="py-20 border-t border-gray-800 bg-gradient-to-br from-purple-900 to-black">
             <div className="max-w-4xl mx-auto text-center">
-              <h3 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-8 break-words text-gray-900">ABOUT US</h3>
+              <h3 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-8 break-words text-white">ABOUT US</h3>
               <p className="text-2xl text-gray-300 mb-6 font-bold">
                 WE ARE A BOLD CREATIVE AGENCY PUSHING BOUNDARIES AND BREAKING RULES.
               </p>
@@ -597,7 +603,7 @@ export function CreativeAgencyBoldTemplate() {
 
           {/* Pricing - Creative Agency Bold */}
           <section className="py-20 border-t border-gray-800">
-            <h3 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-12 text-center break-words text-gray-900">PRICING</h3>
+            <h3 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-12 text-center break-words text-white">PRICING</h3>
             <div className="grid md:grid-cols-3 gap-8">
               {[
                 { name: 'LAUNCH', price: '$5K', color: 'from-blue-500 to-cyan-500', features: ['Brand Identity', 'Website Design', '3 Revisions'] },
@@ -623,7 +629,7 @@ export function CreativeAgencyBoldTemplate() {
 
           {/* Testimonials - Creative Agency Bold */}
           <section className="py-20 border-t border-gray-800 bg-gradient-to-br from-red-900 to-black">
-            <h3 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-12 text-center break-words text-gray-900">WHAT CLIENTS SAY</h3>
+            <h3 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-12 text-center break-words text-white">WHAT CLIENTS SAY</h3>
             <div className="max-w-4xl mx-auto space-y-8">
               {[
                 { text: 'They completely transformed our brand. Bold, fearless, and incredibly talented!', author: 'Sarah Martinez', company: 'TechStartup Inc' },
@@ -643,7 +649,7 @@ export function CreativeAgencyBoldTemplate() {
 
           {/* Timeline - Creative Agency Bold */}
           <section className="py-20 border-t border-gray-800">
-            <h3 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-12 text-center break-words text-gray-900">OUR JOURNEY</h3>
+            <h3 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-12 text-center break-words text-white">OUR JOURNEY</h3>
             <div className="max-w-3xl mx-auto space-y-6">
               {[
                 { year: '2024', title: 'GLOBAL EXPANSION', desc: 'Opened studios in NYC, London, Tokyo' },

@@ -113,6 +113,8 @@ const portfolioData = {
 };
 
 export function IllustrationFocusTemplate() {
+  const { theme } = useTheme();
+  const isDark = theme === 'dark';
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 return (
     <div className="min-h-screen overflow-x-hidden max-w-full bg-gradient-to-br from-pink-50 via-purple-50 to-blue-50 dark:from-gray-900 dark:via-purple-900 dark:to-gray-900">
@@ -143,7 +145,7 @@ return (
             <button
               className="md:hidden p-3 text-foreground hover:bg-accent rounded-md border border-border transition-colors"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              aria-label="Toggle menu"
+              aria-label={mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
             >
               {mobileMenuOpen ? <FiX size={28} /> : <FiMenu size={28} />}
             </button>
@@ -226,7 +228,7 @@ return (
         <ScrollReveal>
           <Card className="max-w-full mx-auto bg-white/60 dark:bg-gray-800/60 backdrop-blur border-2 border-purple-200 dark:border-purple-800">
             <CardContent className="p-8">
-              <h2 className="text-3xl font-bold mb-4 text-center text-gray-900">About Me 👋</h2>
+              <h2 className={`text-3xl font-bold mb-4 text-center ${isDark ? 'text-white' : 'text-gray-900'}`}>About Me 👋</h2>
               <p className="text-lg text-center leading-relaxed text-foreground/80">
                 {portfolioData.about}
               </p>
@@ -257,7 +259,7 @@ return (
       {/* Services Section */}
       <section id="services" className="container mx-auto px-3 sm:px-3 py-20">
         <ScrollReveal>
-          <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold text-center mb-16 break-words text-gray-900">
+          <h2 className={`text-3xl sm:text-5xl md:text-6xl font-bold text-center mb-16 break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>
             What I Do
           </h2>
         </ScrollReveal>
@@ -274,7 +276,7 @@ return (
                   >
                     {service.icon}
                   </div>
-                  <h3 className="text-2xl font-bold mb-4 text-gray-900">{service.title}</h3>
+                  <h3 className={`text-2xl font-bold mb-4 ${isDark ? 'text-white' : 'text-gray-900'}`}>{service.title}</h3>
                   <p className="text-muted-foreground">{service.description}</p>
                 </CardContent>
               </Card>
@@ -286,7 +288,7 @@ return (
       {/* Projects Section */}
       <section id="work" className="container mx-auto px-3 sm:px-3 py-20">
         <ScrollReveal>
-          <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold text-center mb-16 break-words text-gray-900">
+          <h2 className={`text-3xl sm:text-5xl md:text-6xl font-bold text-center mb-16 break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>
             Recent Projects
           </h2>
         </ScrollReveal>
@@ -302,7 +304,7 @@ return (
                   {project.emoji}
                 </div>
                 <CardContent className="p-6">
-                  <h3 className="text-2xl font-bold mb-2 text-gray-900">{project.title}</h3>
+                  <h3 className={`text-2xl font-bold mb-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>{project.title}</h3>
                   <p className="text-sm text-muted-foreground mb-3">{project.description}</p>
                   <p className="text-sm leading-relaxed text-foreground/70">{project.details}</p>
                 </CardContent>
@@ -315,7 +317,7 @@ return (
       {/* Process Section */}
       <section className="container mx-auto px-3 sm:px-3 py-20 bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-blue-950/30 dark:to-cyan-950/30">
         <ScrollReveal>
-          <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold text-center mb-16 break-words text-gray-900">
+          <h2 className={`text-3xl sm:text-5xl md:text-6xl font-bold text-center mb-16 break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>
             My Creative Process
           </h2>
         </ScrollReveal>
@@ -329,7 +331,7 @@ return (
                     {step.step}
                   </div>
                   <div className="text-5xl mb-4">{step.icon}</div>
-                  <h3 className="text-xl font-bold mb-2 text-gray-900">{step.title}</h3>
+                  <h3 className={`text-xl font-bold mb-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>{step.title}</h3>
                   <p className="text-sm text-muted-foreground">{step.desc}</p>
                 </CardContent>
               </Card>
@@ -341,7 +343,7 @@ return (
       {/* Art Styles Section */}
       <section className="container mx-auto px-3 sm:px-3 py-20">
         <ScrollReveal>
-          <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold text-center mb-6 break-words text-gray-900">
+          <h2 className={`text-3xl sm:text-5xl md:text-6xl font-bold text-center mb-6 break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>
             Art Styles I Love
           </h2>
           <p className="text-lg text-center text-muted-foreground mb-16 max-w-full mx-auto">
@@ -366,7 +368,7 @@ return (
       {/* Tools & Software Section */}
       <section className="container mx-auto px-3 sm:px-3 py-20 bg-gradient-to-br from-orange-50 to-yellow-50 dark:from-orange-950/30 dark:to-yellow-950/30">
         <ScrollReveal>
-          <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold text-center mb-6 break-words text-gray-900">
+          <h2 className={`text-3xl sm:text-5xl md:text-6xl font-bold text-center mb-6 break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>
             Tools I Use
           </h2>
           <p className="text-lg text-center text-muted-foreground mb-16 max-w-full mx-auto">
@@ -393,7 +395,7 @@ return (
       {/* Testimonials Section */}
       <section className="container mx-auto px-3 sm:px-3 py-20">
         <ScrollReveal>
-          <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold text-center mb-6 break-words text-gray-900">
+          <h2 className={`text-3xl sm:text-5xl md:text-6xl font-bold text-center mb-6 break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>
             Client Love
           </h2>
           <p className="text-lg text-center text-muted-foreground mb-16 max-w-full mx-auto">
@@ -411,7 +413,7 @@ return (
                       {testimonial.avatar}
                     </div>
                     <div>
-                      <h3 className="font-bold text-lg text-gray-900">{testimonial.name}</h3>
+                      <h3 className={`font-bold text-lg ${isDark ? 'text-white' : 'text-gray-900'}`}>{testimonial.name}</h3>
                       <p className="text-sm text-muted-foreground">{testimonial.role}</p>
                     </div>
                   </div>
@@ -432,14 +434,14 @@ return (
             <div className="mb-8">
               <span className="text-8xl">💌</span>
             </div>
-            <h2 className="text-3xl sm:text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 break-words text-gray-900">
+            <h2 className={`text-3xl sm:text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>
               Let's Collaborate!
             </h2>
             <p className="text-xl text-muted-foreground mb-8">
               Have a project in mind? I'd love to hear about it!
             </p>
             <Button size="lg" className="bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white text-lg px-8">
-              <FiMail className="mr-2" />
+              <FiMail className="mr-2" aria-hidden="true" />
               Say Hello
             </Button>
           </div>
@@ -452,7 +454,7 @@ return (
           <ScrollReveal>
             <div className="text-center mb-12">
               <span className="text-6xl mb-6 inline-block">🎨</span>
-              <h2 className="text-3xl sm:text-3xl sm:text-5xl font-bold mb-4 break-words text-gray-900">Skills & Tools</h2>
+              <h2 className={`text-3xl sm:text-3xl sm:text-5xl font-bold mb-4 break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>Skills & Tools</h2>
             </div>
           </ScrollReveal>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -483,7 +485,7 @@ return (
           <ScrollReveal>
             <div className="text-center mb-12">
               <span className="text-6xl mb-6 inline-block">💰</span>
-              <h2 className="text-3xl sm:text-3xl sm:text-5xl font-bold mb-4 break-words text-gray-900">Pricing Plans</h2>
+              <h2 className={`text-3xl sm:text-3xl sm:text-5xl font-bold mb-4 break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>Pricing Plans</h2>
               <p className="text-xl text-muted-foreground">Choose the perfect package for your project</p>
             </div>
           </ScrollReveal>
@@ -500,7 +502,7 @@ return (
                     : 'bg-white dark:bg-gray-800 shadow-lg'
                 }`}>
                   <div className="text-5xl mb-4">{plan.icon}</div>
-                  <h3 className="text-2xl font-bold mb-2 text-gray-900">{plan.name}</h3>
+                  <h3 className={`text-2xl font-bold mb-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>{plan.name}</h3>
                   <div className="text-3xl sm:text-4xl font-bold mb-6 text-white">{plan.price}</div>
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((f, j) => (
@@ -526,7 +528,7 @@ return (
           <ScrollReveal>
             <div className="text-center mb-12">
               <span className="text-6xl mb-6 inline-block">🖼️</span>
-              <h2 className="text-3xl sm:text-3xl sm:text-5xl font-bold mb-4 break-words text-gray-900">Gallery</h2>
+              <h2 className={`text-3xl sm:text-3xl sm:text-5xl font-bold mb-4 break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>Gallery</h2>
             </div>
           </ScrollReveal>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
@@ -554,7 +556,7 @@ return (
           <ScrollReveal>
             <div className="text-center mb-12">
               <span className="text-6xl mb-6 inline-block">📅</span>
-              <h2 className="text-3xl sm:text-3xl sm:text-5xl font-bold mb-4 break-words text-gray-900">My Journey</h2>
+              <h2 className={`text-3xl sm:text-3xl sm:text-5xl font-bold mb-4 break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>My Journey</h2>
             </div>
           </ScrollReveal>
           <div className="space-y-8">
@@ -571,7 +573,7 @@ return (
                     <div className="font-bold text-sm text-muted-foreground">{item.year}</div>
                   </div>
                   <div className="flex-1 bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-md">
-                    <h3 className="font-bold text-lg mb-2 text-gray-900">{item.title}</h3>
+                    <h3 className={`font-bold text-lg mb-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>{item.title}</h3>
                     <p className="text-muted-foreground">{item.company}</p>
                   </div>
                 </div>

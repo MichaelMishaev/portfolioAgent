@@ -297,7 +297,7 @@ export function CommunityServiceTemplate() {
             <button
               className="md:hidden p-3 text-foreground hover:bg-accent rounded-md border border-border transition-colors"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              aria-label="Toggle menu"
+              aria-label={mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
             >
               {mobileMenuOpen ? <FiX size={28} /> : <FiMenu size={28} />}
             </button>
@@ -579,7 +579,7 @@ export function CommunityServiceTemplate() {
                     <ul className="space-y-3 mb-8">
                       {tier.features.map((feature) => (
                         <li key={feature} className="flex items-start gap-3">
-                          <FiCheck className="w-5 h-5 text-teal-500 flex-shrink-0 mt-0.5" />
+                          <FiCheck className="w-5 h-5 text-teal-500 flex-shrink-0 mt-0.5" aria-hidden="true" />
                           <span className="text-sm text-gray-900">{feature}</span>
                         </li>
                       ))}

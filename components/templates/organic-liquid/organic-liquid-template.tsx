@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { useReducedMotion } from "@/lib/hooks/use-reduced-motion";
 import { ScrollReveal } from "@/components/animations/scroll-reveal";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -82,6 +83,7 @@ const portfolioData = {
 
 export function OrganicLiquidTemplate() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const prefersReducedMotion = useReducedMotion();
   const { theme } = useTheme();
   const darkMode = theme === 'dark';
 return (
@@ -103,12 +105,12 @@ return (
         {/* Morphing Background Blobs */}
         <motion.div
           className="absolute top-20 left-10 w-96 h-96 bg-gradient-to-br from-rose-300 to-amber-300 rounded-full opacity-40 blur-3xl"
-          animate={{
+          animate={prefersReducedMotion ? {} : {
             scale: [1, 1.2, 1],
             x: [0, 30, 0],
             y: [0, -30, 0],
           }}
-          transition={{
+          transition={prefersReducedMotion ? {} : {
             duration: 8,
             repeat: Infinity,
             ease: "easeInOut",
@@ -116,12 +118,12 @@ return (
         />
         <motion.div
           className="absolute bottom-20 right-10 w-80 h-80 bg-gradient-to-br from-teal-300 to-blue-300 rounded-full opacity-40 blur-3xl"
-          animate={{
+          animate={prefersReducedMotion ? {} : {
             scale: [1, 1.3, 1],
             x: [0, -40, 0],
             y: [0, 40, 0],
           }}
-          transition={{
+          transition={prefersReducedMotion ? {} : {
             duration: 10,
             repeat: Infinity,
             ease: "easeInOut",
@@ -130,9 +132,9 @@ return (
 
         <div className="relative z-10 text-center max-w-full">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={prefersReducedMotion ? {} : { opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={prefersReducedMotion ? {} : { duration: 0.8 }}
           >
             <h1 className="text-3xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-6 bg-gradient-to-r from-rose-600 via-amber-600 to-teal-600 bg-clip-text text-transparent break-words text-white">
               {portfolioData.name}
@@ -140,27 +142,27 @@ return (
           </motion.div>
 
           <motion.p
-            initial={{ opacity: 0, y: 30 }}
+            initial={prefersReducedMotion ? {} : { opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            transition={prefersReducedMotion ? {} : { duration: 0.8, delay: 0.2 }}
             className="text-xl sm:text-2xl md:text-3xl text-foreground/80 mb-8"
           >
             {portfolioData.title}
           </motion.p>
 
           <motion.p
-            initial={{ opacity: 0, y: 30 }}
+            initial={prefersReducedMotion ? {} : { opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            transition={prefersReducedMotion ? {} : { duration: 0.8, delay: 0.4 }}
             className="text-lg text-muted-foreground mb-12 max-w-full mx-auto"
           >
             {portfolioData.tagline}
           </motion.p>
 
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={prefersReducedMotion ? {} : { opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
+            transition={prefersReducedMotion ? {} : { duration: 0.8, delay: 0.6 }}
           >
             <Button
               size="lg"
@@ -176,11 +178,11 @@ return (
       <section className="py-20 px-3 relative">
         <motion.div
           className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-amber-300 to-rose-300 rounded-full opacity-20 blur-3xl"
-          animate={{
+          animate={prefersReducedMotion ? {} : {
             scale: [1, 1.2, 1],
             x: [0, -50, 0],
           }}
-          transition={{
+          transition={prefersReducedMotion ? {} : {
             duration: 12,
             repeat: Infinity,
             ease: "easeInOut",
@@ -204,10 +206,10 @@ return (
                 <motion.div
                   key={index}
                   className="text-center p-6 bg-white/60 dark:bg-gray-800/60 backdrop-blur rounded-[30%_70%_70%_30%/30%_30%_70%_70%] border-2 border-rose-200/50"
-                  whileHover={{
+                  whileHover={prefersReducedMotion ? {} : {
                     borderRadius: "70% 30% 30% 70% / 60% 40% 60% 40%",
                   }}
-                  transition={{ type: "spring", stiffness: 300 }}
+                  transition={prefersReducedMotion ? {} : { type: "spring", stiffness: 300 }}
                 >
                   <div className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-rose-600 to-teal-600 bg-clip-text text-transparent mb-2 text-white">
                     {stat.number}
@@ -235,8 +237,8 @@ return (
                 <CardContent className="p-8 text-center">
                   <motion.div
                     className={`w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-rose-200 to-teal-200 dark:from-rose-800 dark:to-teal-800 rounded-full flex items-center justify-center ${darkMode ? 'text-rose-300' : 'text-rose-600'}`}
-                    whileHover={{ scale: 1.1, rotate: 10 }}
-                    transition={{ type: "spring", stiffness: 300 }}
+                    whileHover={prefersReducedMotion ? {} : { scale: 1.1, rotate: 10 }}
+                    transition={prefersReducedMotion ? {} : { type: "spring", stiffness: 300 }}
                   >
                     {service.icon}
                   </motion.div>
@@ -255,11 +257,11 @@ return (
       <section className="py-20 px-3 relative">
         <motion.div
           className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-br from-teal-300 to-blue-300 rounded-full opacity-20 blur-3xl"
-          animate={{
+          animate={prefersReducedMotion ? {} : {
             scale: [1, 1.3, 1],
             y: [0, -50, 0],
           }}
-          transition={{
+          transition={prefersReducedMotion ? {} : {
             duration: 15,
             repeat: Infinity,
             ease: "easeInOut",
@@ -282,11 +284,11 @@ return (
                       {/* Gradient Blob */}
                       <motion.div
                         className={`w-48 h-48 bg-gradient-to-br ${project.color} rounded-[40%_60%_60%_40%_/_60%_40%_40%_60%] flex-shrink-0`}
-                        whileHover={{
+                        whileHover={prefersReducedMotion ? {} : {
                           borderRadius: "60% 40% 40% 60% / 40% 60% 60% 40%",
                           scale: 1.05,
                         }}
-                        transition={{ type: "spring", stiffness: 200 }}
+                        transition={prefersReducedMotion ? {} : { type: "spring", stiffness: 200 }}
                       />
 
                       {/* Content */}
@@ -324,11 +326,11 @@ return (
               <ScrollReveal key={step.step} delay={index * 0.1}>
                 <motion.div
                   className="text-center p-6 bg-white/60 dark:bg-gray-800/60 backdrop-blur rounded-[35%_65%_60%_40%_/_40%_60%_65%_35%] border-2 border-rose-200/50"
-                  whileHover={{
+                  whileHover={prefersReducedMotion ? {} : {
                     borderRadius: "60% 40% 40% 60% / 40% 60% 60% 40%",
                     y: -10,
                   }}
-                  transition={{ type: "spring", stiffness: 300 }}
+                  transition={prefersReducedMotion ? {} : { type: "spring", stiffness: 300 }}
                 >
                   <div className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-rose-600 to-teal-600 bg-clip-text text-transparent mb-4 break-words text-white">
                     {index + 1}
@@ -346,11 +348,11 @@ return (
       <section className="py-20 px-3 relative">
         <motion.div
           className="absolute top-20 right-20 w-80 h-80 bg-gradient-to-br from-rose-300 to-amber-300 rounded-full opacity-20 blur-3xl"
-          animate={{
+          animate={prefersReducedMotion ? {} : {
             scale: [1, 1.2, 1],
             rotate: [0, 180, 360],
           }}
-          transition={{
+          transition={prefersReducedMotion ? {} : {
             duration: 20,
             repeat: Infinity,
             ease: "linear",
@@ -399,11 +401,11 @@ return (
                 <motion.div
                   key={value}
                   className="px-8 py-4 bg-white/80 dark:bg-gray-800/80 backdrop-blur rounded-full border-2 border-rose-300/50 dark:border-rose-700/50 text-lg font-medium text-foreground"
-                  whileHover={{
+                  whileHover={prefersReducedMotion ? {} : {
                     scale: 1.05,
                     borderRadius: "30% 70% 70% 30% / 30% 30% 70% 70%",
                   }}
-                  transition={{ type: "spring", stiffness: 300 }}
+                  transition={prefersReducedMotion ? {} : { type: "spring", stiffness: 300 }}
                 >
                   {value}
                 </motion.div>
@@ -417,14 +419,14 @@ return (
       <section id="contact" className="py-20 px-3 relative">
         <motion.div
           className="absolute inset-0 bg-gradient-to-r from-rose-300/30 via-amber-300/30 to-teal-300/30 rounded-[40%_60%_70%_30%_/_60%_30%_70%_40%]"
-          animate={{
+          animate={prefersReducedMotion ? {} : {
             borderRadius: [
               "40% 60% 70% 30% / 60% 30% 70% 40%",
               "60% 40% 30% 70% / 40% 60% 30% 70%",
               "40% 60% 70% 30% / 60% 30% 70% 40%",
             ],
           }}
-          transition={{
+          transition={prefersReducedMotion ? {} : {
             duration: 15,
             repeat: Infinity,
             ease: "easeInOut",
@@ -451,7 +453,7 @@ return (
               size="lg"
               className="rounded-full bg-gradient-to-r from-rose-500 via-amber-500 to-teal-500 hover:from-rose-600 hover:via-amber-600 hover:to-teal-600 text-white text-lg px-10 py-6 h-auto"
             >
-              <FiMail className="mr-2 w-5 h-5" />
+              <FiMail className="mr-2 w-5 h-5" aria-hidden="true" />
               hello@willowhaves.com
             </Button>
           </ScrollReveal>
@@ -568,7 +570,7 @@ return (
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button size="lg" className="bg-white !text-rose-600 hover:bg-white/90 rounded-full font-semibold text-lg px-8">
-                  <FiMail className="mr-2" />
+                  <FiMail className="mr-2" aria-hidden="true" />
                   Start Project
                 </Button>
                 <Button size="lg" variant="outline" className="border-white !text-white !bg-transparent hover:bg-white/20 rounded-full font-semibold text-lg px-8">

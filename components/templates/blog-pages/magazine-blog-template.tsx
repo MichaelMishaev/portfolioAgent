@@ -349,7 +349,7 @@ export function MagazineBlogTemplate() {
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 className="md:hidden p-2 hover:bg-gray-100 rounded-lg transition-colors"
-                aria-label="Toggle menu"
+                aria-label={mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
               >
                 {mobileMenuOpen ? <FiX className="w-6 h-6" /> : <FiMenu className="w-6 h-6" />}
               </button>
@@ -729,7 +729,7 @@ export function MagazineBlogTemplate() {
       <section id="newsletter" className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
         <div className="container mx-auto px-3 max-w-full text-center">
           <ScrollReveal>
-            <FiMail className="w-16 h-16 mx-auto mb-6 text-white" />
+            <FiMail className="w-16 h-16 mx-auto mb-6 text-white" aria-hidden="true" />
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">Stay in the Loop</h2>
             <p className="text-xl text-blue-100 mb-8">
               Get the best articles, insights, and news delivered to your inbox weekly.

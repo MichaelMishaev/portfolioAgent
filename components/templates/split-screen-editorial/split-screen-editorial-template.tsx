@@ -7,8 +7,11 @@ import { ThemeToggle } from "@/components/theme-toggle";
 import { LanguageToggle } from "@/components/language-toggle";
 import Link from "next/link";
 import { useI18n } from "@/lib/i18n-context";
+import { useTheme } from "next-themes";
 
 export function SplitScreenEditorialTemplate() {
+  const { theme } = useTheme();
+  const isDark = theme === 'dark';
   const { tt } = useI18n();
   const data = tt?.splitScreenEditorial;
 
@@ -70,7 +73,7 @@ export function SplitScreenEditorialTemplate() {
         <section id="work" className="min-h-screen flex items-center justify-center p-8 lg:p-16">
           <div className="max-w-2xl">
             <ScrollReveal>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-8 break-words text-gray-900">{data.intro.headline}</h2>
+              <h2 className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-8 break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>{data.intro.headline}</h2>
               <p className="text-2xl text-gray-600 leading-relaxed">
                 {data.intro.description}
               </p>
@@ -89,9 +92,9 @@ export function SplitScreenEditorialTemplate() {
 
             <div className="relative z-10 text-center text-white p-8">
               <ScrollReveal>
-                <div className="text-sm font-semibold mb-2 opacity-80">{project.client}</div>
+                <div className="text-sm font-semibold mb-2 text-white/90">{project.client}</div>
                 <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 break-words text-white">{project.title}</h2>
-                <p className="text-xl opacity-90 max-w-2xl mx-auto text-gray-900">
+                <p className="text-xl max-w-2xl mx-auto text-white/90">
                   {project.description}
                 </p>
               </ScrollReveal>
@@ -107,7 +110,7 @@ export function SplitScreenEditorialTemplate() {
         <section id="about" className="min-h-screen flex items-center p-8 lg:p-16 bg-gray-50">
           <div className="max-w-3xl mx-auto">
             <ScrollReveal>
-              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-8 text-gray-900">{tt.common.about}</h2>
+              <h2 className={`text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-8 ${isDark ? 'text-white' : 'text-gray-900'}`}>{tt.common.about}</h2>
               <div className="prose prose-lg">
                 <p className="text-gray-600 leading-relaxed mb-6">
                   {data.about.bio}
@@ -123,7 +126,7 @@ export function SplitScreenEditorialTemplate() {
                 {data.about.expertise.map((skill: string, index: number) => (
                   <div key={index} className="flex items-center gap-3">
                     <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
-                    <span className="text-gray-900 font-medium">{skill}</span>
+                    <span className={`${isDark ? 'text-white' : 'text-gray-900'} font-medium`}>{skill}</span>
                   </div>
                 ))}
               </div>
@@ -135,7 +138,7 @@ export function SplitScreenEditorialTemplate() {
         <section id="contact" className="min-h-screen flex items-center justify-center p-8 lg:p-16 bg-white">
           <div className="max-w-2xl mx-auto text-center">
             <ScrollReveal>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-8 break-words text-gray-900">
+              <h2 className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-8 break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>
                 {tt.common.letsWorkTogether}
               </h2>
               <p className="text-xl text-gray-600 mb-12">
@@ -156,7 +159,7 @@ export function SplitScreenEditorialTemplate() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center border-y border-gray-200 py-12">
             {[{ n: "10+", l: "Years" }, { n: "200+", l: "Stories" }, { n: "50M", l: "Readers" }, { n: "15", l: "Awards" }].map((s, i) => (
               <div key={i}>
-                <div className="text-4xl sm:text-5xl font-serif font-bold mb-2 break-words text-gray-900">{s.n}</div>
+                <div className={`text-4xl sm:text-5xl font-serif font-bold mb-2 break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>{s.n}</div>
                 <div className="text-sm uppercase tracking-widest text-gray-600">{s.l}</div>
               </div>
             ))}
@@ -165,7 +168,7 @@ export function SplitScreenEditorialTemplate() {
 
         {/* Timeline - Editorial Career */}
         <section className="py-20 px-8">
-          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-serif font-bold mb-12 text-gray-900">Career Highlights</h2>
+          <h2 className={`text-xl sm:text-2xl md:text-3xl lg:text-4xl font-serif font-bold mb-12 ${isDark ? 'text-white' : 'text-gray-900'}`}>Career Highlights</h2>
           <div className="space-y-8 border-l-2 border-gray-300 pl-8">
             {[
               { y: "2024", t: "Editor-in-Chief", p: "Modern Magazine" },
@@ -176,7 +179,7 @@ export function SplitScreenEditorialTemplate() {
               <div key={i} className="relative">
                 <div className="absolute -left-[41px] w-4 h-4 bg-blue-600 rounded-full border-4 border-white"></div>
                 <div className="text-sm text-gray-500 mb-1">{item.y}</div>
-                <h3 className="text-xl font-bold mb-1 text-gray-900">{item.t}</h3>
+                <h3 className={`text-xl font-bold mb-1 ${isDark ? 'text-white' : 'text-gray-900'}`}>{item.t}</h3>
                 <p className="text-gray-600">{item.p}</p>
               </div>
             ))}
@@ -185,7 +188,7 @@ export function SplitScreenEditorialTemplate() {
 
         {/* Testimonials - Magazine Pull Quotes */}
         <section className="py-20 px-8 bg-gray-50">
-          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-serif font-bold mb-12 text-gray-900">Praise</h2>
+          <h2 className={`text-xl sm:text-2xl md:text-3xl lg:text-4xl font-serif font-bold mb-12 ${isDark ? 'text-white' : 'text-gray-900'}`}>Praise</h2>
           <div className="space-y-12">
             {[
               { q: "A masterful storyteller with an eye for detail", a: "Jane Doe", r: "Editor, Vogue" },
@@ -193,7 +196,7 @@ export function SplitScreenEditorialTemplate() {
               { q: "Consistently delivers award-winning journalism", a: "Sarah Lee", r: "Director, Columbia J-School" }
             ].map((t, i) => (
               <blockquote key={i} className="border-l-4 border-blue-600 pl-6 py-2">
-                <p className="text-2xl font-serif italic mb-4 text-gray-900">"{t.q}"</p>
+                <p className={`text-2xl font-serif italic mb-4 ${isDark ? 'text-white' : 'text-gray-900'}`}>"{t.q}"</p>
                 <footer className="text-sm text-gray-700"><strong>{t.a}</strong>, {t.r}</footer>
               </blockquote>
             ))}
@@ -202,7 +205,7 @@ export function SplitScreenEditorialTemplate() {
 
         {/* Pricing - Editorial Services */}
         <section className="py-20 px-8">
-          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-serif font-bold mb-12 text-gray-900">Services & Rates</h2>
+          <h2 className={`text-xl sm:text-2xl md:text-3xl lg:text-4xl font-serif font-bold mb-12 ${isDark ? 'text-white' : 'text-gray-900'}`}>Services & Rates</h2>
           <div className="space-y-6">
             {[
               { s: "Feature Articles", p: "$2,500/piece", d: "Long-form journalism, 2000-5000 words" },
@@ -211,7 +214,7 @@ export function SplitScreenEditorialTemplate() {
             ].map((srv, i) => (
               <div key={i} className="border-b border-gray-200 pb-6">
                 <div className="flex justify-between items-start mb-2">
-                  <h3 className="text-xl font-bold text-gray-900">{srv.s}</h3>
+                  <h3 className={`text-xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>{srv.s}</h3>
                   <span className="text-lg font-semibold text-blue-600">{srv.p}</span>
                 </div>
                 <p className="text-gray-600">{srv.d}</p>
@@ -222,7 +225,7 @@ export function SplitScreenEditorialTemplate() {
 
         {/* FAQ - Editorial Format */}
         <section className="py-20 px-8 bg-gray-50">
-          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-serif font-bold mb-12 text-gray-900">FAQ</h2>
+          <h2 className={`text-xl sm:text-2xl md:text-3xl lg:text-4xl font-serif font-bold mb-12 ${isDark ? 'text-white' : 'text-gray-900'}`}>FAQ</h2>
           <div className="space-y-8">
             {[
               { q: "What's your editorial process?", a: "Research → Interviews → Drafting → Fact-checking → Editing → Publication" },
@@ -231,7 +234,7 @@ export function SplitScreenEditorialTemplate() {
               { q: "What topics do you cover?", a: "Culture, technology, politics, and human interest stories." }
             ].map((faq, i) => (
               <div key={i}>
-                <h3 className="text-lg font-bold mb-3 text-gray-900">{faq.q}</h3>
+                <h3 className={`text-lg font-bold mb-3 ${isDark ? 'text-white' : 'text-gray-900'}`}>{faq.q}</h3>
                 <p className="text-gray-700 leading-relaxed">{faq.a}</p>
               </div>
             ))}

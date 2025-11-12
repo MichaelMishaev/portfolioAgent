@@ -12,6 +12,7 @@ import { FiCheck, FiZap, FiWind, FiBattery, FiActivity, FiAward, FiTrendingUp, F
 } from "react-icons/fi";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { useReducedMotion } from "@/lib/hooks/use-reduced-motion";
 import { useTheme } from "next-themes";
 
 const productData = {
@@ -201,6 +202,7 @@ const productData = {
 
 export function VacuumProductTemplate() {
   const [selectedMode, setSelectedMode] = useState(productData.modes[1]);  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const prefersReducedMotion = useReducedMotion();
 
   const [selectedColor, setSelectedColor] = useState(productData.colors[0]);
   const { theme } = useTheme();
@@ -228,7 +230,7 @@ export function VacuumProductTemplate() {
             <button
               className="md:hidden p-3 text-foreground hover:bg-accent rounded-md border border-border transition-colors"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              aria-label="Toggle menu"
+              aria-label={mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
             >
               {mobileMenuOpen ? <FiX size={28} /> : <FiMenu size={28} />}
             </button>
@@ -343,9 +345,9 @@ export function VacuumProductTemplate() {
             <FadeIn delay={0.2}>
               <div className="relative">
                 <motion.div
-                  initial={{ y: 20, opacity: 0 }}
+                  initial={prefersReducedMotion ? {} : { y: 20, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
-                  transition={{ duration: 0.8 }}
+                  transition={prefersReducedMotion ? {} : { duration: 0.8 }}
                   className="relative"
                 >
                   <img
@@ -593,7 +595,7 @@ export function VacuumProductTemplate() {
                     {productData.comparison.products.map((product) => (
                       <td key={product.name} className="p-4 text-center">
                         {product.laserDetection ? (
-                          <FiCheck className="w-6 h-6 text-green-500 mx-auto" />
+                          <FiCheck className="w-6 h-6 text-green-500 mx-auto" aria-hidden="true" />
                         ) : (
                           <span className="text-gray-400">—</span>
                         )}
@@ -605,7 +607,7 @@ export function VacuumProductTemplate() {
                     {productData.comparison.products.map((product) => (
                       <td key={product.name} className="p-4 text-center">
                         {product.autoTangle ? (
-                          <FiCheck className="w-6 h-6 text-green-500 mx-auto" />
+                          <FiCheck className="w-6 h-6 text-green-500 mx-auto" aria-hidden="true" />
                         ) : (
                           <span className="text-gray-400">—</span>
                         )}
@@ -617,7 +619,7 @@ export function VacuumProductTemplate() {
                     {productData.comparison.products.map((product) => (
                       <td key={product.name} className="p-4 text-center">
                         {product.hepa ? (
-                          <FiCheck className="w-6 h-6 text-green-500 mx-auto" />
+                          <FiCheck className="w-6 h-6 text-green-500 mx-auto" aria-hidden="true" />
                         ) : (
                           <span className="text-gray-400">—</span>
                         )}

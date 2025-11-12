@@ -9,8 +9,14 @@ import { LanguageToggle } from "@/components/language-toggle";
 import Link from "next/link";
 import { useI18n } from "@/lib/i18n-context";
 import { motion } from "framer-motion";
+import { useReducedMotion } from "@/lib/hooks/use-reduced-motion";
+import { useTheme } from "next-themes";
 
 export function Experimental3dTemplate() {
+  const { theme } = useTheme();
+  const isDark = theme === 'dark';
+  const prefersReducedMotion = useReducedMotion();
+
   const { tt } = useI18n();
   const data = tt?.experimental3d;
 
@@ -34,11 +40,11 @@ export function Experimental3dTemplate() {
                   left: `${Math.random() * 100}%`,
                   top: `${Math.random() * 100}%`,
                 }}
-                animate={{
+                animate={prefersReducedMotion ? {} : {
                   rotate: [0, 360],
                   scale: [1, 1.2, 1],
                 }}
-                transition={{
+                transition={prefersReducedMotion ? {} : {
                   duration: 10 + i * 2,
                   repeat: Infinity,
                   ease: "linear",
@@ -52,9 +58,9 @@ export function Experimental3dTemplate() {
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="text-center pointer-events-auto z-10">
             <motion.div
-              initial={{ opacity: 0, y: 50 }}
+              initial={prefersReducedMotion ? {} : { opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1 }}
+              transition={prefersReducedMotion ? {} : { duration: 1 }}
             >
               <h1 className="text-7xl lg:text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black text-white mb-6 tracking-tighter">
                 {data.hero.name}
@@ -62,18 +68,18 @@ export function Experimental3dTemplate() {
             </motion.div>
 
             <motion.p
-              initial={{ opacity: 0 }}
+              initial={prefersReducedMotion ? {} : { opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ delay: 0.5, duration: 1 }}
+              transition={prefersReducedMotion ? {} : { delay: 0.5, duration: 1 }}
               className="text-2xl text-white/80 mb-8"
             >
               {data.hero.title}
             </motion.p>
 
             <motion.div
-              initial={{ opacity: 0 }}
+              initial={prefersReducedMotion ? {} : { opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ delay: 1, duration: 1 }}
+              transition={prefersReducedMotion ? {} : { delay: 1, duration: 1 }}
             >
               <Button
                 size="lg"
@@ -126,11 +132,11 @@ export function Experimental3dTemplate() {
             <div className="relative z-10 text-center text-white px-6">
               <ScrollReveal>
                 <motion.div
-                  whileHover={{ scale: 1.1 }}
-                  transition={{ duration: 0.5 }}
+                  whileHover={prefersReducedMotion ? {} : { scale: 1.1 }}
+                  transition={prefersReducedMotion ? {} : { duration: 0.5 }}
                   className="mb-4"
                 >
-                  <div className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black transform group-hover:scale-110 transition-transform duration-500 text-gray-900">
+                  <div className={`text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black transform group-hover:scale-110 transition-transform duration-500 ${isDark ? 'text-white' : 'text-gray-900'}`}>
                     {project.title}
                   </div>
                 </motion.div>
@@ -167,7 +173,7 @@ export function Experimental3dTemplate() {
       <section className="min-h-screen flex items-center justify-center px-6 bg-gradient-to-br from-black via-purple-900/20 to-black">
         <div className="max-w-4xl mx-auto text-center">
           <ScrollReveal>
-            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-8 break-words text-gray-900">{tt.common.about}</h2>
+            <h2 className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-8 break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>{tt.common.about}</h2>
           </ScrollReveal>
 
           <ScrollReveal delay={0.2}>
@@ -181,11 +187,11 @@ export function Experimental3dTemplate() {
               {data.about.expertise.map((skill: string, index: number) => (
                 <motion.div
                   key={index}
-                  whileHover={{ scale: 1.1 }}
+                  whileHover={prefersReducedMotion ? {} : { scale: 1.1 }}
                   className="p-6 bg-white/5 backdrop-blur-md rounded-lg border border-white/10"
                 >
-                  <div className="text-6xl mb-4 text-gray-900">✦</div>
-                  <div className="text-xl font-bold text-gray-900">{skill}</div>
+                  <div className={`text-6xl mb-4 ${isDark ? 'text-white' : 'text-gray-900'}`}>✦</div>
+                  <div className={`text-xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>{skill}</div>
                 </motion.div>
               ))}
             </div>
@@ -200,7 +206,7 @@ export function Experimental3dTemplate() {
             {data.stats.map((stat: any, index: number) => (
               <ScrollReveal key={index} delay={index * 0.1}>
                 <motion.div
-                  whileHover={{ scale: 1.1 }}
+                  whileHover={prefersReducedMotion ? {} : { scale: 1.1 }}
                   className="text-center"
                 >
                   <div className="text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 mb-4 text-white">
@@ -220,7 +226,7 @@ export function Experimental3dTemplate() {
 
         <div className="max-w-3xl mx-auto text-center relative z-10">
           <ScrollReveal>
-            <h2 className="text-6xl lg:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black mb-8 text-gray-900">
+            <h2 className={`text-6xl lg:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black mb-8 ${isDark ? 'text-white' : 'text-gray-900'}`}>
               {tt.common.letsWorkTogether}
             </h2>
           </ScrollReveal>
@@ -237,7 +243,7 @@ export function Experimental3dTemplate() {
                 size="lg"
                 className="bg-white/10 backdrop-blur-md text-white px-12 py-8 rounded-full border border-white/30 hover:bg-white/20 transition-all text-xl font-bold"
               >
-                <FiMail className="mr-2" />
+                <FiMail className="mr-2" aria-hidden="true" />
                 {data.contact.emailCta}
               </Button>
             </div>
@@ -277,7 +283,7 @@ export function Experimental3dTemplate() {
 
           {/* Pricing - Experimental 3D */}
           <section className="py-20 border-t border-white/10">
-            <h3 className="text-4xl sm:text-5xl font-bold mb-12 text-center break-words text-gray-900">Pricing</h3>
+            <h3 className={`text-4xl sm:text-5xl font-bold mb-12 text-center break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>Pricing</h3>
             <div className="grid md:grid-cols-3 gap-8">
               {[
                 { name: '3D Starter', price: '$1,999', features: ['Basic 3D Scene', 'WebGL Implementation', '2 Revisions', 'Performance Optimization'] },
@@ -286,7 +292,7 @@ export function Experimental3dTemplate() {
               ].map((pkg, i) => (
                 <div key={i} className={`bg-white/5 backdrop-blur-xl p-8 rounded-2xl border ${pkg.popular ? 'border-purple-500 ring-4 ring-purple-500/20' : 'border-white/10'}`}>
                   {pkg.popular && <div className="text-xs font-bold text-purple-400 mb-2 uppercase">Most Popular</div>}
-                  <h4 className="text-2xl font-bold mb-2 text-gray-900">{pkg.name}</h4>
+                  <h4 className={`text-2xl font-bold mb-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>{pkg.name}</h4>
                   <div className="text-4xl sm:text-5xl font-bold text-purple-400 mb-8 break-words">{pkg.price}</div>
                   <ul className="space-y-3 mb-8">
                     {pkg.features.map((f, j) => (
@@ -306,7 +312,7 @@ export function Experimental3dTemplate() {
 
           {/* Testimonials - Experimental 3D */}
           <section className="py-20 border-t border-white/10">
-            <h3 className="text-4xl sm:text-5xl font-bold mb-12 text-center break-words text-gray-900">Client Feedback</h3>
+            <h3 className={`text-4xl sm:text-5xl font-bold mb-12 text-center break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>Client Feedback</h3>
             <div className="max-w-4xl mx-auto space-y-8">
               {[
                 { text: 'Mind-blowing 3D work. Our website engagement increased 400%!', author: 'David Kim', role: 'CEO, TechVision' },
@@ -326,7 +332,7 @@ export function Experimental3dTemplate() {
 
           {/* Gallery - Experimental 3D */}
           <section className="py-20 border-t border-white/10">
-            <h3 className="text-4xl sm:text-5xl font-bold mb-12 text-center break-words text-gray-900">3D Gallery</h3>
+            <h3 className={`text-4xl sm:text-5xl font-bold mb-12 text-center break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>3D Gallery</h3>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
               {[1, 2, 3, 4, 5, 6].map((i) => (
                 <div key={i} className="aspect-square bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-2xl border border-white/10 hover:scale-105 transition-transform cursor-pointer backdrop-blur-xl"></div>
@@ -336,7 +342,7 @@ export function Experimental3dTemplate() {
 
           {/* Timeline - Experimental 3D */}
           <section className="py-20 border-t border-white/10">
-            <h3 className="text-4xl sm:text-5xl font-bold mb-12 text-center break-words text-gray-900">Evolution</h3>
+            <h3 className={`text-4xl sm:text-5xl font-bold mb-12 text-center break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>Evolution</h3>
             <div className="max-w-3xl mx-auto space-y-6">
               {[
                 { year: '2024', title: '3D Innovation Leader', desc: 'Pioneering WebGL experiences' },
@@ -359,7 +365,7 @@ export function Experimental3dTemplate() {
 
           {/* FAQ - Experimental 3D */}
           <section className="py-20 border-t border-white/10">
-            <h3 className="text-4xl sm:text-5xl font-bold mb-12 text-center break-words text-gray-900">FAQ</h3>
+            <h3 className={`text-4xl sm:text-5xl font-bold mb-12 text-center break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>FAQ</h3>
             <div className="max-w-3xl mx-auto space-y-6">
               {[
                 { q: 'What technologies do you use?', a: 'Three.js, WebGL, GLSL shaders, and modern 3D web frameworks.' },

@@ -1,11 +1,12 @@
 "use client";
 
 import Link from "next/link";
-import { FaGithub, FaTwitter, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaTwitter, FaLinkedin, FaTelegramPlane } from "react-icons/fa";
 import { useI18n } from "@/lib/i18n-context";
+import { TELEGRAM_CONTACT_LINK } from "@/components/shared/contact-us-floating-button";
 
 export function Footer() {
-  const { t } = useI18n();
+  const { t, language } = useI18n();
 
   return (
     <footer className="border-t bg-background">
@@ -42,16 +43,31 @@ export function Footer() {
 
           <div className="space-y-4">
             <h4 className="text-sm font-semibold">{t.footer.connect}</h4>
-            <div className="flex space-x-4">
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-                <FaGithub className="w-5 h-5" />
+            <div className="flex flex-col gap-3">
+              {/* Telegram Contact Button */}
+              <a
+                href={TELEGRAM_CONTACT_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2 bg-[#229ED9] hover:bg-[#1c8cbf] text-white rounded-lg text-sm font-semibold transition-all duration-200 shadow-md hover:shadow-lg w-fit"
+                aria-label={language === "ru" ? "Связаться в Telegram" : "Contact us on Telegram"}
+              >
+                <FaTelegramPlane className="w-4 h-4" />
+                <span>{language === "ru" ? "Связаться" : "Contact Us"}</span>
               </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-                <FaTwitter className="w-5 h-5" />
-              </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-                <FaLinkedin className="w-5 h-5" />
-              </a>
+              
+              {/* Social Icons */}
+              <div className="flex space-x-4">
+                <a href="#" className="text-muted-foreground hover:text-primary transition-colors" aria-label="GitHub">
+                  <FaGithub className="w-5 h-5" />
+                </a>
+                <a href="#" className="text-muted-foreground hover:text-primary transition-colors" aria-label="Twitter">
+                  <FaTwitter className="w-5 h-5" />
+                </a>
+                <a href="#" className="text-muted-foreground hover:text-primary transition-colors" aria-label="LinkedIn">
+                  <FaLinkedin className="w-5 h-5" />
+                </a>
+              </div>
             </div>
           </div>
         </div>

@@ -157,7 +157,7 @@ export function BentoGridTemplate() {
                 </div>
                 <div className="flex flex-col sm:flex-row gap-3">
                   <Button size="lg" variant="secondary">
-                    <FiMail className="mr-2" />
+                    <FiMail className="mr-2" aria-hidden="true" />
                     Get in Touch
                   </Button>
                 </div>
@@ -654,7 +654,7 @@ export function BentoGridTemplate() {
                 </p>
                 <div className="flex flex-col gap-4 sm:flex-row gap-4 justify-center items-center">
                   <Button size="lg" variant="secondary">
-                    <FiMail className="mr-2" />
+                    <FiMail className="mr-2" aria-hidden="true" />
                     hello@rileychen.com
                   </Button>
                   <div className="flex flex-col sm:flex-row gap-3">

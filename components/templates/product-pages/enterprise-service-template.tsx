@@ -238,7 +238,7 @@ export function EnterpriseServiceTemplate() {
             <button
               className="md:hidden p-3 text-foreground hover:bg-accent rounded-md border border-border transition-colors"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              aria-label="Toggle menu"
+              aria-label={mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
             >
               {mobileMenuOpen ? <FiX size={28} /> : <FiMenu size={28} />}
             </button>
@@ -311,7 +311,7 @@ export function EnterpriseServiceTemplate() {
             <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
               <Button size="lg" className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700">
                 Schedule Demo
-                <FiArrowRight className="ml-2" />
+                <FiArrowRight className="ml-2" aria-hidden="true" />
               </Button>
               <Button size="lg" variant="outline" className={darkMode ? 'text-white' : 'text-slate-900'}>
                 View Case Studies
@@ -551,7 +551,7 @@ export function EnterpriseServiceTemplate() {
             <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-center">
               <Button size="lg" variant="secondary" className="w-full sm:w-auto bg-white !text-blue-600 hover:bg-gray-100">
                 Schedule Demo
-                <FiArrowRight className="ml-2" />
+                <FiArrowRight className="ml-2" aria-hidden="true" />
               </Button>
               <Button size="lg" variant="outline" className="w-full sm:w-auto !text-white !bg-transparent border-white hover:bg-white/10">
                 Download White Paper

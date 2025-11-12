@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { useReducedMotion } from "@/lib/hooks/use-reduced-motion";
 import { FadeIn } from "@/components/animations/fade-in";
 import { ScrollReveal } from "@/components/animations/scroll-reveal";
 import { Button } from "@/components/ui/button";
@@ -10,11 +11,15 @@ import { ThemeToggle } from "@/components/theme-toggle";
 import { LanguageToggle } from "@/components/language-toggle";
 import Link from "next/link";
 import { useI18n } from "@/lib/i18n-context";
+import { useTheme } from "next-themes";
 import { placeholderImages } from "@/lib/placeholder-images";
 import Image from "next/image";
 
 export function LuxuryMinimalTemplate() {
+  const { theme } = useTheme();
+  const isDark = theme === 'dark';
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const prefersReducedMotion = useReducedMotion();
   const { tt } = useI18n();
   const portfolioData = tt?.luxuryMinimal;
 
@@ -33,13 +38,13 @@ export function LuxuryMinimalTemplate() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-12">
-            <a href="#portfolio" className="text-xs uppercase tracking-[0.2em] hover:text-[#D4AF37] transition-colors font-light text-gray-900">
+            <a href="#portfolio" className={`text-xs uppercase tracking-[0.2em] hover:text-[#D4AF37] transition-colors font-light ${isDark ? 'text-white' : 'text-gray-900'}`}>
               {tt.common.portfolio}
             </a>
-            <a href="#about" className="text-xs uppercase tracking-[0.2em] hover:text-[#D4AF37] transition-colors font-light text-gray-900">
+            <a href="#about" className={`text-xs uppercase tracking-[0.2em] hover:text-[#D4AF37] transition-colors font-light ${isDark ? 'text-white' : 'text-gray-900'}`}>
               {tt.common.about}
             </a>
-            <a href="#contact" className="text-xs uppercase tracking-[0.2em] hover:text-[#D4AF37] transition-colors font-light text-gray-900">
+            <a href="#contact" className={`text-xs uppercase tracking-[0.2em] hover:text-[#D4AF37] transition-colors font-light ${isDark ? 'text-white' : 'text-gray-900'}`}>
               {tt.common.contact}
             </a>
             <ThemeToggle />
@@ -50,7 +55,7 @@ export function LuxuryMinimalTemplate() {
           <button
             className="md:hidden p-2"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            aria-label="Toggle menu"
+            aria-label={mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
           >
             {mobileMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
           </button>
@@ -59,18 +64,18 @@ export function LuxuryMinimalTemplate() {
         {/* Mobile Menu */}
         {mobileMenuOpen && (
           <motion.div
-            initial={{ opacity: 0, y: -20 }}
+            initial={prefersReducedMotion ? {} : { opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             className="md:hidden bg-[#F5F5DC]/98 backdrop-blur-sm border-t border-[#D4AF37]/20"
           >
             <div className="container mx-auto px-8 py-6 flex flex-col gap-6">
-              <a href="#portfolio" className="text-xs uppercase tracking-[0.2em] py-2 text-gray-900" onClick={() => setMobileMenuOpen(false)}>
+              <a href="#portfolio" className={`text-xs uppercase tracking-[0.2em] py-2 ${isDark ? 'text-white' : 'text-gray-900'}`} onClick={() => setMobileMenuOpen(false)}>
                 {tt.common.portfolio}
               </a>
-              <a href="#about" className="text-xs uppercase tracking-[0.2em] py-2 text-gray-900" onClick={() => setMobileMenuOpen(false)}>
+              <a href="#about" className={`text-xs uppercase tracking-[0.2em] py-2 ${isDark ? 'text-white' : 'text-gray-900'}`} onClick={() => setMobileMenuOpen(false)}>
                 {tt.common.about}
               </a>
-              <a href="#contact" className="text-xs uppercase tracking-[0.2em] py-2 text-gray-900" onClick={() => setMobileMenuOpen(false)}>
+              <a href="#contact" className={`text-xs uppercase tracking-[0.2em] py-2 ${isDark ? 'text-white' : 'text-gray-900'}`} onClick={() => setMobileMenuOpen(false)}>
                 {tt.common.contact}
               </a>
             </div>
@@ -93,14 +98,14 @@ export function LuxuryMinimalTemplate() {
 
         <div className="container mx-auto px-8 relative z-10 text-center text-white max-w-5xl">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={prefersReducedMotion ? {} : { opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, ease: "easeOut" }}
+            transition={prefersReducedMotion ? {} : { duration: 1, ease: "easeOut" }}
           >
-            <div className="mb-6 text-[#D4AF37] text-sm uppercase tracking-[0.3em] font-light text-gray-900">
+            <div className={`mb-6 text-[#D4AF37] text-sm uppercase tracking-[0.3em] font-light ${isDark ? 'text-white' : 'text-gray-900'}`}>
               {portfolioData.category}
             </div>
-            <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl mb-8 font-light tracking-tight leading-none break-words text-gray-900">
+            <h1 className={`font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl mb-8 font-light tracking-tight leading-none break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>
               {portfolioData.name}
             </h1>
             <p className="text-xl md:text-2xl text-white/90 mb-12 font-light max-w-2xl mx-auto leading-relaxed">
@@ -132,7 +137,7 @@ export function LuxuryMinimalTemplate() {
         <div className="container mx-auto px-8 max-w-7xl">
           <ScrollReveal>
             <div className="text-center mb-20">
-              <h2 className="font-serif text-5xl md:text-6xl mb-6 font-light text-gray-900">Selected Works</h2>
+              <h2 className={`font-serif text-5xl md:text-6xl mb-6 font-light ${isDark ? 'text-white' : 'text-gray-900'}`}>Selected Works</h2>
               <div className="w-24 h-px bg-[#D4AF37] mx-auto" />
             </div>
           </ScrollReveal>
@@ -141,11 +146,11 @@ export function LuxuryMinimalTemplate() {
             {portfolioData.projects.map((project, index) => (
               <motion.div
                 key={project.id}
-                initial={{ opacity: 0, y: 50 }}
+                initial={prefersReducedMotion ? {} : { opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.2, duration: 0.8 }}
-                whileHover={{ y: -10 }}
+                transition={prefersReducedMotion ? {} : { delay: index * 0.2, duration: 0.8 }}
+                whileHover={prefersReducedMotion ? {} : { y: -10 }}
                 className="group cursor-pointer"
               >
                 <div className="relative h-[500px] mb-6 overflow-hidden bg-black">
@@ -157,11 +162,11 @@ export function LuxuryMinimalTemplate() {
                   />
                 </div>
                 <div className="text-center">
-                  <h3 className="font-serif text-3xl mb-3 font-light group-hover:text-[#D4AF37] transition-colors text-gray-900">
+                  <h3 className={`font-serif text-3xl mb-3 font-light group-hover:text-[#D4AF37] transition-colors ${isDark ? 'text-white' : 'text-gray-900'}`}>
                     {project.title}
                   </h3>
                   <p className="text-black/60 mb-4 leading-relaxed">{project.description}</p>
-                  <div className="text-xs uppercase tracking-[0.2em] text-[#D4AF37] text-gray-900">{project.category}</div>
+                  <div className={`text-xs uppercase tracking-[0.2em] text-[#D4AF37]${isDark ? 'text-white' : 'text-gray-900'}`}>{project.category}</div>
                 </div>
               </motion.div>
             ))}
@@ -175,7 +180,7 @@ export function LuxuryMinimalTemplate() {
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <ScrollReveal>
               <div>
-                <h2 className="font-serif text-5xl md:text-6xl mb-8 font-light text-gray-900">About</h2>
+                <h2 className={`font-serif text-5xl md:text-6xl mb-8 font-light ${isDark ? 'text-white' : 'text-gray-900'}`}>About</h2>
                 <div className="w-16 h-px bg-[#D4AF37] mb-8" />
                 <p className="text-lg text-black/70 leading-relaxed mb-6">{portfolioData.bio}</p>
                 <Button className="bg-black hover:bg-black/80 text-white text-xs uppercase tracking-[0.2em] px-8 py-6">
@@ -202,7 +207,7 @@ export function LuxuryMinimalTemplate() {
         <div className="container mx-auto px-8 max-w-6xl">
           <ScrollReveal>
             <div className="text-center mb-20">
-              <h2 className="font-serif text-5xl md:text-6xl mb-6 font-light text-gray-900">Services</h2>
+              <h2 className={`font-serif text-5xl md:text-6xl mb-6 font-light ${isDark ? 'text-white' : 'text-gray-900'}`}>Services</h2>
               <div className="w-24 h-px bg-[#D4AF37] mx-auto" />
             </div>
           </ScrollReveal>
@@ -211,14 +216,14 @@ export function LuxuryMinimalTemplate() {
             {portfolioData.services.map((service, index) => (
               <motion.div
                 key={service.title}
-                initial={{ opacity: 0, y: 30 }}
+                initial={prefersReducedMotion ? {} : { opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.15 }}
+                transition={prefersReducedMotion ? {} : { delay: index * 0.15 }}
                 className="text-center"
               >
                 <div className="text-5xl mb-6 text-[#D4AF37]">{service.icon}</div>
-                <h3 className="font-serif text-2xl mb-4 font-light text-gray-900">{service.title}</h3>
+                <h3 className={`font-serif text-2xl mb-4 font-light ${isDark ? 'text-white' : 'text-gray-900'}`}>{service.title}</h3>
                 <p className="text-black/60 leading-relaxed">{service.description}</p>
               </motion.div>
             ))}
@@ -231,7 +236,7 @@ export function LuxuryMinimalTemplate() {
         <div className="container mx-auto px-8 max-w-6xl">
           <ScrollReveal>
             <div className="text-center mb-20">
-              <h2 className="font-serif text-5xl md:text-6xl mb-6 font-light text-gray-900">Testimonials</h2>
+              <h2 className={`font-serif text-5xl md:text-6xl mb-6 font-light ${isDark ? 'text-white' : 'text-gray-900'}`}>Testimonials</h2>
               <div className="w-24 h-px bg-[#D4AF37] mx-auto" />
             </div>
           </ScrollReveal>
@@ -240,17 +245,17 @@ export function LuxuryMinimalTemplate() {
             {portfolioData.testimonials.map((testimonial, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
+                initial={prefersReducedMotion ? {} : { opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.2 }}
+                transition={prefersReducedMotion ? {} : { delay: index * 0.2 }}
                 className="border border-[#D4AF37]/30 p-8 md:p-12"
               >
                 <p className="font-serif text-2xl mb-8 leading-relaxed italic text-white/90">
                   "{testimonial.quote}"
                 </p>
                 <div>
-                  <div className="font-light text-lg mb-1 text-gray-900">{testimonial.author}</div>
+                  <div className={`font-light text-lg mb-1 ${isDark ? 'text-white' : 'text-gray-900'}`}>{testimonial.author}</div>
                   <div className="text-sm text-white/60 uppercase tracking-[0.2em]">{testimonial.role}</div>
                 </div>
               </motion.div>
@@ -263,7 +268,7 @@ export function LuxuryMinimalTemplate() {
       <section id="contact" className="py-32 bg-[#D4AF37]">
         <div className="container mx-auto px-8 max-w-4xl text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={prefersReducedMotion ? {} : { opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
@@ -288,7 +293,7 @@ export function LuxuryMinimalTemplate() {
         <div className="container mx-auto px-8 max-w-7xl">
           <ScrollReveal>
             <div className="text-center mb-20">
-              <h2 className="font-serif text-5xl md:text-6xl mb-6 font-light text-gray-900">Gallery</h2>
+              <h2 className={`font-serif text-5xl md:text-6xl mb-6 font-light ${isDark ? 'text-white' : 'text-gray-900'}`}>Gallery</h2>
               <div className="w-24 h-px bg-[#D4AF37] mx-auto" />
             </div>
           </ScrollReveal>
@@ -331,7 +336,7 @@ export function LuxuryMinimalTemplate() {
             ].map((stat, i) => (
               <ScrollReveal key={i} delay={i * 0.1}>
                 <div className="text-center border-t border-[#D4AF37]/30 pt-8">
-                  <div className="font-serif text-5xl md:text-6xl mb-4 text-[#D4AF37] font-light text-gray-900">{stat.num}</div>
+                  <div className={`font-serif text-5xl md:text-6xl mb-4 text-[#D4AF37] font-light ${isDark ? 'text-white' : 'text-gray-900'}`}>{stat.num}</div>
                   <div className="text-xs uppercase tracking-[0.3em] text-black/60 font-light">{stat.label}</div>
                 </div>
               </ScrollReveal>
@@ -345,7 +350,7 @@ export function LuxuryMinimalTemplate() {
         <div className="container mx-auto px-8 max-w-6xl">
           <ScrollReveal>
             <div className="text-center mb-20">
-              <h2 className="font-serif text-5xl md:text-6xl mb-6 font-light text-gray-900">Expertise</h2>
+              <h2 className={`font-serif text-5xl md:text-6xl mb-6 font-light ${isDark ? 'text-white' : 'text-gray-900'}`}>Expertise</h2>
               <div className="w-24 h-px bg-[#D4AF37] mx-auto" />
             </div>
           </ScrollReveal>
@@ -354,7 +359,7 @@ export function LuxuryMinimalTemplate() {
             {['Brand Strategy', 'Art Direction', 'Editorial Design', 'Luxury Packaging', 'Creative Direction', 'Visual Identity'].map((skill, i) => (
               <ScrollReveal key={i} delay={i * 0.1}>
                 <div className="border border-black/10 p-12 text-center hover:bg-[#F5F5DC] transition-colors duration-500">
-                  <span className="text-xs uppercase tracking-[0.3em] font-light text-gray-900">{skill}</span>
+                  <span className={`text-xs uppercase tracking-[0.3em] font-light ${isDark ? 'text-white' : 'text-gray-900'}`}>{skill}</span>
                 </div>
               </ScrollReveal>
             ))}
@@ -367,7 +372,7 @@ export function LuxuryMinimalTemplate() {
         <div className="container mx-auto px-8 max-w-6xl">
           <ScrollReveal>
             <div className="text-center mb-20">
-              <h2 className="font-serif text-5xl md:text-6xl mb-6 font-light text-gray-900">Investment</h2>
+              <h2 className={`font-serif text-5xl md:text-6xl mb-6 font-light ${isDark ? 'text-white' : 'text-gray-900'}`}>Investment</h2>
               <div className="w-24 h-px bg-[#D4AF37] mx-auto mb-6" />
               <p className="text-black/60 text-lg font-light">Bespoke solutions tailored to your vision</p>
             </div>
@@ -381,8 +386,8 @@ export function LuxuryMinimalTemplate() {
             ].map((pkg, i) => (
               <ScrollReveal key={i} delay={i * 0.15}>
                 <div className={`bg-white p-12 border ${pkg.featured ? 'border-[#D4AF37] shadow-2xl' : 'border-black/10'}`}>
-                  <div className="text-xs uppercase tracking-[0.3em] mb-8 text-[#D4AF37] font-light text-gray-900">{pkg.name}</div>
-                  <div className="font-serif text-5xl mb-12 font-light text-gray-900">{pkg.price}</div>
+                  <div className={`text-xs uppercase tracking-[0.3em] mb-8 text-[#D4AF37] font-light ${isDark ? 'text-white' : 'text-gray-900'}`}>{pkg.name}</div>
+                  <div className={`font-serif text-5xl mb-12 font-light ${isDark ? 'text-white' : 'text-gray-900'}`}>{pkg.price}</div>
                   <ul className="space-y-6 mb-12">
                     {pkg.features.map((f, idx) => (
                       <li key={idx} className="text-sm text-black/70 font-light flex items-center gap-3">
@@ -406,7 +411,7 @@ export function LuxuryMinimalTemplate() {
         <div className="container mx-auto px-8 max-w-4xl">
           <ScrollReveal>
             <div className="text-center mb-20">
-              <h2 className="font-serif text-5xl md:text-6xl mb-6 font-light text-gray-900">Journey</h2>
+              <h2 className={`font-serif text-5xl md:text-6xl mb-6 font-light ${isDark ? 'text-white' : 'text-gray-900'}`}>Journey</h2>
               <div className="w-24 h-px bg-[#D4AF37] mx-auto" />
             </div>
           </ScrollReveal>
@@ -421,10 +426,10 @@ export function LuxuryMinimalTemplate() {
               <ScrollReveal key={i} delay={i * 0.1}>
                 <div className="flex gap-12 items-start border-t border-black/10 pt-8">
                   <div className="flex-shrink-0 w-24 text-center">
-                    <div className="font-serif text-3xl text-[#D4AF37] font-light text-gray-900">{item.year}</div>
+                    <div className={`font-serif text-3xl text-[#D4AF37] font-light ${isDark ? 'text-white' : 'text-gray-900'}`}>{item.year}</div>
                   </div>
                   <div className="flex-1">
-                    <h4 className="font-serif text-3xl mb-3 font-light text-gray-900">{item.title}</h4>
+                    <h4 className={`font-serif text-3xl mb-3 font-light ${isDark ? 'text-white' : 'text-gray-900'}`}>{item.title}</h4>
                     <p className="text-black/60 font-light leading-relaxed">{item.desc}</p>
                   </div>
                 </div>
@@ -439,7 +444,7 @@ export function LuxuryMinimalTemplate() {
         <div className="container mx-auto px-8 max-w-4xl">
           <ScrollReveal>
             <div className="text-center mb-20">
-              <h2 className="font-serif text-5xl md:text-6xl mb-6 font-light text-gray-900">Questions</h2>
+              <h2 className={`font-serif text-5xl md:text-6xl mb-6 font-light ${isDark ? 'text-white' : 'text-gray-900'}`}>Questions</h2>
               <div className="w-24 h-px bg-[#D4AF37] mx-auto" />
             </div>
           </ScrollReveal>
@@ -453,7 +458,7 @@ export function LuxuryMinimalTemplate() {
             ].map((faq, i) => (
               <ScrollReveal key={i} delay={i * 0.1}>
                 <div className="bg-white border border-black/10 p-8 md:p-12">
-                  <div className="font-serif text-2xl mb-4 font-light text-gray-900">{faq.q}</div>
+                  <div className={`font-serif text-2xl mb-4 font-light ${isDark ? 'text-white' : 'text-gray-900'}`}>{faq.q}</div>
                   <p className="text-black/60 leading-relaxed font-light">{faq.a}</p>
                 </div>
               </ScrollReveal>

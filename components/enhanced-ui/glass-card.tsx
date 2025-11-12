@@ -2,6 +2,7 @@
 
 import { ReactNode } from "react";
 import { motion } from "framer-motion";
+import { useReducedMotion } from "@/lib/hooks/use-reduced-motion";
 
 interface GlassCardProps {
   children: ReactNode;
@@ -10,6 +11,8 @@ interface GlassCardProps {
 }
 
 export function GlassCard({ children, className = "", blurAmount = "lg" }: GlassCardProps) {
+  const prefersReducedMotion = useReducedMotion();
+
   const blurClasses = {
     sm: "backdrop-blur-sm",
     md: "backdrop-blur-md",
@@ -19,7 +22,7 @@ export function GlassCard({ children, className = "", blurAmount = "lg" }: Glass
 
   return (
     <motion.div
-      whileHover={{ scale: 1.02, y: -5 }}
+      whileHover={prefersReducedMotion ? {} : { scale: 1.02, y: -5 }}
       className={`
         bg-white/10
         ${blurClasses[blurAmount]}

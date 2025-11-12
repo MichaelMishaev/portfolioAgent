@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useReducedMotion } from "@/lib/hooks/use-reduced-motion";
 import { FadeIn } from "@/components/animations/fade-in";
 import { ScrollReveal } from "@/components/animations/scroll-reveal";
 import { Button } from "@/components/ui/button";
@@ -11,11 +12,15 @@ import { ThemeToggle } from "@/components/theme-toggle";
 import { LanguageToggle } from "@/components/language-toggle";
 import Link from "next/link";
 import { useI18n } from "@/lib/i18n-context";
+import { useTheme } from "next-themes";
 import { placeholderImages } from "@/lib/placeholder-images";
 import Image from "next/image";
 
 export function StartupPitchTemplate() {
+  const { theme } = useTheme();
+  const isDark = theme === 'dark';
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const prefersReducedMotion = useReducedMotion();
   const [email, setEmail] = useState("");
   const { tt } = useI18n();
   const portfolioData = tt?.startupPitch;
@@ -79,7 +84,7 @@ export function StartupPitchTemplate() {
           <button
             className="md:hidden p-2"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            aria-label="Toggle menu"
+            aria-label={mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
           >
             {mobileMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
           </button>
@@ -88,18 +93,18 @@ export function StartupPitchTemplate() {
         {/* Mobile Menu */}
         {mobileMenuOpen && (
           <motion.div
-            initial={{ opacity: 0, y: -20 }}
+            initial={prefersReducedMotion ? {} : { opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             className="md:hidden bg-white border-t"
           >
             <div className="container mx-auto px-6 py-6 flex flex-col gap-4">
-              <a href="#features" className="text-sm font-medium py-2 text-gray-900" onClick={() => setMobileMenuOpen(false)}>
+              <a href="#features" className={`text-sm font-medium py-2 ${isDark ? 'text-white' : 'text-gray-900'}`} onClick={() => setMobileMenuOpen(false)}>
                 {tt.common.features}
               </a>
-              <a href="#pricing" className="text-sm font-medium py-2 text-gray-900" onClick={() => setMobileMenuOpen(false)}>
+              <a href="#pricing" className={`text-sm font-medium py-2 ${isDark ? 'text-white' : 'text-gray-900'}`} onClick={() => setMobileMenuOpen(false)}>
                 {tt.common.pricing}
               </a>
-              <a href="#testimonials" className="text-sm font-medium py-2 text-gray-900" onClick={() => setMobileMenuOpen(false)}>
+              <a href="#testimonials" className={`text-sm font-medium py-2 ${isDark ? 'text-white' : 'text-gray-900'}`} onClick={() => setMobileMenuOpen(false)}>
                 {tt.common.testimonials}
               </a>
             </div>
@@ -114,9 +119,9 @@ export function StartupPitchTemplate() {
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center max-w-4xl mx-auto mb-12">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
+              transition={prefersReducedMotion ? {} : { duration: 0.6 }}
             >
               <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-medium mb-6">
                 <FiZap className="text-orange-500" />
@@ -137,9 +142,11 @@ export function StartupPitchTemplate() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   className="w-full sm:w-80 h-12 text-base text-white"
+                  aria-label="Email address"
+                  autoComplete="email"
                 />
-                <Button size="lg" className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 h-12 px-8">
-                  Start Free Trial <FiArrowRight className="ml-2" />
+                <Button size="lg" className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 h-12 px-8" aria-label="Start free trial">
+                  Start Free Trial <FiArrowRight className="ml-2" aria-hidden="true" />
                 </Button>
               </div>
 
@@ -149,9 +156,9 @@ export function StartupPitchTemplate() {
 
           {/* Product Screenshot */}
           <motion.div
-            initial={{ opacity: 0, y: 50 }}
+            initial={prefersReducedMotion ? {} : { opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3, duration: 0.8 }}
+            transition={prefersReducedMotion ? {} : { delay: 0.3, duration: 0.8 }}
             className="relative max-w-6xl mx-auto"
           >
             <div className="relative rounded-2xl overflow-hidden shadow-2xl border-8 border-white">
@@ -165,15 +172,15 @@ export function StartupPitchTemplate() {
             </div>
             {/* Floating elements */}
             <motion.div
-              animate={{ y: [0, -10, 0] }}
-              transition={{ repeat: Infinity, duration: 3 }}
+              animate={prefersReducedMotion ? {} : { y: [0, -10, 0] }}
+              transition={prefersReducedMotion ? {} : { repeat: Infinity, duration: 3 }}
               className="absolute -top-4 -left-4 bg-white rounded-xl shadow-xl p-4 border border-gray-100"
             >
               <div className="flex items-center gap-2">
                 <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
-                  <FiCheck className="text-white" />
+                  <FiCheck className="text-white" aria-hidden="true" />
                 </div>
-                <div className="text-sm font-semibold text-gray-900">+2,400 Users</div>
+                <div className={`text-sm font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>+2,400 Users</div>
               </div>
             </motion.div>
           </motion.div>
@@ -187,10 +194,10 @@ export function StartupPitchTemplate() {
             {portfolioData.metrics.map((metric, index) => (
               <motion.div
                 key={metric.key}
-                initial={{ opacity: 0, y: 20 }}
+                initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
+                transition={prefersReducedMotion ? {} : { delay: index * 0.1 }}
                 className="text-center"
               >
                 <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-blue-600 mb-2 break-words">
@@ -208,7 +215,7 @@ export function StartupPitchTemplate() {
         <div className="container mx-auto px-6">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 break-words text-gray-900">Powerful Features</h2>
+              <h2 className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>Powerful Features</h2>
               <p className="text-xl text-gray-600 max-w-2xl mx-auto">
                 Everything you need to grow your business, all in one place
               </p>
@@ -219,17 +226,17 @@ export function StartupPitchTemplate() {
             {portfolioData.features.map((feature, index) => (
               <motion.div
                 key={feature.title}
-                initial={{ opacity: 0, y: 30 }}
+                initial={prefersReducedMotion ? {} : { opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                whileHover={{ y: -5 }}
+                transition={prefersReducedMotion ? {} : { delay: index * 0.1 }}
+                whileHover={prefersReducedMotion ? {} : { y: -5 }}
                 className="bg-white rounded-2xl p-4 sm:p-6 md:p-8 shadow-lg border border-gray-100"
               >
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-orange-500 rounded-xl flex items-center justify-center text-white text-2xl mb-6">
                   {feature.icon}
                 </div>
-                <h3 className="text-base sm:text-lg md:text-xl font-bold mb-3 break-words text-gray-900">{feature.title}</h3>
+                <h3 className={`text-base sm:text-lg md:text-xl font-bold mb-3 break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>{feature.title}</h3>
                 <p className="text-gray-600 leading-relaxed">{feature.description}</p>
               </motion.div>
             ))}
@@ -242,7 +249,7 @@ export function StartupPitchTemplate() {
         <div className="container mx-auto px-6">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 break-words text-gray-900">How It Works</h2>
+              <h2 className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>How It Works</h2>
               <p className="text-xl text-gray-600">Get started in 3 simple steps</p>
             </div>
           </ScrollReveal>
@@ -251,17 +258,17 @@ export function StartupPitchTemplate() {
             {portfolioData.steps.map((step, index) => (
               <motion.div
                 key={step.number}
-                initial={{ opacity: 0, x: -30 }}
+                initial={prefersReducedMotion ? {} : { opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.2 }}
+                transition={prefersReducedMotion ? {} : { delay: index * 0.2 }}
                 className="relative"
               >
                 <div className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-orange-500 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-6">
                     {step.number}
                   </div>
-                  <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-3 break-words text-gray-900">{step.title}</h3>
+                  <h3 className={`text-lg sm:text-xl md:text-2xl font-bold mb-3 break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>{step.title}</h3>
                   <p className="text-gray-600">{step.description}</p>
                 </div>
                 {index < portfolioData.steps.length - 1 && (
@@ -278,7 +285,7 @@ export function StartupPitchTemplate() {
         <div className="container mx-auto px-6">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 break-words text-gray-900">Simple, Transparent Pricing</h2>
+              <h2 className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>Simple, Transparent Pricing</h2>
               <p className="text-xl text-gray-600">Choose the plan that's right for you</p>
             </div>
           </ScrollReveal>
@@ -287,11 +294,11 @@ export function StartupPitchTemplate() {
             {portfolioData.pricing.map((plan, index) => (
               <motion.div
                 key={plan.name}
-                initial={{ opacity: 0, y: 30 }}
+                initial={prefersReducedMotion ? {} : { opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.15 }}
-                whileHover={{ y: -10 }}
+                transition={prefersReducedMotion ? {} : { delay: index * 0.15 }}
+                whileHover={prefersReducedMotion ? {} : { y: -10 }}
                 className={`rounded-2xl p-4 sm:p-6 md:p-8 border-2 ${
                   plan.popular
                     ? "bg-gradient-to-br from-blue-600 to-blue-700 text-white border-blue-600 shadow-2xl"
@@ -336,7 +343,7 @@ export function StartupPitchTemplate() {
         <div className="container mx-auto px-6">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 break-words text-gray-900">Loved by Thousands</h2>
+              <h2 className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>Loved by Thousands</h2>
               <p className="text-xl text-gray-600">See what our customers have to say</p>
             </div>
           </ScrollReveal>
@@ -345,10 +352,10 @@ export function StartupPitchTemplate() {
             {portfolioData.testimonials.map((testimonial, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, scale: 0.9 }}
+                initial={prefersReducedMotion ? {} : { opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.15 }}
+                transition={prefersReducedMotion ? {} : { delay: index * 0.15 }}
                 className="bg-white rounded-2xl p-4 sm:p-6 md:p-8 shadow-lg"
               >
                 <div className="flex gap-1 mb-4">
@@ -375,7 +382,7 @@ export function StartupPitchTemplate() {
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <ScrollReveal>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-center break-words text-gray-900">About FlowMetrics</h2>
+              <h2 className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-center break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>About FlowMetrics</h2>
               <p className="text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed text-center">
                 {portfolioData.about}
               </p>
@@ -389,7 +396,7 @@ export function StartupPitchTemplate() {
         <div className="container mx-auto px-6">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 break-words text-gray-900">Our Expertise</h2>
+              <h2 className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>Our Expertise</h2>
               <p className="text-xl text-gray-600">Technologies & capabilities that power our platform</p>
             </div>
           </ScrollReveal>
@@ -398,11 +405,11 @@ export function StartupPitchTemplate() {
             {portfolioData.skills.map((skill, index) => (
               <motion.div
                 key={skill}
-                initial={{ opacity: 0, scale: 0.9 }}
+                initial={prefersReducedMotion ? {} : { opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.05 }}
-                whileHover={{ scale: 1.05 }}
+                transition={prefersReducedMotion ? {} : { delay: index * 0.05 }}
+                whileHover={prefersReducedMotion ? {} : { scale: 1.05 }}
                 className="bg-white rounded-xl p-6 shadow-md border border-gray-100 text-center"
               >
                 <p className="text-sm font-semibold text-gray-800">{skill}</p>
@@ -417,7 +424,7 @@ export function StartupPitchTemplate() {
         <div className="container mx-auto px-6">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 break-words text-gray-900">Our Journey</h2>
+              <h2 className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>Our Journey</h2>
               <p className="text-xl text-gray-600">From startup to scale</p>
             </div>
           </ScrollReveal>
@@ -426,10 +433,10 @@ export function StartupPitchTemplate() {
             {portfolioData.timeline.map((item, index) => (
               <motion.div
                 key={item.year}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+                initial={prefersReducedMotion ? {} : { opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
+                transition={prefersReducedMotion ? {} : { duration: 0.6 }}
                 className="flex gap-8 mb-12 last:mb-0"
               >
                 <div className="flex-shrink-0 w-24 text-right">
@@ -438,7 +445,7 @@ export function StartupPitchTemplate() {
                   </div>
                 </div>
                 <div className="flex-1 border-l-4 border-blue-200 pl-8 pb-8">
-                  <h3 className="text-xl sm:text-2xl font-bold mb-3 text-gray-900">{item.title}</h3>
+                  <h3 className={`text-xl sm:text-2xl font-bold mb-3 ${isDark ? 'text-white' : 'text-gray-900'}`}>{item.title}</h3>
                   <p className="text-gray-600 leading-relaxed">{item.description}</p>
                 </div>
               </motion.div>
@@ -452,7 +459,7 @@ export function StartupPitchTemplate() {
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
             <ScrollReveal>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 break-words text-gray-900">Get in Touch</h2>
+              <h2 className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>Get in Touch</h2>
               <p className="text-xl text-gray-600 mb-8">
                 Have questions? Want to see a demo? Our team is here to help.
               </p>
@@ -465,10 +472,10 @@ export function StartupPitchTemplate() {
                 </a>
               </div>
               <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-lg px-12 text-white">
+                <Button size="lg" className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-lg px-12 text-white" aria-label="Schedule a product demo">
                   Schedule a Demo
                 </Button>
-                <Button size="lg" variant="outline" className="text-lg px-12 border-2 border-blue-600 !text-blue-600 hover:bg-blue-50">
+                <Button size="lg" variant="outline" className="text-lg px-12 border-2 border-blue-600 !text-blue-600 hover:bg-blue-50" aria-label="Contact sales team">
                   Contact Sales
                 </Button>
               </div>
@@ -483,7 +490,7 @@ export function StartupPitchTemplate() {
 
         <div className="container mx-auto px-6 text-center relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={prefersReducedMotion ? {} : { opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
@@ -492,7 +499,7 @@ export function StartupPitchTemplate() {
               Join thousands of companies already growing with our platform
             </p>
             <Button size="lg" className="bg-white !text-blue-600 hover:bg-blue-50 text-lg px-12">
-              Start Your Free Trial <FiArrowRight className="ml-2" />
+              Start Your Free Trial <FiArrowRight className="ml-2" aria-hidden="true" />
             </Button>
           </motion.div>
         </div>
@@ -513,6 +520,7 @@ export function StartupPitchTemplate() {
                   className="text-sm text-gray-400 hover:text-white transition-colors uppercase"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label={`${key.charAt(0).toUpperCase() + key.slice(1)} profile`}
                 >
                   {key}
                 </a>

@@ -134,7 +134,7 @@ export function DarkModeTemplate() {
             <button
               className="md:hidden p-3 text-white hover:bg-white/10 rounded-md border border-white/20 transition-colors"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              aria-label="Toggle menu"
+              aria-label={mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
             >
               {mobileMenuOpen ? <FiX size={28} /> : <FiMenu size={28} />}
             </button>
@@ -184,7 +184,7 @@ export function DarkModeTemplate() {
 
         <div className="relative z-10 text-center px-3">
           <FadeIn>
-            <h1 className="text-3xl sm:text-3xl sm:text-5xl md:text-6xl lg:text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent break-words text-white">
+            <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-9xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent break-words text-white">
               {portfolioData.name}
             </h1>
           </FadeIn>
@@ -219,7 +219,7 @@ export function DarkModeTemplate() {
           {portfolioData.stats.map((stat, index) => (
             <ScrollReveal key={stat.label} delay={index * 0.1}>
               <div className="text-center">
-                <div className="text-5xl md:text-4xl sm:text-5xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent mb-3 break-words text-white">
+                <div className="text-5xl sm:text-5xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent mb-3 break-words text-white">
                   {stat.value}
                 </div>
                 <div className="text-sm text-gray-400 uppercase tracking-wider">
@@ -234,7 +234,7 @@ export function DarkModeTemplate() {
       {/* Work Section */}
       <section id="work" className="container mx-auto px-3 sm:px-3 py-32">
         <ScrollReveal>
-          <h2 className="text-sm font-semibold text-cyan-400 mb-12 uppercase tracking-wider text-gray-900">
+          <h2 className="text-sm font-semibold text-cyan-400 mb-12 uppercase tracking-wider">
             Selected Work
           </h2>
         </ScrollReveal>
@@ -263,7 +263,7 @@ export function DarkModeTemplate() {
                   </div>
                   <div className="absolute top-4 right-4 z-20 opacity-0 group-hover:opacity-100 transition-opacity">
                     <div className="w-10 h-10 bg-cyan-400 rounded-full flex items-center justify-center">
-                      <FiExternalLink className="text-black" />
+                      <FiExternalLink className="text-black" aria-hidden="true" />
                     </div>
                   </div>
                 </div>
@@ -276,7 +276,7 @@ export function DarkModeTemplate() {
       {/* Services Section */}
       <section className="container mx-auto px-3 sm:px-3 py-32 border-t border-white/10">
         <ScrollReveal>
-          <h2 className="text-sm font-semibold text-cyan-400 mb-12 uppercase tracking-wider text-center text-gray-900">
+          <h2 className="text-sm font-semibold text-cyan-400 mb-12 uppercase tracking-wider text-center">
             What I Do
           </h2>
         </ScrollReveal>
@@ -299,7 +299,7 @@ export function DarkModeTemplate() {
         <div className="container mx-auto px-3 sm:px-3 relative z-10">
           <div className="max-w-full mx-auto text-center">
             <ScrollReveal>
-              <h2 className="text-sm font-semibold text-cyan-400 mb-8 uppercase tracking-wider text-gray-900">
+              <h2 className="text-sm font-semibold text-cyan-400 mb-8 uppercase tracking-wider">
                 About Me
               </h2>
               <p className="text-xl sm:text-2xl md:text-3xl text-gray-300 leading-relaxed mb-12">
@@ -339,7 +339,7 @@ export function DarkModeTemplate() {
       {/* Testimonials Section */}
       <section className="container mx-auto px-3 sm:px-3 py-32 border-t border-white/10">
         <ScrollReveal>
-          <h2 className="text-sm font-semibold text-cyan-400 mb-16 uppercase tracking-wider text-center text-gray-900">
+          <h2 className="text-sm font-semibold text-cyan-400 mb-16 uppercase tracking-wider text-center">
             Client Testimonials
           </h2>
         </ScrollReveal>
@@ -365,7 +365,7 @@ export function DarkModeTemplate() {
       <section id="contact" className="container mx-auto px-3 sm:px-3 py-32">
         <div className="max-w-full mx-auto text-center">
           <ScrollReveal>
-            <h2 className="text-3xl sm:text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-8 break-words text-gray-900">
+            <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-8 break-words text-white">
               Let's Create Something{" "}
               <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
                 Amazing
@@ -384,7 +384,7 @@ export function DarkModeTemplate() {
               size="lg"
               className="bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white font-semibold text-lg px-8 min-h-[44px] w-full sm:w-auto"
             >
-              <FiMail className="mr-2" />
+              <FiMail className="mr-2" aria-hidden="true" />
               Get in Touch
             </Button>
           </ScrollReveal>
@@ -449,7 +449,7 @@ export function DarkModeTemplate() {
                     : 'bg-white/5 border-white/10 hover:border-white/30'
                 }`}>
                   <h3 className="text-2xl font-bold mb-2 text-white">{plan.name}</h3>
-                  <div className="text-4xl sm:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent break-words text-white">
+                  <div className="text-4xl sm:text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent break-words text-white">
                     {plan.price}
                   </div>
                   <ul className="space-y-3 mb-8">

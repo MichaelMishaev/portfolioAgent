@@ -208,7 +208,7 @@ export function ThreeDImmersivePreview({
 
           {/* Name with 3D text effect */}
           <motion.h1
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 text-center"
+            className="text-4xl sm:text-5xl lg:text-7xl font-bold mb-4 text-center"
             style={{
               fontFamily: template.fonts.heading,
               textShadow: `

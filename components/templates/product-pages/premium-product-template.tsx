@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
+import { useReducedMotion } from "@/lib/hooks/use-reduced-motion";
 import { FadeIn } from "@/components/animations/fade-in";
 import { ScrollReveal } from "@/components/animations/scroll-reveal";
 import { Button } from "@/components/ui/button";
@@ -24,6 +25,7 @@ import {
   FiX,
 } from "react-icons/fi";
 import Link from "next/link";
+import { useTheme } from "next-themes";
 
 const productData = {
   name: "CHRONOS ÉLITE",
@@ -261,16 +263,19 @@ const productData = {
 };
 
 export function PremiumProductTemplate() {
+  const { theme } = useTheme();
+  const isDark = theme === 'dark';
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const prefersReducedMotion = useReducedMotion();
 
   const [selectedMaterial, setSelectedMaterial] = useState(0);
   const [selectedComplications, setSelectedComplications] = useState<number[]>([]);
   const [selectedStrap, setSelectedStrap] = useState(0);
   const { scrollYProgress } = useScroll();
 
-  const heroY = useTransform(scrollYProgress, [0, 0.5], [0, 200]);
-  const heroOpacity = useTransform(scrollYProgress, [0, 0.3], [1, 0]);
-  const heroScale = useTransform(scrollYProgress, [0, 0.3], [1, 1.1]);
+  const heroY = useTransform(scrollYProgress, [0, 0.5], prefersReducedMotion ? [0, 0] : [0, 200]);
+  const heroOpacity = useTransform(scrollYProgress, [0, 0.3], prefersReducedMotion ? [1, 1] : [1, 0]);
+  const heroScale = useTransform(scrollYProgress, [0, 0.3], prefersReducedMotion ? [1, 1] : [1, 1.1]);
 
   const calculatePrice = () => {
     let total = productData.configurator.materials[selectedMaterial].price;
@@ -318,7 +323,7 @@ export function PremiumProductTemplate() {
             <button
               className="md:hidden p-3 text-foreground hover:bg-accent rounded-md border border-border transition-colors"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              aria-label="Toggle menu"
+              aria-label={mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
             >
               {mobileMenuOpen ? <FiX size={28} /> : <FiMenu size={28} />}
             </button>
@@ -383,7 +388,7 @@ export function PremiumProductTemplate() {
           </FadeIn>
 
           <FadeIn delay={0.2}>
-            <h1 className="text-4xl sm:text-4xl sm:text-5xl md:text-6xl lg:text-9xl font-light mb-4 tracking-tight break-words text-gray-900">
+            <h1 className={`text-4xl sm:text-4xl sm:text-5xl md:text-6xl lg:text-9xl font-light mb-4 tracking-tight break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>
               {productData.name}
             </h1>
           </FadeIn>
@@ -414,7 +419,7 @@ export function PremiumProductTemplate() {
               </span>
               <Button size="lg" className="mt-4 bg-white text-black hover:bg-gray-200 px-8 py-6 text-sm tracking-wider">
                 Schedule Private Viewing
-                <FiArrowRight className="ml-2" />
+                <FiArrowRight className="ml-2" aria-hidden="true" />
               </Button>
             </div>
           </FadeIn>
@@ -423,15 +428,15 @@ export function PremiumProductTemplate() {
         {/* Scroll Indicator */}
         <motion.div
           className="absolute bottom-12 left-1/2 -translate-x-1/2"
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity }}
+          animate={prefersReducedMotion ? {} : { y: [0, 10, 0] }}
+          transition={prefersReducedMotion ? {} : { duration: 2, repeat: Infinity }}
           style={{ opacity: heroOpacity }}
         >
           <div className="w-6 h-10 border border-white/30 rounded-full flex items-start justify-center p-2">
             <motion.div
               className="w-1.5 h-1.5 bg-white rounded-full"
-              animate={{ y: [0, 16, 0] }}
-              transition={{ duration: 2, repeat: Infinity }}
+              animate={prefersReducedMotion ? {} : { y: [0, 16, 0] }}
+              transition={prefersReducedMotion ? {} : { duration: 2, repeat: Infinity }}
             />
           </div>
         </motion.div>
@@ -441,7 +446,7 @@ export function PremiumProductTemplate() {
       <section id="heritage" className="container mx-auto px-3 max-w-full py-32">
         <ScrollReveal>
           <div className="max-w-full mx-auto text-center mb-20">
-            <h2 className="text-6xl md:text-7xl font-light mb-8 tracking-tight text-gray-900">
+            <h2 className={`text-6xl md:text-7xl font-light mb-8 tracking-tight ${isDark ? 'text-white' : 'text-gray-900'}`}>
               {productData.heritage.title}
             </h2>
             <div className="text-9xl font-light text-gray-800 mb-8">
@@ -481,7 +486,7 @@ export function PremiumProductTemplate() {
       <section className="container mx-auto px-3 max-w-full py-32 bg-gradient-to-b from-transparent via-gray-950/50 to-transparent">
         <ScrollReveal>
           <div className="text-center mb-20">
-            <h2 className="text-6xl md:text-7xl font-light mb-6 tracking-tight text-gray-900">
+            <h2 className={`text-6xl md:text-7xl font-light mb-6 tracking-tight ${isDark ? 'text-white' : 'text-gray-900'}`}>
               {productData.technicalMastery.title}
             </h2>
             <p className="text-xl text-gray-400">
@@ -505,10 +510,10 @@ export function PremiumProductTemplate() {
                 </div>
                 <div className={index % 2 === 1 ? 'lg:col-start-1 lg:row-start-1' : ''}>
                   <div className="inline-block px-3 py-3 bg-white/5 rounded-full mb-6">
-                    <span className="text-4xl font-light text-gray-900">{feature.stat}</span>
+                    <span className={`text-4xl font-light ${isDark ? 'text-white' : 'text-gray-900'}`}>{feature.stat}</span>
                     <span className="text-sm text-gray-400 ml-3 uppercase tracking-wider">{feature.metric}</span>
                   </div>
-                  <h3 className="text-4xl font-light mb-6 text-gray-900">{feature.title}</h3>
+                  <h3 className={`text-4xl font-light mb-6 ${isDark ? 'text-white' : 'text-gray-900'}`}>{feature.title}</h3>
                   <p className="text-lg text-gray-400 leading-relaxed">{feature.description}</p>
                 </div>
               </div>
@@ -521,7 +526,7 @@ export function PremiumProductTemplate() {
       <section id="configure" className="container mx-auto px-3 max-w-full py-32">
         <ScrollReveal>
           <div className="text-center mb-20">
-            <h2 className="text-6xl md:text-7xl font-light mb-6 tracking-tight text-gray-900">
+            <h2 className={`text-6xl md:text-7xl font-light mb-6 tracking-tight ${isDark ? 'text-white' : 'text-gray-900'}`}>
               {productData.configurator.title}
             </h2>
             <p className="text-xl text-gray-400">
@@ -534,12 +539,12 @@ export function PremiumProductTemplate() {
           {/* Material Selection */}
           <ScrollReveal delay={0.1}>
             <div className="mb-16">
-              <h3 className="text-3xl font-light mb-8 text-center text-gray-900">Select Case Material</h3>
+              <h3 className={`text-3xl font-light mb-8 text-center ${isDark ? 'text-white' : 'text-gray-900'}`}>Select Case Material</h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {productData.configurator.materials.map((material, index) => (
                   <motion.div
                     key={material.name}
-                    whileHover={{ y: -8 }}
+                    whileHover={prefersReducedMotion ? {} : { y: -8 }}
                     onClick={() => setSelectedMaterial(index)}
                     className={`cursor-pointer rounded-2xl overflow-hidden border-2 transition-all ${
                       selectedMaterial === index
@@ -555,11 +560,11 @@ export function PremiumProductTemplate() {
                       />
                       {selectedMaterial === index && (
                         <motion.div
-                          initial={{ scale: 0 }}
+                          initial={prefersReducedMotion ? {} : { scale: 0 }}
                           animate={{ scale: 1 }}
                           className="absolute top-4 right-4 w-8 h-8 bg-white rounded-full flex items-center justify-center"
                         >
-                          <FiCheck className="text-black" />
+                          <FiCheck className="text-black" aria-hidden="true" />
                         </motion.div>
                       )}
                     </div>
@@ -569,10 +574,10 @@ export function PremiumProductTemplate() {
                           className="w-4 h-4 rounded-full border border-white/20"
                           style={{ backgroundColor: material.color }}
                         />
-                        <h4 className="text-lg font-light text-gray-900">{material.name}</h4>
+                        <h4 className={`text-lg font-light ${isDark ? 'text-white' : 'text-gray-900'}`}>{material.name}</h4>
                       </div>
                       <p className="text-sm text-gray-400 mb-3">{material.description}</p>
-                      <p className="text-2xl font-light text-gray-900">${material.price.toLocaleString()}</p>
+                      <p className={`text-2xl font-light ${isDark ? 'text-white' : 'text-gray-900'}`}>${material.price.toLocaleString()}</p>
                     </div>
                   </motion.div>
                 ))}
@@ -583,13 +588,13 @@ export function PremiumProductTemplate() {
           {/* Complications */}
           <ScrollReveal delay={0.2}>
             <div className="mb-16">
-              <h3 className="text-3xl font-light mb-8 text-center text-gray-900">Complications</h3>
+              <h3 className={`text-3xl font-light mb-8 text-center ${isDark ? 'text-white' : 'text-gray-900'}`}>Complications</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-full mx-auto">
                 {productData.configurator.complications.map((complication, index) => (
                   <motion.button
                     key={complication.name}
-                    whileHover={{ scale: complication.included ? 1 : 1.02 }}
-                    whileTap={{ scale: complication.included ? 1 : 0.98 }}
+                    whileHover={prefersReducedMotion ? {} : { scale: complication.included ? 1 : 1.02 }}
+                    whileTap={prefersReducedMotion ? {} : { scale: complication.included ? 1 : 0.98 }}
                     onClick={() => toggleComplication(index)}
                     disabled={complication.included}
                     className={`p-4 rounded-xl border-2 text-left transition-all ${
@@ -601,7 +606,7 @@ export function PremiumProductTemplate() {
                     }`}
                   >
                     <div className="flex items-start justify-between mb-2">
-                      <span className="text-base font-light text-gray-900">{complication.name}</span>
+                      <span className={`text-base font-light ${isDark ? 'text-white' : 'text-gray-900'}`}>{complication.name}</span>
                       {complication.included ? (
                         <Badge className="bg-white/10 text-white text-xs">Included</Badge>
                       ) : (
@@ -609,7 +614,7 @@ export function PremiumProductTemplate() {
                           selectedComplications.includes(index) ? 'border-white bg-white' : 'border-white/30'
                         }`}>
                           {selectedComplications.includes(index) && (
-                            <FiCheck className="w-3 h-3 text-black" />
+                            <FiCheck className="w-3 h-3 text-black" aria-hidden="true" />
                           )}
                         </div>
                       )}
@@ -626,12 +631,12 @@ export function PremiumProductTemplate() {
           {/* Strap Selection */}
           <ScrollReveal delay={0.3}>
             <div className="mb-16">
-              <h3 className="text-3xl font-light mb-8 text-center text-gray-900">Select Strap</h3>
+              <h3 className={`text-3xl font-light mb-8 text-center ${isDark ? 'text-white' : 'text-gray-900'}`}>Select Strap</h3>
               <div className="grid grid-cols-1 md:grid-cols-4 gap-4 max-w-full mx-auto">
                 {productData.configurator.straps.map((strap, index) => (
                   <motion.div
                     key={strap.name}
-                    whileHover={{ y: -4 }}
+                    whileHover={prefersReducedMotion ? {} : { y: -4 }}
                     onClick={() => setSelectedStrap(index)}
                     className={`cursor-pointer rounded-xl overflow-hidden border-2 transition-all ${
                       selectedStrap === index
@@ -647,11 +652,11 @@ export function PremiumProductTemplate() {
                       />
                       {selectedStrap === index && (
                         <motion.div
-                          initial={{ scale: 0 }}
+                          initial={prefersReducedMotion ? {} : { scale: 0 }}
                           animate={{ scale: 1 }}
                           className="absolute top-2 right-2 w-6 h-6 bg-white rounded-full flex items-center justify-center"
                         >
-                          <FiCheck className="text-black w-4 h-4" />
+                          <FiCheck className="text-black w-4 h-4" aria-hidden="true" />
                         </motion.div>
                       )}
                     </div>
@@ -684,7 +689,7 @@ export function PremiumProductTemplate() {
                 </div>
                 <Button size="lg" className="w-full sm:w-auto bg-white text-black hover:bg-gray-200 px-12 py-6">
                   Request Consultation
-                  <FiArrowRight className="ml-2" />
+                  <FiArrowRight className="ml-2" aria-hidden="true" />
                 </Button>
                 <p className="text-xs text-gray-500 mt-6">Estimated delivery: 6-8 months from order</p>
               </CardContent>
@@ -697,7 +702,7 @@ export function PremiumProductTemplate() {
       <section className="container mx-auto px-3 max-w-full py-32 bg-gradient-to-b from-transparent via-gray-950/50 to-transparent">
         <ScrollReveal>
           <div className="text-center mb-20">
-            <h2 className="text-6xl md:text-7xl font-light mb-6 tracking-tight text-gray-900">
+            <h2 className={`text-6xl md:text-7xl font-light mb-6 tracking-tight ${isDark ? 'text-white' : 'text-gray-900'}`}>
               {productData.craftsmen.title}
             </h2>
             <p className="text-xl text-gray-400">
@@ -718,7 +723,7 @@ export function PremiumProductTemplate() {
                       className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
                     />
                   </div>
-                  <h3 className="text-2xl font-light mb-2 text-gray-900">{craftsman.name}</h3>
+                  <h3 className={`text-2xl font-light mb-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>{craftsman.name}</h3>
                   <p className="text-sm text-gray-400 uppercase tracking-wider mb-1">{craftsman.title}</p>
                   <p className="text-sm text-gray-500 mb-4">{craftsman.specialty}</p>
                   <Badge className="bg-white/10 text-white text-xs mb-6">{craftsman.experience}</Badge>
@@ -736,7 +741,7 @@ export function PremiumProductTemplate() {
       <section className="container mx-auto px-3 max-w-full py-32">
         <ScrollReveal>
           <div className="text-center mb-20">
-            <h2 className="text-6xl md:text-7xl font-light mb-6 tracking-tight text-gray-900">
+            <h2 className={`text-6xl md:text-7xl font-light mb-6 tracking-tight ${isDark ? 'text-white' : 'text-gray-900'}`}>
               {productData.specifications.title}
             </h2>
           </div>
@@ -747,7 +752,7 @@ export function PremiumProductTemplate() {
             <ScrollReveal key={section.title} delay={index * 0.1}>
               <Card className="h-full bg-white/5 border-white/10 backdrop-blur">
                 <CardHeader>
-                  <CardTitle className="text-2xl font-light text-gray-900">{section.title}</CardTitle>
+                  <CardTitle className={`text-2xl font-light ${isDark ? 'text-white' : 'text-gray-900'}`}>{section.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-3">
@@ -768,7 +773,7 @@ export function PremiumProductTemplate() {
       <section id="ownership" className="container mx-auto px-3 max-w-full py-32 bg-gradient-to-b from-transparent via-gray-950/50 to-transparent">
         <ScrollReveal>
           <div className="text-center mb-20">
-            <h2 className="text-6xl md:text-7xl font-light mb-6 tracking-tight text-gray-900">
+            <h2 className={`text-6xl md:text-7xl font-light mb-6 tracking-tight ${isDark ? 'text-white' : 'text-gray-900'}`}>
               {productData.ownership.title}
             </h2>
             <p className="text-xl text-gray-400">
@@ -785,7 +790,7 @@ export function PremiumProductTemplate() {
                   <div className="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center mb-6">
                     {benefit.icon}
                   </div>
-                  <h3 className="text-xl font-light mb-3 text-gray-900">{benefit.title}</h3>
+                  <h3 className={`text-xl font-light mb-3 ${isDark ? 'text-white' : 'text-gray-900'}`}>{benefit.title}</h3>
                   <p className="text-sm text-gray-400 leading-relaxed">{benefit.description}</p>
                 </CardContent>
               </Card>
@@ -798,7 +803,7 @@ export function PremiumProductTemplate() {
       <section className="container mx-auto px-3 max-w-full py-32">
         <ScrollReveal>
           <div className="text-center mb-20">
-            <h2 className="text-6xl md:text-7xl font-light mb-6 tracking-tight text-gray-900">
+            <h2 className={`text-6xl md:text-7xl font-light mb-6 tracking-tight ${isDark ? 'text-white' : 'text-gray-900'}`}>
               Collector Testimonials
             </h2>
           </div>
@@ -842,7 +847,7 @@ export function PremiumProductTemplate() {
           <Card className="max-w-full mx-auto bg-gradient-to-br from-white/10 to-white/5 border-white/20 backdrop-blur-xl">
             <CardContent className="p-16 text-center">
               <FiClock className="w-16 h-16 mx-auto mb-8 text-gray-400" />
-              <h2 className="text-5xl md:text-6xl font-light mb-6 tracking-tight text-gray-900">
+              <h2 className={`text-5xl md:text-6xl font-light mb-6 tracking-tight ${isDark ? 'text-white' : 'text-gray-900'}`}>
                 {productData.finalCTA.title}
               </h2>
               <p className="text-xl text-gray-300 mb-4">
@@ -854,7 +859,7 @@ export function PremiumProductTemplate() {
               <div className="flex flex-col gap-4 sm:flex-row gap-4 justify-center">
                 <Button size="lg" className="w-full sm:w-auto bg-white text-black hover:bg-gray-200 px-12 py-6 text-sm tracking-wider">
                   Schedule Consultation
-                  <FiArrowRight className="ml-2" />
+                  <FiArrowRight className="ml-2" aria-hidden="true" />
                 </Button>
                 <Button size="lg" variant="outline" className="w-full sm:w-auto border-white/30 !text-white !bg-transparent hover:bg-white/10 px-12 py-6 text-sm tracking-wider">
                   Download Brochure
@@ -869,7 +874,7 @@ export function PremiumProductTemplate() {
       <footer className="border-t border-white/5 py-16">
         <div className="container mx-auto px-3 max-w-full">
           <div className="text-center">
-            <div className="text-3xl font-light tracking-[0.2em] mb-6 text-gray-900">CHRONOS</div>
+            <div className={`text-3xl font-light tracking-[0.2em] mb-6 ${isDark ? 'text-white' : 'text-gray-900'}`}>CHRONOS</div>
             <p className="text-xs text-gray-500 uppercase tracking-widest mb-8">Geneva · Since 1824</p>
             <div className="flex justify-center gap-8 text-xs text-gray-500 uppercase tracking-wider">
               <a href="#" className="hover:text-white transition-colors">Heritage</a>

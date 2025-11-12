@@ -2,9 +2,11 @@
 
 import { useState, useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { useReducedMotion } from "@/lib/hooks/use-reduced-motion";
 import { Button } from "@/components/ui/button";
 import { FiMail , FiMenu, FiX } from "react-icons/fi";
 import Link from "next/link";
+import { useTheme } from "next-themes";
 
 const portfolioData = {
   name: "MOTION",
@@ -30,7 +32,10 @@ const portfolioData = {
 };
 
 export function KineticTypographyTemplate() {
+  const { theme } = useTheme();
+  const isDark = theme === 'dark';
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const prefersReducedMotion = useReducedMotion();
 
   const containerRef = useRef(null);
   const { scrollYProgress } = useScroll();
@@ -73,11 +78,11 @@ export function KineticTypographyTemplate() {
         <div className="text-center">
           <motion.h1
             className="text-[clamp(4rem,20vw,20rem)] font-black leading-none tracking-tighter"
-            animate={{
+            animate={prefersReducedMotion ? {} : {
               scaleX: [1, 1.1, 1],
               scaleY: [1, 0.9, 1],
             }}
-            transition={{
+            transition={prefersReducedMotion ? {} : {
               duration: 3,
               repeat: Infinity,
               ease: "easeInOut",
@@ -88,10 +93,10 @@ export function KineticTypographyTemplate() {
 
           <motion.div
             className="text-[clamp(2rem,10vw,10rem)] font-black tracking-wider mt-4"
-            animate={{
+            animate={prefersReducedMotion ? {} : {
               letterSpacing: ["0.1em", "0.3em", "0.1em"],
             }}
-            transition={{
+            transition={prefersReducedMotion ? {} : {
               duration: 4,
               repeat: Infinity,
               ease: "easeInOut",
@@ -108,7 +113,7 @@ export function KineticTypographyTemplate() {
             x: cursorPosition.x - 64,
             y: cursorPosition.y - 64,
           }}
-          transition={{ type: "spring", damping: 30, stiffness: 200 }}
+          transition={prefersReducedMotion ? {} : { type: "spring", damping: 30, stiffness: 200 }}
         />
       </motion.section>
 
@@ -119,9 +124,9 @@ export function KineticTypographyTemplate() {
             <motion.div
               key={i}
               className="inline-block text-[clamp(3rem,8vw,8rem)] font-black mr-6 mb-4"
-              initial={{ opacity: 0, y: 100 }}
+              initial={prefersReducedMotion ? {} : { opacity: 0, y: 100 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: i * 0.1 }}
+              transition={prefersReducedMotion ? {} : { duration: 0.8, delay: i * 0.1 }}
               viewport={{ once: true }}
               whileHover={{
                 scale: 1.1,
@@ -139,16 +144,16 @@ export function KineticTypographyTemplate() {
       <section className="min-h-screen overflow-x-hidden max-w-full flex items-center justify-center px-3">
         <motion.div
           className="max-w-full"
-          initial={{ opacity: 0 }}
+          initial={prefersReducedMotion ? {} : { opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
         >
           <motion.p
-            className="text-3xl sm:text-4xl md:text-6xl font-light leading-tight text-gray-900"
-            animate={{
+            className={`text-3xl sm:text-4xl md:text-6xl font-light leading-tight ${isDark ? 'text-white' : 'text-gray-900'}`}
+            animate={prefersReducedMotion ? {} : {
               fontWeight: [300, 700, 300],
             }}
-            transition={{
+            transition={prefersReducedMotion ? {} : {
               duration: 5,
               repeat: Infinity,
               ease: "easeInOut",
@@ -165,23 +170,23 @@ export function KineticTypographyTemplate() {
           {["BRANDING", "MOTION DESIGN", "WEB EXPERIENCES"].map((service, i) => (
             <motion.div
               key={service}
-              initial={{ opacity: 0, x: i % 2 === 0 ? -100 : 100 }}
+              initial={prefersReducedMotion ? {} : { opacity: 0, x: i % 2 === 0 ? -100 : 100 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={prefersReducedMotion ? {} : { duration: 0.8 }}
               viewport={{ once: true }}
-              whileHover={{ scale: 1.05 }}
+              whileHover={prefersReducedMotion ? {} : { scale: 1.05 }}
               className="border-b border-white/20 pb-8 cursor-pointer"
             >
               <motion.h3
-                className="text-3xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black break-words text-gray-900"
-                animate={{
+                className={`text-3xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black break-words ${isDark ? 'text-white' : 'text-gray-900'}`}
+                animate={prefersReducedMotion ? {} : {
                   textShadow: [
                     "0 0 0px rgba(255,255,255,0)",
                     "0 0 20px rgba(255,255,255,0.5)",
                     "0 0 0px rgba(255,255,255,0)",
                   ],
                 }}
-                transition={{
+                transition={prefersReducedMotion ? {} : {
                   duration: 3,
                   repeat: Infinity,
                   delay: i * 0.5,
@@ -200,18 +205,18 @@ export function KineticTypographyTemplate() {
           {portfolioData.stats.map((stat, i) => (
             <motion.div
               key={stat.label}
-              initial={{ opacity: 0, y: 50 }}
+              initial={prefersReducedMotion ? {} : { opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: i * 0.2 }}
+              transition={prefersReducedMotion ? {} : { duration: 0.8, delay: i * 0.2 }}
               viewport={{ once: true }}
               className="text-center"
             >
               <motion.div
                 className="text-[clamp(4rem,10vw,10rem)] font-black leading-none mb-4"
-                animate={{
+                animate={prefersReducedMotion ? {} : {
                   scale: [1, 1.1, 1],
                 }}
-                transition={{
+                transition={prefersReducedMotion ? {} : {
                   duration: 2,
                   repeat: Infinity,
                   delay: i * 0.3,
@@ -220,11 +225,11 @@ export function KineticTypographyTemplate() {
                 {stat.number}{stat.suffix}
               </motion.div>
               <motion.div
-                className="text-2xl tracking-widest text-gray-900"
-                animate={{
+                className={`text-2xl tracking-widest ${isDark ? 'text-white' : 'text-gray-900'}`}
+                animate={prefersReducedMotion ? {} : {
                   opacity: [0.5, 1, 0.5],
                 }}
-                transition={{
+                transition={prefersReducedMotion ? {} : {
                   duration: 3,
                   repeat: Infinity,
                   delay: i * 0.3,
@@ -241,8 +246,8 @@ export function KineticTypographyTemplate() {
       <section className="min-h-screen overflow-x-hidden max-w-full flex items-center justify-center px-3">
         <div className="space-y-16 max-w-full w-full">
           <motion.h2
-            className="text-3xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-center mb-20 break-words text-gray-900"
-            initial={{ opacity: 0 }}
+            className={`text-3xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-center mb-20 break-words ${isDark ? 'text-white' : 'text-gray-900'}`}
+            initial={prefersReducedMotion ? {} : { opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
           >
@@ -252,24 +257,24 @@ export function KineticTypographyTemplate() {
           {portfolioData.projects.map((project, i) => (
             <motion.div
               key={project.title}
-              initial={{ opacity: 0, x: i % 2 === 0 ? -200 : 200 }}
+              initial={prefersReducedMotion ? {} : { opacity: 0, x: i % 2 === 0 ? -200 : 200 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1, ease: "easeOut" }}
+              transition={prefersReducedMotion ? {} : { duration: 1, ease: "easeOut" }}
               viewport={{ once: true }}
               className="border-t border-white/20 pt-8 group cursor-pointer"
             >
               <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                 <motion.h3
-                  className="text-3xl sm:text-5xl md:text-6xl font-black break-words text-gray-900"
-                  whileHover={{
+                  className={`text-3xl sm:text-5xl md:text-6xl font-black break-words ${isDark ? 'text-white' : 'text-gray-900'}`}
+                  whileHover={prefersReducedMotion ? {} : {
                     scaleX: 1.05,
                     letterSpacing: "0.05em",
                   }}
-                  transition={{ duration: 0.3 }}
+                  transition={prefersReducedMotion ? {} : { duration: 0.3 }}
                 >
                   {project.title}
                 </motion.h3>
-                <div className="flex gap-8 text-xl font-mono text-gray-900">
+                <div className={`flex gap-8 text-xl font-mono ${isDark ? 'text-white' : 'text-gray-900'}`}>
                   <span className="text-gray-500">{project.year}</span>
                   <span className="text-gray-400">{project.type}</span>
                 </div>
@@ -283,8 +288,8 @@ export function KineticTypographyTemplate() {
       <section className="min-h-screen overflow-x-hidden max-w-full flex items-center justify-center px-3">
         <div className="max-w-full w-full">
           <motion.h2
-            className="text-3xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-center mb-20 break-words text-gray-900"
-            initial={{ opacity: 0 }}
+            className={`text-3xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-center mb-20 break-words ${isDark ? 'text-white' : 'text-gray-900'}`}
+            initial={prefersReducedMotion ? {} : { opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
           >
@@ -295,26 +300,26 @@ export function KineticTypographyTemplate() {
             {portfolioData.capabilities.map((capability, i) => (
               <motion.div
                 key={capability}
-                initial={{ opacity: 0, rotateX: -90 }}
+                initial={prefersReducedMotion ? {} : { opacity: 0, rotateX: -90 }}
                 whileInView={{ opacity: 1, rotateX: 0 }}
-                transition={{ duration: 0.6, delay: i * 0.1 }}
+                transition={prefersReducedMotion ? {} : { duration: 0.6, delay: i * 0.1 }}
                 viewport={{ once: true }}
-                whileHover={{
+                whileHover={prefersReducedMotion ? {} : {
                   scale: 1.1,
                   backgroundColor: "rgba(255,255,255,0.1)",
                 }}
                 className="border border-white/20 p-8 text-center transition-colors"
               >
                 <motion.h3
-                  className="text-3xl font-black text-gray-900"
-                  animate={{
+                  className={`text-3xl font-black ${isDark ? 'text-white' : 'text-gray-900'}`}
+                  animate={prefersReducedMotion ? {} : {
                     textShadow: [
                       "0 0 0px rgba(255,255,255,0)",
                       "0 0 10px rgba(255,255,255,0.3)",
                       "0 0 0px rgba(255,255,255,0)",
                     ],
                   }}
-                  transition={{
+                  transition={prefersReducedMotion ? {} : {
                     duration: 4,
                     repeat: Infinity,
                     delay: i * 0.5,
@@ -334,18 +339,18 @@ export function KineticTypographyTemplate() {
           {portfolioData.testimonials.map((testimonial, i) => (
             <motion.div
               key={testimonial.client}
-              initial={{ opacity: 0 }}
+              initial={prefersReducedMotion ? {} : { opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              transition={{ duration: 1 }}
+              transition={prefersReducedMotion ? {} : { duration: 1 }}
               viewport={{ once: true }}
               className="border border-white/20 p-12"
             >
               <motion.p
-                className="text-3xl sm:text-4xl md:text-5xl font-light mb-8 leading-tight text-gray-900"
-                animate={{
+                className={`text-3xl sm:text-4xl md:text-5xl font-light mb-8 leading-tight ${isDark ? 'text-white' : 'text-gray-900'}`}
+                animate={prefersReducedMotion ? {} : {
                   opacity: [1, 0.8, 1],
                 }}
-                transition={{
+                transition={prefersReducedMotion ? {} : {
                   duration: 3,
                   repeat: Infinity,
                   delay: i * 1,
@@ -354,11 +359,11 @@ export function KineticTypographyTemplate() {
                 "{testimonial.quote}"
               </motion.p>
               <motion.div
-                className="text-2xl font-black tracking-widest text-gray-900"
-                animate={{
+                className={`text-2xl font-black tracking-widest ${isDark ? 'text-white' : 'text-gray-900'}`}
+                animate={prefersReducedMotion ? {} : {
                   letterSpacing: ["0.2em", "0.3em", "0.2em"],
                 }}
-                transition={{
+                transition={prefersReducedMotion ? {} : {
                   duration: 4,
                   repeat: Infinity,
                 }}
@@ -375,10 +380,10 @@ export function KineticTypographyTemplate() {
         <div className="text-center">
           <motion.h2
             className="text-[clamp(3rem,12vw,12rem)] font-black leading-none mb-12"
-            animate={{
+            animate={prefersReducedMotion ? {} : {
               scale: [1, 1.05, 1],
             }}
-            transition={{
+            transition={prefersReducedMotion ? {} : {
               duration: 2,
               repeat: Infinity,
               ease: "easeInOut",
@@ -390,7 +395,7 @@ export function KineticTypographyTemplate() {
           </motion.h2>
 
           <motion.div
-            initial={{ opacity: 0, y: 50 }}
+            initial={prefersReducedMotion ? {} : { opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
@@ -398,7 +403,7 @@ export function KineticTypographyTemplate() {
               size="lg"
               className="bg-white text-black hover:bg-gray-200 text-xl px-12 py-8 h-auto font-bold"
             >
-              <FiMail className="mr-3 w-6 h-6" />
+              <FiMail className="mr-3 w-6 h-6" aria-hidden="true" />
               START PROJECT
             </Button>
           </motion.div>
@@ -409,11 +414,11 @@ export function KineticTypographyTemplate() {
       <section className="py-32 px-3 sm:px-3 bg-white text-black">
         <div className="container mx-auto max-w-6xl">
           <motion.h2
-            className="text-5xl sm:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl lg:text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black mb-20 tracking-tighter break-words text-gray-900"
-            initial={{ opacity: 0, x: -100 }}
+            className={`text-5xl sm:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl lg:text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black mb-20 tracking-tighter break-words ${isDark ? 'text-white' : 'text-gray-900'}`}
+            initial={prefersReducedMotion ? {} : { opacity: 0, x: -100 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            transition={prefersReducedMotion ? {} : { duration: 0.8 }}
           >
             SKILLS
           </motion.h2>
@@ -424,15 +429,15 @@ export function KineticTypographyTemplate() {
             ].map((group, i) => (
               <motion.div
                 key={i}
-                initial={{ opacity: 0, y: 50 }}
+                initial={prefersReducedMotion ? {} : { opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: i * 0.2 }}
+                transition={prefersReducedMotion ? {} : { delay: i * 0.2 }}
               >
-                <h3 className="text-3xl font-black mb-6 tracking-tight text-gray-900">{group.cat}</h3>
+                <h3 className={`text-3xl font-black mb-6 tracking-tight ${isDark ? 'text-white' : 'text-gray-900'}`}>{group.cat}</h3>
                 <div className="space-y-4">
                   {group.items.map((item, j) => (
-                    <div key={j} className="text-3xl sm:text-4xl font-bold tracking-tight opacity-60 hover:opacity-100 transition-opacity text-gray-900">
+                    <div key={j} className={`text-3xl sm:text-4xl font-bold tracking-tight opacity-60 hover:opacity-100 transition-opacity ${isDark ? 'text-white' : 'text-gray-900'}`}>
                       {item}
                     </div>
                   ))}
@@ -448,16 +453,16 @@ export function KineticTypographyTemplate() {
         <div className="container mx-auto max-w-4xl">
           <motion.h2
             className="text-5xl sm:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl lg:text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black mb-12 tracking-tighter text-white break-words"
-            initial={{ opacity: 0, scale: 0.8 }}
+            initial={prefersReducedMotion ? {} : { opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            transition={prefersReducedMotion ? {} : { duration: 0.8 }}
           >
             ABOUT
           </motion.h2>
           <motion.div
             className="space-y-8"
-            initial={{ opacity: 0, y: 50 }}
+            initial={prefersReducedMotion ? {} : { opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
@@ -475,11 +480,11 @@ export function KineticTypographyTemplate() {
       <section className="py-32 px-3 sm:px-3 bg-white text-black">
         <div className="container mx-auto max-w-6xl">
           <motion.h2
-            className="text-5xl sm:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl lg:text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black mb-20 tracking-tighter break-words text-gray-900"
-            initial={{ opacity: 0, x: 100 }}
+            className={`text-5xl sm:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl lg:text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black mb-20 tracking-tighter break-words ${isDark ? 'text-white' : 'text-gray-900'}`}
+            initial={prefersReducedMotion ? {} : { opacity: 0, x: 100 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            transition={prefersReducedMotion ? {} : { duration: 0.8 }}
           >
             PRICING
           </motion.h2>
@@ -492,16 +497,16 @@ export function KineticTypographyTemplate() {
               <motion.div
                 key={i}
                 className={`p-10 border-4 ${plan.highlight ? 'border-black bg-black text-white' : 'border-black'}`}
-                initial={{ opacity: 0, y: 50 }}
+                initial={prefersReducedMotion ? {} : { opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: i * 0.15 }}
+                transition={prefersReducedMotion ? {} : { delay: i * 0.15 }}
               >
-                <div className="text-3xl sm:text-4xl font-black mb-4 text-gray-900">{plan.name}</div>
-                <div className="text-4xl sm:text-5xl md:text-6xl font-black mb-8 break-words text-gray-900">{plan.price}</div>
+                <div className={`text-3xl sm:text-4xl font-black mb-4 ${isDark ? 'text-white' : 'text-gray-900'}`}>{plan.name}</div>
+                <div className={`text-4xl sm:text-5xl md:text-6xl font-black mb-8 break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>{plan.price}</div>
                 <ul className="space-y-4">
                   {plan.features.map((f, j) => (
-                    <li key={j} className="text-lg font-bold text-gray-900">{f}</li>
+                    <li key={j} className={`text-lg font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>{f}</li>
                   ))}
                 </ul>
               </motion.div>
@@ -515,7 +520,7 @@ export function KineticTypographyTemplate() {
         <div className="container mx-auto max-w-6xl">
           <motion.h2
             className="text-5xl sm:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl lg:text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black mb-20 tracking-tighter text-white break-words"
-            initial={{ opacity: 0 }}
+            initial={prefersReducedMotion ? {} : { opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
           >
@@ -526,10 +531,10 @@ export function KineticTypographyTemplate() {
               <motion.div
                 key={i}
                 className="aspect-square bg-white flex items-center justify-center cursor-pointer hover:bg-gray-200 transition-colors"
-                initial={{ opacity: 0, scale: 0.8 }}
+                initial={prefersReducedMotion ? {} : { opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
+                transition={prefersReducedMotion ? {} : { delay: i * 0.1 }}
               >
                 <span className="text-4xl sm:text-5xl md:text-6xl font-black text-black break-words">{num}</span>
               </motion.div>
@@ -542,19 +547,19 @@ export function KineticTypographyTemplate() {
       <section className="py-32 px-3 sm:px-3 bg-white text-black">
         <div className="container mx-auto max-w-6xl text-center">
           <motion.h2
-            className="text-6xl md:text-[12rem] font-black tracking-tighter leading-none mb-12 text-gray-900"
-            initial={{ opacity: 0, scale: 0.5 }}
+            className={`text-6xl md:text-[12rem] font-black tracking-tighter leading-none mb-12 ${isDark ? 'text-white' : 'text-gray-900'}`}
+            initial={prefersReducedMotion ? {} : { opacity: 0, scale: 0.5 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            transition={prefersReducedMotion ? {} : { duration: 0.8 }}
           >
             LET'S<br/>BUILD
           </motion.h2>
           <motion.div
-            initial={{ opacity: 0 }}
+            initial={prefersReducedMotion ? {} : { opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.4 }}
+            transition={prefersReducedMotion ? {} : { delay: 0.4 }}
           >
             <Button size="lg" className="bg-black text-white hover:bg-gray-800 text-2xl px-16 py-10 h-auto font-black">
               CONTACT NOW
@@ -568,7 +573,7 @@ export function KineticTypographyTemplate() {
         <div className="container mx-auto max-w-6xl">
           <motion.h2
             className="text-5xl sm:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl lg:text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black mb-20 tracking-tighter text-white break-words"
-            initial={{ opacity: 0 }}
+            initial={prefersReducedMotion ? {} : { opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
           >
@@ -584,10 +589,10 @@ export function KineticTypographyTemplate() {
               <motion.div
                 key={i}
                 className="grid md:grid-cols-12 gap-8 items-center"
-                initial={{ opacity: 0, x: -100 }}
+                initial={prefersReducedMotion ? {} : { opacity: 0, x: -100 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
+                transition={prefersReducedMotion ? {} : { delay: i * 0.1 }}
               >
                 <div className="md:col-span-2 text-4xl sm:text-5xl font-black text-gray-600 break-words">{item.year}</div>
                 <div className="md:col-span-10 bg-white p-8">

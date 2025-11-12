@@ -23,6 +23,7 @@ import {
   FiX,
 } from "react-icons/fi";
 import Link from "next/link";
+import { useTheme } from "next-themes";
 
 const serviceData = {
   name: "APEX STRATEGIC CONSULTING",
@@ -237,15 +238,17 @@ const serviceData = {
 };
 
 export function ConsultingServiceTemplate() {
+  const { theme } = useTheme();
+  const isDark = theme === 'dark';
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <div className="min-h-screen overflow-x-hidden max-w-full bg-white text-gray-900">
+    <div className={`min-h-screen overflow-x-hidden max-w-full bg-white ${isDark ? 'text-white' : 'text-gray-900'}`}>
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-lg border-b border-gray-200 shadow-sm">
         <div className="container mx-auto px-3 max-w-full py-4">
           <div className="flex items-center justify-between">
-            <Link href="/" className="text-2xl font-bold text-gray-900">
+            <Link href="/" className={`text-2xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>
             APEX<span className="text-emerald-600">CONSULTING</span>
           </Link>
 
@@ -270,7 +273,7 @@ export function ConsultingServiceTemplate() {
             <button
               className="md:hidden p-3 text-foreground hover:bg-accent rounded-md border border-border transition-colors"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              aria-label="Toggle menu"
+              aria-label={mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
             >
               {mobileMenuOpen ? <FiX size={28} /> : <FiMenu size={28} />}
             </button>
@@ -329,7 +332,7 @@ export function ConsultingServiceTemplate() {
             </FadeIn>
 
             <FadeIn delay={0.1}>
-              <h1 className="text-7xl md:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight text-gray-900">
+              <h1 className={`text-7xl md:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight ${isDark ? 'text-white' : 'text-gray-900'}`}>
                 {serviceData.tagline}
               </h1>
             </FadeIn>
@@ -342,11 +345,11 @@ export function ConsultingServiceTemplate() {
 
             <FadeIn delay={0.3}>
               <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
-                <Button size="lg" className="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-700 text-lg px-8 text-gray-900">
+                <Button size="lg" className={`w-full sm:w-auto bg-emerald-600 hover:bg-emerald-700 text-lg px-8 ${isDark ? 'text-white' : 'text-gray-900'}`}>
                   Schedule Consultation
-                  <FiArrowRight className="ml-2" />
+                  <FiArrowRight className="ml-2" aria-hidden="true" />
                 </Button>
-                <Button size="lg" variant="outline" className="w-full sm:w-auto text-lg px-8 text-gray-900">
+                <Button size="lg" variant="outline" className={`w-full sm:w-auto text-lg px-8 ${isDark ? 'text-white' : 'text-gray-900'}`}>
                   Download Insights
                 </Button>
               </div>
@@ -372,7 +375,7 @@ export function ConsultingServiceTemplate() {
         <div className="container mx-auto px-3 max-w-full">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <h2 className="text-4xl sm:text-5xl font-bold mb-4 break-words text-gray-900">Our Services</h2>
+              <h2 className={`text-4xl sm:text-5xl font-bold mb-4 break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>Our Services</h2>
               <p className="text-xl text-gray-600">Strategic solutions for your most critical challenges</p>
             </div>
           </ScrollReveal>
@@ -386,10 +389,10 @@ export function ConsultingServiceTemplate() {
                       <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-emerald-600 to-emerald-700 text-white flex items-center justify-center mb-4">
                         <service.icon className="w-8 h-8" />
                       </div>
-                      <h3 className="text-3xl font-bold mb-2 text-gray-900">{service.name}</h3>
+                      <h3 className={`text-3xl font-bold mb-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>{service.name}</h3>
                       <p className="text-emerald-600 font-semibold mb-4">{service.tagline}</p>
                       <p className="text-gray-600 mb-6">{service.description}</p>
-                      <div className="space-y-2 text-sm pt-4 border-t border-gray-200 text-gray-900">
+                      <div className={`space-y-2 text-sm pt-4 border-t border-gray-200 ${isDark ? 'text-white' : 'text-gray-900'}`}>
                         <div className="flex justify-between">
                           <span className="text-gray-500">Typical Engagement:</span>
                           <span className="font-medium">{service.engagement}</span>
@@ -402,7 +405,7 @@ export function ConsultingServiceTemplate() {
                     </div>
 
                     <div>
-                      <h4 className="font-semibold mb-4 text-gray-900">Core Capabilities</h4>
+                      <h4 className={`font-semibold mb-4 ${isDark ? 'text-white' : 'text-gray-900'}`}>Core Capabilities</h4>
                       <div className="space-y-3">
                         {service.capabilities.map((capability) => (
                           <div key={capability} className="flex items-start gap-2">
@@ -414,7 +417,7 @@ export function ConsultingServiceTemplate() {
                     </div>
 
                     <div>
-                      <h4 className="font-semibold mb-4 text-gray-900">Our Approach</h4>
+                      <h4 className={`font-semibold mb-4 ${isDark ? 'text-white' : 'text-gray-900'}`}>Our Approach</h4>
                       <div className="space-y-4">
                         {service.approach.map((step, idx) => (
                           <div key={step} className="flex items-start gap-3">
@@ -441,7 +444,7 @@ export function ConsultingServiceTemplate() {
         <div className="container mx-auto px-3 max-w-full">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <h2 className="text-4xl sm:text-5xl font-bold mb-4 break-words text-gray-900">Client Engagements</h2>
+              <h2 className={`text-4xl sm:text-5xl font-bold mb-4 break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>Client Engagements</h2>
               <p className="text-xl text-gray-600">Transformational results for global enterprises</p>
             </div>
           </ScrollReveal>
@@ -483,7 +486,7 @@ export function ConsultingServiceTemplate() {
 
                       <blockquote className="border-l-4 border-emerald-600 pl-6 italic text-gray-700">
                         "{engagement.quote}"
-                        <footer className="mt-2 text-sm font-semibold text-gray-900 not-italic">
+                        <footer className={`mt-2 text-sm font-semibold ${isDark ? 'text-white' : 'text-gray-900'} not-italic`}>
                           — {engagement.author}
                         </footer>
                       </blockquote>
@@ -501,7 +504,7 @@ export function ConsultingServiceTemplate() {
         <div className="container mx-auto px-3 max-w-full">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <h2 className="text-4xl sm:text-5xl font-bold mb-4 break-words text-gray-900">Our Partners</h2>
+              <h2 className={`text-4xl sm:text-5xl font-bold mb-4 break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>Our Partners</h2>
               <p className="text-xl text-gray-600">Senior leaders from the world's top firms</p>
             </div>
           </ScrollReveal>
@@ -516,10 +519,10 @@ export function ConsultingServiceTemplate() {
                       alt={member.name}
                       className="w-40 h-40 rounded-full mx-auto mb-4 object-cover border-4 border-emerald-100"
                     />
-                    <h3 className="text-xl font-bold mb-1 text-gray-900">{member.name}</h3>
+                    <h3 className={`text-xl font-bold mb-1 ${isDark ? 'text-white' : 'text-gray-900'}`}>{member.name}</h3>
                     <p className="text-emerald-600 font-semibold mb-2 text-sm">{member.role}</p>
                     <p className="text-xs text-gray-600 mb-3">{member.credentials}</p>
-                    <Badge variant="outline" className="text-xs text-gray-900">{member.specialization}</Badge>
+                    <Badge variant="outline" className={`text-xs ${isDark ? 'text-white' : 'text-gray-900'}`}>{member.specialization}</Badge>
                   </CardContent>
                 </Card>
               </ScrollReveal>
@@ -533,7 +536,7 @@ export function ConsultingServiceTemplate() {
         <div className="container mx-auto px-3 max-w-full">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <h2 className="text-4xl sm:text-5xl font-bold mb-4 break-words text-gray-900">{serviceData.methodology.title}</h2>
+              <h2 className={`text-4xl sm:text-5xl font-bold mb-4 break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>{serviceData.methodology.title}</h2>
               <p className="text-xl text-gray-600">{serviceData.methodology.description}</p>
             </div>
           </ScrollReveal>
@@ -546,14 +549,14 @@ export function ConsultingServiceTemplate() {
                     <div className="flex items-start gap-4 mb-4">
                       <div className="text-7xl font-bold text-emerald-100">{phase.number}</div>
                       <div className="pt-2">
-                        <h3 className="text-2xl font-bold mb-1 text-gray-900">{phase.name}</h3>
-                        <Badge variant="outline" className="text-xs text-gray-900">{phase.duration}</Badge>
+                        <h3 className={`text-2xl font-bold mb-1 ${isDark ? 'text-white' : 'text-gray-900'}`}>{phase.name}</h3>
+                        <Badge variant="outline" className={`text-xs ${isDark ? 'text-white' : 'text-gray-900'}`}>{phase.duration}</Badge>
                       </div>
                     </div>
                     <p className="text-gray-600 mb-6">{phase.description}</p>
                     <div className="space-y-2 mb-6">
                       {phase.activities.map((activity) => (
-                        <div key={activity} className="flex items-center gap-2 text-sm text-gray-900">
+                        <div key={activity} className={`flex items-center gap-2 text-sm ${isDark ? 'text-white' : 'text-gray-900'}`}>
                           <div className="w-1.5 h-1.5 rounded-full bg-emerald-600"></div>
                           <span className="text-gray-700">{activity}</span>
                         </div>
@@ -577,7 +580,7 @@ export function ConsultingServiceTemplate() {
         <div className="container mx-auto px-3 max-w-full">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <h2 className="text-4xl sm:text-5xl font-bold mb-4 break-words text-gray-900">Latest Insights</h2>
+              <h2 className={`text-4xl sm:text-5xl font-bold mb-4 break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>Latest Insights</h2>
               <p className="text-xl text-gray-600">Research and perspectives from our experts</p>
             </div>
           </ScrollReveal>
@@ -595,12 +598,12 @@ export function ConsultingServiceTemplate() {
                     <Badge className="absolute top-4 left-4 bg-emerald-600">{insight.type}</Badge>
                   </div>
                   <CardContent className="p-6">
-                    <h3 className="text-xl font-bold mb-3 group-hover:text-emerald-600 transition-colors text-gray-900">
+                    <h3 className={`text-xl font-bold mb-3 group-hover:text-emerald-600 transition-colors ${isDark ? 'text-white' : 'text-gray-900'}`}>
                       {insight.title}
                     </h3>
                     <p className="text-sm text-gray-600 mb-4">{insight.description}</p>
                     <Button variant="ghost" className="p-0 h-auto !text-emerald-600 hover:text-emerald-700">
-                      Download PDF <FiArrowRight className="ml-1" />
+                      Download PDF <FiArrowRight className="ml-1" aria-hidden="true" />
                     </Button>
                   </CardContent>
                 </Card>
@@ -623,7 +626,7 @@ export function ConsultingServiceTemplate() {
             <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-center">
               <Button size="lg" variant="secondary" className="w-full sm:w-auto bg-white !text-emerald-600 hover:bg-gray-100 text-lg px-8">
                 Schedule Consultation
-                <FiArrowRight className="ml-2" />
+                <FiArrowRight className="ml-2" aria-hidden="true" />
               </Button>
               <Button size="lg" variant="outline" className="w-full sm:w-auto !text-white !bg-transparent border-white hover:bg-white/10 text-lg px-8">
                 Request Proposal

@@ -8,6 +8,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { FiCheck, FiZap, FiShield, FiTrendingUp, FiUsers, FiStar, FiArrowRight, FiPlay, FiMenu, FiX } from "react-icons/fi";
 import Link from "next/link";
+import { useTheme } from "next-themes";
 
 const productData = {
   name: "TaskFlow Pro",
@@ -161,6 +162,8 @@ const productData = {
 };
 
 export function SaaSProductTemplate() {
+  const { theme } = useTheme();
+  const isDark = theme === 'dark';
   const [activePlan, setActivePlan] = useState<"monthly" | "annual">("monthly");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -185,7 +188,7 @@ export function SaaSProductTemplate() {
             <button
               className="md:hidden p-3 text-foreground hover:bg-accent rounded-md border border-border transition-colors"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              aria-label="Toggle menu"
+              aria-label={mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
             >
               {mobileMenuOpen ? <FiX size={28} /> : <FiMenu size={28} />}
             </button>
@@ -241,11 +244,11 @@ export function SaaSProductTemplate() {
 
           <FadeIn delay={0.3}>
             <div className="flex flex-col gap-4 justify-center mb-12 sm:flex-row">
-              <Button size="lg" className="text-lg px-8 w-full sm:w-auto min-h-[44px] text-gray-900">
+              <Button size="lg" className={`text-lg px-8 w-full sm:w-auto min-h-[44px] ${isDark ? 'text-white' : 'text-gray-900'}`}>
                 {productData.cta.primary}
-                <FiArrowRight className="ml-2" />
+                <FiArrowRight className="ml-2" aria-hidden="true" />
               </Button>
-              <Button size="lg" variant="outline" className="text-lg px-8 w-full sm:w-auto min-h-[44px] text-gray-900">
+              <Button size="lg" variant="outline" className={`text-lg px-8 w-full sm:w-auto min-h-[44px] ${isDark ? 'text-white' : 'text-gray-900'}`}>
                 <FiPlay className="mr-2" />
                 {productData.cta.secondary}
               </Button>
@@ -285,7 +288,7 @@ export function SaaSProductTemplate() {
           </p>
           <div className="flex flex-wrap justify-center items-center gap-8 sm:gap-12 opacity-60">
             {productData.socialProof.companies.map((company) => (
-              <div key={company} className="text-xl sm:text-2xl font-bold text-gray-900">{company}</div>
+              <div key={company} className={`text-xl sm:text-2xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>{company}</div>
             ))}
           </div>
         </ScrollReveal>
@@ -295,7 +298,7 @@ export function SaaSProductTemplate() {
       <section id="features" className="container mx-auto px-3 sm:px-3 py-20">
         <ScrollReveal>
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-3xl sm:text-5xl font-bold mb-4 break-words text-gray-900">
+            <h2 className={`text-3xl sm:text-3xl sm:text-5xl font-bold mb-4 break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>
               Everything you need to ship faster
             </h2>
             <p className="text-lg sm:text-xl text-muted-foreground max-w-full mx-auto">
@@ -325,7 +328,7 @@ export function SaaSProductTemplate() {
       <section className="container mx-auto px-3 sm:px-3 py-20 bg-muted/30">
         <ScrollReveal>
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-3xl sm:text-5xl font-bold mb-4 break-words text-gray-900">
+            <h2 className={`text-3xl sm:text-3xl sm:text-5xl font-bold mb-4 break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>
               Loved by teams worldwide
             </h2>
             <p className="text-lg sm:text-xl text-muted-foreground">
@@ -344,7 +347,7 @@ export function SaaSProductTemplate() {
                       <FiStar key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
                     ))}
                   </div>
-                  <p className="text-lg mb-6 text-gray-900">"{testimonial.quote}"</p>
+                  <p className={`text-lg mb-6 ${isDark ? 'text-white' : 'text-gray-900'}`}>"{testimonial.quote}"</p>
                   <div className="flex items-center gap-3">
                     <img
                       src={testimonial.avatar}
@@ -367,7 +370,7 @@ export function SaaSProductTemplate() {
       <section id="pricing" className="container mx-auto px-3 sm:px-3 py-20">
         <ScrollReveal>
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-3xl sm:text-5xl font-bold mb-4 break-words text-gray-900">
+            <h2 className={`text-3xl sm:text-3xl sm:text-5xl font-bold mb-4 break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>
               {productData.pricing.title}
             </h2>
             <p className="text-lg sm:text-xl text-muted-foreground mb-8">
@@ -388,7 +391,7 @@ export function SaaSProductTemplate() {
                 <CardHeader>
                   <CardTitle className="text-2xl text-white">{plan.name}</CardTitle>
                   <div className="mt-4">
-                    <span className="text-3xl sm:text-4xl font-bold text-gray-900">{plan.price}</span>
+                    <span className={`text-3xl sm:text-4xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>{plan.price}</span>
                     {plan.price !== "Custom" && <span className="text-muted-foreground"> / {plan.period}</span>}
                   </div>
                   <CardDescription className="mt-2">{plan.description}</CardDescription>
@@ -400,8 +403,8 @@ export function SaaSProductTemplate() {
                   <ul className="space-y-3">
                     {plan.features.map((feature, idx) => (
                       <li key={idx} className="flex items-start gap-2">
-                        <FiCheck className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                        <span className="text-sm text-gray-900">{feature}</span>
+                        <FiCheck className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" aria-hidden="true" />
+                        <span className={`text-sm ${isDark ? 'text-white' : 'text-gray-900'}`}>{feature}</span>
                       </li>
                     ))}
                   </ul>
@@ -416,7 +419,7 @@ export function SaaSProductTemplate() {
       <section className="container mx-auto px-3 sm:px-3 py-20 bg-muted/30">
         <ScrollReveal>
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-3xl sm:text-5xl font-bold mb-4 break-words text-gray-900">
+            <h2 className={`text-3xl sm:text-3xl sm:text-5xl font-bold mb-4 break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>
               Frequently Asked Questions
             </h2>
           </div>
@@ -427,7 +430,7 @@ export function SaaSProductTemplate() {
             <ScrollReveal key={item.question} delay={index * 0.05}>
               <Card>
                 <CardHeader>
-                  <CardTitle className="text-lg text-gray-900">{item.question}</CardTitle>
+                  <CardTitle className={`text-lg ${isDark ? 'text-white' : 'text-gray-900'}`}>{item.question}</CardTitle>
                   <CardDescription>{item.answer}</CardDescription>
                 </CardHeader>
               </Card>
@@ -441,17 +444,17 @@ export function SaaSProductTemplate() {
         <ScrollReveal>
           <Card className="max-w-full mx-auto bg-gradient-to-r from-blue-600 to-purple-600 text-white border-0">
             <CardContent className="p-8 sm:p-12 text-center">
-              <h2 className="text-3xl sm:text-3xl sm:text-5xl font-bold mb-4 break-words text-gray-900">
+              <h2 className={`text-3xl sm:text-3xl sm:text-5xl font-bold mb-4 break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>
                 {productData.finalCTA.title}
               </h2>
               <p className="text-lg sm:text-xl mb-8 opacity-90 text-white">
                 {productData.finalCTA.description}
               </p>
-              <Button size="lg" variant="secondary" className="text-lg px-8 w-full sm:w-auto min-h-[44px] text-gray-900">
+              <Button size="lg" variant="secondary" className={`text-lg px-8 w-full sm:w-auto min-h-[44px] ${isDark ? 'text-white' : 'text-gray-900'}`}>
                 {productData.cta.primary}
-                <FiArrowRight className="ml-2" />
+                <FiArrowRight className="ml-2" aria-hidden="true" />
               </Button>
-              <p className="text-sm mt-6 opacity-75 text-gray-900">
+              <p className={`text-sm mt-6 opacity-75 ${isDark ? 'text-white' : 'text-gray-900'}`}>
                 {productData.finalCTA.guarantee}
               </p>
             </CardContent>

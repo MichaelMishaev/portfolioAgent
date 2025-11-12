@@ -12,6 +12,7 @@ import { FiCheck, FiMusic, FiHeadphones, FiZap, FiSettings, FiTrendingUp, FiRadi
 } from "react-icons/fi";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { useReducedMotion } from "@/lib/hooks/use-reduced-motion";
 import { useTheme } from "next-themes";
 
 const productData = {
@@ -176,6 +177,7 @@ const productData = {
 
 export function AudioProductTemplate() {
   const [selectedColor, setSelectedColor] = useState(productData.colors[0]);  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const prefersReducedMotion = useReducedMotion();
   const { theme } = useTheme();
   const darkMode = theme === 'dark';
 
@@ -202,7 +204,7 @@ export function AudioProductTemplate() {
             <button
               className="md:hidden p-3 text-foreground hover:bg-accent rounded-md border border-border transition-colors"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              aria-label="Toggle menu"
+              aria-label={mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
             >
               {mobileMenuOpen ? <FiX size={28} /> : <FiMenu size={28} />}
             </button>
@@ -269,9 +271,9 @@ export function AudioProductTemplate() {
           <FadeIn delay={0.2}>
             <div className="relative rounded-3xl overflow-hidden mb-12 bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-950/30 dark:to-purple-950/30">
               <motion.div
-                initial={{ scale: 0.95, opacity: 0 }}
+                initial={prefersReducedMotion ? {} : { scale: 0.95, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
-                transition={{ duration: 0.8 }}
+                transition={prefersReducedMotion ? {} : { duration: 0.8 }}
                 className="relative h-[600px] flex items-center justify-center"
               >
                 <img
@@ -455,7 +457,7 @@ export function AudioProductTemplate() {
                     {productData.comparison.products.map((product) => (
                       <td key={product.name} className="p-4 text-center">
                         {product.spatialAudio ? (
-                          <FiCheck className="w-6 h-6 text-green-500 mx-auto" />
+                          <FiCheck className="w-6 h-6 text-green-500 mx-auto" aria-hidden="true" />
                         ) : (
                           <span className="text-gray-400">—</span>
                         )}
@@ -535,7 +537,7 @@ export function AudioProductTemplate() {
                   <ul className="space-y-4">
                     {productData.inTheBox.map((item, index) => (
                       <li key={index} className="flex flex-col sm:flex-row sm:items-center gap-3">
-                        <FiCheck className="w-5 h-5 text-blue-500 flex-shrink-0" />
+                        <FiCheck className="w-5 h-5 text-blue-500 flex-shrink-0" aria-hidden="true" />
                         <span className="text-lg text-gray-900">{item}</span>
                       </li>
                     ))}

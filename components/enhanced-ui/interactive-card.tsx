@@ -2,6 +2,7 @@
 
 import { useState, ReactNode } from "react";
 import { motion } from "framer-motion";
+import { useReducedMotion } from "@/lib/hooks/use-reduced-motion";
 
 interface InteractiveCardProps {
   children: ReactNode;
@@ -10,6 +11,8 @@ interface InteractiveCardProps {
 }
 
 export function InteractiveCard({ children, className = "", intensity = 15 }: InteractiveCardProps) {
+  const prefersReducedMotion = useReducedMotion();
+
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -31,7 +34,7 @@ export function InteractiveCard({ children, className = "", intensity = 15 }: In
         transform: `perspective(1000px) rotateY(${mousePosition.x}deg) rotateX(${-mousePosition.y}deg)`,
         transition: "transform 0.1s ease-out",
       }}
-      whileHover={{ y: -10, scale: 1.02 }}
+      whileHover={prefersReducedMotion ? {} : { y: -10, scale: 1.02 }}
       className={`relative group cursor-pointer
         shadow-[0_8px_30px_rgba(0,0,0,0.12),0_16px_60px_rgba(0,0,0,0.15)]
         hover:shadow-[0_20px_50px_rgba(0,0,0,0.3)]

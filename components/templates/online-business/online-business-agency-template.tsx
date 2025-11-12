@@ -30,7 +30,7 @@ import { useState } from "react";
 import { useTheme } from "next-themes";
 
 export function OnlineBusinessAgencyTemplate() {
-  const { tt } = useI18n();
+  const { tt, language } = useI18n();
   const data = tt.onlineBusinessAgency || {};
   const [selectedService, setSelectedService] = useState(0);
   const { theme } = useTheme();
@@ -39,21 +39,21 @@ export function OnlineBusinessAgencyTemplate() {
   const services = [
     {
       icon: FiCode,
-      title: "Web Development",
-      description: "Custom websites and web applications built with modern technologies",
-      features: ["React & Next.js", "E-commerce", "API Integration", "Performance Optimization"]
+      title: data.services?.webDev?.title || "Web Development",
+      description: data.services?.webDev?.description || "Custom websites and web applications built with modern technologies",
+      features: data.services?.webDev?.features || ["React & Next.js", "E-commerce", "API Integration", "Performance Optimization"]
     },
     {
       icon: FiZap,
-      title: "Digital Marketing",
-      description: "Data-driven marketing strategies that deliver measurable results",
-      features: ["SEO & SEM", "Social Media", "Content Marketing", "Analytics"]
+      title: data.services?.marketing?.title || "Digital Marketing",
+      description: data.services?.marketing?.description || "Data-driven marketing strategies that deliver measurable results",
+      features: data.services?.marketing?.features || ["SEO & SEM", "Social Media", "Content Marketing", "Analytics"]
     },
     {
       icon: FiTrendingUp,
-      title: "Growth Strategy",
-      description: "Comprehensive growth plans tailored to your business goals",
-      features: ["Market Research", "Competitor Analysis", "Growth Hacking", "Conversion Optimization"]
+      title: data.services?.growth?.title || "Growth Strategy",
+      description: data.services?.growth?.description || "Comprehensive growth plans tailored to your business goals",
+      features: data.services?.growth?.features || ["Market Research", "Competitor Analysis", "Growth Hacking", "Conversion Optimization"]
     }
   ];
 
@@ -62,7 +62,7 @@ export function OnlineBusinessAgencyTemplate() {
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 dark:bg-gray-900/90 backdrop-blur-md border-b border-slate-200 dark:border-gray-800">
         <div className="container mx-auto px-3 md:px-3 max-w-full py-4 flex items-center justify-between">
-          <Link href="/" className={`font-medium text-gray-600 hover:text-blue-600 dark:hover:text-blue-400 transition-colors ${darkMode ? 'text-gray-300' : 'text-sm'}`}>
+          <Link href="/" className="text-sm font-medium text-muted-foreground hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
             {tt.common?.backToGallery || "← Back to Gallery"}
           </Link>
           <div className="flex items-center gap-6">
@@ -93,8 +93,8 @@ export function OnlineBusinessAgencyTemplate() {
               {data.badge || "Award-Winning Digital Agency"}
             </Badge>
 
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight text-gray-900">
-              <span className={darkMode ? 'text-white' : 'text-gray-900'}>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight text-foreground">
+              <span className="text-foreground">
                 {data.hero?.mainTitle || "We Build Digital"}
               </span>
               <br />
@@ -103,14 +103,14 @@ export function OnlineBusinessAgencyTemplate() {
               </span>
             </h1>
 
-            <p className={`md:text-2xl text-gray-600 mb-12 leading-relaxed max-w-full mx-auto ${darkMode ? 'text-gray-300' : 'text-xl'}`}>
+            <p className="md:text-xl text-xl mb-12 leading-relaxed max-w-full mx-auto text-muted-foreground">
               {data.heroSubtitle || "We help ambitious businesses scale with custom web development, strategic marketing, and data-driven growth solutions."}
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Button size="lg" className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white text-lg px-8 py-6">
                 {data.hero?.startProject || "Start Your Project"}
-                <FiArrowRight className="ml-2" />
+                <FiArrowRight className="ml-2" aria-hidden="true" />
               </Button>
               <Button size="lg" variant="outline" className="border-2 border-blue-500 !text-blue-600 hover:bg-blue-50 dark:hover:bg-blue-950 text-lg px-8 py-6">
                 {data.hero?.viewCaseStudies || "View Case Studies"}
@@ -135,7 +135,7 @@ export function OnlineBusinessAgencyTemplate() {
             <ScrollReveal>
               <div>
                 <div className="text-3xl sm:text-5xl font-bold text-blue-600 mb-2 break-words">250+</div>
-                <div className={darkMode ? 'text-gray-400' : 'text-gray-600'}>{data.stats?.projects || "Projects Completed"}</div>
+                <div className="text-muted-foreground">{data.stats?.projects || "Projects Completed"}</div>
               </div>
             </ScrollReveal>
             <ScrollReveal delay={0.1}>
@@ -164,10 +164,10 @@ export function OnlineBusinessAgencyTemplate() {
       <section id="services" className="container mx-auto px-3 md:px-3 max-w-full py-20 md:py-32">
         <ScrollReveal>
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl sm:text-5xl font-bold mb-4 break-words text-gray-900">
+            <h2 className="text-3xl md:text-4xl sm:text-5xl font-bold mb-4 break-words text-foreground">
               {data.services?.title || "Full-Service Digital Solutions"}
             </h2>
-            <p className={`text-gray-600 max-w-full mx-auto ${darkMode ? 'text-gray-300' : 'text-lg'}`}>
+            <p className="text-lg max-w-full mx-auto text-muted-foreground">
               {data.services?.subtitle || "From strategy to execution, we handle everything your business needs to thrive online"}
             </p>
           </div>
@@ -186,14 +186,14 @@ export function OnlineBusinessAgencyTemplate() {
                   <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mb-6">
                     <service.icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold mb-3 text-gray-900">{service.title}</h3>
-                  <p className={`mb-6 ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+                  <h3 className="text-2xl font-bold mb-3 text-foreground">{service.title}</h3>
+                  <p className="mb-6 text-muted-foreground">
                     {service.description}
                   </p>
                   <ul className="space-y-2">
                     {service.features.map((feature, j) => (
-                      <li key={j} className="flex items-center gap-2 text-sm text-gray-900">
-                        <FiCheckCircle className="text-blue-500 flex-shrink-0" />
+                      <li key={j} className="flex items-center gap-2 text-sm text-foreground">
+                        <FiCheckCircle className="text-blue-500 dark:text-blue-400 flex-shrink-0" />
                         {feature}
                       </li>
                     ))}
@@ -207,7 +207,7 @@ export function OnlineBusinessAgencyTemplate() {
         <div className="text-center">
           <Button size="lg" variant="outline" className="border-2 border-blue-500 !text-blue-600">
             {data.services?.seeAll || "See All Services"}
-            <FiArrowRight className="ml-2" />
+            <FiArrowRight className="ml-2" aria-hidden="true" />
           </Button>
         </div>
       </section>
@@ -216,64 +216,79 @@ export function OnlineBusinessAgencyTemplate() {
       <section id="work" className="container mx-auto px-3 md:px-3 max-w-full py-20 md:py-32 bg-gradient-to-br from-slate-50 to-blue-50 dark:from-gray-800 dark:to-gray-900 rounded-3xl">
         <ScrollReveal>
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl sm:text-5xl font-bold mb-4 break-words text-gray-900">
+            <h2 className="text-3xl md:text-4xl sm:text-5xl font-bold mb-4 break-words text-foreground">
               {data.work?.title || "Recent Work"}
             </h2>
-            <p className={`text-gray-600 ${darkMode ? 'text-gray-300' : 'text-lg'}`}>
+            <p className="text-lg text-muted-foreground">
               {data.work?.subtitle || "Case studies from our portfolio"}
             </p>
           </div>
         </ScrollReveal>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {[
-            {
-              title: "E-Commerce Platform",
-              client: "TechStart Inc.",
-              result: "+240% Revenue",
-              category: "Development",
-              image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=450&fit=crop&q=80"
-            },
-            {
-              title: "Brand Redesign",
-              client: "Fashion Co.",
-              result: "+180% Engagement",
-              category: "Design",
-              image: "https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=800&h=450&fit=crop&q=80"
-            },
-            {
-              title: "Marketing Campaign",
-              client: "FinTech Pro",
-              result: "+500 Leads/mo",
-              category: "Marketing",
-              image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=800&h=450&fit=crop&q=80"
-            },
-            {
-              title: "App Development",
-              client: "HealthTech",
-              result: "100K Downloads",
-              category: "Mobile",
-              image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=450&fit=crop&q=80"
-            }
-          ].map((project, i) => (
+          {(() => {
+            const defaultProjects = [
+              {
+                title: "E-Commerce Platform",
+                client: "TechStart Inc.",
+                result: "+240% Revenue",
+                category: "Development",
+                image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=450&fit=crop&q=80"
+              },
+              {
+                title: "Brand Redesign",
+                client: "Fashion Co.",
+                result: "+180% Engagement",
+                category: "Design",
+                image: "https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=800&h=450&fit=crop&q=80"
+              },
+              {
+                title: "Marketing Campaign",
+                client: "FinTech Pro",
+                result: "+500 Leads/mo",
+                category: "Marketing",
+                image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=800&h=450&fit=crop&q=80"
+              },
+              {
+                title: "App Development",
+                client: "HealthTech",
+                result: "100K Downloads",
+                category: "Mobile",
+                image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=450&fit=crop&q=80"
+              }
+            ];
+            
+            const projects = data.work?.projects || defaultProjects;
+            return projects.map((project: any, i: number) => ({
+              ...project,
+              image: project.image || defaultProjects[i]?.image || defaultProjects[0].image
+            }));
+          })().map((project, i) => (
             <ScrollReveal key={i} delay={i * 0.1}>
               <Card className="group hover:shadow-2xl transition-all duration-300 overflow-hidden cursor-pointer">
                 <div className="aspect-video bg-gradient-to-br from-blue-900 to-cyan-900 relative overflow-hidden">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-500"
-                  />
-                  <Badge className="absolute top-4 left-4 bg-white/90 text-blue-900">
+                  {project.image ? (
+                    <Image
+                      src={project.image}
+                      alt={project.title || "Project"}
+                      width={800}
+                      height={450}
+                      className="w-full h-full object-cover opacity-70 group-hover:opacity-90 group-hover:scale-110 transition-all duration-500"
+                      unoptimized
+                    />
+                  ) : (
+                    <div className="w-full h-full bg-gradient-to-br from-blue-800 to-cyan-800" />
+                  )}
+                  <Badge className="absolute top-4 left-4 bg-white/90 text-blue-900 dark:bg-gray-900/90 dark:text-white">
                     {project.category}
                   </Badge>
                 </div>
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-bold mb-2 text-gray-900">{project.title}</h3>
-                  <p className={`mb-3 ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>{project.client}</p>
+                  <h3 className="text-xl font-bold mb-2 text-foreground">{project.title}</h3>
+                  <p className="mb-3 text-muted-foreground">{project.client}</p>
                   <div className="flex items-center justify-between">
-                    <span className="text-blue-600 font-semibold">{project.result}</span>
-                    <FiArrowRight className="group-hover:translate-x-2 transition-transform" />
+                    <span className="text-blue-600 dark:text-blue-400 font-semibold">{project.result}</span>
+                    <FiArrowRight className="group-hover:translate-x-2 transition-transform text-muted-foreground" aria-hidden="true" />
                   </div>
                 </CardContent>
               </Card>
@@ -286,10 +301,10 @@ export function OnlineBusinessAgencyTemplate() {
       <section id="process" className="container mx-auto px-3 md:px-3 max-w-full py-20 md:py-32">
         <ScrollReveal>
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl sm:text-5xl font-bold mb-4 break-words text-gray-900">
+            <h2 className="text-3xl md:text-4xl sm:text-5xl font-bold mb-4 break-words text-foreground">
               {data.process?.title || "Our Proven Process"}
             </h2>
-            <p className={`text-gray-600 ${darkMode ? 'text-gray-300' : 'text-lg'}`}>
+            <p className="text-lg text-muted-foreground">
               {data.process?.subtitle || "A systematic approach to delivering exceptional results"}
             </p>
           </div>
@@ -307,8 +322,8 @@ export function OnlineBusinessAgencyTemplate() {
                 <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center text-2xl font-bold text-white">
                   {phase.step}
                 </div>
-                <h3 className="text-xl font-bold mb-2 text-gray-900">{phase.title}</h3>
-                <p className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+                <h3 className="text-xl font-bold mb-2 text-foreground">{phase.title}</h3>
+                <p className="text-sm text-muted-foreground">
                   {phase.description}
                 </p>
               </div>
@@ -321,18 +336,30 @@ export function OnlineBusinessAgencyTemplate() {
       <section className="container mx-auto px-3 md:px-3 max-w-full py-20 md:py-32 border-t border-gray-200 dark:border-gray-800">
         <ScrollReveal>
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl sm:text-5xl font-bold mb-4 break-words text-gray-900">
+            <h2 className="text-3xl md:text-4xl sm:text-5xl font-bold mb-4 break-words text-foreground">
               {data.testimonials?.title || "Trusted by Industry Leaders"}
             </h2>
           </div>
         </ScrollReveal>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {[
-            { name: "Michael Chen", role: "CEO, TechStart", company: "TechStart Inc." },
-            { name: "Sarah Williams", role: "CMO, Fashion Brand", company: "Fashion Co." },
-            { name: "David Park", role: "Founder, FinTech", company: "FinTech Pro" }
-          ].map((testimonial, i) => (
+          {(data.testimonials?.clients || [
+            { 
+              name: "Michael Chen", 
+              role: "CEO, TechStart", 
+              company: "TechStart Inc." 
+            },
+            { 
+              name: "Sarah Williams", 
+              role: "CMO, Fashion Brand", 
+              company: "Fashion Co." 
+            },
+            { 
+              name: "David Park", 
+              role: "Founder, FinTech", 
+              company: "FinTech Pro" 
+            }
+          ]).map((testimonial, i) => (
             <ScrollReveal key={i} delay={i * 0.1}>
               <Card className="h-full hover:shadow-xl transition-shadow">
                 <CardContent className="p-6">
@@ -341,14 +368,14 @@ export function OnlineBusinessAgencyTemplate() {
                       <FiCheckCircle key={i} className="w-5 h-5 text-blue-500" />
                     ))}
                   </div>
-                  <p className={`mb-6 italic ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>
+                  <p className="mb-6 italic text-foreground">
                     {data.testimonials?.quote || "Working with this agency transformed our digital presence. Professional, efficient, and results-driven. Highly recommended!"}
                   </p>
                   <div className="flex items-center gap-3">
                     <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-400 to-cyan-500"></div>
                     <div>
-                      <div className="font-semibold">{testimonial.name}</div>
-                      <div className={`text-gray-600 ${darkMode ? 'text-gray-400' : 'text-sm'}`}>{testimonial.role}</div>
+                      <div className="font-semibold text-foreground">{testimonial.name}</div>
+                      <div className="text-sm text-muted-foreground">{testimonial.role}</div>
                     </div>
                   </div>
                 </CardContent>
@@ -407,7 +434,7 @@ export function OnlineBusinessAgencyTemplate() {
                     </select>
                     <Button size="lg" className="w-full bg-white !text-blue-600 hover:bg-gray-100 py-6 text-lg font-semibold">
                       {data.cta?.button || "Book Strategy Call"}
-                      <FiArrowRight className="ml-2" />
+                      <FiArrowRight className="ml-2" aria-hidden="true" />
                     </Button>
                   </div>
                 </div>
@@ -422,34 +449,34 @@ export function OnlineBusinessAgencyTemplate() {
         <div className="container mx-auto px-3 md:px-3 max-w-full">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
             <div>
-              <h3 className="font-bold text-lg mb-4 text-gray-900">{tt.common?.services || "Services"}</h3>
-              <ul className={`space-y-2 text-gray-600 ${darkMode ? 'text-gray-400' : 'text-sm'}`}>
-                <li><a href="#" className="hover:text-blue-600 transition-colors">{data.footer?.webDev || "Web Development"}</a></li>
-                <li><a href="#" className="hover:text-blue-600 transition-colors">{data.footer?.digitalMarketing || "Digital Marketing"}</a></li>
-                <li><a href="#" className="hover:text-blue-600 transition-colors">{data.footer?.brandStrategy || "Brand Strategy"}</a></li>
-                <li><a href="#" className="hover:text-blue-600 transition-colors">{data.footer?.growthConsulting || "Growth Consulting"}</a></li>
+              <h3 className="font-bold text-lg mb-4 text-foreground">{tt.common?.services || "Services"}</h3>
+              <ul className="space-y-2 text-sm text-muted-foreground">
+                <li><a href="#" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">{data.footer?.webDev || "Web Development"}</a></li>
+                <li><a href="#" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">{data.footer?.digitalMarketing || "Digital Marketing"}</a></li>
+                <li><a href="#" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">{data.footer?.brandStrategy || "Brand Strategy"}</a></li>
+                <li><a href="#" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">{data.footer?.growthConsulting || "Growth Consulting"}</a></li>
               </ul>
             </div>
             <div>
-              <h3 className="font-bold text-lg mb-4 text-gray-900">Company</h3>
-              <ul className={`space-y-2 text-gray-600 ${darkMode ? 'text-gray-400' : 'text-sm'}`}>
-                <li><a href="#" className="hover:text-blue-600 transition-colors">{data.footer?.aboutUs || "About Us"}</a></li>
-                <li><a href="#" className="hover:text-blue-600 transition-colors">{data.footer?.ourTeam || "Our Team"}</a></li>
-                <li><a href="#" className="hover:text-blue-600 transition-colors">{data.footer?.careers || "Careers"}</a></li>
-                <li><a href="#" className="hover:text-blue-600 transition-colors">{tt.common?.contact || "Contact"}</a></li>
+              <h3 className="font-bold text-lg mb-4 text-foreground">{data.footer?.company || "Company"}</h3>
+              <ul className="space-y-2 text-sm text-muted-foreground">
+                <li><a href="#" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">{data.footer?.aboutUs || "About Us"}</a></li>
+                <li><a href="#" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">{data.footer?.ourTeam || "Our Team"}</a></li>
+                <li><a href="#" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">{data.footer?.careers || "Careers"}</a></li>
+                <li><a href="#" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">{tt.common?.contact || "Contact"}</a></li>
               </ul>
             </div>
             <div>
-              <h3 className="font-bold text-lg mb-4 text-gray-900">Resources</h3>
-              <ul className={`space-y-2 text-gray-600 ${darkMode ? 'text-gray-400' : 'text-sm'}`}>
-                <li><a href="#" className="hover:text-blue-600 transition-colors">Blog</a></li>
-                <li><a href="#" className="hover:text-blue-600 transition-colors">{data.footer?.caseStudies || "Case Studies"}</a></li>
-                <li><a href="#" className="hover:text-blue-600 transition-colors">{data.footer?.whitepapers || "Whitepapers"}</a></li>
-                <li><a href="#" className="hover:text-blue-600 transition-colors">{data.footer?.webinars || "Webinars"}</a></li>
+              <h3 className="font-bold text-lg mb-4 text-foreground">{data.footer?.resources || "Resources"}</h3>
+              <ul className="space-y-2 text-sm text-muted-foreground">
+                <li><a href="#" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">{data.footer?.blog || "Blog"}</a></li>
+                <li><a href="#" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">{data.footer?.caseStudies || "Case Studies"}</a></li>
+                <li><a href="#" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">{data.footer?.whitepapers || "Whitepapers"}</a></li>
+                <li><a href="#" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">{data.footer?.webinars || "Webinars"}</a></li>
               </ul>
             </div>
             <div>
-              <h3 className="font-bold text-lg mb-4 text-gray-900">Connect</h3>
+              <h3 className="font-bold text-lg mb-4 text-foreground">{data.footer?.connect || "Connect"}</h3>
               <div className="flex gap-4">
                 <a href="#" className="p-3 bg-gray-100 dark:bg-gray-800 rounded-full hover:bg-blue-100 dark:hover:bg-blue-900/30 transition-colors">
                   <FiLinkedin className="w-5 h-5" />
@@ -464,7 +491,7 @@ export function OnlineBusinessAgencyTemplate() {
             </div>
           </div>
 
-          <div className={`pt-8 border-t border-gray-200 dark:border-gray-800 text-sm text-gray-600 ${darkMode ? 'text-gray-400' : 'text-center'}`}>
+          <div className="pt-8 border-t border-border text-sm text-muted-foreground text-center">
             <p>{data.footer?.copyright || "© 2025 Digital Agency. All rights reserved. | Privacy Policy • Terms of Service"}</p>
           </div>
         </div>

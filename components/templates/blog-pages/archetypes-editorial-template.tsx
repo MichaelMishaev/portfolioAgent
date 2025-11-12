@@ -346,7 +346,7 @@ export function ArchetypesEditorialTemplate() {
               <ScrollReveal>
                 <div className="border-4 border-green-500 p-6 sm:p-10 bg-slate-800">
                   <div className="flex items-center gap-4 mb-6 sm:mb-8">
-                    <FiCheck className="w-8 h-8 sm:w-12 sm:h-12 text-green-500" />
+                    <FiCheck className="w-8 h-8 sm:w-12 sm:h-12 text-green-500" aria-hidden="true" />
                     <h3 className="font-playfair text-2xl sm:text-3xl font-black text-gray-900">This IS For You If...</h3>
                   </div>
                   <ul className="space-y-4 sm:space-y-6">
@@ -359,7 +359,7 @@ export function ArchetypesEditorialTemplate() {
                       "You're ready to invest in becoming the person you were meant to be",
                     ].map((item, idx) => (
                       <li key={idx} className="flex items-start gap-4">
-                        <FiCheck className="w-5 h-5 sm:w-6 sm:h-6 text-green-500 flex-shrink-0 mt-1" />
+                        <FiCheck className="w-5 h-5 sm:w-6 sm:h-6 text-green-500 flex-shrink-0 mt-1" aria-hidden="true" />
                         <span className="text-base sm:text-lg leading-relaxed text-gray-900">{item}</span>
                       </li>
                     ))}

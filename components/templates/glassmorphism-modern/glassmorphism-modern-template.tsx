@@ -10,15 +10,17 @@ import { LanguageToggle } from "@/components/language-toggle";
 import Link from "next/link";
 import { useI18n } from "@/lib/i18n-context";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { useReducedMotion } from "@/lib/hooks/use-reduced-motion";
 
 export function GlassmorphismModernTemplate() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const { tt } = useI18n();
   const data = tt?.glassmorphismModern;
+  const prefersReducedMotion = useReducedMotion();
 
   const { scrollYProgress } = useScroll();
-  const y = useTransform(scrollYProgress, [0, 1], [0, -100]);
+  const y = useTransform(scrollYProgress, [0, 1], prefersReducedMotion ? [0, 0] : [0, -100]);
 
   const handleCardMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     const rect = e.currentTarget.getBoundingClientRect();
@@ -38,7 +40,7 @@ export function GlassmorphismModernTemplate() {
   return (
     <div className="min-h-screen overflow-x-hidden max-w-full bg-[#343434]">
       {/* Glass Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/10 backdrop-blur-3xl border-b border-white/20">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-black/40 backdrop-blur-3xl border-b border-white/20">
         <div className="container mx-auto px-6 lg:px-8 max-w-7xl py-4 flex items-center justify-between">
           <Link href="/" className="text-white font-bold hover:text-cyan-400 transition-colors">
             {tt.common.backToGallery}
@@ -67,14 +69,14 @@ export function GlassmorphismModernTemplate() {
           <button
             className="md:hidden p-2 text-white"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            aria-label="Toggle menu"
+            aria-label={mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
           >
             {mobileMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
           </button>
         </div>
 
         {mobileMenuOpen && (
-          <div className="md:hidden bg-white/10 backdrop-blur-3xl border-t border-white/20">
+          <div className="md:hidden bg-black/40 backdrop-blur-3xl border-t border-white/20">
             <div className="container mx-auto px-6 py-4 flex flex-col gap-4 text-white">
               <a href="#work" onClick={() => setMobileMenuOpen(false)}>
                 {tt.common.work}
@@ -113,12 +115,12 @@ export function GlassmorphismModernTemplate() {
               left: `${20 + i * 30}%`,
               top: `${20 + i * 20}%`,
             }}
-            animate={{
+            animate={prefersReducedMotion ? {} : {
               y: [0, -50, 0],
               x: [0, 30, 0],
               scale: [1, 1.2, 1],
             }}
-            transition={{
+            transition={prefersReducedMotion ? {} : {
               duration: 8 + i * 2,
               repeat: Infinity,
               ease: "easeInOut",
@@ -137,28 +139,30 @@ export function GlassmorphismModernTemplate() {
           </FadeIn>
 
           <FadeIn delay={0.2}>
-            <p className="text-2xl text-white/80 mb-12 max-w-3xl mx-auto">
+            <p className="text-2xl text-white mb-12 max-w-3xl mx-auto [text-shadow:_0_2px_8px_rgb(0_0_0_/_60%)]">
               {data.hero.subtitle}
             </p>
           </FadeIn>
 
           <FadeIn delay={0.4}>
             <div className="flex gap-4 justify-center flex-wrap">
-              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <motion.div whileHover={prefersReducedMotion ? {} : { scale: 1.05 }} whileTap={prefersReducedMotion ? {} : { scale: 0.95 }}>
                 <Button
                   size="lg"
                   className="bg-white/20 hover:bg-white/30 text-white border border-white/30 backdrop-blur-md px-8 py-6 text-lg relative overflow-hidden group"
                 >
                   <span className="relative z-10">{data.hero.primaryCta}</span>
-                  <motion.div
-                    className="absolute inset-0 bg-gradient-to-r from-cyan-400/20 to-purple-400/20"
-                    initial={{ x: '-100%' }}
-                    whileHover={{ x: '100%' }}
-                    transition={{ duration: 0.6 }}
-                  />
+                  {!prefersReducedMotion && (
+                    <motion.div
+                      className="absolute inset-0 bg-gradient-to-r from-cyan-400/20 to-purple-400/20"
+                      initial={{ x: '-100%' }}
+                      whileHover={{ x: '100%' }}
+                      transition={{ duration: 0.6 }}
+                    />
+                  )}
                 </Button>
               </motion.div>
-              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <motion.div whileHover={prefersReducedMotion ? {} : { scale: 1.05 }} whileTap={prefersReducedMotion ? {} : { scale: 0.95 }}>
                 <Button
                   size="lg"
                   variant="outline"
@@ -182,14 +186,14 @@ export function GlassmorphismModernTemplate() {
           <div className="grid md:grid-cols-3 gap-8">
             {data.features.items.map((feature: any, index: number) => (
               <ScrollReveal key={index} delay={index * 0.1}>
-                <div className="relative p-8 rounded-2xl bg-white/10 backdrop-blur-3xl border border-white/20 hover:bg-white/15 hover:border-white/30 transition-all duration-300 transform hover:-translate-y-1 cursor-pointer group">
+                <div className="relative p-8 rounded-2xl bg-black/40 backdrop-blur-3xl border border-white/20 hover:bg-black/50 hover:border-white/30 transition-all duration-300 transform hover:-translate-y-1 cursor-pointer group">
                   <div className="w-14 h-14 bg-cyan-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-cyan-500/30 transition-colors">
                     <FiCode className="text-cyan-400 text-2xl" />
                   </div>
-                  <h3 className="text-2xl font-semibold text-white mb-4">
+                  <h3 className="text-2xl font-semibold text-white mb-4 [text-shadow:_0_1px_4px_rgb(0_0_0_/_40%)]">
                     {feature.title}
                   </h3>
-                  <p className="text-white/80 leading-relaxed">
+                  <p className="text-white leading-relaxed [text-shadow:_0_1px_3px_rgb(0_0_0_/_40%)]">
                     {feature.description}
                   </p>
                 </div>
@@ -207,26 +211,26 @@ export function GlassmorphismModernTemplate() {
           </ScrollReveal>
 
           <ScrollReveal delay={0.2}>
-            <div className="rounded-xl overflow-hidden bg-white/10 backdrop-blur-2xl border border-white/20">
+            <div className="rounded-xl overflow-hidden bg-black/40 backdrop-blur-2xl border border-white/20">
               <table className="w-full">
                 <thead>
-                  <tr className="bg-white/10 border-b border-white/20">
-                    <th className="px-6 py-4 text-left text-white font-semibold">Feature</th>
-                    <th className="px-6 py-4 text-left text-white font-semibold">Basic</th>
-                    <th className="px-6 py-4 text-left text-white font-semibold">Pro</th>
-                    <th className="px-6 py-4 text-left text-white font-semibold">Enterprise</th>
+                  <tr className="bg-white/15 border-b border-white/20">
+                    <th className="px-6 py-4 text-left text-white font-semibold [text-shadow:_0_1px_4px_rgb(0_0_0_/_40%)]">Feature</th>
+                    <th className="px-6 py-4 text-left text-white font-semibold [text-shadow:_0_1px_4px_rgb(0_0_0_/_40%)]">Basic</th>
+                    <th className="px-6 py-4 text-left text-white font-semibold [text-shadow:_0_1px_4px_rgb(0_0_0_/_40%)]">Pro</th>
+                    <th className="px-6 py-4 text-left text-white font-semibold [text-shadow:_0_1px_4px_rgb(0_0_0_/_40%)]">Enterprise</th>
                   </tr>
                 </thead>
                 <tbody>
                   {data.pricing.features.map((feature: any, index: number) => (
                     <tr
                       key={index}
-                      className="border-b border-white/10 hover:bg-white/15 transition-colors duration-300"
+                      className="border-b border-white/10 hover:bg-white/20 transition-colors duration-300"
                     >
-                      <td className="px-6 py-4 text-white/90">{feature.name}</td>
-                      <td className="px-6 py-4 text-white/90">{feature.basic}</td>
-                      <td className="px-6 py-4 text-white/90">{feature.pro}</td>
-                      <td className="px-6 py-4 text-white/90">{feature.enterprise}</td>
+                      <td className="px-6 py-4 text-white [text-shadow:_0_1px_3px_rgb(0_0_0_/_40%)]">{feature.name}</td>
+                      <td className="px-6 py-4 text-white [text-shadow:_0_1px_3px_rgb(0_0_0_/_40%)]">{feature.basic}</td>
+                      <td className="px-6 py-4 text-white [text-shadow:_0_1px_3px_rgb(0_0_0_/_40%)]">{feature.pro}</td>
+                      <td className="px-6 py-4 text-white [text-shadow:_0_1px_3px_rgb(0_0_0_/_40%)]">{feature.enterprise}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -257,19 +261,19 @@ export function GlassmorphismModernTemplate() {
           <div className="grid md:grid-cols-2 gap-8">
             {data.work.projects.map((project: any, index: number) => (
               <ScrollReveal key={index} delay={index * 0.1}>
-                <div className="relative p-8 rounded-2xl bg-white/10 backdrop-blur-3xl border border-white/20 hover:bg-white/15 hover:border-white/30 transition-all duration-300 group cursor-pointer">
+                <div className="relative p-8 rounded-2xl bg-black/40 backdrop-blur-3xl border border-white/20 hover:bg-black/50 hover:border-white/30 transition-all duration-300 group cursor-pointer">
                   <div className="aspect-video bg-white/5 rounded-lg mb-6 flex items-center justify-center">
                     <FiLayers className="text-6xl text-white/20" />
                   </div>
-                  <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
+                  <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors [text-shadow:_0_1px_4px_rgb(0_0_0_/_40%)]">
                     {project.title}
                   </h3>
-                  <p className="text-white/80 mb-4">{project.description}</p>
+                  <p className="text-white mb-4 [text-shadow:_0_1px_3px_rgb(0_0_0_/_40%)]">{project.description}</p>
                   <div className="flex gap-2 flex-wrap">
                     {project.tags.map((tag: string, tagIndex: number) => (
                       <span
                         key={tagIndex}
-                        className="px-3 py-1 bg-white/10 text-white/90 text-sm rounded-full border border-white/20"
+                        className="px-3 py-1 bg-white/15 text-white text-sm rounded-full border border-white/20 [text-shadow:_0_1px_2px_rgb(0_0_0_/_40%)]"
                       >
                         {tag}
                       </span>
@@ -293,10 +297,10 @@ export function GlassmorphismModernTemplate() {
               { number: "5yrs", label: "Experience", icon: <FiCode /> }
             ].map((stat, i) => (
               <ScrollReveal key={i} delay={i * 0.1}>
-                <div className="bg-white/10 backdrop-blur-2xl rounded-3xl p-6 border border-white/20 hover:bg-white/15 transition-all">
+                <div className="bg-white/15 backdrop-blur-2xl rounded-3xl p-6 border border-white/20 hover:bg-white/20 transition-all">
                   <div className="text-cyan-400 mb-3">{stat.icon}</div>
-                  <div className="text-3xl font-bold text-white mb-1">{stat.number}</div>
-                  <div className="text-white/60 text-sm">{stat.label}</div>
+                  <div className="text-3xl font-bold text-white mb-1 [text-shadow:_0_1px_4px_rgb(0_0_0_/_40%)]">{stat.number}</div>
+                  <div className="text-white text-sm [text-shadow:_0_1px_3px_rgb(0_0_0_/_40%)]">{stat.label}</div>
                 </div>
               </ScrollReveal>
             ))}
@@ -334,8 +338,8 @@ export function GlassmorphismModernTemplate() {
               "GSAP", "Tailwind CSS", "Glassmorphism", "3D Design", "UI/UX", "Animation"
             ].map((skill, i) => (
               <ScrollReveal key={i} delay={i * 0.05}>
-                <div className="bg-white/10 backdrop-blur-2xl px-6 py-3 rounded-full border border-white/20 hover:bg-white/20 hover:scale-105 transition-all cursor-pointer">
-                  <span className="text-white font-medium">{skill}</span>
+                <div className="bg-white/15 backdrop-blur-2xl px-6 py-3 rounded-full border border-white/20 hover:bg-white/25 hover:scale-105 transition-all cursor-pointer">
+                  <span className="text-white font-medium [text-shadow:_0_1px_3px_rgb(0_0_0_/_40%)]">{skill}</span>
                 </div>
               </ScrollReveal>
             ))}
@@ -357,12 +361,12 @@ export function GlassmorphismModernTemplate() {
               { year: "2019", title: "Started Freelancing", company: "Independent" }
             ].map((item, i) => (
               <ScrollReveal key={i} delay={i * 0.1}>
-                <div className="bg-white/5 backdrop-blur-2xl rounded-2xl p-6 border border-white/20 hover:bg-white/10 transition-all">
+                <div className="bg-white/10 backdrop-blur-2xl rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all">
                   <div className="flex gap-6 items-center">
                     <div className="text-cyan-400 font-bold text-xl w-20">{item.year}</div>
                     <div>
-                      <h3 className="text-xl font-bold text-white">{item.title}</h3>
-                      <p className="text-white/60">{item.company}</p>
+                      <h3 className="text-xl font-bold text-white [text-shadow:_0_1px_4px_rgb(0_0_0_/_40%)]">{item.title}</h3>
+                      <p className="text-white [text-shadow:_0_1px_3px_rgb(0_0_0_/_40%)]">{item.company}</p>
                     </div>
                   </div>
                 </div>
@@ -385,10 +389,10 @@ export function GlassmorphismModernTemplate() {
               { quote: "Professional, creative, and ahead of the curve. Highly recommended.", author: "Emma L.", role: "Director, Agency Co" }
             ].map((test, i) => (
               <ScrollReveal key={i} delay={i * 0.15}>
-                <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-3xl rounded-3xl p-8 border border-white/20 hover:border-cyan-400/50 transition-all">
-                  <p className="text-white/90 text-lg mb-6 italic">"{test.quote}"</p>
-                  <div className="text-white font-semibold">{test.author}</div>
-                  <div className="text-white/60 text-sm">{test.role}</div>
+                <div className="bg-gradient-to-br from-white/15 to-white/10 backdrop-blur-3xl rounded-3xl p-8 border border-white/20 hover:border-cyan-400/50 transition-all">
+                  <p className="text-white text-lg mb-6 italic [text-shadow:_0_1px_4px_rgb(0_0_0_/_40%)]">"{test.quote}"</p>
+                  <div className="text-white font-semibold [text-shadow:_0_1px_3px_rgb(0_0_0_/_40%)]">{test.author}</div>
+                  <div className="text-white text-sm [text-shadow:_0_1px_3px_rgb(0_0_0_/_40%)]">{test.role}</div>
                 </div>
               </ScrollReveal>
             ))}
@@ -410,9 +414,9 @@ export function GlassmorphismModernTemplate() {
               { q: "Do you offer support after launch?", a: "Absolutely. I provide ongoing support and maintenance packages." }
             ].map((faq, i) => (
               <ScrollReveal key={i} delay={i * 0.1}>
-                <div className="bg-white/5 backdrop-blur-2xl rounded-2xl p-6 border border-white/20 hover:bg-white/10 transition-all">
-                  <h3 className="text-lg font-bold text-white mb-2">{faq.q}</h3>
-                  <p className="text-white/70">{faq.a}</p>
+                <div className="bg-white/10 backdrop-blur-2xl rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all">
+                  <h3 className="text-lg font-bold text-white mb-2 [text-shadow:_0_1px_4px_rgb(0_0_0_/_40%)]">{faq.q}</h3>
+                  <p className="text-white [text-shadow:_0_1px_3px_rgb(0_0_0_/_40%)]">{faq.a}</p>
                 </div>
               </ScrollReveal>
             ))}

@@ -70,7 +70,7 @@ export function ServiceMarketplaceTemplate() {
           <button
             className="md:hidden p-3 text-white hover:bg-slate-800 rounded-md border border-slate-700 transition-colors flex items-center justify-center"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            aria-label="Toggle menu"
+            aria-label={mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
           >
             {mobileMenuOpen ? (
               <>
@@ -145,7 +145,7 @@ export function ServiceMarketplaceTemplate() {
                 size="lg"
                 className="bg-green-500 hover:bg-green-600 text-white px-8 py-6 text-lg font-semibold w-full sm:w-auto"
               >
-                {portfolioData.hero?.ctaPrimary || "Get Started"} <FiArrowRight className="ml-2" />
+                {portfolioData.hero?.ctaPrimary || "Get Started"} <FiArrowRight className="ml-2" aria-hidden="true" />
               </Button>
               <Button
                 size="lg"
@@ -334,7 +334,7 @@ export function ServiceMarketplaceTemplate() {
                     <ul className="space-y-3">
                       {plan.features.map((feature, fIdx) => (
                         <li key={fIdx} className="flex items-start gap-3">
-                          <FiCheck className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
+                          <FiCheck className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" aria-hidden="true" />
                           <span className="text-slate-300">{feature}</span>
                         </li>
                       ))}
@@ -362,7 +362,7 @@ export function ServiceMarketplaceTemplate() {
                 size="lg"
                 className="bg-white !text-green-600 hover:bg-green-50 hover:!text-green-700 px-8 py-6 text-lg font-semibold"
               >
-                {portfolioData.cta?.button || "Create Free Account"} <FiArrowRight className="ml-2" />
+                {portfolioData.cta?.button || "Create Free Account"} <FiArrowRight className="ml-2" aria-hidden="true" />
               </Button>
             </FadeIn>
           </div>
@@ -397,7 +397,7 @@ export function ServiceMarketplaceTemplate() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white px-8">
-                <FiMail className="mr-2" />
+                <FiMail className="mr-2" aria-hidden="true" />
                 Send Message
               </Button>
               <div className="flex gap-4">

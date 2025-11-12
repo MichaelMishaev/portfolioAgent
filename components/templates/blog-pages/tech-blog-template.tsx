@@ -770,7 +770,7 @@ export function TechBlogTemplate() {
       <section id="newsletter" className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
         <div className="container mx-auto px-3 max-w-full text-center">
           <ScrollReveal>
-            <FiMail className="w-16 h-16 mx-auto mb-6 text-white" />
+            <FiMail className="w-16 h-16 mx-auto mb-6 text-white" aria-hidden="true" />
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">Join 50,000+ Developers</h2>
             <p className="text-xl text-blue-100 mb-8">
               Get weekly tutorials, insights, and code snippets delivered to your inbox.

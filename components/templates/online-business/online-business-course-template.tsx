@@ -74,12 +74,12 @@ export function OnlineBusinessCourseTemplate() {
                 <span className="truncate">{data.badge || "100,000+ Students Enrolled"}</span>
               </Badge>
 
-              <h1 className="text-3xl sm:text-3xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 leading-tight break-words text-gray-900">
+              <h1 className="text-3xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 leading-tight break-words text-foreground">
                 <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent break-words">
                   {data.heroTitle || "Master Digital Marketing"}
                 </span>
                 <br />
-                <span className={`break-words ${darkMode ? 'text-white' : 'text-gray-900'}`}>
+                <span className="break-words text-foreground">
                   {data.heroTitleEnd || "in 90 Days"}
                 </span>
               </h1>
@@ -94,7 +94,7 @@ export function OnlineBusinessCourseTemplate() {
                   <span className="truncate">{data.hero?.startLearning || "Start Learning Now"}</span>
                 </Button>
                 <Button size="lg" variant="outline" className="border-2 border-purple-500 !text-purple-600 hover:bg-purple-50 dark:hover:bg-purple-950 text-sm sm:text-base md:text-lg px-6 sm:px-8 py-4 sm:py-6 w-full sm:w-auto">
-                  <FiDownload className="mr-2 flex-shrink-0" />
+                  <FiDownload className="mr-2 flex-shrink-0" aria-hidden="true" />
                   <span className="truncate">{data.hero?.freeSample || "Free Sample Lessons"}</span>
                 </Button>
               </div>
@@ -207,7 +207,7 @@ export function OnlineBusinessCourseTemplate() {
       <section id="curriculum" className="container mx-auto px-4 md:px-6 max-w-full py-20 md:py-32">
         <ScrollReveal>
           <div className="text-center mb-16">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl sm:text-5xl font-bold mb-4 break-words px-2 text-gray-900">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 break-words px-2 text-foreground">
               {data.curriculum?.title || "Complete Course Curriculum"}
             </h2>
             <p className={`sm:text-lg text-gray-600 max-w-full mx-auto break-words px-2 ${darkMode ? 'text-gray-300' : 'text-base'}`}>
@@ -256,7 +256,7 @@ export function OnlineBusinessCourseTemplate() {
                     {!module.locked && (
                       <Button variant="ghost" size="sm" className="self-start sm:self-center flex-shrink-0 text-xs sm:text-sm text-gray-900">
                         <span className="hidden sm:inline">{data.curriculum?.preview || "Preview"}</span>
-                        <FiArrowRight className="sm:ml-2" />
+                        <FiArrowRight className="sm:ml-2" aria-hidden="true" />
                       </Button>
                     )}
                   </div>
@@ -271,7 +271,7 @@ export function OnlineBusinessCourseTemplate() {
       <section id="pricing" className="container mx-auto px-4 md:px-6 max-w-full py-20 md:py-32 bg-gradient-to-br from-purple-50 to-pink-50 dark:from-gray-800 dark:to-gray-900 rounded-3xl">
         <ScrollReveal>
           <div className="text-center mb-16">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl sm:text-5xl font-bold mb-4 break-words px-2 text-gray-900">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 break-words px-2 text-foreground">
               {data.pricing?.title || "Choose Your Learning Path"}
             </h2>
             <p className={`sm:text-lg text-gray-600 max-w-full mx-auto break-words px-2 ${darkMode ? 'text-gray-300' : 'text-base'}`}>
@@ -285,17 +285,17 @@ export function OnlineBusinessCourseTemplate() {
           <ScrollReveal delay={0.1}>
             <Card className="hover:shadow-2xl transition-all">
               <CardContent className="p-6 sm:p-8">
-                <h3 className="text-lg sm:text-xl font-bold mb-2 break-words text-gray-900">{data.pricing?.essentials?.title || "Essentials"}</h3>
+                <h3 className="text-lg sm:text-xl font-bold mb-2 break-words text-foreground">{data.pricing?.essentials?.title || "Essentials"}</h3>
                 <p className={`mb-6 text-sm break-words ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
                   {data.pricing?.essentials?.description || "Perfect for getting started"}
                 </p>
                 <div className="mb-6">
-                  <span className="text-3xl sm:text-3xl sm:text-4xl font-bold text-gray-900">$297</span>
+                  <span className="text-3xl sm:text-4xl font-bold text-foreground">$297</span>
                   <span className={`ml-2 text-sm ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>{data.pricing?.oneTime || "one-time"}</span>
                 </div>
                 <ul className="space-y-3 mb-8">
                   {["Modules 1-3", "Video Lessons", "Basic Workbooks", "Email Support"].map((feature, i) => (
-                    <li key={i} className="flex items-start gap-2 text-sm text-gray-900">
+                    <li key={i} className="flex items-start gap-2 text-sm text-foreground">
                       <FiCheckCircle className="text-green-500 flex-shrink-0 mt-0.5" />
                       <span className="break-words">{feature}</span>
                     </li>
@@ -317,17 +317,17 @@ export function OnlineBusinessCourseTemplate() {
                 </Badge>
               </div>
               <CardContent className="p-6 sm:p-8 pt-8">
-                <h3 className="text-lg sm:text-xl font-bold mb-2 break-words text-gray-900">{data.pricing?.complete?.title || "Complete Course"}</h3>
+                <h3 className="text-lg sm:text-xl font-bold mb-2 break-words text-foreground">{data.pricing?.complete?.title || "Complete Course"}</h3>
                 <p className={`mb-6 text-sm break-words ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
                   {data.pricing?.complete?.description || "Everything you need to succeed"}
                 </p>
                 <div className="mb-6">
-                  <span className="text-3xl sm:text-3xl sm:text-4xl font-bold text-gray-900">$697</span>
+                  <span className="text-3xl sm:text-4xl font-bold text-foreground">$697</span>
                   <span className={`ml-2 line-through text-sm ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>$997</span>
                 </div>
                 <ul className="space-y-3 mb-8">
                   {["All 8 Modules", "120+ Video Lessons", "Premium Workbooks", "Private Community", "Live Q&A Sessions", "Certificate"].map((feature, i) => (
-                    <li key={i} className="flex items-start gap-2 text-sm text-gray-900">
+                    <li key={i} className="flex items-start gap-2 text-sm text-foreground">
                       <FiCheckCircle className="text-purple-500 flex-shrink-0 mt-0.5" />
                       <span className="break-words">{feature}</span>
                     </li>
@@ -342,25 +342,25 @@ export function OnlineBusinessCourseTemplate() {
 
           {/* VIP Plan */}
           <ScrollReveal delay={0.3}>
-            <Card className="hover:shadow-2xl transition-all bg-gradient-to-br from-gray-900 to-purple-900 text-white">
+            <Card className="hover:shadow-2xl transition-all bg-gradient-to-br from-gray-900 to-purple-900 border-0">
               <CardContent className="p-6 sm:p-8">
-                <h3 className="text-lg sm:text-xl font-bold mb-2 break-words text-gray-900">{data.pricing?.vip?.title || "VIP Mentorship"}</h3>
+                <h3 className="text-lg sm:text-xl font-bold mb-2 break-words text-white">{data.pricing?.vip?.title || "VIP Mentorship"}</h3>
                 <p className="text-gray-300 mb-6 text-sm break-words">
                   {data.pricing?.vip?.description || "For serious entrepreneurs"}
                 </p>
                 <div className="mb-6">
-                  <span className="text-3xl sm:text-3xl sm:text-4xl font-bold text-gray-900">$1,997</span>
+                  <span className="text-3xl sm:text-4xl font-bold text-white">$1,997</span>
                   <span className="text-gray-400 ml-2 text-sm">{data.pricing?.oneTime || "one-time"}</span>
                 </div>
                 <ul className="space-y-3 mb-8">
                   {["Everything in Complete", "1-on-1 Coaching Calls", "Personalized Feedback", "Implementation Support", "Bonus Templates", "Priority Support"].map((feature, i) => (
-                    <li key={i} className="flex items-start gap-2 text-sm text-gray-900">
+                    <li key={i} className="flex items-start gap-2 text-sm text-white">
                       <FiCheckCircle className="text-yellow-400 flex-shrink-0 mt-0.5" />
                       <span className="break-words">{feature}</span>
                     </li>
                   ))}
                 </ul>
-                <Button className="w-full bg-white !text-purple-900 hover:bg-gray-100">
+                <Button className="w-full bg-white text-purple-900 hover:bg-gray-100 font-semibold">
                   {data.pricing?.vip?.cta || "Apply Now"}
                 </Button>
               </CardContent>
@@ -377,7 +377,7 @@ export function OnlineBusinessCourseTemplate() {
       <section className="container mx-auto px-4 md:px-6 max-w-full py-20 md:py-32">
         <ScrollReveal>
           <div className="text-center mb-16">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl sm:text-5xl font-bold mb-4 break-words px-2 text-gray-900">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 break-words px-2 text-foreground">
               {data.testimonials?.title || "Student Success Stories"}
             </h2>
             <p className={`sm:text-lg text-gray-600 break-words px-2 ${darkMode ? 'text-gray-300' : 'text-base'}`}>

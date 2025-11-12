@@ -204,7 +204,7 @@ export function AgencyServiceTemplate() {
             <button
               className="md:hidden p-2 text-gray-900 hover:text-blue-600 transition-colors"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              aria-label="Toggle menu"
+              aria-label={mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
             >
               {mobileMenuOpen ? <FiX size={28} /> : <FiMenu size={28} />}
             </button>
@@ -269,7 +269,7 @@ export function AgencyServiceTemplate() {
             <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-center">
               <Button size="lg" className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700">
                 View Our Work
-                <FiArrowRight className="ml-2" />
+                <FiArrowRight className="ml-2" aria-hidden="true" />
               </Button>
               <Button size="lg" variant="outline" className={`w-full sm:w-auto group ! ${darkMode ? 'text-white' : 'text-slate-900'}`}>
                 <FiPlay className="mr-2 group-hover:scale-110 transition-transform" />
@@ -460,7 +460,7 @@ export function AgencyServiceTemplate() {
             <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-center">
               <Button size="lg" variant="secondary" className="w-full sm:w-auto bg-white !text-blue-600 hover:bg-gray-100">
                 Start Your Project
-                <FiArrowRight className="ml-2" />
+                <FiArrowRight className="ml-2" aria-hidden="true" />
               </Button>
               <Button size="lg" variant="outline" className="w-full sm:w-auto !text-white !bg-transparent border-white hover:bg-white/10">
                 View Pricing

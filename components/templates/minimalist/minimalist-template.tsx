@@ -53,7 +53,7 @@ export function MinimalistTemplate() {
           <button
             className="md:hidden p-3 text-foreground hover:bg-accent rounded-md border border-border transition-colors"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            aria-label="Toggle menu"
+            aria-label={mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
           >
             {mobileMenuOpen ? <FiX size={28} /> : <FiMenu size={28} />}
           </button>
@@ -96,7 +96,7 @@ export function MinimalistTemplate() {
       <section className="container mx-auto px-3 max-w-full pt-40 pb-32">
         <div className="max-w-full">
           <FadeIn>
-            <h1 className="text-4xl sm:text-4xl sm:text-5xl md:text-6xl lg:text-9xl font-light mb-8 tracking-tighter leading-none break-words text-gray-900">
+            <h1 className="text-4xl sm:text-4xl sm:text-5xl md:text-6xl lg:text-9xl font-light mb-8 tracking-tighter leading-none break-words text-foreground">
               {portfolioData.name}
             </h1>
           </FadeIn>
@@ -110,7 +110,7 @@ export function MinimalistTemplate() {
           <FadeIn delay={0.4}>
             <a
               href="#contact"
-              className="text-sm uppercase tracking-widest border-b border-foreground pb-1 hover:border-foreground/50 transition-colors text-gray-900"
+              className="text-sm uppercase tracking-widest border-b border-foreground pb-1 hover:border-foreground/50 transition-colors text-foreground"
             >
               {tt.common.getInTouch}
             </a>
@@ -122,7 +122,7 @@ export function MinimalistTemplate() {
       <section id="about" className="container mx-auto px-3 max-w-full py-32">
         <div className="max-w-full mx-auto">
           <ScrollReveal>
-            <h2 className="text-xs font-medium text-muted-foreground mb-16 uppercase tracking-widest text-gray-900">
+            <h2 className="text-xs font-medium text-muted-foreground mb-16 uppercase tracking-widest">
               {tt.common.about}
             </h2>
             <p className="text-2xl leading-loose text-foreground/70 font-light">
@@ -136,7 +136,7 @@ export function MinimalistTemplate() {
       <section className="container mx-auto px-3 max-w-full py-32 border-t">
         <div className="max-w-full mx-auto">
           <ScrollReveal>
-            <p className="text-3xl sm:text-4xl md:text-5xl font-light leading-tight tracking-tight text-center break-words text-gray-900">
+            <p className="text-3xl sm:text-4xl md:text-5xl font-light leading-tight tracking-tight text-center break-words text-foreground">
               {portfolioData.statement}
             </p>
           </ScrollReveal>
@@ -150,7 +150,7 @@ export function MinimalistTemplate() {
             {portfolioData.stats.map((stat, index) => (
               <ScrollReveal key={stat.label} delay={index * 0.1}>
                 <div className="text-center">
-                  <div className="text-6xl md:text-7xl font-light mb-3 tracking-tighter text-gray-900">
+                  <div className="text-6xl md:text-7xl font-light mb-3 tracking-tighter text-foreground">
                     {stat.value}
                   </div>
                   <div className="text-xs uppercase tracking-widest text-muted-foreground">
@@ -167,7 +167,7 @@ export function MinimalistTemplate() {
       <section className="container mx-auto px-3 max-w-full py-20 border-t">
         <div className="max-w-full mx-auto">
           <ScrollReveal>
-            <h2 className="text-xs font-medium text-muted-foreground mb-12 uppercase tracking-widest text-gray-900">
+            <h2 className="text-xs font-medium text-muted-foreground mb-12 uppercase tracking-widest">
               Expertise
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-x-12 gap-y-6">
@@ -185,7 +185,7 @@ export function MinimalistTemplate() {
       <section id="work" className="container mx-auto px-3 max-w-full py-32">
         <div className="max-w-full">
           <ScrollReveal>
-            <h2 className="text-xs font-medium text-muted-foreground mb-16 uppercase tracking-widest text-gray-900">
+            <h2 className="text-xs font-medium text-muted-foreground mb-16 uppercase tracking-widest">
               Selected Work
             </h2>
           </ScrollReveal>
@@ -198,7 +198,7 @@ export function MinimalistTemplate() {
                     {project.year}
                   </div>
                   <div className="col-span-10">
-                    <h3 className="text-3xl font-medium mb-4 tracking-tight text-gray-900">
+                    <h3 className="text-3xl font-medium mb-4 tracking-tight text-foreground">
                       {project.title}
                     </h3>
                     <p className="text-lg text-foreground/60 mb-6 leading-relaxed">
@@ -221,7 +221,7 @@ export function MinimalistTemplate() {
       <section className="container mx-auto px-3 max-w-full py-32 border-t">
         <div className="max-w-full mx-auto">
           <ScrollReveal>
-            <h2 className="text-xs font-medium text-muted-foreground mb-16 uppercase tracking-widest text-gray-900">
+            <h2 className="text-xs font-medium text-muted-foreground mb-16 uppercase tracking-widest">
               Services
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
@@ -239,7 +239,7 @@ export function MinimalistTemplate() {
       <section className="container mx-auto px-3 max-w-full py-32 border-t">
         <div className="max-w-full mx-auto">
           <ScrollReveal>
-            <h2 className="text-xs font-medium text-muted-foreground mb-16 uppercase tracking-widest text-center text-gray-900">
+            <h2 className="text-xs font-medium text-muted-foreground mb-16 uppercase tracking-widest text-center">
               Selected Clients
             </h2>
             <div className="flex flex-wrap justify-center gap-x-12 gap-y-6">
@@ -257,10 +257,10 @@ export function MinimalistTemplate() {
       <section id="contact" className="container mx-auto px-3 max-w-full py-40 border-t">
         <div className="max-w-full mx-auto">
           <ScrollReveal>
-            <h2 className="text-xs font-medium text-muted-foreground mb-16 uppercase tracking-widest text-gray-900">
+            <h2 className="text-xs font-medium text-muted-foreground mb-16 uppercase tracking-widest">
               {tt.common.contact}
             </h2>
-            <p className="text-5xl md:text-6xl font-light mb-16 leading-tight tracking-tight break-words text-gray-900">
+            <p className="text-5xl md:text-6xl font-light mb-16 leading-tight tracking-tight break-words text-foreground">
               {tt.common.letsWorkTogether}
             </p>
           </ScrollReveal>
@@ -312,7 +312,7 @@ export function MinimalistTemplate() {
       <section className="py-20 px-3 border-t">
         <div className="container mx-auto max-w-5xl">
           <ScrollReveal>
-            <h2 className="text-xs uppercase tracking-widest mb-16 text-center text-gray-900">Pricing</h2>
+            <h2 className="text-xs uppercase tracking-widest mb-16 text-center text-muted-foreground">Pricing</h2>
           </ScrollReveal>
           <div className="grid md:grid-cols-3 gap-px bg-border">
             {[
@@ -322,8 +322,8 @@ export function MinimalistTemplate() {
             ].map((plan, i) => (
               <ScrollReveal key={i} delay={i * 0.1}>
                 <div className="bg-background p-8">
-                  <div className="text-xs uppercase tracking-widest mb-4 text-gray-900">{plan.name}</div>
-                  <div className="text-4xl font-light mb-8 text-gray-900">${plan.price}</div>
+                  <div className="text-xs uppercase tracking-widest mb-4 text-foreground">{plan.name}</div>
+                  <div className="text-4xl font-light mb-8 text-foreground">${plan.price}</div>
                   <ul className="space-y-3">
                     {plan.features.map((f, j) => (
                       <li key={j} className="text-xs uppercase tracking-wider text-muted-foreground">{f}</li>
@@ -340,7 +340,7 @@ export function MinimalistTemplate() {
       <section className="py-20 px-3 border-t">
         <div className="container mx-auto max-w-4xl">
           <ScrollReveal>
-            <h2 className="text-xs uppercase tracking-widest mb-16 text-center text-gray-900">Testimonials</h2>
+            <h2 className="text-xs uppercase tracking-widest mb-16 text-center text-muted-foreground">Testimonials</h2>
           </ScrollReveal>
           <div className="space-y-12">
             {[
@@ -350,7 +350,7 @@ export function MinimalistTemplate() {
             ].map((t, i) => (
               <ScrollReveal key={i} delay={i * 0.1}>
                 <div className="border-l-2 border-foreground pl-6">
-                  <p className="text-lg font-light mb-4 text-gray-900">&ldquo;{t.text}&rdquo;</p>
+                  <p className="text-lg font-light mb-4 text-foreground">&ldquo;{t.text}&rdquo;</p>
                   <div className="text-xs uppercase tracking-widest text-muted-foreground">
                     {t.author} — {t.role}
                   </div>
@@ -365,7 +365,7 @@ export function MinimalistTemplate() {
       <section className="py-20 px-3 border-t">
         <div className="container mx-auto max-w-4xl">
           <ScrollReveal>
-            <h2 className="text-xs uppercase tracking-widest mb-16 text-center text-gray-900">Timeline</h2>
+            <h2 className="text-xs uppercase tracking-widest mb-16 text-center text-muted-foreground">Timeline</h2>
           </ScrollReveal>
           <div className="space-y-8">
             {[
@@ -378,7 +378,7 @@ export function MinimalistTemplate() {
                 <div className="grid grid-cols-4 gap-4 border-b pb-4">
                   <div className="text-xs uppercase tracking-widest text-muted-foreground">{item.year}</div>
                   <div className="col-span-3">
-                    <div className="text-sm font-medium mb-1 text-gray-900">{item.title}</div>
+                    <div className="text-sm font-medium mb-1 text-foreground">{item.title}</div>
                     <div className="text-xs uppercase tracking-wider text-muted-foreground">{item.company}</div>
                   </div>
                 </div>
@@ -392,7 +392,7 @@ export function MinimalistTemplate() {
       <section className="py-20 px-3 border-t">
         <div className="container mx-auto max-w-4xl">
           <ScrollReveal>
-            <h2 className="text-xs uppercase tracking-widest mb-16 text-center text-gray-900">FAQ</h2>
+            <h2 className="text-xs uppercase tracking-widest mb-16 text-center text-muted-foreground">FAQ</h2>
           </ScrollReveal>
           <div className="space-y-8">
             {[
@@ -403,7 +403,7 @@ export function MinimalistTemplate() {
             ].map((item, i) => (
               <ScrollReveal key={i} delay={i * 0.05}>
                 <div className="border-b pb-6">
-                  <div className="text-sm font-medium mb-2 text-gray-900">{item.q}</div>
+                  <div className="text-sm font-medium mb-2 text-foreground">{item.q}</div>
                   <div className="text-xs uppercase tracking-wider text-muted-foreground leading-relaxed">{item.a}</div>
                 </div>
               </ScrollReveal>

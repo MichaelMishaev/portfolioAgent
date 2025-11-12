@@ -232,7 +232,7 @@ export function PhysicalProductTemplate() {
             <button
               className="md:hidden p-3 text-foreground hover:bg-accent rounded-md border border-border transition-colors"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              aria-label="Toggle menu"
+              aria-label={mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
             >
               {mobileMenuOpen ? <FiX size={28} /> : <FiMenu size={28} />}
             </button>
@@ -535,10 +535,10 @@ export function PhysicalProductTemplate() {
                       <td className="text-center py-4 px-3">${competitor.price}</td>
                       <td className="text-center py-4 px-3">{competitor.battery}</td>
                       <td className="text-center py-4 px-3">
-                        {competitor.anc ? <FiCheck className="w-5 h-5 mx-auto" /> : "—"}
+                        {competitor.anc ? <FiCheck className="w-5 h-5 mx-auto" aria-hidden="true" /> : "—"}
                       </td>
                       <td className="text-center py-4 px-3">
-                        {competitor.multiDevice ? <FiCheck className="w-5 h-5 mx-auto" /> : "—"}
+                        {competitor.multiDevice ? <FiCheck className="w-5 h-5 mx-auto" aria-hidden="true" /> : "—"}
                       </td>
                       <td className="text-center py-4 px-3">{competitor.weight}</td>
                       <td className="text-center py-4 px-3">{competitor.warranty}</td>

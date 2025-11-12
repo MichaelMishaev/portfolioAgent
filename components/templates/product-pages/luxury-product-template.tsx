@@ -11,6 +11,7 @@ import { FiAward, FiMapPin, FiCalendar, FiClock, FiZap, FiShield ,
   FiX,
 } from "react-icons/fi";
 import Link from "next/link";
+import { useTheme } from "next-themes";
 
 const productData = {
   name: "CHRONOS ROYAL",
@@ -155,6 +156,8 @@ const productData = {
 };
 
 export function LuxuryProductTemplate() {
+  const { theme } = useTheme();
+  const isDark = theme === 'dark';
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const [selectedMaterial, setSelectedMaterial] = useState(productData.configurator.materials[0]);
@@ -204,7 +207,7 @@ export function LuxuryProductTemplate() {
             <button
               className="md:hidden p-3 text-white hover:bg-white/10 rounded-md border border-white/20 transition-colors"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              aria-label="Toggle menu"
+              aria-label={mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
             >
               {mobileMenuOpen ? <FiX size={28} /> : <FiMenu size={28} />}
             </button>
@@ -259,7 +262,7 @@ export function LuxuryProductTemplate() {
               <div className="text-sm tracking-[0.3em] text-amber-500 font-light">
                 {productData.collection}
               </div>
-              <h1 className="text-4xl sm:text-4xl sm:text-5xl md:text-6xl lg:text-9xl font-light tracking-tight break-words text-gray-900">
+              <h1 className={`text-4xl sm:text-4xl sm:text-5xl md:text-6xl lg:text-9xl font-light tracking-tight break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>
                 {productData.name}
               </h1>
               <p className="text-xl sm:text-2xl md:text-3xl font-light text-neutral-400 max-w-full mx-auto">
@@ -276,7 +279,7 @@ export function LuxuryProductTemplate() {
         <div className="container mx-auto px-3 sm:px-3">
           <ScrollReveal>
             <div className="max-w-full mx-auto text-center mb-24">
-              <h2 className="text-5xl md:text-6xl font-light mb-8 tracking-tight text-gray-900">
+              <h2 className={`text-5xl md:text-6xl font-light mb-8 tracking-tight ${isDark ? 'text-white' : 'text-gray-900'}`}>
                 {productData.heritage.title}
               </h2>
               <p className="text-xl text-neutral-400 leading-relaxed">
@@ -291,7 +294,7 @@ export function LuxuryProductTemplate() {
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16 pb-16 border-b border-neutral-800 last:border-0">
                   <div className="text-6xl font-light text-amber-500">{event.year}</div>
                   <div className="md:col-span-3">
-                    <h3 className="text-3xl font-light mb-4 text-gray-900">{event.title}</h3>
+                    <h3 className={`text-3xl font-light mb-4 ${isDark ? 'text-white' : 'text-gray-900'}`}>{event.title}</h3>
                     <p className="text-lg text-neutral-400">{event.description}</p>
                   </div>
                 </div>
@@ -305,7 +308,7 @@ export function LuxuryProductTemplate() {
       <section id="craftsmanship" className="py-32 bg-neutral-950">
         <div className="container mx-auto px-3 sm:px-3">
           <ScrollReveal>
-            <h2 className="text-5xl md:text-6xl font-light text-center mb-24 tracking-tight text-gray-900">
+            <h2 className={`text-5xl md:text-6xl font-light text-center mb-24 tracking-tight ${isDark ? 'text-white' : 'text-gray-900'}`}>
               {productData.craftsmanship.title}
             </h2>
           </ScrollReveal>
@@ -319,7 +322,7 @@ export function LuxuryProductTemplate() {
                   }`}
                 >
                   <div className={index % 2 === 1 ? "md:order-2" : ""}>
-                    <h3 className="text-4xl font-light mb-6 text-gray-900">{detail.title}</h3>
+                    <h3 className={`text-4xl font-light mb-6 ${isDark ? 'text-white' : 'text-gray-900'}`}>{detail.title}</h3>
                     <p className="text-xl text-neutral-400 leading-relaxed">{detail.description}</p>
                   </div>
                   <div className={index % 2 === 1 ? "md:order-1" : ""}>
@@ -340,7 +343,7 @@ export function LuxuryProductTemplate() {
       <section className="py-32 border-t border-neutral-800">
         <div className="container mx-auto px-3 sm:px-3">
           <ScrollReveal>
-            <h2 className="text-5xl md:text-6xl font-light text-center mb-24 tracking-tight text-gray-900">
+            <h2 className={`text-5xl md:text-6xl font-light text-center mb-24 tracking-tight ${isDark ? 'text-white' : 'text-gray-900'}`}>
               Create Your Masterpiece
             </h2>
           </ScrollReveal>
@@ -363,7 +366,7 @@ export function LuxuryProductTemplate() {
                         : "border-neutral-800 hover:border-neutral-600"
                     } ${!material.available ? "opacity-30 cursor-not-allowed" : "cursor-pointer"}`}
                   >
-                    <div className="text-lg font-light mb-2 text-gray-900">{material.name}</div>
+                    <div className={`text-lg font-light mb-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>{material.name}</div>
                     {material.premium > 0 && (
                       <div className="text-sm text-amber-500">+${material.premium.toLocaleString()}</div>
                     )}
@@ -387,7 +390,7 @@ export function LuxuryProductTemplate() {
                         : "border-neutral-800 hover:border-neutral-600"
                     } ${!dial.available ? "opacity-30 cursor-not-allowed" : "cursor-pointer"}`}
                   >
-                    <div className="text-lg font-light mb-2 text-gray-900">{dial.name}</div>
+                    <div className={`text-lg font-light mb-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>{dial.name}</div>
                     {dial.premium > 0 && (
                       <div className="text-sm text-amber-500">+${dial.premium.toLocaleString()}</div>
                     )}
@@ -411,7 +414,7 @@ export function LuxuryProductTemplate() {
                         : "border-neutral-800 hover:border-neutral-600"
                     } ${!strap.available ? "opacity-30 cursor-not-allowed" : "cursor-pointer"}`}
                   >
-                    <div className="text-lg font-light mb-2 text-gray-900">{strap.name}</div>
+                    <div className={`text-lg font-light mb-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>{strap.name}</div>
                     {strap.premium > 0 && (
                       <div className="text-sm text-amber-500">+${strap.premium.toLocaleString()}</div>
                     )}
@@ -423,7 +426,7 @@ export function LuxuryProductTemplate() {
             {/* Investment Summary */}
             <div className="border-t border-neutral-800 pt-8 text-center">
               <div className="text-sm tracking-wider text-neutral-400 mb-2">YOUR INVESTMENT</div>
-              <div className="text-5xl font-light mb-8 text-gray-900">${totalInvestment.toLocaleString()}</div>
+              <div className={`text-5xl font-light mb-8 ${isDark ? 'text-white' : 'text-gray-900'}`}>${totalInvestment.toLocaleString()}</div>
               <Button
                 size="lg"
                 className="bg-amber-600 hover:bg-amber-500 text-black text-lg px-12"
@@ -439,7 +442,7 @@ export function LuxuryProductTemplate() {
       <section className="py-32 bg-neutral-950">
         <div className="container mx-auto px-3 sm:px-3">
           <ScrollReveal>
-            <h2 className="text-5xl md:text-6xl font-light text-center mb-24 tracking-tight text-gray-900">
+            <h2 className={`text-5xl md:text-6xl font-light text-center mb-24 tracking-tight ${isDark ? 'text-white' : 'text-gray-900'}`}>
               {productData.technical.title}
             </h2>
           </ScrollReveal>
@@ -454,7 +457,7 @@ export function LuxuryProductTemplate() {
                       <div className="text-sm tracking-wider text-neutral-400 mb-2">
                         {spec.label}
                       </div>
-                      <div className="text-xl font-light text-gray-900">{spec.value}</div>
+                      <div className={`text-xl font-light ${isDark ? 'text-white' : 'text-gray-900'}`}>{spec.value}</div>
                     </CardContent>
                   </Card>
                 </ScrollReveal>
@@ -477,7 +480,7 @@ export function LuxuryProductTemplate() {
       <section className="py-32 border-t border-neutral-800">
         <div className="container mx-auto px-3 sm:px-3">
           <ScrollReveal>
-            <h2 className="text-5xl font-light text-center mb-24 tracking-tight text-gray-900">
+            <h2 className={`text-5xl font-light text-center mb-24 tracking-tight ${isDark ? 'text-white' : 'text-gray-900'}`}>
               Recognition of Excellence
             </h2>
           </ScrollReveal>
@@ -489,7 +492,7 @@ export function LuxuryProductTemplate() {
                   <Card className="bg-neutral-950 border-neutral-800 text-center">
                     <CardContent className="p-8">
                       <FiAward className="w-12 h-12 mx-auto mb-6 text-amber-500" />
-                      <div className="text-xl font-light mb-2 text-gray-900">{award.title}</div>
+                      <div className={`text-xl font-light mb-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>{award.title}</div>
                       <div className="text-sm text-neutral-400 mb-1">{award.year}</div>
                       <div className="text-sm text-neutral-500">{award.category}</div>
                     </CardContent>
@@ -502,7 +505,7 @@ export function LuxuryProductTemplate() {
               {productData.press.map((item, index) => (
                 <ScrollReveal key={index}>
                   <blockquote className="border-l-2 border-amber-500 pl-8 py-4">
-                    <p className="text-2xl font-light italic mb-4 text-gray-900">"{item.quote}"</p>
+                    <p className={`text-2xl font-light italic mb-4 ${isDark ? 'text-white' : 'text-gray-900'}`}>"{item.quote}"</p>
                     <cite className="text-sm text-neutral-400 not-italic">— {item.source}</cite>
                   </blockquote>
                 </ScrollReveal>
@@ -518,7 +521,7 @@ export function LuxuryProductTemplate() {
           <ScrollReveal>
             <div className="max-w-full mx-auto text-center">
               <FiMapPin className="w-16 h-16 mx-auto mb-8 text-amber-500" />
-              <h2 className="text-5xl md:text-6xl font-light mb-8 tracking-tight text-gray-900">
+              <h2 className={`text-5xl md:text-6xl font-light mb-8 tracking-tight ${isDark ? 'text-white' : 'text-gray-900'}`}>
                 Experience Chronos Royal
               </h2>
               <p className="text-xl text-neutral-400 mb-12 max-w-full mx-auto">
@@ -549,7 +552,7 @@ export function LuxuryProductTemplate() {
       <footer className="border-t border-neutral-800 py-16">
         <div className="container mx-auto px-3 sm:px-3">
           <div className="text-center">
-            <div className="text-2xl font-light tracking-[0.2em] mb-4 text-gray-900">CHRONOS</div>
+            <div className={`text-2xl font-light tracking-[0.2em] mb-4 ${isDark ? 'text-white' : 'text-gray-900'}`}>CHRONOS</div>
             <p className="text-sm text-neutral-500">
               © 2024 Chronos Manufacture. Geneva, Switzerland.
             </p>

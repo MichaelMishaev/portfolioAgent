@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
+import { useReducedMotion } from "@/lib/hooks/use-reduced-motion";
 import { ScrollReveal } from "@/components/animations/scroll-reveal";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -18,6 +19,7 @@ import {
   FiX,
 } from "react-icons/fi";
 import Link from "next/link";
+import { useTheme } from "next-themes";
 
 const portfolioData = {
   name: "Spatial Vision",
@@ -214,6 +216,7 @@ function SpatialCard({
 }) {
   const ref = useRef<HTMLDivElement>(null);
   const [rotateX, setRotateX] = useState(0);
+  const prefersReducedMotion = useReducedMotion();
   const [rotateY, setRotateY] = useState(0);
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -245,7 +248,7 @@ function SpatialCard({
         transformStyle: "preserve-3d",
         transform: `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateZ(${depth}px)`,
       }}
-      transition={{ type: "spring", stiffness: 300, damping: 30 }}
+      transition={prefersReducedMotion ? {} : { type: "spring", stiffness: 300, damping: 30 }}
     >
       {children}
     </motion.div>
@@ -264,9 +267,9 @@ function FloatingLayer({
 }) {
   return (
     <motion.div
-      initial={{ opacity: 0, z: -depth }}
+      initial={prefersReducedMotion ? {} : { opacity: 0, z: -depth }}
       animate={{ opacity: 1, z: 0 }}
-      transition={{ duration: 0.8, delay }}
+      transition={prefersReducedMotion ? {} : { duration: 0.8, delay }}
       style={{
         transformStyle: "preserve-3d",
         transform: `translateZ(${depth}px)`,
@@ -278,6 +281,8 @@ function FloatingLayer({
 }
 
 export function ARSpatialTemplate() {
+  const { theme } = useTheme();
+  const isDark = theme === 'dark';
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const mouseX = useMotionValue(0);
@@ -344,12 +349,12 @@ export function ARSpatialTemplate() {
         >
           <FloatingLayer depth={100}>
             <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
+              initial={prefersReducedMotion ? {} : { opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8 }}
+              transition={prefersReducedMotion ? {} : { duration: 0.8 }}
               className="mb-8"
             >
-              <div className="text-8xl mb-6 filter drop-shadow-[0_0_30px_rgba(6,182,212,0.5)] text-gray-900">
+              <div className={`text-8xl mb-6 filter drop-shadow-[0_0_30px_rgba(6,182,212,0.5)] ${isDark ? 'text-white' : 'text-gray-900'}`}>
                 👁️
               </div>
             </motion.div>
@@ -387,11 +392,11 @@ export function ARSpatialTemplate() {
             <motion.div
               key={i}
               className="w-2 h-2 bg-cyan-400/50 rounded-full"
-              animate={{
+              animate={prefersReducedMotion ? {} : {
                 scale: [1, 1.5, 1],
                 opacity: [0.3, 0.8, 0.3],
               }}
-              transition={{
+              transition={prefersReducedMotion ? {} : {
                 duration: 2,
                 repeat: Infinity,
                 delay: i * 0.2,
@@ -414,7 +419,7 @@ export function ARSpatialTemplate() {
               <ScrollReveal key={stat.label} delay={index * 0.1}>
                 <motion.div
                   className="text-center"
-                  whileHover={{ scale: 1.05, z: 50 }}
+                  whileHover={prefersReducedMotion ? {} : { scale: 1.05, z: 50 }}
                   style={{ transformStyle: "preserve-3d" }}
                 >
                   <div className="text-3xl sm:text-5xl font-black bg-gradient-to-r from-cyan-300 to-purple-300 bg-clip-text text-transparent mb-2 break-words text-white">
@@ -471,7 +476,7 @@ export function ARSpatialTemplate() {
                       <p className="text-gray-300 mb-6 leading-relaxed flex-grow">
                         {exp.description}
                       </p>
-                      <div className="flex items-center gap-2 text-sm text-gray-900">
+                      <div className={`flex items-center gap-2 text-sm ${isDark ? 'text-white' : 'text-gray-900'}`}>
                         <div className="px-3 py-1 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 text-gray-300">
                           {exp.tech}
                         </div>
@@ -498,7 +503,7 @@ export function ARSpatialTemplate() {
               <ScrollReveal key={skill} delay={index * 0.03}>
                 <motion.div
                   className="bg-gradient-to-br from-cyan-500/10 to-blue-500/10 backdrop-blur-xl border border-white/20 rounded-lg p-4 text-center hover:border-cyan-400/50 transition-all cursor-pointer"
-                  whileHover={{ scale: 1.1, z: 30 }}
+                  whileHover={prefersReducedMotion ? {} : { scale: 1.1, z: 30 }}
                   style={{ transformStyle: "preserve-3d" }}
                 >
                   <div className="text-xs md:text-sm font-medium text-white">{skill}</div>
@@ -523,7 +528,7 @@ export function ARSpatialTemplate() {
               <ScrollReveal key={cap.name} delay={index * 0.1}>
                 <motion.div
                   className="bg-gradient-to-br from-cyan-500/10 to-blue-500/10 backdrop-blur-xl border border-white/20 rounded-xl p-6 hover:border-cyan-400/50 transition-all cursor-pointer"
-                  whileHover={{ scale: 1.05, z: 50 }}
+                  whileHover={prefersReducedMotion ? {} : { scale: 1.05, z: 50 }}
                   style={{ transformStyle: "preserve-3d" }}
                 >
                   <div className="w-14 h-14 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center text-white text-3xl mb-4 shadow-[0_0_20px_rgba(6,182,212,0.5)]">
@@ -587,7 +592,7 @@ export function ARSpatialTemplate() {
                   <div className="flex flex-col items-center">
                     <motion.div
                       className="w-4 h-4 rounded-full bg-cyan-500 group-hover:scale-150 transition-transform shadow-[0_0_20px_rgba(6,182,212,0.8)]"
-                      whileHover={{ scale: 2 }}
+                      whileHover={prefersReducedMotion ? {} : { scale: 2 }}
                     />
                     {index !== portfolioData.timeline.length - 1 && (
                       <div className="w-px flex-1 bg-gradient-to-b from-cyan-500/50 to-transparent mt-2" />
@@ -623,7 +628,7 @@ export function ARSpatialTemplate() {
             {portfolioData.pricing.map((plan, index) => (
               <ScrollReveal key={plan.name} delay={index * 0.1}>
                 <motion.div
-                  whileHover={{ scale: 1.05, z: 50 }}
+                  whileHover={prefersReducedMotion ? {} : { scale: 1.05, z: 50 }}
                   style={{ transformStyle: "preserve-3d" }}
                 >
                   <Card className={`bg-gradient-to-br from-cyan-500/10 to-blue-500/10 backdrop-blur-xl border-white/20 ${plan.popular ? 'ring-2 ring-cyan-500 shadow-[0_0_40px_rgba(6,182,212,0.3)]' : ''} hover:border-cyan-500/50 transition-all relative h-full`}>
@@ -719,7 +724,7 @@ export function ARSpatialTemplate() {
           <ScrollReveal>
             <motion.div
               className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 backdrop-blur-xl border border-cyan-500/50 rounded-3xl p-12 shadow-[0_0_60px_rgba(6,182,212,0.3)]"
-              whileHover={{ scale: 1.02 }}
+              whileHover={prefersReducedMotion ? {} : { scale: 1.02 }}
               style={{ transformStyle: "preserve-3d" }}
             >
               <h2 className="text-3xl sm:text-5xl font-bold mb-6 text-white break-words">
@@ -762,7 +767,7 @@ export function ARSpatialTemplate() {
           <ScrollReveal delay={0.3}>
             <div className="flex flex-col gap-4 sm:flex-row gap-4 justify-center">
               <Button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white border-0 text-lg px-8 py-6 h-auto rounded-full shadow-[0_0_30px_rgba(6,182,212,0.5)]">
-                <FiMail className="mr-2 w-5 h-5" />
+                <FiMail className="mr-2 w-5 h-5" aria-hidden="true" />
                 spatial@vision.ar
               </Button>
               <Button

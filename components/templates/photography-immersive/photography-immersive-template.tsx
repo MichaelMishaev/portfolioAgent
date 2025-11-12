@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useReducedMotion } from "@/lib/hooks/use-reduced-motion";
 import { FadeIn } from "@/components/animations/fade-in";
 import { ScrollReveal } from "@/components/animations/scroll-reveal";
 import { Button } from "@/components/ui/button";
@@ -12,9 +13,13 @@ import Link from "next/link";
 import { useI18n } from "@/lib/i18n-context";
 import { placeholderImages } from "@/lib/placeholder-images";
 import Image from "next/image";
+import { useTheme } from "next-themes";
 
 export function PhotographyImmersiveTemplate() {
+  const { theme } = useTheme();
+  const isDark = theme === 'dark';
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const prefersReducedMotion = useReducedMotion();
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState<any>(null);
   const [activeCategory, setActiveCategory] = useState("all");
@@ -62,7 +67,7 @@ export function PhotographyImmersiveTemplate() {
           <button
             className="md:hidden p-2"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            aria-label="Toggle menu"
+            aria-label={mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
           >
             {mobileMenuOpen ? <FiX size={20} /> : <FiMenu size={20} />}
           </button>
@@ -71,7 +76,7 @@ export function PhotographyImmersiveTemplate() {
         {/* Mobile Menu */}
         {mobileMenuOpen && (
           <motion.div
-            initial={{ opacity: 0 }}
+            initial={prefersReducedMotion ? {} : { opacity: 0 }}
             animate={{ opacity: 1 }}
             className="md:hidden bg-black/95 backdrop-blur-sm"
           >
@@ -79,10 +84,10 @@ export function PhotographyImmersiveTemplate() {
               <a href="#gallery" className="text-xs uppercase tracking-widest py-2 text-white" onClick={() => setMobileMenuOpen(false)}>
                 Gallery
               </a>
-              <a href="#about" className="text-xs uppercase tracking-widest py-2 text-gray-900" onClick={() => setMobileMenuOpen(false)}>
+              <a href="#about" className="text-xs uppercase tracking-widest py-2 text-white" onClick={() => setMobileMenuOpen(false)}>
                 {tt.common.about}
               </a>
-              <a href="#contact" className="text-xs uppercase tracking-widest py-2 text-gray-900" onClick={() => setMobileMenuOpen(false)}>
+              <a href="#contact" className="text-xs uppercase tracking-widest py-2 text-white" onClick={() => setMobileMenuOpen(false)}>
                 {tt.common.contact}
               </a>
             </div>
@@ -103,11 +108,11 @@ export function PhotographyImmersiveTemplate() {
 
         <div className="container mx-auto px-6 relative z-10 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={prefersReducedMotion ? {} : { opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.3 }}
+            transition={prefersReducedMotion ? {} : { duration: 1, delay: 0.3 }}
           >
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-light mb-6 tracking-tight break-words text-gray-900">
+            <h1 className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-light mb-6 tracking-tight break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>
               {portfolioData.name}
             </h1>
             <p className="text-xl md:text-2xl text-white/80 font-light tracking-wide">
@@ -118,8 +123,8 @@ export function PhotographyImmersiveTemplate() {
           {/* Scroll Indicator */}
           <motion.div
             className="absolute bottom-10 left-1/2 -translate-x-1/2"
-            animate={{ y: [0, 10, 0] }}
-            transition={{ repeat: Infinity, duration: 2 }}
+            animate={prefersReducedMotion ? {} : { y: [0, 10, 0] }}
+            transition={prefersReducedMotion ? {} : { repeat: Infinity, duration: 2 }}
           >
             <div className="text-xs uppercase tracking-widest text-white/60">Scroll</div>
           </motion.div>
@@ -139,6 +144,8 @@ export function PhotographyImmersiveTemplate() {
                     ? "bg-white text-black"
                     : "bg-transparent text-white/60 hover:text-white border border-white/20"
                 }`}
+                aria-label={`Filter by ${category.name}`}
+                aria-pressed={activeCategory === category.id}
               >
                 {category.name}
               </button>
@@ -153,20 +160,29 @@ export function PhotographyImmersiveTemplate() {
           <AnimatePresence mode="wait">
             <motion.div
               key={activeCategory}
-              initial={{ opacity: 0 }}
+              initial={prefersReducedMotion ? {} : { opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              transition={{ duration: 0.5 }}
+              transition={prefersReducedMotion ? {} : { duration: 0.5 }}
               className="columns-1 md:columns-2 lg:columns-3 gap-4 space-y-4"
             >
               {filteredProjects.map((project, index) => (
                 <motion.div
                   key={project.id}
-                  initial={{ opacity: 0, y: 30 }}
+                  initial={prefersReducedMotion ? {} : { opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1 }}
+                  transition={prefersReducedMotion ? {} : { delay: index * 0.1 }}
                   className="break-inside-avoid group cursor-pointer relative overflow-hidden"
                   onClick={() => openLightbox(project)}
+                  role="button"
+                  tabIndex={0}
+                  aria-label={`View ${project.title} in full size`}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      openLightbox(project);
+                    }
+                  }}
                 >
                   <div className="relative">
                     <Image
@@ -179,7 +195,7 @@ export function PhotographyImmersiveTemplate() {
                     {/* Overlay on Hover */}
                     <div className="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                       <div className="text-center p-6">
-                        <h3 className="text-2xl font-light mb-2 text-gray-900">{project.title}</h3>
+                        <h3 className={`text-2xl font-light mb-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>{project.title}</h3>
                         <p className="text-sm text-white/80 mb-4">{project.description}</p>
                         {project.exif && (
                           <div className="text-xs text-white/60 space-y-1">
@@ -203,7 +219,7 @@ export function PhotographyImmersiveTemplate() {
       <AnimatePresence>
         {lightboxOpen && selectedImage && (
           <motion.div
-            initial={{ opacity: 0 }}
+            initial={prefersReducedMotion ? {} : { opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             className="fixed inset-0 z-50 bg-black/95 backdrop-blur-sm flex items-center justify-center p-4"
@@ -212,12 +228,13 @@ export function PhotographyImmersiveTemplate() {
             <button
               className="absolute top-6 right-6 p-2 hover:bg-white/10 rounded-full transition-colors"
               onClick={() => setLightboxOpen(false)}
+              aria-label="Close lightbox"
             >
               <FiClose size={32} />
             </button>
 
             <motion.div
-              initial={{ scale: 0.9 }}
+              initial={prefersReducedMotion ? {} : { scale: 0.9 }}
               animate={{ scale: 1 }}
               exit={{ scale: 0.9 }}
               className="max-w-6xl w-full"
@@ -233,7 +250,7 @@ export function PhotographyImmersiveTemplate() {
                 />
               </div>
               <div className="mt-6 text-center">
-                <h3 className="text-3xl font-light mb-2 text-gray-900">{selectedImage.title}</h3>
+                <h3 className={`text-3xl font-light mb-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>{selectedImage.title}</h3>
                 <p className="text-white/80 mb-4">{selectedImage.description}</p>
                 {selectedImage.exif && (
                   <div className="flex flex-wrap justify-center gap-6 text-sm text-white/60">
@@ -267,7 +284,7 @@ export function PhotographyImmersiveTemplate() {
 
             <ScrollReveal delay={0.3}>
               <div>
-                <h2 className="text-3xl sm:text-4xl md:text-5xl font-light mb-8 tracking-tight text-gray-900">{tt.common.about}</h2>
+                <h2 className={`text-3xl sm:text-4xl md:text-5xl font-light mb-8 tracking-tight ${isDark ? 'text-white' : 'text-gray-900'}`}>{tt.common.about}</h2>
                 <p className="text-lg text-white/70 leading-relaxed mb-6">
                   {portfolioData.bio}
                 </p>
@@ -289,14 +306,14 @@ export function PhotographyImmersiveTemplate() {
       <section className="py-32 border-t border-white/10">
         <div className="container mx-auto px-6">
           <ScrollReveal>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-light mb-16 text-center tracking-tight text-gray-900">Services</h2>
+            <h2 className={`text-3xl sm:text-4xl md:text-5xl font-light mb-16 text-center tracking-tight ${isDark ? 'text-white' : 'text-gray-900'}`}>Services</h2>
           </ScrollReveal>
 
           <div className="grid md:grid-cols-3 gap-12 max-w-5xl mx-auto">
             {portfolioData.services.map((service, index) => (
               <ScrollReveal key={service.title} delay={index * 0.15}>
                 <div className="text-center">
-                  <h3 className="text-2xl font-light mb-4 text-gray-900">{service.title}</h3>
+                  <h3 className={`text-2xl font-light mb-4 ${isDark ? 'text-white' : 'text-gray-900'}`}>{service.title}</h3>
                   <p className="text-white/60 leading-relaxed mb-4">{service.description}</p>
                   <div className="text-sm text-white/40">{service.price}</div>
                 </div>
@@ -310,12 +327,12 @@ export function PhotographyImmersiveTemplate() {
       <section id="contact" className="py-32 border-t border-white/10">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={prefersReducedMotion ? {} : { opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="text-center max-w-3xl mx-auto"
           >
-            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light mb-8 tracking-tight break-words text-gray-900">
+            <h2 className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light mb-8 tracking-tight break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>
               {tt.common.letsWorkTogether}
             </h2>
             <p className="text-xl text-white/70 mb-12">
@@ -356,14 +373,14 @@ export function PhotographyImmersiveTemplate() {
       <section className="py-32 border-t border-white/10">
         <div className="container mx-auto px-6">
           <ScrollReveal>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-light mb-16 text-center tracking-tight text-gray-900">Specializations</h2>
+            <h2 className={`text-3xl sm:text-4xl md:text-5xl font-light mb-16 text-center tracking-tight ${isDark ? 'text-white' : 'text-gray-900'}`}>Specializations</h2>
           </ScrollReveal>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {['Portrait Photography', 'Landscape Photography', 'Wedding Photography', 'Commercial Photography', 'Fine Art Photography', 'Editorial Photography'].map((skill, i) => (
               <ScrollReveal key={i} delay={i * 0.1}>
                 <div className="border border-white/10 p-8 text-center hover:bg-white/5 transition-colors duration-300">
-                  <span className="text-sm font-light tracking-wide text-gray-900">{skill}</span>
+                  <span className={`text-sm font-light tracking-wide ${isDark ? 'text-white' : 'text-gray-900'}`}>{skill}</span>
                 </div>
               </ScrollReveal>
             ))}
@@ -375,7 +392,7 @@ export function PhotographyImmersiveTemplate() {
       <section className="py-32 border-t border-white/10">
         <div className="container mx-auto px-6">
           <ScrollReveal>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-light mb-8 text-center tracking-tight text-gray-900">Packages</h2>
+            <h2 className={`text-3xl sm:text-4xl md:text-5xl font-light mb-8 text-center tracking-tight ${isDark ? 'text-white' : 'text-gray-900'}`}>Packages</h2>
             <p className="text-center text-white/60 mb-16 max-w-2xl mx-auto">
               Tailored photography experiences to capture your moments
             </p>
@@ -390,7 +407,7 @@ export function PhotographyImmersiveTemplate() {
               <ScrollReveal key={i} delay={i * 0.15}>
                 <div className={`border ${pkg.featured ? 'border-white' : 'border-white/20'} p-10 hover:border-white/60 transition-colors`}>
                   <div className="text-xs uppercase tracking-widest mb-8 text-white/60">{pkg.name}</div>
-                  <div className="text-5xl font-light mb-12 text-gray-900">{pkg.price}</div>
+                  <div className={`text-5xl font-light mb-12 ${isDark ? 'text-white' : 'text-gray-900'}`}>{pkg.price}</div>
                   <ul className="space-y-4 mb-12">
                     {pkg.features.map((f, idx) => (
                       <li key={idx} className="text-sm text-white/70 flex items-center gap-3">
@@ -413,7 +430,7 @@ export function PhotographyImmersiveTemplate() {
       <section className="py-32 border-t border-white/10">
         <div className="container mx-auto px-6">
           <ScrollReveal>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-light mb-16 text-center tracking-tight text-gray-900">Kind Words</h2>
+            <h2 className={`text-3xl sm:text-4xl md:text-5xl font-light mb-16 text-center tracking-tight ${isDark ? 'text-white' : 'text-gray-900'}`}>Kind Words</h2>
           </ScrollReveal>
 
           <div className="max-w-5xl mx-auto space-y-12">
@@ -440,7 +457,7 @@ export function PhotographyImmersiveTemplate() {
       <section className="py-32 border-t border-white/10">
         <div className="container mx-auto px-6">
           <ScrollReveal>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-light mb-16 text-center tracking-tight text-gray-900">Journey</h2>
+            <h2 className={`text-3xl sm:text-4xl md:text-5xl font-light mb-16 text-center tracking-tight ${isDark ? 'text-white' : 'text-gray-900'}`}>Journey</h2>
           </ScrollReveal>
 
           <div className="max-w-4xl mx-auto space-y-16">
@@ -456,7 +473,7 @@ export function PhotographyImmersiveTemplate() {
                     <div className="text-3xl font-light text-white/60">{item.year}</div>
                   </div>
                   <div className="md:col-span-4 border-l border-white/20 pl-8">
-                    <h4 className="text-2xl font-light mb-2 text-gray-900">{item.title}</h4>
+                    <h4 className={`text-2xl font-light mb-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>{item.title}</h4>
                     <p className="text-white/60 leading-relaxed">{item.desc}</p>
                   </div>
                 </div>
@@ -470,7 +487,7 @@ export function PhotographyImmersiveTemplate() {
       <section className="py-32 border-t border-white/10">
         <div className="container mx-auto px-6">
           <ScrollReveal>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-light mb-16 text-center tracking-tight text-gray-900">FAQ</h2>
+            <h2 className={`text-3xl sm:text-4xl md:text-5xl font-light mb-16 text-center tracking-tight ${isDark ? 'text-white' : 'text-gray-900'}`}>FAQ</h2>
           </ScrollReveal>
 
           <div className="max-w-4xl mx-auto space-y-8">

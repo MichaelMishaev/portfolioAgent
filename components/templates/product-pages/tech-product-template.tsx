@@ -11,6 +11,7 @@ import { FiCheck, FiStar, FiZap, FiCpu, FiActivity, FiTrendingUp ,
   FiX,
 } from "react-icons/fi";
 import Link from "next/link";
+import { useTheme } from "next-themes";
 
 const productData = {
   name: "HYPERX CLOUD ULTRA",
@@ -96,6 +97,8 @@ const productData = {
 };
 
 export function TechProductTemplate() {
+  const { theme } = useTheme();
+  const isDark = theme === 'dark';
   const [selectedColor, setSelectedColor] = useState(productData.configuration.colors[0]);  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const [selectedImage, setSelectedImage] = useState(0);
@@ -124,7 +127,7 @@ export function TechProductTemplate() {
             <button
               className="md:hidden p-3 text-foreground hover:bg-accent rounded-md border border-border transition-colors"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              aria-label="Toggle menu"
+              aria-label={mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
             >
               {mobileMenuOpen ? <FiX size={28} /> : <FiMenu size={28} />}
             </button>
@@ -213,7 +216,7 @@ export function TechProductTemplate() {
           <div>
             <FadeIn delay={0.2}>
               <Badge className="mb-4 bg-yellow-400 text-black font-bold">IN STOCK</Badge>
-              <h1 className="text-5xl md:text-4xl sm:text-5xl md:text-6xl font-black mb-4 tracking-tight uppercase break-words text-gray-900">
+              <h1 className={`text-5xl md:text-4xl sm:text-5xl md:text-6xl font-black mb-4 tracking-tight uppercase break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>
                 {productData.name}
               </h1>
               <p className="text-2xl text-yellow-400 font-bold mb-4 uppercase tracking-widest">
@@ -223,7 +226,7 @@ export function TechProductTemplate() {
                 {productData.description}
               </p>
 
-              <div className="text-3xl sm:text-4xl font-black mb-8 text-gray-900">
+              <div className={`text-3xl sm:text-4xl font-black mb-8 ${isDark ? 'text-white' : 'text-gray-900'}`}>
                 <span className="text-yellow-400">${productData.price}</span>
               </div>
 
@@ -269,7 +272,7 @@ export function TechProductTemplate() {
                   <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-gradient-to-br from-yellow-400 to-orange-500 flex items-center justify-center text-black text-2xl">
                     {feature.icon}
                   </div>
-                  <h3 className="text-sm font-bold uppercase tracking-wider mb-2 text-yellow-400 text-gray-900">
+                  <h3 className={`text-sm font-bold uppercase tracking-wider mb-2 text-yellow-400 ${isDark ? 'text-white' : 'text-gray-900'}`}>
                     {feature.title}
                   </h3>
                   <p className="text-xs text-gray-400">{feature.description}</p>
@@ -283,7 +286,7 @@ export function TechProductTemplate() {
       {/* Tech Specs */}
       <section id="specs" className="container mx-auto px-3 sm:px-3 py-16 border-t border-yellow-500/20">
         <ScrollReveal>
-          <h2 className="text-3xl sm:text-4xl font-black uppercase text-center mb-12 tracking-tight text-gray-900">
+          <h2 className={`text-3xl sm:text-4xl font-black uppercase text-center mb-12 tracking-tight ${isDark ? 'text-white' : 'text-gray-900'}`}>
             TECHNICAL <span className="text-yellow-400">SPECIFICATIONS</span>
           </h2>
         </ScrollReveal>
@@ -302,7 +305,7 @@ export function TechProductTemplate() {
                     {specs.map((spec) => (
                       <div key={spec.label} className="flex justify-between items-center border-b border-gray-800 pb-2">
                         <span className="text-sm text-gray-400 uppercase tracking-wide">{spec.label}</span>
-                        <span className="text-sm font-bold text-gray-900">{spec.value}</span>
+                        <span className={`text-sm font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>{spec.value}</span>
                       </div>
                     ))}
                   </div>
@@ -316,7 +319,7 @@ export function TechProductTemplate() {
       {/* Comparison Table */}
       <section className="container mx-auto px-3 sm:px-3 py-16 border-t border-yellow-500/20">
         <ScrollReveal>
-          <h2 className="text-3xl sm:text-4xl font-black uppercase text-center mb-12 tracking-tight text-gray-900">
+          <h2 className={`text-3xl sm:text-4xl font-black uppercase text-center mb-12 tracking-tight ${isDark ? 'text-white' : 'text-gray-900'}`}>
             HOW WE <span className="text-yellow-400">COMPARE</span>
           </h2>
         </ScrollReveal>
@@ -325,10 +328,10 @@ export function TechProductTemplate() {
           <table className="w-full">
             <thead>
               <tr className="border-b-2 border-yellow-500">
-                <th className="text-left py-4 px-3 uppercase text-sm tracking-wider text-gray-900">Feature</th>
-                <th className="text-center py-4 px-3 uppercase text-sm tracking-wider bg-yellow-400/10 text-gray-900">HyperX Ultra</th>
-                <th className="text-center py-4 px-3 uppercase text-sm tracking-wider text-gray-900">Competitor A</th>
-                <th className="text-center py-4 px-3 uppercase text-sm tracking-wider text-gray-900">Competitor B</th>
+                <th className={`text-left py-4 px-3 uppercase text-sm tracking-wider ${isDark ? 'text-white' : 'text-gray-900'}`}>Feature</th>
+                <th className={`text-center py-4 px-3 uppercase text-sm tracking-wider bg-yellow-400/10 ${isDark ? 'text-white' : 'text-gray-900'}`}>HyperX Ultra</th>
+                <th className={`text-center py-4 px-3 uppercase text-sm tracking-wider ${isDark ? 'text-white' : 'text-gray-900'}`}>Competitor A</th>
+                <th className={`text-center py-4 px-3 uppercase text-sm tracking-wider ${isDark ? 'text-white' : 'text-gray-900'}`}>Competitor B</th>
               </tr>
             </thead>
             <tbody>
@@ -354,7 +357,7 @@ export function TechProductTemplate() {
       {/* Reviews */}
       <section id="reviews" className="container mx-auto px-3 sm:px-3 py-16 border-t border-yellow-500/20">
         <ScrollReveal>
-          <h2 className="text-3xl sm:text-4xl font-black uppercase text-center mb-4 tracking-tight text-gray-900">
+          <h2 className={`text-3xl sm:text-4xl font-black uppercase text-center mb-4 tracking-tight ${isDark ? 'text-white' : 'text-gray-900'}`}>
             WHAT <span className="text-yellow-400">PROS SAY</span>
           </h2>
           <div className="flex items-center justify-center gap-2 mb-12">
@@ -390,7 +393,7 @@ export function TechProductTemplate() {
         <ScrollReveal>
           <Card className="max-w-full mx-auto bg-gradient-to-r from-yellow-400 to-orange-500 border-0">
             <CardContent className="p-12 text-center text-black">
-              <h2 className="text-3xl sm:text-5xl font-black uppercase mb-4 tracking-tight break-words text-gray-900">
+              <h2 className={`text-3xl sm:text-5xl font-black uppercase mb-4 tracking-tight break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>
                 READY TO DOMINATE?
               </h2>
               <p className="text-xl mb-8 font-semibold text-white">

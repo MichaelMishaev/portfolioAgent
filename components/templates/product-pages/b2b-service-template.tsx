@@ -19,6 +19,7 @@ import {
   FiX,
 } from "react-icons/fi";
 import Link from "next/link";
+import { useTheme } from "next-themes";
 
 const serviceData = {
   name: "STRATEX CONSULTING",
@@ -240,6 +241,8 @@ const serviceData = {
 };
 
 export function B2BServiceTemplate() {
+  const { theme } = useTheme();
+  const isDark = theme === 'dark';
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const [selectedIndustry, setSelectedIndustry] = useState<string | null>(null);
@@ -281,7 +284,7 @@ export function B2BServiceTemplate() {
             <button
               className="md:hidden p-3 text-foreground hover:bg-accent rounded-md border border-border transition-colors"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              aria-label="Toggle menu"
+              aria-label={mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
             >
               {mobileMenuOpen ? <FiX size={28} /> : <FiMenu size={28} />}
             </button>
@@ -326,7 +329,7 @@ export function B2BServiceTemplate() {
         <div className="container mx-auto px-3 max-w-full">
           <div className="max-w-full mx-auto text-center">
             <FadeIn>
-              <h1 className="text-6xl md:text-7xl font-bold mb-6 tracking-tight text-gray-900">
+              <h1 className={`text-6xl md:text-7xl font-bold mb-6 tracking-tight ${isDark ? 'text-white' : 'text-gray-900'}`}>
                 {serviceData.name}
               </h1>
               <p className="text-3xl font-light mb-8 text-blue-200">{serviceData.tagline}</p>
@@ -358,7 +361,7 @@ export function B2BServiceTemplate() {
         <div className="container mx-auto px-3 max-w-full">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <h2 className="text-4xl sm:text-5xl font-bold mb-6 break-words text-gray-900">Our Capabilities</h2>
+              <h2 className={`text-4xl sm:text-5xl font-bold mb-6 break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>Our Capabilities</h2>
               <p className="text-xl text-stone-600 max-w-full mx-auto">
                 Integrated services that deliver measurable business impact across your organization.
               </p>
@@ -371,7 +374,7 @@ export function B2BServiceTemplate() {
                 <Card className="h-full border-2 border-stone-200 hover:border-red-600 transition-colors">
                   <CardHeader>
                     <capability.icon className="w-12 h-12 text-red-600 mb-4" />
-                    <CardTitle className="text-2xl mb-3 text-gray-900">{capability.name}</CardTitle>
+                    <CardTitle className={`text-2xl mb-3 ${isDark ? 'text-white' : 'text-gray-900'}`}>{capability.name}</CardTitle>
                     <p className="text-stone-600">{capability.description}</p>
                   </CardHeader>
                   <CardContent>
@@ -379,7 +382,7 @@ export function B2BServiceTemplate() {
                       {capability.features.map((feature) => (
                         <li key={feature} className="flex items-center gap-2">
                           <FiCheckCircle className="w-4 h-4 text-red-600 flex-shrink-0" />
-                          <span className="text-sm text-gray-900">{feature}</span>
+                          <span className={`text-sm ${isDark ? 'text-white' : 'text-gray-900'}`}>{feature}</span>
                         </li>
                       ))}
                     </ul>
@@ -396,7 +399,7 @@ export function B2BServiceTemplate() {
         <div className="container mx-auto px-3 max-w-full">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <h2 className="text-4xl sm:text-5xl font-bold mb-6 break-words text-gray-900">Proven Results</h2>
+              <h2 className={`text-4xl sm:text-5xl font-bold mb-6 break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>Proven Results</h2>
               <p className="text-xl text-stone-600 max-w-full mx-auto">
                 Real transformations. Real impact. Real ROI.
               </p>
@@ -417,7 +420,7 @@ export function B2BServiceTemplate() {
                     </div>
                     <div className="md:col-span-3 p-8">
                       <Badge className="mb-4 bg-blue-900">{study.industry}</Badge>
-                      <h3 className="text-3xl font-bold mb-6 text-gray-900">{study.client}</h3>
+                      <h3 className={`text-3xl font-bold mb-6 ${isDark ? 'text-white' : 'text-gray-900'}`}>{study.client}</h3>
 
                       <div className="space-y-6 mb-8">
                         <div>
@@ -462,7 +465,7 @@ export function B2BServiceTemplate() {
         <div className="container mx-auto px-3 max-w-full">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <h2 className="text-4xl sm:text-5xl font-bold mb-6 break-words text-gray-900">Industry Expertise</h2>
+              <h2 className={`text-4xl sm:text-5xl font-bold mb-6 break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>Industry Expertise</h2>
               <p className="text-xl text-stone-600 max-w-full mx-auto">
                 Deep sector knowledge combined with cross-industry best practices.
               </p>
@@ -481,13 +484,13 @@ export function B2BServiceTemplate() {
                   }
                 >
                   <CardHeader>
-                    <CardTitle className="text-xl text-gray-900">{industry.name}</CardTitle>
+                    <CardTitle className={`text-xl ${isDark ? 'text-white' : 'text-gray-900'}`}>{industry.name}</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <ul className="space-y-2">
                       {industry.expertise.map((item) => (
-                        <li key={item} className="flex items-center gap-2 text-sm text-gray-900">
-                          <FiArrowRight className="w-4 h-4 text-red-600 flex-shrink-0" />
+                        <li key={item} className={`flex items-center gap-2 text-sm ${isDark ? 'text-white' : 'text-gray-900'}`}>
+                          <FiArrowRight className="w-4 h-4 text-red-600 flex-shrink-0" aria-hidden="true" />
                           {item}
                         </li>
                       ))}
@@ -505,7 +508,7 @@ export function B2BServiceTemplate() {
         <div className="container mx-auto px-3 max-w-full">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <h2 className="text-4xl sm:text-5xl font-bold mb-6 break-words text-gray-900">Insights & Research</h2>
+              <h2 className={`text-4xl sm:text-5xl font-bold mb-6 break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>Insights & Research</h2>
               <p className="text-xl text-stone-600 max-w-full mx-auto">
                 Download our latest thinking on critical business challenges.
               </p>
@@ -519,13 +522,13 @@ export function B2BServiceTemplate() {
                   <CardContent className="p-8">
                     <item.icon className="w-12 h-12 text-blue-900 mb-6" />
                     <Badge className="mb-4 bg-stone-200 text-stone-900">{item.type}</Badge>
-                    <h3 className="text-xl font-bold mb-3 text-gray-900">{item.title}</h3>
+                    <h3 className={`text-xl font-bold mb-3 ${isDark ? 'text-white' : 'text-gray-900'}`}>{item.title}</h3>
                     <p className="text-stone-600 mb-6">{item.description}</p>
                     <Button
                       variant="outline"
                       className="w-full border-blue-900 text-blue-900 hover:bg-blue-900 hover:text-white"
                     >
-                      <FiDownload className="w-4 h-4 mr-2" />
+                      <FiDownload className="w-4 h-4 mr-2" aria-hidden="true" />
                       Download
                     </Button>
                   </CardContent>
@@ -540,7 +543,7 @@ export function B2BServiceTemplate() {
       <section className="py-24 bg-stone-50">
         <div className="container mx-auto px-3 max-w-full">
           <ScrollReveal>
-            <h3 className="text-center text-2xl font-bold mb-12 text-stone-600 text-gray-900">
+            <h3 className={`text-center text-2xl font-bold mb-12 text-stone-600 ${isDark ? 'text-white' : 'text-gray-900'}`}>
               Trusted by Industry Leaders
             </h3>
           </ScrollReveal>
@@ -564,7 +567,7 @@ export function B2BServiceTemplate() {
         <div className="container mx-auto px-3 max-w-full">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <h2 className="text-4xl sm:text-5xl font-bold mb-6 break-words text-gray-900">{serviceData.applicationProcess.title}</h2>
+              <h2 className={`text-4xl sm:text-5xl font-bold mb-6 break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>{serviceData.applicationProcess.title}</h2>
               <p className="text-xl text-stone-600 max-w-full mx-auto">
                 A rigorous, collaborative approach designed to deliver lasting impact.
               </p>
@@ -579,7 +582,7 @@ export function B2BServiceTemplate() {
                     {step.number}
                   </div>
                   <div>
-                    <h3 className="text-2xl font-bold mb-3 text-gray-900">{step.title}</h3>
+                    <h3 className={`text-2xl font-bold mb-3 ${isDark ? 'text-white' : 'text-gray-900'}`}>{step.title}</h3>
                     <p className="text-lg text-stone-600">{step.description}</p>
                   </div>
                 </div>
@@ -594,7 +597,7 @@ export function B2BServiceTemplate() {
         <div className="container mx-auto px-3 max-w-full">
           <ScrollReveal>
             <div className="max-w-full mx-auto text-center">
-              <h2 className="text-5xl md:text-4xl sm:text-5xl md:text-6xl font-bold mb-8 break-words text-gray-900">Ready to Transform?</h2>
+              <h2 className={`text-5xl md:text-4xl sm:text-5xl md:text-6xl font-bold mb-8 break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>Ready to Transform?</h2>
               <p className="text-xl mb-12 text-blue-100 max-w-full mx-auto">
                 Schedule a complimentary consultation to explore how we can help you achieve your
                 strategic objectives.

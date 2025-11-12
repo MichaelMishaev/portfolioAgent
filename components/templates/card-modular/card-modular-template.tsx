@@ -316,7 +316,7 @@ return (
             <button
               className="md:hidden p-3 text-foreground hover:bg-accent rounded-md border border-border transition-colors"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              aria-label="Toggle menu"
+              aria-label={mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
             >
               {mobileMenuOpen ? <FiX size={28} /> : <FiMenu size={28} />}
             </button>
@@ -376,7 +376,7 @@ return (
                 {portfolioData.bio}
               </p>
               <Button size="lg">
-                <FiMail className="mr-2" />
+                <FiMail className="mr-2" aria-hidden="true" />
                 Get in Touch
               </Button>
             </CardContent>
@@ -475,7 +475,7 @@ return (
                     />
                   )}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                    <FiExternalLink className="w-8 h-8 text-white" />
+                    <FiExternalLink className="w-8 h-8 text-white" aria-hidden="true" />
                   </div>
                   <Badge className="absolute top-3 left-3" variant="secondary">
                     {project.category}
@@ -756,7 +756,7 @@ return (
                   </p>
                   <Button variant="ghost" size="sm" className="group-hover:gap-2 transition-all">
                     Read More
-                    <FiExternalLink className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    <FiExternalLink className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" aria-hidden="true" />
                   </Button>
                 </CardContent>
               </Card>
@@ -838,7 +838,7 @@ return (
             <CardContent className="space-y-6">
               <div className="flex flex-col gap-4 sm:flex-row gap-4 justify-center">
                 <Button size="lg" className="w-full sm:w-auto min-h-[44px]">
-                  <FiMail className="mr-2" />
+                  <FiMail className="mr-2" aria-hidden="true" />
                   Email Me
                 </Button>
                 <Button variant="outline" size="lg" className={`w-full sm:w-auto min-h-[44px] ! ${darkMode ? 'text-white' : 'text-slate-900'}`}>

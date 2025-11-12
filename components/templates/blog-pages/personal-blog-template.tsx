@@ -382,7 +382,7 @@ export function PersonalBlogTemplate() {  const { theme } = useTheme();
                   </div>
                   <Button className="w-fit">
                     Read Article
-                    <FiArrowRight className="ml-2 w-4 h-4" />
+                    <FiArrowRight className="ml-2 w-4 h-4" aria-hidden="true" />
                   </Button>
                 </div>
               </div>
@@ -470,7 +470,7 @@ export function PersonalBlogTemplate() {  const { theme } = useTheme();
               <div className="text-center mt-12">
                 <Button variant="outline" size="lg">
                   Load More Articles
-                  <FiArrowRight className="ml-2 w-4 h-4" />
+                  <FiArrowRight className="ml-2 w-4 h-4" aria-hidden="true" />
                 </Button>
               </div>
             </div>
@@ -520,7 +520,7 @@ export function PersonalBlogTemplate() {  const { theme } = useTheme();
               {/* Newsletter Widget */}
               <Card className="border-0 shadow bg-gradient-to-br from-blue-600 to-purple-600 text-white">
                 <CardContent className="p-6">
-                  <FiMail className="w-10 h-10 mb-4" />
+                  <FiMail className="w-10 h-10 mb-4" aria-hidden="true" />
                   <h3 className="text-xl font-bold mb-2 text-gray-900">Never Miss an Update</h3>
                   <p className="text-blue-100 mb-4 text-sm">
                     Get the latest articles delivered to your inbox weekly.
@@ -600,13 +600,13 @@ export function PersonalBlogTemplate() {  const { theme } = useTheme();
                     <p className="text-gray-600 mb-4">{resource.description}</p>
                     <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
                       <span className="flex items-center gap-1">
-                        <FiDownload className="w-4 h-4" />
+                        <FiDownload className="w-4 h-4" aria-hidden="true" />
                         {resource.downloads} downloads
                       </span>
                       <span>{resource.size}</span>
                     </div>
                     <Button className="w-full">
-                      <FiDownload className="mr-2 w-4 h-4" />
+                      <FiDownload className="mr-2 w-4 h-4" aria-hidden="true" />
                       Download
                     </Button>
                   </CardContent>
@@ -648,7 +648,7 @@ export function PersonalBlogTemplate() {  const { theme } = useTheme();
                   </div>
                 </div>
                 <Button size="lg">
-                  <FiMail className="mr-2 w-5 h-5" />
+                  <FiMail className="mr-2 w-5 h-5" aria-hidden="true" />
                   Get in Touch
                 </Button>
               </div>
@@ -672,7 +672,7 @@ export function PersonalBlogTemplate() {  const { theme } = useTheme();
       <section id="newsletter" className="py-20 bg-gradient-to-br from-blue-600 to-purple-600">
         <div className="container mx-auto px-3 sm:px-3 max-w-full text-center">
           <ScrollReveal>
-            <FiMail className="w-16 h-16 mx-auto mb-6 text-white" />
+            <FiMail className="w-16 h-16 mx-auto mb-6 text-white" aria-hidden="true" />
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 break-words">Join the Newsletter</h2>
             <p className="text-xl text-blue-100 mb-8">
               Get the latest articles and insights delivered to your inbox every week.

@@ -29,6 +29,17 @@ export function TemplateDetailView({ template }: TemplateDetailViewProps) {
   const [currentScreenshot, setCurrentScreenshot] = useState(0);
   const [expandedFeatures, setExpandedFeatures] = useState<Set<number>>(new Set());
 
+  // Generate Telegram contact link with template info
+  const getTelegramContactUrl = () => {
+    const baseUrl = typeof window !== 'undefined' ? window.location.origin : 'https://yoursite.com';
+    const templateUrl = `${baseUrl}/templates/${template.id}`;
+    const message = language === 'en'
+      ? `Hi! I'm interested in the ${template.name} template.\n\nTemplate URL: ${templateUrl}`
+      : `Привет! Меня интересует шаблон ${template.name}.\n\nСсылка на шаблон: ${templateUrl}`;
+
+    return `${TELEGRAM_CONTACT_LINK}?text=${encodeURIComponent(message)}`;
+  };
+
   const nextScreenshot = () => {
     setCurrentScreenshot((prev) => (prev + 1) % template.screenshots.length);
   };
@@ -166,33 +177,7 @@ export function TemplateDetailView({ template }: TemplateDetailViewProps) {
 
             {/* CTA Buttons - Hidden on mobile (lg:hidden), visible on desktop (lg:flex) */}
             <div className="hidden lg:flex flex-col gap-4 mb-8">
-              <Button
-                asChild
-                size="lg"
-                className="h-14 text-base font-bold bg-gradient-to-r from-purple-600 via-violet-600 to-purple-600 hover:from-purple-700 hover:via-violet-700 hover:to-purple-700 text-white shadow-lg hover:shadow-xl transition-all duration-200 rounded-xl"
-              >
-                <Link href={`/templates/${template.id}/builder`} className="flex items-center justify-center gap-2.5">
-                  <FiEdit3 className="w-5 h-5" />
-                  <span>{language === 'en' ? 'Try Builder' : 'Попробовать Билдер'}</span>
-                </Link>
-              </Button>
-
-              <Button
-                asChild
-                size="lg"
-                className="h-14 text-base font-semibold bg-[#229ED9] hover:bg-[#1c8cbf] text-white shadow-lg hover:shadow-xl transition-all duration-200 rounded-xl"
-              >
-                <a
-                  href={TELEGRAM_CONTACT_LINK}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2.5"
-                >
-                  <FaTelegramPlane className="w-5 h-5" />
-                  <span>{language === 'en' ? 'Contact Us' : 'Связаться'}</span>
-                </a>
-              </Button>
-
+              {/* Demo Button - First */}
               <Button
                 asChild
                 size="lg"
@@ -204,18 +189,51 @@ export function TemplateDetailView({ template }: TemplateDetailViewProps) {
                   <span>{language === 'en' ? 'View Demo' : 'Посмотреть Демо'}</span>
                 </Link>
               </Button>
-            </div>
 
-            <Button
-              asChild
-              size="lg"
-              className="hidden lg:flex w-full h-16 text-lg font-bold bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white shadow-xl hover:shadow-2xl hover:scale-[1.03] transition-all duration-300 rounded-xl"
-            >
-              <Link href={`/checkout/${template.id}`} className="flex items-center justify-center gap-3">
-                <FiShoppingCart className="w-6 h-6" />
-                <span>{language === 'en' ? `Buy Now - $${template.price}` : `Купить - $${template.price}`}</span>
-              </Link>
-            </Button>
+              {/* Buy Now Button - Second */}
+              <Button
+                asChild
+                size="lg"
+                className="h-14 text-base font-bold bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white shadow-lg hover:shadow-xl transition-all duration-200 rounded-xl"
+              >
+                <Link href={`/checkout/${template.id}`} className="flex items-center justify-center gap-2.5">
+                  <FiShoppingCart className="w-5 h-5" />
+                  <span>{language === 'en' ? `Buy Now - $${template.price}` : `Купить - $${template.price}`}</span>
+                </Link>
+              </Button>
+
+              {/* Builder Button - Third (with "Soon" badge) */}
+              <Button
+                asChild
+                size="lg"
+                className="h-14 text-base font-bold bg-gradient-to-r from-purple-600 via-violet-600 to-purple-600 hover:from-purple-700 hover:via-violet-700 hover:to-purple-700 text-white shadow-lg hover:shadow-xl transition-all duration-200 rounded-xl relative"
+              >
+                <Link href={`/templates/${template.id}/builder`} className="flex items-center justify-center gap-2.5">
+                  <FiEdit3 className="w-5 h-5" />
+                  <span>{language === 'en' ? 'Try Builder' : 'Попробовать Билдер'}</span>
+                  <Badge className="ml-2 bg-yellow-500 text-black hover:bg-yellow-600">
+                    {language === 'en' ? 'Soon' : 'Скоро'}
+                  </Badge>
+                </Link>
+              </Button>
+
+              {/* Contact Us Button - Fourth */}
+              <Button
+                asChild
+                size="lg"
+                className="h-14 text-base font-semibold bg-[#229ED9] hover:bg-[#1c8cbf] text-white shadow-lg hover:shadow-xl transition-all duration-200 rounded-xl"
+              >
+                <a
+                  href={getTelegramContactUrl()}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2.5"
+                >
+                  <FaTelegramPlane className="w-5 h-5" />
+                  <span>{language === 'en' ? 'Contact Us' : 'Связаться'}</span>
+                </a>
+              </Button>
+            </div>
           </motion.div>
         </div>
 
@@ -466,22 +484,19 @@ export function TemplateDetailView({ template }: TemplateDetailViewProps) {
       {/* Sticky Bottom Bar (Mobile) */}
       <div className="fixed bottom-0 left-0 right-0 z-50 lg:hidden bg-background/95 backdrop-blur-sm border-t shadow-2xl">
         <div className="p-3">
+          {/* Demo Button - First */}
           <Button
             asChild
-            className="mb-3 w-full h-11 bg-[#229ED9] hover:bg-[#1c8cbf] text-white font-semibold shadow-md hover:shadow-xl rounded-lg"
+            variant="outline"
+            className="mb-3 w-full h-11 border-2 font-semibold shadow-md hover:shadow-xl rounded-lg"
           >
-            <a
-              href={TELEGRAM_CONTACT_LINK}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2"
-            >
-              <FaTelegramPlane className="w-4 h-4" />
-              <span>{language === 'en' ? 'Contact Us' : 'Связаться'}</span>
-            </a>
+            <Link href={`/templates/${template.id}/demo`} className="flex items-center justify-center gap-2">
+              <FiEye className="w-4 h-4" />
+              <span>{language === 'en' ? 'View Demo' : 'Посмотреть Демо'}</span>
+            </Link>
           </Button>
 
-          {/* Price and Buy Button Row */}
+          {/* Price and Buy Button Row - Second */}
           <div className="flex items-center justify-between gap-3 mb-3">
             <div>
               <div className="text-2xl font-bold">${template.price}</div>
@@ -500,19 +515,27 @@ export function TemplateDetailView({ template }: TemplateDetailViewProps) {
             </Button>
           </div>
 
-          {/* Builder and Demo Buttons Row */}
+          {/* Builder and Contact Us Buttons Row - Third */}
           <div className="grid grid-cols-2 gap-2">
-            <Button asChild variant="outline" size="sm" className="h-10 border-2">
+            <Button asChild variant="outline" size="sm" className="h-10 border-2 relative">
               <Link href={`/templates/${template.id}/builder`} className="flex items-center justify-center gap-1.5">
                 <FiEdit3 className="w-4 h-4" />
                 <span className="text-xs font-semibold">{language === 'en' ? 'Builder' : 'Билдер'}</span>
+                <Badge className="ml-1 px-1.5 py-0.5 text-[10px] bg-yellow-500 text-black">
+                  {language === 'en' ? 'Soon' : 'Скоро'}
+                </Badge>
               </Link>
             </Button>
-            <Button asChild variant="outline" size="sm" className="h-10 border-2">
-              <Link href={`/templates/${template.id}/demo`} className="flex items-center justify-center gap-1.5">
-                <FiEye className="w-4 h-4" />
-                <span className="text-xs font-semibold">{language === 'en' ? 'Demo' : 'Демо'}</span>
-              </Link>
+            <Button asChild size="sm" className="h-10 bg-[#229ED9] hover:bg-[#1c8cbf] text-white">
+              <a
+                href={getTelegramContactUrl()}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-1.5"
+              >
+                <FaTelegramPlane className="w-4 h-4" />
+                <span className="text-xs font-semibold">{language === 'en' ? 'Contact' : 'Связь'}</span>
+              </a>
             </Button>
           </div>
         </div>

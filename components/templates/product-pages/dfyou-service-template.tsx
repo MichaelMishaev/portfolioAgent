@@ -320,7 +320,7 @@ export function DFYouServiceTemplate() {
             <button
               className="md:hidden p-3 text-foreground hover:bg-accent rounded-md border border-border transition-colors"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              aria-label="Toggle menu"
+              aria-label={mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
             >
               {mobileMenuOpen ? <FiX size={28} /> : <FiMenu size={28} />}
             </button>
@@ -516,7 +516,7 @@ export function DFYouServiceTemplate() {
                   <div className="space-y-4 mb-8">
                     {serviceData.pricing.plan.features.map((feature) => (
                       <div key={feature} className="flex items-start gap-3">
-                        <FiCheck className="w-6 h-6 text-blue-600 flex-shrink-0 mt-0.5" />
+                        <FiCheck className="w-6 h-6 text-blue-600 flex-shrink-0 mt-0.5" aria-hidden="true" />
                         <span className="text-lg text-gray-900">{feature}</span>
                       </div>
                     ))}

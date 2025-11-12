@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
+import { useReducedMotion } from "@/lib/hooks/use-reduced-motion";
 import { FadeIn } from "@/components/animations/fade-in";
 import { ScrollReveal } from "@/components/animations/scroll-reveal";
 import { Button } from "@/components/ui/button";
@@ -15,6 +16,7 @@ import Image from "next/image";
 
 export function InteractiveAgencyTemplate() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const prefersReducedMotion = useReducedMotion();
   const { tt } = useI18n();
   const portfolioData = tt?.interactiveAgency;
   const { scrollYProgress } = useScroll();
@@ -55,7 +57,7 @@ export function InteractiveAgencyTemplate() {
           <button
             className="md:hidden p-2 text-white"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            aria-label="Toggle menu"
+            aria-label={mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
           >
             {mobileMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
           </button>
@@ -64,7 +66,7 @@ export function InteractiveAgencyTemplate() {
         {/* Mobile Menu */}
         {mobileMenuOpen && (
           <motion.div
-            initial={{ opacity: 0, y: -20 }}
+            initial={prefersReducedMotion ? {} : { opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             className="md:hidden bg-black/95 backdrop-blur-xl border-t border-purple-500/20"
           >
@@ -104,12 +106,12 @@ export function InteractiveAgencyTemplate() {
 
         <div className="container mx-auto px-6 relative z-10 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 50 }}
+            initial={prefersReducedMotion ? {} : { opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={prefersReducedMotion ? {} : { duration: 0.8 }}
           >
             <motion.h1
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl lg:text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black mb-6 leading-none break-words text-gray-900"
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl lg:text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black mb-6 leading-none break-words"
               style={{
                 background: "linear-gradient(135deg, #8B5CF6 0%, #06B6D4 100%)",
                 WebkitBackgroundClip: "text",
@@ -122,21 +124,21 @@ export function InteractiveAgencyTemplate() {
 
             <motion.p
               className="text-xl md:text-3xl text-gray-300 mb-8 max-w-3xl mx-auto font-light"
-              initial={{ opacity: 0 }}
+              initial={prefersReducedMotion ? {} : { opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ delay: 0.3 }}
+              transition={prefersReducedMotion ? {} : { delay: 0.3 }}
             >
               {portfolioData.tagline}
             </motion.p>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6 }}
+              transition={prefersReducedMotion ? {} : { delay: 0.6 }}
               className="flex flex-wrap gap-4 justify-center"
             >
               <Button size="lg" className="bg-gradient-to-r from-purple-600 to-cyan-500 hover:from-purple-500 hover:to-cyan-400 text-lg px-8 text-white">
-                {tt.common.viewAll} <FiArrowRight className="ml-2" />
+                {tt.common.viewAll} <FiArrowRight className="ml-2" aria-hidden="true" />
               </Button>
               <Button size="lg" variant="outline" className="border-2 border-purple-500 !text-white !bg-transparent hover:bg-purple-500/10 text-lg px-8">
                 <FiPlay className="mr-2" /> Watch Showreel
@@ -147,8 +149,8 @@ export function InteractiveAgencyTemplate() {
           {/* Scroll Indicator */}
           <motion.div
             className="absolute bottom-10 left-1/2 -translate-x-1/2"
-            animate={{ y: [0, 10, 0] }}
-            transition={{ repeat: Infinity, duration: 2 }}
+            animate={prefersReducedMotion ? {} : { y: [0, 10, 0] }}
+            transition={prefersReducedMotion ? {} : { repeat: Infinity, duration: 2 }}
           >
             <div className="w-6 h-10 border-2 border-purple-500 rounded-full flex justify-center pt-2">
               <div className="w-1 h-2 bg-purple-500 rounded-full" />
@@ -164,10 +166,10 @@ export function InteractiveAgencyTemplate() {
             {portfolioData.stats.map((stat, index) => (
               <motion.div
                 key={stat.label}
-                initial={{ opacity: 0, y: 30 }}
+                initial={prefersReducedMotion ? {} : { opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
+                transition={prefersReducedMotion ? {} : { delay: index * 0.1 }}
                 className="text-center p-6 rounded-2xl bg-gradient-to-br from-purple-900/20 to-cyan-900/20 border border-purple-500/20 backdrop-blur-sm"
               >
                 <div className="text-5xl md:text-4xl sm:text-5xl md:text-6xl font-black mb-2 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent break-words text-white">
@@ -193,17 +195,17 @@ export function InteractiveAgencyTemplate() {
             {portfolioData.projects.map((project, index) => (
               <motion.div
                 key={project.id}
-                initial={{ opacity: 0, y: 50 }}
+                initial={prefersReducedMotion ? {} : { opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.2 }}
-                whileHover={{ scale: 1.02 }}
+                transition={prefersReducedMotion ? {} : { delay: index * 0.2 }}
+                whileHover={prefersReducedMotion ? {} : { scale: 1.02 }}
                 className="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-purple-900/20 to-cyan-900/20 border border-purple-500/20 backdrop-blur-sm"
               >
                 <div className="grid md:grid-cols-2 gap-8 p-8 md:p-12">
                   <div className="flex flex-col justify-center">
                     <div className="text-sm text-cyan-400 font-mono mb-4">{project.category}</div>
-                    <h3 className="text-3xl sm:text-5xl font-black mb-6 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-cyan-400 group-hover:bg-clip-text transition-all break-words text-gray-900">
+                    <h3 className="text-3xl sm:text-5xl font-black mb-6 text-white group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-cyan-400 group-hover:bg-clip-text transition-all break-words">
                       {project.title}
                     </h3>
                     <p className="text-lg text-gray-300 mb-6 leading-relaxed">{project.description}</p>
@@ -215,7 +217,7 @@ export function InteractiveAgencyTemplate() {
                       ))}
                     </div>
                     <Button className="w-fit bg-gradient-to-r from-purple-600 to-cyan-500 hover:from-purple-500 hover:to-cyan-400">
-                      View Case Study <FiExternalLink className="ml-2" />
+                      View Case Study <FiExternalLink className="ml-2" aria-hidden="true" />
                     </Button>
                   </div>
                   <div className="relative h-64 md:h-full min-h-[300px] rounded-2xl overflow-hidden">
@@ -247,15 +249,15 @@ export function InteractiveAgencyTemplate() {
             {portfolioData.services.map((service, index) => (
               <motion.div
                 key={service.title}
-                initial={{ opacity: 0, y: 30 }}
+                initial={prefersReducedMotion ? {} : { opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                whileHover={{ y: -10 }}
+                transition={prefersReducedMotion ? {} : { delay: index * 0.1 }}
+                whileHover={prefersReducedMotion ? {} : { y: -10 }}
                 className="p-8 rounded-2xl bg-gradient-to-br from-purple-900/20 to-cyan-900/20 border border-purple-500/20 backdrop-blur-sm group"
               >
                 <div className="text-4xl mb-6 group-hover:scale-110 transition-transform">{service.icon}</div>
-                <h3 className="text-2xl font-bold mb-4 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-cyan-400 group-hover:bg-clip-text transition-all text-gray-900">
+                <h3 className="text-2xl font-bold mb-4 text-white group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-cyan-400 group-hover:bg-clip-text transition-all">
                   {service.title}
                 </h3>
                 <p className="text-gray-400 leading-relaxed">{service.description}</p>
@@ -279,10 +281,10 @@ export function InteractiveAgencyTemplate() {
             {portfolioData.testimonials.map((testimonial, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, scale: 0.9 }}
+                initial={prefersReducedMotion ? {} : { opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.2 }}
+                transition={prefersReducedMotion ? {} : { delay: index * 0.2 }}
                 className="p-8 rounded-2xl bg-gradient-to-br from-purple-900/20 to-cyan-900/20 border border-purple-500/20 backdrop-blur-sm"
               >
                 <p className="text-lg text-gray-300 mb-6 leading-relaxed italic">"{testimonial.quote}"</p>
@@ -303,7 +305,7 @@ export function InteractiveAgencyTemplate() {
       <section id="contact" className="py-32 relative">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 50 }}
+            initial={prefersReducedMotion ? {} : { opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="rounded-3xl bg-gradient-to-br from-purple-600 to-cyan-500 p-12 md:p-20 text-center relative overflow-hidden"
@@ -315,7 +317,7 @@ export function InteractiveAgencyTemplate() {
                 Let's collaborate and build something extraordinary together.
               </p>
               <Button size="lg" className="bg-white !text-purple-600 hover:bg-gray-100 text-lg px-12">
-                Start a Project <FiArrowRight className="ml-2" />
+                Start a Project <FiArrowRight className="ml-2" aria-hidden="true" />
               </Button>
             </div>
           </motion.div>
@@ -346,7 +348,7 @@ export function InteractiveAgencyTemplate() {
 
           {/* Skills - Interactive Agency */}
           <section className="py-20 border-t border-gray-800">
-            <h3 className="text-3xl sm:text-4xl font-bold mb-12 text-center text-gray-900">Our Expertise</h3>
+            <h3 className="text-3xl sm:text-4xl font-bold mb-12 text-center text-white">Our Expertise</h3>
             <div className="grid md:grid-cols-4 gap-6">
               {['Interactive Design', 'Motion Graphics', 'Web Development', 'Brand Strategy', 'UX/UI', 'Digital Marketing', 'Animation', '3D Design'].map((skill, i) => (
                 <div key={i} className="bg-gradient-to-br from-purple-600 to-pink-600 p-6 rounded-xl text-center hover:scale-105 transition-transform">
@@ -359,7 +361,7 @@ export function InteractiveAgencyTemplate() {
           {/* About - Interactive Agency */}
           <section className="py-20 border-t border-gray-800 bg-gradient-to-br from-gray-900 to-black">
             <div className="max-w-4xl mx-auto text-center">
-              <h3 className="text-3xl sm:text-4xl font-bold mb-8 text-gray-900">Who We Are</h3>
+              <h3 className="text-3xl sm:text-4xl font-bold mb-8 text-white">Who We Are</h3>
               <p className="text-2xl text-gray-300 mb-6 font-semibold">
                 We're an interactive agency creating engaging digital experiences that connect brands with audiences.
               </p>
@@ -371,7 +373,7 @@ export function InteractiveAgencyTemplate() {
 
           {/* Pricing - Interactive Agency */}
           <section className="py-20 border-t border-gray-800">
-            <h3 className="text-3xl sm:text-4xl font-bold mb-12 text-center text-gray-900">Our Packages</h3>
+            <h3 className="text-3xl sm:text-4xl font-bold mb-12 text-center text-white">Our Packages</h3>
             <div className="grid md:grid-cols-3 gap-8">
               {[
                 { name: 'Interactive Basic', price: '$8,000', features: ['Interactive Website', 'Basic Animations', '3 Revisions', 'Mobile Optimized'] },
@@ -397,7 +399,7 @@ export function InteractiveAgencyTemplate() {
 
           {/* Timeline - Interactive Agency */}
           <section className="py-20 border-t border-gray-800">
-            <h3 className="text-3xl sm:text-4xl font-bold mb-12 text-center text-gray-900">Our Story</h3>
+            <h3 className="text-3xl sm:text-4xl font-bold mb-12 text-center text-white">Our Story</h3>
             <div className="max-w-3xl mx-auto space-y-6">
               {[
                 { year: '2024', title: 'Industry Leaders', desc: 'Recognized as top interactive agency' },

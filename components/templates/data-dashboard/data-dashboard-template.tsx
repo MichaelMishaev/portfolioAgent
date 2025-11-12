@@ -727,7 +727,7 @@ export function DataDashboardTemplate() {
                 size="lg"
                 className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white border-0 text-lg px-8 py-6 h-auto"
               >
-                <FiMail className="mr-2 w-5 h-5" />
+                <FiMail className="mr-2 w-5 h-5" aria-hidden="true" />
                 {portfolioData.email}
               </Button>
               <Button

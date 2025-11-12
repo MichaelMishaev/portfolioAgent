@@ -9,7 +9,9 @@ import { Card, CardContent } from "@/components/ui/card";
 import { FiMail, FiGithub, FiLinkedin, FiCode, FiLayers, FiZap } from "react-icons/fi";
 import Link from "next/link";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { useReducedMotion } from "@/lib/hooks/use-reduced-motion";
 import * as THREE from "three";
+import { useTheme } from "next-themes";
 
 const portfolioData = {
   name: "Alex Quantum",
@@ -148,6 +150,10 @@ function Scene3D() {
 }
 
 export function ThreeDImmersiveTemplate() {
+  const { theme } = useTheme();
+  const isDark = theme === 'dark';
+  const prefersReducedMotion = useReducedMotion();
+
   const { scrollYProgress } = useScroll();
   const opacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
 
@@ -188,36 +194,36 @@ export function ThreeDImmersiveTemplate() {
           style={{ opacity }}
         >
           <motion.h1
-            initial={{ opacity: 0, y: 30 }}
+            initial={prefersReducedMotion ? {} : { opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={prefersReducedMotion ? {} : { duration: 0.8 }}
             className="text-3xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent break-words text-white"
           >
             {portfolioData.name}
           </motion.h1>
 
           <motion.p
-            initial={{ opacity: 0, y: 30 }}
+            initial={prefersReducedMotion ? {} : { opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            transition={prefersReducedMotion ? {} : { duration: 0.8, delay: 0.2 }}
             className="text-xl sm:text-2xl md:text-3xl text-gray-300 mb-4"
           >
             {portfolioData.title}
           </motion.p>
 
           <motion.p
-            initial={{ opacity: 0, y: 30 }}
+            initial={prefersReducedMotion ? {} : { opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            transition={prefersReducedMotion ? {} : { duration: 0.8, delay: 0.4 }}
             className="text-lg text-gray-400 mb-12"
           >
             {portfolioData.tagline}
           </motion.p>
 
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={prefersReducedMotion ? {} : { opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
+            transition={prefersReducedMotion ? {} : { duration: 0.8, delay: 0.6 }}
           >
             <Button
               size="lg"
@@ -231,8 +237,8 @@ export function ThreeDImmersiveTemplate() {
         {/* Scroll Indicator */}
         <motion.div
           className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity }}
+          animate={prefersReducedMotion ? {} : { y: [0, 10, 0] }}
+          transition={prefersReducedMotion ? {} : { duration: 2, repeat: Infinity }}
         >
           <div className="w-6 h-10 border-2 border-gray-400 rounded-full flex items-start justify-center p-2">
             <div className="w-1.5 h-1.5 bg-gray-400 rounded-full animate-pulse" />
@@ -304,9 +310,9 @@ export function ThreeDImmersiveTemplate() {
                   <div className="w-full bg-gray-800 rounded-full h-3 overflow-hidden">
                     <motion.div
                       className="h-full bg-gradient-to-r from-cyan-500 to-purple-500"
-                      initial={{ width: 0 }}
+                      initial={prefersReducedMotion ? {} : { width: 0 }}
                       whileInView={{ width: `${skill.level}%` }}
-                      transition={{ duration: 1, delay: 0.2 }}
+                      transition={prefersReducedMotion ? {} : { duration: 1, delay: 0.2 }}
                       viewport={{ once: true }}
                     />
                   </div>
@@ -337,25 +343,34 @@ export function ThreeDImmersiveTemplate() {
               <Button
                 size="lg"
                 className="bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white border-0 text-lg px-8 py-6 h-auto"
+                aria-label="Send email to alex@quantum3d.dev"
               >
-                <FiMail className="mr-2 w-5 h-5" />
+                <FiMail className="mr-2 w-5 h-5" aria-hidden="true" />
                 alex@quantum3d.dev
               </Button>
               <Button
                 size="lg"
                 variant="outline"
                 className="bg-transparent border-2 border-gray-700 text-white hover:bg-gray-800 hover:text-white text-lg px-8 py-6 h-auto"
+                aria-label="Visit GitHub profile"
+                asChild
               >
-                <FiGithub className="mr-2 w-5 h-5" />
-                GitHub
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+                  <FiGithub className="mr-2 w-5 h-5" />
+                  GitHub
+                </a>
               </Button>
               <Button
                 size="lg"
                 variant="outline"
                 className="bg-transparent border-2 border-gray-700 text-white hover:bg-gray-800 hover:text-white text-lg px-8 py-6 h-auto"
+                aria-label="Visit LinkedIn profile"
+                asChild
               >
-                <FiLinkedin className="mr-2 w-5 h-5" />
-                LinkedIn
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                  <FiLinkedin className="mr-2 w-5 h-5" />
+                  LinkedIn
+                </a>
               </Button>
             </div>
           </ScrollReveal>
@@ -387,7 +402,7 @@ export function ThreeDImmersiveTemplate() {
       {/* About - 3D Immersive */}
       <section className="py-32 px-3 sm:px-3 bg-gradient-to-br from-indigo-950 to-black">
         <div className="container mx-auto max-w-4xl text-center text-white">
-          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-8 break-words text-gray-900">About</h2>
+          <h2 className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-8 break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>About</h2>
           <p className="text-2xl text-gray-300 mb-6">
             Crafting immersive 3D experiences that push the boundaries of web technology.
           </p>
@@ -455,7 +470,7 @@ export function ThreeDImmersiveTemplate() {
       {/* Call to Action - 3D Immersive */}
       <section className="py-32 px-3 sm:px-3 bg-gradient-to-br from-purple-600 via-pink-600 to-blue-600">
         <div className="container mx-auto max-w-4xl text-center text-white">
-          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-8 break-words text-gray-900">Ready to Go 3D?</h2>
+          <h2 className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-8 break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>Ready to Go 3D?</h2>
           <p className="text-2xl mb-12 opacity-90 text-white">
             Let's create an unforgettable immersive experience
           </p>

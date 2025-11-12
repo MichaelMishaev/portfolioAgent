@@ -6,8 +6,11 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { FiMail, FiInstagram, FiFacebook, FiPhone, FiMenu, FiX, FiExternalLink } from "react-icons/fi";
 import Link from "next/link";
+import { useTheme } from "next-themes";
 
 export function LinPortfolioEleganceTemplate() {
+  const { theme } = useTheme();
+  const isDark = theme === 'dark';
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const portfolioData = {
@@ -88,13 +91,13 @@ export function LinPortfolioEleganceTemplate() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
-            <a href="#about" className="text-sm text-[#1A1A1A] hover:text-[#C9A87C] transition-colors text-gray-900">
+            <a href="#about" className={`text-sm text-[#1A1A1A] hover:text-[#C9A87C] transition-colors ${isDark ? 'text-white' : 'text-gray-900'}`}>
               About
             </a>
-            <a href="#portfolio" className="text-sm text-[#1A1A1A] hover:text-[#C9A87C] transition-colors text-gray-900">
+            <a href="#portfolio" className={`text-sm text-[#1A1A1A] hover:text-[#C9A87C] transition-colors ${isDark ? 'text-white' : 'text-gray-900'}`}>
               Portfolio
             </a>
-            <a href="#contact" className="text-sm text-[#1A1A1A] hover:text-[#C9A87C] transition-colors text-gray-900">
+            <a href="#contact" className={`text-sm text-[#1A1A1A] hover:text-[#C9A87C] transition-colors ${isDark ? 'text-white' : 'text-gray-900'}`}>
               Contact
             </a>
           </div>
@@ -103,7 +106,7 @@ export function LinPortfolioEleganceTemplate() {
           <button
             className="md:hidden p-2 text-[#1A1A1A] hover:text-[#C9A87C] transition-colors"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            aria-label="Toggle menu"
+            aria-label={mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
           >
             {mobileMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
           </button>
@@ -115,21 +118,21 @@ export function LinPortfolioEleganceTemplate() {
             <div className="container mx-auto px-4 py-4 flex flex-col gap-4">
               <a
                 href="#about"
-                className="text-sm text-[#1A1A1A] hover:text-[#C9A87C] transition-colors py-2 text-gray-900"
+                className={`text-sm text-[#1A1A1A] hover:text-[#C9A87C] transition-colors py-2 ${isDark ? 'text-white' : 'text-gray-900'}`}
                 onClick={() => setMobileMenuOpen(false)}
               >
                 About
               </a>
               <a
                 href="#portfolio"
-                className="text-sm text-[#1A1A1A] hover:text-[#C9A87C] transition-colors py-2 text-gray-900"
+                className={`text-sm text-[#1A1A1A] hover:text-[#C9A87C] transition-colors py-2 ${isDark ? 'text-white' : 'text-gray-900'}`}
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Portfolio
               </a>
               <a
                 href="#contact"
-                className="text-sm text-[#1A1A1A] hover:text-[#C9A87C] transition-colors py-2 text-gray-900"
+                className={`text-sm text-[#1A1A1A] hover:text-[#C9A87C] transition-colors py-2 ${isDark ? 'text-white' : 'text-gray-900'}`}
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Contact
@@ -142,19 +145,19 @@ export function LinPortfolioEleganceTemplate() {
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-20 md:py-32 text-center">
         <ScrollReveal>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-light mb-6 text-[#1A1A1A] tracking-tight break-words text-gray-900">
+          <h1 className={`text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-light mb-6 text-[#1A1A1A] tracking-tight break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>
             {portfolioData.name}
           </h1>
         </ScrollReveal>
 
         <ScrollReveal delay={0.2}>
-          <p className="text-xl md:text-2xl text-[#C9A87C] font-light mb-8 text-gray-900">
+          <p className={`text-xl md:text-2xl text-[#C9A87C] font-light mb-8 ${isDark ? 'text-white' : 'text-gray-900'}`}>
             {portfolioData.tagline}
           </p>
         </ScrollReveal>
 
         <ScrollReveal delay={0.4}>
-          <p className="text-base md:text-lg text-[#666666] max-w-2xl mx-auto leading-relaxed text-gray-900">
+          <p className={`text-base md:text-lg text-[#666666] max-w-2xl mx-auto leading-relaxed ${isDark ? 'text-white' : 'text-gray-900'}`}>
             {portfolioData.bio}
           </p>
         </ScrollReveal>
@@ -163,7 +166,7 @@ export function LinPortfolioEleganceTemplate() {
       {/* Portfolio Grid */}
       <section id="portfolio" className="container mx-auto px-4 py-20">
         <ScrollReveal>
-          <h2 className="text-3xl md:text-5xl font-light text-center mb-16 text-[#1A1A1A] text-gray-900">
+          <h2 className={`text-3xl md:text-5xl font-light text-center mb-16 text-[#1A1A1A] ${isDark ? 'text-white' : 'text-gray-900'}`}>
             Selected Projects
           </h2>
         </ScrollReveal>
@@ -181,7 +184,7 @@ export function LinPortfolioEleganceTemplate() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
                       <p className="text-sm font-light mb-1 text-[#C9A87C] text-white">{project.category}</p>
-                      <h3 className="text-xl font-light text-gray-900">{project.title}</h3>
+                      <h3 className={`text-xl font-light ${isDark ? 'text-white' : 'text-gray-900'}`}>{project.title}</h3>
                     </div>
                   </div>
                 </div>
@@ -196,7 +199,7 @@ export function LinPortfolioEleganceTemplate() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <ScrollReveal>
-              <h2 className="text-3xl md:text-5xl font-light text-center mb-12 text-[#1A1A1A] text-gray-900">
+              <h2 className={`text-3xl md:text-5xl font-light text-center mb-12 text-[#1A1A1A] ${isDark ? 'text-white' : 'text-gray-900'}`}>
                 About
               </h2>
             </ScrollReveal>
@@ -231,7 +234,7 @@ export function LinPortfolioEleganceTemplate() {
       <section id="contact" className="container mx-auto px-4 py-20">
         <div className="max-w-3xl mx-auto text-center">
           <ScrollReveal>
-            <h2 className="text-3xl md:text-5xl font-light mb-6 text-[#1A1A1A] text-gray-900">
+            <h2 className={`text-3xl md:text-5xl font-light mb-6 text-[#1A1A1A] ${isDark ? 'text-white' : 'text-gray-900'}`}>
               Let's Work Together
             </h2>
           </ScrollReveal>
@@ -246,7 +249,7 @@ export function LinPortfolioEleganceTemplate() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
               <a href="mailto:hello@irissukar.com">
                 <Button className="bg-[#C9A87C] hover:bg-[#B8976B] text-white px-8 py-6 text-base">
-                  <FiMail className="mr-2" />
+                  <FiMail className="mr-2" aria-hidden="true" />
                   Email Me
                 </Button>
               </a>

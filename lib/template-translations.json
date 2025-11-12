@@ -637,20 +637,53 @@
         "seeAll": "See All Services",
         "webDev": {
           "title": "Web Development",
-          "description": "Custom websites and web applications built with modern technologies"
+          "description": "Custom websites and web applications built with modern technologies",
+          "features": ["React & Next.js", "E-commerce", "API Integration", "Performance Optimization"]
         },
         "marketing": {
           "title": "Digital Marketing",
-          "description": "Data-driven marketing strategies that deliver measurable results"
+          "description": "Data-driven marketing strategies that deliver measurable results",
+          "features": ["SEO & SEM", "Social Media", "Content Marketing", "Analytics"]
         },
         "growth": {
           "title": "Growth Strategy",
-          "description": "Comprehensive growth plans tailored to your business goals"
+          "description": "Comprehensive growth plans tailored to your business goals",
+          "features": ["Market Research", "Competitor Analysis", "Growth Hacking", "Conversion Optimization"]
         }
       },
       "work": {
         "title": "Recent Work",
-        "subtitle": "Case studies from our portfolio"
+        "subtitle": "Case studies from our portfolio",
+        "projects": [
+          {
+            "title": "E-Commerce Platform",
+            "client": "TechStart Inc.",
+            "result": "+240% Revenue",
+            "category": "Development",
+            "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=450&fit=crop&q=80"
+          },
+          {
+            "title": "Brand Redesign",
+            "client": "Fashion Co.",
+            "result": "+180% Engagement",
+            "category": "Design",
+            "image": "https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=800&h=450&fit=crop&q=80"
+          },
+          {
+            "title": "Marketing Campaign",
+            "client": "FinTech Pro",
+            "result": "+500 Leads/mo",
+            "category": "Marketing",
+            "image": "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=800&h=450&fit=crop&q=80"
+          },
+          {
+            "title": "App Development",
+            "client": "HealthTech",
+            "result": "100K Downloads",
+            "category": "Mobile",
+            "image": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=450&fit=crop&q=80"
+          }
+        ]
       },
       "process": {
         "title": "Our Proven Process",
@@ -674,7 +707,24 @@
       },
       "testimonials": {
         "title": "Trusted by Industry Leaders",
-        "quote": "Working with this agency transformed our digital presence. Professional, efficient, and results-driven. Highly recommended!"
+        "quote": "Working with this agency transformed our digital presence. Professional, efficient, and results-driven. Highly recommended!",
+        "clients": [
+          {
+            "name": "Michael Chen",
+            "role": "CEO, TechStart",
+            "company": "TechStart Inc."
+          },
+          {
+            "name": "Sarah Williams",
+            "role": "CMO, Fashion Brand",
+            "company": "Fashion Co."
+          },
+          {
+            "name": "David Park",
+            "role": "Founder, FinTech",
+            "company": "FinTech Pro"
+          }
+        ]
       },
       "cta": {
         "title": "Ready to Scale Your Business?",
@@ -695,12 +745,16 @@
         "digitalMarketing": "Digital Marketing",
         "brandStrategy": "Brand Strategy",
         "growthConsulting": "Growth Consulting",
+        "company": "Company",
         "aboutUs": "About Us",
         "ourTeam": "Our Team",
         "careers": "Careers",
+        "resources": "Resources",
+        "blog": "Blog",
         "caseStudies": "Case Studies",
         "whitepapers": "Whitepapers",
         "webinars": "Webinars",
+        "connect": "Connect",
         "copyright": "© 2025 Digital Agency. All rights reserved. | Privacy Policy • Terms of Service"
       }
     },
@@ -8278,20 +8332,53 @@
         "seeAll": "Смотреть все услуги",
         "webDev": {
           "title": "Веб-разработка",
-          "description": "Кастомные веб-сайты и веб-приложения на современных технологиях"
+          "description": "Кастомные веб-сайты и веб-приложения на современных технологиях",
+          "features": ["React & Next.js", "E-commerce", "Интеграция API", "Оптимизация производительности"]
         },
         "marketing": {
           "title": "Цифровой маркетинг",
-          "description": "Маркетинговые стратегии на основе данных с измеримыми результатами"
+          "description": "Маркетинговые стратегии на основе данных с измеримыми результатами",
+          "features": ["SEO & SEM", "Социальные сети", "Контент-маркетинг", "Аналитика"]
         },
         "growth": {
           "title": "Стратегия роста",
-          "description": "Комплексные планы роста, адаптированные к вашим бизнес-целям"
+          "description": "Комплексные планы роста, адаптированные к вашим бизнес-целям",
+          "features": ["Исследование рынка", "Анализ конкурентов", "Growth Hacking", "Оптимизация конверсии"]
         }
       },
       "work": {
         "title": "Недавние работы",
-        "subtitle": "Кейсы из нашего портфолио"
+        "subtitle": "Кейсы из нашего портфолио",
+        "projects": [
+          {
+            "title": "Платформа E-Commerce",
+            "client": "TechStart Inc.",
+            "result": "+240% Выручка",
+            "category": "Разработка",
+            "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=450&fit=crop&q=80"
+          },
+          {
+            "title": "Ребрендинг",
+            "client": "Fashion Co.",
+            "result": "+180% Вовлеченность",
+            "category": "Дизайн",
+            "image": "https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=800&h=450&fit=crop&q=80"
+          },
+          {
+            "title": "Маркетинговая кампания",
+            "client": "FinTech Pro",
+            "result": "+500 Лидов/мес",
+            "category": "Маркетинг",
+            "image": "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=800&h=450&fit=crop&q=80"
+          },
+          {
+            "title": "Разработка приложения",
+            "client": "HealthTech",
+            "result": "100K Загрузок",
+            "category": "Мобильное",
+            "image": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=450&fit=crop&q=80"
+          }
+        ]
       },
       "process": {
         "title": "Наш проверенный процесс",
@@ -8315,7 +8402,25 @@
       },
       "testimonials": {
         "title": "Отзывы клиентов",
-        "subtitle": "Смотрите, что говорят наши партнеры"
+        "subtitle": "Смотрите, что говорят наши партнеры",
+        "quote": "Работа с этим агентством изменила наше цифровое присутствие. Профессионально, эффективно и ориентировано на результат. Очень рекомендую!",
+        "clients": [
+          {
+            "name": "Michael Chen",
+            "role": "CEO, TechStart",
+            "company": "TechStart Inc."
+          },
+          {
+            "name": "Sarah Williams",
+            "role": "CMO, Fashion Brand",
+            "company": "Fashion Co."
+          },
+          {
+            "name": "David Park",
+            "role": "Основатель, FinTech",
+            "company": "FinTech Pro"
+          }
+        ]
       },
       "cta": {
         "title": "Готовы начать свой проект?",
@@ -8328,11 +8433,19 @@
         "careers": "Карьера",
         "services": "Услуги",
         "webDev": "Веб-разработка",
+        "digitalMarketing": "Цифровой маркетинг",
+        "brandStrategy": "Стратегия бренда",
+        "growthConsulting": "Консалтинг по росту",
+        "aboutUs": "О нас",
+        "ourTeam": "Наша команда",
         "marketing": "Маркетинг",
         "branding": "Брендинг",
         "resources": "Ресурсы",
         "blog": "Блог",
         "caseStudies": "Кейсы",
+        "whitepapers": "Белые книги",
+        "webinars": "Вебинары",
+        "connect": "Связаться",
         "copyright": "© 2025 Цифровое агентство. Все права защищены. | Условия • Конфиденциальность"
       }
     },

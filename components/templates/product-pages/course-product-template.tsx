@@ -8,6 +8,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { FiCheck, FiStar, FiArrowRight, FiPlay, FiBook, FiUsers, FiTrendingUp, FiAward, FiClock, FiMenu, FiX } from "react-icons/fi";
 import Link from "next/link";
+import { useTheme } from "next-themes";
 
 const courseData = {
   name: "Master UI/UX Design in 12 Weeks",
@@ -249,6 +250,8 @@ const courseData = {
 };
 
 export function CourseProductTemplate() {
+  const { theme } = useTheme();
+  const isDark = theme === 'dark';
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
@@ -272,7 +275,7 @@ export function CourseProductTemplate() {
             <button
               className="md:hidden p-3 text-foreground hover:bg-accent rounded-md border border-border transition-colors"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              aria-label="Toggle menu"
+              aria-label={mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
             >
               {mobileMenuOpen ? <FiX size={28} /> : <FiMenu size={28} />}
             </button>
@@ -330,7 +333,7 @@ export function CourseProductTemplate() {
             <div className="flex flex-col gap-4 sm:flex-row gap-4 justify-center mb-12">
               <Button size="lg" className="text-lg px-8 bg-gradient-to-r from-blue-600 to-blue-700 text-white">
                 {courseData.cta.primary}
-                <FiArrowRight className="ml-2" />
+                <FiArrowRight className="ml-2" aria-hidden="true" />
               </Button>
               <Button size="lg" variant="outline" className="text-lg px-8 text-white">
                 <FiPlay className="mr-2" />
@@ -375,14 +378,14 @@ export function CourseProductTemplate() {
                 className="w-32 h-32 rounded-full"
               />
               <div className="flex-1 text-center md:text-left">
-                <h2 className="text-3xl font-bold mb-2 text-gray-900">{courseData.instructor.name}</h2>
+                <h2 className={`text-3xl font-bold mb-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>{courseData.instructor.name}</h2>
                 <p className="text-xl text-muted-foreground mb-4">{courseData.instructor.title}</p>
-                <p className="text-lg mb-6 text-gray-900">{courseData.instructor.bio}</p>
+                <p className={`text-lg mb-6 ${isDark ? 'text-white' : 'text-gray-900'}`}>{courseData.instructor.bio}</p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {courseData.instructor.credentials.map((credential, index) => (
                     <div key={index} className="flex items-start gap-2">
-                      <FiCheck className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
-                      <span className="text-sm text-gray-900">{credential}</span>
+                      <FiCheck className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" aria-hidden="true" />
+                      <span className={`text-sm ${isDark ? 'text-white' : 'text-gray-900'}`}>{credential}</span>
                     </div>
                   ))}
                 </div>
@@ -396,7 +399,7 @@ export function CourseProductTemplate() {
       <section className="container mx-auto px-3 sm:px-3 py-20 bg-gradient-to-r from-blue-100 to-gold-100 dark:from-blue-950 dark:to-gold-950">
         <ScrollReveal>
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-5xl font-bold mb-4 break-words text-gray-900">
+            <h2 className={`text-3xl sm:text-5xl font-bold mb-4 break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>
               {courseData.transformation.title}
             </h2>
           </div>
@@ -435,7 +438,7 @@ export function CourseProductTemplate() {
                   <ul className="space-y-3">
                     {courseData.transformation.after.points.map((point, idx) => (
                       <li key={idx} className="flex items-start gap-2">
-                        <FiCheck className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                        <FiCheck className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" aria-hidden="true" />
                         <span>{point}</span>
                       </li>
                     ))}
@@ -455,11 +458,11 @@ export function CourseProductTemplate() {
                     className="w-16 h-16 rounded-full border-2 border-white"
                   />
                   <div>
-                    <div className="font-bold text-lg text-gray-900">{courseData.transformation.student.name}</div>
+                    <div className={`font-bold text-lg ${isDark ? 'text-white' : 'text-gray-900'}`}>{courseData.transformation.student.name}</div>
                     <div className="text-sm opacity-90 text-gray-700">Graduate, now at Spotify</div>
                   </div>
                 </div>
-                <p className="text-lg italic text-gray-900">"{courseData.transformation.student.quote}"</p>
+                <p className={`text-lg italic ${isDark ? 'text-white' : 'text-gray-900'}`}>"{courseData.transformation.student.quote}"</p>
               </CardContent>
             </Card>
           </ScrollReveal>
@@ -470,7 +473,7 @@ export function CourseProductTemplate() {
       <section id="curriculum" className="container mx-auto px-3 sm:px-3 py-20">
         <ScrollReveal>
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-5xl font-bold mb-4 break-words text-gray-900">
+            <h2 className={`text-3xl sm:text-5xl font-bold mb-4 break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>
               {courseData.curriculum.title}
             </h2>
             <p className="text-xl text-muted-foreground">
@@ -487,7 +490,7 @@ export function CourseProductTemplate() {
                   <div className="flex items-start justify-between">
                     <div className="flex-1">
                       <Badge className="mb-3">{module.week}</Badge>
-                      <CardTitle className="text-2xl mb-2 text-gray-900">{module.title}</CardTitle>
+                      <CardTitle className={`text-2xl mb-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>{module.title}</CardTitle>
                       <div className="flex gap-4 text-sm text-muted-foreground mb-4">
                         <span className="flex items-center gap-1">
                           <FiBook className="w-4 h-4" />
@@ -503,8 +506,8 @@ export function CourseProductTemplate() {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-4">
                     {module.topics.map((topic, idx) => (
                       <div key={idx} className="flex items-start gap-2">
-                        <FiCheck className="w-4 h-4 text-blue-600 flex-shrink-0 mt-0.5" />
-                        <span className="text-sm text-gray-900">{topic}</span>
+                        <FiCheck className="w-4 h-4 text-blue-600 flex-shrink-0 mt-0.5" aria-hidden="true" />
+                        <span className={`text-sm ${isDark ? 'text-white' : 'text-gray-900'}`}>{topic}</span>
                       </div>
                     ))}
                   </div>
@@ -519,7 +522,7 @@ export function CourseProductTemplate() {
       <section className="container mx-auto px-3 sm:px-3 py-20 bg-muted/30">
         <ScrollReveal>
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-5xl font-bold mb-4 break-words text-gray-900">
+            <h2 className={`text-3xl sm:text-5xl font-bold mb-4 break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>
               Everything you need to succeed
             </h2>
           </div>
@@ -546,7 +549,7 @@ export function CourseProductTemplate() {
       <section className="container mx-auto px-3 sm:px-3 py-20">
         <ScrollReveal>
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-5xl font-bold mb-4 break-words text-gray-900">
+            <h2 className={`text-3xl sm:text-5xl font-bold mb-4 break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>
               Student Success Stories
             </h2>
             <p className="text-xl text-muted-foreground">
@@ -565,7 +568,7 @@ export function CourseProductTemplate() {
                       <FiStar key={i} className="w-5 h-5 fill-gold-400 text-gold-400" />
                     ))}
                   </div>
-                  <p className="text-lg mb-4 text-gray-900">"{testimonial.quote}"</p>
+                  <p className={`text-lg mb-4 ${isDark ? 'text-white' : 'text-gray-900'}`}>"{testimonial.quote}"</p>
                   <div className="flex items-center gap-3 mb-4">
                     <img
                       src={testimonial.avatar}
@@ -591,7 +594,7 @@ export function CourseProductTemplate() {
       <section id="pricing" className="container mx-auto px-3 sm:px-3 py-20 bg-muted/30">
         <ScrollReveal>
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-5xl font-bold mb-4 break-words text-gray-900">
+            <h2 className={`text-3xl sm:text-5xl font-bold mb-4 break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>
               {courseData.pricing.title}
             </h2>
             <p className="text-xl text-muted-foreground">
@@ -615,9 +618,9 @@ export function CourseProductTemplate() {
                   </div>
                 )}
                 <CardHeader>
-                  <CardTitle className="text-2xl text-gray-900">{plan.name}</CardTitle>
+                  <CardTitle className={`text-2xl ${isDark ? 'text-white' : 'text-gray-900'}`}>{plan.name}</CardTitle>
                   <div className="mt-4">
-                    <span className="text-3xl sm:text-4xl font-bold text-gray-900">{plan.price}</span>
+                    <span className={`text-3xl sm:text-4xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>{plan.price}</span>
                     <span className="text-muted-foreground"> / {plan.period}</span>
                   </div>
                   <CardDescription className="mt-2">{plan.description}</CardDescription>
@@ -629,8 +632,8 @@ export function CourseProductTemplate() {
                   <ul className="space-y-3">
                     {plan.features.map((feature, idx) => (
                       <li key={idx} className="flex items-start gap-2">
-                        <FiCheck className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
-                        <span className="text-sm text-gray-900">{feature}</span>
+                        <FiCheck className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" aria-hidden="true" />
+                        <span className={`text-sm ${isDark ? 'text-white' : 'text-gray-900'}`}>{feature}</span>
                       </li>
                     ))}
                   </ul>
@@ -645,7 +648,7 @@ export function CourseProductTemplate() {
           <Card className="max-w-full mx-auto bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-950 dark:to-emerald-950 border-green-200">
             <CardContent className="p-8 text-center">
               <Badge className="mb-4 bg-green-600 text-white">{courseData.guarantee.badge}</Badge>
-              <h3 className="text-2xl font-bold mb-3 text-gray-900">{courseData.guarantee.title}</h3>
+              <h3 className={`text-2xl font-bold mb-3 ${isDark ? 'text-white' : 'text-gray-900'}`}>{courseData.guarantee.title}</h3>
               <p className="text-muted-foreground">{courseData.guarantee.description}</p>
             </CardContent>
           </Card>
@@ -656,7 +659,7 @@ export function CourseProductTemplate() {
       <section className="container mx-auto px-3 sm:px-3 py-20">
         <ScrollReveal>
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-5xl font-bold mb-4 break-words text-gray-900">
+            <h2 className={`text-3xl sm:text-5xl font-bold mb-4 break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>
               Frequently Asked Questions
             </h2>
           </div>
@@ -667,7 +670,7 @@ export function CourseProductTemplate() {
             <ScrollReveal key={item.question} delay={index * 0.05}>
               <Card>
                 <CardHeader>
-                  <CardTitle className="text-lg text-gray-900">{item.question}</CardTitle>
+                  <CardTitle className={`text-lg ${isDark ? 'text-white' : 'text-gray-900'}`}>{item.question}</CardTitle>
                   <CardDescription>{item.answer}</CardDescription>
                 </CardHeader>
               </Card>
@@ -681,17 +684,17 @@ export function CourseProductTemplate() {
         <ScrollReveal>
           <Card className="max-w-full mx-auto bg-gradient-to-r from-blue-600 to-gold-500 text-white border-0">
             <CardContent className="p-12 text-center">
-              <h2 className="text-3xl sm:text-5xl font-bold mb-4 break-words text-gray-900">
+              <h2 className={`text-3xl sm:text-5xl font-bold mb-4 break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>
                 {courseData.finalCTA.title}
               </h2>
               <p className="text-xl mb-8 opacity-90 text-white">
                 {courseData.finalCTA.description}
               </p>
-              <Button size="lg" variant="secondary" className="text-lg px-8 text-gray-900">
+              <Button size="lg" variant="secondary" className={`text-lg px-8 ${isDark ? 'text-white' : 'text-gray-900'}`}>
                 {courseData.cta.primary}
-                <FiArrowRight className="ml-2" />
+                <FiArrowRight className="ml-2" aria-hidden="true" />
               </Button>
-              <p className="text-sm mt-6 opacity-75 text-gray-900">
+              <p className={`text-sm mt-6 opacity-75 ${isDark ? 'text-white' : 'text-gray-900'}`}>
                 {courseData.finalCTA.guarantee}
               </p>
             </CardContent>

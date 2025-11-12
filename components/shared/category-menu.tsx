@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useReducedMotion } from "@/lib/hooks/use-reduced-motion";
 import { FiX } from "react-icons/fi";
 import { Badge } from "@/components/ui/badge";
 import { useI18n } from "@/lib/i18n-context";
@@ -55,6 +56,8 @@ export function CategoryMenu({
   categoryLabels,
   categoryCounts
 }: CategoryMenuProps) {
+  const prefersReducedMotion = useReducedMotion();
+
   const [isOpen, setIsOpen] = useState(false);
   const { language } = useI18n();
 
@@ -101,22 +104,28 @@ export function CategoryMenu({
 
   const activeCategoryName = categoryLabels[activeCategory] || activeCategory;
   const activeCount = categoryCounts[activeCategory] || 0;
+  const isAllCategory = activeCategory === 'all';
 
   return (
     <>
       {/* Categories Button - Aligned with Header */}
       <motion.button
         onClick={() => setIsOpen(!isOpen)}
-        className="category-menu-button fixed top-2 sm:top-3 left-4 z-50 flex items-center gap-2.5 px-3.5 py-2 bg-background border border-border hover:border-foreground/20 text-foreground rounded-xl shadow-sm hover:shadow-md h-10 sm:h-11 touch-manipulation transition-all duration-200"
-        whileHover={{ y: -1 }}
+        className={`category-menu-button fixed top-2 sm:top-3 left-4 z-50 flex items-center gap-2.5 px-3.5 py-2 rounded-xl shadow-sm hover:shadow-md h-10 sm:h-11 touch-manipulation transition-all duration-200 border ${
+          isAllCategory
+            ? 'bg-background border-border hover:border-foreground/20 text-foreground'
+            : 'bg-primary/10 border-primary/30 hover:border-primary/50 text-foreground'
+        }`}
+        whileHover={prefersReducedMotion ? {} : { y: -1 }}
         whileTap={{ scale: 0.98 }}
         aria-label="Open categories menu"
+        aria-expanded={isOpen}
       >
-        <FiGrid className="w-4 h-4 text-muted-foreground" />
-        <span className="text-sm font-medium capitalize">
+        <FiGrid className={`w-4 h-4 flex-shrink-0 ${isAllCategory ? 'text-muted-foreground' : 'text-primary'}`} />
+        <span className="text-sm font-medium capitalize truncate max-w-[120px] sm:max-w-[160px]" title={activeCategoryName}>
           {activeCategoryName}
         </span>
-        <span className="text-xs text-muted-foreground font-normal ml-0.5">
+        <span className={`text-xs font-normal ml-0.5 flex-shrink-0 ${isAllCategory ? 'text-muted-foreground' : 'text-primary/80'}`}>
           ({activeCount})
         </span>
       </motion.button>
@@ -125,7 +134,7 @@ export function CategoryMenu({
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0 }}
+            initial={prefersReducedMotion ? {} : { opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={() => setIsOpen(false)}
@@ -138,10 +147,10 @@ export function CategoryMenu({
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ x: -320 }}
+            initial={prefersReducedMotion ? {} : { x: -320 }}
             animate={{ x: 0 }}
             exit={{ x: -320 }}
-            transition={{ type: "spring", damping: 25, stiffness: 200 }}
+            transition={prefersReducedMotion ? {} : { type: "spring", damping: 25, stiffness: 200 }}
             className="fixed top-0 left-0 bottom-0 w-80 bg-background border-r border-border z-50 overflow-y-auto shadow-2xl"
           >
             {/* Header */}
@@ -169,39 +178,49 @@ export function CategoryMenu({
                   <motion.button
                     key={category}
                     onClick={() => handleCategoryClick(category)}
-                    whileHover={{ x: 4 }}
+                    whileHover={isActive ? {} : { x: 4 }}
                     whileTap={{ scale: 0.98 }}
                     className={`
                       w-full flex items-center justify-between gap-3 px-4 py-3.5 rounded-xl text-sm font-medium
-                      transition-all duration-200 min-h-[52px] touch-manipulation
+                      transition-all duration-200 min-h-[52px] touch-manipulation relative
                       ${isActive
-                        ? "bg-foreground text-background shadow-md"
-                        : "text-foreground hover:bg-muted"
+                        ? "bg-primary text-primary-foreground shadow-lg ring-2 ring-primary/20"
+                        : "text-foreground hover:bg-muted/80 active:bg-muted"
                       }
                     `}
+                    aria-current={isActive ? "page" : undefined}
                   >
-                    <div className="flex items-center gap-3 flex-1">
-                      <Icon className="w-5 h-5 flex-shrink-0" />
-                      <span className="flex-1 text-left">{categoryName}</span>
+                    <div className="flex items-center gap-3 flex-1 min-w-0">
+                      <Icon className={`w-5 h-5 flex-shrink-0 ${isActive ? 'text-primary-foreground' : 'text-muted-foreground'}`} />
+                      <span className="flex-1 text-left truncate" title={categoryName}>{categoryName}</span>
                     </div>
 
-                    <div className="flex items-center gap-2">
+                    <div className="flex items-center gap-2 flex-shrink-0">
                       {badge && !isActive && (
-                        <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-red-500/20 text-red-600 dark:text-red-400">
+                        <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${badge.color}`}>
                           {badge.label}
                         </span>
                       )}
                       <Badge
                         variant="secondary"
-                        className={`text-xs ${
+                        className={`text-xs font-semibold ${
                           isActive
-                            ? "bg-background/20 text-background"
-                            : "bg-muted"
+                            ? "bg-primary-foreground/20 text-primary-foreground border-primary-foreground/30"
+                            : "bg-muted text-muted-foreground"
                         }`}
                       >
                         {count}
                       </Badge>
                     </div>
+                    
+                    {isActive && (
+                      <motion.div
+                        layoutId="activeCategory"
+                        className="absolute left-0 top-0 bottom-0 w-1 bg-primary-foreground rounded-l-xl"
+                        initial={false}
+                        transition={prefersReducedMotion ? {} : { type: "spring", stiffness: 500, damping: 30 }}
+                      />
+                    )}
                   </motion.button>
                 );
               })}
@@ -214,13 +233,17 @@ export function CategoryMenu({
                   <div className="text-2xl font-bold text-foreground">
                     {categoryCounts['all'] || 0}
                   </div>
-                  <div className="text-xs text-muted-foreground mt-1">Всего проектов</div>
+                  <div className="text-xs text-muted-foreground mt-1">
+                    {language === 'ru' ? 'Всего проектов' : 'Total Templates'}
+                  </div>
                 </div>
                 <div className="bg-muted/50 rounded-lg p-3 text-center">
                   <div className="text-2xl font-bold text-foreground">
                     {categories.length - 1}
                   </div>
-                  <div className="text-xs text-muted-foreground mt-1">Категорий</div>
+                  <div className="text-xs text-muted-foreground mt-1">
+                    {language === 'ru' ? 'Категорий' : 'Categories'}
+                  </div>
                 </div>
               </div>
             </div>

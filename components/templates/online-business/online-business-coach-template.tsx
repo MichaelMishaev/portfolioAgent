@@ -28,44 +28,98 @@ import Link from "next/link";
 import { useI18n } from "@/lib/i18n-context";
 import { useState } from "react";
 import { useTheme } from "next-themes";
+import { FiMenu, FiX } from "react-icons/fi";
 
 export function OnlineBusinessCoachTemplate() {
   const { tt } = useI18n();
   const data = tt.onlineBusiness || {};
   const [email, setEmail] = useState("");
   const [formStep, setFormStep] = useState(1);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { theme } = useTheme();
   const darkMode = theme === 'dark';
 
   return (
     <div className="min-h-screen overflow-x-hidden max-w-full bg-gradient-to-br from-amber-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 dark:bg-gray-900/90 backdrop-blur-md border-b border-amber-200 dark:border-gray-800 shadow-sm">
-        <div className="container mx-auto px-3 md:px-3 max-w-full py-4 flex items-center justify-between">
-          <Link href="/" className={`font-medium text-gray-600 hover:text-amber-600 dark:hover:text-amber-400 transition-colors ${darkMode ? 'text-gray-300' : 'text-sm'}`}>
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 dark:bg-gray-900/95 backdrop-blur-md border-b border-amber-200 dark:border-gray-800 shadow-sm supports-[backdrop-filter]:bg-white/90 supports-[backdrop-filter]:dark:bg-gray-900/90">
+        <div className="container mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
+          <Link href="/" className="text-sm font-medium text-muted-foreground hover:text-amber-600 dark:hover:text-amber-400 transition-colors">
             {tt.common?.backToGallery || "← Back to Gallery"}
           </Link>
-          <div className="flex items-center gap-6">
-            <a href="#about" className="hidden md:block text-sm font-medium hover:text-amber-600 dark:hover:text-amber-400 transition-colors">
+          
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center gap-6">
+            <a href="#about" className="text-sm font-medium text-foreground/70 hover:text-amber-600 dark:hover:text-amber-400 transition-colors px-3 py-2 rounded-md hover:bg-muted/50">
               {tt.common?.about || "About"}
             </a>
-            <a href="#offerings" className="hidden md:block text-sm font-medium hover:text-amber-600 dark:hover:text-amber-400 transition-colors">
+            <a href="#offerings" className="text-sm font-medium text-foreground/70 hover:text-amber-600 dark:hover:text-amber-400 transition-colors px-3 py-2 rounded-md hover:bg-muted/50">
               {data.nav?.workWithMe || "Work With Me"}
             </a>
-            <a href="#testimonials" className="hidden md:block text-sm font-medium hover:text-amber-600 dark:hover:text-amber-400 transition-colors">
+            <a href="#testimonials" className="text-sm font-medium text-foreground/70 hover:text-amber-600 dark:hover:text-amber-400 transition-colors px-3 py-2 rounded-md hover:bg-muted/50">
               {data.nav?.successStories || "Success Stories"}
             </a>
-            <a href="#contact" className="hidden md:block text-sm font-medium hover:text-amber-600 dark:hover:text-amber-400 transition-colors">
+            <a href="#contact" className="text-sm font-medium text-foreground/70 hover:text-amber-600 dark:hover:text-amber-400 transition-colors px-3 py-2 rounded-md hover:bg-muted/50">
               {data.nav?.connect || "Connect"}
             </a>
+            <div className="h-6 w-px bg-border mx-2" />
             <ThemeToggle />
             <LanguageToggle />
           </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            className="md:hidden p-2 rounded-md hover:bg-muted transition-colors touch-manipulation"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label={mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+          >
+            {mobileMenuOpen ? <FiX className="w-6 h-6" /> : <FiMenu className="w-6 h-6" />}
+          </button>
         </div>
+
+        {/* Mobile Menu */}
+        {mobileMenuOpen && (
+          <div className="md:hidden border-t bg-background/95 backdrop-blur-md">
+            <div className="container mx-auto px-4 py-4 flex flex-col gap-3">
+              <a 
+                href="#about" 
+                className="text-sm font-medium text-foreground/70 hover:text-foreground transition-colors py-2 px-3 rounded-md hover:bg-muted/50"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                {tt.common?.about || "About"}
+              </a>
+              <a 
+                href="#offerings" 
+                className="text-sm font-medium text-foreground/70 hover:text-foreground transition-colors py-2 px-3 rounded-md hover:bg-muted/50"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                {data.nav?.workWithMe || "Work With Me"}
+              </a>
+              <a 
+                href="#testimonials" 
+                className="text-sm font-medium text-foreground/70 hover:text-foreground transition-colors py-2 px-3 rounded-md hover:bg-muted/50"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                {data.nav?.successStories || "Success Stories"}
+              </a>
+              <a 
+                href="#contact" 
+                className="text-sm font-medium text-foreground/70 hover:text-foreground transition-colors py-2 px-3 rounded-md hover:bg-muted/50"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                {data.nav?.connect || "Connect"}
+              </a>
+              <div className="flex items-center gap-3 pt-2 border-t">
+                <ThemeToggle />
+                <LanguageToggle />
+              </div>
+            </div>
+          </div>
+        )}
       </nav>
 
       {/* Hero Section - Coach/Expert Focus */}
-      <section className="container mx-auto px-3 md:px-3 max-w-full pt-32 pb-20 md:pt-40 md:pb-32">
+      <section className="container mx-auto px-4 sm:px-6 pt-32 pb-20 md:pt-40 md:pb-32">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <FadeIn>
             <div>
@@ -74,18 +128,18 @@ export function OnlineBusinessCoachTemplate() {
                 {data.badge || "Bestselling Author • Speaker • Coach"}
               </Badge>
 
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight bg-gradient-to-r from-gray-900 to-gray-700 dark:from-white dark:to-gray-300 bg-clip-text text-transparent text-white">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight bg-gradient-to-r from-gray-900 via-gray-800 to-gray-700 dark:from-white dark:via-gray-100 dark:to-gray-300 bg-clip-text text-transparent">
                 {data.heroTitle || "From Overwhelm to Empowerment"}
               </h1>
 
-              <p className={`md:text-2xl text-gray-600 mb-8 leading-relaxed ${darkMode ? 'text-gray-300' : 'text-xl'}`}>
+              <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed">
                 {data.heroSubtitle || "Transforming lives through coaching, courses, and community. Join thousands who've discovered their path to success."}
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button size="lg" className="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white text-lg px-8 py-6">
                   {data.hero?.startJourney || "Start Your Journey"}
-                  <FiArrowRight className="ml-2" />
+                  <FiArrowRight className="ml-2" aria-hidden="true" />
                 </Button>
                 <Button size="lg" variant="outline" className="border-2 border-amber-500 !text-amber-600 hover:bg-amber-50 dark:hover:bg-amber-950 text-lg px-8 py-6">
                   {data.hero?.freeCall || "Free Discovery Call"}
@@ -139,10 +193,10 @@ export function OnlineBusinessCoachTemplate() {
       </section>
 
       {/* Featured In / Press Logos */}
-      <section className="py-12 border-y border-gray-200 dark:border-gray-800 bg-white/50 dark:bg-gray-800/50">
-        <div className="container mx-auto px-3 md:px-3 max-w-full">
+      <section className="py-12 border-y border-border bg-muted/30">
+        <div className="container mx-auto px-4 sm:px-6">
           <ScrollReveal>
-            <p className={`text-sm text-gray-600 mb-8 uppercase tracking-wider ${darkMode ? 'text-gray-400' : 'text-center'}`}>
+            <p className="text-sm text-muted-foreground mb-8 uppercase tracking-wider text-center">
               {data.featuredIn || "Featured In"}
             </p>
             <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 opacity-60">
@@ -157,13 +211,13 @@ export function OnlineBusinessCoachTemplate() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="container mx-auto px-3 md:px-3 max-w-full py-20 md:py-32">
+      <section id="about" className="container mx-auto px-4 sm:px-6 max-w-4xl py-20 md:py-32">
         <ScrollReveal>
-          <div className="text-center max-w-full mx-auto">
-            <h2 className="text-3xl md:text-4xl sm:text-5xl font-bold mb-6 bg-gradient-to-r from-amber-600 to-blue-600 bg-clip-text text-transparent break-words text-white">
+          <div className="text-center mx-auto">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-amber-600 to-blue-600 bg-clip-text text-transparent break-words">
               {data.aboutTitle || "Hi, I'm Your Guide to Transformation"}
             </h2>
-            <p className={`md:text-xl text-gray-600 leading-relaxed ${darkMode ? 'text-gray-300' : 'text-lg'}`}>
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
               {data.aboutText || "For over 15 years, I've been helping ambitious entrepreneurs and leaders break through their limitations and create the life and business they truly desire. My approach combines practical strategies with deep inner work, creating lasting transformation from the inside out."}
             </p>
           </div>
@@ -171,13 +225,13 @@ export function OnlineBusinessCoachTemplate() {
       </section>
 
       {/* Offerings Section - Books, Courses, Coaching */}
-      <section id="offerings" className="container mx-auto px-3 md:px-3 max-w-full py-20 md:py-32 bg-gradient-to-br from-amber-50 to-blue-50 dark:from-gray-800 dark:to-gray-900 rounded-3xl">
+      <section id="offerings" className="container mx-auto px-4 sm:px-6 py-20 md:py-32 bg-gradient-to-br from-amber-50/50 to-blue-50/50 dark:from-gray-800 dark:to-gray-900 rounded-3xl">
         <ScrollReveal>
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl sm:text-5xl font-bold mb-4 break-words text-gray-900">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 break-words text-foreground">
               {data.offerings?.title || "Ways to Work With Me"}
             </h2>
-            <p className={`text-gray-600 max-w-full mx-auto ${darkMode ? 'text-gray-300' : 'text-lg'}`}>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
               {data.offerings?.subtitle || "Choose the path that feels right for you. Each offering is designed to meet you where you are."}
             </p>
           </div>
@@ -196,13 +250,13 @@ export function OnlineBusinessCoachTemplate() {
                 <Badge className={`mb-3 bg-amber-100 dark:bg-amber-900/30 ${darkMode ? 'text-amber-400' : 'text-amber-700'}`}>
                   {data.offerings?.book?.badge || "Bestseller"}
                 </Badge>
-                <h3 className="text-2xl font-bold mb-3 text-gray-900">{data.offerings?.book?.title || "Time Magic"}</h3>
-                <p className={`mb-4 ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+                <h3 className="text-2xl font-bold mb-3 text-foreground">{data.offerings?.book?.title || "Time Magic"}</h3>
+                <p className="mb-4 text-muted-foreground">
                   {data.offerings?.book?.description || "A practical guide to reclaiming your time and energy. Transform how you work and live."}
                 </p>
                 <Button className="w-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white">
                   {data.offerings?.book?.cta || "Get the Book"}
-                  <FiArrowRight className="ml-2" />
+                  <FiArrowRight className="ml-2" aria-hidden="true" />
                 </Button>
               </CardContent>
             </Card>
@@ -220,13 +274,13 @@ export function OnlineBusinessCoachTemplate() {
                 <Badge className={`mb-3 bg-blue-100 dark:bg-blue-900/30 ${darkMode ? 'text-blue-400' : 'text-blue-700'}`}>
                   {data.offerings?.course?.badge || "Self-Paced"}
                 </Badge>
-                <h3 className="text-2xl font-bold mb-3 text-gray-900">{data.offerings?.course?.title || "Mastery Program"}</h3>
-                <p className={`mb-4 ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+                <h3 className="text-2xl font-bold mb-3 text-foreground">{data.offerings?.course?.title || "Mastery Program"}</h3>
+                <p className="mb-4 text-muted-foreground">
                   {data.offerings?.course?.description || "8-week online course with video lessons, workbooks, and community support."}
                 </p>
                 <Button className="w-full bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white">
                   {data.offerings?.course?.cta || "Learn More"}
-                  <FiArrowRight className="ml-2" />
+                  <FiArrowRight className="ml-2" aria-hidden="true" />
                 </Button>
               </CardContent>
             </Card>
@@ -248,13 +302,13 @@ export function OnlineBusinessCoachTemplate() {
                 <Badge className={`mb-3 bg-purple-100 dark:bg-purple-900/30 ${darkMode ? 'text-purple-400' : 'text-purple-700'}`}>
                   {data.offerings?.coaching?.badge || "Limited Spots"}
                 </Badge>
-                <h3 className="text-2xl font-bold mb-3 text-gray-900">{data.offerings?.coaching?.title || "1:1 Coaching"}</h3>
-                <p className={`mb-4 ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+                <h3 className="text-2xl font-bold mb-3 text-foreground">{data.offerings?.coaching?.title || "1:1 Coaching"}</h3>
+                <p className="mb-4 text-muted-foreground">
                   {data.offerings?.coaching?.description || "Work directly with me for personalized transformation and breakthrough results."}
                 </p>
                 <Button className="w-full bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700 text-white">
                   {data.offerings?.coaching?.cta || "Apply Now"}
-                  <FiArrowRight className="ml-2" />
+                  <FiArrowRight className="ml-2" aria-hidden="true" />
                 </Button>
               </CardContent>
             </Card>
@@ -272,13 +326,13 @@ export function OnlineBusinessCoachTemplate() {
                 <Badge className={`mb-3 bg-pink-100 dark:bg-pink-900/30 ${darkMode ? 'text-pink-400' : 'text-pink-700'}`}>
                   {data.offerings?.podcast?.badge || "#1 Podcast"}
                 </Badge>
-                <h3 className="text-2xl font-bold mb-3 text-gray-900">{data.offerings?.podcast?.title || "The Growth Show"}</h3>
-                <p className={`mb-4 ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+                <h3 className="text-2xl font-bold mb-3 text-foreground">{data.offerings?.podcast?.title || "The Growth Show"}</h3>
+                <p className="mb-4 text-muted-foreground">
                   {data.offerings?.podcast?.description || "Weekly inspiration, practical tips, and interviews with world-class guests."}
                 </p>
                 <Button className="w-full bg-gradient-to-r from-pink-500 to-pink-600 hover:from-pink-600 hover:to-pink-700 text-white">
                   {data.offerings?.podcast?.cta || "Listen Now"}
-                  <FiArrowRight className="ml-2" />
+                  <FiArrowRight className="ml-2" aria-hidden="true" />
                 </Button>
               </CardContent>
             </Card>
@@ -296,13 +350,13 @@ export function OnlineBusinessCoachTemplate() {
                 <Badge className={`mb-3 bg-green-100 dark:bg-green-900/30 ${darkMode ? 'text-green-400' : 'text-green-700'}`}>
                   {data.offerings?.community?.badge || "Join 10K+ Members"}
                 </Badge>
-                <h3 className="text-2xl font-bold mb-3 text-gray-900">{data.offerings?.community?.title || "Inner Circle Community"}</h3>
-                <p className={`mb-4 ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+                <h3 className="text-2xl font-bold mb-3 text-foreground">{data.offerings?.community?.title || "Inner Circle Community"}</h3>
+                <p className="mb-4 text-muted-foreground">
                   {data.offerings?.community?.description || "Connect with like-minded individuals on the same journey. Monthly coaching calls, resources, and support."}
                 </p>
                 <Button className="w-full bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white">
                   {data.offerings?.community?.cta || "Join the Community"}
-                  <FiArrowRight className="ml-2" />
+                  <FiArrowRight className="ml-2" aria-hidden="true" />
                 </Button>
               </CardContent>
             </Card>
@@ -311,13 +365,13 @@ export function OnlineBusinessCoachTemplate() {
       </section>
 
       {/* Testimonials Section */}
-      <section id="testimonials" className="container mx-auto px-3 md:px-3 max-w-full py-20 md:py-32">
+      <section id="testimonials" className="container mx-auto px-4 sm:px-6 py-20 md:py-32">
         <ScrollReveal>
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl sm:text-5xl font-bold mb-4 break-words text-gray-900">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 break-words text-foreground">
               {data.testimonials?.title || "Success Stories"}
             </h2>
-            <p className={`text-gray-600 max-w-full mx-auto ${darkMode ? 'text-gray-300' : 'text-lg'}`}>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
               {data.testimonials?.subtitle || "Real transformations from real people who've done the work."}
             </p>
           </div>
@@ -351,16 +405,16 @@ export function OnlineBusinessCoachTemplate() {
       </section>
 
       {/* Newsletter Signup with Lead Magnet */}
-      <section className="container mx-auto px-3 md:px-3 max-w-full py-20 md:py-32">
+      <section className="container mx-auto px-4 sm:px-6 max-w-4xl py-20 md:py-32">
         <ScrollReveal>
-          <Card className="bg-gradient-to-br from-amber-500 to-blue-600 border-0 overflow-hidden relative">
+          <Card className="bg-gradient-to-br from-amber-500 to-blue-600 border-0 overflow-hidden relative shadow-2xl">
             <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10"></div>
-            <CardContent className="p-8 md:p-12 relative z-10">
-              <div className="text-center max-w-full mx-auto">
-                <h2 className="text-3xl md:text-3xl sm:text-4xl font-bold text-white mb-4">
+            <CardContent className="p-8 sm:p-10 md:p-12 relative z-10">
+              <div className="text-center mx-auto">
+                <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
                   {data.newsletter?.title || "Get My Free Clarity Guide"}
                 </h2>
-                <p className="text-xl text-white/90 mb-8">
+                <p className="text-lg sm:text-xl text-white/90 mb-8 max-w-2xl mx-auto">
                   {data.newsletter?.subtitle || "Join 50,000+ subscribers and get weekly strategies for growth, plus my proven 7-step framework for clarity."}
                 </p>
 
@@ -370,9 +424,9 @@ export function OnlineBusinessCoachTemplate() {
                     placeholder={data.newsletter?.placeholder || "Enter your email"}
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="flex-1 px-3 py-4 rounded-xl border-0 focus:outline-none focus:ring-2 focus:ring-white/50 text-gray-900"
+                    className="flex-1 px-4 py-3.5 rounded-xl border-0 focus:outline-none focus:ring-2 focus:ring-white/50 text-gray-900 placeholder:text-gray-500 text-base shadow-md"
                   />
-                  <Button size="lg" className="bg-white !text-amber-600 hover:bg-gray-100 px-8 py-4 rounded-xl font-semibold">
+                  <Button size="lg" className="bg-white text-amber-600 hover:bg-gray-100 px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all min-h-[48px] touch-manipulation whitespace-nowrap">
                     {data.newsletter?.cta || "Get Free Guide"}
                   </Button>
                 </div>
@@ -387,13 +441,13 @@ export function OnlineBusinessCoachTemplate() {
       </section>
 
       {/* Blog/Content Section */}
-      <section className="container mx-auto px-3 md:px-3 max-w-full py-20 md:py-32 border-t border-gray-200 dark:border-gray-800">
+      <section className="container mx-auto px-4 sm:px-6 py-20 md:py-32 border-t border-border">
         <ScrollReveal>
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl sm:text-5xl font-bold mb-4 break-words text-gray-900">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 break-words text-foreground">
               {data.blog?.title || "Latest Insights"}
             </h2>
-            <p className={`text-gray-600 max-w-full mx-auto ${darkMode ? 'text-gray-300' : 'text-lg'}`}>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
               {data.blog?.subtitle || "Strategies and inspiration to fuel your growth journey."}
             </p>
           </div>
@@ -412,13 +466,13 @@ export function OnlineBusinessCoachTemplate() {
                 </div>
                 <CardContent className="p-6">
                   <Badge className="mb-3">Mindset</Badge>
-                  <h3 className="text-xl font-bold mb-2 group-hover:text-amber-600 transition-colors text-gray-900">
+                  <h3 className="text-xl font-bold mb-2 group-hover:text-amber-600 transition-colors text-foreground">
                     5 Ways to Overcome Impostor Syndrome
                   </h3>
-                  <p className={`text-sm mb-4 ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+                  <p className="text-sm mb-4 text-muted-foreground">
                     Discover practical strategies to silence self-doubt and step into your power.
                   </p>
-                  <div className={`flex items-center justify-between text-gray-500 ${darkMode ? 'text-gray-400' : 'text-sm'}`}>
+                  <div className="flex items-center justify-between text-sm text-muted-foreground">
                     <span>5 min read</span>
                     <span>→</span>
                   </div>
@@ -430,43 +484,43 @@ export function OnlineBusinessCoachTemplate() {
       </section>
 
       {/* Contact/Discovery Call Section */}
-      <section id="contact" className="container mx-auto px-3 md:px-3 max-w-full py-20 md:py-32">
+      <section id="contact" className="container mx-auto px-4 sm:px-6 max-w-2xl py-20 md:py-32">
         <ScrollReveal>
-          <div className="bg-gradient-to-br from-white to-amber-50 dark:from-gray-800 dark:to-gray-900 rounded-3xl p-8 md:p-12 border border-gray-200 dark:border-gray-700">
-            <div className="max-w-full mx-auto text-center">
-              <h2 className="text-3xl md:text-3xl sm:text-4xl font-bold mb-4 text-gray-900">
+          <div className="bg-gradient-to-br from-background to-amber-50/50 dark:to-amber-950/20 rounded-3xl p-6 sm:p-8 md:p-10 lg:p-12 border border-border shadow-lg overflow-hidden">
+            <div className="mx-auto text-center w-full">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-foreground break-words px-2">
                 {data.contactForm?.title || "Ready to Transform Your Life?"}
               </h2>
-              <p className={`text-gray-600 mb-8 ${darkMode ? 'text-gray-300' : 'text-lg'}`}>
+              <p className="text-base sm:text-lg text-muted-foreground mb-8 max-w-xl mx-auto break-words px-2 leading-relaxed">
                 {data.contactForm?.subtitle || "Book a free 30-minute discovery call to see if we're a good fit to work together."}
               </p>
 
               {formStep === 1 && (
-                <div className="space-y-4">
+                <div className="space-y-4 max-w-md mx-auto w-full px-2">
                   <input
                     type="text"
                     placeholder={data.contactForm?.namePlaceholder || "Your Name"}
-                    className="w-full px-3 py-4 rounded-xl border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-amber-500"
+                    className="w-full px-4 py-3.5 rounded-xl border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500 transition-all text-base"
                   />
                   <input
                     type="email"
                     placeholder={data.contactForm?.emailPlaceholder || "Your Email"}
-                    className="w-full px-3 py-4 rounded-xl border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-amber-500"
+                    className="w-full px-4 py-3.5 rounded-xl border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500 transition-all text-base"
                   />
                   <Button
                     size="lg"
-                    className="w-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white py-6 text-lg"
+                    className="w-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white py-6 text-base sm:text-lg font-semibold shadow-lg hover:shadow-xl transition-all min-h-[56px] touch-manipulation"
                     onClick={() => setFormStep(2)}
                   >
-                    {data.contactForm?.continue || "Continue"}
-                    <FiArrowRight className="ml-2" />
+                    <span className="break-words">{data.contactForm?.continue || "Continue"}</span>
+                    <FiArrowRight className="ml-2 w-5 h-5 flex-shrink-0" aria-hidden="true" />
                   </Button>
                 </div>
               )}
 
               {formStep === 2 && (
-                <div className="space-y-4">
-                  <select className="w-full px-3 py-4 rounded-xl border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-amber-500">
+                <div className="space-y-4 max-w-md mx-auto w-full px-2">
+                  <select className="w-full px-4 py-3.5 rounded-xl border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500 transition-all text-base cursor-pointer">
                     <option>{data.contactForm?.selectQuestion || "What are you most interested in?"}</option>
                     <option>1:1 Coaching</option>
                     <option>Online Course</option>
@@ -476,14 +530,14 @@ export function OnlineBusinessCoachTemplate() {
                   <textarea
                     placeholder={data.contactForm?.challengePlaceholder || "Tell me about your biggest challenge right now..."}
                     rows={4}
-                    className="w-full px-3 py-4 rounded-xl border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-amber-500"
+                    className="w-full px-4 py-3.5 rounded-xl border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500 transition-all text-base resize-none break-words"
                   />
                   <Button
                     size="lg"
-                    className="w-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white py-6 text-lg"
+                    className="w-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white py-6 text-base sm:text-lg font-semibold shadow-lg hover:shadow-xl transition-all min-h-[56px] touch-manipulation"
                   >
-                    {data.contactForm?.bookCall || "Book My Free Call"}
-                    <FiCheckCircle className="ml-2" />
+                    <span className="break-words">{data.contactForm?.bookCall || "Book My Free Call"}</span>
+                    <FiCheckCircle className="ml-2 w-5 h-5 flex-shrink-0" />
                   </Button>
                 </div>
               )}
@@ -493,12 +547,12 @@ export function OnlineBusinessCoachTemplate() {
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-gray-200 dark:border-gray-800 bg-white/50 dark:bg-gray-900/50 py-12">
-        <div className="container mx-auto px-3 md:px-3 max-w-full">
+      <footer className="border-t border-border bg-muted/30 py-12">
+        <div className="container mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
             <div>
-              <h3 className="font-bold text-lg mb-4 text-gray-900">{data.footer?.resources || "Resources"}</h3>
-              <ul className={`space-y-2 text-gray-600 ${darkMode ? 'text-gray-400' : 'text-sm'}`}>
+              <h3 className="font-bold text-lg mb-4 text-foreground">{data.footer?.resources || "Resources"}</h3>
+              <ul className="space-y-2 text-sm text-muted-foreground">
                 <li><a href="#" className="hover:text-amber-600 transition-colors">{data.footer?.books || "Books"}</a></li>
                 <li><a href="#" className="hover:text-amber-600 transition-colors">{data.footer?.courses || "Courses"}</a></li>
                 <li><a href="#" className="hover:text-amber-600 transition-colors">{data.footer?.podcast || "Podcast"}</a></li>
@@ -506,8 +560,8 @@ export function OnlineBusinessCoachTemplate() {
               </ul>
             </div>
             <div>
-              <h3 className="font-bold text-lg mb-4 text-gray-900">{data.footer?.workWithMe || "Work With Me"}</h3>
-              <ul className={`space-y-2 text-gray-600 ${darkMode ? 'text-gray-400' : 'text-sm'}`}>
+              <h3 className="font-bold text-lg mb-4 text-foreground">{data.footer?.workWithMe || "Work With Me"}</h3>
+              <ul className="space-y-2 text-sm text-muted-foreground">
                 <li><a href="#" className="hover:text-amber-600 transition-colors">{data.footer?.oneOnOne || "1:1 Coaching"}</a></li>
                 <li><a href="#" className="hover:text-amber-600 transition-colors">{data.footer?.groupPrograms || "Group Programs"}</a></li>
                 <li><a href="#" className="hover:text-amber-600 transition-colors">{data.footer?.speaking || "Speaking"}</a></li>
@@ -515,8 +569,8 @@ export function OnlineBusinessCoachTemplate() {
               </ul>
             </div>
             <div>
-              <h3 className="font-bold text-lg mb-4 text-gray-900">{data.footer?.company || "Company"}</h3>
-              <ul className={`space-y-2 text-gray-600 ${darkMode ? 'text-gray-400' : 'text-sm'}`}>
+              <h3 className="font-bold text-lg mb-4 text-foreground">{data.footer?.company || "Company"}</h3>
+              <ul className="space-y-2 text-sm text-muted-foreground">
                 <li><a href="#" className="hover:text-amber-600 transition-colors">{tt.common?.about || "About"}</a></li>
                 <li><a href="#" className="hover:text-amber-600 transition-colors">{data.footer?.press || "Press"}</a></li>
                 <li><a href="#" className="hover:text-amber-600 transition-colors">{tt.common?.contact || "Contact"}</a></li>
@@ -524,7 +578,7 @@ export function OnlineBusinessCoachTemplate() {
               </ul>
             </div>
             <div>
-              <h3 className="font-bold text-lg mb-4 text-gray-900">{data.nav?.connect || "Connect"}</h3>
+              <h3 className="font-bold text-lg mb-4 text-foreground">{data.nav?.connect || "Connect"}</h3>
               <div className="flex gap-4">
                 <a href="#" className="p-3 bg-gray-100 dark:bg-gray-800 rounded-full hover:bg-amber-100 dark:hover:bg-amber-900/30 transition-colors">
                   <FiInstagram className="w-5 h-5" />
@@ -539,7 +593,7 @@ export function OnlineBusinessCoachTemplate() {
             </div>
           </div>
 
-          <div className={`pt-8 border-t border-gray-200 dark:border-gray-800 text-sm text-gray-600 ${darkMode ? 'text-gray-400' : 'text-center'}`}>
+          <div className="pt-8 border-t border-border text-sm text-muted-foreground text-center">
             <p>{data.footer?.copyright || "© 2025 Your Name. All rights reserved. | Built with passion and purpose."}</p>
           </div>
         </div>

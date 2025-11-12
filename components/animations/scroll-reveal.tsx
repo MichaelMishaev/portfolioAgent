@@ -2,6 +2,7 @@
 
 import { motion, useInView } from "framer-motion";
 import { ReactNode, useRef } from "react";
+import { useReducedMotion } from "@/lib/hooks/use-reduced-motion";
 
 interface ScrollRevealProps {
   children: ReactNode;
@@ -20,6 +21,7 @@ export function ScrollReveal({
 }: ScrollRevealProps) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const prefersReducedMotion = useReducedMotion();
 
   const directions = {
     up: { y: 40, x: 0 },
@@ -31,9 +33,9 @@ export function ScrollReveal({
   return (
     <motion.div
       ref={ref}
-      initial={{ opacity: 0, ...directions[direction] }}
+      initial={prefersReducedMotion ? { opacity: 0 } : { opacity: 0, ...directions[direction] }}
       animate={isInView ? { opacity: 1, x: 0, y: 0 } : {}}
-      transition={{ duration, delay }}
+      transition={{ duration: prefersReducedMotion ? 0 : duration, delay: prefersReducedMotion ? 0 : delay }}
       className={className}
     >
       {children}

@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { useReducedMotion } from "@/lib/hooks/use-reduced-motion";
 import { FadeIn } from "@/components/animations/fade-in";
 import { ScrollReveal } from "@/components/animations/scroll-reveal";
 import { Button } from "@/components/ui/button";
@@ -10,19 +11,23 @@ import { ThemeToggle } from "@/components/theme-toggle";
 import { LanguageToggle } from "@/components/language-toggle";
 import Link from "next/link";
 import { useI18n } from "@/lib/i18n-context";
+import { useTheme } from "next-themes";
 import { placeholderImages } from "@/lib/placeholder-images";
 import Image from "next/image";
 
 export function MotionDesignerTemplate() {
+  const { theme } = useTheme();
+  const isDark = theme === 'dark';
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const prefersReducedMotion = useReducedMotion();
   const { tt } = useI18n();
   const portfolioData = tt?.motionDesigner;
   const { scrollYProgress } = useScroll();
 
   // Animated shapes
-  const shape1Y = useTransform(scrollYProgress, [0, 1], [0, -200]);
-  const shape2Y = useTransform(scrollYProgress, [0, 1], [0, 200]);
-  const shape3Rotate = useTransform(scrollYProgress, [0, 1], [0, 360]);
+  const shape1Y = useTransform(scrollYProgress, [0, 1], prefersReducedMotion ? [0, 0] : [0, -200]);
+  const shape2Y = useTransform(scrollYProgress, [0, 1], prefersReducedMotion ? [0, 0] : [0, 200]);
+  const shape3Rotate = useTransform(scrollYProgress, [0, 1], prefersReducedMotion ? [0, 0] : [0, 360]);
 
   if (!portfolioData) {
     return <div className="min-h-screen flex items-center justify-center bg-black text-white">Loading...</div>;
@@ -55,13 +60,13 @@ export function MotionDesignerTemplate() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
-            <a href="#work" className="text-sm font-bold hover:text-neon-green transition-colors uppercase text-gray-900">
+            <a href="#work" className={`text-sm font-bold hover:text-neon-green transition-colors uppercase ${isDark ? 'text-white' : 'text-gray-900'}`}>
               {tt.common.work}
             </a>
-            <a href="#showreel" className="text-sm font-bold hover:text-neon-green transition-colors uppercase text-gray-900">
+            <a href="#showreel" className={`text-sm font-bold hover:text-neon-green transition-colors uppercase ${isDark ? 'text-white' : 'text-gray-900'}`}>
               Showreel
             </a>
-            <a href="#contact" className="text-sm font-bold hover:text-neon-green transition-colors uppercase text-gray-900">
+            <a href="#contact" className={`text-sm font-bold hover:text-neon-green transition-colors uppercase ${isDark ? 'text-white' : 'text-gray-900'}`}>
               {tt.common.contact}
             </a>
             <ThemeToggle />
@@ -75,7 +80,7 @@ export function MotionDesignerTemplate() {
           <button
             className="md:hidden p-2 text-neon-green"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            aria-label="Toggle menu"
+            aria-label={mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
           >
             {mobileMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
           </button>
@@ -84,7 +89,7 @@ export function MotionDesignerTemplate() {
         {/* Mobile Menu */}
         {mobileMenuOpen && (
           <motion.div
-            initial={{ opacity: 0, y: -20 }}
+            initial={prefersReducedMotion ? {} : { opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             className="md:hidden bg-black/95 backdrop-blur-xl border-t border-neon-green/20"
           >
@@ -92,10 +97,10 @@ export function MotionDesignerTemplate() {
               <a href="#work" className="text-sm font-bold py-2 uppercase text-white" onClick={() => setMobileMenuOpen(false)}>
                 {tt.common.work}
               </a>
-              <a href="#showreel" className="text-sm font-bold py-2 uppercase text-gray-900" onClick={() => setMobileMenuOpen(false)}>
+              <a href="#showreel" className={`text-sm font-bold py-2 uppercase ${isDark ? 'text-white' : 'text-gray-900'}`} onClick={() => setMobileMenuOpen(false)}>
                 Showreel
               </a>
-              <a href="#contact" className="text-sm font-bold py-2 uppercase text-gray-900" onClick={() => setMobileMenuOpen(false)}>
+              <a href="#contact" className={`text-sm font-bold py-2 uppercase ${isDark ? 'text-white' : 'text-gray-900'}`} onClick={() => setMobileMenuOpen(false)}>
                 {tt.common.contact}
               </a>
             </div>
@@ -107,18 +112,18 @@ export function MotionDesignerTemplate() {
       <section className="relative min-h-screen flex items-center justify-center pt-20">
         <div className="container mx-auto px-6 relative z-10">
           <motion.div
-            initial={{ opacity: 0 }}
+            initial={prefersReducedMotion ? {} : { opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 1 }}
+            transition={prefersReducedMotion ? {} : { duration: 1 }}
             className="text-center"
           >
             {/* Animated Text Lines */}
             <div className="overflow-hidden mb-4">
               <motion.h1
-                initial={{ y: 100 }}
+                initial={prefersReducedMotion ? {} : { y: 100 }}
                 animate={{ y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                className="text-7xl md:text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black uppercase leading-none text-gray-900"
+                transition={prefersReducedMotion ? {} : { duration: 0.8, delay: 0.2 }}
+                className={`text-7xl md:text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black uppercase leading-none ${isDark ? 'text-white' : 'text-gray-900'}`}
                 style={{
                   background: "linear-gradient(135deg, #00FF00 0%, #FF006E 100%)",
                   WebkitBackgroundClip: "text",
@@ -132,9 +137,9 @@ export function MotionDesignerTemplate() {
 
             <div className="overflow-hidden mb-8">
               <motion.h1
-                initial={{ y: 100 }}
+                initial={prefersReducedMotion ? {} : { y: 100 }}
                 animate={{ y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
+                transition={prefersReducedMotion ? {} : { duration: 0.8, delay: 0.4 }}
                 className="text-7xl md:text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black uppercase leading-none text-white"
               >
                 Designer
@@ -142,44 +147,44 @@ export function MotionDesignerTemplate() {
             </div>
 
             <motion.p
-              initial={{ opacity: 0, y: 30 }}
+              initial={prefersReducedMotion ? {} : { opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.8 }}
+              transition={prefersReducedMotion ? {} : { delay: 0.8 }}
               className="text-xl md:text-2xl text-gray-400 mb-12 max-w-2xl mx-auto uppercase tracking-wider"
             >
               {portfolioData.tagline}
             </motion.p>
 
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
+              initial={prefersReducedMotion ? {} : { opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 1 }}
+              transition={prefersReducedMotion ? {} : { delay: 1 }}
               className="flex flex-wrap gap-4 justify-center"
             >
               <Button size="lg" className="bg-neon-green text-black hover:bg-neon-green/90 font-bold uppercase text-lg px-8">
                 <FiPlay className="mr-2" /> Watch Showreel
               </Button>
-              <Button size="lg" variant="outline" className="border-2 border-hot-pink text-hot-pink hover:bg-hot-pink/10 font-bold uppercase text-lg px-8 text-gray-900">
+              <Button size="lg" variant="outline" className={`border-2 border-hot-pink text-hot-pink hover:bg-hot-pink/10 font-bold uppercase text-lg px-8 ${isDark ? 'text-white' : 'text-gray-900'}`}>
                 View Projects
               </Button>
             </motion.div>
 
             {/* Floating Stats */}
             <motion.div
-              initial={{ opacity: 0 }}
+              initial={prefersReducedMotion ? {} : { opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ delay: 1.2 }}
+              transition={prefersReducedMotion ? {} : { delay: 1.2 }}
               className="flex flex-wrap justify-center gap-12 mt-20"
             >
               {portfolioData.stats.map((stat, index) => (
                 <motion.div
                   key={stat.label}
-                  initial={{ scale: 0 }}
+                  initial={prefersReducedMotion ? {} : { scale: 0 }}
                   animate={{ scale: 1 }}
-                  transition={{ delay: 1.4 + index * 0.1, type: "spring" }}
+                  transition={prefersReducedMotion ? {} : { delay: 1.4 + index * 0.1, type: "spring" }}
                   className="text-center"
                 >
-                  <div className="text-4xl sm:text-5xl font-black text-neon-green mb-2 break-words text-gray-900">{stat.value}</div>
+                  <div className={`text-4xl sm:text-5xl font-black text-neon-green mb-2 break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>{stat.value}</div>
                   <div className="text-sm uppercase tracking-wider text-gray-500">{stat.label}</div>
                 </motion.div>
               ))}
@@ -195,17 +200,17 @@ export function MotionDesignerTemplate() {
       <section id="showreel" className="py-32 relative z-10">
         <div className="container mx-auto px-6">
           <ScrollReveal>
-            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black uppercase mb-16 text-center break-words text-gray-900">
+            <h2 className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black uppercase mb-16 text-center break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>
               <span className="text-neon-green">Show</span>
               <span className="text-hot-pink">reel</span>
             </h2>
           </ScrollReveal>
 
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
+            initial={prefersReducedMotion ? {} : { opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            transition={prefersReducedMotion ? {} : { duration: 0.8 }}
             className="relative max-w-6xl mx-auto"
           >
             <div className="aspect-video bg-gradient-to-br from-neon-green/20 to-hot-pink/20 rounded-2xl overflow-hidden border-4 border-neon-green/30 relative group cursor-pointer">
@@ -217,7 +222,7 @@ export function MotionDesignerTemplate() {
               />
               <div className="absolute inset-0 bg-black/50 group-hover:bg-black/30 transition-colors flex items-center justify-center">
                 <motion.div
-                  whileHover={{ scale: 1.1 }}
+                  whileHover={prefersReducedMotion ? {} : { scale: 1.1 }}
                   className="w-20 h-20 bg-neon-green rounded-full flex items-center justify-center"
                 >
                   <FiPlay className="text-black text-3xl ml-1" />
@@ -241,11 +246,11 @@ export function MotionDesignerTemplate() {
             {portfolioData.projects.map((project, index) => (
               <motion.div
                 key={project.id}
-                initial={{ opacity: 0, y: 50 }}
+                initial={prefersReducedMotion ? {} : { opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.2 }}
-                whileHover={{ y: -10 }}
+                transition={prefersReducedMotion ? {} : { delay: index * 0.2 }}
+                whileHover={prefersReducedMotion ? {} : { y: -10 }}
                 className="group cursor-pointer"
               >
                 <div className="relative aspect-video bg-gray-900 rounded-xl overflow-hidden border-2 border-neon-green/20 mb-6">
@@ -258,20 +263,20 @@ export function MotionDesignerTemplate() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <motion.div
-                      whileHover={{ scale: 1.1 }}
+                      whileHover={prefersReducedMotion ? {} : { scale: 1.1 }}
                       className="w-16 h-16 bg-neon-green rounded-full flex items-center justify-center"
                     >
                       <FiPlay className="text-black text-2xl ml-1" />
                     </motion.div>
                   </div>
                   {/* Category Badge */}
-                  <div className="absolute top-4 left-4 bg-hot-pink px-4 py-2 rounded-full text-xs font-bold uppercase text-gray-900">
+                  <div className={`absolute top-4 left-4 bg-hot-pink px-4 py-2 rounded-full text-xs font-bold uppercase ${isDark ? 'text-white' : 'text-gray-900'}`}>
                     {project.category}
                   </div>
                 </div>
 
                 <div>
-                  <h3 className="text-3xl font-black uppercase mb-3 group-hover:text-neon-green transition-colors text-gray-900">
+                  <h3 className={`text-3xl font-black uppercase mb-3 group-hover:text-neon-green transition-colors ${isDark ? 'text-white' : 'text-gray-900'}`}>
                     {project.title}
                   </h3>
                   <p className="text-gray-400 mb-4 leading-relaxed">{project.description}</p>
@@ -293,7 +298,7 @@ export function MotionDesignerTemplate() {
       <section className="py-32 relative z-10 bg-gradient-to-b from-black via-gray-900 to-black">
         <div className="container mx-auto px-6">
           <ScrollReveal>
-            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black uppercase mb-16 text-center break-words text-gray-900">
+            <h2 className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black uppercase mb-16 text-center break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>
               <span className="text-white">Tool</span>
               <span className="text-neon-green">kit</span>
             </h2>
@@ -303,10 +308,10 @@ export function MotionDesignerTemplate() {
             {portfolioData.skills.map((skill, index) => (
               <motion.div
                 key={skill.name}
-                initial={{ opacity: 0, x: -50 }}
+                initial={prefersReducedMotion ? {} : { opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
+                transition={prefersReducedMotion ? {} : { delay: index * 0.1 }}
               >
                 <div className="flex items-center justify-between mb-3">
                   <span className="text-xl font-bold uppercase text-foreground">{skill.name}</span>
@@ -314,10 +319,10 @@ export function MotionDesignerTemplate() {
                 </div>
                 <div className="h-3 bg-gray-800 rounded-full overflow-hidden">
                   <motion.div
-                    initial={{ width: 0 }}
+                    initial={prefersReducedMotion ? {} : { width: 0 }}
                     whileInView={{ width: `${skill.level}%` }}
                     viewport={{ once: true }}
-                    transition={{ duration: 1, delay: index * 0.1 }}
+                    transition={prefersReducedMotion ? {} : { duration: 1, delay: index * 0.1 }}
                     className="h-full bg-gradient-to-r from-neon-green to-hot-pink rounded-full"
                   />
                 </div>
@@ -340,11 +345,11 @@ export function MotionDesignerTemplate() {
             {portfolioData.clients.map((client, index) => (
               <motion.div
                 key={client}
-                initial={{ opacity: 0, scale: 0.8 }}
+                initial={prefersReducedMotion ? {} : { opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                whileHover={{ scale: 1.1 }}
+                transition={prefersReducedMotion ? {} : { delay: index * 0.1 }}
+                whileHover={prefersReducedMotion ? {} : { scale: 1.1 }}
                 className="text-3xl font-black uppercase text-gray-600 hover:text-neon-green transition-colors cursor-pointer"
               >
                 {client}
@@ -358,7 +363,7 @@ export function MotionDesignerTemplate() {
       <section id="contact" className="py-32 relative z-10">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
+            initial={prefersReducedMotion ? {} : { opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             className="max-w-4xl mx-auto text-center bg-gradient-to-br from-neon-green to-hot-pink p-12 md:p-20 rounded-3xl relative overflow-hidden"
@@ -375,7 +380,7 @@ export function MotionDesignerTemplate() {
                 Available for freelance projects
               </p>
               <Button size="lg" className="bg-black text-neon-green hover:bg-gray-900 font-bold uppercase text-lg px-12 text-white">
-                Hire Me Now <FiArrowRight className="ml-2" />
+                Hire Me Now <FiArrowRight className="ml-2" aria-hidden="true" />
               </Button>
             </div>
           </motion.div>
@@ -386,7 +391,7 @@ export function MotionDesignerTemplate() {
       <section className="py-32 relative z-10 bg-gray-900">
         <div className="container mx-auto px-6">
           <ScrollReveal>
-            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black uppercase mb-16 text-center break-words text-gray-900">
+            <h2 className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black uppercase mb-16 text-center break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>
               <span className="text-white">Style</span>
               <span className="text-hot-pink">Frames</span>
             </h2>
@@ -405,7 +410,7 @@ export function MotionDesignerTemplate() {
             ].map((img, i) => (
               <ScrollReveal key={i} delay={i * 0.05}>
                 <motion.div
-                  whileHover={{ scale: 1.05, rotate: 2 }}
+                  whileHover={prefersReducedMotion ? {} : { scale: 1.05, rotate: 2 }}
                   className="relative aspect-square overflow-hidden rounded-lg border-2 border-neon-green/20 cursor-pointer group"
                 >
                   <Image
@@ -442,7 +447,7 @@ export function MotionDesignerTemplate() {
 
             <ScrollReveal delay={0.3}>
               <div>
-                <h2 className="text-6xl md:text-7xl font-black uppercase mb-8 text-gray-900">
+                <h2 className={`text-6xl md:text-7xl font-black uppercase mb-8 ${isDark ? 'text-white' : 'text-gray-900'}`}>
                   <span className="text-white">About</span>
                   <span className="text-neon-green"> Me</span>
                 </h2>
@@ -465,7 +470,7 @@ export function MotionDesignerTemplate() {
       <section className="py-32 relative z-10 bg-gradient-to-b from-black via-gray-900 to-black">
         <div className="container mx-auto px-6">
           <ScrollReveal>
-            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black uppercase mb-8 text-center break-words text-gray-900">
+            <h2 className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black uppercase mb-8 text-center break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>
               <span className="text-white">Pricing</span>
             </h2>
             <p className="text-center text-gray-400 mb-16 text-xl uppercase tracking-wide">
@@ -481,7 +486,7 @@ export function MotionDesignerTemplate() {
             ].map((pkg, i) => (
               <ScrollReveal key={i} delay={i * 0.15}>
                 <motion.div
-                  whileHover={{ y: -10, scale: 1.02 }}
+                  whileHover={prefersReducedMotion ? {} : { y: -10, scale: 1.02 }}
                   className={`bg-gray-900 p-10 rounded-2xl border-4 ${pkg.popular ? 'border-hot-pink shadow-2xl shadow-hot-pink/20' : 'border-neon-green/20'} relative`}
                 >
                   {pkg.popular && (
@@ -490,7 +495,7 @@ export function MotionDesignerTemplate() {
                     </div>
                   )}
                   <div className="text-sm uppercase tracking-widest mb-8 text-gray-500 font-bold">{pkg.name}</div>
-                  <div className="text-4xl sm:text-5xl md:text-6xl font-black mb-12 break-words text-gray-900" style={{ color: pkg.color === 'neon-green' ? '#00FF00' : '#FF006E' }}>
+                  <div className={`text-4xl sm:text-5xl md:text-6xl font-black mb-12 break-words ${isDark ? 'text-white' : 'text-gray-900'}`} style={{ color: pkg.color === 'neon-green' ? '#00FF00' : '#FF006E' }}>
                     {pkg.price}
                   </div>
                   <ul className="space-y-4 mb-12">
@@ -515,7 +520,7 @@ export function MotionDesignerTemplate() {
       <section className="py-32 relative z-10">
         <div className="container mx-auto px-6">
           <ScrollReveal>
-            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black uppercase mb-16 text-center break-words text-gray-900">
+            <h2 className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black uppercase mb-16 text-center break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>
               <span className="text-white">Client</span>
               <span className="text-neon-green"> Love</span>
             </h2>
@@ -529,7 +534,7 @@ export function MotionDesignerTemplate() {
             ].map((t, i) => (
               <ScrollReveal key={i} delay={i * 0.15}>
                 <motion.div
-                  whileHover={{ scale: 1.05 }}
+                  whileHover={prefersReducedMotion ? {} : { scale: 1.05 }}
                   className="bg-gray-900 p-8 rounded-2xl border-2 border-neon-green/20 hover:border-hot-pink/50 transition-colors"
                 >
                   <p className="text-xl font-bold mb-6 text-gray-300 leading-relaxed">&ldquo;{t.text}&rdquo;</p>
@@ -548,7 +553,7 @@ export function MotionDesignerTemplate() {
       <section className="py-32 relative z-10 bg-gray-900">
         <div className="container mx-auto px-6">
           <ScrollReveal>
-            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black uppercase mb-16 text-center break-words text-gray-900">
+            <h2 className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black uppercase mb-16 text-center break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>
               <span className="text-white">My</span>
               <span className="text-hot-pink"> Journey</span>
             </h2>
@@ -563,11 +568,11 @@ export function MotionDesignerTemplate() {
             ].map((item, i) => (
               <ScrollReveal key={i} delay={i * 0.1}>
                 <motion.div
-                  whileHover={{ x: 10 }}
+                  whileHover={prefersReducedMotion ? {} : { x: 10 }}
                   className="flex gap-8 items-start border-l-4 border-neon-green pl-8 hover:border-hot-pink transition-colors"
                 >
                   <div className="flex-shrink-0 w-32 text-center">
-                    <div className="text-4xl sm:text-5xl font-black text-neon-green break-words text-gray-900">{item.year}</div>
+                    <div className={`text-4xl sm:text-5xl font-black text-neon-green break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>{item.year}</div>
                   </div>
                   <div className="flex-1">
                     <h4 className="text-3xl font-black uppercase mb-3 text-white">{item.title}</h4>
@@ -599,7 +604,7 @@ export function MotionDesignerTemplate() {
             ].map((faq, i) => (
               <ScrollReveal key={i} delay={i * 0.1}>
                 <motion.div
-                  whileHover={{ x: 10 }}
+                  whileHover={prefersReducedMotion ? {} : { x: 10 }}
                   className="bg-gray-900 p-8 rounded-xl border-2 border-neon-green/20 hover:border-neon-green/50 transition-colors"
                 >
                   <div className="text-2xl font-black uppercase mb-4 text-neon-green text-white">{faq.q}</div>

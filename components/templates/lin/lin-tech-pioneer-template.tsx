@@ -19,8 +19,11 @@ import {
   FiCheck,
 } from "react-icons/fi";
 import Link from "next/link";
+import { useTheme } from "next-themes";
 
 export function LinTechPioneerTemplate() {
+  const { theme } = useTheme();
+  const isDark = theme === 'dark';
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const companyData = {
@@ -131,7 +134,7 @@ export function LinTechPioneerTemplate() {
           <button
             className="md:hidden p-2 text-white hover:text-[#3B82F6] transition-colors"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            aria-label="Toggle menu"
+            aria-label={mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
           >
             {mobileMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
           </button>
@@ -195,13 +198,13 @@ export function LinTechPioneerTemplate() {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <ScrollReveal>
-              <div className="inline-block px-4 py-2 bg-[#3B82F6]/20 border border-[#3B82F6]/50 rounded-full text-sm mb-6 text-gray-900">
+              <div className={`inline-block px-4 py-2 bg-[#3B82F6]/20 border border-[#3B82F6]/50 rounded-full text-sm mb-6 ${isDark ? 'text-white' : 'text-gray-900'}`}>
                 <span className="text-[#3B82F6]">●</span> Enterprise-Grade Solutions
               </div>
             </ScrollReveal>
 
             <ScrollReveal delay={0.2}>
-              <h1 className="text-5xl md:text-6xl lg:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-6 leading-none text-gray-900">
+              <h1 className={`text-5xl md:text-6xl lg:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-6 leading-none ${isDark ? 'text-white' : 'text-gray-900'}`}>
                 <span className="bg-gradient-to-r from-[#3B82F6] via-[#06B6D4] to-[#3B82F6] bg-clip-text text-transparent">
                   {companyData.name}
                 </span>
@@ -240,7 +243,7 @@ export function LinTechPioneerTemplate() {
       {/* Features Section */}
       <section id="features" className="container mx-auto px-4 py-20">
         <ScrollReveal>
-          <h2 className="text-3xl sm:text-5xl font-bold text-center mb-4 break-words text-gray-900">
+          <h2 className={`text-3xl sm:text-5xl font-bold text-center mb-4 break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>
             Built for <span className="text-[#3B82F6]">Modern Teams</span>
           </h2>
         </ScrollReveal>
@@ -272,7 +275,7 @@ export function LinTechPioneerTemplate() {
       <section id="products" className="bg-[#0F172A] py-20">
         <div className="container mx-auto px-4">
           <ScrollReveal>
-            <h2 className="text-3xl sm:text-5xl font-bold text-center mb-4 break-words text-gray-900">
+            <h2 className={`text-3xl sm:text-5xl font-bold text-center mb-4 break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>
               Our <span className="text-[#3B82F6]">Products</span>
             </h2>
           </ScrollReveal>
@@ -293,7 +296,7 @@ export function LinTechPioneerTemplate() {
                     <ul className="space-y-3">
                       {product.features.map((feature, i) => (
                         <li key={i} className="flex items-center gap-2 text-sm text-gray-300">
-                          <FiCheck className="text-[#06B6D4] flex-shrink-0" />
+                          <FiCheck className="text-[#06B6D4] flex-shrink-0" aria-hidden="true" />
                           <span>{feature}</span>
                         </li>
                       ))}
@@ -309,7 +312,7 @@ export function LinTechPioneerTemplate() {
       {/* Tech Stack Section */}
       <section id="tech" className="container mx-auto px-4 py-20">
         <ScrollReveal>
-          <h2 className="text-3xl sm:text-5xl font-bold text-center mb-4 break-words text-gray-900">
+          <h2 className={`text-3xl sm:text-5xl font-bold text-center mb-4 break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>
             Powered by <span className="text-[#3B82F6]">Modern Tech</span>
           </h2>
         </ScrollReveal>
@@ -342,11 +345,11 @@ export function LinTechPioneerTemplate() {
             <div className="bg-[#0F172A] border border-[#3B82F6]/30 rounded-lg overflow-hidden">
               <div className="flex items-center justify-between px-4 py-3 bg-[#1E293B] border-b border-[#3B82F6]/20">
                 <span className="text-sm text-gray-400">example.ts</span>
-                <button className="text-xs text-[#3B82F6] hover:text-[#06B6D4] transition-colors text-gray-900">
+                <button className={`text-xs text-[#3B82F6] hover:text-[#06B6D4] transition-colors ${isDark ? 'text-white' : 'text-gray-900'}`}>
                   Copy
                 </button>
               </div>
-              <pre className="p-6 text-sm overflow-x-auto text-gray-900">
+              <pre className={`p-6 text-sm overflow-x-auto ${isDark ? 'text-white' : 'text-gray-900'}`}>
                 <code className="text-gray-300">
                   {`import { Unilink } from '@unilink/sdk';
 
@@ -389,7 +392,7 @@ await client.sync();`}
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
               <a href="mailto:info@unilink.co.il">
                 <Button className="bg-white text-[#3B82F6] hover:bg-gray-100 px-8 py-6 text-base font-semibold shadow-lg text-foreground">
-                  <FiMail className="mr-2" />
+                  <FiMail className="mr-2" aria-hidden="true" />
                   Contact Sales
                 </Button>
               </a>
@@ -404,13 +407,13 @@ await client.sync();`}
 
           <ScrollReveal delay={0.6}>
             <div className="flex gap-6 justify-center">
-              <a href="https://github.com" className="text-white hover:text-[#06B6D4] transition-colors">
+              <a href="https://github.com" className="text-white hover:text-[#06B6D4] transition-colors" aria-label="GitHub profile">
                 <FiGithub size={24} />
               </a>
-              <a href="https://twitter.com" className="text-white hover:text-[#06B6D4] transition-colors">
+              <a href="https://twitter.com" className="text-white hover:text-[#06B6D4] transition-colors" aria-label="Twitter profile">
                 <FiTwitter size={24} />
               </a>
-              <a href="https://linkedin.com" className="text-white hover:text-[#06B6D4] transition-colors">
+              <a href="https://linkedin.com" className="text-white hover:text-[#06B6D4] transition-colors" aria-label="LinkedIn profile">
                 <FiLinkedin size={24} />
               </a>
             </div>

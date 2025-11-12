@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { FadeIn } from "@/components/animations/fade-in";
 import { ScrollReveal } from "@/components/animations/scroll-reveal";
 import { Button } from "@/components/ui/button";
@@ -9,53 +10,91 @@ import { ThemeToggle } from "@/components/theme-toggle";
 import { LanguageToggle } from "@/components/language-toggle";
 import Link from "next/link";
 import { useI18n } from "@/lib/i18n-context";
-import { FiCheck, FiZap, FiShield, FiTrendingUp, FiUsers, FiArrowRight, FiStar, FiSlack, FiGithub, FiChrome, FiMail, FiLinkedin, FiTwitter, FiMessageCircle, FiClock, FiTarget } from "react-icons/fi";
+import { FiCheck, FiZap, FiShield, FiTrendingUp, FiUsers, FiArrowRight, FiStar, FiSlack, FiGithub, FiChrome, FiMail, FiLinkedin, FiTwitter, FiMessageCircle, FiMenu, FiX } from "react-icons/fi";
 import { useTheme } from "next-themes";
 
 export function OnlineBusinessSaasTemplate() {
   const { tt } = useI18n();
   const { theme } = useTheme();
-  const darkMode = theme === 'dark';
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const data = tt.onlineBusinessSaas || {};
 
   return (
     <div className="min-h-screen overflow-x-hidden max-w-full bg-gradient-to-b from-background via-background to-muted/20">
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b">
-        <div className="container mx-auto px-3 py-4 flex items-center justify-between">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b supports-[backdrop-filter]:bg-background/80">
+        <div className="container mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
           <Link href="/" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
             {tt.common?.back || "← Back"}
           </Link>
-          <div className="flex items-center gap-6">
-            <a href="#features" className="text-sm hover:text-primary transition-colors">
+          
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center gap-6">
+            <a href="#features" className="text-sm font-medium text-foreground/70 hover:text-foreground transition-colors px-3 py-2 rounded-md hover:bg-muted/50">
               {data.nav?.features || tt.common?.features || "Features"}
             </a>
-            <a href="#pricing" className="text-sm hover:text-primary transition-colors">
+            <a href="#pricing" className="text-sm font-medium text-foreground/70 hover:text-foreground transition-colors px-3 py-2 rounded-md hover:bg-muted/50">
               {data.nav?.pricing || tt.common?.pricing || "Pricing"}
             </a>
+            <div className="h-6 w-px bg-border mx-2" />
             <ThemeToggle />
             <LanguageToggle />
           </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            className="md:hidden p-2 rounded-md hover:bg-muted transition-colors touch-manipulation"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label={mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+          >
+            {mobileMenuOpen ? <FiX className="w-6 h-6" /> : <FiMenu className="w-6 h-6" />}
+          </button>
         </div>
+
+        {/* Mobile Menu */}
+        {mobileMenuOpen && (
+          <div className="md:hidden border-t bg-background/95 backdrop-blur-md">
+            <div className="container mx-auto px-4 py-4 flex flex-col gap-3">
+              <a 
+                href="#features" 
+                className="text-sm font-medium text-foreground/70 hover:text-foreground transition-colors py-2 px-3 rounded-md hover:bg-muted/50"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                {data.nav?.features || tt.common?.features || "Features"}
+              </a>
+              <a 
+                href="#pricing" 
+                className="text-sm font-medium text-foreground/70 hover:text-foreground transition-colors py-2 px-3 rounded-md hover:bg-muted/50"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                {data.nav?.pricing || tt.common?.pricing || "Pricing"}
+              </a>
+              <div className="flex items-center gap-3 pt-2 border-t">
+                <ThemeToggle />
+                <LanguageToggle />
+              </div>
+            </div>
+          </div>
+        )}
       </nav>
 
       {/* Hero Section */}
-      <section className="container mx-auto px-3 pt-32 pb-20 text-center">
+      <section className="container mx-auto px-4 sm:px-6 pt-32 pb-20 text-center">
         <FadeIn>
           <Badge className="mb-6" variant="secondary">
             {data.badge || "Trusted by 10,000+ teams"}
           </Badge>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-primary to-primary/50 bg-clip-text text-transparent break-words text-white">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-primary via-primary/80 to-primary/60 bg-clip-text text-transparent break-words">
             {data.name || "ProductFlow"}
           </h1>
-          <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-full mx-auto">
+          <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto px-4">
             {data.tagline || "Ship products faster with AI-powered project management"}
           </p>
-          <div className="flex gap-4 justify-center flex-wrap">
-            <Button size="lg" className="gap-2">
+          <div className="flex gap-4 justify-center flex-wrap px-4">
+            <Button size="lg" className="gap-2 min-h-[48px] touch-manipulation">
               {data.hero?.startTrial || "Start Free Trial"} <FiArrowRight />
             </Button>
-            <Button size="lg" variant="outline" className={darkMode ? 'text-white' : 'text-slate-900'}>
+            <Button size="lg" variant="outline" className="min-h-[48px] touch-manipulation">
               {data.hero?.watchDemo || "Watch Demo"}
             </Button>
           </div>
@@ -63,9 +102,9 @@ export function OnlineBusinessSaasTemplate() {
       </section>
 
       {/* Features Grid */}
-      <section id="features" className="container mx-auto px-3 py-20">
+      <section id="features" className="container mx-auto px-4 sm:px-6 py-16 sm:py-20">
         <ScrollReveal>
-          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-16 text-gray-900">
+          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 sm:mb-16 text-foreground">
             {data.features?.title || "Powerful features for modern teams"}
           </h2>
         </ScrollReveal>
@@ -93,11 +132,11 @@ export function OnlineBusinessSaasTemplate() {
             }
           ].map((feature, index) => (
             <ScrollReveal key={index} delay={index * 0.1}>
-              <Card className="h-full hover:shadow-lg transition-shadow">
+              <Card className="h-full hover:shadow-lg transition-all hover:-translate-y-1">
                 <CardContent className="p-6">
                   <div className="text-primary mb-4 text-3xl">{feature.icon}</div>
-                  <h3 className="font-semibold mb-2 text-gray-900">{feature.title}</h3>
-                  <p className="text-sm text-muted-foreground">{feature.description}</p>
+                  <h3 className="font-semibold mb-2 text-foreground">{feature.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{feature.description}</p>
                 </CardContent>
               </Card>
             </ScrollReveal>
@@ -106,16 +145,16 @@ export function OnlineBusinessSaasTemplate() {
       </section>
 
       {/* Pricing Section */}
-      <section id="pricing" className="container mx-auto px-3 py-20">
+      <section id="pricing" className="container mx-auto px-4 sm:px-6 py-16 sm:py-20">
         <ScrollReveal>
-          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4 text-gray-900">
+          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4 text-foreground">
             {data.pricing?.title || "Simple, transparent pricing"}
           </h2>
-          <p className="text-center text-muted-foreground mb-16">
+          <p className="text-center text-muted-foreground mb-12 sm:mb-16 max-w-2xl mx-auto">
             {data.pricing?.subtitle || "Choose the plan that fits your team size"}
           </p>
         </ScrollReveal>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-full mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
           {[
             {
               name: data.pricing?.starter?.name || "Starter",
@@ -137,24 +176,24 @@ export function OnlineBusinessSaasTemplate() {
             }
           ].map((plan, index) => (
             <ScrollReveal key={index} delay={index * 0.1}>
-              <Card className={`relative ${plan.popular ? 'border-primary shadow-xl scale-105' : ''}`}>
+              <Card className={`relative h-full flex flex-col ${plan.popular ? 'border-primary shadow-xl md:scale-105' : ''}`}>
                 {plan.popular && (
                   <Badge className="absolute -top-3 left-1/2 -translate-x-1/2">
                     {data.pricing?.mostPopular || "Most Popular"}
                   </Badge>
                 )}
-                <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold mb-2 text-gray-900">{plan.name}</h3>
-                  <div className="text-3xl sm:text-4xl font-bold mb-6 text-gray-900">{plan.price}</div>
-                  <ul className="space-y-3 mb-8">
+                <CardContent className="p-6 sm:p-8 flex flex-col flex-1">
+                  <h3 className="text-2xl font-bold mb-2 text-foreground">{plan.name}</h3>
+                  <div className="text-3xl sm:text-4xl font-bold mb-6 text-foreground">{plan.price}</div>
+                  <ul className="space-y-3 mb-8 flex-1">
                     {plan.features.map((feature, i) => (
                       <li key={i} className="flex items-start gap-2">
-                        <FiCheck className="text-primary mt-1 flex-shrink-0" />
-                        <span className="text-sm text-gray-900">{feature}</span>
+                        <FiCheck className="text-primary mt-0.5 flex-shrink-0" aria-hidden="true" />
+                        <span className="text-sm text-foreground">{feature}</span>
                       </li>
                     ))}
                   </ul>
-                  <Button className="w-full" variant={plan.popular ? "default" : "outline"}>
+                  <Button className="w-full min-h-[44px] touch-manipulation" variant={plan.popular ? "default" : "outline"}>
                     {data.pricing?.getStarted || "Get Started"}
                   </Button>
                 </CardContent>
@@ -165,53 +204,55 @@ export function OnlineBusinessSaasTemplate() {
       </section>
 
       {/* Social Proof / Stats Section */}
-      <section className="container mx-auto px-3 py-20 bg-muted/50 rounded-3xl my-20">
-        <ScrollReveal>
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-3xl sm:text-4xl font-bold mb-4 text-gray-900">
-              {data.stats?.title || "Trusted by teams worldwide"}
-            </h2>
+      <section className="container mx-auto px-4 sm:px-6 py-16 sm:py-20">
+        <div className="bg-muted/50 rounded-2xl sm:rounded-3xl p-8 sm:p-12">
+          <ScrollReveal>
+            <div className="text-center mb-12">
+              <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-foreground">
+                {data.stats?.title || "Trusted by teams worldwide"}
+              </h2>
+            </div>
+          </ScrollReveal>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 text-center max-w-5xl mx-auto">
+            <ScrollReveal delay={0.1}>
+              <div>
+                <div className="text-3xl sm:text-5xl font-bold text-primary mb-2">10,000+</div>
+                <p className="text-sm sm:text-base text-muted-foreground">{data.stats?.teams || "Active Teams"}</p>
+              </div>
+            </ScrollReveal>
+            <ScrollReveal delay={0.2}>
+              <div>
+                <div className="text-3xl sm:text-5xl font-bold text-primary mb-2">98%</div>
+                <p className="text-sm sm:text-base text-muted-foreground">{data.stats?.satisfaction || "Customer Satisfaction"}</p>
+              </div>
+            </ScrollReveal>
+            <ScrollReveal delay={0.3}>
+              <div>
+                <div className="text-3xl sm:text-5xl font-bold text-primary mb-2">500K+</div>
+                <p className="text-sm sm:text-base text-muted-foreground">{data.stats?.projects || "Projects Completed"}</p>
+              </div>
+            </ScrollReveal>
+            <ScrollReveal delay={0.4}>
+              <div>
+                <div className="text-3xl sm:text-5xl font-bold text-primary mb-2">50+</div>
+                <p className="text-sm sm:text-base text-muted-foreground">{data.stats?.countries || "Countries"}</p>
+              </div>
+            </ScrollReveal>
           </div>
-        </ScrollReveal>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-center max-w-full mx-auto">
-          <ScrollReveal delay={0.1}>
-            <div>
-              <div className="text-3xl sm:text-5xl font-bold text-primary mb-2 break-words">10,000+</div>
-              <p className="text-muted-foreground">{data.stats?.teams || "Active Teams"}</p>
-            </div>
-          </ScrollReveal>
-          <ScrollReveal delay={0.2}>
-            <div>
-              <div className="text-3xl sm:text-5xl font-bold text-primary mb-2 break-words">98%</div>
-              <p className="text-muted-foreground">{data.stats?.satisfaction || "Customer Satisfaction"}</p>
-            </div>
-          </ScrollReveal>
-          <ScrollReveal delay={0.3}>
-            <div>
-              <div className="text-3xl sm:text-5xl font-bold text-primary mb-2 break-words">500K+</div>
-              <p className="text-muted-foreground">{data.stats?.projects || "Projects Completed"}</p>
-            </div>
-          </ScrollReveal>
-          <ScrollReveal delay={0.4}>
-            <div>
-              <div className="text-3xl sm:text-5xl font-bold text-primary mb-2 break-words">50+</div>
-              <p className="text-muted-foreground">{data.stats?.countries || "Countries"}</p>
-            </div>
-          </ScrollReveal>
         </div>
       </section>
 
       {/* Testimonials Section */}
-      <section className="container mx-auto px-3 py-20">
+      <section className="container mx-auto px-4 sm:px-6 py-16 sm:py-20">
         <ScrollReveal>
-          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4 text-gray-900">
+          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4 text-foreground">
             {data.testimonials?.title || "Loved by teams everywhere"}
           </h2>
-          <p className="text-center text-muted-foreground mb-16">
+          <p className="text-center text-muted-foreground mb-12 sm:mb-16 max-w-2xl mx-auto">
             {data.testimonials?.subtitle || "See what our customers have to say"}
           </p>
         </ScrollReveal>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-full mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
           {[
             {
               name: "Sarah Johnson",
@@ -233,14 +274,14 @@ export function OnlineBusinessSaasTemplate() {
             }
           ].map((testimonial, index) => (
             <ScrollReveal key={index} delay={index * 0.1}>
-              <Card className="h-full">
+              <Card className="h-full hover:shadow-lg transition-all">
                 <CardContent className="p-6">
                   <div className="flex gap-1 mb-4">
                     {[...Array(5)].map((_, i) => (
-                      <FiStar key={i} className="text-yellow-500 fill-yellow-500" />
+                      <FiStar key={i} className="text-yellow-500 fill-yellow-500 w-4 h-4" />
                     ))}
                   </div>
-                  <p className="text-muted-foreground mb-6 italic">"{testimonial.quote}"</p>
+                  <p className="text-muted-foreground mb-6 italic leading-relaxed">"{testimonial.quote}"</p>
                   <div className="flex items-center gap-3">
                     <img
                       src={testimonial.avatar}
@@ -248,7 +289,7 @@ export function OnlineBusinessSaasTemplate() {
                       className="w-12 h-12 rounded-full object-cover"
                     />
                     <div>
-                      <div className="font-semibold">{testimonial.name}</div>
+                      <div className="font-semibold text-foreground">{testimonial.name}</div>
                       <div className="text-sm text-muted-foreground">{testimonial.role}</div>
                     </div>
                   </div>
@@ -260,29 +301,29 @@ export function OnlineBusinessSaasTemplate() {
       </section>
 
       {/* Integrations Section */}
-      <section className="container mx-auto px-3 py-20">
+      <section className="container mx-auto px-4 sm:px-6 py-16 sm:py-20">
         <ScrollReveal>
-          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4 text-gray-900">
+          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4 text-foreground">
             {data.integrations?.title || "Integrates with your favorite tools"}
           </h2>
-          <p className="text-center text-muted-foreground mb-16">
+          <p className="text-center text-muted-foreground mb-12 sm:mb-16 max-w-2xl mx-auto">
             {data.integrations?.subtitle || "Connect ProductFlow with the tools you already use"}
           </p>
         </ScrollReveal>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6 max-w-full mx-auto">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4 sm:gap-6 max-w-5xl mx-auto">
           {[
             { icon: <FiSlack className="w-8 h-8" />, name: "Slack" },
             { icon: <FiGithub className="w-8 h-8" />, name: "GitHub" },
             { icon: <FiChrome className="w-8 h-8" />, name: "Chrome" },
-            { icon: <FiMail className="w-8 h-8" />, name: "Gmail" },
+            { icon: <FiMail className="w-8 h-8" aria-hidden="true" />, name: "Gmail" },
             { icon: <FiLinkedin className="w-8 h-8" />, name: "LinkedIn" },
             { icon: <FiMessageCircle className="w-8 h-8" />, name: "Zoom" }
           ].map((integration, index) => (
             <ScrollReveal key={index} delay={index * 0.05}>
               <Card className="hover:shadow-lg transition-all hover:scale-105 cursor-pointer">
-                <CardContent className="p-6 text-center">
+                <CardContent className="p-4 sm:p-6 text-center">
                   <div className="text-primary mb-2 flex justify-center">{integration.icon}</div>
-                  <p className="text-sm font-medium text-gray-900">{integration.name}</p>
+                  <p className="text-sm font-medium text-foreground">{integration.name}</p>
                 </CardContent>
               </Card>
             </ScrollReveal>
@@ -291,13 +332,13 @@ export function OnlineBusinessSaasTemplate() {
       </section>
 
       {/* FAQ Section */}
-      <section className="container mx-auto px-3 py-20 max-w-full">
+      <section className="container mx-auto px-4 sm:px-6 py-16 sm:py-20 max-w-4xl">
         <ScrollReveal>
-          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-16 text-gray-900">
+          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 sm:mb-16 text-foreground">
             {data.faq?.title || "Frequently Asked Questions"}
           </h2>
         </ScrollReveal>
-        <div className="space-y-6">
+        <div className="space-y-4 sm:space-y-6">
           {[
             {
               question: data.faq?.q1?.question || "How does the free trial work?",
@@ -321,10 +362,10 @@ export function OnlineBusinessSaasTemplate() {
             }
           ].map((faq, index) => (
             <ScrollReveal key={index} delay={index * 0.1}>
-              <Card>
+              <Card className="hover:shadow-md transition-shadow">
                 <CardContent className="p-6">
-                  <h3 className="font-semibold text-lg mb-2 text-gray-900">{faq.question}</h3>
-                  <p className="text-muted-foreground">{faq.answer}</p>
+                  <h3 className="font-semibold text-lg mb-2 text-foreground">{faq.question}</h3>
+                  <p className="text-muted-foreground leading-relaxed">{faq.answer}</p>
                 </CardContent>
               </Card>
             </ScrollReveal>
@@ -333,16 +374,16 @@ export function OnlineBusinessSaasTemplate() {
       </section>
 
       {/* CTA Section */}
-      <section className="container mx-auto px-3 py-20 text-center">
+      <section className="container mx-auto px-4 sm:px-6 py-16 sm:py-20 text-center">
         <ScrollReveal>
-          <Card className="bg-primary text-primary-foreground p-12">
-            <h2 className="text-3xl md:text-4xl sm:text-5xl font-bold mb-4 break-words text-gray-900">
+          <Card className="bg-primary text-primary-foreground p-8 sm:p-12">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 break-words">
               {data.cta?.title || "Ready to transform your workflow?"}
             </h2>
-            <p className="text-xl mb-8 opacity-90 text-white">
+            <p className="text-lg sm:text-xl mb-8 opacity-90 max-w-2xl mx-auto">
               {data.cta?.subtitle || "Join thousands of teams shipping better products, faster."}
             </p>
-            <Button size="lg" variant="secondary">
+            <Button size="lg" variant="secondary" className="min-h-[48px] touch-manipulation">
               {data.cta?.button || "Start Your Free 14-Day Trial"}
             </Button>
           </Card>
@@ -350,17 +391,17 @@ export function OnlineBusinessSaasTemplate() {
       </section>
 
       {/* Footer */}
-      <footer className="border-t mt-20 py-12 bg-muted/30">
-        <div className="container mx-auto px-3 max-w-full">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+      <footer className="border-t mt-16 sm:mt-20 py-12 bg-muted/30">
+        <div className="container mx-auto px-4 sm:px-6 max-w-7xl">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mb-8">
             <div>
-              <h3 className="font-bold text-lg mb-4 text-gray-900">{data.name || "ProductFlow"}</h3>
-              <p className="text-sm text-muted-foreground">
+              <h3 className="font-bold text-lg mb-4 text-foreground">{data.name || "ProductFlow"}</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">
                 {data.footer?.tagline || "Ship products faster with AI-powered project management"}
               </p>
             </div>
             <div>
-              <h4 className="font-semibold mb-4">{data.footer?.product || "Product"}</h4>
+              <h4 className="font-semibold mb-4 text-foreground">{data.footer?.product || "Product"}</h4>
               <ul className="space-y-2 text-sm text-muted-foreground">
                 <li><a href="#features" className="hover:text-foreground transition-colors">{data.footer?.features || "Features"}</a></li>
                 <li><a href="#pricing" className="hover:text-foreground transition-colors">{data.footer?.pricing || "Pricing"}</a></li>
@@ -369,7 +410,7 @@ export function OnlineBusinessSaasTemplate() {
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold mb-4">{data.footer?.company || "Company"}</h4>
+              <h4 className="font-semibold mb-4 text-foreground">{data.footer?.company || "Company"}</h4>
               <ul className="space-y-2 text-sm text-muted-foreground">
                 <li><a href="#" className="hover:text-foreground transition-colors">{data.footer?.about || "About"}</a></li>
                 <li><a href="#" className="hover:text-foreground transition-colors">{data.footer?.blog || "Blog"}</a></li>
@@ -378,15 +419,15 @@ export function OnlineBusinessSaasTemplate() {
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold mb-4">{data.footer?.connect || "Connect"}</h4>
-              <div className="flex gap-4">
-                <a href="#" className="p-2 bg-muted rounded-lg hover:bg-muted/80 transition-colors">
+              <h4 className="font-semibold mb-4 text-foreground">{data.footer?.connect || "Connect"}</h4>
+              <div className="flex gap-3">
+                <a href="#" className="p-2 bg-muted rounded-lg hover:bg-muted/80 transition-colors touch-manipulation" aria-label="Twitter">
                   <FiTwitter className="w-5 h-5" />
                 </a>
-                <a href="#" className="p-2 bg-muted rounded-lg hover:bg-muted/80 transition-colors">
+                <a href="#" className="p-2 bg-muted rounded-lg hover:bg-muted/80 transition-colors touch-manipulation" aria-label="LinkedIn">
                   <FiLinkedin className="w-5 h-5" />
                 </a>
-                <a href="#" className="p-2 bg-muted rounded-lg hover:bg-muted/80 transition-colors">
+                <a href="#" className="p-2 bg-muted rounded-lg hover:bg-muted/80 transition-colors touch-manipulation" aria-label="GitHub">
                   <FiGithub className="w-5 h-5" />
                 </a>
               </div>

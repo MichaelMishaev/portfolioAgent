@@ -10,8 +10,11 @@ import { ThemeToggle } from "@/components/theme-toggle";
 import { LanguageToggle } from "@/components/language-toggle";
 import Link from "next/link";
 import { useI18n } from "@/lib/i18n-context";
+import { useTheme } from "next-themes";
 
 export function PersonalBrandTemplate() {
+  const { theme } = useTheme();
+  const isDark = theme === 'dark';
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [expandedFaq, setExpandedFaq] = useState<number | null>(null);
   const { tt } = useI18n();
@@ -26,7 +29,7 @@ export function PersonalBrandTemplate() {
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-sm border-b">
         <div className="container mx-auto px-6 lg:px-8 max-w-6xl py-4 flex items-center justify-between">
-          <Link href="/" className="text-lg font-bold text-gray-900 hover:text-blue-600">
+          <Link href="/" className={`text-lg font-bold ${isDark ? 'text-white' : 'text-gray-900'} hover:text-blue-600`}>
             {tt.common.backToGallery}
           </Link>
 
@@ -50,7 +53,7 @@ export function PersonalBrandTemplate() {
           <button
             className="md:hidden p-2"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            aria-label="Toggle menu"
+            aria-label={mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
           >
             {mobileMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
           </button>
@@ -73,7 +76,7 @@ export function PersonalBrandTemplate() {
         <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
           <FadeIn>
             <div>
-              <h1 className="text-4xl sm:text-5xl md:text-5xl sm:text-5xl md:text-6xl font-bold text-gray-900 mb-6 break-words">
+              <h1 className={`text-4xl sm:text-5xl md:text-5xl sm:text-5xl md:text-6xl font-bold ${isDark ? 'text-white' : 'text-gray-900'} mb-6 break-words`}>
                 {data.hero.greeting}
               </h1>
               <p className="text-2xl text-gray-700 mb-8 leading-relaxed">
@@ -88,20 +91,20 @@ export function PersonalBrandTemplate() {
                   {data.hero.primaryCta}
                 </Button>
                 <Button variant="outline" className="border-2 px-8 py-6 text-lg text-white">
-                  <FiDownload className="mr-2" />
+                  <FiDownload className="mr-2" aria-hidden="true" />
                   {data.hero.secondaryCta}
                 </Button>
               </div>
 
               {/* Social Links */}
               <div className="flex gap-6">
-                <a href="#" className="text-gray-600 hover:text-blue-600 transition-colors">
+                <a href="#" className="text-gray-600 hover:text-blue-600 transition-colors" aria-label="LinkedIn profile">
                   <FiLinkedin size={24} />
                 </a>
-                <a href="#" className="text-gray-600 hover:text-blue-600 transition-colors">
+                <a href="#" className="text-gray-600 hover:text-blue-600 transition-colors" aria-label="Twitter profile">
                   <FiTwitter size={24} />
                 </a>
-                <a href="#" className="text-gray-600 hover:text-blue-600 transition-colors">
+                <a href="#" className="text-gray-600 hover:text-blue-600 transition-colors" aria-label="GitHub profile">
                   <FiGithub size={24} />
                 </a>
               </div>
@@ -149,7 +152,7 @@ export function PersonalBrandTemplate() {
       <section id="work" className="py-20 px-6 bg-gradient-to-br from-yellow-50 to-orange-50">
         <div className="max-w-6xl mx-auto">
           <ScrollReveal>
-            <h2 className="text-3xl sm:text-4xl font-bold mb-16 text-center text-gray-900">Selected Work</h2>
+            <h2 className={`text-3xl sm:text-4xl font-bold mb-16 text-center ${isDark ? 'text-white' : 'text-gray-900'}`}>Selected Work</h2>
           </ScrollReveal>
 
           <div className="grid md:grid-cols-2 gap-8">
@@ -160,7 +163,7 @@ export function PersonalBrandTemplate() {
                     <span className="text-6xl">{project.icon}</span>
                   </div>
                   <CardContent className="p-6">
-                    <h3 className="text-2xl font-bold mb-2 text-gray-900">{project.title}</h3>
+                    <h3 className={`text-2xl font-bold mb-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>{project.title}</h3>
                     <p className="text-gray-600 mb-4">{project.description}</p>
                     <div className="flex gap-2 flex-wrap">
                       {project.tags.map((tag: string, tagIndex: number) => (
@@ -184,7 +187,7 @@ export function PersonalBrandTemplate() {
       <section id="faq" className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-6">
           <ScrollReveal>
-            <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4 text-gray-900">Frequently Asked Questions</h2>
+            <h2 className={`text-3xl sm:text-4xl font-bold text-center mb-4 ${isDark ? 'text-white' : 'text-gray-900'}`}>Frequently Asked Questions</h2>
             <p className="text-xl text-gray-600 text-center mb-16">
               {data.faq.subtitle}
             </p>
@@ -198,7 +201,7 @@ export function PersonalBrandTemplate() {
                     onClick={() => setExpandedFaq(expandedFaq === index ? null : index)}
                     className="w-full text-left flex justify-between items-center"
                   >
-                    <span className="text-xl font-semibold text-gray-900">{faq.question}</span>
+                    <span className={`text-xl font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{faq.question}</span>
                     <span
                       className={`text-2xl transform transition-transform ${
                         expandedFaq === index ? 'rotate-45' : ''
@@ -221,7 +224,7 @@ export function PersonalBrandTemplate() {
       <section id="about" className="py-20 bg-gradient-to-br from-yellow-50 to-orange-50">
         <div className="max-w-4xl mx-auto px-6">
           <ScrollReveal>
-            <h2 className="text-3xl sm:text-4xl font-bold mb-8 text-center text-gray-900">{tt.common.about}</h2>
+            <h2 className={`text-3xl sm:text-4xl font-bold mb-8 text-center ${isDark ? 'text-white' : 'text-gray-900'}`}>{tt.common.about}</h2>
           </ScrollReveal>
 
           <ScrollReveal delay={0.2}>
@@ -241,7 +244,7 @@ export function PersonalBrandTemplate() {
       <section id="contact" className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <ScrollReveal>
-            <h2 className="text-4xl lg:text-4xl sm:text-5xl font-bold mb-6 break-words text-gray-900">
+            <h2 className={`text-4xl lg:text-4xl sm:text-5xl font-bold mb-6 break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>
               {tt.common.letsWorkTogether}
             </h2>
             <p className="text-xl text-gray-600 mb-12">
@@ -249,13 +252,13 @@ export function PersonalBrandTemplate() {
             </p>
             <div className="flex gap-4 justify-center flex-wrap">
               <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-12 py-6 text-lg">
-                <FiMail className="mr-2" />
+                <FiMail className="mr-2" aria-hidden="true" />
                 {data.contact.emailCta}
               </Button>
               <Button
                 size="lg"
                 variant="outline"
-                className="border-2 px-12 py-6 text-lg text-gray-900"
+                className={`border-2 px-12 py-6 text-lg ${isDark ? 'text-white' : 'text-gray-900'}`}
               >
                 Schedule a Call
               </Button>
@@ -275,7 +278,7 @@ export function PersonalBrandTemplate() {
 
           {/* Stats - Personal Brand */}
           <section className="py-16 border-t border-gray-800">
-            <h3 className="text-3xl font-bold mb-8 text-center text-gray-900">By The Numbers</h3>
+            <h3 className={`text-3xl font-bold mb-8 text-center ${isDark ? 'text-white' : 'text-gray-900'}`}>By The Numbers</h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {[
                 { num: '50K+', label: 'Followers' },
@@ -284,7 +287,7 @@ export function PersonalBrandTemplate() {
                 { num: '4.9', label: 'Avg Rating' }
               ].map((stat, i) => (
                 <div key={i} className="text-center">
-                  <div className="text-3xl sm:text-4xl font-bold mb-2 text-gray-900">{stat.num}</div>
+                  <div className={`text-3xl sm:text-4xl font-bold mb-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>{stat.num}</div>
                   <div className="text-sm text-gray-400">{stat.label}</div>
                 </div>
               ))}
@@ -293,7 +296,7 @@ export function PersonalBrandTemplate() {
 
           {/* Skills - Personal Brand */}
           <section className="py-16 border-t border-gray-800">
-            <h3 className="text-3xl font-bold mb-8 text-center text-gray-900">What I Do Best</h3>
+            <h3 className={`text-3xl font-bold mb-8 text-center ${isDark ? 'text-white' : 'text-gray-900'}`}>What I Do Best</h3>
             <div className="grid md:grid-cols-3 gap-4 max-w-4xl mx-auto">
               {['Product Strategy', 'UI/UX Design', 'Frontend Development', 'Brand Identity', 'Content Creation', 'Growth Marketing'].map((skill, i) => (
                 <div key={i} className="bg-gray-800 p-6 rounded-lg text-center border border-gray-700 hover:border-blue-500 transition-colors">
@@ -305,7 +308,7 @@ export function PersonalBrandTemplate() {
 
           {/* Pricing - Personal Brand */}
           <section className="py-16 border-t border-gray-800">
-            <h3 className="text-3xl font-bold mb-8 text-center text-gray-900">Work With Me</h3>
+            <h3 className={`text-3xl font-bold mb-8 text-center ${isDark ? 'text-white' : 'text-gray-900'}`}>Work With Me</h3>
             <div className="grid md:grid-cols-3 gap-6">
               {[
                 { name: 'Consultation', price: '$200/hr', desc: 'Strategy session and expert advice' },
@@ -324,7 +327,7 @@ export function PersonalBrandTemplate() {
 
           {/* Testimonials - Personal Brand */}
           <section className="py-16 border-t border-gray-800">
-            <h3 className="text-3xl font-bold mb-8 text-center text-gray-900">What People Say</h3>
+            <h3 className={`text-3xl font-bold mb-8 text-center ${isDark ? 'text-white' : 'text-gray-900'}`}>What People Say</h3>
             <div className="max-w-4xl mx-auto space-y-6">
               {[
                 { text: 'Incredible talent and great to work with. Highly recommended!', author: 'Alex Johnson', role: 'Founder, StartupCo' },
@@ -344,7 +347,7 @@ export function PersonalBrandTemplate() {
 
           {/* Timeline - Personal Brand */}
           <section className="py-16 border-t border-gray-800">
-            <h3 className="text-3xl font-bold mb-8 text-center text-gray-900">My Journey</h3>
+            <h3 className={`text-3xl font-bold mb-8 text-center ${isDark ? 'text-white' : 'text-gray-900'}`}>My Journey</h3>
             <div className="max-w-3xl mx-auto space-y-6">
               {[
                 { year: '2024', title: 'Independent Consultant', desc: 'Helping companies build better products' },

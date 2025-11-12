@@ -2,6 +2,7 @@
 
 import { ReactNode } from "react";
 import { motion } from "framer-motion";
+import { useReducedMotion } from "@/lib/hooks/use-reduced-motion";
 import { Button } from "@/components/ui/button";
 
 interface GradientButtonProps {
@@ -19,6 +20,8 @@ export function GradientButton({
   size = "default",
   variant = "default",
 }: GradientButtonProps) {
+  const prefersReducedMotion = useReducedMotion();
+
   return (
     <Button
       onClick={onClick}
@@ -28,15 +31,15 @@ export function GradientButton({
       asChild
     >
       <motion.button
-        whileHover={{ scale: 1.05 }}
+        whileHover={prefersReducedMotion ? {} : { scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
       >
         {/* Blue overlay that slides in on hover */}
         <motion.div
           className="absolute inset-0 bg-blue-700 opacity-0 group-hover:opacity-100"
-          initial={{ x: "-100%" }}
-          whileHover={{ x: "0%" }}
-          transition={{ duration: 0.3 }}
+          initial={prefersReducedMotion ? {} : { x: "-100%" }}
+          whileHover={prefersReducedMotion ? {} : { x: "0%" }}
+          transition={prefersReducedMotion ? {} : { duration: 0.3 }}
         />
 
         {/* Content */}

@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useReducedMotion } from "@/lib/hooks/use-reduced-motion";
 import { FadeIn } from "@/components/animations/fade-in";
 import { Button } from "@/components/ui/button";
 import { FiMail, FiArrowRight, FiChevronLeft, FiChevronRight , FiMenu, FiX } from "react-icons/fi";
@@ -236,6 +237,7 @@ const portfolioData = {
 
 export function SplitScreenTemplate() {
   const [activeProject, setActiveProject] = useState(0);  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const prefersReducedMotion = useReducedMotion();
 
   const [direction, setDirection] = useState(0);
   const { theme } = useTheme();
@@ -279,7 +281,7 @@ export function SplitScreenTemplate() {
             <button
               className="md:hidden p-3 text-foreground hover:bg-accent rounded-md border border-border transition-colors"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              aria-label="Toggle menu"
+              aria-label={mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
             >
               {mobileMenuOpen ? <FiX size={28} /> : <FiMenu size={28} />}
             </button>
@@ -342,7 +344,7 @@ export function SplitScreenTemplate() {
               <FadeIn delay={0.4}>
                 <Button size="lg" className="w-fit group">
                   View Projects
-                  <FiArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+                  <FiArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
                 </Button>
               </FadeIn>
             </div>
@@ -425,10 +427,10 @@ export function SplitScreenTemplate() {
                 <motion.div
                   key={activeProject}
                   custom={direction}
-                  initial={{ x: direction > 0 ? 300 : -300, opacity: 0 }}
+                  initial={prefersReducedMotion ? {} : { x: direction > 0 ? 300 : -300, opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
                   exit={{ x: direction > 0 ? -300 : 300, opacity: 0 }}
-                  transition={{ duration: 0.3 }}
+                  transition={prefersReducedMotion ? {} : { duration: 0.3 }}
                   className="h-full"
                 >
                   <div
@@ -448,10 +450,10 @@ export function SplitScreenTemplate() {
                 <motion.div
                   key={activeProject}
                   custom={direction}
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -20 }}
-                  transition={{ duration: 0.3 }}
+                  transition={prefersReducedMotion ? {} : { duration: 0.3 }}
                 >
                   <div className="flex items-center gap-3 mb-4">
                     <span
@@ -719,7 +721,7 @@ export function SplitScreenTemplate() {
                   </p>
                   <Button variant="ghost" size="sm" className="group-hover:gap-2 transition-all">
                     Read Case Study
-                    <FiArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    <FiArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" aria-hidden="true" />
                   </Button>
                 </div>
               </FadeIn>
@@ -808,7 +810,7 @@ export function SplitScreenTemplate() {
             {/* Right Side */}
             <div className="space-y-6">
               <Button size="lg" className="w-full justify-start text-lg text-gray-900">
-                <FiMail className="mr-2" />
+                <FiMail className="mr-2" aria-hidden="true" />
                 hello@davidkim.com
               </Button>
               <div className="text-center text-sm text-muted-foreground">

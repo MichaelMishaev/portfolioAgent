@@ -9,8 +9,11 @@ import { ThemeToggle } from "@/components/theme-toggle";
 import { LanguageToggle } from "@/components/language-toggle";
 import Link from "next/link";
 import { useI18n } from "@/lib/i18n-context";
+import { useTheme } from "next-themes";
 
 export function MinimalPortfolioCleanTemplate() {
+  const { theme } = useTheme();
+  const isDark = theme === 'dark';
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { tt } = useI18n();
   const data = tt?.minimalPortfolioClean;
@@ -24,18 +27,18 @@ export function MinimalPortfolioCleanTemplate() {
       {/* Minimal Navigation */}
       <nav className="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-md border-b border-gray-200 z-50">
         <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-          <Link href="/" className="text-xl font-bold text-gray-900 hover:text-blue-600 transition-colors">
+          <Link href="/" className={`text-xl font-bold ${isDark ? 'text-white' : 'text-gray-900'} hover:text-blue-600 transition-colors`}>
             {data.initials}
           </Link>
 
           <div className="hidden md:flex gap-8 items-center">
-            <a href="#work" className="text-gray-600 hover:text-gray-900 font-medium transition-colors">
+            <a href="#work" className={`text-gray-600 hover: ${isDark ? 'text-white' : 'text-gray-900'} font-medium transition-colors`}>
               {tt.common.work}
             </a>
-            <a href="#about" className="text-gray-600 hover:text-gray-900 font-medium transition-colors">
+            <a href="#about" className={`text-gray-600 hover: ${isDark ? 'text-white' : 'text-gray-900'} font-medium transition-colors`}>
               {tt.common.about}
             </a>
-            <a href="#contact" className="text-gray-600 hover:text-gray-900 font-medium transition-colors">
+            <a href="#contact" className={`text-gray-600 hover: ${isDark ? 'text-white' : 'text-gray-900'} font-medium transition-colors`}>
               {tt.common.contact}
             </a>
             <ThemeToggle />
@@ -45,7 +48,7 @@ export function MinimalPortfolioCleanTemplate() {
           <button
             className="md:hidden p-2"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            aria-label="Toggle menu"
+            aria-label={mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
           >
             {mobileMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
           </button>
@@ -72,7 +75,7 @@ export function MinimalPortfolioCleanTemplate() {
       <section className="min-h-screen flex items-center justify-center px-6 pt-20">
         <div className="max-w-3xl text-center">
           <FadeIn>
-            <h1 className="text-4xl sm:text-5xl md:text-5xl sm:text-5xl md:text-6xl font-bold text-gray-900 mb-6 tracking-tight break-words">
+            <h1 className={`text-4xl sm:text-5xl md:text-5xl sm:text-5xl md:text-6xl font-bold ${isDark ? 'text-white' : 'text-gray-900'} mb-6 tracking-tight break-words`}>
               {data.hero.greeting}
             </h1>
           </FadeIn>
@@ -88,10 +91,10 @@ export function MinimalPortfolioCleanTemplate() {
               <a href="#work" className="text-blue-600 font-semibold hover:underline">
                 {tt.common.viewAll} {tt.common.work}
               </a>
-              <a href="#about" className="text-gray-600 font-semibold hover:text-gray-900">
+              <a href="#about" className={`text-gray-600 font-semibold hover: ${isDark ? 'text-white' : 'text-gray-900'}`}>
                 {tt.common.about}
               </a>
-              <a href="#contact" className="text-gray-600 font-semibold hover:text-gray-900">
+              <a href="#contact" className={`text-gray-600 font-semibold hover: ${isDark ? 'text-white' : 'text-gray-900'}`}>
                 {tt.common.contact}
               </a>
             </div>
@@ -103,7 +106,7 @@ export function MinimalPortfolioCleanTemplate() {
       <section id="work" className="py-20 px-6 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <ScrollReveal>
-            <h2 className="text-3xl font-bold text-gray-900 mb-12">Selected Work</h2>
+            <h2 className={`text-3xl font-bold ${isDark ? 'text-white' : 'text-gray-900'} mb-12`}>Selected Work</h2>
           </ScrollReveal>
 
           <div className="space-y-16">
@@ -118,7 +121,7 @@ export function MinimalPortfolioCleanTemplate() {
                     </div>
                     <div>
                       <div className="text-sm text-gray-500 mb-2">{project.category}</div>
-                      <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                      <h3 className={`text-2xl font-bold ${isDark ? 'text-white' : 'text-gray-900'} mb-3 group-hover:text-blue-600 transition-colors`}>
                         {project.title}
                       </h3>
                       <p className="text-gray-600 leading-relaxed mb-4">
@@ -147,7 +150,7 @@ export function MinimalPortfolioCleanTemplate() {
       <section id="about" className="py-20 px-6 bg-white">
         <div className="max-w-4xl mx-auto">
           <ScrollReveal>
-            <h2 className="text-3xl font-bold text-gray-900 mb-8">{tt.common.about}</h2>
+            <h2 className={`text-3xl font-bold ${isDark ? 'text-white' : 'text-gray-900'} mb-8`}>{tt.common.about}</h2>
           </ScrollReveal>
 
           <ScrollReveal delay={0.2}>
@@ -165,8 +168,8 @@ export function MinimalPortfolioCleanTemplate() {
             <div className="mt-12 grid md:grid-cols-3 gap-8">
               {data.about.skills.map((skill: string, index: number) => (
                 <div key={index} className="text-center">
-                  <div className="text-4xl mb-2 text-gray-900">✓</div>
-                  <div className="font-medium text-gray-900">{skill}</div>
+                  <div className={`text-4xl mb-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>✓</div>
+                  <div className={`font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>{skill}</div>
                 </div>
               ))}
             </div>
@@ -178,7 +181,7 @@ export function MinimalPortfolioCleanTemplate() {
       <section id="contact" className="py-20 px-6 bg-gray-50">
         <div className="max-w-4xl mx-auto text-center">
           <ScrollReveal>
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">{tt.common.getInTouch}</h2>
+            <h2 className={`text-3xl font-bold ${isDark ? 'text-white' : 'text-gray-900'} mb-6`}>{tt.common.getInTouch}</h2>
             <p className="text-xl text-gray-600 mb-12">
               {data.contact.description}
             </p>
@@ -188,14 +191,14 @@ export function MinimalPortfolioCleanTemplate() {
             <div className="flex gap-8 justify-center mb-12">
               <a
                 href={`mailto:${data.contact.email}`}
-                className="text-gray-600 hover:text-gray-900 transition-colors"
+                className={`text-gray-600 hover: ${isDark ? 'text-white' : 'text-gray-900'} transition-colors`}
               >
                 <FiMail size={28} />
               </a>
-              <a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">
+              <a href="#" className={`text-gray-600 hover: ${isDark ? 'text-white' : 'text-gray-900'} transition-colors`}>
                 <FiGithub size={28} />
               </a>
-              <a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">
+              <a href="#" className={`text-gray-600 hover: ${isDark ? 'text-white' : 'text-gray-900'} transition-colors`}>
                 <FiLinkedin size={28} />
               </a>
             </div>
@@ -215,25 +218,25 @@ export function MinimalPortfolioCleanTemplate() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-12">
             <ScrollReveal>
               <div className="text-center">
-                <div className="text-4xl font-light text-gray-900 mb-2">6</div>
+                <div className={`text-4xl font-light ${isDark ? 'text-white' : 'text-gray-900'} mb-2`}>6</div>
                 <div className="text-sm uppercase tracking-wider text-gray-500">Years</div>
               </div>
             </ScrollReveal>
             <ScrollReveal delay={0.1}>
               <div className="text-center">
-                <div className="text-4xl font-light text-gray-900 mb-2">47</div>
+                <div className={`text-4xl font-light ${isDark ? 'text-white' : 'text-gray-900'} mb-2`}>47</div>
                 <div className="text-sm uppercase tracking-wider text-gray-500">Projects</div>
               </div>
             </ScrollReveal>
             <ScrollReveal delay={0.2}>
               <div className="text-center">
-                <div className="text-4xl font-light text-gray-900 mb-2">12</div>
+                <div className={`text-4xl font-light ${isDark ? 'text-white' : 'text-gray-900'} mb-2`}>12</div>
                 <div className="text-sm uppercase tracking-wider text-gray-500">Clients</div>
               </div>
             </ScrollReveal>
             <ScrollReveal delay={0.3}>
               <div className="text-center">
-                <div className="text-4xl font-light text-gray-900 mb-2">2</div>
+                <div className={`text-4xl font-light ${isDark ? 'text-white' : 'text-gray-900'} mb-2`}>2</div>
                 <div className="text-sm uppercase tracking-wider text-gray-500">Awards</div>
               </div>
             </ScrollReveal>
@@ -245,7 +248,7 @@ export function MinimalPortfolioCleanTemplate() {
       <section className="py-20 px-6 bg-gray-50">
         <div className="max-w-4xl mx-auto">
           <ScrollReveal>
-            <h2 className="text-3xl font-bold text-gray-900 mb-12">Archive</h2>
+            <h2 className={`text-3xl font-bold ${isDark ? 'text-white' : 'text-gray-900'} mb-12`}>Archive</h2>
           </ScrollReveal>
           <div className="space-y-4">
             {[
@@ -258,7 +261,7 @@ export function MinimalPortfolioCleanTemplate() {
             ].map((item, index) => (
               <ScrollReveal key={index} delay={index * 0.05}>
                 <div className="flex justify-between items-center py-3 border-b border-gray-200 hover:border-gray-900 transition-colors">
-                  <span className="text-lg text-gray-900">{item.title}</span>
+                  <span className={`text-lg ${isDark ? 'text-white' : 'text-gray-900'}`}>{item.title}</span>
                   <span className="text-gray-500 font-mono text-sm">{item.year}</span>
                 </div>
               </ScrollReveal>
@@ -271,7 +274,7 @@ export function MinimalPortfolioCleanTemplate() {
       <section className="py-20 px-6 bg-white">
         <div className="max-w-4xl mx-auto">
           <ScrollReveal>
-            <h2 className="text-3xl font-bold text-gray-900 mb-12">Experience</h2>
+            <h2 className={`text-3xl font-bold ${isDark ? 'text-white' : 'text-gray-900'} mb-12`}>Experience</h2>
           </ScrollReveal>
           <div className="space-y-8">
             {[
@@ -283,7 +286,7 @@ export function MinimalPortfolioCleanTemplate() {
               <ScrollReveal key={index} delay={index * 0.1}>
                 <div className="flex gap-12 items-baseline">
                   <span className="text-sm font-mono text-gray-500 w-16">{item.year}</span>
-                  <span className="text-lg text-gray-900">{item.event}</span>
+                  <span className={`text-lg ${isDark ? 'text-white' : 'text-gray-900'}`}>{item.event}</span>
                 </div>
               </ScrollReveal>
             ))}
@@ -295,7 +298,7 @@ export function MinimalPortfolioCleanTemplate() {
       <section className="py-20 px-6 bg-gray-50">
         <div className="max-w-4xl mx-auto">
           <ScrollReveal>
-            <h2 className="text-3xl font-bold text-gray-900 mb-12">Testimonials</h2>
+            <h2 className={`text-3xl font-bold ${isDark ? 'text-white' : 'text-gray-900'} mb-12`}>Testimonials</h2>
           </ScrollReveal>
           <div className="space-y-12">
             {[
@@ -318,8 +321,8 @@ export function MinimalPortfolioCleanTemplate() {
               <ScrollReveal key={index} delay={index * 0.1}>
                 <blockquote className="border-l-2 border-gray-900 pl-6">
                   <p className="text-xl text-gray-700 mb-4">"{testimonial.quote}"</p>
-                  <footer className="text-sm text-gray-900">
-                    <span className="text-gray-900 font-medium">{testimonial.author}</span>
+                  <footer className={`text-sm ${isDark ? 'text-white' : 'text-gray-900'}`}>
+                    <span className={`${isDark ? 'text-white' : 'text-gray-900'} font-medium`}>{testimonial.author}</span>
                     <span className="text-gray-500"> — {testimonial.role}</span>
                   </footer>
                 </blockquote>
@@ -333,7 +336,7 @@ export function MinimalPortfolioCleanTemplate() {
       <section className="py-20 px-6 bg-white">
         <div className="max-w-4xl mx-auto">
           <ScrollReveal>
-            <h2 className="text-3xl font-bold text-gray-900 mb-12">Services</h2>
+            <h2 className={`text-3xl font-bold ${isDark ? 'text-white' : 'text-gray-900'} mb-12`}>Services</h2>
           </ScrollReveal>
           <div className="space-y-6">
             {[
@@ -344,10 +347,10 @@ export function MinimalPortfolioCleanTemplate() {
               <ScrollReveal key={index} delay={index * 0.1}>
                 <div className="flex justify-between items-start py-6 border-b border-gray-200">
                   <div>
-                    <h3 className="text-xl font-medium text-gray-900 mb-2">{service.name}</h3>
+                    <h3 className={`text-xl font-medium ${isDark ? 'text-white' : 'text-gray-900'} mb-2`}>{service.name}</h3>
                     <p className="text-gray-600">{service.description}</p>
                   </div>
-                  <div className="text-lg font-medium text-gray-900 ml-8">{service.price}</div>
+                  <div className={`text-lg font-medium ${isDark ? 'text-white' : 'text-gray-900'} ml-8`}>{service.price}</div>
                 </div>
               </ScrollReveal>
             ))}
@@ -359,7 +362,7 @@ export function MinimalPortfolioCleanTemplate() {
       <section className="py-20 px-6 bg-gray-50">
         <div className="max-w-4xl mx-auto">
           <ScrollReveal>
-            <h2 className="text-3xl font-bold text-gray-900 mb-12">Questions</h2>
+            <h2 className={`text-3xl font-bold ${isDark ? 'text-white' : 'text-gray-900'} mb-12`}>Questions</h2>
           </ScrollReveal>
           <div className="space-y-8">
             {[
@@ -382,7 +385,7 @@ export function MinimalPortfolioCleanTemplate() {
             ].map((faq, index) => (
               <ScrollReveal key={index} delay={index * 0.1}>
                 <div>
-                  <h3 className="text-lg font-medium text-gray-900 mb-3">{faq.q}</h3>
+                  <h3 className={`text-lg font-medium ${isDark ? 'text-white' : 'text-gray-900'} mb-3`}>{faq.q}</h3>
                   <p className="text-gray-600 leading-relaxed">{faq.a}</p>
                 </div>
               </ScrollReveal>
@@ -395,7 +398,7 @@ export function MinimalPortfolioCleanTemplate() {
       <section className="py-24 px-6 bg-white border-t border-gray-200">
         <div className="max-w-4xl mx-auto text-center">
           <ScrollReveal>
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">Let's work together</h2>
+            <h2 className={`text-3xl sm:text-4xl font-bold ${isDark ? 'text-white' : 'text-gray-900'} mb-6`}>Let's work together</h2>
             <p className="text-xl text-gray-600 mb-12">Available for select projects starting Q2 2025.</p>
             <a
               href="#contact"

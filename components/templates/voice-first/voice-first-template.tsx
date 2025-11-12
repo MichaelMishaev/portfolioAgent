@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useReducedMotion } from "@/lib/hooks/use-reduced-motion";
 import { ScrollReveal } from "@/components/animations/scroll-reveal";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -17,6 +18,7 @@ import {
   FiX,
 } from "react-icons/fi";
 import Link from "next/link";
+import { useTheme } from "next-themes";
 
 const portfolioData = {
   name: "VoiceUX Pro",
@@ -83,10 +85,10 @@ function Waveform({ isActive }: { isActive: boolean }) {
         <motion.div
           key={i}
           className="w-1 bg-gradient-to-t from-blue-500 to-cyan-400 rounded-full"
-          animate={{
+          animate={prefersReducedMotion ? {} : {
             height: isActive ? [20, 60, 30, 70, 20] : [20, 20, 20, 20, 20],
           }}
-          transition={{
+          transition={prefersReducedMotion ? {} : {
             duration: 1,
             repeat: Infinity,
             delay: i * 0.05,
@@ -103,8 +105,8 @@ function CommandChip({ text, onClick }: { text: string; onClick: () => void }) {
     <motion.button
       onClick={onClick}
       className="px-3 py-2 bg-gray-800 hover:bg-gray-700 border border-gray-700 rounded-full text-sm text-gray-300 hover:text-white transition-all"
-      whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.95 }}
+      whileHover={prefersReducedMotion ? {} : { scale: 1.05 }}
+      whileTap={prefersReducedMotion ? {} : { scale: 0.95 }}
     >
       <FiCommand className="inline mr-2 w-3 h-3" />
       {text}
@@ -113,7 +115,10 @@ function CommandChip({ text, onClick }: { text: string; onClick: () => void }) {
 }
 
 export function VoiceFirstTemplate() {
+  const { theme } = useTheme();
+  const isDark = theme === 'dark';
   const [isListening, setIsListening] = useState(false);  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const prefersReducedMotion = useReducedMotion();
 
   const [messages, setMessages] = useState(sampleConversation);
   const [showCommands, setShowCommands] = useState(true);
@@ -161,24 +166,24 @@ export function VoiceFirstTemplate() {
         <div className="container mx-auto max-w-full">
           <div className="text-center mb-12">
             <motion.h1
-              initial={{ opacity: 0, y: 30 }}
+              initial={prefersReducedMotion ? {} : { opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               className="text-3xl sm:text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent break-words text-white"
             >
               {portfolioData.name}
             </motion.h1>
             <motion.p
-              initial={{ opacity: 0, y: 30 }}
+              initial={prefersReducedMotion ? {} : { opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
+              transition={prefersReducedMotion ? {} : { delay: 0.2 }}
               className="text-xl sm:text-2xl md:text-3xl text-gray-300 mb-4"
             >
               {portfolioData.title}
             </motion.p>
             <motion.p
-              initial={{ opacity: 0, y: 30 }}
+              initial={prefersReducedMotion ? {} : { opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4 }}
+              transition={prefersReducedMotion ? {} : { delay: 0.4 }}
               className="text-lg text-gray-400"
             >
               {portfolioData.tagline}
@@ -187,9 +192,9 @@ export function VoiceFirstTemplate() {
 
           {/* Voice Interaction Card */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
+            initial={prefersReducedMotion ? {} : { opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.6 }}
+            transition={prefersReducedMotion ? {} : { delay: 0.6 }}
           >
             <Card className="bg-gray-900/50 border-gray-800 backdrop-blur-xl p-8">
               {/* Waveform */}
@@ -204,8 +209,8 @@ export function VoiceFirstTemplate() {
                       ? "bg-red-500 hover:bg-red-600"
                       : "bg-blue-500 hover:bg-blue-600"
                   }`}
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.9 }}
+                  whileHover={prefersReducedMotion ? {} : { scale: 1.1 }}
+                  whileTap={prefersReducedMotion ? {} : { scale: 0.9 }}
                   aria-label={isListening ? "Stop voice recognition" : "Start voice recognition"}
                   animate={
                     isListening
@@ -217,7 +222,7 @@ export function VoiceFirstTemplate() {
                         }
                       : {}
                   }
-                  transition={{
+                  transition={prefersReducedMotion ? {} : {
                     duration: 1.5,
                     repeat: isListening ? Infinity : 0,
                   }}
@@ -231,8 +236,8 @@ export function VoiceFirstTemplate() {
                 {isListening ? (
                   <span className="flex items-center justify-center gap-2">
                     <motion.span
-                      animate={{ opacity: [1, 0.5, 1] }}
-                      transition={{ duration: 1.5, repeat: Infinity }}
+                      animate={prefersReducedMotion ? {} : { opacity: [1, 0.5, 1] }}
+                      transition={prefersReducedMotion ? {} : { duration: 1.5, repeat: Infinity }}
                     >
                       Listening...
                     </motion.span>
@@ -246,9 +251,9 @@ export function VoiceFirstTemplate() {
               {/* Voice Commands */}
               {showCommands && (
                 <motion.div
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.8 }}
+                  transition={prefersReducedMotion ? {} : { delay: 0.8 }}
                 >
                   <p className="text-sm text-gray-500 mb-4 flex items-center justify-center gap-2">
                     <FiHelpCircle />
@@ -284,7 +289,7 @@ export function VoiceFirstTemplate() {
               {messages.map((msg, index) => (
                 <ScrollReveal key={index} delay={index * 0.1}>
                   <motion.div
-                    initial={{ opacity: 0, x: msg.type === "user" ? 50 : -50 }}
+                    initial={prefersReducedMotion ? {} : { opacity: 0, x: msg.type === "user" ? 50 : -50 }}
                     animate={{ opacity: 1, x: 0 }}
                     className={`flex ${
                       msg.type === "user" ? "justify-end" : "justify-start"
@@ -416,7 +421,7 @@ export function VoiceFirstTemplate() {
           <ScrollReveal delay={0.3}>
             <div className="flex flex-col gap-4 sm:flex-row gap-4 justify-center">
               <Button className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white border-0 text-lg px-8 py-6 h-auto">
-                <FiMail className="mr-2 w-5 h-5" />
+                <FiMail className="mr-2 w-5 h-5" aria-hidden="true" />
                 voice@uxpro.com
               </Button>
               <Button
@@ -549,7 +554,7 @@ export function VoiceFirstTemplate() {
         <div className="container mx-auto max-w-4xl text-center text-white">
           <div className="bg-white/10 backdrop-blur-xl p-12 rounded-3xl border border-white/20">
             <div className="text-6xl mb-6">🎙️</div>
-            <h2 className="text-4xl md:text-4xl sm:text-5xl md:text-6xl font-bold mb-6 break-words text-gray-900">
+            <h2 className="text-4xl md:text-4xl sm:text-5xl md:text-6xl font-bold mb-6 break-words text-white">
               Ready to Go Voice-First?
             </h2>
             <p className="text-xl mb-8 opacity-90 text-foreground">

@@ -148,7 +148,7 @@ return (
             <button
               className="md:hidden p-3 text-foreground hover:bg-accent rounded-md border border-border transition-colors"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              aria-label="Toggle menu"
+              aria-label={mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
             >
               {mobileMenuOpen ? <FiX size={28} /> : <FiMenu size={28} />}
             </button>
@@ -217,7 +217,7 @@ return (
 
         <FadeIn delay={0.4}>
           <Button variant="outline" className={darkMode ? 'text-white' : 'text-slate-900'} size="lg">
-            <FiMail className="mr-2" />
+            <FiMail className="mr-2" aria-hidden="true" />
             Work with Me
           </Button>
         </FadeIn>
@@ -470,7 +470,7 @@ return (
               Whether you need a content strategy overhaul, ongoing copywriting support, or a one-time project, I'd love to hear about your goals and explore how we can work together.
             </p>
             <Button size="lg">
-              <FiMail className="mr-2" />
+              <FiMail className="mr-2" aria-hidden="true" />
               hello@oliviachen.com
             </Button>
           </div>

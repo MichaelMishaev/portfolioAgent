@@ -9,6 +9,7 @@ import { FiMail, FiInstagram, FiArrowRight ,
   FiX,
 } from "react-icons/fi";
 import Link from "next/link";
+import { useTheme } from "next-themes";
 
 const portfolioData = {
   name: "Luna Martinez",
@@ -78,6 +79,8 @@ const portfolioData = {
 };
 
 export function CollageMaximalistTemplate() {
+  const { theme } = useTheme();
+  const isDark = theme === 'dark';
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 return (
     <div className="min-h-screen overflow-x-hidden max-w-full bg-[#f5f3ef] relative overflow-hidden">
@@ -108,15 +111,15 @@ return (
           {/* Decorative Elements */}
           <div className="absolute top-0 right-20 w-32 h-32 bg-yellow-300 rounded-full border-4 border-black transform rotate-12 opacity-70" />
           <div className="absolute bottom-20 left-10 w-40 h-40 bg-pink-300 border-4 border-black transform -rotate-6 opacity-60" />
-          <div className="absolute top-32 left-1/2 text-6xl transform -rotate-12 text-gray-900">★</div>
-          <div className="absolute bottom-32 right-1/4 text-4xl transform rotate-45 text-gray-900">✦</div>
+          <div className={`absolute top-32 left-1/2 text-6xl transform -rotate-12 ${isDark ? 'text-white' : 'text-gray-900'}`}>★</div>
+          <div className={`absolute bottom-32 right-1/4 text-4xl transform rotate-45 ${isDark ? 'text-white' : 'text-gray-900'}`}>✦</div>
 
           {/* Main Content */}
           <div className="relative z-10 bg-white border-4 border-black p-8 md:p-12 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transform -rotate-1">
             <div className="bg-red-500 text-white px-3 py-1 inline-block transform -rotate-2 mb-4 border-2 border-black">
-              <span className="text-sm font-bold text-gray-900">{portfolioData.location}</span>
+              <span className={`text-sm font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>{portfolioData.location}</span>
             </div>
-            <h1 className="text-3xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black mb-4 leading-none break-words text-gray-900">
+            <h1 className={`text-3xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black mb-4 leading-none break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>
               {portfolioData.name}
             </h1>
             <div className="h-1 w-32 bg-black mb-6" />
@@ -128,7 +131,7 @@ return (
             </p>
             <Button className="bg-black hover:bg-gray-800 text-white font-bold border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all">
               VIEW WORK
-              <FiArrowRight className="ml-2" />
+              <FiArrowRight className="ml-2" aria-hidden="true" />
             </Button>
           </div>
 
@@ -149,16 +152,16 @@ return (
                 }`}
               >
                 <div className="text-6xl mb-2">{stat.emoji}</div>
-                <div className="text-3xl sm:text-4xl font-black mb-1 text-gray-900">{stat.number}</div>
-                <p className="text-sm font-bold uppercase text-gray-900">{stat.label}</p>
+                <div className={`text-3xl sm:text-4xl font-black mb-1 ${isDark ? 'text-white' : 'text-gray-900'}`}>{stat.number}</div>
+                <p className={`text-sm font-bold uppercase ${isDark ? 'text-white' : 'text-gray-900'}`}>{stat.label}</p>
               </div>
             </ScrollReveal>
           ))}
         </div>
         {/* Scattered Stars */}
-        <div className="absolute top-10 left-20 text-4xl transform rotate-12 text-gray-900">★</div>
-        <div className="absolute bottom-10 right-20 text-3xl transform -rotate-12 text-gray-900">✦</div>
-        <div className="absolute top-1/2 left-10 text-5xl transform rotate-45 text-gray-900">✨</div>
+        <div className={`absolute top-10 left-20 text-4xl transform rotate-12 ${isDark ? 'text-white' : 'text-gray-900'}`}>★</div>
+        <div className={`absolute bottom-10 right-20 text-3xl transform -rotate-12 ${isDark ? 'text-white' : 'text-gray-900'}`}>✦</div>
+        <div className={`absolute top-1/2 left-10 text-5xl transform rotate-45 ${isDark ? 'text-white' : 'text-gray-900'}`}>✨</div>
       </section>
 
       {/* About Section - Torn Paper Effect */}
@@ -174,7 +177,7 @@ return (
               <div className="bg-orange-400 text-white px-3 py-2 inline-block transform -rotate-2 mb-6 border-2 border-black font-black text-xl">
                 ABOUT ME
               </div>
-              <p className="text-xl leading-relaxed mb-6 font-medium text-gray-900">
+              <p className={`text-xl leading-relaxed mb-6 font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>
                 {portfolioData.bio}
               </p>
 
@@ -185,7 +188,7 @@ return (
                 <div className="h-1 flex-1 bg-black" />
               </div>
 
-              <h3 className="text-2xl font-black mb-4 text-gray-900">MY TOOLS & MATERIALS</h3>
+              <h3 className={`text-2xl font-black mb-4 ${isDark ? 'text-white' : 'text-gray-900'}`}>MY TOOLS & MATERIALS</h3>
               <div className="flex flex-wrap gap-3">
                 {portfolioData.tools.map((tool, index) => (
                   <Badge
@@ -219,7 +222,7 @@ return (
       <section className="container mx-auto px-3 sm:px-3 py-20">
         <ScrollReveal>
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black inline-block bg-blue-200 px-8 py-4 border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] transform -rotate-1 break-words text-gray-900">
+            <h2 className={`text-3xl sm:text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black inline-block bg-blue-200 px-8 py-4 border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] transform -rotate-1 break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>
               RECENT WORK
             </h2>
           </div>
@@ -239,10 +242,10 @@ return (
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-2xl font-black mb-2 text-gray-900">{project.title}</h3>
+                  <h3 className={`text-2xl font-black mb-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>{project.title}</h3>
 
                   {/* Description */}
-                  <p className="text-sm mb-3 font-medium text-gray-900">{project.description}</p>
+                  <p className={`text-sm mb-3 font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>{project.description}</p>
 
                   {/* Tags */}
                   <div className="flex flex-wrap gap-2">
@@ -271,7 +274,7 @@ return (
 
         <ScrollReveal>
           <div className="text-center mb-12">
-            <h2 className="text-5xl md:text-4xl sm:text-5xl md:text-6xl font-black inline-block bg-pink-300 px-8 py-4 border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] transform rotate-2 break-words text-gray-900">
+            <h2 className={`text-5xl md:text-4xl sm:text-5xl md:text-6xl font-black inline-block bg-pink-300 px-8 py-4 border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] transform rotate-2 break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>
               MY PROCESS
             </h2>
           </div>
@@ -288,7 +291,7 @@ return (
                 <div className="bg-red-500 text-white w-16 h-16 rounded-full border-4 border-black flex items-center justify-center text-2xl font-black mb-4 mx-auto">
                   {item.step}
                 </div>
-                <h3 className="text-2xl font-black mb-2 text-center uppercase text-gray-900">{item.title}</h3>
+                <h3 className={`text-2xl font-black mb-2 text-center uppercase ${isDark ? 'text-white' : 'text-gray-900'}`}>{item.title}</h3>
                 <p className="text-center font-medium">{item.desc}</p>
               </div>
             </ScrollReveal>
@@ -307,7 +310,7 @@ return (
 
         <ScrollReveal>
           <div className="text-center mb-16">
-            <h2 className="text-5xl md:text-4xl sm:text-5xl md:text-6xl font-black inline-block bg-green-300 px-8 py-4 border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] transform -rotate-1 break-words text-gray-900">
+            <h2 className={`text-5xl md:text-4xl sm:text-5xl md:text-6xl font-black inline-block bg-green-300 px-8 py-4 border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] transform -rotate-1 break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>
               WHAT THEY SAY
             </h2>
           </div>
@@ -322,12 +325,12 @@ return (
                 }`}
               >
                 <div className="text-6xl mb-4">💬</div>
-                <p className="text-xl font-bold mb-6 leading-relaxed text-gray-900">
+                <p className={`text-xl font-bold mb-6 leading-relaxed ${isDark ? 'text-white' : 'text-gray-900'}`}>
                   "{testimonial.quote}"
                 </p>
                 <div className="border-t-2 border-black pt-4">
-                  <p className="font-black text-lg text-gray-900">{testimonial.name}</p>
-                  <p className="text-sm font-bold uppercase text-gray-900">{testimonial.role}</p>
+                  <p className={`font-black text-lg ${isDark ? 'text-white' : 'text-gray-900'}`}>{testimonial.name}</p>
+                  <p className={`text-sm font-bold uppercase ${isDark ? 'text-white' : 'text-gray-900'}`}>{testimonial.role}</p>
                 </div>
               </div>
 
@@ -340,8 +343,8 @@ return (
 
       {/* Hand-drawn Arrow Decoration */}
       <div className="container mx-auto px-3 sm:px-3 py-12 text-center">
-        <div className="text-8xl text-gray-900">↓</div>
-        <p className="text-2xl font-bold mt-4 transform -rotate-2 inline-block bg-yellow-300 px-3 py-2 border-2 border-black text-gray-900">
+        <div className={`text-8xl ${isDark ? 'text-white' : 'text-gray-900'}`}>↓</div>
+        <p className={`text-2xl font-bold mt-4 transform -rotate-2 inline-block bg-yellow-300 px-3 py-2 border-2 border-black ${isDark ? 'text-white' : 'text-gray-900'}`}>
           Let's collaborate!
         </p>
       </div>
@@ -356,21 +359,21 @@ return (
           <div className="relative z-10 bg-white border-4 border-black p-12 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] transform rotate-1">
             <div className="text-center">
               <div className="text-7xl mb-6">✉️</div>
-              <h2 className="text-5xl md:text-4xl sm:text-5xl md:text-6xl font-black mb-6 break-words text-gray-900">
+              <h2 className={`text-5xl md:text-4xl sm:text-5xl md:text-6xl font-black mb-6 break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>
                 GET IN TOUCH
               </h2>
-              <p className="text-xl mb-8 max-w-full mx-auto text-gray-900">
+              <p className={`text-xl mb-8 max-w-full mx-auto ${isDark ? 'text-white' : 'text-gray-900'}`}>
                 Available for commissions, collaborations, and creative projects that push boundaries.
               </p>
 
               <div className="flex flex-col gap-4 sm:flex-row gap-4 justify-center items-center mb-8">
                 <Button className="bg-black hover:bg-gray-800 text-white font-bold text-lg px-8 py-6 h-auto border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all">
-                  <FiMail className="mr-2 w-5 h-5" />
+                  <FiMail className="mr-2 w-5 h-5" aria-hidden="true" />
                   luna@collagelab.art
                 </Button>
                 <Button
                   variant="outline"
-                  className="font-bold text-lg px-8 py-6 h-auto border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all text-gray-900"
+                  className={`font-bold text-lg px-8 py-6 h-auto border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all ${isDark ? 'text-white' : 'text-gray-900'}`}
                 >
                   <FiInstagram className="mr-2 w-5 h-5" />
                   @luna.collage
@@ -380,10 +383,10 @@ return (
           </div>
 
           {/* Decorative Stickers */}
-          <div className="absolute top-0 left-0 transform -translate-x-8 -translate-y-8 text-6xl rotate-12 text-gray-900">
+          <div className={`absolute top-0 left-0 transform -translate-x-8 -translate-y-8 text-6xl rotate-12 ${isDark ? 'text-white' : 'text-gray-900'}`}>
             ⭐
           </div>
-          <div className="absolute bottom-0 right-0 transform translate-x-8 translate-y-8 text-6xl -rotate-12 text-gray-900">
+          <div className={`absolute bottom-0 right-0 transform translate-x-8 translate-y-8 text-6xl -rotate-12 ${isDark ? 'text-white' : 'text-gray-900'}`}>
             ✨
           </div>
         </div>
@@ -396,7 +399,7 @@ return (
           <div className="absolute bottom-20 right-20 w-60 h-60 bg-blue-400 rounded-full blur-3xl"></div>
         </div>
         <div className="container mx-auto max-w-6xl relative">
-          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-12 text-center rotate-1 [text-shadow:3px_3px_0px_rgba(0,0,0,0.2)] break-words text-gray-900">
+          <h2 className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-12 text-center rotate-1 [text-shadow:3px_3px_0px_rgba(0,0,0,0.2)] break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>
             SKILLS++
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -421,7 +424,7 @@ return (
       {/* Pricing - Collage Maximalist Style */}
       <section className="py-20 px-3 sm:px-3 bg-yellow-200 border-y-8 border-black">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-12 text-center -rotate-2 [text-shadow:4px_4px_0px_rgba(0,0,0,0.3)] break-words text-gray-900">
+          <h2 className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-12 text-center -rotate-2 [text-shadow:4px_4px_0px_rgba(0,0,0,0.3)] break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>
             $$$ PRICING $$$
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
@@ -466,10 +469,10 @@ return (
         </div>
         <div className="container mx-auto max-w-4xl text-center relative">
           <div className="bg-white/90 p-12 border-8 border-black shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] rotate-1">
-            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-6 -rotate-2 [text-shadow:4px_4px_0px_rgba(0,0,0,0.1)] break-words text-gray-900">
+            <h2 className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-6 -rotate-2 [text-shadow:4px_4px_0px_rgba(0,0,0,0.1)] break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>
               LET'S MAKE SOMETHING WILD!
             </h2>
-            <p className="text-2xl font-bold mb-8 rotate-1 text-gray-900">
+            <p className={`text-2xl font-bold mb-8 rotate-1 ${isDark ? 'text-white' : 'text-gray-900'}`}>
               NO BORING WEBSITES HERE! 🎨🔥
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
@@ -487,7 +490,7 @@ return (
       {/* Timeline - Collage Maximalist */}
       <section className="py-20 px-3 sm:px-3 bg-gradient-to-br from-green-200 via-cyan-200 to-blue-200">
         <div className="container mx-auto max-w-4xl">
-          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-12 text-center rotate-2 [text-shadow:4px_4px_0px_rgba(0,0,0,0.2)] break-words text-gray-900">
+          <h2 className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-12 text-center rotate-2 [text-shadow:4px_4px_0px_rgba(0,0,0,0.2)] break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>
             MY STORY{'>>>'}
           </h2>
           <div className="space-y-8">
@@ -514,7 +517,7 @@ return (
       {/* Footer */}
       <footer className="border-t-4 border-black bg-white py-8">
         <div className="container mx-auto px-3 sm:px-3">
-          <p className="text-center font-bold text-sm text-gray-900">
+          <p className={`text-center font-bold text-sm ${isDark ? 'text-white' : 'text-gray-900'}`}>
             © {new Date().getFullYear()} {portfolioData.name} // HANDCRAFTED WITH LOVE
           </p>
         </div>

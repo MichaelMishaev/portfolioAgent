@@ -205,7 +205,7 @@ export function FashionProductTemplate() {
             <button
               className="md:hidden p-3 text-foreground hover:bg-accent rounded-md border border-border transition-colors"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              aria-label="Toggle menu"
+              aria-label={mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
             >
               {mobileMenuOpen ? <FiX size={28} /> : <FiMenu size={28} />}
             </button>
@@ -464,7 +464,7 @@ export function FashionProductTemplate() {
                 <ul className="space-y-3">
                   {productData.productDetails.materials.map((material, index) => (
                     <li key={index} className="flex items-start gap-3">
-                      <FiCheck className="w-5 h-5 text-stone-600 mt-0.5 flex-shrink-0" />
+                      <FiCheck className="w-5 h-5 text-stone-600 mt-0.5 flex-shrink-0" aria-hidden="true" />
                       <span className="text-stone-700">{material}</span>
                     </li>
                   ))}
@@ -478,7 +478,7 @@ export function FashionProductTemplate() {
                 <ul className="space-y-3">
                   {productData.productDetails.care.map((instruction, index) => (
                     <li key={index} className="flex items-start gap-3">
-                      <FiCheck className="w-5 h-5 text-stone-600 mt-0.5 flex-shrink-0" />
+                      <FiCheck className="w-5 h-5 text-stone-600 mt-0.5 flex-shrink-0" aria-hidden="true" />
                       <span className="text-stone-700">{instruction}</span>
                     </li>
                   ))}

@@ -127,7 +127,7 @@ export function SinglePageTemplate() {
             <button
               className="md:hidden p-3 text-foreground hover:bg-accent rounded-md border border-border transition-colors"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              aria-label="Toggle menu"
+              aria-label={mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
             >
               {mobileMenuOpen ? <FiX size={28} /> : <FiMenu size={28} />}
             </button>
@@ -187,7 +187,7 @@ export function SinglePageTemplate() {
           <FadeIn delay={0.3}>
             <div className="flex flex-col gap-4 sm:flex-row">
               <Button size="lg" className="w-full sm:w-auto min-h-[44px]">
-                <FiMail className="mr-2" />
+                <FiMail className="mr-2" aria-hidden="true" />
                 Get in Touch
               </Button>
               <Button variant="outline" size="lg" className={`w-full sm:w-auto min-h-[44px] ! ${darkMode ? 'text-white' : 'text-slate-900'}`}>
@@ -373,7 +373,7 @@ export function SinglePageTemplate() {
 
             <div className="flex flex-col gap-4 justify-center mb-12 sm:flex-row">
               <Button size="lg" className="w-full sm:w-auto min-h-[44px]">
-                <FiMail className="mr-2" />
+                <FiMail className="mr-2" aria-hidden="true" />
                 {portfolioData.contact.email}
               </Button>
             </div>
@@ -384,6 +384,7 @@ export function SinglePageTemplate() {
                 className="text-muted-foreground hover:text-foreground transition-colors"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Visit GitHub profile (opens in new tab)"
               >
                 <FiGithub className="w-8 h-8" />
               </a>
@@ -392,6 +393,7 @@ export function SinglePageTemplate() {
                 className="text-muted-foreground hover:text-foreground transition-colors"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Visit LinkedIn profile (opens in new tab)"
               >
                 <FiLinkedin className="w-8 h-8" />
               </a>
@@ -400,6 +402,7 @@ export function SinglePageTemplate() {
                 className="text-muted-foreground hover:text-foreground transition-colors"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Visit Twitter profile (opens in new tab)"
               >
                 <FiTwitter className="w-8 h-8" />
               </a>
@@ -480,7 +483,7 @@ export function SinglePageTemplate() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" variant="secondary" className="font-semibold">
-                <FiMail className="mr-2" />
+                <FiMail className="mr-2" aria-hidden="true" />
                 Contact Me
               </Button>
               <Button size="lg" variant="outline" className="font-semibold border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">

@@ -2,6 +2,7 @@
 
 import { ReactNode } from "react";
 import { motion } from "framer-motion";
+import { useReducedMotion } from "@/lib/hooks/use-reduced-motion";
 
 interface FloatingElementProps {
   children: ReactNode;
@@ -16,13 +17,15 @@ export function FloatingElement({
   yOffset = -20,
   className = "",
 }: FloatingElementProps) {
+  const prefersReducedMotion = useReducedMotion();
+
   return (
     <motion.div
-      animate={{
+      animate={prefersReducedMotion ? {} : {
         y: [0, yOffset, 0],
         rotate: [0, 3, -3, 0],
       }}
-      transition={{
+      transition={prefersReducedMotion ? {} : {
         duration,
         repeat: Infinity,
         ease: "easeInOut",

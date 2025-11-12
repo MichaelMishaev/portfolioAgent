@@ -10,6 +10,8 @@ import { FiMail, FiStar ,
   FiX,
 } from "react-icons/fi";
 import Link from "next/link";
+import { useReducedMotion } from "@/lib/hooks/use-reduced-motion";
+import { useTheme } from "next-themes";
 
 const portfolioData = {
   name: "⭐ PIXEL DREAMS ⭐",
@@ -81,10 +83,16 @@ const portfolioData = {
 };
 
 export function Y2KRetroTemplate() {
+  const { theme } = useTheme();
+  const isDark = theme === 'dark';
   const [cursorTrail, setCursorTrail] = useState<{ x: number; y: number; id: number }[]>([]);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const prefersReducedMotion = useReducedMotion();
 
   const handleMouseMove = (e: React.MouseEvent) => {
+    // Skip cursor trail if user prefers reduced motion
+    if (prefersReducedMotion) return;
+
     const newParticle = {
       x: e.clientX,
       y: e.clientY,
@@ -102,10 +110,10 @@ export function Y2KRetroTemplate() {
       {cursorTrail.map((particle) => (
         <motion.div
           key={particle.id}
-          className="fixed pointer-events-none text-2xl z-50 text-gray-900"
-          initial={{ opacity: 1, x: particle.x, y: particle.y, scale: 1 }}
+          className={`fixed pointer-events-none text-2xl z-50 ${isDark ? 'text-white' : 'text-gray-900'}`}
+          initial={prefersReducedMotion ? {} : { opacity: 1, x: particle.x, y: particle.y, scale: 1 }}
           animate={{ opacity: 0, scale: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={prefersReducedMotion ? {} : { duration: 0.8 }}
         >
           ⭐
         </motion.div>
@@ -132,53 +140,53 @@ export function Y2KRetroTemplate() {
       {/* Hero Section */}
       <section className="min-h-screen overflow-x-hidden max-w-full flex items-center justify-center px-3 relative">
         {/* Decorative Stars */}
-        <div className="absolute top-20 left-20 text-6xl animate-spin-slow text-gray-900">✨</div>
+        <div className={`absolute top-20 left-20 text-6xl animate-spin-slow ${isDark ? 'text-white' : 'text-gray-900'}`}>✨</div>
         <div className="absolute top-40 right-32 text-5xl animate-bounce">💫</div>
-        <div className="absolute bottom-32 left-40 text-7xl animate-pulse text-gray-900">⭐</div>
+        <div className={`absolute bottom-32 left-40 text-7xl animate-pulse ${isDark ? 'text-white' : 'text-gray-900'}`}>⭐</div>
         <div className="absolute bottom-20 right-20 text-6xl animate-spin-slow">🌟</div>
 
         <div className="text-center max-w-full relative z-10">
           <motion.div
-            initial={{ scale: 0 }}
+            initial={prefersReducedMotion ? {} : { scale: 0 }}
             animate={{ scale: 1 }}
-            transition={{ type: "spring", duration: 0.8 }}
+            transition={prefersReducedMotion ? {} : { type: "spring", duration: 0.8 }}
             className="mb-8"
           >
             <div className="text-8xl mb-4">🎀</div>
           </motion.div>
 
           <motion.h1
-            initial={{ y: 50, opacity: 0 }}
+            initial={prefersReducedMotion ? {} : { y: 50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.6 }}
-            className="text-3xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black mb-6 text-white drop-shadow-[4px_4px_0px_rgba(0,0,0,0.3)] [text-shadow:_3px_3px_0_rgb(255_0_255),_6px_6px_0_rgb(0_255_255)] break-words"
+            transition={prefersReducedMotion ? {} : { duration: 0.6 }}
+            className="text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-black mb-6 text-white drop-shadow-[4px_4px_0px_rgba(0,0,0,0.3)] [text-shadow:_3px_3px_0_rgb(255_0_255),_6px_6px_0_rgb(0_255_255)] break-words"
             style={{ fontFamily: "'Comic Sans MS', cursive" }}
           >
             {portfolioData.name}
           </motion.h1>
 
           <motion.p
-            initial={{ y: 30, opacity: 0 }}
+            initial={prefersReducedMotion ? {} : { y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-xl sm:text-2xl md:text-3xl font-bold text-purple-900 mb-4 drop-shadow-lg"
+            transition={prefersReducedMotion ? {} : { duration: 0.6, delay: 0.2 }}
+            className="text-xl sm:text-2xl md:text-3xl font-bold text-purple-950 mb-4 drop-shadow-lg [text-shadow:_0_2px_4px_rgb(255_255_255_/_80%)]"
           >
             {portfolioData.tagline}
           </motion.p>
 
           <motion.p
-            initial={{ y: 30, opacity: 0 }}
+            initial={prefersReducedMotion ? {} : { y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-lg text-purple-800 mb-8"
+            transition={prefersReducedMotion ? {} : { duration: 0.6, delay: 0.4 }}
+            className="text-lg text-purple-950 mb-8 [text-shadow:_0_1px_3px_rgb(255_255_255_/_80%)]"
           >
             {portfolioData.bio}
           </motion.p>
 
           <motion.div
-            initial={{ y: 30, opacity: 0 }}
+            initial={prefersReducedMotion ? {} : { y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
+            transition={prefersReducedMotion ? {} : { duration: 0.6, delay: 0.6 }}
           >
             <Button className="bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white font-bold text-xl px-8 py-6 h-auto rounded-full border-4 border-white shadow-[6px_6px_0px_0px_rgba(255,255,255,1)] hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all">
               view my work ✨
@@ -193,8 +201,8 @@ export function Y2KRetroTemplate() {
           <div className="flex flex-wrap items-center justify-center gap-6">
             <motion.div
               className="bg-black text-green-400 px-3 py-3 rounded-lg border-4 border-white font-mono text-xl font-bold shadow-[4px_4px_0px_0px_rgba(255,255,255,1)]"
-              animate={{ opacity: [1, 0.7, 1] }}
-              transition={{ duration: 2, repeat: Infinity }}
+              animate={prefersReducedMotion ? {} : { opacity: [1, 0.7, 1] }}
+              transition={prefersReducedMotion ? {} : { duration: 2, repeat: Infinity }}
             >
               VISITOR COUNT: 042069 ✨
             </motion.div>
@@ -219,8 +227,8 @@ export function Y2KRetroTemplate() {
             <ScrollReveal key={stat.label} delay={index * 0.1}>
               <motion.div
                 className="bg-white rounded-3xl p-6 text-center border-6 border-purple-500 shadow-[6px_6px_0px_0px_rgba(147,51,234,1)]"
-                whileHover={{ scale: 1.05, rotate: 2 }}
-                transition={{ type: "spring", stiffness: 300 }}
+                whileHover={prefersReducedMotion ? {} : { scale: 1.05, rotate: 2 }}
+                transition={prefersReducedMotion ? {} : { type: "spring", stiffness: 300 }}
               >
                 <div className="text-5xl mb-3">{stat.emoji}</div>
                 <div className="text-3xl sm:text-4xl font-black text-purple-900 mb-2">{stat.value}</div>
@@ -238,19 +246,19 @@ export function Y2KRetroTemplate() {
             <div className="bg-white rounded-[2rem] p-10 border-8 border-pink-500 shadow-[12px_12px_0px_0px_rgba(236,72,153,1)]">
               <div className="flex items-center gap-4 mb-6">
                 <div className="text-6xl">🎀</div>
-                <h2 className="text-3xl sm:text-5xl font-black text-purple-900 break-words text-gray-900">
+                <h2 className={`text-3xl sm:text-5xl font-black text-purple-900 break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>
                   about meeee~
                 </h2>
               </div>
-              <p className="text-xl leading-relaxed text-purple-800 mb-6">
+              <p className="text-xl leading-relaxed text-purple-950 mb-6 [text-shadow:_0_1px_3px_rgb(255_255_255_/_80%)]">
                 {portfolioData.about}
               </p>
 
               {/* Marquee Text */}
               <div className="overflow-hidden bg-gradient-to-r from-pink-500 to-purple-500 py-3 rounded-full border-4 border-white">
                 <motion.div
-                  animate={{ x: [0, -1000] }}
-                  transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                  animate={prefersReducedMotion ? {} : { x: [0, -1000] }}
+                  transition={prefersReducedMotion ? {} : { duration: 20, repeat: Infinity, ease: "linear" }}
                   className="whitespace-nowrap text-white font-bold text-lg"
                 >
                   ✨ available for commissions ✨ DM me for custom work ✨ fast turnaround ✨ affordable prices ✨ let's create something amazing together ✨
@@ -274,8 +282,8 @@ export function Y2KRetroTemplate() {
             <ScrollReveal key={skill} delay={index * 0.05}>
               <motion.div
                 className="bg-gradient-to-br from-cyan-400 to-blue-400 text-white px-3 py-3 rounded-full border-4 border-white shadow-[4px_4px_0px_0px_rgba(255,255,255,1)] font-bold text-lg"
-                whileHover={{ scale: 1.1, rotate: -5 }}
-                transition={{ type: "spring", stiffness: 300 }}
+                whileHover={prefersReducedMotion ? {} : { scale: 1.1, rotate: -5 }}
+                transition={prefersReducedMotion ? {} : { type: "spring", stiffness: 300 }}
               >
                 {skill}
               </motion.div>
@@ -287,7 +295,7 @@ export function Y2KRetroTemplate() {
       {/* Projects Section */}
       <section className="py-20 px-3">
         <ScrollReveal>
-          <h2 className="text-5xl md:text-4xl sm:text-5xl md:text-6xl font-black text-center mb-16 text-white drop-shadow-[4px_4px_0px_rgba(0,0,0,0.3)] break-words">
+          <h2 className="text-5xl sm:text-5xl md:text-6xl font-black text-center mb-16 text-white drop-shadow-[4px_4px_0px_rgba(0,0,0,0.3)] break-words">
             ~*~ my projects ~*~
           </h2>
         </ScrollReveal>
@@ -301,11 +309,11 @@ export function Y2KRetroTemplate() {
                 <div className="p-6">
                   <div className="text-7xl mb-4 text-center">{project.emoji}</div>
                   <div className="bg-white rounded-2xl p-4 border-4 border-black">
-                    <h3 className="text-xl font-black text-purple-900 mb-2 text-gray-900">
+                    <h3 className={`text-xl font-black ${isDark ? 'text-white' : 'text-gray-900'} mb-2`}>
                       {project.title}
                     </h3>
-                    <p className="text-sm text-purple-700 mb-2">{project.description}</p>
-                    <div className="text-xs font-bold text-purple-500">{project.year}</div>
+                    <p className="text-sm text-gray-800 mb-2">{project.description}</p>
+                    <div className="text-xs font-bold text-gray-700">{project.year}</div>
                   </div>
                 </div>
               </Card>
@@ -317,7 +325,7 @@ export function Y2KRetroTemplate() {
       {/* Achievements Section */}
       <section className="py-16 px-3 bg-white/30 backdrop-blur-sm border-y-4 border-white">
         <ScrollReveal>
-          <h2 className="text-3xl sm:text-5xl font-black text-center mb-12 text-purple-900 break-words text-gray-900">
+          <h2 className={`text-3xl sm:text-5xl font-black text-center mb-12 text-purple-900 break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>
             ~*~ achievements unlocked ~*~
           </h2>
         </ScrollReveal>
@@ -327,8 +335,8 @@ export function Y2KRetroTemplate() {
             <ScrollReveal key={index} delay={index * 0.1}>
               <motion.div
                 className="bg-gradient-to-br from-yellow-300 to-orange-300 p-6 rounded-2xl border-4 border-white shadow-[6px_6px_0px_0px_rgba(255,255,255,1)] flex items-center gap-4"
-                whileHover={{ scale: 1.05 }}
-                transition={{ type: "spring", stiffness: 300 }}
+                whileHover={prefersReducedMotion ? {} : { scale: 1.05 }}
+                transition={prefersReducedMotion ? {} : { type: "spring", stiffness: 300 }}
               >
                 <div className="text-5xl">{achievement.icon}</div>
                 <p className="text-lg font-bold text-purple-900">{achievement.text}</p>
@@ -341,7 +349,7 @@ export function Y2KRetroTemplate() {
       {/* Testimonials - Chat Bubble Style */}
       <section className="py-20 px-3">
         <ScrollReveal>
-          <h2 className="text-5xl md:text-4xl sm:text-5xl md:text-6xl font-black text-center mb-16 text-white drop-shadow-[4px_4px_0px_rgba(0,0,0,0.3)] break-words">
+          <h2 className="text-5xl sm:text-5xl md:text-6xl font-black text-center mb-16 text-white drop-shadow-[4px_4px_0px_rgba(0,0,0,0.3)] break-words">
             ~*~ what ppl r saying ~*~
           </h2>
         </ScrollReveal>
@@ -351,9 +359,9 @@ export function Y2KRetroTemplate() {
             <ScrollReveal key={testimonial.name} delay={index * 0.1}>
               <motion.div
                 className={`flex gap-4 ${index % 2 === 0 ? "" : "flex-row-reverse"}`}
-                initial={{ x: index % 2 === 0 ? -50 : 50, opacity: 0 }}
+                initial={prefersReducedMotion ? {} : { x: index % 2 === 0 ? -50 : 50, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.5 }}
+                transition={prefersReducedMotion ? {} : { duration: 0.5 }}
                 viewport={{ once: true }}
               >
                 <div className="text-5xl flex-shrink-0">{testimonial.emoji}</div>
@@ -382,7 +390,7 @@ export function Y2KRetroTemplate() {
       {/* Vibes Section */}
       <section className="py-20 px-3 bg-white/30 backdrop-blur-sm border-y-4 border-white">
         <ScrollReveal>
-          <h3 className="text-3xl sm:text-4xl font-black text-center mb-12 text-purple-900 text-gray-900">
+          <h3 className={`text-3xl sm:text-4xl font-black text-center mb-12 text-purple-900 ${isDark ? 'text-white' : 'text-gray-900'}`}>
             the vibes~
           </h3>
         </ScrollReveal>
@@ -393,8 +401,8 @@ export function Y2KRetroTemplate() {
               <motion.div
                 key={vibe}
                 className="bg-white px-3 py-3 rounded-full border-4 border-purple-500 shadow-[4px_4px_0px_0px_rgba(147,51,234,1)] font-bold text-purple-900 text-lg"
-                whileHover={{ scale: 1.1, rotate: 5 }}
-                transition={{ type: "spring", stiffness: 300 }}
+                whileHover={prefersReducedMotion ? {} : { scale: 1.1, rotate: 5 }}
+                transition={prefersReducedMotion ? {} : { type: "spring", stiffness: 300 }}
               >
                 {vibe}
               </motion.div>
@@ -409,14 +417,14 @@ export function Y2KRetroTemplate() {
           <ScrollReveal>
             <div className="bg-white rounded-3xl p-12 border-8 border-pink-500 shadow-[12px_12px_0px_0px_rgba(236,72,153,1)]">
               <div className="text-7xl mb-6">💌</div>
-              <h2 className="text-5xl md:text-4xl sm:text-5xl md:text-6xl font-black mb-6 text-purple-900 break-words text-gray-900">
+              <h2 className={`text-5xl md:text-4xl sm:text-5xl md:text-6xl font-black mb-6 text-purple-900 break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>
                 let's collab!
               </h2>
               <p className="text-xl text-purple-700 mb-8">
                 hmu for all ur creative needs~ ✨
               </p>
               <Button className="bg-gradient-to-r from-cyan-400 to-pink-400 hover:from-cyan-500 hover:to-pink-500 text-white font-black text-xl px-10 py-6 h-auto rounded-full border-4 border-white shadow-[6px_6px_0px_0px_rgba(255,255,255,1)] hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all">
-                <FiMail className="mr-2 w-6 h-6" />
+                <FiMail className="mr-2 w-6 h-6" aria-hidden="true" />
                 pixel@dreams.com
               </Button>
             </div>
@@ -429,7 +437,7 @@ export function Y2KRetroTemplate() {
         <div className="container mx-auto max-w-6xl">
           <ScrollReveal>
             <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-12 text-center text-white [text-shadow:4px_4px_0px_rgba(0,0,0,0.5)] break-words">
-              ✨ PRICING ✨
+              PRICING
             </h2>
           </ScrollReveal>
           <div className="grid md:grid-cols-3 gap-8">
@@ -441,13 +449,13 @@ export function Y2KRetroTemplate() {
               <ScrollReveal key={i} delay={i * 0.1}>
                 <div className={`bg-gradient-to-br from-cyan-300 to-pink-300 p-8 rounded-3xl border-4 border-white shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] ${plan.glow ? 'ring-4 ring-yellow-300 animate-pulse' : ''}`}>
                   <div className="text-6xl mb-4 text-center">{plan.icon}</div>
-                  <h3 className="text-2xl font-black text-center mb-4 text-purple-800 text-gray-900">{plan.name}</h3>
+                  <h3 className={`text-2xl font-black text-center mb-4 ${isDark ? 'text-white' : 'text-gray-900'}`}>{plan.name}</h3>
                   <div className="text-4xl sm:text-5xl font-black text-center mb-8 text-white [text-shadow:3px_3px_0px_rgba(0,0,0,0.3)] break-words">
                     {plan.price}
                   </div>
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((f, j) => (
-                      <li key={j} className="font-bold text-center text-purple-900">✦ {f}</li>
+                      <li key={j} className={`font-bold text-center ${isDark ? 'text-white' : 'text-gray-900'}`}>✦ {f}</li>
                     ))}
                   </ul>
                   <Button className="w-full bg-purple-600 hover:bg-purple-700 text-white font-black text-lg border-4 border-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
@@ -464,8 +472,8 @@ export function Y2KRetroTemplate() {
       <section className="py-20 px-3 sm:px-3 bg-gradient-to-br from-yellow-300 via-green-300 to-cyan-300">
         <div className="container mx-auto max-w-6xl">
           <ScrollReveal>
-            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-12 text-center text-purple-800 [text-shadow:4px_4px_0px_rgba(255,255,255,0.8)] break-words text-gray-900">
-              🎨 GALLERY 🎨
+            <h2 className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-12 text-center text-purple-800 [text-shadow:4px_4px_0px_rgba(255,255,255,0.8)] break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>
+              GALLERY
             </h2>
           </ScrollReveal>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
@@ -492,10 +500,10 @@ export function Y2KRetroTemplate() {
         <div className="container mx-auto max-w-4xl text-center">
           <ScrollReveal>
             <div className="bg-white/20 backdrop-blur-xl p-12 rounded-[3rem] border-4 border-white shadow-[12px_12px_0px_0px_rgba(0,0,0,0.5)]">
-              <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-6 [text-shadow:4px_4px_0px_rgba(0,0,0,0.3)] break-words text-gray-900">
+              <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-6 [text-shadow:4px_4px_0px_rgba(0,0,0,0.5)] break-words text-white">
                 ✨ READY TO GO RETRO? ✨
               </h2>
-              <p className="text-2xl mb-8 font-bold text-gray-900">
+              <p className="text-2xl mb-8 font-bold text-white [text-shadow:2px_2px_0px_rgba(0,0,0,0.5)]">
                 LET'S CREATE SOMETHING TOTALLY RADICAL! 🎉
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -515,8 +523,8 @@ export function Y2KRetroTemplate() {
       <section className="py-20 px-3 sm:px-3 bg-gradient-to-br from-green-300 via-cyan-300 to-blue-300">
         <div className="container mx-auto max-w-4xl">
           <ScrollReveal>
-            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-12 text-center text-purple-800 [text-shadow:4px_4px_0px_rgba(255,255,255,0.8)] break-words text-gray-900">
-              ⏰ TIMELINE ⏰
+            <h2 className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-12 text-center text-purple-800 [text-shadow:4px_4px_0px_rgba(255,255,255,0.8)] break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>
+              TIMELINE
             </h2>
           </ScrollReveal>
           <div className="space-y-6">
@@ -548,7 +556,7 @@ export function Y2KRetroTemplate() {
         <div className="container mx-auto max-w-4xl">
           <ScrollReveal>
             <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-12 text-center text-white [text-shadow:4px_4px_0px_rgba(0,0,0,0.5)] break-words">
-              ❓ FAQ ❓
+              FAQ
             </h2>
           </ScrollReveal>
           <div className="space-y-6">
@@ -560,8 +568,8 @@ export function Y2KRetroTemplate() {
             ].map((item, i) => (
               <ScrollReveal key={i} delay={i * 0.05}>
                 <div className="bg-gradient-to-r from-cyan-300 to-yellow-300 p-6 rounded-2xl border-4 border-white shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
-                  <h3 className="font-black text-lg mb-3 text-purple-900 text-gray-900">{item.q}</h3>
-                  <p className="font-bold text-purple-800">{item.a}</p>
+                  <h3 className={`font-black text-lg mb-3 ${isDark ? 'text-white' : 'text-gray-900'}`}>{item.q}</h3>
+                  <p className="font-bold text-gray-800">{item.a}</p>
                 </div>
               </ScrollReveal>
             ))}
