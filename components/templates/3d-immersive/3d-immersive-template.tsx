@@ -197,7 +197,7 @@ export function ThreeDImmersiveTemplate() {
             initial={prefersReducedMotion ? {} : { opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={prefersReducedMotion ? {} : { duration: 0.8 }}
-            className="text-3xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent break-words text-white"
+            className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent break-words"
           >
             {portfolioData.name}
           </motion.h1>
@@ -250,7 +250,7 @@ export function ThreeDImmersiveTemplate() {
       <section className="relative py-20 px-3 bg-gradient-to-b from-black via-gray-900 to-black">
         <div className="container mx-auto max-w-full">
           <ScrollReveal>
-            <h2 className="text-5xl md:text-4xl sm:text-5xl md:text-6xl font-bold text-center mb-16 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent break-words text-white">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-center mb-16 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent break-words">
               Featured Projects
             </h2>
           </ScrollReveal>
@@ -327,7 +327,7 @@ export function ThreeDImmersiveTemplate() {
       <section id="contact" className="relative py-20 px-3 bg-gradient-to-b from-black to-gray-900">
         <div className="container mx-auto max-w-full text-center">
           <ScrollReveal>
-            <h2 className="text-5xl md:text-4xl sm:text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent break-words text-white">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent break-words">
               Let's Create Together
             </h2>
           </ScrollReveal>

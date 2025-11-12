@@ -20,37 +20,43 @@ import {
 } from "react-icons/fi";
 import Link from "next/link";
 import { useTheme } from "next-themes";
+import { useI18n } from "@/lib/i18n-context";
 
 export function LinTechPioneerTemplate() {
   const { theme } = useTheme();
   const isDark = theme === 'dark';
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { tt } = useI18n();
+  const data = tt?.linTechPioneer;
+
+  if (!data) {
+    return <div className="min-h-screen flex items-center justify-center">Loading...</div>;
+  }
 
   const companyData = {
-    name: "Unilink",
-    tagline: "Enterprise Software Solutions",
-    description:
-      "Building the future of connected systems. Scalable, secure, and intelligent software solutions for modern enterprises.",
+    name: data.hero.name,
+    tagline: data.hero.tagline,
+    description: data.hero.description,
     features: [
       {
         icon: <FiCode size={32} />,
-        title: "Modern Architecture",
-        description: "Built with cutting-edge technologies and best practices for maximum scalability and performance.",
+        title: data.features.items[0].title,
+        description: data.features.items[0].description,
       },
       {
         icon: <FiZap size={32} />,
-        title: "Lightning Fast",
-        description: "Optimized for speed with advanced caching, CDN delivery, and efficient data processing.",
+        title: data.features.items[1].title,
+        description: data.features.items[1].description,
       },
       {
         icon: <FiShield size={32} />,
-        title: "Enterprise Security",
-        description: "Bank-grade encryption, SOC 2 compliance, and comprehensive security monitoring.",
+        title: data.features.items[2].title,
+        description: data.features.items[2].description,
       },
       {
         icon: <FiGlobe size={32} />,
-        title: "Global Scale",
-        description: "Distributed infrastructure across multiple regions ensuring 99.99% uptime worldwide.",
+        title: data.features.items[3].title,
+        description: data.features.items[3].description,
       },
     ],
     techStack: [
@@ -65,19 +71,19 @@ export function LinTechPioneerTemplate() {
     ],
     products: [
       {
-        name: "Unilink Connect",
-        description: "API integration platform connecting your systems seamlessly",
-        features: ["Real-time sync", "100+ integrations", "Custom webhooks"],
+        name: data.products.items[0].name,
+        description: data.products.items[0].description,
+        features: data.products.items[0].features,
       },
       {
-        name: "Unilink Analytics",
-        description: "Business intelligence and data visualization suite",
-        features: ["Custom dashboards", "AI insights", "Export to any format"],
+        name: data.products.items[1].name,
+        description: data.products.items[1].description,
+        features: data.products.items[1].features,
       },
       {
-        name: "Unilink Security",
-        description: "Enterprise-grade security and compliance management",
-        features: ["SOC 2 certified", "GDPR compliant", "24/7 monitoring"],
+        name: data.products.items[2].name,
+        description: data.products.items[2].description,
+        features: data.products.items[2].features,
       },
     ],
   };
@@ -86,24 +92,24 @@ export function LinTechPioneerTemplate() {
     <div className="min-h-screen bg-gradient-to-b from-[#1E293B] to-[#0F172A] text-white">
       {/* Attribution Banner */}
       <div className="bg-[#3B82F6] text-white py-3 px-4 text-center text-sm">
-        Design inspired by{" "}
+        {data.attribution.text}{" "}
         <a
           href="https://www.unilink.co.il/"
           target="_blank"
           rel="noopener noreferrer"
           className="underline font-medium inline-flex items-center gap-1 hover:text-[#06B6D4] transition-colors"
         >
-          Unilink Software
+          {data.attribution.company}
           <FiExternalLink size={14} />
         </a>
-        {" "}- originally created by{" "}
+        {" "}- {data.attribution.originalCreator}{" "}
         <a
           href="https://lin.co.il"
           target="_blank"
           rel="noopener noreferrer"
           className="underline font-medium hover:text-[#06B6D4] transition-colors"
         >
-          lin.co.il
+          {data.attribution.creator}
         </a>
       </div>
 
@@ -111,22 +117,22 @@ export function LinTechPioneerTemplate() {
       <nav className="sticky top-0 z-50 bg-[#1E293B]/95 backdrop-blur-sm border-b border-white/10">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <Link href="/" className="text-sm text-gray-400 hover:text-[#3B82F6] transition-colors">
-            ← Back to Gallery
+            {data.navigation.backToGallery}
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
             <a href="#features" className="text-sm text-white hover:text-[#3B82F6] transition-colors font-medium">
-              Features
+              {data.navigation.features}
             </a>
             <a href="#products" className="text-sm text-white hover:text-[#3B82F6] transition-colors font-medium">
-              Products
+              {data.navigation.products}
             </a>
             <a href="#tech" className="text-sm text-white hover:text-[#3B82F6] transition-colors font-medium">
-              Technology
+              {data.navigation.technology}
             </a>
             <a href="#contact" className="text-sm text-white hover:text-[#3B82F6] transition-colors font-medium">
-              Contact
+              {data.navigation.contact}
             </a>
           </div>
 
@@ -140,41 +146,41 @@ export function LinTechPioneerTemplate() {
           </button>
         </div>
 
-        {/* Mobile Menu */}
-        {mobileMenuOpen && (
-          <div className="md:hidden bg-[#1E293B] border-t border-white/10">
-            <div className="container mx-auto px-4 py-4 flex flex-col gap-4">
-              <a
-                href="#features"
-                className="text-sm text-white hover:text-[#3B82F6] transition-colors py-2 font-medium"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Features
-              </a>
-              <a
-                href="#products"
-                className="text-sm text-white hover:text-[#3B82F6] transition-colors py-2 font-medium"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Products
-              </a>
-              <a
-                href="#tech"
-                className="text-sm text-white hover:text-[#3B82F6] transition-colors py-2 font-medium"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Technology
-              </a>
-              <a
-                href="#contact"
-                className="text-sm text-white hover:text-[#3B82F6] transition-colors py-2 font-medium"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Contact
-              </a>
+          {/* Mobile Menu */}
+          {mobileMenuOpen && (
+            <div className="md:hidden bg-[#1E293B] border-t border-white/10">
+              <div className="container mx-auto px-4 py-4 flex flex-col gap-4">
+                <a
+                  href="#features"
+                  className="text-sm text-white hover:text-[#3B82F6] transition-colors py-2 font-medium"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {data.navigation.features}
+                </a>
+                <a
+                  href="#products"
+                  className="text-sm text-white hover:text-[#3B82F6] transition-colors py-2 font-medium"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {data.navigation.products}
+                </a>
+                <a
+                  href="#tech"
+                  className="text-sm text-white hover:text-[#3B82F6] transition-colors py-2 font-medium"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {data.navigation.technology}
+                </a>
+                <a
+                  href="#contact"
+                  className="text-sm text-white hover:text-[#3B82F6] transition-colors py-2 font-medium"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {data.navigation.contact}
+                </a>
+              </div>
             </div>
-          </div>
-        )}
+          )}
       </nav>
 
       {/* Hero Section */}
@@ -199,7 +205,7 @@ export function LinTechPioneerTemplate() {
           <div className="max-w-4xl mx-auto text-center">
             <ScrollReveal>
               <div className={`inline-block px-4 py-2 bg-[#3B82F6]/20 border border-[#3B82F6]/50 rounded-full text-sm mb-6 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-                <span className="text-[#3B82F6]">●</span> Enterprise-Grade Solutions
+                <span className="text-[#3B82F6]">●</span> {data.hero.badge}
               </div>
             </ScrollReveal>
 
@@ -226,13 +232,13 @@ export function LinTechPioneerTemplate() {
             <ScrollReveal delay={0.8}>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button className="bg-gradient-to-r from-[#3B82F6] to-[#2563EB] hover:from-[#2563EB] hover:to-[#1D4ED8] text-white px-8 py-6 text-base font-semibold shadow-lg shadow-[#3B82F6]/30">
-                  Get Started Free
+                  {data.hero.getStarted}
                 </Button>
                 <Button
                   variant="outline"
                   className="border-2 border-[#3B82F6] text-[#3B82F6] hover:bg-[#3B82F6] hover:text-white px-8 py-6 text-base font-semibold"
                 >
-                  View Demo
+                  {data.hero.viewDemo}
                 </Button>
               </div>
             </ScrollReveal>
@@ -244,13 +250,13 @@ export function LinTechPioneerTemplate() {
       <section id="features" className="container mx-auto px-4 py-20">
         <ScrollReveal>
           <h2 className={`text-3xl sm:text-5xl font-bold text-center mb-4 break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>
-            Built for <span className="text-[#3B82F6]">Modern Teams</span>
+            {data.features.title} <span className="text-[#3B82F6]">{data.features.titleHighlight}</span>
           </h2>
         </ScrollReveal>
 
         <ScrollReveal delay={0.2}>
           <p className="text-center text-gray-400 mb-16 max-w-2xl mx-auto">
-            Everything you need to build, deploy, and scale your applications
+            {data.features.subtitle}
           </p>
         </ScrollReveal>
 
@@ -276,13 +282,13 @@ export function LinTechPioneerTemplate() {
         <div className="container mx-auto px-4">
           <ScrollReveal>
             <h2 className={`text-3xl sm:text-5xl font-bold text-center mb-4 break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>
-              Our <span className="text-[#3B82F6]">Products</span>
+              {data.products.title} <span className="text-[#3B82F6]">{data.products.titleHighlight}</span>
             </h2>
           </ScrollReveal>
 
           <ScrollReveal delay={0.2}>
             <p className="text-center text-gray-400 mb-16 max-w-2xl mx-auto">
-              Comprehensive suite of tools designed for enterprise needs
+              {data.products.subtitle}
             </p>
           </ScrollReveal>
 
@@ -313,13 +319,13 @@ export function LinTechPioneerTemplate() {
       <section id="tech" className="container mx-auto px-4 py-20">
         <ScrollReveal>
           <h2 className={`text-3xl sm:text-5xl font-bold text-center mb-4 break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>
-            Powered by <span className="text-[#3B82F6]">Modern Tech</span>
+            {data.tech.title} <span className="text-[#3B82F6]">{data.tech.titleHighlight}</span>
           </h2>
         </ScrollReveal>
 
         <ScrollReveal delay={0.2}>
           <p className="text-center text-gray-400 mb-16 max-w-2xl mx-auto">
-            Built with industry-leading technologies and best practices
+            {data.tech.subtitle}
           </p>
         </ScrollReveal>
 
@@ -344,9 +350,9 @@ export function LinTechPioneerTemplate() {
           <div className="max-w-3xl mx-auto mt-16">
             <div className="bg-[#0F172A] border border-[#3B82F6]/30 rounded-lg overflow-hidden">
               <div className="flex items-center justify-between px-4 py-3 bg-[#1E293B] border-b border-[#3B82F6]/20">
-                <span className="text-sm text-gray-400">example.ts</span>
+                <span className="text-sm text-gray-400">{data.tech.codeExample.filename}</span>
                 <button className={`text-xs text-[#3B82F6] hover:text-[#06B6D4] transition-colors ${isDark ? 'text-white' : 'text-gray-900'}`}>
-                  Copy
+                  {data.tech.codeExample.copy}
                 </button>
               </div>
               <pre className={`p-6 text-sm overflow-x-auto ${isDark ? 'text-white' : 'text-gray-900'}`}>
@@ -378,13 +384,13 @@ await client.sync();`}
         <div className="container mx-auto px-4 text-center">
           <ScrollReveal>
             <h2 className="text-3xl sm:text-5xl font-bold mb-6 text-white break-words">
-              Ready to Transform Your Business?
+              {data.cta.title}
             </h2>
           </ScrollReveal>
 
           <ScrollReveal delay={0.2}>
             <p className="text-xl text-white/90 mb-12 max-w-2xl mx-auto">
-              Join thousands of companies already using Unilink to power their operations
+              {data.cta.subtitle}
             </p>
           </ScrollReveal>
 
@@ -393,14 +399,14 @@ await client.sync();`}
               <a href="mailto:info@unilink.co.il">
                 <Button className="bg-white text-[#3B82F6] hover:bg-gray-100 px-8 py-6 text-base font-semibold shadow-lg text-foreground">
                   <FiMail className="mr-2" aria-hidden="true" />
-                  Contact Sales
+                  {data.cta.contactSales}
                 </Button>
               </a>
               <Button
                 variant="outline"
                 className="border-2 border-white text-white hover:bg-white hover:text-[#3B82F6] px-8 py-6 text-base font-semibold"
               >
-                Start Free Trial
+                {data.cta.startTrial}
               </Button>
             </div>
           </ScrollReveal>
@@ -426,10 +432,10 @@ await client.sync();`}
         <div className="container mx-auto px-4">
           <div className="text-center">
             <p className="text-sm text-gray-400 mb-2">
-              © 2024 {companyData.name}. All rights reserved.
+              {data.footer.copyright}
             </p>
             <p className="text-xs text-gray-600">
-              Design inspired by lin.co.il client work
+              {data.footer.designCredit}
             </p>
           </div>
         </div>

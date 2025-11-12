@@ -78,16 +78,16 @@ export function PhotographyImmersiveTemplate() {
           <motion.div
             initial={prefersReducedMotion ? {} : { opacity: 0 }}
             animate={{ opacity: 1 }}
-            className="md:hidden bg-black/95 backdrop-blur-sm"
+            className="md:hidden bg-black/95 backdrop-blur-sm border-t border-white/10"
           >
             <div className="container mx-auto px-6 py-6 flex flex-col gap-4">
-              <a href="#gallery" className="text-xs uppercase tracking-widest py-2 text-white" onClick={() => setMobileMenuOpen(false)}>
+              <a href="#gallery" className="text-xs uppercase tracking-widest py-2 text-white hover:text-white/60 transition-colors" onClick={() => setMobileMenuOpen(false)}>
                 Gallery
               </a>
-              <a href="#about" className="text-xs uppercase tracking-widest py-2 text-white" onClick={() => setMobileMenuOpen(false)}>
+              <a href="#about" className="text-xs uppercase tracking-widest py-2 text-white hover:text-white/60 transition-colors" onClick={() => setMobileMenuOpen(false)}>
                 {tt.common.about}
               </a>
-              <a href="#contact" className="text-xs uppercase tracking-widest py-2 text-white" onClick={() => setMobileMenuOpen(false)}>
+              <a href="#contact" className="text-xs uppercase tracking-widest py-2 text-white hover:text-white/60 transition-colors" onClick={() => setMobileMenuOpen(false)}>
                 {tt.common.contact}
               </a>
             </div>

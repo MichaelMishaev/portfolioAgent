@@ -54,13 +54,13 @@ export function SplitScreenEditorialTemplate() {
         <div className="space-y-4">
           <div className="text-sm text-gray-500">CONNECT</div>
           <div className="flex gap-4">
-            <a href="#" className="text-gray-400 hover:text-white transition-colors">
+            <a href="#" className="text-gray-400 hover:text-white transition-colors" aria-label="Twitter profile">
               <FiTwitter size={20} />
             </a>
-            <a href="#" className="text-gray-400 hover:text-white transition-colors">
+            <a href="#" className="text-gray-400 hover:text-white transition-colors" aria-label="LinkedIn profile">
               <FiLinkedin size={20} />
             </a>
-            <a href="#" className="text-gray-400 hover:text-white transition-colors">
+            <a href="#" className="text-gray-400 hover:text-white transition-colors" aria-label="Instagram profile">
               <FiInstagram size={20} />
             </a>
           </div>
@@ -92,9 +92,9 @@ export function SplitScreenEditorialTemplate() {
 
             <div className="relative z-10 text-center text-white p-8">
               <ScrollReveal>
-                <div className="text-sm font-semibold mb-2 text-white/90">{project.client}</div>
-                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 break-words text-white">{project.title}</h2>
-                <p className="text-xl max-w-2xl mx-auto text-white/90">
+                <div className="text-sm font-semibold mb-2 text-white [text-shadow:_0_2px_8px_rgb(0_0_0_/_80%)]">{project.client}</div>
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 break-words text-white [text-shadow:_0_2px_8px_rgb(0_0_0_/_80%)]">{project.title}</h2>
+                <p className="text-xl max-w-2xl mx-auto text-white [text-shadow:_0_2px_8px_rgb(0_0_0_/_80%)]">
                   {project.description}
                 </p>
               </ScrollReveal>
