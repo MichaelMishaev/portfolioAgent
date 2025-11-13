@@ -26,6 +26,7 @@ import { placeholderImages } from "@/lib/placeholder-images";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useTheme } from "next-themes";
+import { LeadGenerationGraphic, DataAnalyticsGraphic, TeamCollaborationGraphic, GrowthArrowGraphic } from "./b2b-graphics";
 
 export function ProfessionalB2bTemplate() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -115,25 +116,26 @@ export function ProfessionalB2bTemplate() {
       </nav>
 
       {/* Hero Section - B2B Professional */}
-      <section className="relative bg-gradient-to-br from-blue-600 to-blue-800 text-white py-20 lg:py-32 mt-16">
-        <div className="container mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <section className="relative bg-gradient-to-br from-blue-600 to-blue-800 text-white py-12 sm:py-16 lg:py-32 mt-16">
+        <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <FadeIn>
               <div className="max-w-2xl">
-                <h1 className={`text-4xl sm:text-5xl md:text-5xl sm:text-5xl md:text-6xl font-bold mb-6 leading-tight break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>
+                <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-6 leading-tight text-white">
                   {data.hero.title}
                 </h1>
-                <p className="text-xl mb-8 text-blue-100">
+                <p className="text-base sm:text-lg lg:text-xl mb-6 sm:mb-8 text-blue-100">
                   {data.hero.subtitle}
                 </p>
-                <div className="flex gap-4 flex-wrap">
-                  <Button size="lg" className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-6 text-lg font-semibold" style={{ color: '#2563eb' }}>
+                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+                  <Button size="lg" className="bg-white text-blue-600 hover:bg-blue-50 px-6 sm:px-8 py-4 sm:py-6 text-base sm:text-lg font-semibold w-full sm:w-auto" style={{ color: '#2563eb' }}>
                     {data.hero.primaryCta}
                   </Button>
                   <Button
                     size="lg"
                     variant="outline"
-                    className="border-2 border-white text-white hover:bg-white/10 px-8 py-6 text-lg font-semibold"
+                    className="border-2 border-white bg-transparent text-white hover:bg-white/10 hover:text-white px-6 sm:px-8 py-4 sm:py-6 text-base sm:text-lg font-semibold w-full sm:w-auto"
+                    style={{ color: 'white', borderColor: 'white' }}
                   >
                     {data.hero.secondaryCta}
                   </Button>
@@ -142,44 +144,34 @@ export function ProfessionalB2bTemplate() {
             </FadeIn>
 
             <FadeIn delay={0.2}>
-              <div className="relative h-96 lg:h-[500px] rounded-xl overflow-hidden shadow-2xl bg-gradient-to-br from-blue-500 via-blue-600 to-blue-800">
+              <div className="relative h-64 sm:h-80 lg:h-[500px] rounded-xl overflow-hidden shadow-2xl bg-gradient-to-br from-blue-500 via-blue-600 to-blue-800 p-8 lg:p-12">
                 <div className="absolute inset-0 flex items-center justify-center">
-                  {/* Dashboard Mockup Illustration */}
-                  <div className="w-full h-full p-8 md:p-12">
-                    <div className="w-full h-full bg-white/10 backdrop-blur-sm rounded-lg border border-white/20 p-6 md:p-8">
-                      {/* Mock dashboard elements */}
-                      <div className="flex items-center justify-between mb-6">
-                        <div className="space-y-2">
-                          <div className="h-3 w-32 bg-white/30 rounded"></div>
-                          <div className="h-2 w-24 bg-white/20 rounded"></div>
-                        </div>
-                        <div className="h-8 w-8 bg-white/30 rounded-full"></div>
-                      </div>
-
-                      {/* Stats grid */}
-                      <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-6">
-                        {[...Array(3)].map((_, i) => (
-                          <div key={i} className="bg-white/10 rounded-lg p-4 space-y-2">
-                            <div className="h-2 w-16 bg-white/20 rounded"></div>
-                            <div className="h-4 w-20 bg-white/40 rounded"></div>
-                          </div>
-                        ))}
-                      </div>
-
-                      {/* Chart area */}
-                      <div className="bg-white/10 rounded-lg p-4 h-32 flex items-end justify-between gap-2">
-                        {[40, 65, 45, 80, 55, 70, 60].map((height, i) => (
-                          <div
-                            key={i}
-                            className="bg-white/40 rounded-t flex-1"
-                            style={{ height: `${height}%` }}
-                          ></div>
-                        ))}
-                      </div>
-                    </div>
+                  <div className="w-full h-full p-4 sm:p-8 lg:p-12">
+                    <LeadGenerationGraphic />
                   </div>
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-blue-900/30 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-blue-900/20 to-transparent pointer-events-none" />
+
+                {/* Floating stats */}
+                <motion.div
+                  className="absolute top-6 right-6 bg-white/10 backdrop-blur-md rounded-lg p-3 sm:p-4 border border-white/20"
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 1, duration: 0.6 }}
+                >
+                  <div className="text-white text-xl sm:text-2xl font-bold">247%</div>
+                  <div className="text-blue-100 text-xs sm:text-sm">Growth Rate</div>
+                </motion.div>
+
+                <motion.div
+                  className="absolute bottom-6 left-6 bg-white/10 backdrop-blur-md rounded-lg p-3 sm:p-4 border border-white/20"
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 1.2, duration: 0.6 }}
+                >
+                  <div className="text-white text-xl sm:text-2xl font-bold">500+</div>
+                  <div className="text-blue-100 text-xs sm:text-sm">Clients Served</div>
+                </motion.div>
               </div>
             </FadeIn>
           </div>
@@ -187,19 +179,54 @@ export function ProfessionalB2bTemplate() {
       </section>
 
       {/* Social Proof */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto max-w-7xl px-6">
-          <div className="text-center mb-12">
-            <div className="text-sm font-semibold text-gray-500 mb-2">TRUSTED BY</div>
-            <h3 className={`text-3xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>{data.socialProof.title}</h3>
+      <section className="py-12 sm:py-16 bg-white">
+        <div className="container mx-auto max-w-7xl px-4 sm:px-6">
+          <div className="text-center mb-8 sm:mb-12">
+            <div className="text-xs sm:text-sm font-semibold text-gray-500 mb-2">TRUSTED BY</div>
+            <h3 className={`text-2xl sm:text-3xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>{data.socialProof.title}</h3>
           </div>
 
-          <div className="flex justify-center gap-8 md:gap-16 flex-wrap">
+          <div className="grid grid-cols-3 gap-4 sm:gap-8 md:gap-16 max-w-4xl mx-auto">
             {data.socialProof.stats.map((stat: any, index: number) => (
               <ScrollReveal key={index} delay={index * 0.1}>
                 <div className="text-center">
-                  <div className={`text-3xl sm:text-4xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>{stat.value}</div>
-                  <div className="text-gray-500">{stat.label}</div>
+                  <div className={`text-2xl sm:text-3xl lg:text-4xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>{stat.value}</div>
+                  <div className="text-gray-500 text-xs sm:text-sm lg:text-base mt-1">{stat.label}</div>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* How It Works - Process */}
+      <section className="py-12 sm:py-16 lg:py-20 bg-white">
+        <div className="container mx-auto max-w-7xl px-4 sm:px-6">
+          <ScrollReveal>
+            <h2 className={`text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-3 sm:mb-4 ${isDark ? 'text-white' : 'text-gray-900'}`}>
+              {data.process?.title || "How It Works"}
+            </h2>
+            <p className="text-base sm:text-lg lg:text-xl text-gray-600 text-center mb-8 sm:mb-12 lg:mb-16 max-w-2xl mx-auto px-4">
+              {data.process?.subtitle || "Our proven process to fill your pipeline"}
+            </p>
+          </ScrollReveal>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+            {data.process?.steps?.map((step: any, index: number) => (
+              <ScrollReveal key={index} delay={index * 0.1}>
+                <div className="relative">
+                  <div className="flex flex-col items-center text-center">
+                    <div className="w-16 sm:w-20 h-16 sm:h-20 bg-gradient-to-br from-blue-500 to-blue-700 rounded-2xl flex items-center justify-center mb-4 sm:mb-6 shadow-lg">
+                      <span className="text-2xl sm:text-3xl font-bold text-white">{step.number}</span>
+                    </div>
+                    <h3 className={`text-lg sm:text-xl font-bold mb-2 sm:mb-3 ${isDark ? 'text-white' : 'text-gray-900'}`}>{step.title}</h3>
+                    <p className="text-sm sm:text-base text-gray-600 leading-relaxed">{step.description}</p>
+                  </div>
+                  {index < 3 && (
+                    <div className="hidden lg:block absolute top-10 left-full w-full h-0.5">
+                      <div className="w-1/2 h-full bg-gradient-to-r from-blue-300 to-transparent"></div>
+                    </div>
+                  )}
                 </div>
               </ScrollReveal>
             ))}
@@ -208,16 +235,21 @@ export function ProfessionalB2bTemplate() {
       </section>
 
       {/* Services Grid */}
-      <section id="services" className="py-20 bg-gray-50">
-        <div className="container mx-auto max-w-7xl px-6">
+      <section id="services" className="py-12 sm:py-16 lg:py-20 bg-gray-50">
+        <div className="container mx-auto max-w-7xl px-4 sm:px-6">
           <ScrollReveal>
-            <h2 className={`text-3xl sm:text-4xl font-bold text-center mb-4 ${isDark ? 'text-white' : 'text-gray-900'}`}>{data.services.title}</h2>
-            <p className="text-xl text-gray-600 text-center mb-16 max-w-2xl mx-auto">
+            <h2 className={`text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-3 sm:mb-4 ${isDark ? 'text-white' : 'text-gray-900'}`}>{data.services.title}</h2>
+            <p className="text-base sm:text-lg lg:text-xl text-gray-600 text-center mb-4 sm:mb-6 max-w-2xl mx-auto px-4">
               {data.services.subtitle}
             </p>
           </ScrollReveal>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          {/* Team Collaboration Graphic */}
+          <div className="max-w-lg mx-auto mb-8 sm:mb-12 lg:mb-16 h-40 sm:h-48">
+            <TeamCollaborationGraphic />
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {data.services.items.map((service: any, index: number) => (
               <ScrollReveal key={index} delay={index * 0.1}>
                 <motion.div
@@ -261,71 +293,55 @@ export function ProfessionalB2bTemplate() {
       </section>
 
       {/* Case Study Highlight */}
-      <section id="case-studies" className="py-20 bg-white">
-        <div className="container mx-auto max-w-7xl px-6">
+      <section id="case-studies" className="py-12 sm:py-16 lg:py-20 bg-white">
+        <div className="container mx-auto max-w-7xl px-4 sm:px-6">
           <ScrollReveal>
-            <div className="text-center mb-16">
-              <div className="text-blue-600 text-sm font-semibold mb-2">FEATURED CASE STUDY</div>
-              <h2 className={`text-3xl sm:text-4xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>{data.caseStudy.title}</h2>
+            <div className="text-center mb-8 sm:mb-12 lg:mb-16">
+              <div className="text-blue-600 text-xs sm:text-sm font-semibold mb-2">FEATURED CASE STUDY</div>
+              <h2 className={`text-2xl sm:text-3xl lg:text-4xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>{data.caseStudy.title}</h2>
             </div>
           </ScrollReveal>
 
           <ScrollReveal delay={0.2}>
             <Card className="overflow-hidden border-0 shadow-xl">
               <div className="grid lg:grid-cols-2">
-                <div className="bg-gradient-to-br from-blue-500 to-blue-700 h-64 lg:h-auto flex items-center justify-center relative overflow-hidden">
-                  {/* Success/Growth Illustration */}
-                  <div className="absolute inset-0 flex items-center justify-center p-8">
-                    {/* Trophy/Award Graphic */}
-                    <div className="relative">
-                      {/* Trophy Cup */}
-                      <div className="w-32 h-32 relative">
-                        {/* Cup body */}
-                        <div className="absolute top-8 left-1/2 -translate-x-1/2 w-20 h-16 bg-yellow-400/30 rounded-b-full border-4 border-yellow-300/40"></div>
-                        {/* Cup handles */}
-                        <div className="absolute top-10 left-2 w-6 h-8 border-4 border-yellow-300/40 rounded-l-full"></div>
-                        <div className="absolute top-10 right-2 w-6 h-8 border-4 border-yellow-300/40 rounded-r-full"></div>
-                        {/* Cup base */}
-                        <div className="absolute bottom-2 left-1/2 -translate-x-1/2 w-16 h-3 bg-yellow-400/30 rounded-full"></div>
-                        <div className="absolute bottom-5 left-1/2 -translate-x-1/2 w-12 h-4 bg-yellow-400/30"></div>
-
-                        {/* Award ribbon */}
-                        <div className="absolute top-6 left-1/2 -translate-x-1/2 w-16 h-20">
-                          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-12 h-12 bg-yellow-300/40 rounded-full flex items-center justify-center border-4 border-yellow-200/30">
-                            <FiAward className="text-white text-2xl" />
-                          </div>
-                        </div>
-                      </div>
-
-                      {/* Floating stats around trophy */}
-                      <div className="absolute -top-4 -right-12 bg-white/10 backdrop-blur-sm rounded-lg px-3 py-2 border border-white/20">
-                        <div className="text-white text-xl font-bold">247%</div>
-                      </div>
-                      <div className="absolute -bottom-4 -left-12 bg-white/10 backdrop-blur-sm rounded-lg px-3 py-2 border border-white/20">
-                        <div className="text-white text-xl font-bold">$2.1M</div>
-                      </div>
-
-                      {/* Sparkle effects */}
-                      <div className="absolute top-0 right-0 w-2 h-2 bg-yellow-300 rounded-full animate-pulse"></div>
-                      <div className="absolute bottom-4 left-2 w-1.5 h-1.5 bg-yellow-200 rounded-full animate-pulse delay-150"></div>
-                      <div className="absolute top-8 right-8 w-1 h-1 bg-white rounded-full animate-pulse delay-300"></div>
-                    </div>
+                <div className="bg-gradient-to-br from-blue-500 to-blue-700 h-56 sm:h-64 lg:h-auto flex items-center justify-center relative overflow-hidden p-6 sm:p-8">
+                  <div className="w-full h-full max-w-md">
+                    <GrowthArrowGraphic />
                   </div>
-                </div>
-                <CardContent className="p-12">
-                  <h3 className={`text-3xl font-bold mb-4 ${isDark ? 'text-white' : 'text-gray-900'}`}>{data.caseStudy.headline}</h3>
-                  <p className="text-gray-600 mb-8">{data.caseStudy.description}</p>
 
-                  <div className="grid grid-cols-2 gap-6 mb-8">
+                  {/* Floating stats */}
+                  <motion.div
+                    className="absolute top-4 right-4 bg-white/10 backdrop-blur-sm rounded-lg px-3 py-2 border border-white/20"
+                    initial={{ opacity: 0, scale: 0 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ delay: 0.5 }}
+                  >
+                    <div className="text-white text-lg font-bold">247%</div>
+                  </motion.div>
+                  <motion.div
+                    className="absolute bottom-4 left-4 bg-white/10 backdrop-blur-sm rounded-lg px-3 py-2 border border-white/20"
+                    initial={{ opacity: 0, scale: 0 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ delay: 0.7 }}
+                  >
+                    <div className="text-white text-lg font-bold">$2.1M</div>
+                  </motion.div>
+                </div>
+                <CardContent className="p-6 sm:p-8 lg:p-12">
+                  <h3 className={`text-xl sm:text-2xl lg:text-3xl font-bold mb-3 sm:mb-4 ${isDark ? 'text-white' : 'text-gray-900'}`}>{data.caseStudy.headline}</h3>
+                  <p className="text-sm sm:text-base text-gray-600 mb-6 sm:mb-8 leading-relaxed">{data.caseStudy.description}</p>
+
+                  <div className="grid grid-cols-2 gap-4 sm:gap-6 mb-6 sm:mb-8">
                     {data.caseStudy.results.map((result: any, index: number) => (
                       <div key={index}>
-                        <div className={`text-3xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>{result.value}</div>
-                        <div className="text-gray-500">{result.label}</div>
+                        <div className={`text-2xl sm:text-3xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>{result.value}</div>
+                        <div className="text-gray-500 text-xs sm:text-sm mt-1">{result.label}</div>
                       </div>
                     ))}
                   </div>
 
-                  <Button className="bg-blue-600 hover:bg-blue-700">
+                  <Button className="bg-blue-600 hover:bg-blue-700 text-white w-full sm:w-auto text-sm sm:text-base">
                     Read Full Case Study <FiArrowRight className="ml-2" aria-hidden="true" />
                   </Button>
                 </CardContent>
@@ -336,26 +352,26 @@ export function ProfessionalB2bTemplate() {
       </section>
 
       {/* Testimonials */}
-      <section id="testimonials" className="py-20 bg-gray-50">
-        <div className="container mx-auto max-w-7xl px-6">
+      <section id="testimonials" className="py-12 sm:py-16 lg:py-20 bg-gray-50">
+        <div className="container mx-auto max-w-7xl px-4 sm:px-6">
           <ScrollReveal>
-            <h2 className={`text-3xl sm:text-4xl font-bold text-center mb-16 ${isDark ? 'text-white' : 'text-gray-900'}`}>{data.testimonials.title}</h2>
+            <h2 className={`text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-8 sm:mb-12 lg:mb-16 ${isDark ? 'text-white' : 'text-gray-900'}`}>{data.testimonials.title}</h2>
           </ScrollReveal>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {data.testimonials.items.map((testimonial: any, index: number) => (
               <ScrollReveal key={index} delay={index * 0.1}>
-                <Card className="border-0 shadow-md hover:shadow-xl transition-shadow">
-                  <CardContent className="p-8">
-                    <div className="flex items-center gap-1 text-yellow-400 mb-4">
+                <Card className="border-0 shadow-md hover:shadow-xl transition-shadow h-full">
+                  <CardContent className="p-5 sm:p-6 lg:p-8 flex flex-col h-full">
+                    <div className="flex items-center gap-1 text-yellow-400 mb-3 sm:mb-4 text-sm sm:text-base">
                       {'★'.repeat(5)}
                     </div>
-                    <p className="text-gray-700 mb-6 leading-relaxed">
+                    <p className="text-sm sm:text-base text-gray-700 mb-4 sm:mb-6 leading-relaxed flex-grow">
                       "{testimonial.quote}"
                     </p>
                     <div>
-                      <div className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>{testimonial.author}</div>
-                      <div className="text-gray-500 text-sm">{testimonial.role}</div>
+                      <div className={`font-semibold text-sm sm:text-base ${isDark ? 'text-white' : 'text-gray-900'}`}>{testimonial.author}</div>
+                      <div className="text-gray-500 text-xs sm:text-sm">{testimonial.role}</div>
                     </div>
                   </CardContent>
                 </Card>
@@ -365,17 +381,86 @@ export function ProfessionalB2bTemplate() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-blue-800 text-white">
-        <div className="container mx-auto max-w-7xl px-6 text-center">
+      {/* Why Choose Us */}
+      <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-b from-white to-blue-50">
+        <div className="container mx-auto max-w-7xl px-4 sm:px-6">
           <ScrollReveal>
-            <h2 className={`text-4xl lg:text-4xl sm:text-5xl font-bold mb-6 break-words ${isDark ? 'text-white' : 'text-gray-900'}`}>
+            <h2 className={`text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-3 sm:mb-4 ${isDark ? 'text-white' : 'text-gray-900'}`}>
+              {data.whyChooseUs?.title || "Why Choose Us"}
+            </h2>
+            <p className="text-base sm:text-lg lg:text-xl text-gray-600 text-center mb-8 sm:mb-12 lg:mb-16 max-w-2xl mx-auto px-4">
+              {data.whyChooseUs?.subtitle || "What sets us apart"}
+            </p>
+          </ScrollReveal>
+
+          {/* Data Analytics Graphic */}
+          <div className="max-w-4xl mx-auto mb-12 lg:mb-16 h-48 sm:h-64 lg:h-80">
+            <DataAnalyticsGraphic />
+          </div>
+
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
+            {data.whyChooseUs?.benefits?.map((benefit: any, index: number) => (
+              <ScrollReveal key={index} delay={index * 0.1}>
+                <div className="text-center">
+                  <div className="w-12 sm:w-14 lg:w-16 h-12 sm:h-14 lg:h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
+                    <FiCheckCircle className="text-blue-600 text-xl sm:text-2xl" />
+                  </div>
+                  <h3 className={`text-sm sm:text-base lg:text-lg font-bold mb-1 sm:mb-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>{benefit.title}</h3>
+                  <p className="text-gray-600 text-xs sm:text-sm">{benefit.description}</p>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Industries We Serve */}
+      <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div className="container mx-auto max-w-7xl px-4 sm:px-6">
+          <ScrollReveal>
+            <h2 className={`text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-3 sm:mb-4 ${isDark ? 'text-white' : 'text-gray-900'}`}>
+              {data.industries?.title || "Industries We Serve"}
+            </h2>
+            <p className="text-base sm:text-lg lg:text-xl text-gray-600 text-center mb-8 sm:mb-12 lg:mb-16 max-w-2xl mx-auto px-4">
+              {data.industries?.subtitle || "Specialized expertise across multiple sectors"}
+            </p>
+          </ScrollReveal>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+            {data.industries?.items?.map((industry: any, index: number) => (
+              <ScrollReveal key={index} delay={index * 0.1}>
+                <motion.div
+                  whileHover={{ scale: 1.05, y: -5 }}
+                  transition={{ duration: 0.3 }}
+                  className="bg-white rounded-lg sm:rounded-xl p-4 sm:p-5 lg:p-6 shadow-md hover:shadow-xl transition-all border border-gray-100"
+                >
+                  <div className="flex items-start gap-3 sm:gap-4">
+                    <div className="w-10 sm:w-11 lg:w-12 h-10 sm:h-11 lg:h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <FiTarget className="text-blue-600 text-lg sm:text-xl" />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <h3 className={`text-sm sm:text-base lg:text-lg font-bold mb-1 ${isDark ? 'text-white' : 'text-gray-900'}`}>{industry.name}</h3>
+                      <p className="text-gray-600 text-xs sm:text-sm">{industry.description}</p>
+                    </div>
+                  </div>
+                </motion.div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-r from-blue-600 to-blue-800 text-white">
+        <div className="container mx-auto max-w-7xl px-4 sm:px-6 text-center">
+          <ScrollReveal>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold mb-4 sm:mb-6 break-words text-white px-4">
               {data.cta.title}
             </h2>
-            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg lg:text-xl text-blue-100 mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
               {data.cta.subtitle}
             </p>
-            <Button size="lg" className="bg-white text-blue-600 hover:bg-blue-50 px-10 py-6 text-lg font-semibold" style={{ color: '#2563eb' }}>
+            <Button size="lg" className="bg-white text-blue-600 hover:bg-blue-50 px-6 sm:px-8 lg:px-10 py-4 sm:py-5 lg:py-6 text-base sm:text-lg font-semibold w-full sm:w-auto" style={{ color: '#2563eb' }}>
               {data.cta.buttonText}
             </Button>
           </ScrollReveal>
@@ -415,7 +500,7 @@ export function ProfessionalB2bTemplate() {
 
           {/* Skills - B2B Professional */}
           <section className="py-16 border-t border-gray-800">
-            <h3 className={`text-3xl font-bold mb-8 ${isDark ? 'text-white' : 'text-gray-900'}`}>Core Competencies</h3>
+            <h3 className="text-3xl font-bold mb-8 text-white">Core Competencies</h3>
             <div className="grid md:grid-cols-3 gap-6">
               {['Lead Generation', 'Sales Automation', 'CRM Integration', 'Email Marketing', 'Analytics & Reporting', 'Account Management'].map((skill, i) => (
                 <div key={i} className="bg-gray-800 p-6 rounded-lg border border-gray-700">
@@ -427,18 +512,18 @@ export function ProfessionalB2bTemplate() {
 
           {/* About - B2B Professional */}
           <section className="py-16 border-t border-gray-800">
-            <h3 className={`text-3xl font-bold mb-6 ${isDark ? 'text-white' : 'text-gray-900'}`}>About Our B2B Services</h3>
+            <h3 className="text-3xl font-bold mb-6 text-white">About Our B2B Services</h3>
             <p className="text-lg text-gray-300 mb-4">
               We specialize in helping B2B companies scale their sales and marketing operations through proven strategies and cutting-edge technology.
             </p>
-            <p className="text-gray-400">
+            <p className="text-gray-300">
               With over 10 years of experience in the B2B sector, we've helped hundreds of companies achieve sustainable growth and increase their market share.
             </p>
           </section>
 
           {/* Pricing - B2B Professional */}
           <section className="py-16 border-t border-gray-800">
-            <h3 className={`text-3xl font-bold mb-8 text-center ${isDark ? 'text-white' : 'text-gray-900'}`}>Service Packages</h3>
+            <h3 className="text-3xl font-bold mb-8 text-center text-white">Service Packages</h3>
             <div className="grid md:grid-cols-3 gap-8">
               {[
                 { name: 'Starter', price: '$2,000/mo', features: ['50 Qualified Leads', 'Basic CRM Setup', 'Email Campaigns', 'Monthly Reports'] },
@@ -447,7 +532,7 @@ export function ProfessionalB2bTemplate() {
               ].map((pkg, i) => (
                 <div key={i} className={`bg-gray-800 p-8 rounded-xl border-2 ${pkg.popular ? 'border-blue-500' : 'border-gray-700'}`}>
                   {pkg.popular && <div className="text-xs font-bold text-blue-400 mb-2 uppercase">Most Popular</div>}
-                  <h4 className="text-2xl font-bold mb-2 text-foreground">{pkg.name}</h4>
+                  <h4 className="text-2xl font-bold mb-2 text-white">{pkg.name}</h4>
                   <div className="text-3xl sm:text-4xl font-bold text-blue-400 mb-6">{pkg.price}</div>
                   <ul className="space-y-3 mb-8">
                     {pkg.features.map((f, j) => (
@@ -457,7 +542,7 @@ export function ProfessionalB2bTemplate() {
                       </li>
                     ))}
                   </ul>
-                  <Button className={`w-full ${pkg.popular ? 'bg-blue-600 hover:bg-blue-700' : 'bg-gray-700 hover:bg-gray-600'}`}>
+                  <Button className={`w-full text-white ${pkg.popular ? 'bg-blue-600 hover:bg-blue-700' : 'bg-gray-700 hover:bg-gray-600'}`}>
                     Get Started
                   </Button>
                 </div>
@@ -467,7 +552,7 @@ export function ProfessionalB2bTemplate() {
 
           {/* Timeline - B2B Professional */}
           <section className="py-16 border-t border-gray-800">
-            <h3 className={`text-3xl font-bold mb-8 ${isDark ? 'text-white' : 'text-gray-900'}`}>Company Milestones</h3>
+            <h3 className="text-3xl font-bold mb-8 text-white">Company Milestones</h3>
             <div className="space-y-6">
               {[
                 { year: '2024', title: 'Expanded to Global Markets', desc: 'Opened offices in Europe and Asia' },
@@ -480,8 +565,8 @@ export function ProfessionalB2bTemplate() {
                     <div className="text-2xl font-bold text-blue-400">{item.year}</div>
                   </div>
                   <div className="flex-1 bg-gray-800 p-6 rounded-lg border border-gray-700">
-                    <h4 className="font-bold text-lg mb-2 text-foreground">{item.title}</h4>
-                    <p className="text-gray-400 text-sm">{item.desc}</p>
+                    <h4 className="font-bold text-lg mb-2 text-white">{item.title}</h4>
+                    <p className="text-gray-300 text-sm">{item.desc}</p>
                   </div>
                 </div>
               ))}
@@ -489,22 +574,19 @@ export function ProfessionalB2bTemplate() {
           </section>
 
           {/* FAQ - B2B Professional */}
-          <section className="py-16 border-t border-gray-800">
-            <h3 className={`text-3xl font-bold mb-8 text-center ${isDark ? 'text-white' : 'text-gray-900'}`}>Frequently Asked Questions</h3>
-            <div className="max-w-3xl mx-auto space-y-6">
-              {[
-                { q: 'What industries do you serve?', a: 'We work with B2B companies across all industries including SaaS, manufacturing, professional services, and technology.' },
-                { q: 'How do you qualify leads?', a: 'We use a multi-stage qualification process including firmographic data, behavioral signals, and direct engagement.' },
-                { q: 'What is your typical contract length?', a: 'We offer flexible contracts starting at 3 months, with most clients opting for 12-month engagements.' },
-                { q: 'Do you integrate with our existing CRM?', a: 'Yes, we integrate with all major CRMs including Salesforce, HubSpot, and Microsoft Dynamics.' }
-              ].map((item, i) => (
-                <div key={i} className="bg-gray-800 p-6 rounded-lg border border-gray-700">
-                  <h4 className="font-bold text-lg mb-3 text-foreground">{item.q}</h4>
-                  <p className="text-gray-400">{item.a}</p>
-                </div>
-              ))}
-            </div>
-          </section>
+          {data.faq && (
+            <section className="py-16 border-t border-gray-800">
+              <h3 className="text-3xl font-bold mb-8 text-center text-white">{data.faq.title}</h3>
+              <div className="max-w-3xl mx-auto space-y-6">
+                {data.faq.items.map((item: any, i: number) => (
+                  <div key={i} className="bg-gray-800 p-6 rounded-lg border border-gray-700">
+                    <h4 className="font-bold text-lg mb-3 text-white">{item.question}</h4>
+                    <p className="text-gray-300">{item.answer}</p>
+                  </div>
+                ))}
+              </div>
+            </section>
+          )}
 
           <div className="border-t border-gray-800 pt-8 text-center text-gray-400">
             <p>&copy; 2025 B2B Lead Generation Services. All rights reserved.</p>
