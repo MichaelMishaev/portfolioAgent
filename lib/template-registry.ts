@@ -274,14 +274,6 @@ const staticTemplateData = {
     colors: { primary: "#00FF00", secondary: "#FF006E", accent: "#000000" },
     fonts: { heading: "Space Grotesk", body: "Inter" },
   },
-  "saas-growth": {
-    colors: { primary: "#4F46E5", secondary: "#7C3AED", accent: "#06B6D4" },
-    fonts: { heading: "Inter", body: "Inter" },
-  },
-  "freelancer-creative": {
-    colors: { primary: "#EC4899", secondary: "#F59E0B", accent: "#10B981" },
-    fonts: { heading: "Poppins", body: "Inter" },
-  },
 };
 
 export function getTemplates(language: "en" | "ru" | "he" = "en"): TemplateConfig[] {
