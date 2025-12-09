@@ -19,7 +19,7 @@ export function CustomizeTemplateButton({
   showIcon = true
 }: CustomizeTemplateButtonProps) {
   const pathname = usePathname();
-  const { t } = useI18n();
+  const { t, isRTL } = useI18n();
 
   // Extract template ID from current path
   // Path format: /templates/[templateId] or /templates/[templateId]/preview
@@ -54,10 +54,11 @@ export function CustomizeTemplateButton({
           transition-all
           duration-300
           hover:scale-105
+          ${isRTL ? 'flex-row-reverse' : ''}
           ${className}
         `}
       >
-        {showIcon && "✏️ "}{t.buttons.customizeTemplate}
+        {isRTL && showIcon && " ✏️"}{t.buttons.customizeTemplate}{!isRTL && showIcon && " ✏️"}
       </Button>
     </Link>
   );

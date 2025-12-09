@@ -16,29 +16,16 @@ import {
   FiChevronLeft,
   FiChevronRight
 } from "react-icons/fi";
-import { FaTelegramPlane } from "react-icons/fa";
 import { useI18n } from "@/lib/i18n-context";
-import { TELEGRAM_CONTACT_LINK } from "@/components/shared/contact-us-floating-button";
 
 interface TemplateDetailViewProps {
   template: TemplateConfig;
 }
 
 export function TemplateDetailView({ template }: TemplateDetailViewProps) {
-  const { language, t } = useI18n();
+  const { language, t, isRTL } = useI18n();
   const [currentScreenshot, setCurrentScreenshot] = useState(0);
   const [expandedFeatures, setExpandedFeatures] = useState<Set<number>>(new Set());
-
-  // Generate Telegram contact link with template info
-  const getTelegramContactUrl = () => {
-    const baseUrl = typeof window !== 'undefined' ? window.location.origin : 'https://yoursite.com';
-    const templateUrl = `${baseUrl}/templates/${template.id}`;
-    const message = language === 'en'
-      ? `Hi! I'm interested in the ${template.name} template.\n\nTemplate URL: ${templateUrl}`
-      : `Привет! Меня интересует шаблон ${template.name}.\n\nСсылка на шаблон: ${templateUrl}`;
-
-    return `${TELEGRAM_CONTACT_LINK}?text=${encodeURIComponent(message)}`;
-  };
 
   const nextScreenshot = () => {
     setCurrentScreenshot((prev) => (prev + 1) % template.screenshots.length);
@@ -69,10 +56,10 @@ export function TemplateDetailView({ template }: TemplateDetailViewProps) {
         <div className="container mx-auto px-4 py-4">
           <Link
             href="/"
-            className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+            className={`inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors ${isRTL ? 'flex-row-reverse' : ''}`}
           >
-            <FiChevronLeft className="w-4 h-4" />
-            {language === 'en' ? 'Back to Gallery' : 'Назад в галерею'}
+            {isRTL ? <FiChevronRight className="w-4 h-4" /> : <FiChevronLeft className="w-4 h-4" />}
+            {language === 'en' ? 'Back to Gallery' : language === 'ru' ? 'Назад в галерею' : 'חזרה לגלריה'}
           </Link>
         </div>
       </div>
@@ -81,7 +68,7 @@ export function TemplateDetailView({ template }: TemplateDetailViewProps) {
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 mb-12">
           {/* Left: Screenshot Carousel */}
           <motion.div
-            initial={{ opacity: 0, x: -20 }}
+            initial={{ opacity: 0, x: isRTL ? 20 : -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
           >
@@ -98,17 +85,17 @@ export function TemplateDetailView({ template }: TemplateDetailViewProps) {
                 <>
                   <button
                     onClick={prevScreenshot}
-                    className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-3 rounded-full transition-all"
+                    className={`absolute ${isRTL ? 'right-4' : 'left-4'} top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-3 rounded-full transition-all`}
                     aria-label="Previous screenshot"
                   >
-                    <FiChevronLeft className="w-5 h-5" />
+                    {isRTL ? <FiChevronRight className="w-5 h-5" /> : <FiChevronLeft className="w-5 h-5" />}
                   </button>
                   <button
                     onClick={nextScreenshot}
-                    className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-3 rounded-full transition-all"
+                    className={`absolute ${isRTL ? 'left-4' : 'right-4'} top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-3 rounded-full transition-all`}
                     aria-label="Next screenshot"
                   >
-                    <FiChevronRight className="w-5 h-5" />
+                    {isRTL ? <FiChevronLeft className="w-5 h-5" /> : <FiChevronRight className="w-5 h-5" />}
                   </button>
 
                   {/* Indicator Dots */}
@@ -133,10 +120,10 @@ export function TemplateDetailView({ template }: TemplateDetailViewProps) {
 
           {/* Right: Template Info */}
           <motion.div
-            initial={{ opacity: 0, x: 20 }}
+            initial={{ opacity: 0, x: isRTL ? -20 : 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="flex flex-col"
+            className={`flex flex-col ${isRTL ? 'text-right' : ''}`}
           >
             {/* Category Badge */}
             <Badge variant="secondary" className="w-fit mb-4">
@@ -170,23 +157,22 @@ export function TemplateDetailView({ template }: TemplateDetailViewProps) {
               <div className="flex items-baseline gap-3">
                 <span className="text-5xl font-bold">${template.price}</span>
                 <span className="text-muted-foreground">
-                  {language === 'en' ? 'one-time payment' : 'единоразовая оплата'}
+                  {language === 'en' ? 'one-time payment' : language === 'he' ? 'תשלום חד-פעמי' : 'единоразовая оплата'}
                 </span>
               </div>
             </div>
 
             {/* CTA Buttons - Hidden on mobile (lg:hidden), visible on desktop (lg:flex) */}
             <div className="hidden lg:flex flex-col gap-4 mb-8">
-              {/* Demo Button - First */}
+              {/* Demo Button - First - MOST IMPORTANT */}
               <Button
                 asChild
                 size="lg"
-                variant="outline"
-                className="h-14 text-base font-semibold border-2 hover:bg-accent/50 rounded-xl"
+                className="h-16 text-lg font-bold bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-600 hover:from-blue-700 hover:via-indigo-700 hover:to-blue-700 text-white shadow-xl hover:shadow-2xl transition-all duration-200 rounded-xl border-2 border-blue-500"
               >
                 <Link href={`/templates/${template.id}/demo`} className="flex items-center justify-center gap-2.5">
-                  <FiEye className="w-5 h-5" />
-                  <span>{language === 'en' ? 'View Demo' : 'Посмотреть Демо'}</span>
+                  <FiEye className="w-6 h-6" />
+                  <span>{language === 'en' ? 'View Demo' : language === 'he' ? 'צפה בהדגמה' : 'Посмотреть Демо'}</span>
                 </Link>
               </Button>
 
@@ -198,7 +184,7 @@ export function TemplateDetailView({ template }: TemplateDetailViewProps) {
               >
                 <Link href={`/checkout/${template.id}`} className="flex items-center justify-center gap-2.5">
                   <FiShoppingCart className="w-5 h-5" />
-                  <span>{language === 'en' ? `Buy Now - $${template.price}` : `Купить - $${template.price}`}</span>
+                  <span>{language === 'en' ? `Buy Now - $${template.price}` : language === 'he' ? `קנה עכשיו - $${template.price}` : `Купить - $${template.price}`}</span>
                 </Link>
               </Button>
 
@@ -210,29 +196,13 @@ export function TemplateDetailView({ template }: TemplateDetailViewProps) {
               >
                 <Link href={`/templates/${template.id}/builder`} className="flex items-center justify-center gap-2.5">
                   <FiEdit3 className="w-5 h-5" />
-                  <span>{language === 'en' ? 'Try Builder' : 'Попробовать Билдер'}</span>
-                  <Badge className="ml-2 bg-yellow-500 text-black hover:bg-yellow-600">
-                    {language === 'en' ? 'Soon' : 'Скоро'}
+                  <span>{language === 'en' ? 'Try Builder' : language === 'he' ? 'נסה את הבונה' : 'Попробовать Билдер'}</span>
+                  <Badge className={`${isRTL ? 'mr-2' : 'ml-2'} bg-yellow-500 text-black hover:bg-yellow-600`}>
+                    {language === 'en' ? 'Soon' : language === 'ru' ? 'Скоро' : 'בקרוב'}
                   </Badge>
                 </Link>
               </Button>
 
-              {/* Contact Us Button - Fourth */}
-              <Button
-                asChild
-                size="lg"
-                className="h-14 text-base font-semibold bg-[#229ED9] hover:bg-[#1c8cbf] text-white shadow-lg hover:shadow-xl transition-all duration-200 rounded-xl"
-              >
-                <a
-                  href={getTelegramContactUrl()}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2.5"
-                >
-                  <FaTelegramPlane className="w-5 h-5" />
-                  <span>{language === 'en' ? 'Contact Us' : 'Связаться'}</span>
-                </a>
-              </Button>
             </div>
           </motion.div>
         </div>
@@ -246,7 +216,7 @@ export function TemplateDetailView({ template }: TemplateDetailViewProps) {
             className="mb-12"
           >
             <h2 className="text-3xl font-bold mb-6">
-              {language === 'en' ? "Perfect For" : 'Идеально для'}
+              {language === 'en' ? "Perfect For" : language === 'he' ? 'מושלם עבור' : 'Идеально для'}
             </h2>
             <div className="flex flex-wrap gap-3">
               {template.bestFor.map((use, index) => (
@@ -266,7 +236,7 @@ export function TemplateDetailView({ template }: TemplateDetailViewProps) {
           className="mb-12"
         >
           <h2 className="text-3xl font-bold mb-6">
-            {language === 'en' ? "Color Palette" : 'Цветовая палитра'}
+            {language === 'en' ? "Color Palette" : language === 'he' ? 'פלטת צבעים' : 'Цветовая палитра'}
           </h2>
           <Card className="p-6">
             <div className="grid grid-cols-3 gap-4">
@@ -276,7 +246,7 @@ export function TemplateDetailView({ template }: TemplateDetailViewProps) {
                   style={{ backgroundColor: template.colors.primary }}
                 />
                 <p className="text-sm font-medium text-center">
-                  {language === 'en' ? 'Primary' : 'Основной'}
+                  {language === 'en' ? 'Primary' : language === 'he' ? 'ראשי' : 'Основной'}
                 </p>
                 <p className="text-xs text-muted-foreground text-center font-mono mt-1">
                   {template.colors.primary}
@@ -288,7 +258,7 @@ export function TemplateDetailView({ template }: TemplateDetailViewProps) {
                   style={{ backgroundColor: template.colors.secondary }}
                 />
                 <p className="text-sm font-medium text-center">
-                  {language === 'en' ? 'Secondary' : 'Вторичный'}
+                  {language === 'en' ? 'Secondary' : language === 'he' ? 'משני' : 'Вторичный'}
                 </p>
                 <p className="text-xs text-muted-foreground text-center font-mono mt-1">
                   {template.colors.secondary}
@@ -300,7 +270,7 @@ export function TemplateDetailView({ template }: TemplateDetailViewProps) {
                   style={{ backgroundColor: template.colors.accent }}
                 />
                 <p className="text-sm font-medium text-center">
-                  {language === 'en' ? 'Accent' : 'Акцент'}
+                  {language === 'en' ? 'Accent' : language === 'he' ? 'מבטא' : 'Акцент'}
                 </p>
                 <p className="text-xs text-muted-foreground text-center font-mono mt-1">
                   {template.colors.accent}
@@ -318,7 +288,7 @@ export function TemplateDetailView({ template }: TemplateDetailViewProps) {
           className="mb-12"
         >
           <h2 className="text-3xl font-bold mb-6">
-            {language === 'en' ? "What's Included" : 'Что включено'}
+            {language === 'en' ? "What's Included" : language === 'he' ? 'מה כלול' : 'Что включено'}
           </h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {template.whatsIncluded.map((feature, index) => {
@@ -329,16 +299,16 @@ export function TemplateDetailView({ template }: TemplateDetailViewProps) {
                   className={`p-4 transition-all duration-300 ${hasExplanation ? 'cursor-pointer hover:shadow-lg hover:scale-[1.02]' : ''}`}
                   onClick={() => hasExplanation && toggleFeature(index)}
                 >
-                  <div className="flex items-start gap-3">
+                  <div className={`flex items-start gap-3 ${isRTL ? 'flex-row-reverse' : ''}`}>
                     <FiCheck className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
                     <div className="flex-1">
-                      <div className="flex items-center justify-between gap-2">
+                      <div className={`flex items-center justify-between gap-2 ${isRTL ? 'flex-row-reverse' : ''}`}>
                         <span className="font-medium">{feature}</span>
                         {hasExplanation && (
                           <FiChevronRight
                             className={`w-4 h-4 text-muted-foreground flex-shrink-0 transition-transform duration-300 ${
                               expandedFeatures.has(index) ? 'rotate-90' : ''
-                            }`}
+                            } ${isRTL ? 'rotate-180' : ''}`}
                           />
                         )}
                       </div>
@@ -372,7 +342,7 @@ export function TemplateDetailView({ template }: TemplateDetailViewProps) {
             className="mb-12"
           >
             <h2 className="text-3xl font-bold mb-6">
-              {language === 'en' ? "Technical Specifications" : 'Технические характеристики'}
+              {language === 'en' ? "Technical Specifications" : language === 'he' ? 'מפרט טכני' : 'Технические характеристики'}
             </h2>
             <Card className="p-6 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
               <div className="grid sm:grid-cols-2 gap-3">
@@ -395,20 +365,22 @@ export function TemplateDetailView({ template }: TemplateDetailViewProps) {
           className="mb-12"
         >
           <Card className="p-8 bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-950 dark:to-purple-950 border-2">
-            <div className="flex items-start gap-4">
+            <div className={`flex items-start gap-4 ${isRTL ? 'flex-row-reverse text-right' : ''}`}>
               <div className="text-4xl">🧩</div>
               <div className="flex-1">
                 <h3 className="text-2xl font-bold mb-2">
-                  {language === 'en' ? 'Free Builder Tool Included' : 'Бесплатный билдер включен'}
+                  {language === 'en' ? 'Free Builder Tool Included' : language === 'he' ? 'כלי בונה חינם כלול' : 'Бесплатный билдер включен'}
                 </h3>
                 <p className="text-muted-foreground mb-4">
                   {language === 'en'
                     ? 'Reorder your layout freely with the drag-and-drop Builder. Customize sections, rearrange components, and preview changes in real-time before you buy.'
+                    : language === 'he'
+                    ? 'סדר מחדש את הפריסה שלך בחופשיות עם הבונה בגרירה ושחרור. התאם אישית קטעים, סדר מחדש רכיבים וצפה בשינויים בזמן אמת לפני שאתה קונה.'
                     : 'Свободно перестраивайте макет с помощью конструктора drag-and-drop. Настраивайте секции, переставляйте компоненты и просматривайте изменения в режиме реального времени перед покупкой.'}
                 </p>
                 <Button asChild variant="outline">
                   <Link href={`/templates/${template.id}/builder`}>
-                    {language === 'en' ? 'Try Builder Now' : 'Попробовать билдер'}
+                    {language === 'en' ? 'Try Builder Now' : language === 'he' ? 'נסה את הבונה עכשיו' : 'Попробовать билдер'}
                   </Link>
                 </Button>
               </div>
@@ -424,19 +396,21 @@ export function TemplateDetailView({ template }: TemplateDetailViewProps) {
           className="mb-12"
         >
           <Card className="p-8 bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-950 dark:to-pink-950 border-2">
-            <div className="flex items-start gap-4">
+            <div className={`flex items-start gap-4 ${isRTL ? 'flex-row-reverse text-right' : ''}`}>
               <div className="text-4xl">✍️</div>
               <div className="flex-1">
                 <h3 className="text-2xl font-bold mb-2">
-                  {language === 'en' ? 'Need Professional Content?' : 'Нужен профессиональный контент?'}
+                  {language === 'en' ? 'Need Professional Content?' : language === 'he' ? 'צריך תוכן מקצועי?' : 'Нужен профессиональный контент?'}
                 </h3>
                 <p className="text-muted-foreground mb-2">
                   {language === 'en'
                     ? 'Add our Content Maker service at checkout for just +$39. We\'ll create all your page text and SEO copy in 24 hours.'
+                    : language === 'he'
+                    ? 'הוסף את שירות יוצר התוכן שלנו בקופה תמורת 39$ בלבד. ניצור את כל הטקסט של העמוד שלך ועותק SEO תוך 24 שעות.'
                     : 'Добавьте нашу услугу Content Maker при оформлении заказа всего за +$39. Мы создадим весь текст для вашей страницы и SEO-копию за 24 часа.'}
                 </p>
                 <Badge variant="secondary" className="text-sm">
-                  {language === 'en' ? 'Available at checkout' : 'Доступно при оформлении'}
+                  {language === 'en' ? 'Available at checkout' : language === 'he' ? 'זמין בקופה' : 'Доступно при оформлении'}
                 </Badge>
               </div>
             </div>
@@ -451,12 +425,14 @@ export function TemplateDetailView({ template }: TemplateDetailViewProps) {
           className="mb-12"
         >
           <h2 className="text-3xl font-bold mb-6">
-            {language === 'en' ? 'License' : 'Лицензия'}
+            {language === 'en' ? 'License' : language === 'he' ? 'רישיון' : 'Лицензия'}
           </h2>
           <Card className="p-6 bg-muted/50">
             <p className="text-muted-foreground leading-relaxed">
               {language === 'en'
                 ? 'After purchase, this template is yours to use freely for your own projects. You may edit, host, and publish without restriction or attribution. Redistribution or resale of the template itself is not allowed.'
+                : language === 'he'
+                ? 'לאחר הרכישה, תבנית זו שלך לשימוש חופשי בפרויקטים שלך. אתה יכול לערוך, לארח ולפרסם ללא הגבלה או ייחוס. הפצה מחדש או מכירה מחדש של התבנית עצמה אינה מותרת.'
                 : 'После покупки этот шаблон можно свободно использовать для ваших собственных проектов. Вы можете редактировать, размещать и публиковать без ограничений и указания авторства. Распространение или перепродажа самого шаблона не допускается.'}
             </p>
           </Card>
@@ -470,7 +446,7 @@ export function TemplateDetailView({ template }: TemplateDetailViewProps) {
             transition={{ duration: 0.5, delay: 0.8 }}
           >
             <h2 className="text-3xl font-bold mb-6">
-              {language === 'en' ? 'About This Template' : 'Об этом шаблоне'}
+              {language === 'en' ? 'About This Template' : language === 'he' ? 'אודות תבנית זו' : 'Об этом шаблоне'}
             </h2>
             <Card className="p-6">
               <p className="text-muted-foreground leading-relaxed whitespace-pre-line">
@@ -484,24 +460,23 @@ export function TemplateDetailView({ template }: TemplateDetailViewProps) {
       {/* Sticky Bottom Bar (Mobile) */}
       <div className="fixed bottom-0 left-0 right-0 z-50 lg:hidden bg-background/95 backdrop-blur-sm border-t shadow-2xl">
         <div className="p-3">
-          {/* Demo Button - First */}
+          {/* Demo Button - First - MOST IMPORTANT */}
           <Button
             asChild
-            variant="outline"
-            className="mb-3 w-full h-11 border-2 font-semibold shadow-md hover:shadow-xl rounded-lg"
+            className="mb-3 w-full h-12 font-bold bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-600 hover:from-blue-700 hover:via-indigo-700 hover:to-blue-700 text-white shadow-lg hover:shadow-xl rounded-lg border-2 border-blue-500"
           >
             <Link href={`/templates/${template.id}/demo`} className="flex items-center justify-center gap-2">
-              <FiEye className="w-4 h-4" />
-              <span>{language === 'en' ? 'View Demo' : 'Посмотреть Демо'}</span>
+              <FiEye className="w-5 h-5" />
+              <span>{language === 'en' ? 'View Demo' : language === 'he' ? 'צפה בהדגמה' : 'Посмотреть Демо'}</span>
             </Link>
           </Button>
 
           {/* Price and Buy Button Row - Second */}
-          <div className="flex items-center justify-between gap-3 mb-3">
-            <div>
+          <div className={`flex items-center justify-between gap-3 mb-3 ${isRTL ? 'flex-row-reverse' : ''}`}>
+            <div className={isRTL ? 'text-right' : ''}>
               <div className="text-2xl font-bold">${template.price}</div>
               <div className="text-xs text-muted-foreground">
-                {language === 'en' ? 'one-time' : 'один раз'}
+                {language === 'en' ? 'one-time' : language === 'ru' ? 'один раз' : 'פעם אחת'}
               </div>
             </div>
             <Button
@@ -510,34 +485,21 @@ export function TemplateDetailView({ template }: TemplateDetailViewProps) {
             >
               <Link href={`/checkout/${template.id}`} className="flex items-center gap-2">
                 <FiShoppingCart className="w-4 h-4" />
-                <span>{language === 'en' ? `Buy Now - $${template.price}` : `Купить - $${template.price}`}</span>
+                <span>{language === 'en' ? `Buy Now - $${template.price}` : language === 'he' ? `קנה עכשיו - $${template.price}` : `Купить - $${template.price}`}</span>
               </Link>
             </Button>
           </div>
 
-          {/* Builder and Contact Us Buttons Row - Third */}
-          <div className="grid grid-cols-2 gap-2">
-            <Button asChild variant="outline" size="sm" className="h-10 border-2 relative">
-              <Link href={`/templates/${template.id}/builder`} className="flex items-center justify-center gap-1.5">
-                <FiEdit3 className="w-4 h-4" />
-                <span className="text-xs font-semibold">{language === 'en' ? 'Builder' : 'Билдер'}</span>
-                <Badge className="ml-1 px-1.5 py-0.5 text-[10px] bg-yellow-500 text-black">
-                  {language === 'en' ? 'Soon' : 'Скоро'}
-                </Badge>
-              </Link>
-            </Button>
-            <Button asChild size="sm" className="h-10 bg-[#229ED9] hover:bg-[#1c8cbf] text-white">
-              <a
-                href={getTelegramContactUrl()}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center gap-1.5"
-              >
-                <FaTelegramPlane className="w-4 h-4" />
-                <span className="text-xs font-semibold">{language === 'en' ? 'Contact' : 'Связь'}</span>
-              </a>
-            </Button>
-          </div>
+          {/* Builder Button Row - Third */}
+          <Button asChild variant="outline" size="sm" className="h-10 border-2 relative w-full">
+            <Link href={`/templates/${template.id}/builder`} className="flex items-center justify-center gap-1.5">
+              <FiEdit3 className="w-4 h-4" />
+              <span className="text-xs font-semibold">{language === 'en' ? 'Builder' : language === 'he' ? 'בונה' : 'Билдер'}</span>
+              <Badge className="ml-1 px-1.5 py-0.5 text-[10px] bg-yellow-500 text-black">
+                {language === 'en' ? 'Soon' : language === 'he' ? 'בקרוב' : 'Скоро'}
+              </Badge>
+            </Link>
+          </Button>
         </div>
       </div>
 

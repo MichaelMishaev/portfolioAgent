@@ -80,7 +80,10 @@ const config: Config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+    require("tailwindcss-animate"),
+    require("tailwindcss-rtl"), // RTL support
+  ],
 };
 
 export default config;

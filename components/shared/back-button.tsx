@@ -2,8 +2,9 @@
 
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
-import { FiArrowLeft } from "react-icons/fi";
+import { FiArrowLeft, FiArrowRight } from "react-icons/fi";
 import { cn } from "@/lib/utils";
+import { useI18n } from "@/lib/i18n-context";
 
 interface BackButtonProps {
   label?: string;
@@ -19,6 +20,7 @@ export function BackButton({
   floating = false
 }: BackButtonProps) {
   const router = useRouter();
+  const { isRTL } = useI18n();
 
   const handleBack = () => {
     // Use router.back() to maintain browser history and URL state (filters, etc.)
@@ -32,7 +34,7 @@ export function BackButton({
 
   if (floating) {
     return (
-      <div className="fixed top-4 left-4 z-[100]">
+      <div className={`fixed top-4 ${isRTL ? 'right-4' : 'left-4'} z-[100]`}>
         <Button
           variant={variant}
           size="sm"
@@ -40,10 +42,11 @@ export function BackButton({
           className={cn(
             "gap-2 transition-all hover:gap-3 shadow-lg backdrop-blur-sm",
             "bg-background/80 hover:bg-background/90 border",
+            isRTL ? "flex-row-reverse" : "",
             className
           )}
         >
-          <FiArrowLeft className="w-4 h-4" />
+          {isRTL ? <FiArrowRight className="w-4 h-4" /> : <FiArrowLeft className="w-4 h-4" />}
           <span className="hidden sm:inline">{label}</span>
         </Button>
       </div>
@@ -55,9 +58,13 @@ export function BackButton({
       variant={variant}
       size="sm"
       onClick={handleBack}
-      className={cn("gap-2 transition-all hover:gap-3", className)}
+      className={cn(
+        "gap-2 transition-all hover:gap-3",
+        isRTL ? "flex-row-reverse" : "",
+        className
+      )}
     >
-      <FiArrowLeft className="w-4 h-4" />
+      {isRTL ? <FiArrowRight className="w-4 h-4" /> : <FiArrowLeft className="w-4 h-4" />}
       {label}
     </Button>
   );

@@ -20,18 +20,11 @@ function HowItWorksModalWrapper() {
 }
 
 export default function Home() {
-  const { t, language } = useI18n();
+  const { t, language, isRTL } = useI18n();
+  // Always start minimized
   const [isHowItWorksExpanded, setIsHowItWorksExpanded] = useState(false);
 
-  // Load saved state from localStorage
-  useEffect(() => {
-    const saved = localStorage.getItem('howItWorksExpanded');
-    if (saved !== null) {
-      setIsHowItWorksExpanded(saved === 'true');
-    }
-  }, []);
-
-  // Save state to localStorage
+  // Toggle and save state to localStorage
   const toggleHowItWorks = () => {
     const newState = !isHowItWorksExpanded;
     setIsHowItWorksExpanded(newState);
@@ -109,7 +102,7 @@ export default function Home() {
                   MozHyphens: 'auto'
                 }}
               >
-                {language === 'en' ? 'Professional Portfolio Templates' : 'Профессиональные шаблоны портфолио'}
+                {t.homepage?.hero?.title || 'Professional Portfolio Templates'}
               </motion.span>
               <motion.span
                 initial={{ opacity: 0, y: 20 }}
@@ -124,7 +117,7 @@ export default function Home() {
                   MozHyphens: 'auto'
                 }}
               >
-                {language === 'en' ? 'Build a Site That Represents You' : 'Создайте сайт, который представляет вас'}
+                {t.homepage?.hero?.subtitle || 'Build a Site That Represents You'}
                 {/* Animated underline */}
                 <motion.span
                   initial={{ width: 0 }}
@@ -143,11 +136,11 @@ export default function Home() {
               transition={{ duration: 0.5, delay: 0.6 }}
               className="mb-4 px-2"
             >
-              <span className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 bg-gradient-to-r from-blue-100 to-purple-100 dark:from-blue-900/30 dark:to-purple-900/30 text-blue-700 dark:text-blue-300 rounded-full text-xs sm:text-sm font-semibold border border-blue-200 dark:border-blue-800 shadow-sm">
-                {language === 'en' ? '61+ Premium Templates' : '61+ премиум шаблонов'}
-                <span className="ml-1 sm:ml-1.5 inline-block animate-pulse">📈</span>
-                <span className="ml-1 sm:ml-2 text-[10px] sm:text-xs opacity-75">
-                  {language === 'en' ? '(Growing)' : '(Растёт)'}
+              <span className={`inline-block px-3 sm:px-4 py-1.5 sm:py-2 bg-gradient-to-r from-blue-100 to-purple-100 dark:from-blue-900/30 dark:to-purple-900/30 text-blue-700 dark:text-blue-300 rounded-full text-xs sm:text-sm font-semibold border border-blue-200 dark:border-blue-800 shadow-sm ${isRTL ? 'flex-row-reverse' : ''}`}>
+                {language === 'en' ? '61+ Premium Templates' : language === 'he' ? '61+ תבניות פרימיום' : '61+ премиум шаблонов'}
+                <span className={isRTL ? 'mr-1 sm:mr-1.5' : 'ml-1 sm:ml-1.5'} style={{display: 'inline-block', animation: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite'}}>📈</span>
+                <span className={`${isRTL ? 'mr-1 sm:mr-2' : 'ml-1 sm:ml-2'} text-[10px] sm:text-xs opacity-75`}>
+                  {language === 'en' ? '(Growing)' : language === 'he' ? '(גדל)' : '(Растёт)'}
                 </span>
               </span>
             </motion.div>
@@ -160,6 +153,8 @@ export default function Home() {
             >
               {language === 'en'
                 ? 'Even in the era of AI, we believe a human must review every detail.'
+                : language === 'he'
+                ? 'גם בעידן הבינה המלאכותית, אנו מאמינים שאדם חייב לבדוק כל פרט.'
                 : 'Даже в эпоху ИИ мы верим, что человек должен проверить каждую деталь.'}
             </motion.p>
           </motion.div>
@@ -178,27 +173,42 @@ export default function Home() {
           >
             <div className="flex items-center justify-center gap-3 mb-2 sm:mb-3">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold px-2">
-                {language === 'en' ? 'How It ' : 'Как это '}
+                {language === 'en' ? 'How It ' : language === 'he' ? '' : 'Как это '}
                 <span className="text-blue-600 dark:text-blue-400">
-                  {language === 'en' ? 'Works' : 'работает'}
+                  {language === 'en' ? 'Works' : language === 'he' ? 'איך זה עובד' : 'работает'}
                 </span>
               </h2>
-              <button
-                onClick={toggleHowItWorks}
-                className="p-2 rounded-full hover:bg-blue-100 dark:hover:bg-blue-900/30 transition-colors"
-                aria-label={isHowItWorksExpanded ? (language === 'en' ? 'Minimize section' : 'Свернуть раздел') : (language === 'en' ? 'Expand section' : 'Развернуть раздел')}
-              >
-                {isHowItWorksExpanded ? (
-                  <FiChevronUp className="w-6 h-6 sm:w-8 sm:h-8 text-blue-600 dark:text-blue-400" />
-                ) : (
-                  <FiChevronDown className="w-6 h-6 sm:w-8 sm:h-8 text-blue-600 dark:text-blue-400" />
+              <div className="relative">
+                {!isHowItWorksExpanded && (
+                  <span className="absolute -top-1 -right-1 flex h-3 w-3">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-3 w-3 bg-blue-500"></span>
+                  </span>
                 )}
-              </button>
+                <button
+                  onClick={toggleHowItWorks}
+                  className="p-2 rounded-full hover:bg-blue-100 dark:hover:bg-blue-900/30 transition-all hover:scale-110 border-2 border-blue-200 dark:border-blue-800"
+                  aria-label={isHowItWorksExpanded ? (language === 'en' ? 'Minimize section' : language === 'he' ? 'צמצם סעיף' : 'Свернуть раздел') : (language === 'en' ? 'Expand section' : language === 'he' ? 'הרחב סעיף' : 'Развернуть раздел')}
+                >
+                  {isHowItWorksExpanded ? (
+                    <FiChevronUp className="w-6 h-6 sm:w-8 sm:h-8 text-blue-600 dark:text-blue-400" />
+                  ) : (
+                    <FiChevronDown className="w-6 h-6 sm:w-8 sm:h-8 text-blue-600 dark:text-blue-400 animate-bounce" />
+                  )}
+                </button>
+              </div>
             </div>
             <p className="text-sm sm:text-base md:text-lg text-foreground/70 max-w-2xl mx-auto px-2">
               {language === 'en'
                 ? 'Get your professional portfolio website in 5 simple steps'
+                : language === 'he'
+                ? 'קבל את אתר הפורטפוליו המקצועי שלך ב-5 שלבים פשוטים'
                 : 'Получите свой профессиональный сайт-портфолио за 5 простых шагов'}
+              {!isHowItWorksExpanded && (
+                <span className="ml-2 inline-block text-blue-600 dark:text-blue-400 font-semibold animate-pulse">
+                  {language === 'en' ? '▼ Click to expand' : language === 'he' ? '▼ לחץ להרחבה' : '▼ Нажмите, чтобы развернуть'}
+                </span>
+              )}
             </p>
           </motion.div>
 
@@ -230,12 +240,14 @@ export default function Home() {
                   <div className="text-5xl mb-3 text-center">🎨</div>
                   {/* Title */}
                   <h3 className="text-base font-bold mb-2 text-center">
-                    {language === 'en' ? 'Browse Templates' : 'Выберите шаблон'}
+                    {language === 'en' ? 'Browse Templates' : language === 'he' ? 'עיין בתבניות' : 'Выберите шаблон'}
                   </h3>
                   {/* Description */}
                   <p className="text-xs text-foreground/70 text-center leading-relaxed">
                     {language === 'en'
                       ? 'Explore 39+ templates for various industries'
+                      : language === 'he'
+                      ? 'חקור 39+ תבניות לתעשיות שונות'
                       : 'Изучите 39+ шаблонов для разных отраслей'}
                   </p>
                 </div>
@@ -259,11 +271,13 @@ export default function Home() {
                   </div>
                   <div className="text-5xl mb-3 text-center">👁️</div>
                   <h3 className="text-base font-bold mb-2 text-center">
-                    {language === 'en' ? 'View Details' : 'Просмотрите детали'}
+                    {language === 'en' ? 'View Details' : language === 'he' ? 'צפה בפרטים' : 'Просмотрите детали'}
                   </h3>
                   <p className="text-xs text-foreground/70 text-center leading-relaxed">
                     {language === 'en'
                       ? 'See features, screenshots, and pricing'
+                      : language === 'he'
+                      ? 'ראה תכונות, צילומי מסך ותמחור'
                       : 'Посмотрите функции, скриншоты и цены'}
                   </p>
                 </div>
@@ -286,11 +300,13 @@ export default function Home() {
                   </div>
                   <div className="text-5xl mb-3 text-center">💳</div>
                   <h3 className="text-base font-bold mb-2 text-center">
-                    {language === 'en' ? 'Checkout & Pay' : 'Оформите и оплатите'}
+                    {language === 'en' ? 'Checkout & Pay' : language === 'he' ? 'תשלום ורכישה' : 'Оформите и оплатите'}
                   </h3>
                   <p className="text-xs text-foreground/70 text-center leading-relaxed">
                     {language === 'en'
                       ? 'Buy template + add Content Maker (optional)'
+                      : language === 'he'
+                      ? 'קנה תבנית + הוסף יוצר תוכן (אופציונלי)'
                       : 'Купите шаблон + добавьте Content Maker (опция)'}
                   </p>
                 </div>
@@ -313,11 +329,13 @@ export default function Home() {
                   </div>
                   <div className="text-5xl mb-3 text-center">📥</div>
                   <h3 className="text-base font-bold mb-2 text-center">
-                    {language === 'en' ? 'Download Files' : 'Скачайте файлы'}
+                    {language === 'en' ? 'Download Files' : language === 'he' ? 'הורד קבצים' : 'Скачайте файлы'}
                   </h3>
                   <p className="text-xs text-foreground/70 text-center leading-relaxed">
                     {language === 'en'
                       ? 'Get template files instantly after payment'
+                      : language === 'he'
+                      ? 'קבל קבצי תבנית מיד לאחר התשלום'
                       : 'Получите файлы шаблона сразу после оплаты'}
                   </p>
                 </div>
@@ -339,11 +357,13 @@ export default function Home() {
                   </div>
                   <div className="text-5xl mb-3 text-center">🚀</div>
                   <h3 className="text-base font-bold mb-2 text-center">
-                    {language === 'en' ? 'Get Site Live' : 'Запустите сайт'}
+                    {language === 'en' ? 'Get Site Live' : language === 'he' ? 'הפעל את האתר' : 'Запустите сайт'}
                   </h3>
                   <p className="text-xs text-foreground/70 text-center leading-relaxed">
                     {language === 'en'
                       ? 'Add hosting, domain, installation services'
+                      : language === 'he'
+                      ? 'הוסף אירוח, דומיין, שירותי התקנה'
                       : 'Добавьте хостинг, домен, услуги установки'}
                   </p>
                 </div>
@@ -363,14 +383,16 @@ export default function Home() {
                   <span className="text-3xl">🌟</span>
                 </div>
                 <h3 className="text-2xl sm:text-3xl font-bold mb-2">
-                  {language === 'en' ? 'We Take Care of ' : 'Мы позаботимся о '}
+                  {language === 'en' ? 'We Take Care of ' : language === 'he' ? 'אנחנו דואגים ' : 'Мы позаботимся о '}
                   <span className="bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 bg-clip-text text-transparent">
-                    {language === 'en' ? 'Everything' : 'всём'}
+                    {language === 'en' ? 'Everything' : language === 'he' ? 'להכל' : 'всём'}
                   </span>
                 </h3>
                 <p className="text-foreground/70 text-base sm:text-lg">
                   {language === 'en'
                     ? 'Focus on your work, we handle the technical details'
+                    : language === 'he'
+                    ? 'התמקד בעבודה שלך, אנחנו נטפל בפרטים הטכניים'
                     : 'Сосредоточьтесь на работе, мы разберёмся с технической стороной'}
                 </p>
               </div>
@@ -380,11 +402,13 @@ export default function Home() {
                 <div className="bg-white dark:bg-gray-800 rounded-xl p-5 shadow-md hover:shadow-lg transition-all hover:-translate-y-1 border border-blue-200 dark:border-blue-800">
                   <div className="text-4xl mb-3 text-center">🌐</div>
                   <h4 className="font-bold text-lg mb-2 text-center">
-                    {language === 'en' ? 'Domain Setup' : 'Настройка домена'}
+                    {language === 'en' ? 'Domain Setup' : language === 'he' ? 'הגדרת דומיין' : 'Настройка домена'}
                   </h4>
                   <p className="text-sm text-foreground/70 text-center">
                     {language === 'en'
                       ? 'Custom domain registration and configuration'
+                      : language === 'he'
+                      ? 'רישום והגדרה של דומיין מותאם אישית'
                       : 'Регистрация и настройка персонального домена'}
                   </p>
                 </div>
@@ -393,11 +417,13 @@ export default function Home() {
                 <div className="bg-white dark:bg-gray-800 rounded-xl p-5 shadow-md hover:shadow-lg transition-all hover:-translate-y-1 border border-purple-200 dark:border-purple-800">
                   <div className="text-4xl mb-3 text-center">☁️</div>
                   <h4 className="font-bold text-lg mb-2 text-center">
-                    {language === 'en' ? 'Hosting & Deployment' : 'Хостинг и развёртывание'}
+                    {language === 'en' ? 'Hosting & Deployment' : language === 'he' ? 'אירוח ופריסה' : 'Хостинг и развёртывание'}
                   </h4>
                   <p className="text-sm text-foreground/70 text-center">
                     {language === 'en'
                       ? 'Fast, reliable hosting with automatic deployment'
+                      : language === 'he'
+                      ? 'אירוח מהיר ואמין עם פריסה אוטומטית'
                       : 'Быстрый, надёжный хостинг с автоматическим развёртыванием'}
                   </p>
                 </div>
@@ -406,11 +432,13 @@ export default function Home() {
                 <div className="bg-white dark:bg-gray-800 rounded-xl p-5 shadow-md hover:shadow-lg transition-all hover:-translate-y-1 border border-pink-200 dark:border-pink-800">
                   <div className="text-4xl mb-3 text-center">✍️</div>
                   <h4 className="font-bold text-lg mb-2 text-center">
-                    {language === 'en' ? 'Content Creation' : 'Создание контента'}
+                    {language === 'en' ? 'Content Creation' : language === 'he' ? 'יצירת תוכן' : 'Создание контента'}
                   </h4>
                   <p className="text-sm text-foreground/70 text-center">
                     {language === 'en'
                       ? 'Professional copywriting and content optimization'
+                      : language === 'he'
+                      ? 'כתיבה מקצועית ואופטימיזציה של תוכן'
                       : 'Профессиональный копирайтинг и оптимизация контента'}
                   </p>
                 </div>
@@ -419,19 +447,19 @@ export default function Home() {
               {/* Additional Services Badges */}
               <div className="mt-6 flex flex-wrap justify-center gap-2">
                 <span className="px-3 py-1.5 bg-white dark:bg-gray-800 rounded-full text-xs font-semibold border border-blue-200 dark:border-blue-800">
-                  🔒 {language === 'en' ? 'SSL Certificate' : 'SSL Сертификат'}
+                  🔒 {language === 'en' ? 'SSL Certificate' : language === 'he' ? 'אישור SSL' : 'SSL Сертификат'}
                 </span>
                 <span className="px-3 py-1.5 bg-white dark:bg-gray-800 rounded-full text-xs font-semibold border border-blue-200 dark:border-blue-800">
-                  📧 {language === 'en' ? 'Email Setup' : 'Настройка Email'}
+                  📧 {language === 'en' ? 'Email Setup' : language === 'he' ? 'הגדרת אימייל' : 'Настройка Email'}
                 </span>
                 <span className="px-3 py-1.5 bg-white dark:bg-gray-800 rounded-full text-xs font-semibold border border-blue-200 dark:border-blue-800">
-                  🎨 {language === 'en' ? 'Logo Design' : 'Дизайн логотипа'}
+                  🎨 {language === 'en' ? 'Logo Design' : language === 'he' ? 'עיצוב לוגו' : 'Дизайн логотипа'}
                 </span>
                 <span className="px-3 py-1.5 bg-white dark:bg-gray-800 rounded-full text-xs font-semibold border border-blue-200 dark:border-blue-800">
-                  📊 {language === 'en' ? 'Analytics' : 'Аналитика'}
+                  📊 {language === 'en' ? 'Analytics' : language === 'he' ? 'אנליטיקה' : 'Аналитика'}
                 </span>
                 <span className="px-3 py-1.5 bg-white dark:bg-gray-800 rounded-full text-xs font-semibold border border-blue-200 dark:border-blue-800">
-                  🚀 {language === 'en' ? 'SEO Optimization' : 'SEO Оптимизация'}
+                  🚀 {language === 'en' ? 'SEO Optimization' : language === 'he' ? 'אופטימיזציה ל-SEO' : 'SEO Оптимизация'}
                 </span>
               </div>
             </motion.div>
@@ -519,9 +547,9 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: index * 0.05 }}
-                className="group p-5 sm:p-6 rounded-xl border bg-card hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+                className={`group p-5 sm:p-6 rounded-xl border bg-card hover:shadow-lg transition-all duration-300 hover:-translate-y-1 ${isRTL ? 'text-right' : 'text-left'}`}
               >
-                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center text-white mb-3 sm:mb-4 group-hover:scale-110 transition-transform duration-300">
+                <div className={`w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center text-white mb-3 sm:mb-4 group-hover:scale-110 transition-transform duration-300 ${isRTL ? 'mr-auto' : ''}`}>
                   {feature.icon}
                 </div>
                 <h3 className="text-base sm:text-lg font-semibold mb-1.5 sm:mb-2">{feature.title}</h3>

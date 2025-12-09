@@ -7,7 +7,7 @@ import { TemplateConfig } from "@/lib/template-registry";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { FiCheck, FiDownload, FiCheckCircle, FiClock, FiZap, FiShield, FiTrendingUp } from "react-icons/fi";
+import { FiCheck, FiDownload, FiCheckCircle, FiClock, FiZap, FiShield, FiTrendingUp, FiArrowRight } from "react-icons/fi";
 import { useI18n } from "@/lib/i18n-context";
 import { ALL_SERVICES, formatServicePrice } from "@/lib/services-types";
 
@@ -17,7 +17,7 @@ interface ThankYouViewProps {
 }
 
 export function ThankYouView({ template, contentMaker }: ThankYouViewProps) {
-  const { language } = useI18n();
+  const { language, isRTL } = useI18n();
   const [timeLeft, setTimeLeft] = useState(600); // 10 minutes countdown
   const [showUpsell, setShowUpsell] = useState(true);
 
@@ -75,14 +75,15 @@ export function ThankYouView({ template, contentMaker }: ThankYouViewProps) {
             <FiCheckCircle className="w-10 h-10 sm:w-12 sm:h-12 text-green-600 dark:text-green-400" />
           </div>
 
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-black mb-3 text-green-900 dark:text-green-100">
-            {language === 'en' ? 'Purchase Successful!' : 'Покупка успешна!'}
+          <h1 className={`text-2xl sm:text-3xl md:text-4xl font-black mb-3 text-green-900 dark:text-green-100 ${isRTL ? 'rtl' : ''}`}>
+            {language === 'en' ? 'Purchase Successful!' : language === 'ru' ? 'Покупка успешна!' : 'רכישה בוצעה בהצלחה!'}
           </h1>
 
-          <p className="text-base sm:text-lg text-slate-600 dark:text-slate-400 mb-6 max-w-2xl mx-auto">
+          <p className={`text-base sm:text-lg text-slate-600 dark:text-slate-400 mb-6 max-w-2xl mx-auto ${isRTL ? 'rtl' : ''}`}>
             {language === 'en'
               ? 'Your template is ready to download. Check your email for the receipt and next steps.'
-              : 'Ваш шаблон готов к загрузке. Проверьте email для получения чека и дальнейших инструкций.'}
+              : language === 'ru' ? 'Ваш шаблон готов к загрузке. Проверьте email для получения чека и дальнейших инструкций.'
+              : 'התבנית שלך מוכנה להורדה. בדוק את המייל שלך לקבלת קבלה והשלבים הבאים.'}
           </p>
 
           <Button
@@ -90,18 +91,18 @@ export function ThankYouView({ template, contentMaker }: ThankYouViewProps) {
             size="lg"
             className="bg-green-600 hover:bg-green-700 text-white shadow-lg text-base sm:text-lg px-6 sm:px-8 py-5 sm:py-6"
           >
-            <a href={`#download`} className="flex items-center gap-2">
+            <a href={`#download`} className={`flex items-center gap-2 ${isRTL ? 'flex-row-reverse' : ''}`}>
               <FiDownload className="w-4 h-4 sm:w-5 sm:h-5" />
-              {language === 'en' ? 'Download Template' : 'Скачать шаблон'}
+              {language === 'en' ? 'Download Template' : language === 'ru' ? 'Скачать шаблон' : 'הורד תבנית'}
             </a>
           </Button>
         </motion.div>
 
         {/* Order Summary - Clean & Simple */}
         <Card className="p-4 sm:p-6 mb-8 max-w-2xl mx-auto">
-          <h2 className="text-lg sm:text-xl font-bold mb-4 flex items-center gap-2">
+          <h2 className={`text-lg sm:text-xl font-bold mb-4 flex items-center gap-2 ${isRTL ? 'flex-row-reverse text-right' : ''}`}>
             <FiCheckCircle className="w-5 h-5 text-green-600" />
-            {language === 'en' ? 'Order Confirmation' : 'Подтверждение заказа'}
+            {language === 'en' ? 'Order Confirmation' : language === 'ru' ? 'Подтверждение заказа' : 'אישור הזמנה'}
           </h2>
           <div className="space-y-3">
             <div className="flex justify-between items-center pb-3 border-b">
@@ -130,21 +131,21 @@ export function ThankYouView({ template, contentMaker }: ThankYouViewProps) {
 
           {/* What's Next - Clear Steps */}
           <div className="mt-6 pt-6 border-t space-y-3">
-            <h3 className="font-bold text-sm uppercase tracking-wide text-slate-500 dark:text-slate-400">
-              {language === 'en' ? "What's Next?" : 'Что дальше?'}
+            <h3 className={`font-bold text-sm uppercase tracking-wide text-slate-500 dark:text-slate-400 ${isRTL ? 'text-right' : ''}`}>
+              {language === 'en' ? "What's Next?" : language === 'ru' ? 'Что дальше?' : 'מה הלאה?'}
             </h3>
             <div className="space-y-2">
-              <div className="flex items-start gap-3 text-sm">
+              <div className={`flex items-start gap-3 text-sm ${isRTL ? 'flex-row-reverse text-right' : ''}`}>
                 <FiCheck className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
-                <span>{language === 'en' ? 'Download files are ready in your account' : 'Файлы для загрузки доступны в вашем аккаунте'}</span>
+                <span>{language === 'en' ? 'Download files are ready in your account' : language === 'ru' ? 'Файлы для загрузки доступны в вашем аккаунте' : 'קבצים להורדה מוכנים בחשבון שלך'}</span>
               </div>
-              <div className="flex items-start gap-3 text-sm">
+              <div className={`flex items-start gap-3 text-sm ${isRTL ? 'flex-row-reverse text-right' : ''}`}>
                 <FiCheck className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
-                <span>{language === 'en' ? 'Receipt sent to your email' : 'Чек отправлен на ваш email'}</span>
+                <span>{language === 'en' ? 'Receipt sent to your email' : language === 'ru' ? 'Чек отправлен на ваш email' : 'קבלה נשלחה למייל שלך'}</span>
               </div>
-              <div className="flex items-start gap-3 text-sm">
+              <div className={`flex items-start gap-3 text-sm ${isRTL ? 'flex-row-reverse text-right' : ''}`}>
                 <FiCheck className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
-                <span>{language === 'en' ? 'Installation guide included in download' : 'Руководство по установке включено в загрузку'}</span>
+                <span>{language === 'en' ? 'Installation guide included in download' : language === 'ru' ? 'Руководство по установке включено в загрузку' : 'מדריך התקנה כלול בהורדה'}</span>
               </div>
             </div>
           </div>
@@ -157,14 +158,15 @@ export function ThankYouView({ template, contentMaker }: ThankYouViewProps) {
           transition={{ duration: 0.6, delay: 0.3 }}
         >
           {/* Section Header */}
-          <div className="text-center mb-6 sm:mb-8">
+          <div className={`text-center mb-6 sm:mb-8 ${isRTL ? 'rtl' : ''}`}>
             <h2 className="text-xl sm:text-2xl md:text-3xl font-black mb-2 sm:mb-3">
-              💡 {language === 'en' ? 'Get Your Site Live Faster' : 'Запустите сайт быстрее'}
+              💡 {language === 'en' ? 'Get Your Site Live Faster' : language === 'ru' ? 'Запустите сайт быстрее' : 'הפעל את האתר מהר יותר'}
             </h2>
             <p className="text-sm sm:text-base text-slate-600 dark:text-slate-400 max-w-2xl mx-auto px-4">
               {language === 'en'
                 ? 'Add optional services below to launch your website faster and easier.'
-                : 'Добавьте дополнительные услуги ниже, чтобы запустить сайт быстрее и проще.'}
+                : language === 'ru' ? 'Добавьте дополнительные услуги ниже, чтобы запустить сайт быстрее и проще.'
+                : 'הוסף שירותים אופציונליים למטה כדי להפעיל את האתר מהר וקל יותר.'}
             </p>
           </div>
 
@@ -331,7 +333,7 @@ export function ThankYouView({ template, contentMaker }: ThankYouViewProps) {
             href="/"
             className="text-sm sm:text-base text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-100 transition-colors"
           >
-            {language === 'en' ? '← Browse More Templates' : '← Просмотреть другие шаблоны'}
+            {language === 'en' ? '← Browse More Templates' : language === 'ru' ? '← Просмотреть другие шаблоны' : isRTL ? 'עיין בתבניות נוספות ←' : '← עיין בתבניות נוספות'}
           </Link>
         </div>
       </div>

@@ -2642,9 +2642,18 @@ export function CraftJSTemplateBuilder({ template }: { template: TemplateConfig 
       step3: "3. Мы создадим ваш сайт",
       step3desc: "Наша команда создаст профессиональный оптимизированный сайт по вашему дизайну",
     },
+    he: {
+      title: "איך זה עובד",
+      step1: "1. עצב את מבנה האתר",
+      step1desc: "התאם אישית קטעים, הוסף תוכן וארגן את הפריסה בעזרת הבנאי",
+      step2: "2. שלח דרך טלגרם או וואטסאפ",
+      step2desc: "לחץ על כפתור טלגרם או וואטסאפ כדי לשלוח לנו את התצורה שלך",
+      step3: "3. אנחנו ניצור את האתר שלך",
+      step3desc: "הצוות שלנו יבנה אתר מקצועי ומותאם בהתאם לעיצוב שלך",
+    },
   };
 
-  const currentText = infoText[language];
+  const currentText = infoText[language as keyof typeof infoText] || infoText.en;
 
   return (
     <div className="min-h-screen flex flex-col">

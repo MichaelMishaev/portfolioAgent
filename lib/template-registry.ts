@@ -6,6 +6,7 @@ export interface TemplateConfig {
   description: string;
   category: string;
   difficulty: "beginner" | "intermediate" | "advanced";
+  status: "draft" | "published";
   features: string[];
   colors: {
     primary: string;
@@ -273,9 +274,17 @@ const staticTemplateData = {
     colors: { primary: "#00FF00", secondary: "#FF006E", accent: "#000000" },
     fonts: { heading: "Space Grotesk", body: "Inter" },
   },
+  "saas-growth": {
+    colors: { primary: "#4F46E5", secondary: "#7C3AED", accent: "#06B6D4" },
+    fonts: { heading: "Inter", body: "Inter" },
+  },
+  "freelancer-creative": {
+    colors: { primary: "#EC4899", secondary: "#F59E0B", accent: "#10B981" },
+    fonts: { heading: "Poppins", body: "Inter" },
+  },
 };
 
-export function getTemplates(language: "en" | "ru" = "en"): TemplateConfig[] {
+export function getTemplates(language: "en" | "ru" | "he" = "en"): TemplateConfig[] {
   const t = translations[language];
 
   // Default features translated
@@ -286,6 +295,13 @@ export function getTemplates(language: "en" | "ru" = "en"): TemplateConfig[] {
     "Fast Performance",
     "Free Builder Access",
     "Professional Code"
+  ] : language === "he" ? [
+    "עיצוב רספונסיבי",
+    "תמיכה במצב כהה",
+    "אופטימיזציה ל-SEO",
+    "ביצועים מהירים",
+    "גישה חופשית לבונה",
+    "קוד מקצועי"
   ] : [
     "Адаптивный дизайн",
     "Поддержка темной темы",
@@ -295,16 +311,20 @@ export function getTemplates(language: "en" | "ru" = "en"): TemplateConfig[] {
     "Профессиональный код"
   ];
 
+  // Language suffix for screenshots
+  const langSuffix = language === 'ru' ? '-ru' : language === 'he' ? '-ru' : '';
+
   return t.templates.map((template) => ({
     ...template,
     difficulty: template.difficulty as "beginner" | "intermediate" | "advanced",
+    status: (template.status as "draft" | "published") || "published",
     colors: staticTemplateData[template.id as keyof typeof staticTemplateData].colors,
     fonts: staticTemplateData[template.id as keyof typeof staticTemplateData].fonts,
     thumbnail: `/previews/${template.id}.png`,
     demoPath: `/templates/${template.id}`,
     // Detail page defaults (can be overridden in translations.json)
     price: template.price || 60,
-    screenshots: template.screenshots || [`/screenshots/${template.id}-1.png`, `/screenshots/${template.id}-2.png`, `/screenshots/${template.id}-3.png`],
+    screenshots: template.screenshots || [`/screenshots/${template.id}-1${langSuffix}.png`, `/screenshots/${template.id}-2${langSuffix}.png`, `/screenshots/${template.id}-3${langSuffix}.png`],
     longDescription: template.longDescription || template.description,
     whatsIncluded: template.whatsIncluded || defaultWhatsIncluded,
     technicalDetails: template.technicalDetails || undefined,
@@ -313,22 +333,47 @@ export function getTemplates(language: "en" | "ru" = "en"): TemplateConfig[] {
 
 export const templates = getTemplates("en");
 
-export function getTemplateById(id: string, language: "en" | "ru" = "en"): TemplateConfig | undefined {
+export function getTemplateById(id: string, language: "en" | "ru" | "he" = "en"): TemplateConfig | undefined {
   const templates = getTemplates(language);
   return templates.find((template) => template.id === id);
 }
 
-export function getTemplatesByCategory(category: string, language: "en" | "ru" = "en"): TemplateConfig[] {
+export function getTemplatesByCategory(category: string, language: "en" | "ru" | "he" = "en"): TemplateConfig[] {
   const templates = getTemplates(language);
   return templates.filter((template) => template.category === category);
 }
 
 export function getTemplatesByDifficulty(
   difficulty: "beginner" | "intermediate" | "advanced",
-  language: "en" | "ru" = "en"
+  language: "en" | "ru" | "he" = "en"
 ): TemplateConfig[] {
   const templates = getTemplates(language);
   return templates.filter((template) => template.difficulty === difficulty);
+}
+
+/**
+ * Get templates by status (draft or published)
+ */
+export function getTemplatesByStatus(
+  status: "draft" | "published",
+  language: "en" | "ru" | "he" = "en"
+): TemplateConfig[] {
+  const templates = getTemplates(language);
+  return templates.filter((template) => template.status === status);
+}
+
+/**
+ * Get all templates including drafts (for gateway portal)
+ */
+export function getAllTemplatesIncludingDrafts(language: "en" | "ru" | "he" = "en"): TemplateConfig[] {
+  return getTemplates(language);
+}
+
+/**
+ * Get only published templates (for public gallery)
+ */
+export function getPublishedTemplates(language: "en" | "ru" | "he" = "en"): TemplateConfig[] {
+  return getTemplatesByStatus("published", language);
 }
 
 /**
@@ -338,7 +383,7 @@ export function getTemplatesByDifficulty(
 export function getSimilarTemplates(
   templateId: string,
   category: string,
-  language: "en" | "ru" = "en",
+  language: "en" | "ru" | "he" = "en",
   limit: number = 3
 ): TemplateConfig[] {
   const categoryTemplates = getTemplatesByCategory(category, language);

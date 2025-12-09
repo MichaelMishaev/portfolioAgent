@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { getTemplates } from "@/lib/template-registry";
+import { getPublishedTemplates } from "@/lib/template-registry";
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -33,7 +33,7 @@ const categoryOrder = [
 ];
 
 export function TemplateGallery() {
-  const { language, t } = useI18n();
+  const { language, t, isRTL } = useI18n();
   const router = useRouter();
   const searchParams = useSearchParams();
 
@@ -104,7 +104,7 @@ export function TemplateGallery() {
     }
   };
 
-  const templates = getTemplates(language);
+  const templates = getPublishedTemplates(language);
 
   // Sort templates based on selected sort option
   const sortedTemplates = [...templates].sort((a, b) => {
@@ -255,18 +255,18 @@ export function TemplateGallery() {
         className="mb-4 sm:mb-6"
       >
         <div className="relative max-w-2xl mx-auto">
-          <FiSearch className="absolute left-4 top-1/2 transform -translate-y-1/2 text-muted-foreground w-5 h-5" />
+          <FiSearch className={`absolute ${isRTL ? 'right-4' : 'left-4'} top-1/2 transform -translate-y-1/2 text-muted-foreground w-5 h-5`} />
           <Input
             type="text"
-            placeholder={language === 'en' ? "Search templates by name, description, or tags..." : "Поиск по названию, описанию или тегам..."}
+            placeholder={language === 'en' ? "Search templates by name, description, or tags..." : language === 'he' ? "חפש תבניות לפי שם, תיאור או תגיות..." : "Поиск по названию, описанию или тегам..."}
             value={searchQuery}
             onChange={handleSearchChange}
-            className="pl-12 pr-12 py-6 text-base rounded-full border-2 focus:border-primary"
+            className={`${isRTL ? 'pr-12 pl-12' : 'pl-12 pr-12'} py-6 text-base rounded-full border-2 focus:border-primary ${isRTL ? 'text-right' : ''}`}
           />
           {searchQuery && (
             <button
               onClick={clearSearch}
-              className="absolute right-4 top-1/2 transform -translate-y-1/2 text-muted-foreground hover:text-foreground transition-colors"
+              className={`absolute ${isRTL ? 'left-4' : 'right-4'} top-1/2 transform -translate-y-1/2 text-muted-foreground hover:text-foreground transition-colors`}
               aria-label="Clear search"
             >
               <FiX className="w-5 h-5" />
@@ -285,7 +285,7 @@ export function TemplateGallery() {
             className="text-sm text-muted-foreground hover:text-foreground transition-colors inline-flex items-center gap-1"
             style={{ fontSize: '14px' }}
           >
-            {language === 'en' ? 'or explore all templates' : 'или просмотрите все шаблоны'}
+            {language === 'en' ? 'or explore all templates' : language === 'he' ? 'או חקור את כל התבניות' : 'или просмотрите все шаблоны'}
             <span className="inline-block transition-transform hover:translate-x-0.5">→</span>
           </button>
         </div>
@@ -338,7 +338,7 @@ export function TemplateGallery() {
         {/* Sort Dropdown */}
         <div className="flex items-center gap-2">
           <label htmlFor="sort" className="text-sm text-foreground/60 whitespace-nowrap">
-            {language === 'en' ? 'Sort by:' : 'Сортировка:'}
+            {language === 'en' ? 'Sort by:' : language === 'he' ? 'מיין לפי:' : 'Сортировка:'}
           </label>
           <select
             id="sort"
@@ -346,10 +346,10 @@ export function TemplateGallery() {
             onChange={(e) => handleSortChange(e.target.value)}
             className="px-3 py-2 rounded-lg border border-input bg-background text-sm focus:outline-none focus:ring-2 focus:ring-primary cursor-pointer"
           >
-            <option value="newest">{language === 'en' ? 'Newest First' : 'Сначала новые'}</option>
-            <option value="oldest">{language === 'en' ? 'Oldest First' : 'Сначала старые'}</option>
-            <option value="name-az">{language === 'en' ? 'Name (A-Z)' : 'Название (А-Я)'}</option>
-            <option value="name-za">{language === 'en' ? 'Name (Z-A)' : 'Название (Я-А)'}</option>
+            <option value="newest">{language === 'en' ? 'Newest First' : language === 'he' ? 'החדשים ביותר' : 'Сначала новые'}</option>
+            <option value="oldest">{language === 'en' ? 'Oldest First' : language === 'he' ? 'הישנים ביותר' : 'Сначала старые'}</option>
+            <option value="name-az">{language === 'en' ? 'Name (A-Z)' : language === 'he' ? 'שם (א-ת)' : 'Название (А-Я)'}</option>
+            <option value="name-za">{language === 'en' ? 'Name (Z-A)' : language === 'he' ? 'שם (ת-א)' : 'Название (Я-А)'}</option>
           </select>
         </div>
       </motion.div>
@@ -394,15 +394,15 @@ export function TemplateGallery() {
                     </div>
                   </div>
 
-                  {/* Difficulty Badge - Top Right */}
-                  <div className="absolute top-3 right-3">
+                  {/* Difficulty Badge - Top Right (swaps to left in RTL) */}
+                  <div className={`absolute top-3 ${isRTL ? 'left-3' : 'right-3'}`}>
                     <Badge className="text-xs font-semibold px-3 py-1 bg-white/95 dark:bg-gray-900/95 text-gray-900 dark:text-gray-100 backdrop-blur-sm shadow-lg">
                       {t.ui[template.difficulty]}
                     </Badge>
                   </div>
 
-                  {/* Category Badge - Top Left */}
-                  <div className="absolute top-3 left-3">
+                  {/* Category Badge - Top Left (swaps to right in RTL) */}
+                  <div className={`absolute top-3 ${isRTL ? 'right-3' : 'left-3'}`}>
                     <Badge className="text-xs font-semibold px-3 py-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg">
                       {t.categories[template.category as keyof typeof t.categories] || template.category}
                     </Badge>
@@ -411,15 +411,15 @@ export function TemplateGallery() {
               </CardHeader>
 
               {/* Content Section */}
-              <div className="p-5 flex flex-col flex-grow">
+              <div className={`p-5 flex flex-col flex-grow ${isRTL ? 'text-right' : ''}`}>
                 {/* Title and Price */}
-                <div className="flex items-start justify-between gap-3 mb-3">
+                <div className={`flex items-start justify-between gap-3 mb-3 ${isRTL ? 'flex-row-reverse' : ''}`}>
                   <div className="flex-1 min-w-0">
                     <CardTitle className="text-lg font-bold group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors line-clamp-2 leading-tight">
                       {template.name}
                     </CardTitle>
                   </div>
-                  <div className="flex flex-col items-end flex-shrink-0">
+                  <div className={`flex flex-col ${isRTL ? 'items-start' : 'items-end'} flex-shrink-0`}>
                     <span className="text-2xl font-bold text-blue-600 dark:text-blue-400">
                       ${template.price}
                     </span>

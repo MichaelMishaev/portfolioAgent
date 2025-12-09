@@ -21,7 +21,7 @@ export function MinimalistTemplate() {
   const { theme } = useTheme();
 
   if (!portfolioData) {
-    return <div className="min-h-screen flex items-center justify-center">Loading...</div>;
+    return <div className="min-h-screen flex items-center justify-center">{portfolioData?.ui?.loading || tt.minimalist?.ui?.loading || "Loading..."}</div>;
   }
 
   return (
@@ -53,7 +53,7 @@ export function MinimalistTemplate() {
           <button
             className="md:hidden p-3 text-foreground hover:bg-accent rounded-md border border-border transition-colors"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            aria-label={mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+            aria-label={mobileMenuOpen ? (portfolioData.ui?.closeNavigationMenu || "Close navigation menu") : (portfolioData.ui?.openNavigationMenu || "Open navigation menu")}
           >
             {mobileMenuOpen ? <FiX size={28} /> : <FiMenu size={28} />}
           </button>
@@ -168,7 +168,7 @@ export function MinimalistTemplate() {
         <div className="max-w-full mx-auto">
           <ScrollReveal>
             <h2 className="text-xs font-medium text-muted-foreground mb-12 uppercase tracking-widest">
-              Expertise
+              {portfolioData.ui?.expertise || "Expertise"}
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-x-12 gap-y-6">
               {portfolioData.skills.map((skill) => (
@@ -186,7 +186,7 @@ export function MinimalistTemplate() {
         <div className="max-w-full">
           <ScrollReveal>
             <h2 className="text-xs font-medium text-muted-foreground mb-16 uppercase tracking-widest">
-              Selected Work
+              {portfolioData.ui?.selectedWork || "Selected Work"}
             </h2>
           </ScrollReveal>
 

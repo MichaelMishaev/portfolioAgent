@@ -117,10 +117,20 @@ components/
 └── enhanced-ui/               # Enhanced UI components
 
 lib/
-├── template-registry.ts       # Template metadata (61 templates)
-├── translations.json          # UI translations (en/ru)
-├── template-translations.json # Template content translations
-├── i18n-context.tsx          # Internationalization system
+├── template-registry.ts       # Template metadata (62 templates)
+├── translations.json          # UI translations (en/ru/he) - 480KB
+├── template-translations.json # DEPRECATED: Use translations/templates/ instead
+├── translations/              # NEW: Split template translations
+│   ├── common-ui.json        # Common UI strings (navigation, buttons, etc.)
+│   └── templates/            # Individual template files (~10KB each)
+│       ├── minimalist.json   # NAMING: kebab-case matching template-registry.ts
+│       ├── bold-typography.json
+│       └── ... (62 files)    # EXACTLY one per template - NO camelCase!
+├── i18n-context.tsx          # Client-side i18n context (UI only)
+├── i18n/
+│   └── server.ts             # Server-side translation utilities
+├── hooks/
+│   └── use-template-translations.ts  # Client-side template loader
 ├── prisma.ts                 # Database client
 ├── discount/                  # Discount system logic
 └── services-types.ts         # Add-on services types
@@ -132,37 +142,148 @@ prisma/
 ### Key Systems
 
 #### 1. Internationalization (i18n) - CRITICAL
-**All UI text MUST support both English and Russian.**
+**All UI text MUST support English, Russian, and Hebrew (RTL).**
 
-**Translation Files**:
-- `/lib/translations.json` - UI translations
-- `/lib/template-translations.json` - Template content
-- `/lib/i18n-context.tsx` - Context provider
+### New Architecture (December 2024)
+The i18n system has been refactored for better performance:
+- **Before**: 668KB monolithic file loaded on every page
+- **After**: Individual ~10KB files loaded per template (92% reduction)
+- **Code Splitting**: Each template's translations are a separate chunk
+- **RTL Support**: Hebrew (he) with proper text direction
 
-**Usage Pattern**:
+### Translation Files Structure
+```
+lib/
+├── translations.json                    # UI translations (480KB) - loaded globally
+├── translations/
+│   ├── common-ui.json                  # Common UI strings (manually translated)
+│   └── templates/                      # Template translations - loaded per-template
+│       ├── minimalist.json             # ~10KB per template (kebab-case ONLY)
+│       ├── bold-typography.json        # Must match template ID from registry
+│       └── ... (62 files total)        # EXACTLY one file per template
+├── i18n-context.tsx                    # Client UI translations only
+├── i18n/server.ts                      # Server-side template loaders
+└── hooks/use-template-translations.ts  # Client-side template loaders
+```
+
+### Usage Patterns
+
+#### For UI Components (Header, Footer, Common Elements)
 ```typescript
 import { useI18n } from "@/lib/i18n-context";
 
-export function Component() {
-  const { t, tt, language } = useI18n();
+export function Header() {
+  const { t, language, isRTL } = useI18n();
+
+  return (
+    <header dir={isRTL ? 'rtl' : 'ltr'}>
+      {t.common?.backToGallery || "Back to Gallery"}
+    </header>
+  );
+}
+```
+
+#### For Template Components - NEW (Recommended for new templates)
+Use the hook for client components with automatic code splitting:
+
+```typescript
+"use client";
+import { useTemplateTranslations } from "@/lib/hooks/use-template-translations";
+
+export function MyTemplate() {
+  const { t, loading } = useTemplateTranslations({ templateId: 'minimalist' });
+
+  if (loading) return <div>Loading...</div>;
 
   return (
     <div>
-      {/* UI text from translations.json */}
-      {t.common?.backToGallery || "Back to Gallery"}
-
-      {/* Template content from template-translations.json */}
-      {tt.minimalist?.hero?.title || "Portfolio"}
+      <h1>{t.hero?.title}</h1>
+      <p>{t.hero?.description}</p>
     </div>
   );
 }
 ```
 
-**RULES**:
+#### For Template Components - OLD (Backwards Compatible)
+Existing templates can still use `tt` from context (DEPRECATED):
+
+```typescript
+"use client";
+import { useI18n } from "@/lib/i18n-context";
+
+export function LegacyTemplate() {
+  const { tt } = useI18n(); // DEPRECATED but still works
+
+  return <h1>{tt.minimalist?.hero?.title}</h1>;
+}
+```
+
+#### For Server Components (Best Performance)
+Use server-side loading for optimal performance:
+
+```typescript
+// app/templates/[templateId]/page.tsx
+import { getServerTemplateTranslations } from "@/lib/i18n/server";
+
+export default async function TemplatePage({ params }: { params: { templateId: string } }) {
+  const t = await getServerTemplateTranslations(params.templateId, 'en');
+
+  return (
+    <div>
+      <h1>{t.hero?.title}</h1>
+      <p>{t.hero?.description}</p>
+    </div>
+  );
+}
+```
+
+### Migration Guide
+
+**Migrating Existing Templates:**
+1. Change `const { tt } = useI18n()` to `const { t, loading } = useTemplateTranslations({ templateId: 'your-template' })`
+2. Change `tt.yourTemplate?.` to `t.` (template ID is implicit)
+3. Add loading state handling
+4. Remove `tt` from destructuring
+
+**Example:**
+```typescript
+// Before
+const { tt } = useI18n();
+const t = tt['minimalist'];
+
+// After
+const { t, loading } = useTemplateTranslations({ templateId: 'minimalist' });
+if (loading) return <Loader />;
+```
+
+### Adding New Translations
+
+**For UI translations** (add to `/lib/translations.json`):
+```json
+{
+  "en": { "newKey": "English text" },
+  "ru": { "newKey": "Russian text" },
+  "he": { "newKey": "Hebrew text" }
+}
+```
+
+**For template translations** (add to `/lib/translations/templates/your-template.json`):
+```json
+{
+  "en": { "hero": { "title": "Title" } },
+  "ru": { "hero": { "title": "Заголовок" } },
+  "he": { "hero": { "title": "כותרת" } }
+}
+```
+
+### RULES
 - Always use optional chaining (`?.`) when accessing translations
 - Always provide English fallback with `||` operator
-- Add new translations to BOTH `en` and `ru` objects
-- Test language switching before committing
+- Add new translations to ALL languages (en, ru, he)
+- Test language switching (including RTL) before committing
+- Use `useTemplateTranslations` hook for NEW client components
+- Use `getServerTemplateTranslations` for NEW server components
+- Existing templates with `tt` will continue to work but are less performant
 
 #### 2. Template System
 **61 templates** organized by category:
@@ -367,6 +488,12 @@ TELEGRAM_BOT_TOKEN="" # For Telegram integration
 
 ### Adding a New Template
 
+**CRITICAL: File Naming Convention**
+- **Template IDs**: Use kebab-case (lowercase with hyphens)
+- **Translation files**: MUST exactly match template ID from registry
+- **NO camelCase**: Never use `boldTypography.json` - use `bold-typography.json`
+- **One file per template**: Each template has EXACTLY one translation file
+
 1. **Create template component**:
    ```bash
    components/templates/[category]/[template-name]-template.tsx
@@ -377,20 +504,25 @@ TELEGRAM_BOT_TOKEN="" # For Telegram integration
    app/templates/[template-id]/page.tsx
    ```
 
-3. **Register in template registry**:
+3. **Register in template registry** (defines the ID):
    ```typescript
    // lib/template-registry.ts
    {
-     id: "template-id",
-     name: "Template Name",
+     id: "bold-typography",  // ✅ kebab-case - this is the source of truth
+     name: "Bold Typography",
      category: "Portfolio",
      // ... other config
    }
    ```
 
-4. **Add translations**:
+4. **Create translation file** (MUST match template ID):
+   ```bash
+   # CORRECT: lib/translations/templates/bold-typography.json
+   # WRONG:   lib/translations/templates/boldTypography.json (camelCase)
+   ```
+
    ```json
-   // lib/template-translations.json
+   // lib/translations/templates/bold-typography.json
    {
      "en": { "templateId": { "hero": { "title": "..." } } },
      "ru": { "templateId": { "hero": { "title": "..." } } }

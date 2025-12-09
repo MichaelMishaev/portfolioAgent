@@ -14,6 +14,7 @@ import {
   FiCheck,
   FiX,
   FiArrowLeft,
+  FiArrowRight,
   FiZap,
   FiClock,
   FiShield
@@ -26,7 +27,7 @@ interface ServicesCheckoutViewProps {
 }
 
 export function ServicesCheckoutView({ serviceIds, templateId }: ServicesCheckoutViewProps) {
-  const { language } = useI18n();
+  const { language, isRTL } = useI18n();
   const services = getServicesByIds(serviceIds);
 
   const [customerInfo, setCustomerInfo] = useState({
@@ -76,18 +77,18 @@ export function ServicesCheckoutView({ serviceIds, templateId }: ServicesCheckou
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 dark:from-blue-950/20 dark:via-purple-950/20 dark:to-pink-950/20">
       {/* Header */}
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container mx-auto flex h-16 items-center justify-between px-4">
+        <div className={`container mx-auto flex h-16 items-center justify-between px-4 ${isRTL ? 'flex-row-reverse' : ''}`}>
           <Link
             href={templateId ? `/thank-you/${templateId}` : "/"}
-            className="flex items-center gap-2 text-sm font-medium hover:text-primary transition-colors"
+            className={`flex items-center gap-2 text-sm font-medium hover:text-primary transition-colors ${isRTL ? 'flex-row-reverse' : ''}`}
           >
-            <FiArrowLeft className="w-4 h-4" />
-            {language === "en" ? "Back" : "Назад"}
+            {isRTL ? <FiArrowRight className="w-4 h-4" /> : <FiArrowLeft className="w-4 h-4" />}
+            {language === "en" ? "Back" : language === "ru" ? "Назад" : "חזרה"}
           </Link>
-          <div className="flex items-center gap-2">
+          <div className={`flex items-center gap-2 ${isRTL ? 'flex-row-reverse' : ''}`}>
             <FiShoppingCart className="w-5 h-5 text-blue-600 dark:text-blue-400" />
             <span className="font-semibold">
-              {language === "en" ? "Services Checkout" : "Оформление услуг"}
+              {language === "en" ? "Services Checkout" : language === "ru" ? "Оформление услуг" : "תשלום שירותים"}
             </span>
           </div>
         </div>
@@ -100,26 +101,27 @@ export function ServicesCheckoutView({ serviceIds, templateId }: ServicesCheckou
           transition={{ duration: 0.5 }}
         >
           {/* Page Title */}
-          <div className="text-center mb-8">
+          <div className={`text-center mb-8 ${isRTL ? 'rtl' : ''}`}>
             <h1 className="text-3xl sm:text-4xl font-black mb-3">
-              {language === "en" ? "Complete Your " : "Завершите "}
+              {language === "en" ? "Complete Your " : language === "ru" ? "Завершите " : "השלם את "}
               <span className="bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 bg-clip-text text-transparent">
-                {language === "en" ? "Order" : "заказ"}
+                {language === "en" ? "Order" : language === "ru" ? "заказ" : "ההזמנה"}
               </span>
             </h1>
             <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
               {language === "en"
                 ? "You're one step away from getting professional services for your website"
-                : "Вы в одном шаге от получения профессиональных услуг для вашего сайта"}
+                : language === "ru" ? "Вы в одном шаге от получения профессиональных услуг для вашего сайта"
+                : "אתה צעד אחד מקבלת שירותים מקצועיים לאתר שלך"}
             </p>
           </div>
 
           <div className="grid lg:grid-cols-3 gap-8">
             {/* Left Column - Services List */}
             <div className="lg:col-span-2 space-y-4">
-              <h2 className="text-xl font-bold flex items-center gap-2 mb-4">
+              <h2 className={`text-xl font-bold flex items-center gap-2 mb-4 ${isRTL ? 'flex-row-reverse text-right' : ''}`}>
                 <FiShoppingCart className="w-5 h-5 text-blue-600" />
-                {language === "en" ? "Selected Services" : "Выбранные услуги"} ({services.length})
+                {language === "en" ? "Selected Services" : language === "ru" ? "Выбранные услуги" : "שירותים שנבחרו"} ({services.length})
               </h2>
 
               {services.map((service, index) => (
@@ -281,17 +283,17 @@ export function ServicesCheckoutView({ serviceIds, templateId }: ServicesCheckou
 
                 {/* Trust Badges */}
                 <div className="space-y-3">
-                  <div className="flex items-center gap-3 text-sm text-slate-600 dark:text-slate-400">
+                  <div className={`flex items-center gap-3 text-sm text-slate-600 dark:text-slate-400 ${isRTL ? 'flex-row-reverse' : ''}`}>
                     <FiShield className="w-5 h-5 text-green-600" />
-                    <span>{language === "en" ? "Secure SSL encryption" : "Защищённое SSL-шифрование"}</span>
+                    <span>{language === "en" ? "Secure SSL encryption" : language === "ru" ? "Защищённое SSL-шифрование" : "הצפנת SSL מאובטחת"}</span>
                   </div>
-                  <div className="flex items-center gap-3 text-sm text-slate-600 dark:text-slate-400">
+                  <div className={`flex items-center gap-3 text-sm text-slate-600 dark:text-slate-400 ${isRTL ? 'flex-row-reverse' : ''}`}>
                     <FiCheck className="w-5 h-5 text-green-600" />
-                    <span>{language === "en" ? "Money-back guarantee" : "Гарантия возврата денег"}</span>
+                    <span>{language === "en" ? "Money-back guarantee" : language === "ru" ? "Гарантия возврата денег" : "ערבות החזר כספי"}</span>
                   </div>
-                  <div className="flex items-center gap-3 text-sm text-slate-600 dark:text-slate-400">
+                  <div className={`flex items-center gap-3 text-sm text-slate-600 dark:text-slate-400 ${isRTL ? 'flex-row-reverse' : ''}`}>
                     <FiZap className="w-5 h-5 text-blue-600" />
-                    <span>{language === "en" ? "Instant delivery" : "Мгновенная доставка"}</span>
+                    <span>{language === "en" ? "Instant delivery" : language === "ru" ? "Мгновенная доставка" : "מסירה מיידית"}</span>
                   </div>
                 </div>
               </div>

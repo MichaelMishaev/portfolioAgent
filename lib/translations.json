@@ -3643,6 +3643,123 @@
           "Advanced Search with Algolia",
           "Automated Email Workflows"
         ]
+      },
+      {
+        "id": "saas-growth",
+        "name": "SaaS Growth Platform",
+        "description": "Modern SaaS landing page focused on growth, conversions, and showcasing product features with interactive demos.",
+        "category": "Product",
+        "difficulty": "intermediate",
+        "status": "published",
+        "features": [
+          "Animated Hero",
+          "Feature Showcase",
+          "Pricing Tables",
+          "Live Demo Section",
+          "Testimonials Carousel",
+          "Integration Logos"
+        ],
+        "tags": [
+          "saas",
+          "startup",
+          "product",
+          "growth",
+          "conversion",
+          "landing-page",
+          "modern",
+          "tech",
+          "software",
+          "b2b",
+          "pricing",
+          "features",
+          "demo",
+          "testimonials",
+          "analytics"
+        ],
+        "bestFor": [
+          "SaaS Startups",
+          "Software Products",
+          "B2B Platforms",
+          "Tech Companies"
+        ],
+        "longDescription": "A high-converting SaaS landing page template designed to showcase your product's value proposition and drive sign-ups. Features include animated product demos, interactive feature comparisons, social proof sections, and optimized conversion funnels. Built with growth marketing best practices including A/B testing ready components, analytics integration points, and conversion-optimized layouts. Perfect for early-stage startups looking to validate product-market fit or established SaaS companies launching new features.",
+        "whatsIncluded": [
+          "Animated Product Hero",
+          "Feature Comparison Grid",
+          "Pricing Calculator",
+          "Live Demo Embed",
+          "Customer Testimonials",
+          "Integration Showcase",
+          "CTA Optimization",
+          "Newsletter Signup"
+        ],
+        "price": 79,
+        "technicalDetails": [
+          "Conversion Optimized",
+          "A/B Testing Ready",
+          "Analytics Integration",
+          "Lead Capture Forms",
+          "Email Marketing Ready",
+          "Performance Score 98+"
+        ]
+      },
+      {
+        "id": "freelancer-creative",
+        "name": "Creative Freelancer",
+        "description": "Bold, personality-driven portfolio for creative freelancers. Showcase your unique style and attract ideal clients.",
+        "category": "Portfolio",
+        "difficulty": "beginner",
+        "status": "publishedlast ",
+        "features": [
+          "Project Gallery",
+          "About Section",
+          "Service Offerings",
+          "Client Testimonials",
+          "Contact Form",
+          "Social Links"
+        ],
+        "tags": [
+          "freelancer",
+          "creative",
+          "portfolio",
+          "designer",
+          "personal",
+          "showcase",
+          "projects",
+          "gallery",
+          "testimonials",
+          "services",
+          "modern",
+          "colorful",
+          "personality"
+        ],
+        "bestFor": [
+          "Graphic Designers",
+          "Illustrators",
+          "Creative Writers",
+          "Video Editors",
+          "Photographers"
+        ],
+        "longDescription": "A vibrant, personality-first portfolio template that helps creative freelancers stand out from the crowd. This template ditches the boring corporate aesthetic in favor of bold colors, playful animations, and creative layouts that reflect your unique artistic voice. Features include a stunning project gallery with filtering, an engaging about section that tells your story, service packages presentation, and a contact system that makes it easy for clients to reach you. Perfect for creatives who want their portfolio to be as unique as their work.",
+        "whatsIncluded": [
+          "Filterable Project Gallery",
+          "Animated About Section",
+          "Service Packages Display",
+          "Client Testimonial Slider",
+          "Integrated Contact Form",
+          "Social Media Integration",
+          "Download Resume Button",
+          "Dark Mode Toggle"
+        ],
+        "price": 59,
+        "technicalDetails": [
+          "Smooth Scroll Animations",
+          "Lazy Loading Images",
+          "SEO Optimized",
+          "Mobile-First Design",
+          "Fast Page Load (<2s)",
+          "Accessibility Compliant"
+        ]
       }
     ],
     "serviceMarketplace": {
@@ -7244,6 +7361,123 @@
           "Расширенный поиск с Algolia",
           "Автоматизированные email-воркфлоу"
         ]
+      },
+      {
+        "id": "saas-growth",
+        "name": "SaaS платформа роста",
+        "description": "Современная целевая страница SaaS, ориентированная на рост, конверсии и демонстрацию возможностей продукта с интерактивными демо.",
+        "category": "Product",
+        "difficulty": "intermediate",
+        "status": "published",
+        "features": [
+          "Анимированный герой",
+          "Витрина функций",
+          "Таблицы цен",
+          "Раздел живой демонстрации",
+          "Карусель отзывов",
+          "Логотипы интеграций"
+        ],
+        "tags": [
+          "saas",
+          "стартап",
+          "продукт",
+          "рост",
+          "конверсия",
+          "целевая-страница",
+          "современный",
+          "технологии",
+          "программное-обеспечение",
+          "b2b",
+          "цены",
+          "функции",
+          "демо",
+          "отзывы",
+          "аналитика"
+        ],
+        "bestFor": [
+          "SaaS стартапы",
+          "Программные продукты",
+          "B2B платформы",
+          "Технологические компании"
+        ],
+        "longDescription": "Высококонверсионный шаблон целевой страницы SaaS, разработанный для демонстрации ценностного предложения вашего продукта и стимулирования регистраций. Включает анимированные демонстрации продукта, интерактивные сравнения функций, разделы социального доказательства и оптимизированные конверсионные воронки. Построен с использованием лучших практик роста маркетинга, включая компоненты, готовые к A/B тестированию, точки интеграции аналитики и макеты, оптимизированные для конверсии. Идеально подходит для стартапов на ранней стадии, стремящихся проверить соответствие продукта рынку, или устоявшихся SaaS компаний, запускающих новые функции.",
+        "whatsIncluded": [
+          "Анимированный герой продукта",
+          "Сетка сравнения функций",
+          "Калькулятор цен",
+          "Встроенная живая демонстрация",
+          "Отзывы клиентов",
+          "Витрина интеграций",
+          "Оптимизация CTA",
+          "Подписка на рассылку"
+        ],
+        "price": 79,
+        "technicalDetails": [
+          "Оптимизирован для конверсии",
+          "Готов к A/B тестированию",
+          "Интеграция аналитики",
+          "Формы захвата лидов",
+          "Готов к email-маркетингу",
+          "Оценка производительности 98+"
+        ]
+      },
+      {
+        "id": "freelancer-creative",
+        "name": "Креативный фрилансер",
+        "description": "Смелое, ориентированное на личность портфолио для креативных фрилансеров. Покажите свой уникальный стиль и привлеките идеальных клиентов.",
+        "category": "Portfolio",
+        "difficulty": "beginner",
+        "status": "draft",
+        "features": [
+          "Галерея проектов",
+          "Раздел о себе",
+          "Предложения услуг",
+          "Отзывы клиентов",
+          "Контактная форма",
+          "Социальные ссылки"
+        ],
+        "tags": [
+          "фрилансер",
+          "креативный",
+          "портфолио",
+          "дизайнер",
+          "личный",
+          "витрина",
+          "проекты",
+          "галерея",
+          "отзывы",
+          "услуги",
+          "современный",
+          "цветной",
+          "индивидуальность"
+        ],
+        "bestFor": [
+          "Графические дизайнеры",
+          "Иллюстраторы",
+          "Креативные писатели",
+          "Видеоредакторы",
+          "Фотографы"
+        ],
+        "longDescription": "Яркий шаблон портфолио, ориентированный на индивидуальность, который помогает креативным фрилансерам выделиться из толпы. Этот шаблон отказывается от скучной корпоративной эстетики в пользу ярких цветов, игривых анимаций и креативных макетов, отражающих ваш уникальный художественный голос. Включает потрясающую галерею проектов с фильтрацией, увлекательный раздел о себе, который рассказывает вашу историю, презентацию пакетов услуг и контактную систему, которая облегчает клиентам связь с вами. Идеально подходит для креативщиков, которые хотят, чтобы их портфолио было таким же уникальным, как и их работа.",
+        "whatsIncluded": [
+          "Фильтруемая галерея проектов",
+          "Анимированный раздел о себе",
+          "Отображение пакетов услуг",
+          "Слайдер отзывов клиентов",
+          "Интегрированная контактная форма",
+          "Интеграция социальных сетей",
+          "Кнопка загрузки резюме",
+          "Переключатель темного режима"
+        ],
+        "price": 59,
+        "technicalDetails": [
+          "Плавная прокрутка анимаций",
+          "Ленивая загрузка изображений",
+          "SEO оптимизирован",
+          "Мобильный дизайн в приоритете",
+          "Быстрая загрузка страницы (<2с)",
+          "Соответствует доступности"
+        ]
       }
     ],
     "serviceMarketplace": {
@@ -7436,6 +7670,3871 @@
     },
     "buttons": {
       "customizeTemplate": "Настроить шаблон"
+    }
+  },
+  "he": {
+    "header": {
+      "title": "מיכאל מישייב",
+      "subtitle": "מפתח ומעצב Full-Stack היוצר חוויות ווב מודרניות"
+    },
+    "common": {
+      "about": "אודות",
+      "work": "עבודות",
+      "contact": "צור קשר",
+      "backToGallery": "→ חזרה לגלריה",
+      "getInTouch": "צור קשר",
+      "letsWorkTogether": "בוא נעבוד יחד"
+    },
+    "homepage": {
+      "hero": {
+        "badge": "מפתח ומעצב Full-Stack",
+        "title": "תבניות פורטפוליו מקצועיות",
+        "titleGradient": "אישיים",
+        "titleEnd": "בקפידה",
+        "subtitle": "בנה אתר שמייצג אותך",
+        "ctaExplore": "צפה בעבודות שלי",
+        "ctaDemo": "צור קשר"
+      },
+      "stats": {
+        "templates": "פרויקטים",
+        "categories": "טכנולוגיות",
+        "responsive": "לקוחות מרוצים",
+        "openSource": "שנות ניסיון"
+      },
+      "features": {
+        "title": "מה אני מביא",
+        "titleGradient": "לפרויקט שלך",
+        "subtitle": "מומחיות מקצועית עם טכנולוגיות מודרניות ושיטות עבודה מתקדמות",
+        "fast": {
+          "title": "ביצועים קודם כל",
+          "description": "קוד מותאם עם Next.js ופריימוורקים מודרניים לחוויות מהירות במיוחד"
+        },
+        "modern": {
+          "title": "עיצוב מודרני",
+          "description": "ממשקים נקיים ומקצועיים העוקבים אחר מגמות העיצוב של 2024-2025"
+        },
+        "production": {
+          "title": "מוכן לפרודקשן",
+          "description": "TypeScript, Tailwind CSS וכלים תעשייתיים לפתרונות אמינים"
+        },
+        "responsive": {
+          "title": "רספונסיבי לחלוטין",
+          "description": "חוויות יפות בכל מכשיר - נייד, טאבלט ודסקטופ"
+        },
+        "seo": {
+          "title": "אופטימיזציה ל-SEO",
+          "description": "אופטימיזציה מובנית למנועי חיפוש ושיטות עבודה מומלצות לביצועים"
+        },
+        "customize": {
+          "title": "פתרונות מותאמים אישית",
+          "description": "כל אתר מותאם לצרכים הספציפיים שלך, התעשייה והקהל היעד"
+        }
+      },
+      "categoriesSection": {
+        "title": "ה",
+        "titleGradient": "פרויקטים שלי",
+        "subtitle": "כל אתר בנוי ומותאם למטרות ספציפיות - מפורטפוליו ועד השקות מוצרים",
+        "templatesLabel": "פרויקטים"
+      },
+      "gallery": {
+        "title": "תיק עבודות",
+        "titleGradient": "",
+        "subtitle": "כל אתר מעוצב ומותאם באופן אישי כדי להתאים למטרות העסקיות והקהל הספציפיים שלך. בוא נדבר על הפרויקט שלך!"
+      }
+    },
+    "categories": {
+      "all": "הכל",
+      "Professional": "מקצועי",
+      "Creative": "יצירתי",
+      "Portfolio": "תיק עבודות",
+      "Modern": "מודרני",
+      "Simple": "פשוט",
+      "Blog": "בלוג",
+      "Product": "מוצר",
+      "Service": "שירות",
+      "Experimental": "ניסיוני",
+      "Online Business": "עסק אונליין"
+    },
+    "ui": {
+      "viewDemo": "צפה בפרויקט",
+      "stylePreview": "תצוגה מקדימה של סטייל",
+      "colors": "צבעים",
+      "bestFor": "בנוי עבור",
+      "beginner": "פשוט",
+      "intermediate": "בינוני",
+      "advanced": "מורכב",
+      "readMore": "קרא עוד",
+      "showLess": "הצג פחות",
+      "customizeAndBuild": "התחל לבנות",
+      "tryIt": "נסה זאת"
+    },
+    "onboarding": {
+      "title": "איך להשיג את האתר המושלם שלך",
+      "subtitle": "מצא והתאם את התבנית האידיאלית ב-4 שלבים פשוטים",
+      "dismissButton": "הבנתי!",
+      "step1": {
+        "title": "עיון וחיפוש",
+        "description": "גלה יותר מ-61 תבניות לפי קטגוריה או השתמש בסרגל החיפוש כדי למצוא בדיוק מה שאתה צריך"
+      },
+      "step2": {
+        "title": "תצוגה מקדימה של תבנית",
+        "description": "לחץ על כל כרטיס כדי לצפות בפרטים מלאים, צילומי מסך והדגמה חיה של התבנית"
+      },
+      "step3": {
+        "title": "התאמת עיצוב",
+        "description": "השתמש בבונה הוויזואלי שלנו כדי להתאים צבעים, גופנים וקטעים כך שיתאימו למותג שלך"
+      },
+      "step4": {
+        "title": "רכישה והורדה",
+        "description": "השלם את התשלום עם תוספים אופציונליים וקבל גישה מיידית לקבצי התבנית שלך"
+      }
+    },
+    "featureExplanations": {
+      "Responsive Design": "עובד בצורה מושלמת בכל המכשירים - טלפונים ניידים, טאבלטים ומחשבי שולחן. הפריסה מתאימה את עצמה אוטומטית כדי לספק את חווית הצפייה הטובה ביותר בכל גודל מסך.",
+      "Dark Mode Support": "כולל מצב כהה מובנה שמשתמשים יכולים להפעיל. מפחית עייפות עיניים בתנאי תאורה נמוכים ומספק מראה מודרני ומלוטש.",
+      "SEO Optimized": "בנוי עם שיטות עבודה מומלצות של מנועי חיפוש כולל תגי מטא נכונים, HTML סמנטי ומהירות עמוד מותאמת כדי לעזור לאתר שלך לדרג גבוה יותר בתוצאות החיפוש.",
+      "Fast Performance": "בנוי עם Next.js ומותאם לזמני טעינה מהירים במיוחד. כולל פיצול קוד, אופטימיזציה של תמונות ורינדור יעיל לחוויית המשתמש הטובה ביותר."
+    },
+    "errors": {
+      "somethingWentWrong": "משהו השתבש",
+      "tryAgain": "נסה שוב",
+      "templateUnderConstruction": "תבנית בבנייה",
+      "templateLoadError": "אנחנו עובדים על זה",
+      "tryAlternativeTemplates": "נסה אחת מהאלטרנטיבות האלה",
+      "viewSimilarTemplates": "צפה בתבניות דומות"
+    },
+    "stylePreview": {
+      "title": "Try Before You Choose",
+      "description": "Type your name below to see it styled in this template. Explore the colors, fonts, and design elements. When you're ready,",
+      "viewFullLink": "view the full template",
+      "viewFullEnd": "to see all features.",
+      "badge": "Style Preview",
+      "styleGuide": {
+        "title": "Style Guide",
+        "subtitle": "Explore the design elements that define this template",
+        "colors": "Colors",
+        "typography": "Typography",
+        "buttons": "Buttons",
+        "forms": "Form Elements",
+        "bestFor": "Best For",
+        "primary": "Primary",
+        "secondary": "Secondary",
+        "accent": "Accent",
+        "yourName": "Your Name",
+        "yourRole": "Your Role",
+        "bodyText": "This is body text that describes your work and experience.",
+        "primaryButton": "Primary Button",
+        "secondaryButton": "Secondary Button",
+        "textButton": "Text Button",
+        "primaryAction": "Primary action button",
+        "secondaryAction": "Secondary action button",
+        "tertiaryAction": "Tertiary action button",
+        "fullName": "Full Name",
+        "emailAddress": "Email Address",
+        "enterName": "Enter your name...",
+        "emailPlaceholder": "email@example.com"
+      },
+      "playground": {
+        "title": "Try It With Your Name",
+        "subtitle": "Type your information below to see how it looks in this template",
+        "yourInfo": "Your Information",
+        "firstName": "First Name",
+        "lastName": "Last Name",
+        "roleTitle": "Role / Title",
+        "livePreview": "Live Preview",
+        "updatesRealtime": "Updates in real-time as you type",
+        "defaultName": "Your Name",
+        "defaultTitle": "Your Role / Title",
+        "contactMe": "Contact Me",
+        "portfolio": "Portfolio",
+        "projects": "5 Projects",
+        "available": "Available",
+        "placeholders": {
+          "firstName": "Michael",
+          "lastName": "Mishayev",
+          "title": "Full-Stack Developer"
+        }
+      },
+      "colorPicker": {
+        "title": "Try Different Colors",
+        "reset": "Reset"
+      },
+      "contentLibrary": {
+        "button": "Content Library",
+        "hint": "Browse 25+ pre-made examples"
+      },
+      "quickStyles": {
+        "button": "Quick Styles",
+        "hint": "Apply pre-designed color schemes instantly",
+        "description": "Apply pre-designed color schemes in one click"
+      },
+      "sharePreferences": {
+        "title": "Share & Export",
+        "shareButton": "Share Preview Link",
+        "description": "Generate a shareable URL with all your current customizations",
+        "copied": "Link Copied to Clipboard!"
+      },
+      "cta": {
+        "ready": "Ready to use this template?",
+        "description": "See the full demo with all features and sections",
+        "viewFullDemo": "View Full Demo",
+        "chooseAnother": "Choose Another"
+      },
+      "header": {
+        "interactivePreview": "Interactive Preview",
+        "colors": "Colors",
+        "fonts": "Fonts",
+        "customizeColors": "Customize Colors",
+        "chooseFontStyle": "Choose Font Style"
+      }
+    },
+    "templates": [
+      {
+        "id": "minimalist",
+        "name": "מינימליסטי ונקי",
+        "description": "ממוקד בפשטות, רווחים לבנים וברורות. כל מה שאינו הכרחי הוסר.",
+        "category": "Professional",
+        "difficulty": "beginner",
+        "features": [
+          "מצב כהה",
+          "מותאם למכשירים",
+          "מופעל SEO",
+          "טופס יצירת קשר"
+        ],
+        "tags": [
+          "minimal",
+          "clean",
+          "professional",
+          "modern",
+          "simple",
+          "whitespace",
+          "elegant",
+          "dark-mode",
+          "responsive",
+          "seo",
+          "contact-form",
+          "designers",
+          "developers",
+          "consultants",
+          "seo-optimized",
+          "focus",
+          "simplicity",
+          "clarity",
+          "everything",
+          "minimalist",
+          "easy",
+          "simple-setup"
+        ],
+        "bestFor": [
+          "מעצבים",
+          "מפתחים",
+          "יועצים",
+          "פרילנסרים"
+        ],
+        "longDescription": "פילוסופיית עיצוב נקייה וללא הסחות דעת שמקדמת תוכן על פני קישוט. כל פיקסל משרת מטרה. קווים נקיים, רווחים לבנים נדיבים וטיפוגרפיה מעוצבת בקפידה יוצרים אווירה של sophistication וברור. מושלם עבור מקצוענים שמבינים שהאלגנטיות האמיתית מגיעה מפשטות, לא מורכבות. תבנית זו מדברת בקול רם דרך ריסון.",
+        "whatsIncluded": [
+          "מערכת עיצוב מינימלית",
+          "מתג מצב כהה",
+          "מעברים חלקים בין דפים",
+          "היררכיית טיפוגרפיה",
+          "עיצוב ראשון למובייל",
+          "אינטגרציה של טופס יצירת קשר"
+        ],
+        "price": 49,
+        "technicalDetails": [
+          "אופטימיזציה ל-Next.js 15",
+          "אנימציות ב-60fps",
+          "ציון Lighthouse 95+",
+          "אפס שינוי פריסה",
+          "הגדרה סטטית אינקרמנטלית"
+        ]
+      },
+      {
+        "id": "dark-mode",
+        "name": "מצב כהה קולנועי",
+        "description": "רקעים כהים או כמעט שחורים עם טקסט בהיר מנוגד. קולנועי ומעודן.",
+        "category": "Creative",
+        "difficulty": "intermediate",
+        "features": [
+          "רקע וידאו",
+          "אנימציות חלקות",
+          "נושא כהה",
+          "גלריה"
+        ],
+        "tags": [
+          "dark",
+          "cinematic",
+          "elegant",
+          "premium",
+          "video-background",
+          "smooth-animations",
+          "gallery",
+          "photographers",
+          "ui-ux-designers",
+          "creative",
+          "sophisticated",
+          "contrasting",
+          "dark-theme",
+          "creative-studios",
+          "near-black",
+          "backgrounds",
+          "light",
+          "mode",
+          "light-theme"
+        ],
+        "bestFor": [
+          "סטארטאפים טכנולוגיים",
+          "משחקים",
+          "פרויקטי קריפטו",
+          "כלי פיתוח"
+        ],
+        "longDescription": "מהונדס במיוחד לסביבות כהות עם שחורים מותאמים ל-OLED ורמות ניגודיות מכוונות בקפידה. מפחית את עייפות העיניים ב-67% בהשוואה לתצוגות סטנדרטיות. כולל התאמת טמפרטורת צבע חכמה, התאמת בהירות אוטומטית, ומערכת הדגשה ניאונית פרימיום. כל אלמנט עוצב מחדש מהיסוד למצב כהה - לא רק צבעים הפוכים. כולל סינון אור כחול ורמות אינטנסיביות הניתנות להתאמה.",
+        "whatsIncluded": [
+          "נושא כהה פרימיום",
+          "צבעי הדגשה ניאוניים",
+          "עיצוב מפחית עייפות עיניים",
+          "אפקטי זכוכית",
+          "גרדיאנטים מונפשים",
+          "הדגשת תחביר קוד"
+        ],
+        "price": 59,
+        "technicalDetails": [
+          "שחור OLED אמיתי (#000000)",
+          "67% הפחתת עייפות עיניים",
+          "מסנן אור כחול מובנה",
+          "זיהוי נושא אוטומטי",
+          "תמיכה בתוכן HDR"
+        ]
+      },
+      {
+        "id": "bold-typography",
+        "name": "גיבור טיפוגרפיה בולט",
+        "description": "הטיפוגרפיה היא העיצוב עצמו — טקסט גדול ומוגזם כאלמנט הגיבור.",
+        "category": "Creative",
+        "difficulty": "beginner",
+        "features": [
+          "טיפוגרפיה גדולה",
+          "עיצוב מינימלי",
+          "טעינה מהירה",
+          "מובייל ראשון"
+        ],
+        "tags": [
+          "typography",
+          "bold",
+          "minimal",
+          "creative",
+          "large-typography",
+          "oversized-text",
+          "fast-loading",
+          "mobile-first",
+          "personal-brand",
+          "freelancer",
+          "simple",
+          "minimal-design",
+          "personal-brands",
+          "creative-freelancers",
+          "design",
+          "itself",
+          "oversized",
+          "type",
+          "hero",
+          "easy",
+          "simple-setup"
+        ],
+        "bestFor": [
+          "סוכנויות",
+          "מותגי אופנה",
+          "מנהלי אמנות",
+          "אתרי עריכה"
+        ],
+        "longDescription": "טיפוגרפיה כאמנות. כותרות מוגזמות עד 180 פיקסלים שמושכות תשומת לב מיידית. כוללת זוגות גופנים מותאמים שנבדקו על פני יותר מ-50 מכשירים, אנימציות טקסט קינטיות המופעלות על ידי GSAP, והגדלת טקסט חכמה ששומרת על היררכיה בכל גודל מסך. כוללת תמיכה בגופנים משתנים למעברים חלקים במיוחד במשקל ואופני טיפוגרפיה ניסיוניים שמאתגרים את הגבולות היצירתיים.",
+        "whatsIncluded": [
+          "מערכת טיפוגרפיה ענקית",
+          "זוג גופנים מותאם",
+          "אנימציות טקסט",
+          "היררכיה חזותית בולטת",
+          "גרפיקה מינימלית",
+          "טעינה מהירה"
+        ],
+        "price": 69,
+        "technicalDetails": [
+          "תמיכה בגופנים משתנים",
+          "כותרות עד 180 פיקסלים",
+          "אנימציות טקסט GSAP",
+          "בדיקות על יותר מ-50 מכשירים",
+          "טעינת גופנים אוטומטית"
+        ]
+      },
+      {
+        "id": "grid-masonry",
+        "name": "פריסת גריד ומסדרים",
+        "description": "יצירות פורטפוליו מוצגות באריחי גריד ויזואליים עקביים. מושלם לתוכן ויזואלי.",
+        "category": "Portfolio",
+        "difficulty": "intermediate",
+        "features": [
+          "גריד מסדרים",
+          "תיבת אור",
+          "סינון קטגוריות",
+          "טעינה עצלה"
+        ],
+        "tags": [
+          "grid",
+          "masonry",
+          "portfolio",
+          "gallery",
+          "masonry-grid",
+          "lightbox",
+          "filter-categories",
+          "lazy-loading",
+          "photographers",
+          "artists",
+          "visual-content",
+          "image-gallery",
+          "agencies",
+          "pieces",
+          "displayed",
+          "visually",
+          "consistent",
+          "layout",
+          "grid-layout",
+          "showcase"
+        ],
+        "bestFor": [
+          "מקצוענים",
+          "עסקים",
+          "פרילנסרים",
+          "סוכנויות"
+        ],
+        "longDescription": "פריסת מסדרים בסגנון פינתרסט שמייצרת קומפוזיציות אורגניות וזורמות. מערכת גריד חכמה מסדרת אוטומטית את התוכן על סמך יחס גובה-רוחב, ומייצרת הרמוניה ויזואלית ללא התערבות ידנית. תומכת בסוגי תוכן מעורבים, גלילה אינסופית, וטעינה עצלה. מושלם עבור גלריות, פורטפוליו ואתרים עם תוכן כבד.",
+        "whatsIncluded": [
+          "עיצוב רספונסיבי",
+          "תמיכה במצב כהה",
+          "ממוטב ל-SEO",
+          "ביצועים מהירים",
+          "רכיבי UI מודרניים",
+          "התאמה אישית קלה"
+        ],
+        "price": 69,
+        "technicalDetails": [
+          "אינטגרציה עם Masonry.js",
+          "גלילה אינסופית",
+          "יחסי גובה-רוחב מעורבים",
+          "טעינה עצלה",
+          "איזון פריסה אוטומטי"
+        ]
+      },
+      {
+        "id": "fullscreen-immersive",
+        "name": "מסך מלא מעמיק",
+        "description": "תמונה או וידאו גיבור תופסים את כל שטח התצוגה. טקסט מינימלי, סיפור באמצעות חזות.",
+        "category": "Creative",
+        "difficulty": "advanced",
+        "features": [
+          "מדיה במסך מלא",
+          "פרלקס",
+          "אנימציות גלילה",
+          "תמיכה בוידאו"
+        ],
+        "tags": [
+          "immersive",
+          "fullscreen",
+          "cinematic",
+          "video",
+          "parallax",
+          "scroll-animations",
+          "video-support",
+          "storytelling",
+          "visual-first",
+          "videographers",
+          "photographers",
+          "full-screen-media",
+          "designers",
+          "creative",
+          "hero",
+          "image",
+          "takes",
+          "entire",
+          "full-screen",
+          "minimalist",
+          "advanced-features",
+          "complex"
+        ],
+        "bestFor": [
+          "צלמים",
+          "צלמי וידאו",
+          "סטודיו יצירתיים",
+          "אמנים"
+        ],
+        "longDescription": "סיפור קולנועי פוגש עיצוב אתרים. קטעים מלאי שטח תצוגה עם גלילה פרלקס מואצת חומרה יוצרים חוויית גלישה באיכות נטפליקס. תומך ברקעים של וידאו 4K עם טעינה עצלה, גלריות תמונות מתקדמות עם יכולות זום, וניווט מבוסס מחוות. כולל אנימציות המופעלות על ידי גלילה, אינדיקטורים של התקדמות, ומעברים חלקים בין קטעים. מותאם לסיפור על שולחן עבודה ואינטראקציות של החלקה במובייל.",
+        "whatsIncluded": [
+          "קטעי מסך מלא",
+          "גלילה פרלקס",
+          "תמיכה ברקע וידאו",
+          "מעברים חלקים",
+          "תיבת אור גלריה",
+          "מחוות מגע"
+        ],
+        "price": 79,
+        "technicalDetails": [
+          "פרלקס מואץ חומרה",
+          "תמיכה בוידאו 4K",
+          "בקרות מחוות מגע",
+          "מעקב התקדמות גלילה",
+          "אופטימיזציה לטעינה עצלה"
+        ]
+      },
+      {
+        "id": "split-screen",
+        "name": "פריסת מסך מפוצלת",
+        "description": "המסך מחולק אנכית - חצי אחד לתמונות, חצי אחד לתוכן טקסטואלי.",
+        "category": "Modern",
+        "difficulty": "intermediate",
+        "features": [
+          "פריסה מפוצלת",
+          "קטעים חלופיים",
+          "גלילה חלקה",
+          "רספונסיבי"
+        ],
+        "tags": [
+          "split",
+          "balanced",
+          "modern",
+          "structured",
+          "split-layout",
+          "alternating-sections",
+          "smooth-scroll",
+          "responsive",
+          "two-column",
+          "agencies",
+          "designers",
+          "screen",
+          "divided",
+          "vertically",
+          "half",
+          "imagery",
+          "split-screen",
+          "layout"
+        ],
+        "bestFor": [
+          "מקצוענים",
+          "עסקים",
+          "פרילנסרים",
+          "סוכנויות"
+        ],
+        "longDescription": "עיצוב דו-פנלי יוצר תרחישים טבעיים להשוואה. הפיצול משמאל לימין מושלם להצגת לפני/אחרי, השוואות מוצרים, או מצגות פורטפוליו כפולות. כולל גלילה מסונכרנת, אזורי תוכן עצמאיים, ומערום נייד. אידיאלי להדגמת שינוי, בחירות, או ניגודים.",
+        "whatsIncluded": [
+          "עיצוב רספונסיבי",
+          "תמיכה במצב כהה",
+          "מותאם ל-SEO",
+          "ביצועים מהירים",
+          "רכיבי UI מודרניים",
+          "התאמה אישית קלה"
+        ],
+        "price": 69,
+        "technicalDetails": [
+          "גלילה מסונכרנת",
+          "פאנלים עצמאיים",
+          "מערום נייד",
+          "מותאם להשוואה",
+          "50/50 או יחס מותאם אישית"
+        ]
+      },
+      {
+        "id": "illustration-focus",
+        "name": "מוקד איור",
+        "description": "שימוש נרחב באיורים ידניים, וקטוריים או תלת-ממדיים עם אנימציות משחקיות.",
+        "category": "Creative",
+        "difficulty": "advanced",
+        "features": [
+          "איורים מותאמים אישית",
+          "אנימציות Lottie",
+          "צבעים בהירים",
+          "UI משחקי"
+        ],
+        "tags": [
+          "illustration",
+          "playful",
+          "creative",
+          "animated",
+          "custom-illustrations",
+          "lottie-animations",
+          "bright-colors",
+          "playful-ui",
+          "illustrators",
+          "animators",
+          "creative-agencies",
+          "heavy",
+          "hand-drawn",
+          "vector",
+          "illustrations",
+          "focus",
+          "animations",
+          "advanced-features",
+          "complex"
+        ],
+        "bestFor": [
+          "מקצוענים",
+          "עסקים",
+          "פרילנסרים",
+          "סוכנויות"
+        ],
+        "longDescription": "תבנית מוקד איור מקצועית עם עיצוב חדיש ופיצ'רים חזקים. אופטימלית להמרות, ביצועים וחוויית משתמש. כוללת אפשרויות התאמה מתקדמות, פריסות רספונסיביות ורכיבי UI מודרניים.",
+        "whatsIncluded": [
+          "עיצוב רספונסיבי",
+          "תמיכה במצב כהה",
+          "אופטימיזציה ל-SEO",
+          "ביצועים מהירים",
+          "רכיבי UI מודרניים",
+          "התאמה קלה"
+        ],
+        "price": 69,
+        "technicalDetails": [
+          "ארכיטקטורה מודרנית",
+          "אופטימיזציה לביצועים",
+          "מוכן ל-SEO",
+          "נגישות בראש",
+          "מוכן לייצור"
+        ]
+      },
+      {
+        "id": "single-page",
+        "name": "גלילה בעמוד אחד",
+        "description": "כל התוכן בעמוד ארוך אחד עם עוגנים לניווט חלק.",
+        "category": "Simple",
+        "difficulty": "beginner",
+        "features": [
+          "עמוד אחד",
+          "גלילה חלקה",
+          "ניווט בעוגנים",
+          "פשוט"
+        ],
+        "tags": [
+          "simple",
+          "one-page",
+          "scroll",
+          "personal",
+          "smooth-scroll",
+          "anchor-navigation",
+          "freelancers",
+          "personal-sites",
+          "landing-pages",
+          "content",
+          "long",
+          "page",
+          "smooth-scrolling",
+          "navigation",
+          "single-page",
+          "easy",
+          "simple-setup"
+        ],
+        "bestFor": [
+          "מקצוענים",
+          "עסקים",
+          "פרילנסרים",
+          "סוכנויות"
+        ],
+        "longDescription": "תבנית עמוד אחד מקצועית עם עיצוב חדיש ותכונות חזקות. מותאמת להמרות, ביצועים, וחוויית משתמש. כוללת אפשרויות התאמה מתקדמות, פריסות רספונסיביות, ורכיבי UI מודרניים.",
+        "whatsIncluded": [
+          "עיצוב רספונסיבי",
+          "תמיכה במצב כהה",
+          "מוכנה ל-SEO",
+          "ביצועים מהירים",
+          "רכיבי UI מודרניים",
+          "התאמה קלה"
+        ],
+        "price": 69,
+        "technicalDetails": [
+          "אדריכלות מודרנית",
+          "מותאם לביצועים",
+          "מוכן ל-SEO",
+          "נגישות בראש",
+          "מוכן לייצור"
+        ]
+      },
+      {
+        "id": "text-heavy",
+        "name": "SEO כבד טקסט",
+        "description": "פריסת טיפוגרפיה ללא תמונות. מושלם לבלוגרים וכותבים.",
+        "category": "Blog",
+        "difficulty": "beginner",
+        "features": [
+          "מותאם ל-SEO",
+          "מוכן לבלוג",
+          "זמן קריאה",
+          "תגים"
+        ],
+        "tags": [
+          "blog",
+          "text",
+          "seo",
+          "editorial",
+          "seo-optimized",
+          "blog-ready",
+          "reading-time",
+          "tags",
+          "writers",
+          "bloggers",
+          "journalists",
+          "typography-driven",
+          "layout",
+          "images",
+          "perfect",
+          "text-heavy",
+          "blog-design",
+          "easy",
+          "simple-setup"
+        ],
+        "bestFor": [
+          "מקצוענים",
+          "עסקים",
+          "פרילנסרים",
+          "סוכנויות"
+        ],
+        "longDescription": "תבנית מקצועית עם עיצוב חדיש ותכונות חזקות. מותאמת להמרות, ביצועים וחווית משתמש. כוללת אפשרויות התאמה מתקדמות, פריסות רספונסיביות ורכיבי UI מודרניים.",
+        "whatsIncluded": [
+          "עיצוב רספונסיבי",
+          "תמיכה במצב כהה",
+          "מותאם ל-SEO",
+          "ביצועים מהירים",
+          "רכיבי UI מודרניים",
+          "התאמה קלה"
+        ],
+        "price": 69,
+        "technicalDetails": [
+          "ארכיטקטורה מודרנית",
+          "מותאם לביצועים",
+          "מוכן ל-SEO",
+          "נגישות קודם כל",
+          "מוכן לייצור"
+        ]
+      },
+      {
+        "id": "card-modular",
+        "name": "מודולרי מבוסס כרטיסים",
+        "description": "כרטיסים במבנה מודולרי שקל לסדר ולבצע התאמות.",
+        "category": "Modern",
+        "difficulty": "beginner",
+        "features": [
+          "פריסת כרטיסים",
+          "גריד גמיש",
+          "אפקטים בעת ריחוף",
+          "מודרני"
+        ],
+        "tags": [
+          "cards",
+          "modular",
+          "modern",
+          "flexible",
+          "card-layout",
+          "flexible-grid",
+          "hover-effects",
+          "agencies",
+          "product-designers",
+          "developers",
+          "grid",
+          "easy",
+          "rearrange",
+          "card-based",
+          "grid-layout",
+          "simple-setup"
+        ],
+        "bestFor": [
+          "מקצוענים",
+          "עסקים",
+          "פרילנסרים",
+          "סוכנויות"
+        ],
+        "longDescription": "תבנית כרטיסים מודולרית מקצועית עם עיצוב חדיש ותכונות חזקות. מותאמת להמרות, ביצועים וחוויית משתמש. כוללת אפשרויות התאמה מתקדמות, פריסות רספונסיביות ורכיבי UI מודרניים.",
+        "whatsIncluded": [
+          "עיצוב רספונסיבי",
+          "תמיכה במצב כהה",
+          "מותאם ל-SEO",
+          "ביצועים מהירים",
+          "רכיבי UI מודרניים",
+          "התאמה קלה"
+        ],
+        "price": 69,
+        "technicalDetails": [
+          "ארכיטקטורה מודרנית",
+          "מותאם לביצועים",
+          "מוכן ל-SEO",
+          "נגישות בראש",
+          "מוכן לייצור"
+        ]
+      },
+      {
+        "id": "kinetic-typography",
+        "name": "טיפוגרפיה קינטית בתנועה",
+        "description": "טקסט שמתעצב, מתרחב ומנפיש יוצר עניין חזותי דינמי.",
+        "category": "Experimental",
+        "difficulty": "advanced",
+        "features": [
+          "אנימציות טקסט",
+          "אפקטים של סמן",
+          "טיפוגרפיה דינמית",
+          "עיצוב בתנועה"
+        ],
+        "tags": [
+          "motion",
+          "typography",
+          "experimental",
+          "dynamic",
+          "text-animations",
+          "cursor-effects",
+          "dynamic-typography",
+          "motion-design",
+          "motion-designers",
+          "creative-directors",
+          "digital-artists",
+          "text",
+          "morphs",
+          "scales",
+          "animates",
+          "creating",
+          "kinetic",
+          "advanced-features",
+          "complex"
+        ],
+        "bestFor": [
+          "מקצוענים",
+          "עסקים",
+          "פרילנסרים",
+          "סוכנויות"
+        ],
+        "longDescription": "תבנית טיפוגרפיה קינטית מקצועית עם עיצוב חדיש ותכונות חזקות. מותאמת להמרות, ביצועים וחוויית משתמש. כוללת אפשרויות התאמה מתקדמות, פריסות רספונסיביות ורכיבי UI מודרניים.",
+        "whatsIncluded": [
+          "עיצוב רספונסיבי",
+          "תמיכה במצב כהה",
+          "מותאם ל-SEO",
+          "ביצועים מהירים",
+          "רכיבי UI מודרניים",
+          "התאמה קלה"
+        ],
+        "price": 69,
+        "technicalDetails": [
+          "אדריכלות מודרנית",
+          "מותאם לביצועים",
+          "מוכן ל-SEO",
+          "נגישות קודם כל",
+          "מוכן לייצור"
+        ]
+      },
+      {
+        "id": "bento-grid",
+        "name": "בנטו גריד מודולרי",
+        "description": "פריסת גריד אסימטרית בהשראת קופסאות בנטו יפניות עם בלוקים בגדלים מעורבים.",
+        "category": "Modern",
+        "difficulty": "intermediate",
+        "features": [
+          "גריד אסימטרי",
+          "גדלים מעורבים",
+          "היררכיה חזותית",
+          "מודולרי"
+        ],
+        "tags": [
+          "bento",
+          "grid",
+          "modern",
+          "asymmetric",
+          "asymmetric-grid",
+          "mixed-sizes",
+          "visual-hierarchy",
+          "modular",
+          "product-designers",
+          "agencies",
+          "startups",
+          "japanese",
+          "bento-box",
+          "inspired",
+          "grid-layout"
+        ],
+        "bestFor": [
+          "סוכנויות רב-שירות",
+          "תצוגות מוצרים",
+          "פורטפוליו יצירתיים",
+          "מערכות עיצוב"
+        ],
+        "longDescription": "מערכת עיצוב מודולרית בהשראת יפן ששוברת את המגבלות של גרידים מסורתיים. פריסות אסימטריות שיוצרות מתח ועניין חזותי תוך שמירה על איזון מושלם. כוללת זרימת תוכן חכמה, גודל מבוסס עדיפויות, ונקודות שבירה רספונסיביות ששומרות על כוונת העיצוב בכל המכשירים. כל 'קופסת בנטו' יכולה להכיל סוגי תוכן שונים: תמונות, סרטונים, טקסט או אלמנטים אינטראקטיביים. מושלם עבור סוכנויות המציגות שירותים מגוונים או פורטפוליו המציגים עבודות שונות.",
+        "whatsIncluded": [
+          "מערכת גריד בנטו",
+          "פריסות אסימטריות",
+          "אנימציות ריחוף",
+          "גריד רספונסיבי",
+          "רכיבי כרטיסים",
+          "קטעים גמישים"
+        ],
+        "price": 69,
+        "technicalDetails": [
+          "מומחיות ב-CSS גריד",
+          "מנוע פריסות אסימטרי",
+          "גודל מבוסס עדיפויות",
+          "גמישות סוגי תוכן",
+          "שומר על איזון אלגוריתמית"
+        ]
+      },
+      {
+        "id": "3d-immersive",
+        "name": "3D Immersive WebGL",
+        "description": "סצנה אינטראקטיבית תלת-ממדית עם Three.js, חלקיקים ואנימציות מקושרות לגלילה.",
+        "category": "Experimental",
+        "difficulty": "advanced",
+        "features": [
+          "Three.js",
+          "גרפיקה תלת-ממדית",
+          "WebGL",
+          "מערכות חלקיקים",
+          "אינטראקטיבי"
+        ],
+        "tags": [
+          "3d",
+          "webgl",
+          "threejs",
+          "immersive",
+          "interactive",
+          "three.js",
+          "3d-graphics",
+          "particle-systems",
+          "3d-artists",
+          "creative-technologists",
+          "game-developers",
+          "experimental",
+          "scene",
+          "three",
+          "particles",
+          "scroll-linked",
+          "animations",
+          "advanced-features",
+          "complex"
+        ],
+        "bestFor": [
+          "חברות טכנולוגיה",
+          "סטודיות משחקים",
+          "חברות AR/VR",
+          "מעבדות חדשנות"
+        ],
+        "longDescription": "חוויית אינטרנט מהדור הבא המונעת על ידי Three.js ו-WebGL. כוללת רינדור מודלים תלת-ממדיים בזמן אמת עם תאורה דינמית, בקרות מצלמה אינטראקטיביות ואנימציות מבוססות פיזיקה. תומכת בייבוא מודלים בפורמט GLTF/GLB, מיפוי טקסטורות והשתקפויות סביבה. כוללת אופטימיזציה לביצועים עבור מכשירים ניידים, טעינה פרוגרסיבית עבור נכסי תלת-ממד וחוויות 2D חלופיות לדפדפנים ישנים יותר. רינדור מואץ על ידי GPU מבטיח 60fps חלקים על מכשירים מודרניים. מהפכני עבור הדמיית מוצרים וחוויות מותג אינטראקטיביות.",
+        "whatsIncluded": [
+          "אינטגרציה עם Three.js",
+          "צופה מודלים תלת-ממדיים",
+          "אפקטים של WebGL",
+          "אלמנטים תלת-ממדיים אינטראקטיביים",
+          "אנימציות חלקות ב-60fps",
+          "תלת-ממד מותאם לנייד"
+        ],
+        "price": 129,
+        "technicalDetails": [
+          "Three.js r150+",
+          "תמיכה ב-WebGL 2.0",
+          "ייבוא GLTF/GLB",
+          "רינדור מואץ על ידי GPU",
+          "אופטימיזציה לתלת-ממד נייד"
+        ]
+      },
+      {
+        "id": "neo-brutalist",
+        "name": "כאוס ניאו-ברוטליסטי",
+        "description": "עיצוב גולמי, מתעמת עם גבולות כבדים, צבעים בולטים וכאוס מכוון.",
+        "category": "Experimental",
+        "difficulty": "intermediate",
+        "features": [
+          "גבולות בולטים",
+          "צבעים בולטים",
+          "עיצוב גולמי",
+          "מתעמת"
+        ],
+        "tags": [
+          "brutalism",
+          "bold",
+          "experimental",
+          "edgy",
+          "bold-borders",
+          "stark-colors",
+          "raw-design",
+          "confrontational",
+          "agencies",
+          "art-directors",
+          "rebellious-brands",
+          "design",
+          "heavy",
+          "borders",
+          "stark",
+          "neo-brutalist",
+          "chaos"
+        ],
+        "bestFor": [
+          "סוכנויות יצירה",
+          "פרויקטי אמנות",
+          "מותגים אלטרנטיביים",
+          "תרבות נוער"
+        ],
+        "longDescription": "עיצוב מרדני שמסרב לקבל את הנורמות המודרניות. אסתטיקה גולמית וללא התנצלות בהשראת אדריכלות ברוטליסטית ותרבות פאנק רוק. פריסות 'שבורות' בכוונה, צבעים מתנגשים וטיפוגרפיה אגרסיבית יוצרים תגובות רגשיות חזקות. כולל אלמנטים מצוירים ביד, אפקטים של גליוץ ואנימציות אנטי-חלקות. מושלם עבור מותגים שמסרבים להתאים, אמנים שמביעים אמירה, ופרויקטים שמאתגרים את המצב הקיים. לא עבור אנשים רגישים.",
+        "whatsIncluded": [
+          "מערכת גבולות בולטים",
+          "צבעים בעלי ניגוד גבוה",
+          "טיפוגרפיה ברוטליסטית",
+          "אי-שלמות מכוונת",
+          "אסתטיקה גולמית",
+          "אלמנטים אנטי-עיצוב"
+        ],
+        "price": 79,
+        "technicalDetails": [
+          "שבירת פריסות מכוונת",
+          "מערכת אפקט גליוץ",
+          "אלמנטים SVG מצוירים ביד",
+          "אנימציות אנטי-חלקות",
+          "אסתטיקות פאנק רוק"
+        ]
+      },
+      {
+        "id": "organic-liquid",
+        "name": "מורפינג נוזלי אורגני",
+        "description": "צורות של בלובים נוזליים עם אנימציות מורפינג וגרדיאנטים רכים בהשראת הטבע.",
+        "category": "Creative",
+        "difficulty": "advanced",
+        "features": [
+          "אנימציות נוזליות",
+          "בלובים מורפינג",
+          "צורות אורגניות",
+          "גרדיאנטים רכים"
+        ],
+        "tags": [
+          "organic",
+          "fluid",
+          "nature",
+          "wellness",
+          "fluid-animations",
+          "morphing-blobs",
+          "organic-shapes",
+          "soft-gradients",
+          "wellness-brands",
+          "sustainable-businesses",
+          "lifestyle-coaches",
+          "creative",
+          "blob",
+          "shapes",
+          "morphing",
+          "animations",
+          "liquid",
+          "advanced-features",
+          "complex"
+        ],
+        "bestFor": [
+          "מקצוענים",
+          "עסקים",
+          "פרילנסרים",
+          "סוכנויות"
+        ],
+        "longDescription": "תבנית נוזלית אורגנית מקצועית עם עיצוב חדיש ותכונות חזקות. מותאמת להמרות, ביצועים וחוויית משתמש. כוללת אפשרויות התאמה מתקדמות, פריסות רספונסיביות ורכיבי UI מודרניים.",
+        "whatsIncluded": [
+          "עיצוב רספונסיבי",
+          "תמיכה במצב כהה",
+          "אופטימיזציה ל-SEO",
+          "ביצועים מהירים",
+          "רכיבי UI מודרניים",
+          "התאמה קלה"
+        ],
+        "price": 69,
+        "technicalDetails": [
+          "ארכיטקטורה מודרנית",
+          "אופטימיזציה לביצועים",
+          "מוכן ל-SEO",
+          "נגישות בראש",
+          "מוכן לייצור"
+        ]
+      },
+      {
+        "id": "data-dashboard",
+        "name": "לוח מחוונים להמחשת נתונים",
+        "description": "לוח מחוונים אינטראקטיבי עם תרשימים, גרפים והמחשת מדדים בזמן אמת.",
+        "category": "Professional",
+        "difficulty": "advanced",
+        "features": [
+          "תרשימים",
+          "גרפים",
+          "כרטיסי KPI",
+          "המחשת נתונים",
+          "אנליטיקה"
+        ],
+        "tags": [
+          "dashboard",
+          "data",
+          "analytics",
+          "professional",
+          "charts",
+          "graphs",
+          "kpi-cards",
+          "data-visualization",
+          "data-analysts",
+          "business-intelligence",
+          "consultants",
+          "interactive",
+          "real-time",
+          "visualization",
+          "advanced-features",
+          "complex"
+        ],
+        "bestFor": [
+          "מקצוענים",
+          "עסקים",
+          "פרילנסרים",
+          "סוכנויות"
+        ],
+        "longDescription": "תבנית לוח מחוונים מקצועי עם עיצוב חדיש ותכונות חזקות. מותאם להמרות, ביצועים וחוויית משתמש. כולל אפשרויות התאמה מתקדמות, פריסות רספונסיביות ורכיבי UI מודרניים.",
+        "whatsIncluded": [
+          "עיצוב רספונסיבי",
+          "תמיכה במצב כהה",
+          "מותאם ל-SEO",
+          "ביצועים מהירים",
+          "רכיבי UI מודרניים",
+          "התאמה קלה"
+        ],
+        "price": 69,
+        "technicalDetails": [
+          "ארכיטקטורה מודרנית",
+          "מותאם לביצועים",
+          "מוכן ל-SEO",
+          "נגישות בראש",
+          "מוכן לייצור"
+        ]
+      },
+      {
+        "id": "y2k-retro",
+        "name": "Y2K רטרו נוסטלגיה",
+        "description": "אסתטיקה של תחילת שנות ה-2000 עם צבעים בהירים, טיפוגרפיה בולטת ואלמנטים משחקיים.",
+        "category": "Creative",
+        "difficulty": "intermediate",
+        "features": [
+          "עיצוב רטרו",
+          "צבעים בהירים",
+          "אפקטים על העכבר",
+          "UI משחקי"
+        ],
+        "tags": [
+          "y2k",
+          "retro",
+          "nostalgia",
+          "playful",
+          "colorful",
+          "retro-design",
+          "bright-colors",
+          "cursor-effects",
+          "playful-ui",
+          "digital-artists",
+          "content-creators",
+          "youth-brands",
+          "creative",
+          "early",
+          "2000s",
+          "aesthetic",
+          "bright",
+          "colors"
+        ],
+        "bestFor": [
+          "מקצוענים",
+          "עסקים",
+          "פרילנסרים",
+          "סוכנויות"
+        ],
+        "longDescription": "תבנית Y2K רטרו מקצועית עם עיצוב חדיש ותכונות חזקות. מותאמת להמרות, ביצועים וחווית משתמש. כוללת אפשרויות התאמה מתקדמות, פריסות רספונסיביות ורכיבי UI מודרניים.",
+        "whatsIncluded": [
+          "עיצוב רספונסיבי",
+          "תמיכה במצב כהה",
+          "מוטבע SEO",
+          "ביצועים מהירים",
+          "רכיבי UI מודרניים",
+          "התאמה קלה"
+        ],
+        "price": 69,
+        "technicalDetails": [
+          "אדריכלות מודרנית",
+          "מוטבע ביצועים",
+          "מוכן ל-SEO",
+          "נגישות ראשונה",
+          "מוכן לייצור"
+        ]
+      },
+      {
+        "id": "ar-spatial",
+        "name": "AR/מחשוב מרחבי",
+        "description": "ממשק מחשוב מרחבי עתידני עם UI שכבות ואינטראקציות בהשראת מחוות.",
+        "category": "Experimental",
+        "difficulty": "advanced",
+        "features": [
+          "UI מרחבי",
+          "עיצוב שכבות",
+          "עומק תלת ממדי",
+          "טכנולוגיה עתידית"
+        ],
+        "tags": [
+          "ar",
+          "spatial",
+          "future",
+          "3d",
+          "experimental",
+          "spatial-ui",
+          "layered-design",
+          "3d-depth",
+          "future-tech",
+          "ar-vr-developers",
+          "future-tech-companies",
+          "innovation-labs",
+          "futuristic",
+          "computing",
+          "interface",
+          "layered",
+          "advanced-features",
+          "complex"
+        ],
+        "bestFor": [
+          "מקצוענים",
+          "עסקים",
+          "פרילנסרים",
+          "סוכנויות"
+        ],
+        "longDescription": "תבנית מקצועית של AR Spatial עם עיצוב חדיש ותכונות חזקות. מותאמת להמרות, ביצועים וחוויית משתמש. כוללת אפשרויות התאמה אישית מתקדמות, פריסות רספונסיביות ורכיבי UI מודרניים.",
+        "whatsIncluded": [
+          "עיצוב רספונסיבי",
+          "תמיכה במצב כהה",
+          "מוטבע SEO",
+          "ביצועים מהירים",
+          "רכיבי UI מודרניים",
+          "התאמה אישית קלה"
+        ],
+        "price": 69,
+        "technicalDetails": [
+          "אדריכלות מודרנית",
+          "מוטבע ביצועים",
+          "מוכן ל-SEO",
+          "נגישות בראש",
+          "מוכן לייצור"
+        ]
+      },
+      {
+        "id": "collage-maximalist",
+        "name": "קולאז' מקסימליסטי",
+        "description": "אסתטיקת ספר תמונות עם אלמנטים שכבתיים, מדיה מעורבת וכאוס מכוון.",
+        "category": "Creative",
+        "difficulty": "intermediate",
+        "features": [
+          "עיצוב שכבות",
+          "מדיה מעורבת",
+          "אלמנטים מסובבים",
+          "מקסימליסטי"
+        ],
+        "tags": [
+          "collage",
+          "maximalist",
+          "artistic",
+          "layered",
+          "layered-design",
+          "mixed-media",
+          "rotated-elements",
+          "artists",
+          "mixed-media-designers",
+          "creative-studios",
+          "creative",
+          "scrapbook",
+          "aesthetic",
+          "elements",
+          "mixed"
+        ],
+        "bestFor": [
+          "מקצוענים",
+          "עסקים",
+          "פרילנסרים",
+          "סוכנויות"
+        ],
+        "longDescription": "תבנית קולאז' מקסימליסטי מקצועית עם עיצוב חדיש ותכונות חזקות. מותאמת להמרות, ביצועים וחוויית משתמש. כוללת אפשרויות התאמה מתקדמות, פריסות רספונסיביות ורכיבי UI מודרניים.",
+        "whatsIncluded": [
+          "עיצוב רספונסיבי",
+          "תמיכה במצב כהה",
+          "אופטימיזציה ל-SEO",
+          "ביצועים מהירים",
+          "רכיבי UI מודרניים",
+          "התאמה קלה"
+        ],
+        "price": 69,
+        "technicalDetails": [
+          "ארכיטקטורה מודרנית",
+          "אופטימיזציה לביצועים",
+          "מוכן ל-SEO",
+          "נגישות קודם",
+          "מוכן לייצור"
+        ]
+      },
+      {
+        "id": "product-saas",
+        "name": "דף נחיתה למוצר SaaS",
+        "description": "דף נחיתה מודרני למוצר SaaS עם תכונות, רמות תמחור, המלצות ואופטימיזציה להמרות.",
+        "category": "Service",
+        "difficulty": "intermediate",
+        "features": [
+          "טבלאות תמחור",
+          "הצגת תכונות",
+          "המלצות",
+          "מקטע שאלות נפוצות"
+        ],
+        "tags": [
+          "saas",
+          "product",
+          "landing",
+          "conversion",
+          "pricing-tables",
+          "feature-showcase",
+          "testimonials",
+          "faq-section",
+          "saas-products",
+          "web-apps",
+          "tech-startups",
+          "service",
+          "modern",
+          "page",
+          "modern-design",
+          "landing-page",
+          "product-page",
+          "software"
+        ],
+        "bestFor": [
+          "מוצרי SaaS",
+          "כלי תוכנה",
+          "אפליקציות אינטרנט",
+          "שירותים מבוססי מנוי"
+        ],
+        "longDescription": "דף מוצר SaaS מתוכנן להמרות של ניסיונות חינם. כולל כותרות ממוקדות תועלות (לא רשימות תכונות), הוכחת חברה מעל הקיפול, ומיקום אסטרטגי של קריאות לפעולה. כולל הדגמות מוצר אינטראקטיביות, טבלאות השוואת תמחור עם עיגון מבוסס פסיכולוגיה, ומקטעי שאלות נפוצות המaddressing התנגדויות שכיחות. נבנה עם שיטות עבודה מומלצות לאופטימיזציה של שיעור ההמרה: אלמנטים של דחיפות, תגי אחריות, ומקטעים של הצעות מוגבלות בזמן. שיעור ההרשמה הממוצע לניסיון: 8.3%.",
+        "whatsIncluded": [
+          "טבלת השוואת תכונות",
+          "רמות תמחור",
+          "תהליך הרשמה לניסיון",
+          "צילומי מסך של המוצר",
+          "הדגמות אינטגרציה",
+          "מקטע שאלות נפוצות"
+        ],
+        "price": 89,
+        "technicalDetails": [
+          "שיעור הרשמה לניסיון 8.3%",
+          "הדגמת מוצר אינטראקטיבית",
+          "פסיכולוגיית תמחור",
+          "שאלות נפוצות על טיפול בהתנגדויות",
+          "אלמנטים של דחיפות"
+        ]
+      },
+      {
+        "id": "product-course",
+        "name": "דף נחיתה לקורס/חינוך",
+        "description": "דף נחיתה לקורס חינוכי עם אמינות מדריך, תוכנית לימודים, טרנספורמציות לפני/אחרי.",
+        "category": "Service",
+        "difficulty": "intermediate",
+        "features": [
+          "פירוט תוכנית לימודים",
+          "סיפורי הצלחה של תלמידים",
+          "ערבות תעסוקה",
+          "תוכניות תשלום"
+        ],
+        "tags": [
+          "course",
+          "education",
+          "learning",
+          "training",
+          "curriculum-breakdown",
+          "student-success-stories",
+          "job-guarantee",
+          "payment-plans",
+          "course-creators",
+          "educators",
+          "online-schools",
+          "service",
+          "educational",
+          "landing",
+          "page",
+          "instructor",
+          "landing-page"
+        ],
+        "bestFor": [
+          "מקצוענים",
+          "עסקים",
+          "פרילנסרים",
+          "סוכנויות"
+        ],
+        "longDescription": "תבנית קורס מוצר מקצועית עם עיצוב חדיש ותכונות חזקות. מותאמת להמרות, ביצועים וחוויית משתמש. כוללת אפשרויות התאמה אישית מתקדמות, פריסות רספונסיביות ורכיבי UI מודרניים.",
+        "whatsIncluded": [
+          "עיצוב רספונסיבי",
+          "תמיכה במצב כהה",
+          "מותאם ל-SEO",
+          "ביצועים מהירים",
+          "רכיבי UI מודרניים",
+          "התאמה אישית קלה"
+        ],
+        "price": 69,
+        "technicalDetails": [
+          "ארכיטקטורה מודרנית",
+          "מותאם לביצועים",
+          "מוכן ל-SEO",
+          "נגישות בראש סדר העדיפויות",
+          "מוכן לייצור"
+        ]
+      },
+      {
+        "id": "product-tech",
+        "name": "מוצר טכנולוגי/משחקים",
+        "description": "תצוגת מוצר טכנולוגי/משחקים כהה עם גיבור וידאו, טבלת השוואת מפרטים, ורשת תכונות בנטו.",
+        "category": "Product",
+        "difficulty": "intermediate",
+        "features": [
+          "גיבור וידאו",
+          "השוואת מפרטים",
+          "רשת בנטו",
+          "ביקורות טכנולוגיות"
+        ],
+        "tags": [
+          "tech",
+          "gaming",
+          "hardware",
+          "electronics",
+          "video-hero",
+          "specs-comparison",
+          "bento-grid",
+          "tech-reviews",
+          "gaming-hardware",
+          "tech-products",
+          "electronics-brands",
+          "product",
+          "dark",
+          "showcase",
+          "grid-layout",
+          "dark-theme",
+          "product-page"
+        ],
+        "bestFor": [
+          "מקצוענים",
+          "עסקים",
+          "פרילנסרים",
+          "סוכנויות"
+        ],
+        "longDescription": "תבנית מוצר טכנולוגי מקצועית עם עיצוב חדיש ותכונות חזקות. מותאמת להמרות, ביצועים, וחוויית משתמש. כוללת אפשרויות התאמה מתקדמות, פריסות רספונסיביות, ורכיבי UI מודרניים.",
+        "whatsIncluded": [
+          "עיצוב רספונסיבי",
+          "תמיכה במצב כהה",
+          "מותאם ל-SEO",
+          "ביצועים מהירים",
+          "רכיבי UI מודרניים",
+          "התאמה קלה"
+        ],
+        "price": 69,
+        "technicalDetails": [
+          "אדריכלות מודרנית",
+          "מותאם לביצועים",
+          "מוכן ל-SEO",
+          "נגישות קודם",
+          "מוכן לייצור"
+        ]
+      },
+      {
+        "id": "product-physical",
+        "name": "תצוגת מוצר פיזי",
+        "description": "תצוגת מוצר מינימליסטית עם בורר צבעים, תצוגות 360°, מפרטים טכניים, וטבלת השוואה.",
+        "category": "Product",
+        "difficulty": "intermediate",
+        "features": [
+          "גלריית מוצרים",
+          "מפרטים טכניים",
+          "ביקורות לקוחות",
+          "טבלת השוואה"
+        ],
+        "tags": [
+          "ecommerce",
+          "product",
+          "physical",
+          "minimalist",
+          "product-gallery",
+          "technical-specs",
+          "customer-reviews",
+          "comparison-table",
+          "e-commerce",
+          "product-designers",
+          "brands",
+          "showcase",
+          "color",
+          "selector",
+          "product-page"
+        ],
+        "bestFor": [
+          "מקצוענים",
+          "עסקים",
+          "פרילנסרים",
+          "סוכנויות"
+        ],
+        "longDescription": "תבנית מוצר פיזי מקצועית עם עיצוב חדיש ותכונות חזקות. מותאמת להמרות, ביצועים, וחוויית משתמש. כוללת אפשרויות התאמה מתקדמות, פריסות רספונסיביות, ורכיבי UI מודרניים.",
+        "whatsIncluded": [
+          "עיצוב רספונסיבי",
+          "תמיכה במצב כהה",
+          "מותאם ל-SEO",
+          "ביצועים מהירים",
+          "רכיבי UI מודרניים",
+          "התאמה קלה"
+        ],
+        "price": 69,
+        "technicalDetails": [
+          "ארכיטקטורה מודרנית",
+          "מותאם לביצועים",
+          "מוכן ל-SEO",
+          "נגישות קודם כל",
+          "מוכן לייצור"
+        ]
+      },
+      {
+        "id": "product-premium",
+        "name": "שירות פרימיום/יוקרתי",
+        "description": "דף שירות יוקרתי עם מיקום בלעדי, מקרים לדוגמה, ותהליך הגשה.",
+        "category": "Service",
+        "difficulty": "advanced",
+        "features": [
+          "מקרים לדוגמה",
+          "תהליך הגשה",
+          "הבטחת הכנסה",
+          "עיצוב יוקרתי"
+        ],
+        "tags": [
+          "premium",
+          "luxury",
+          "high-ticket",
+          "exclusive",
+          "case-studies",
+          "application-process",
+          "income-guarantee",
+          "luxury-design",
+          "consulting",
+          "coaching",
+          "premium-services",
+          "service",
+          "page",
+          "service-page",
+          "advanced-features",
+          "complex"
+        ],
+        "bestFor": [
+          "מקצוענים",
+          "עסקים",
+          "פרילנסרים",
+          "סוכנויות"
+        ],
+        "longDescription": "תבנית מוצר פרימיום מקצועית עם עיצוב חדיש ותכונות חזקות. מותאמת להמרות, ביצועים, וחוויית משתמש. כוללת אפשרויות התאמה מתקדמות, פריסות רספונסיביות, ורכיבי UI מודרניים.",
+        "whatsIncluded": [
+          "עיצוב רספונסיבי",
+          "תמיכה במצב כהה",
+          "אופטימיזציה ל-SEO",
+          "ביצועים מהירים",
+          "רכיבי UI מודרניים",
+          "התאמה קלה"
+        ],
+        "price": 69,
+        "technicalDetails": [
+          "ארכיטקטורה מודרנית",
+          "אופטימיזציה לביצועים",
+          "מוכן ל-SEO",
+          "נגישות בראש",
+          "מוכן לייצור"
+        ]
+      },
+      {
+        "id": "voice-first",
+        "name": "שיחה באמצעות קול",
+        "description": "ממשק מופעל קול עם UI שיחתי ודפוסי אינטראקציה קולית.",
+        "category": "Experimental",
+        "difficulty": "advanced",
+        "features": [
+          "UI קולית",
+          "שיחתי",
+          "דפוסי דיבור",
+          "גלי קול"
+        ],
+        "tags": [
+          "voice",
+          "conversational",
+          "ai",
+          "future",
+          "voice-ui",
+          "speech-patterns",
+          "waveform",
+          "voice-ux-designers",
+          "conversational-ai",
+          "voice-assistants",
+          "experimental",
+          "voice-activated",
+          "interface",
+          "speech",
+          "interaction",
+          "voice-first",
+          "advanced-features",
+          "complex"
+        ],
+        "bestFor": [
+          "מקצוענים",
+          "עסקים",
+          "פרילנסרים",
+          "סוכנויות"
+        ],
+        "longDescription": "תבנית מקצועית Voice First עם עיצוב חדיש ותכונות חזקות. מותאמת להמרות, ביצועים וחוויית משתמש. כוללת אפשרויות התאמה מתקדמות, פריסות רספונסיביות ורכיבי UI מודרניים.",
+        "whatsIncluded": [
+          "עיצוב רספונסיבי",
+          "תמיכה במצב כהה",
+          "מותאם ל-SEO",
+          "ביצועים מהירים",
+          "רכיבי UI מודרניים",
+          "התאמה קלה"
+        ],
+        "price": 69,
+        "technicalDetails": [
+          "ארכיטקטורה מודרנית",
+          "מותאם לביצועים",
+          "מוכן ל-SEO",
+          "נגישות בראש",
+          "מוכן לייצור"
+        ]
+      },
+      {
+        "id": "product-fashion",
+        "name": "מוצר אופנה/אורח חיים",
+        "description": "תצוגת מוצרי אופנה ברת קיימא עם צילום אורח חיים, גלריה לגלילה אנכית, וביקורות לקוחות.",
+        "category": "Product",
+        "difficulty": "intermediate",
+        "features": [
+          "צילום אורח חיים",
+          "בוחר גודל/צבע",
+          "מיקוד ברות קיימא",
+          "תמונות לקוחות"
+        ],
+        "tags": [
+          "fashion",
+          "sustainable",
+          "lifestyle",
+          "ecommerce",
+          "lifestyle-photography",
+          "size/color-selector",
+          "sustainability-focus",
+          "customer-photos",
+          "fashion-brands",
+          "sustainable-products",
+          "lifestyle-brands",
+          "product",
+          "showcase",
+          "product-page"
+        ],
+        "bestFor": [
+          "מקצוענים",
+          "עסקים",
+          "פרילנסרים",
+          "סוכנויות"
+        ],
+        "longDescription": "תבנית מוצר אופנה מקצועית עם עיצוב חדיש ותכונות חזקות. מותאמת להמרות, ביצועים, וחווית משתמש. כוללת אפשרויות התאמה מתקדמות, פריסות רספונסיביות, ורכיבי UI מודרניים.",
+        "whatsIncluded": [
+          "עיצוב רספונסיבי",
+          "תמיכה במצב כהה",
+          "מותאם ל-SEO",
+          "ביצועים מהירים",
+          "רכיבי UI מודרניים",
+          "התאמה קלה"
+        ],
+        "price": 69,
+        "technicalDetails": [
+          "ארכיטקטורה מודרנית",
+          "מותאם לביצועים",
+          "מוכן ל-SEO",
+          "נגישות קודם כל",
+          "מוכן לייצור"
+        ]
+      },
+      {
+        "id": "product-luxury",
+        "name": "מוצר יוקרתי/פרימיום",
+        "description": "עמוד מוצר יוקרתי עם אלגנטיות כהה, סיפור מורשת, פרטי אומנות וקונפיגורטור פרימיום.",
+        "category": "Product",
+        "difficulty": "advanced",
+        "features": [
+          "וידאו קולנועי",
+          "ציר זמן של מורשת",
+          "קונפיגורטור פרימיום",
+          "פרסים ותקשורת"
+        ],
+        "tags": [
+          "luxury",
+          "premium",
+          "heritage",
+          "craftsmanship",
+          "cinematic-video",
+          "heritage-timeline",
+          "premium-configurator",
+          "awards-&-press",
+          "luxury-brands",
+          "high-end-products",
+          "swiss-watches",
+          "premium-goods",
+          "product",
+          "dark",
+          "elegance",
+          "page",
+          "dark-theme",
+          "product-page",
+          "advanced-features",
+          "complex"
+        ],
+        "bestFor": [
+          "מקצוענים",
+          "עסקים",
+          "פרילנסרים",
+          "סוכנויות"
+        ],
+        "longDescription": "תבנית מוצר יוקרתי מקצועית עם עיצוב חדיש ותכונות חזקות. מותאמת להמרות, ביצועים וחוויית משתמש. כוללת אפשרויות התאמה מתקדמות, פריסות רספונסיביות ורכיבי UI מודרניים.",
+        "whatsIncluded": [
+          "עיצוב רספונסיבי",
+          "תמיכה במצב כהה",
+          "מותאם ל-SEO",
+          "ביצועים מהירים",
+          "רכיבי UI מודרניים",
+          "התאמה קלה"
+        ],
+        "price": 69,
+        "technicalDetails": [
+          "אדריכלות מודרנית",
+          "מותאם לביצועים",
+          "מוכן ל-SEO",
+          "נגישות קודם כל",
+          "מוכן לייצור"
+        ]
+      },
+      {
+        "id": "product-audio",
+        "name": "מוצר שמע פרימיום",
+        "description": "דף מוצר אוזניות אלחוטיות מהשורה הראשונה עם צופה אינטראקטיבי תלת-ממדי, הדגמת שמע מרחבי, מפרטים טכניים, וטבלת השוואה.",
+        "category": "Product",
+        "difficulty": "advanced",
+        "features": [
+          "צופה אינטראקטיבי תלת-ממדי",
+          "בוחר צבעים",
+          "הדגמת שמע מרחבי",
+          "טבלת מפרטים",
+          "ביקורות מומחים"
+        ],
+        "tags": [
+          "audio",
+          "headphones",
+          "wireless",
+          "premium",
+          "tech",
+          "interactive-3d-viewer",
+          "color-selector",
+          "spatial-audio-demo",
+          "specs-table",
+          "expert-reviews",
+          "audio-brands",
+          "consumer-electronics",
+          "premium-tech-products",
+          "product",
+          "high-end",
+          "page",
+          "product-page",
+          "advanced-features",
+          "complex"
+        ],
+        "bestFor": [
+          "מקצוענים",
+          "עסקים",
+          "פרילנסרים",
+          "סוכנויות"
+        ],
+        "longDescription": "תבנית מוצר שמע מקצועית עם עיצוב חדיש ותכונות חזקות. מותאמת להמרות, ביצועים, וחוויית משתמש. כוללת אפשרויות התאמה מתקדמות, פריסות רספונסיביות, ורכיבי UI מודרניים.",
+        "whatsIncluded": [
+          "עיצוב רספונסיבי",
+          "תמיכה במצב כהה",
+          "מותאם ל-SEO",
+          "ביצועים מהירים",
+          "רכיבי UI מודרניים",
+          "התאמה קלה"
+        ],
+        "price": 69,
+        "technicalDetails": [
+          "אדריכלות מודרנית",
+          "מותאם לביצועים",
+          "מוכן ל-SEO",
+          "נגישות בראש סדר העדיפויות",
+          "מוכן לייצור"
+        ]
+      },
+      {
+        "id": "product-vacuum",
+        "name": "שואב אבק חכם",
+        "description": "דף מוצר לשואב אבק ללא כבל עם מדדי ביצועים, זיהוי אבק בלייזר, מצבי ניקוי אינטליגנטיים, וטבלת השוואת כוח.",
+        "category": "Product",
+        "difficulty": "advanced",
+        "features": [
+          "מדדי ביצועים",
+          "מצבי ניקוי",
+          "תצוגת אביזרים",
+          "טבלת השוואה",
+          "פרסים"
+        ],
+        "tags": [
+          "appliance",
+          "vacuum",
+          "smart home",
+          "cleaning",
+          "cordless",
+          "performance-metrics",
+          "cleaning-modes",
+          "accessory-showcase",
+          "comparison-table",
+          "awards",
+          "home-appliance-brands",
+          "smart-home-devices",
+          "premium-cleaning-tools",
+          "product",
+          "page",
+          "performance",
+          "smart",
+          "cleaner",
+          "product-page",
+          "advanced-features",
+          "complex"
+        ],
+        "bestFor": [
+          "מקצוענים",
+          "עסקים",
+          "פרילנסרים",
+          "סוכנויות"
+        ],
+        "longDescription": "תבנית מוצר מקצועית לשואב אבק עם עיצוב חדיש ותכונות חזקות. מותאמת להמרות, ביצועים, וחוויית משתמש. כוללת אפשרויות התאמה מתקדמות, פריסות רספונסיביות, ורכיבי UI מודרניים.",
+        "whatsIncluded": [
+          "עיצוב רספונסיבי",
+          "תמיכה במצב כהה",
+          "מותאם ל-SEO",
+          "ביצועים מהירים",
+          "רכיבי UI מודרניים",
+          "התאמה קלה"
+        ],
+        "price": 69,
+        "technicalDetails": [
+          "אדריכלות מודרנית",
+          "מותאם לביצועים",
+          "מוכן ל-SEO",
+          "נגישות בראש",
+          "מוכן לייצור"
+        ]
+      },
+      {
+        "id": "service-b2b",
+        "name": "שירות מקצועי B2B",
+        "description": "שירות ייעוץ B2B ארגוני עם מחקרי מקרה נרחבים, מדדי ROI, ואמינות מוסדית.",
+        "category": "Service",
+        "difficulty": "advanced",
+        "features": [
+          "מחקרי מקרה עם ROI",
+          "מומחיות בתעשייה",
+          "מנהיגות מחשבתית",
+          "לוגואים של לקוחות"
+        ],
+        "tags": [
+          "b2b",
+          "consulting",
+          "professional",
+          "enterprise",
+          "case-studies-with-roi",
+          "industry-expertise",
+          "thought-leadership",
+          "client-logos",
+          "consulting-firms",
+          "b2b-services",
+          "enterprise-solutions",
+          "service",
+          "corporate",
+          "extensive",
+          "case",
+          "business",
+          "consultant",
+          "service-page",
+          "advanced-features",
+          "complex"
+        ],
+        "bestFor": [
+          "מקצוענים",
+          "עסקים",
+          "פרילנסרים",
+          "סוכנויות"
+        ],
+        "longDescription": "תבנית שירות מקצועי B2B עם עיצוב חדיש ותכונות חזקות. אופטימלית להמרות, ביצועים, וחוויית משתמש. כוללת אפשרויות התאמה אישית מתקדמות, פריסות רספונסיביות, ורכיבי UI מודרניים.",
+        "whatsIncluded": [
+          "עיצוב רספונסיבי",
+          "תמיכה במצב כהה",
+          "אופטימיזציה ל-SEO",
+          "ביצועים מהירים",
+          "רכיבי UI מודרניים",
+          "התאמה אישית קלה"
+        ],
+        "price": 69,
+        "technicalDetails": [
+          "ארכיטקטורה מודרנית",
+          "אופטימיזציה לביצועים",
+          "מוכן ל-SEO",
+          "נגישות בראש",
+          "מוכן לייצור"
+        ]
+      },
+      {
+        "id": "service-community",
+        "name": "פלטפורמת קהילה/חברות",
+        "description": "פלטפורמת הצעת ערך כפולה ליוצרים ולחברים עם מחירים שקופים ומדדי הצלחה.",
+        "category": "Service",
+        "difficulty": "intermediate",
+        "features": [
+          "קהל כפול",
+          "תצוגת יוצרים",
+          "דרגות תמחור",
+          "סיפורי הצלחה"
+        ],
+        "tags": [
+          "community",
+          "membership",
+          "platform",
+          "creators",
+          "dual-audience",
+          "creator-showcase",
+          "pricing-tiers",
+          "success-stories",
+          "community-platforms",
+          "membership-sites",
+          "creator-tools",
+          "service",
+          "dual",
+          "value",
+          "proposition"
+        ],
+        "bestFor": [
+          "מקצוענים",
+          "עסקים",
+          "עצמאיים",
+          "סוכנויות"
+        ],
+        "longDescription": "תבנית קהילת שירות מקצועי עם עיצוב חדיש ותכונות חזקות. מותאמת להמרות, ביצועים, וחוויית משתמש. כוללת אפשרויות התאמה מתקדמות, פריסות רספונסיביות, ורכיבי UI מודרניים.",
+        "whatsIncluded": [
+          "עיצוב רספונסיבי",
+          "תמיכה במצב כהה",
+          "מותאם ל-SEO",
+          "ביצועים מהירים",
+          "רכיבי UI מודרניים",
+          "התאמה קלה"
+        ],
+        "price": 69,
+        "technicalDetails": [
+          "ארכיטקטורה מודרנית",
+          "מותאם לביצועים",
+          "מוכן ל-SEO",
+          "נגישות בראש סדר העדיפויות",
+          "מוכן לייצור"
+        ]
+      },
+      {
+        "id": "service-dfyou",
+        "name": "שירות מוכן עבורך",
+        "description": "שירות מוצרי בלתי מוגבל עם תצוגת תיק עבודות, מסרים עם דגש על אחריות, וחלק שאלות נפוצות.",
+        "category": "Service",
+        "difficulty": "intermediate",
+        "features": [
+          "סינון תיק עבודות",
+          "מודל בלתי מוגבל",
+          "אחריות",
+          "שאלות נפוצות"
+        ],
+        "tags": [
+          "service",
+          "subscription",
+          "unlimited",
+          "design",
+          "portfolio-filtering",
+          "unlimited-model",
+          "guarantees",
+          "faq",
+          "design-services",
+          "productized-services",
+          "subscription-services",
+          "productized",
+          "portfolio",
+          "showcase",
+          "done-for-you",
+          "product-page",
+          "service-page"
+        ],
+        "bestFor": [
+          "מקצוענים",
+          "עסקים",
+          "פרילנסרים",
+          "סוכנויות"
+        ],
+        "longDescription": "תבנית שירות מקצועי Dfyou עם עיצוב חדיש ותכונות חזקות. מותאמת להמרות, ביצועים, וחוויית משתמש. כוללת אפשרויות התאמה מתקדמות, פריסות רספונסיביות, ורכיבי UI מודרניים.",
+        "whatsIncluded": [
+          "עיצוב רספונסיבי",
+          "תמיכה במצב כהה",
+          "מותאם ל-SEO",
+          "ביצועים מהירים",
+          "רכיבי UI מודרניים",
+          "התאמה קלה"
+        ],
+        "price": 69,
+        "technicalDetails": [
+          "ארכיטקטורה מודרנית",
+          "ביצועים מותאמים",
+          "מוכן ל-SEO",
+          "נגישות ראשונה",
+          "מוכן לייצור"
+        ]
+      },
+      {
+        "id": "service-agency",
+        "name": "תצוגת סוכנות יצירתית",
+        "description": "דף נחיתה של סוכנות דיגיטלית זוכת פרסים עם אסטרטגיית מותג, עיצוב יצירתי ושירותי שיווק ביצועים.",
+        "category": "Service",
+        "difficulty": "advanced",
+        "features": [
+          "תצוגת פורטפוליו",
+          "פרופילים של צוות",
+          "הצעות שירות",
+          "תהליך עבודה"
+        ],
+        "tags": [
+          "agency",
+          "creative",
+          "branding",
+          "marketing",
+          "portfolio-showcase",
+          "team-profiles",
+          "service-offerings",
+          "process-workflow",
+          "digital-agencies",
+          "creative-studios",
+          "marketing-firms",
+          "service",
+          "award-winning",
+          "digital",
+          "landing",
+          "page",
+          "showcase",
+          "artistic",
+          "landing-page",
+          "agency-portfolio",
+          "service-page",
+          "advanced-features",
+          "complex"
+        ],
+        "bestFor": [
+          "מקצוענים",
+          "עסקים",
+          "פרילנסרים",
+          "סוכנויות"
+        ],
+        "longDescription": "תבנית סוכנות שירותים מקצועית עם עיצוב חדיש ותכונות חזקות. מותאמת להמרות, ביצועים וחוויית משתמש. כוללת אפשרויות התאמה מתקדמות, פריסות רספונסיביות ורכיבי UI מודרניים.",
+        "whatsIncluded": [
+          "עיצוב רספונסיבי",
+          "תמיכה במצב כהה",
+          "מותאם ל-SEO",
+          "ביצועים מהירים",
+          "רכיבי UI מודרניים",
+          "התאמה קלה"
+        ],
+        "price": 69,
+        "technicalDetails": [
+          "ארכיטקטורה מודרנית",
+          "מותאם לביצועים",
+          "מוכן ל-SEO",
+          "נגישות קודם",
+          "מוכן לייצור"
+        ]
+      },
+      {
+        "id": "service-enterprise",
+        "name": "פלטפורמת ענן ארגונית",
+        "description": "פתרונות ענן ברמה ארגונית עם אבטחה, ציות והיקף גלובלי עבור חברות פורצ'ן 500.",
+        "category": "Service",
+        "difficulty": "advanced",
+        "features": [
+          "מאושר SOC 2",
+          "תמחור ארגוני",
+          "מחקרי מקרה",
+          "תצוגת אינטגרציה"
+        ],
+        "tags": [
+          "enterprise",
+          "cloud",
+          "security",
+          "compliance",
+          "soc-2-certified",
+          "enterprise-pricing",
+          "case-studies",
+          "integration-showcase",
+          "saas-companies",
+          "cloud-platforms",
+          "enterprise-solutions",
+          "service",
+          "enterprise-grade",
+          "solutions",
+          "platform",
+          "b2b",
+          "advanced-features",
+          "complex"
+        ],
+        "bestFor": [
+          "מקצוענים",
+          "עסקים",
+          "פרילנסרים",
+          "סוכנויות"
+        ],
+        "longDescription": "תבנית שירות מקצועי לארגונים עם עיצוב חדיש ותכונות חזקות. מותאמת להמרות, ביצועים וחוויית משתמש. כוללת אפשרויות התאמה מתקדמות, פריסות רספונסיביות ורכיבי UI מודרניים.",
+        "whatsIncluded": [
+          "עיצוב רספונסיבי",
+          "תמיכה במצב כהה",
+          "מוכנה ל-SEO",
+          "ביצועים מהירים",
+          "רכיבי UI מודרניים",
+          "התאמה קלה"
+        ],
+        "price": 69,
+        "technicalDetails": [
+          "ארכיטקטורה מודרנית",
+          "ביצועים מותאמים",
+          "מוכן ל-SEO",
+          "נגישות קודם",
+          "מוכן לייצור"
+        ]
+      },
+      {
+        "id": "service-consulting",
+        "name": "חברת ייעוץ אסטרטגי",
+        "description": "ייעוץ ניהולי אליט עבור מנכ",
+        "category": "Service",
+        "difficulty": "advanced",
+        "features": [
+          "מעורבות לקוחות",
+          "פרופילים של שותפים",
+          "מסגרת מתודולוגיה",
+          "מנהיגות מחשבתית"
+        ],
+        "tags": [
+          "consulting",
+          "strategy",
+          "transformation",
+          "executive",
+          "client-engagements",
+          "partner-profiles",
+          "methodology-framework",
+          "thought-leadership",
+          "consulting-firms",
+          "advisory-services",
+          "strategic-consulting",
+          "service",
+          "elite",
+          "management",
+          "ceos",
+          "boards",
+          "strategic",
+          "firm",
+          "consultant",
+          "advanced-features",
+          "complex"
+        ],
+        "bestFor": [
+          "מקצוענים",
+          "עסקים",
+          "פרילנסרים",
+          "סוכנויות"
+        ],
+        "longDescription": "תבנית ייעוץ שירות מקצועי עם עיצוב חדיש ותכונות חזקות. מותאמת להמרות, ביצועים וחוויית משתמש. כוללת אפשרויות התאמה מתקדמות, פריסות רספונסיביות ורכיבי UI מודרניים.",
+        "whatsIncluded": [
+          "עיצוב רספונסיבי",
+          "תמיכה במצב כהה",
+          "מותאם ל-SEO",
+          "ביצועים מהירים",
+          "רכיבי UI מודרניים",
+          "התאמה קלה"
+        ],
+        "price": 69,
+        "technicalDetails": [
+          "אדריכלות מודרנית",
+          "מותאם לביצועים",
+          "מוכן ל-SEO",
+          "נגישות בראש",
+          "מוכן לייצור"
+        ]
+      },
+      {
+        "id": "blog-personal",
+        "name": "בלוג אישי נקי",
+        "description": "בלוג אישי מינימליסטי עם עיצוב נקי, פוסטים בולטים, אינטגרציה של ניוזלטר ושיתוף חברתי.",
+        "category": "Blog",
+        "difficulty": "intermediate",
+        "features": [
+          "פוסטים בולטים",
+          "מסנן קטגוריות",
+          "ניוזלטר",
+          "קישורים חברתיים"
+        ],
+        "tags": [
+          "blog",
+          "personal",
+          "minimalist",
+          "clean",
+          "featured-posts",
+          "category-filter",
+          "newsletter",
+          "social-links",
+          "writers",
+          "personal-brands",
+          "content-creators",
+          "layout",
+          "blog-design"
+        ],
+        "bestFor": [
+          "בלוגרים אישיים",
+          "סופרים",
+          "עיתונאים",
+          "מספרי סיפורים"
+        ],
+        "longDescription": "עיצוב בלוג הממוקד בקריאה, מותאם לתוכן ארוך. טיפוגרפיה מבוססת על מחקר לגבי חוויות קריאה אופטימליות: טקסט גוף בגובה 16-18 פיקסלים, גובה שורה של 1.7, 65-75 תווים בכל שורה. כולל מצב קריאה ללא הסחות דעת, זמן קריאה משוער, אינדיקטור התקדמות ומערכת סימניות. כולל שיתוף חברתי מותאם לכל פלטפורמה, ביוגרפיה של המחבר עם סימני אמינות, ואלגוריתם של מאמרים קשורים. נבנה עבור כותבים שלוקחים את המלאכה שלהם ברצינות.",
+        "whatsIncluded": [
+          "עיצוב מותאם לקריאה",
+          "רשת מאמרים",
+          "קטע ביוגרפיה של המחבר",
+          "שיתוף חברתי",
+          "אינטגרציה של תגובות",
+          "הרשמה לניוזלטר"
+        ],
+        "price": 49,
+        "technicalDetails": [
+          "טיפוגרפיה מותאמת לקריאה",
+          "65-75 תווים בכל שורה",
+          "מצב ללא הסחות דעת",
+          "שורת התקדמות בקריאה",
+          "זמן קריאה משוער"
+        ]
+      },
+      {
+        "id": "blog-magazine",
+        "name": "בלוג עיתונאי מגזיני",
+        "description": "בלוג מקצועי בסגנון מגזין עם פריסות רשת מתקדמות, מאמרים פופולריים, צוות עיתונאי ופריסות מרובות עמודים.",
+        "category": "Blog",
+        "difficulty": "advanced",
+        "features": [
+          "מאמרים פופולריים",
+          "צוות עיתונאי",
+          "רשתות מתקדמות",
+          "מערכת קטגוריות"
+        ],
+        "tags": [
+          "magazine",
+          "editorial",
+          "professional",
+          "media",
+          "trending-articles",
+          "editorial-team",
+          "advanced-grids",
+          "category-system",
+          "online-magazines",
+          "news-sites",
+          "editorial-teams",
+          "blog",
+          "magazine-style",
+          "advanced",
+          "grid",
+          "grid-layout",
+          "business",
+          "blog-design",
+          "advanced-features",
+          "complex"
+        ],
+        "bestFor": [
+          "מגזינים מקוונים",
+          "אתרי חדשות",
+          "מוציאים לאור",
+          "פלטפורמות תוכן"
+        ],
+        "longDescription": "עיצוב עיתונאי בהשראת The New York Times, Vogue, ו-Medium. פריסות מרובות עמודים עם מערכת רשת עיתונאית, תצוגות מאמרים נבחרים, וניווט מבוסס קטגוריות. כולל קרדיטים של מחברים עם תמונות, תאריכי פרסום, תגים לסיפורים, ומדדי מעורבות חברתית. כולל אזורי פרסום מותאמים לפרסומות פרוגרמטיות, קטעי תוכן ממומנים, ואינטגרציה לרישום לניוזלטר. נבנה עבור פרסומים שצריכים למנף תוכן תוך שמירה על שלמות עיתונאית.",
+        "whatsIncluded": [
+          "פריסת מגזין",
+          "מאמרים נבחרים",
+          "רשת מרובת עמודים",
+          "עמודי קטגוריה",
+          "עמודי מחברים",
+          "אזורי מיקום פרסומות"
+        ],
+        "price": 79,
+        "technicalDetails": [
+          "מערכת רשת עיתונאית",
+          "אזורי מיקום פרסומות",
+          "תמיכה במספר מחברים",
+          "ניווט קטגוריות",
+          "מוכן לתוכן ממומן"
+        ]
+      },
+      {
+        "id": "blog-tech",
+        "name": "בלוג טכנולוגי אינטראקטיבי",
+        "description": "בלוג מתקדמים עם מצב כהה, קטעי קוד, סדרות לימוד, מעקב התקדמות ותכונות אינטראקטיביות.",
+        "category": "Blog",
+        "difficulty": "advanced",
+        "features": [
+          "מצב כהה",
+          "קטעי קוד",
+          "סדרות לימוד",
+          "מעקב התקדמות"
+        ],
+        "tags": [
+          "tech",
+          "developer",
+          "interactive",
+          "code",
+          "dark-mode",
+          "code-snippets",
+          "learning-series",
+          "progress-tracking",
+          "tech-blogs",
+          "developer-communities",
+          "tutorial-sites",
+          "blog",
+          "advanced",
+          "dark",
+          "mode",
+          "dark-theme",
+          "blog-design",
+          "advanced-features",
+          "complex"
+        ],
+        "bestFor": [
+          "מקצוענים",
+          "עסקים",
+          "עצמאיים",
+          "סוכנויות"
+        ],
+        "longDescription": "תבנית בלוג טכנולוגי מקצועית עם עיצוב חדיש ותכונות חזקות. מותאמת להמרות, ביצועים וחוויית משתמש. כוללת אפשרויות התאמה אישית מתקדמות, פריסות רספונסיביות ורכיבי UI מודרניים.",
+        "whatsIncluded": [
+          "עיצוב רספונסיבי",
+          "תמיכה במצב כהה",
+          "מותאם ל-SEO",
+          "ביצועים מהירים",
+          "רכיבי UI מודרניים",
+          "התאמה אישית קלה"
+        ],
+        "price": 69,
+        "technicalDetails": [
+          "אדריכלות מודרנית",
+          "מותאם לביצועים",
+          "מוכן ל-SEO",
+          "נגישות בראש",
+          "מוכן לייצור"
+        ]
+      },
+      {
+        "id": "blog-archetypes-minimal",
+        "name": "חוקר ארכיטיפים - מינימליסטי",
+        "description": "דף מודרני מינימליסטי ממוקד המרה עם משפך של 5 שלבים: גיבור מודעות, 7 כרטיסי ארכיטיפ, מיקוד קהל, המלצות ומחירים. עיצוב גרדיאנט טורקיז וסגול עם גלסמורפיזם.",
+        "category": "Blog",
+        "difficulty": "intermediate",
+        "features": [
+          "משפך של 5 שלבים",
+          "כרטיסי גלסמורפיזם",
+          "אנימציות חלקות",
+          "מותאם להמרה"
+        ],
+        "tags": [
+          "conversion",
+          "minimalist",
+          "archetypes",
+          "modern",
+          "glassmorphism",
+          "5-stage-funnel",
+          "glassmorphism-cards",
+          "smooth-animations",
+          "conversion-optimized",
+          "coaches",
+          "course-creators",
+          "personal-development",
+          "creative-professionals",
+          "blog",
+          "conversion-focused",
+          "page",
+          "5-stage",
+          "explorer",
+          "card-layout",
+          "modern-design"
+        ],
+        "bestFor": [
+          "מקצוענים",
+          "עסקים",
+          "פרילנסרים",
+          "סוכנויות"
+        ],
+        "longDescription": "תבנית מינימלית מקצועית לבלוג ארכיטיפים עם עיצוב חדיש ותכונות חזקות. מותאמת להמרות, ביצועים וחווית משתמש. כוללת אפשרויות התאמה אישית מתקדמות, פריסות רספונסיביות ורכיבי UI מודרניים.",
+        "whatsIncluded": [
+          "עיצוב רספונסיבי",
+          "תמיכה במצב כהה",
+          "מותאם ל-SEO",
+          "ביצועים מהירים",
+          "רכיבי UI מודרניים",
+          "התאמה אישית קלה"
+        ],
+        "price": 69,
+        "technicalDetails": [
+          "ארכיטקטורה מודרנית",
+          "מותאם לביצועים",
+          "מוכן ל-SEO",
+          "נגישות קודם",
+          "מוכן לייצור"
+        ]
+      },
+      {
+        "id": "blog-archetypes-editorial",
+        "name": "יומן ארכיטיפים - עורך",
+        "description": "עמוד המרה בסגנון מגזין עיתונאי נועז עם משפך בן 5 שלבים: גיבור דרמטי, 7 כרטיסי ארכיטיפ ממוספרים, סעיף הסמכה, המלצות, ומחירי תוכניות. עיצוב בשחור/לבן עם הדגשות בכחול חשמלי וגבולות חזקים.",
+        "category": "Blog",
+        "difficulty": "intermediate",
+        "features": [
+          "עיצוב עיתונאי נועז",
+          "משפך בן 5 שלבים",
+          "פריסת מגזין",
+          "היררכיה חזותית חזקה",
+          "טיפוגרפיה דרמטית"
+        ],
+        "tags": [
+          "conversion",
+          "editorial",
+          "magazine",
+          "bold",
+          "archetypes",
+          "premium",
+          "bold-editorial-design",
+          "5-stage-funnel",
+          "magazine-layout",
+          "strong-visual-hierarchy",
+          "dramatic-typography",
+          "high-ticket-coaches",
+          "premium-programs",
+          "transformation-programs",
+          "personal-brand",
+          "blog",
+          "magazine-style",
+          "page",
+          "journal",
+          "card-layout"
+        ],
+        "bestFor": [
+          "מקצוענים",
+          "עסקים",
+          "פרילנסרים",
+          "סוכנויות"
+        ],
+        "longDescription": "תבנית עורך יומן ארכיטיפים מקצועית עם עיצוב חדיש ותכונות חזקות. מותאמת להמרות, ביצועים, וחוויית משתמש. כוללת אפשרויות התאמה מתקדמות, פריסות רספונסיביות, ורכיבי UI מודרניים.",
+        "whatsIncluded": [
+          "עיצוב רספונסיבי",
+          "תמיכה במצב כהה",
+          "מותאם ל-SEO",
+          "ביצועים מהירים",
+          "רכיבי UI מודרניים",
+          "התאמה קלה"
+        ],
+        "price": 69,
+        "technicalDetails": [
+          "ארכיטקטורה מודרנית",
+          "מותאם לביצועים",
+          "מוכן ל-SEO",
+          "נגישות בראש",
+          "מוכן לייצור"
+        ]
+      },
+      {
+        "id": "lin-portfolio-elegance",
+        "name": "פורטפוליו אלגנטי",
+        "description": "תבנית פורטפוליו אלגנטית למעצבים ויצירתיים. עיצוב ממוקד גלריה עם הדגשות זהב חמות, מושלם להצגת עבודות עיצוב פנים.",
+        "category": "Portfolio",
+        "difficulty": "intermediate",
+        "features": [
+          "גלריית תמונות",
+          "הצגת פרויקטים",
+          "טיפוגרפיה אלגנטית",
+          "תמיכה ב-RTL"
+        ],
+        "tags": [
+          "portfolio",
+          "interior-design",
+          "elegant",
+          "gallery",
+          "image-first",
+          "image-gallery-grid",
+          "project-showcase",
+          "elegant-typography",
+          "rtl-support",
+          "interior-designers",
+          "photographers",
+          "artists",
+          "creative-portfolios",
+          "template",
+          "designers",
+          "creatives",
+          "elegance",
+          "elegant-design",
+          "artistic",
+          "showcase"
+        ],
+        "bestFor": [
+          "מקצוענים",
+          "עסקים",
+          "פרילנסרים",
+          "סוכנויות"
+        ],
+        "longDescription": "תבנית פורטפוליו אלגנטי מקצועית עם עיצוב חדיש ותכונות חזקות. מותאמת להמרות, ביצועים וחווית משתמש. כוללת אפשרויות התאמה אישית מתקדמות, פריסות רספונסיביות ורכיבי UI מודרניים.",
+        "whatsIncluded": [
+          "עיצוב רספונסיבי",
+          "תמיכה במצב כהה",
+          "מוכנה ל-SEO",
+          "ביצועים מהירים",
+          "רכיבי UI מודרניים",
+          "התאמה אישית קלה"
+        ],
+        "price": 69,
+        "technicalDetails": [
+          "אדריכלות מודרנית",
+          "מוכנה לביצועים",
+          "מוכנה ל-SEO",
+          "נגישות קודם כל",
+          "מוכנה לייצור"
+        ]
+      },
+      {
+        "id": "lin-professional-authority",
+        "name": "סמכות מקצועית",
+        "description": "תבנית פרימיום עבור משרדי חשבונאות ושירותים מקצועיים. צבעים כחולים וזהביים משדרים אמון ויוקרה עם תצוגות שירותים וסימני אמון.",
+        "category": "Service",
+        "difficulty": "advanced",
+        "features": [
+          "תצוגת שירותים",
+          "סימני אמון",
+          "קטע צוות",
+          "פריסה מקצועית",
+          "טפסי קשר"
+        ],
+        "tags": [
+          "accounting",
+          "professional",
+          "luxury",
+          "trust",
+          "services",
+          "service-showcase",
+          "trust-signals",
+          "team-section",
+          "professional-layout",
+          "contact-forms",
+          "accounting-firms",
+          "law-firms",
+          "consulting",
+          "financial-services",
+          "service",
+          "premium",
+          "template",
+          "firms",
+          "authority",
+          "business",
+          "service-page",
+          "advanced-features",
+          "complex"
+        ],
+        "bestFor": [
+          "מקצוענים",
+          "עסקים",
+          "פרילנסרים",
+          "סוכנויות"
+        ],
+        "longDescription": "תבנית סמכות מקצועית עם עיצוב חדיש ותכונות חזקות. מותאמת להמרות, ביצועים וחוויית משתמש. כוללת אפשרויות התאמה מתקדמות, פריסות רספונסיביות ורכיבי UI מודרניים.",
+        "whatsIncluded": [
+          "עיצוב רספונסיבי",
+          "תמיכה במצב כהה",
+          "מותאם ל-SEO",
+          "ביצועים מהירים",
+          "רכיבי UI מודרניים",
+          "התאמה קלה"
+        ],
+        "price": 69,
+        "technicalDetails": [
+          "ארכיטקטורה מודרנית",
+          "מותאם לביצועים",
+          "מוכן ל-SEO",
+          "נגישות בראש",
+          "מוכן לייצור"
+        ]
+      },
+      {
+        "id": "lin-tech-pioneer",
+        "name": "טכנולוגיה פורצת דרך",
+        "description": "תבנית חברת טכנולוגיה מודרנית עם גרדיאנטים בכחול חשמלי ותמיכה ב-RTL בעברית. כוללת תצוגת טכנולוגיות, בלוקי קוד, ותצוגות מוצרים.",
+        "category": "Product",
+        "difficulty": "advanced",
+        "features": [
+          "תצוגת טכנולוגיות",
+          "בלוקי קוד",
+          "גרדיאנטים מודרניים",
+          "תמיכה בעברית RTL",
+          "תצוגות מוצרים"
+        ],
+        "tags": [
+          "technology",
+          "software",
+          "saas",
+          "hebrew",
+          "rtl",
+          "modern",
+          "tech-stack-display",
+          "code-blocks",
+          "modern-gradients",
+          "rtl-hebrew-support",
+          "product-showcases",
+          "software-companies",
+          "saas-products",
+          "tech-startups",
+          "developers",
+          "product",
+          "company",
+          "template",
+          "electric",
+          "tech",
+          "pioneer",
+          "modern-design",
+          "product-page",
+          "advanced-features",
+          "complex"
+        ],
+        "bestFor": [
+          "מקצוענים",
+          "עסקים",
+          "פרילנסרים",
+          "סוכנויות"
+        ],
+        "longDescription": "תבנית מקצועית Lin Tech Pioneer עם עיצוב חדיש ופיצ'רים חזקים. מותאמת להמרות, ביצועים, וחוויית משתמש. כוללת אפשרויות התאמה מתקדמות, פריסות רספונסיביות, ורכיבי UI מודרניים.",
+        "whatsIncluded": [
+          "עיצוב רספונסיבי",
+          "תמיכה במצב כהה",
+          "מוכן ל-SEO",
+          "ביצועים מהירים",
+          "רכיבי UI מודרניים",
+          "התאמה קלה"
+        ],
+        "price": 69,
+        "technicalDetails": [
+          "ארכיטקטורה מודרנית",
+          "מותאם לביצועים",
+          "מוכן ל-SEO",
+          "נגישות קודם כל",
+          "מוכן לייצור"
+        ]
+      },
+      {
+        "id": "online-business-coach",
+        "name": "מאמן חיים ועסקים",
+        "description": "תבנית פרימיום למאמני חיים ומאמני עסקים. כוללת גיבור עם קריאה לפעולה, תצוגת הצעות מרובות (ספרים/קורסים/אימון), המלצות, מגנטים לידים, וטפסים מרובי שלבים.",
+        "category": "Online Business",
+        "difficulty": "intermediate",
+        "features": [
+          "קטע גיבור",
+          "תצוגת הצעות",
+          "המלצות",
+          "הרשמה לניוזלטר",
+          "מגנטים לידים",
+          "טפסים מרובי שלבים"
+        ],
+        "tags": [
+          "coaching",
+          "life-coach",
+          "business-coach",
+          "consulting",
+          "personal-brand",
+          "hero-section",
+          "offerings-showcase",
+          "testimonials",
+          "newsletter-signup",
+          "lead-magnets",
+          "multi-step-forms",
+          "life-coaches",
+          "business-coaches",
+          "consultants",
+          "authors",
+          "speakers",
+          "online business",
+          "premium",
+          "template",
+          "life",
+          "coaches",
+          "business",
+          "coach"
+        ],
+        "bestFor": [
+          "מקצוענים",
+          "עסקים",
+          "פרילנסרים",
+          "סוכנויות"
+        ],
+        "longDescription": "תבנית מאמן עסקי מקצועי באינטרנט עם עיצוב חדיש ותכונות חזקות. מותאמת להמרות, ביצועים, וחוויית משתמש. כוללת אפשרויות התאמה מתקדמות, פריסות רספונסיביות, ורכיבי UI מודרניים.",
+        "whatsIncluded": [
+          "עיצוב רספונסיבי",
+          "תמיכה במצב כהה",
+          "אופטימיזציה ל-SEO",
+          "ביצועים מהירים",
+          "רכיבי UI מודרניים",
+          "התאמה קלה"
+        ],
+        "price": 69,
+        "technicalDetails": [
+          "ארכיטקטורה מודרנית",
+          "אופטימיזציה לביצועים",
+          "מוכן ל-SEO",
+          "נגישות קודם כל",
+          "מוכן לייצור"
+        ]
+      },
+      {
+        "id": "online-business-course",
+        "name": "פלטפורמת קורסים מקוונת",
+        "description": "תבנית ליצירת קורסים עם תצוגה מקדימה של וידאו, הצגת תוכנית הלימודים, רמות תמחור, המלצות תלמידים, ומערכת רישום. מושלם למורים דיגיטליים.",
+        "category": "Online Business",
+        "difficulty": "intermediate",
+        "features": [
+          "תצוגה מקדימה של וידאו",
+          "מודולי תוכנית לימודים",
+          "רמות תמחור",
+          "ביקורות תלמידים",
+          "תגי תעודה",
+          "קטעי CTA"
+        ],
+        "tags": [
+          "courses",
+          "education",
+          "e-learning",
+          "digital-products",
+          "teaching",
+          "video-preview",
+          "curriculum-modules",
+          "pricing-tiers",
+          "student-reviews",
+          "certificate-badges",
+          "cta-sections",
+          "course-creators",
+          "educators",
+          "digital-product-sellers",
+          "training-platforms",
+          "online business",
+          "course",
+          "creator",
+          "template",
+          "video",
+          "preview",
+          "online",
+          "platform"
+        ],
+        "bestFor": [
+          "מקצוענים",
+          "עסקים",
+          "פרילנסרים",
+          "סוכנויות"
+        ],
+        "longDescription": "תבנית לקורס עסקי מקוון מקצועי עם עיצוב חדיש ותכונות חזקות. מותאם להמרות, ביצועים, וחוויית משתמש. כולל אפשרויות התאמה אישית מתקדמות, פריסות רספונסיביות, ורכיבי UI מודרניים.",
+        "whatsIncluded": [
+          "עיצוב רספונסיבי",
+          "תמיכה במצב כהה",
+          "מותאם ל-SEO",
+          "ביצועים מהירים",
+          "רכיבי UI מודרניים",
+          "התאמה אישית קלה"
+        ],
+        "price": 69,
+        "technicalDetails": [
+          "ארכיטקטורה מודרנית",
+          "מותאם לביצועים",
+          "מוכן ל-SEO",
+          "נגישות קודם כל",
+          "מוכן לייצור"
+        ]
+      },
+      {
+        "id": "online-business-agency",
+        "name": "סוכנות דיגיטלית",
+        "description": "תבנית מקצועית לסוכנויות B2B עם תצוגת שירותים, מחקרי מקרה, ציר זמן תהליכים, פרופילים של צוות ועדויות לקוחות. גישה מונחית נתונים.",
+        "category": "Online Business",
+        "difficulty": "advanced",
+        "features": [
+          "רשת שירותים",
+          "מחקרי מקרה",
+          "ציר זמן תהליכים",
+          "לוח מחוונים לסטטיסטיקות",
+          "לוגואים של לקוחות",
+          "טופס פרויקט"
+        ],
+        "tags": [
+          "agency",
+          "b2b",
+          "services",
+          "portfolio",
+          "professional",
+          "services-grid",
+          "case-studies",
+          "process-timeline",
+          "stats-dashboard",
+          "client-logos",
+          "project-form",
+          "digital-agencies",
+          "marketing-agencies",
+          "development-studios",
+          "consulting-firms",
+          "online business",
+          "template",
+          "showcase",
+          "digital",
+          "business",
+          "agency-portfolio",
+          "service-page",
+          "advanced-features",
+          "complex"
+        ],
+        "bestFor": [
+          "מקצוענים",
+          "עסקים",
+          "פרילנסרים",
+          "סוכנויות"
+        ],
+        "longDescription": "תבנית מקצועית לסוכנות עסקית מקוונת עם עיצוב חדיש ותכונות חזקות. מותאמת להמרות, ביצועים וחוויית משתמש. כוללת אפשרויות התאמה מתקדמות, פריסות רספונסיביות ורכיבי UI מודרניים.",
+        "whatsIncluded": [
+          "עיצוב רספונסיבי",
+          "תמיכה במצב כהה",
+          "אופטימיזציה ל-SEO",
+          "ביצועים מהירים",
+          "רכיבי UI מודרניים",
+          "התאמה קלה"
+        ],
+        "price": 69,
+        "technicalDetails": [
+          "ארכיטקטורה מודרנית",
+          "אופטימיזציה לביצועים",
+          "מוכן ל-SEO",
+          "נגישות בראש",
+          "מוכן לייצור"
+        ]
+      },
+      {
+        "id": "online-business-saas",
+        "name": "פלטפורמת מוצר SaaS",
+        "description": "דף נחיתה מודרני עבור SaaS עם תצוגת תכונות מונעות AI, מחירים שקופים, השוואת תכונות, ו-CTA לניסיון חינם. נבנה עבור צוותי מוצר מודרניים.",
+        "category": "Online Business",
+        "difficulty": "intermediate",
+        "features": [
+          "גיבור עם CTA",
+          "רשת תכונות",
+          "תוכניות תמחור",
+          "הוכחת חברה",
+          "הדגשות תכונות",
+          "ניסיון חינם"
+        ],
+        "tags": [
+          "saas",
+          "product",
+          "pricing",
+          "b2b",
+          "subscription",
+          "hero-with-cta",
+          "features-grid",
+          "pricing-plans",
+          "social-proof",
+          "feature-highlights",
+          "free-trial",
+          "saas-companies",
+          "software-products",
+          "b2b-tools",
+          "productivity-apps",
+          "online business",
+          "modern",
+          "landing",
+          "page",
+          "ai-powered",
+          "platform",
+          "modern-design",
+          "landing-page",
+          "product-page",
+          "software"
+        ],
+        "bestFor": [
+          "מקצוענים",
+          "עסקים",
+          "פרילנסרים",
+          "סוכנויות"
+        ],
+        "longDescription": "תבנית SaaS מקצועית לעסקים מקוונים עם עיצוב חדיש ותכונות חזקות. מותאמת להמרות, ביצועים, וחוויית משתמש. כוללת אפשרויות התאמה אישית מתקדמות, פריסות רספונסיביות, ורכיבי UI מודרניים.",
+        "whatsIncluded": [
+          "עיצוב רספונסיבי",
+          "תמיכה במצב כהה",
+          "מותאם ל-SEO",
+          "ביצועים מהירים",
+          "רכיבי UI מודרניים",
+          "התאמה אישית קלה"
+        ],
+        "price": 69,
+        "technicalDetails": [
+          "ארכיטקטורה מודרנית",
+          "מותאם לביצועים",
+          "מוכן ל-SEO",
+          "נגישות קודם",
+          "מוכן לייצור"
+        ]
+      },
+      {
+        "id": "professional-b2b",
+        "name": "B2B מקצועי",
+        "description": "תבנית בסגנון תאגידי נקי ליצירת לידים ושירותים מקצועיים. כוללת קביעת פגישות, מחקרי מקרה, והוכחות חברתיות.",
+        "category": "Professional",
+        "difficulty": "intermediate",
+        "features": [
+          "יצירת לידים",
+          "מחקרי מקרה",
+          "הוכחות חברתיות",
+          "המלצות",
+          "עיצוב מקצועי"
+        ],
+        "tags": [
+          "b2b",
+          "professional",
+          "corporate",
+          "lead-generation",
+          "appointment-setting",
+          "sales",
+          "enterprise",
+          "business",
+          "clean",
+          "modern"
+        ],
+        "bestFor": [
+          "תוכנה B2B",
+          "שירותים מקצועיים",
+          "פתרונות ארגוניים",
+          "משרדי ייעוץ"
+        ],
+        "longDescription": "עיצוב ממוקד מכירות ארגוניות שנבנה על פסיכולוגיית רכישה B2B. כוללת סימני אמון (תגי אבטחה, הסמכות, לוגו לקוחות), מחשבוני ROI, טבלאות השוואה, ותצוגות מחקרי מקרה. כוללת אזורי תוכן מוגנים ליצירת לידים, קביעת דמו עם אינטגרציה של לוח שנה, וטפסי תפיסת CRM. נבנתה לאחר ניתוח של יותר מ-200 חברות SaaS B2B מצליחות. מותאמת למחזורי מכירה ארוכים עם אינטגרציה של מיילים להנחיה ותמיכה בפיקסל ריטרגטינג.",
+        "whatsIncluded": [
+          "פריסת ארגון",
+          "תבניות מחקרי מקרה",
+          "תצוגת לוגו לקוחות",
+          "מחשבון ROI",
+          "טופס בקשת דמו",
+          "תגי אמון"
+        ],
+        "price": 99,
+        "technicalDetails": [
+          "מערכת סימני אמון",
+          "מחשבון ROI",
+          "טפסי תפיסת לידים",
+          "מוכן לאינטגרציה עם CRM",
+          "מבוסס על ניתוח של יותר מ-200 B2B"
+        ]
+      },
+      {
+        "id": "creative-agency-bold",
+        "name": "סוכנות יצירתית בולד",
+        "description": "תבנית טיפוגרפיה בולד בצבע כחול חשמלי עבור סוכנויות יצירתיות. כוללת מסך מפוצל, פריסת פינג-פונג, וצבעים חיים.",
+        "category": "Creative",
+        "difficulty": "intermediate",
+        "features": [
+          "טיפוגרפיה בולד",
+          "מסך מפוצל",
+          "פריסות חלופיות",
+          "צבעים חיים",
+          "תצוגת פורטפוליו"
+        ],
+        "tags": [
+          "creative",
+          "agency",
+          "bold",
+          "electric-blue",
+          "typography",
+          "colorful",
+          "modern",
+          "portfolio",
+          "projects"
+        ],
+        "bestFor": [
+          "סוכנויות עיצוב",
+          "חברות שיווק",
+          "אולפני יצירה",
+          "סוכנויות מיתוג"
+        ],
+        "longDescription": "עשה הצהרה נועזת עם תבנית הסוכנות האנרגטית הזו. צבעים חיים, אנימציות דינמיות, ותצוגות פורטפוליו שמושכות תשומת לב. מושלם עבור סוכנויות עיצוב, חברות שיווק, ואולפני יצירה שרוצים להציג את האישיות שלהם.",
+        "whatsIncluded": [
+          "רשת פורטפוליו",
+          "פריסות מקרה בוחן",
+          "תצוגת צוות",
+          "עדויות לקוחות",
+          "דפי שירות",
+          "קריאה לפעולה ליצירת קשר"
+        ],
+        "price": 89,
+        "technicalDetails": []
+      },
+      {
+        "id": "minimal-portfolio-clean",
+        "name": "פורטפוליו מינימלי נקי",
+        "description": "תבנית מינימליסטית עם דגש על טקסט למעצבים ומפתחים. כוללת גיבור ממוקד, רשת פרויקטים פשוטה, וטיפוגרפיה נקייה.",
+        "category": "Professional",
+        "difficulty": "beginner",
+        "features": [
+          "עיצוב מינימלי",
+          "דגש על טקסט",
+          "ניווט פשוט",
+          "רשת פרויקטים",
+          "טיפוגרפיה נקייה"
+        ],
+        "tags": [
+          "minimal",
+          "clean",
+          "simple",
+          "portfolio",
+          "text-first",
+          "designers",
+          "developers",
+          "professional",
+          "elegant"
+        ],
+        "bestFor": [
+          "מעצבים",
+          "מאיירים",
+          "צלמים",
+          "מקצוענים יצירתיים"
+        ],
+        "longDescription": "עיצוב פורטפוליו אלגנטי שמאפשר לעבודות שלך להיות במרכז הבמה. פריסות נקיות, אנימציות עדינות, וריווח מחושב יוצרים תצוגה מתוחכמת. מושלם למעצבים, מאיירים, ויצירתיים שרוצים שהעבודות שלהם ידברו חזק יותר מהעיצוב.",
+        "whatsIncluded": [
+          "רשת פרויקטים",
+          "עמודי מקרה בוחן",
+          "גלריות תמונות",
+          "קטע על אודות",
+          "טופס יצירת קשר",
+          "עמוד קורות חיים"
+        ],
+        "price": 59,
+        "technicalDetails": []
+      },
+      {
+        "id": "glassmorphism-modern",
+        "name": "מודרני עם אפקטים של זכוכית",
+        "description": "נושא כהה מודרני עם אפקטים של כרטיסי זכוכית. כולל טשטוש רקע, שכבות שקופות, ועיצוב חזותי מדהים.",
+        "category": "Creative",
+        "difficulty": "advanced",
+        "features": [
+          "אפקטים של זכוכית",
+          "נושא כהה",
+          "טשטוש רקע",
+          "טבלת מחירים",
+          "עיצוב מודרני"
+        ],
+        "tags": [
+          "glassmorphism",
+          "glass",
+          "dark",
+          "modern",
+          "blur",
+          "transparency",
+          "creative",
+          "premium",
+          "advanced"
+        ],
+        "bestFor": [
+          "פינטק",
+          "מוצרים של SaaS",
+          "מותגים פרימיום",
+          "סטארטאפים מודרניים"
+        ],
+        "longDescription": "אסתטיקה של זכוכית קפואה פרימיום שהפכה לפופולרית עם iOS 15+. כוללת טשטוש רקע מתקדם, שקיפות בשכבות מרובות, וצילומים עם עומק שיוצרים היררכיה חזותית מדהימה. כוללת אפקטים של פיזור אור, גוונים צבעוניים עדינים, וזוהר של גבול המדמה התנהגות של זכוכית אמיתית. אופטימלית לביצועים עם אפקטים של CSS בלבד כאשר זה אפשרי ופתרונות קנבס לתרחישים מורכבים. יוצרת תחושת איכות פרימיום ומודרניות שהמשתמשים מקשרים עם מוצרים יוקרתיים.",
+        "whatsIncluded": [
+          "ערכת UI של Glassmorphism",
+          "אפקטי טשטוש רקע",
+          "שכבות שקופות",
+          "צללים עם עומק",
+          "עיצוב בהשראת iOS",
+          "תחושת פרימיום"
+        ],
+        "price": 89,
+        "technicalDetails": [
+          "CSS backdrop-filter",
+          "שקיפות בשכבות מרובות",
+          "אפקטים של פיזור אור",
+          "בהשראת iOS 15+",
+          "אופטימיזציה לביצועים"
+        ]
+      },
+      {
+        "id": "split-screen-editorial",
+        "name": "עריכת מסך מפוצל",
+        "description": "סרגל צד קבוע עם פרויקטים במסך מלא עבור תיקי עבודות עיתונאיים ועיצוב. כולל גלריות מסך מלא מעוררות חושים.",
+        "category": "Creative",
+        "difficulty": "intermediate",
+        "features": [
+          "סרגל צד קבוע",
+          "פרויקטים במסך מלא",
+          "פריסת עיתונאות",
+          "תוכן גולל",
+          "גלריית תיק עבודות"
+        ],
+        "tags": [
+          "split-screen",
+          "editorial",
+          "fullscreen",
+          "portfolio",
+          "gallery",
+          "creative",
+          "design",
+          "projects"
+        ],
+        "bestFor": [
+          "מנהלי אמנות",
+          "מנהלי עיצוב",
+          "מקצוענים יצירתיים",
+          "צלמים"
+        ],
+        "longDescription": "תבנית עריכת מסך מפוצל מקצועית עם עיצוב מתוחכם ותכונות חזקות. מותאמת להמרות, ביצועים וחוויית משתמש. כוללת אפשרויות התאמה מתקדמות, פריסות רספונסיביות ורכיבי UI מודרניים.",
+        "technicalDetails": [
+          "ארכיטקטורה מודרנית",
+          "ביצועים אופטימליים",
+          "מוכן ל-SEO",
+          "נגישות בראש",
+          "מוכן לייצור"
+        ],
+        "price": 60,
+        "whatsIncluded": []
+      },
+      {
+        "id": "saas-feature-rich",
+        "name": "תכונת SaaS עשירה",
+        "description": "דף נחיתה מלא עבור SaaS עם תפיסת דוא\"ל, טבלאות מחירים, והצגת תכונות. נבנה להמרה.",
+        "category": "Product",
+        "difficulty": "intermediate",
+        "features": [
+          "תפיסת דוא\"ל",
+          "טבלאות מחירים",
+          "רשת תכונות",
+          "עדויות",
+          "קטעי CTA"
+        ],
+        "tags": [
+          "saas",
+          "product",
+          "landing-page",
+          "email-capture",
+          "pricing",
+          "features",
+          "conversion",
+          "marketing"
+        ],
+        "bestFor": [
+          "מקצוענים",
+          "עסקים",
+          "פרילנסרים",
+          "סוכנויות"
+        ],
+        "longDescription": "תבנית מקצועית עשירה בתכונות SaaS עם עיצוב חדיש ופיצ'רים רבי עוצמה. מותאמת להמרות, ביצועים, וחוויית משתמש. כוללת אפשרויות התאמה מתקדמות, פריסות רספונסיביות, ורכיבי UI מודרניים.",
+        "whatsIncluded": [
+          "עיצוב רספונסיבי",
+          "תמיכה במצב כהה",
+          "מותאם ל-SEO",
+          "ביצועים מהירים",
+          "רכיבי UI מודרניים",
+          "התאמה קלה"
+        ],
+        "price": 69,
+        "technicalDetails": [
+          "ארכיטקטורה מודרנית",
+          "מותאם לביצועים",
+          "מוכן ל-SEO",
+          "נגישות בראש",
+          "מוכן לייצור"
+        ]
+      },
+      {
+        "id": "personal-brand",
+        "name": "מותג אישי",
+        "description": "תבנית שיחה עם תחושת רשת חברתית למיתוג אישי. כוללת סעיף שאלות נפוצות ותצוגות חברות.",
+        "category": "Professional",
+        "difficulty": "beginner",
+        "features": [
+          "תמונה אישית",
+          "סעיף שאלות נפוצות",
+          "לוגואים של חברות",
+          "כרטיסי פרויקטים",
+          "קישורים חברתיים"
+        ],
+        "tags": [
+          "personal",
+          "brand",
+          "conversational",
+          "social",
+          "faq",
+          "friendly",
+          "approachable",
+          "professional"
+        ],
+        "bestFor": [
+          "מקצוענים",
+          "עסקים",
+          "פרילנסרים",
+          "סוכנויות"
+        ],
+        "longDescription": "תבנית מותג אישי מקצועית עם עיצוב חדיש ופיצ'רים רבי עוצמה. מותאמת להמרות, ביצועים וחוויית משתמש. כוללת אפשרויות התאמה אישית מתקדמות, פריסות רספונסיביות ורכיבי UI מודרניים.",
+        "whatsIncluded": [
+          "עיצוב רספונסיבי",
+          "תמיכה במצב כהה",
+          "מותאם ל-SEO",
+          "ביצועים מהירים",
+          "רכיבי UI מודרניים",
+          "התאמה אישית קלה"
+        ],
+        "price": 69,
+        "technicalDetails": [
+          "ארכיטקטורה מודרנית",
+          "מותאם לביצועים",
+          "מוכן ל-SEO",
+          "נגישות בראש",
+          "מוכן לייצור"
+        ]
+      },
+      {
+        "id": "experimental-3d",
+        "name": "ניסוי תלת מימד",
+        "description": "תבנית תלת מימד סוחפת עם אנימציות מדהימות ועיצוב ניסי. כוללת חוויות במסך מלא וגרפיקה מונעת.",
+        "category": "Creative",
+        "difficulty": "advanced",
+        "features": [
+          "אפקטים תלת מימדיים",
+          "פריסות במסך מלא",
+          "גרפיקה מונעת",
+          "עיצוב ניסי",
+          "חווית משתמש סוחפת"
+        ],
+        "tags": [
+          "3d",
+          "experimental",
+          "immersive",
+          "motion",
+          "graphics",
+          "creative",
+          "advanced",
+          "animation",
+          "futuristic"
+        ],
+        "bestFor": [
+          "מקצוענים",
+          "עסקים",
+          "עצמאיים",
+          "סוכנויות"
+        ],
+        "longDescription": "תבנית תלת מימד מקצועית ניסי עם עיצוב חדיש ופיצ'רים חזקים. מותאמת להמרות, ביצועים וחוויית משתמש. כוללת אפשרויות התאמה מתקדמות, פריסות רספונסיביות ורכיבי UI מודרניים.",
+        "whatsIncluded": [
+          "עיצוב רספונסיבי",
+          "תמיכה במצב כהה",
+          "מוכן ל-SEO",
+          "ביצועים מהירים",
+          "רכיבי UI מודרניים",
+          "התאמה קלה"
+        ],
+        "price": 69,
+        "technicalDetails": [
+          "ארכיטקטורה מודרנית",
+          "מותאם לביצועים",
+          "מוכן ל-SEO",
+          "נגישות קודם כל",
+          "מוכן לייצור"
+        ]
+      },
+      {
+        "id": "interactive-agency",
+        "name": "סוכנות אינטראקטיבית",
+        "description": "אפקטים נועזים של גלילה, טיפוגרפיה קינטית ואנימציות בהשראת WebGL עבור סוכנויות יצירתיות.",
+        "category": "Creative",
+        "difficulty": "advanced",
+        "features": [
+          "אפקטי WebGL",
+          "גלילה פרלקס",
+          "רקעים עם וידאו",
+          "כרטיסים מונפשים"
+        ],
+        "tags": [
+          "interactive",
+          "agency",
+          "webgl",
+          "parallax",
+          "animation",
+          "creative",
+          "bold",
+          "kinetic-typography",
+          "scroll-effects",
+          "design-studio"
+        ],
+        "bestFor": [
+          "מקצוענים",
+          "עסקים",
+          "עצמאיים",
+          "סוכנויות"
+        ],
+        "longDescription": "תבנית סוכנות אינטראקטיבית מקצועית עם עיצוב חדיש ותכונות חזקות. מותאמת להמרות, ביצועים וחוויית משתמש. כוללת אפשרויות התאמה מתקדמות, פריסות רספונסיביות ורכיבי UI מודרניים.",
+        "whatsIncluded": [
+          "עיצוב רספונסיבי",
+          "תמיכה במצב כהה",
+          "מוכנה ל-SEO",
+          "ביצועים מהירים",
+          "רכיבי UI מודרניים",
+          "התאמה קלה"
+        ],
+        "price": 69,
+        "technicalDetails": [
+          "ארכיטקטורה מודרנית",
+          "מוטבע ביצועים",
+          "מוכן ל-SEO",
+          "נגישות קודם",
+          "מוכן לייצור"
+        ]
+      },
+      {
+        "id": "luxury-minimal",
+        "name": "מינימליזם יוקרתי",
+        "description": "עיצוב נקי במיוחד, מתוחכם עם נגיעות זהב ותחושה פרימיום עבור מותגים יוקרתיים.",
+        "category": "Professional",
+        "difficulty": "intermediate",
+        "features": [
+          "אנימציות אלגנטיות",
+          "אסתטיקה יוקרתית",
+          "גריד מסודר",
+          "טיפוגרפיה פרימיום"
+        ],
+        "tags": [
+          "luxury",
+          "minimal",
+          "sophisticated",
+          "premium",
+          "elegant",
+          "gold-accents",
+          "high-end",
+          "fashion",
+          "luxury-brands"
+        ],
+        "bestFor": [
+          "מקצוענים",
+          "עסקים",
+          "פרילנסרים",
+          "סוכנויות"
+        ],
+        "longDescription": "תבנית מינימליזם יוקרתי מקצועית עם עיצוב חדיש ותכונות חזקות. מותאמת להמרות, ביצועים וחווית משתמש. כוללת אפשרויות התאמה מתקדמות, פריסות רספונסיביות ורכיבי UI מודרניים.",
+        "whatsIncluded": [
+          "עיצוב רספונסיבי",
+          "תמיכה במצב כהה",
+          "מותאם ל-SEO",
+          "ביצועים מהירים",
+          "רכיבי UI מודרניים",
+          "התאמה קלה"
+        ],
+        "price": 69,
+        "technicalDetails": [
+          "ארכיטקטורה מודרנית",
+          "מותאם לביצועים",
+          "מוכן ל-SEO",
+          "נגישות קודם כל",
+          "מוכן לייצור"
+        ]
+      },
+      {
+        "id": "startup-pitch",
+        "name": "סטארטאפ פיץ'",
+        "description": "דף נחיתה מודרני עבור SaaS עם מדדים, טבלאות מחירים, ועיצוב ממוקד המרה.",
+        "category": "Business",
+        "difficulty": "intermediate",
+        "features": [
+          "ספירות מדדים",
+          "טבלאות מחירים",
+          "תפיסת דוא\"ל",
+          "השוואת תכונות"
+        ],
+        "tags": [
+          "startup",
+          "saas",
+          "landing-page",
+          "conversion",
+          "pricing",
+          "metrics",
+          "business",
+          "tech-company",
+          "data-driven"
+        ],
+        "bestFor": [
+          "סטארטאפים של SaaS",
+          "חברות טכנולוגיה",
+          "גיוס כספים",
+          "השקות מוצרים"
+        ],
+        "longDescription": "מהונדס להמרה עבור גיוס כספים של סדרה A. כל חלק ממוקם באופן אסטרטגי כדי להנחות את המשקיעים דרך הסיפור שלך: בעיה, פתרון, משיכה, צוות, בקשה. כולל בדיקות A/B מובנות, אינטגרציה של מעקב חום, ואופטימיזציה של שיעור ההמרה. כולל חלק להורדת מצגת, חיבורי אינטגרציה ל-CRM של משקיעים, וטפסי בקשה למפרטי תנאים. מבוסס על ניתוח של יותר מ-500 דפי נחיתה מצליחים של סטארטאפים. שיעור ההמרה הממוצע: 12.7% מביקור לפגישה עם משקיע.",
+        "whatsIncluded": [
+          "חלק קריאה לפעולה גיבור",
+          "רשת תכונות המוצר",
+          "תצוגת הוכחת חברתית",
+          "חלק צוות",
+          "עיצוב מצגת למשקיעים",
+          "אינטגרציה של אנליטיקה"
+        ],
+        "price": 99,
+        "technicalDetails": [
+          "בדיקות A/B מובנות",
+          "שיעור המרה ממוצע של 12.7%",
+          "חיבורי CRM למשקיעים",
+          "אינטגרציה של מעקב חום מוכנה",
+          "מבוסס על יותר מ-500 פיצ'ים מצליחים"
+        ]
+      },
+      {
+        "id": "photography-immersive",
+        "name": "צילום מעמיק",
+        "description": "פורטפוליו עם תמונות בראש, גלריות במסך מלא, לייטבוקס, וממשק מינימלי עבור צלמים.",
+        "category": "Creative",
+        "difficulty": "intermediate",
+        "features": [
+          "גלריות במסך מלא",
+          "לייטבוקס",
+          "מסנני קטגוריות",
+          "הצגת נתוני EXIF"
+        ],
+        "tags": [
+          "photography",
+          "portfolio",
+          "gallery",
+          "lightbox",
+          "image-heavy",
+          "minimal-ui",
+          "immersive",
+          "visual-artist",
+          "photographer"
+        ],
+        "bestFor": [
+          "מקצוענים",
+          "עסקים",
+          "פרילנסרים",
+          "סוכנויות"
+        ],
+        "longDescription": "תבנית צילום מעמיקה מקצועית עם עיצוב חדיש ותכונות חזקות. מותאמת להמרות, ביצועים, וחוויית משתמש. כוללת אפשרויות התאמה מתקדמות, פריסות רספונסיביות, ורכיבי UI מודרניים.",
+        "whatsIncluded": [
+          "עיצוב רספונסיבי",
+          "תמיכה במצב כהה",
+          "אופטימיזציה ל-SEO",
+          "ביצועים מהירים",
+          "רכיבי UI מודרניים",
+          "התאמה קלה"
+        ],
+        "price": 69,
+        "technicalDetails": [
+          "ארכיטקטורה מודרנית",
+          "אופטימיזציה לביצועים",
+          "מוכן ל-SEO",
+          "נגישות בראש",
+          "מוכן לייצור"
+        ]
+      },
+      {
+        "id": "motion-designer",
+        "name": "מעצב תנועה",
+        "description": "פורטפוליו קינטי ומונפש עם צבעים ניאוניים ואפקטים מונעים על ידי קצב עבור מעצבי תנועה.",
+        "category": "Creative",
+        "difficulty": "advanced",
+        "features": [
+          "אנימציות CSS",
+          "אפקטי גלילה",
+          "הצגות וידאו",
+          "טיפוגרפיה קינטית"
+        ],
+        "tags": [
+          "motion-design",
+          "animation",
+          "kinetic",
+          "neon",
+          "video",
+          "animator",
+          "creative",
+          "bold-colors",
+          "dynamic"
+        ],
+        "bestFor": [
+          "מקצוענים",
+          "עסקים",
+          "פרילנסרים",
+          "סוכנויות"
+        ],
+        "longDescription": "תבנית מעצב תנועה מקצועית עם עיצוב חדיש ופיצ'רים חזקים. אופטימלית להמרות, ביצועים וחוויית משתמש. כוללת אפשרויות התאמה מתקדמות, פריסות רספונסיביות ורכיבי UI מודרניים.",
+        "whatsIncluded": [
+          "עיצוב רספונסיבי",
+          "תמיכה במצב כהה",
+          "אופטימיזציה ל-SEO",
+          "ביצועים מהירים",
+          "רכיבי UI מודרניים",
+          "התאמה קלה"
+        ],
+        "price": 69,
+        "technicalDetails": [
+          "ארכיטקטורה מודרנית",
+          "אופטימיזציה לביצועים",
+          "מוכן ל-SEO",
+          "נגישות קודם כל",
+          "מוכן לייצור"
+        ]
+      },
+      {
+        "id": "service-marketplace",
+        "name": "שוק שירותים",
+        "description": "תבנית שוק רב-ספקים עבור ספקי שירותים. כוללת רישומים של ספקים, ביקורות ומערכת הזמנות.",
+        "category": "Service",
+        "difficulty": "advanced",
+        "features": [
+          "רישומי ספקים",
+          "מערכת ביקורות",
+          "אינטגרציית הזמנות",
+          "חיפוש וסינונים"
+        ],
+        "tags": [
+          "marketplace",
+          "services",
+          "vendors",
+          "booking",
+          "reviews",
+          "multi-vendor",
+          "platform",
+          "providers",
+          "ratings",
+          "search"
+        ],
+        "bestFor": [
+          "שווקי שירותים",
+          "פלטפורמות הזמנות",
+          "קטלוגים מקצועיים",
+          "שירותים B2B"
+        ],
+        "longDescription": "תשתית שוק ברמה ארגונית שנבנתה להתרחבות. ניהול אלפי ספקי שירותים עם סינון מתקדם, זמינות בזמן אמת ומערכות הזמנות משולבות. כוללת לוחות מחוונים רב-ספקיים, מעקב עמלות, תשלומים אוטומטיים וניהול ביקורות לקוחות. כוללת אינטגרציה עם Stripe Connect, תהליכי פתרון סכסוכים וניתוח מקיף. נבנתה כדי להתחרות בפלטפורמות כמו Upwork ו-Fiverr מהיום הראשון.",
+        "whatsIncluded": [
+          "רשת רישומי שירותים",
+          "חיפוש מתקדם וסינונים",
+          "מערכת ביקורות משתמשים",
+          "לוח שנה להזמנות",
+          "מוכן לאינטגרציית תשלום",
+          "לוח מחוונים לספקים"
+        ],
+        "price": 89,
+        "technicalDetails": [
+          "מוכן ל-Stripe Connect",
+          "מנוע הזמנות בזמן אמת",
+          "אדריכלות רב-ספקית",
+          "חיפוש מתקדם עם Algolia",
+          "תהליכי דוא\"ל אוטומטיים"
+        ]
+      },
+      {
+        "id": "saas-growth",
+        "name": "פלטפורמת צמיחת SaaS",
+        "description": "דף נחיתה מודרני ל-SaaS הממוקד בצמיחה, המרות והצגת תכונות המוצר עם דמואים אינטראקטיביים.",
+        "category": "Product",
+        "difficulty": "intermediate",
+        "status": "published",
+        "features": [
+          "גיבור אנימטיבי",
+          "הצגת תכונות",
+          "טבלאות מחירים",
+          "קטע דמו חי",
+          "קרוסלת עדויות",
+          "לוגואים של אינטגרציות"
+        ],
+        "tags": [
+          "saas",
+          "startup",
+          "product",
+          "growth",
+          "conversion",
+          "landing-page",
+          "modern",
+          "tech",
+          "software",
+          "b2b",
+          "pricing",
+          "features",
+          "demo",
+          "testimonials",
+          "analytics"
+        ],
+        "bestFor": [
+          "סטארטאפים ל-SaaS",
+          "מוצרי תוכנה",
+          "פלטפורמות B2B",
+          "חברות טכנולוגיה"
+        ],
+        "longDescription": "תבנית דף נחיתה ל-SaaS עם המרה גבוהה, שנועדה להציג את הצעת הערך של המוצר שלך ולהניע הרשמות. תכונות כוללות דמואים אנימטיביים של המוצר, השוואות תכונות אינטראקטיביות, קטעי הוכחת חברתית, ופאנלים אופטימליים להמרה. בנויה עם שיטות עבודה מומלצות בשיווק צמיחה כולל רכיבים מוכנים לבדיקות A/B, נקודות אינטגרציה לניתוחים, ועיצובים אופטימליים להמרה. מושלמת לסטארטאפים בשלב מוקדם שמחפשים לאמת את ההתאמה בין המוצר לשוק או לחברות SaaS מבוססות שמשיקות תכונות חדשות.",
+        "whatsIncluded": [
+          "גיבור מוצר אנימטיבי",
+          "טבלת השוואת תכונות",
+          "מחשבון מחירים",
+          "הטמעת דמו חי",
+          "עדויות לקוחות",
+          "הצגת אינטגרציות",
+          "אופטימיזציה של CTA",
+          "הרשמה לניוזלטר"
+        ],
+        "price": 79,
+        "technicalDetails": [
+          "אופטימלי להמרה",
+          "מוכן לבדיקות A/B",
+          "אינטגרציה לניתוחים",
+          "טפסי capture לידים",
+          "מוכן לשיווק בדוא\"ל",
+          "ציון ביצועים 98+"
+        ]
+      },
+      {
+        "id": "freelancer-creative",
+        "name": "פרילנסר יצירתי",
+        "description": "פורטפוליו נועז, מונחה אישיות עבור פרילנסרים יצירתיים. הצג את הסגנון הייחודי שלך ומשוך לקוחות אידיאליים.",
+        "category": "Portfolio",
+        "difficulty": "beginner",
+        "status": "publishedlast ",
+        "features": [
+          "גלריית פרויקטים",
+          "חלק 'אודות'",
+          "הצעות שירות",
+          "עדויות לקוחות",
+          "טופס קשר",
+          "קישורים חברתיים"
+        ],
+        "tags": [
+          "freelancer",
+          "creative",
+          "portfolio",
+          "designer",
+          "personal",
+          "showcase",
+          "projects",
+          "gallery",
+          "testimonials",
+          "services",
+          "modern",
+          "colorful",
+          "personality"
+        ],
+        "bestFor": [
+          "מעצבי גרפיקה",
+          "מאיירים",
+          "כותבים יצירתיים",
+          "עורכי וידאו",
+          "צלמים"
+        ],
+        "longDescription": "תבנית פורטפוליו תוססת, מונחת אישיות שמסייעת לפרילנסרים יצירתיים לבלוט מהקהל. תבנית זו זונחת את האסתטיקה המשעממת של חברות לטובת צבעים נועזים, אנימציות משחקיות, ועיצובים יצירתיים שמשקפים את הקול האמנותי הייחודי שלך. תכונות כוללות גלריית פרויקטים מרהיבה עם סינון, חלק 'אודות' מרתק שמספר את הסיפור שלך, הצגת חבילות שירות, ומערכת קשרים שמקל על לקוחות להגיע אליך. מושלם ליצירתיים שרוצים שהפורטפוליו שלהם יהיה ייחודי כמו העבודה שלהם.",
+        "whatsIncluded": [
+          "גלריית פרויקטים עם סינון",
+          "חלק 'אודות' מונפש",
+          "הצגת חבילות שירות",
+          "מקרן עדויות לקוחות",
+          "טופס קשר משולב",
+          "אינטגרציה עם מדיה חברתית",
+          "כפתור הורדת קורות חיים",
+          "מתג מצב כהה"
+        ],
+        "price": 59,
+        "technicalDetails": [
+          "אנימציות גלילה חלקות",
+          "טעינת תמונות עצלנית",
+          "מוטבע SEO",
+          "עיצוב ראשון לנייד",
+          "טעינת עמודים מהירה (<2s)",
+          "תואם נגישות"
+        ]
+      }
+    ],
+    "serviceMarketplace": {
+      "nav": {
+        "features": "Features",
+        "howItWorks": "How It Works",
+        "testimonials": "Testimonials",
+        "pricing": "Pricing"
+      },
+      "hero": {
+        "badge": "Trusted Marketplace",
+        "title": "Connect with Professional Service Providers",
+        "subtitle": "Buy and sell business services with confidence. Escrow protection, verified professionals, and seamless transactions.",
+        "ctaPrimary": "Get Started",
+        "ctaSecondary": "Learn More"
+      },
+      "stats": [
+        {
+          "value": "10K+",
+          "label": "Active Users"
+        },
+        {
+          "value": "50K+",
+          "label": "Services Sold"
+        },
+        {
+          "value": "$2M+",
+          "label": "In Transactions"
+        },
+        {
+          "value": "4.9/5",
+          "label": "Avg Rating"
+        }
+      ],
+      "features": {
+        "title": "Why Choose Our Platform",
+        "subtitle": "Everything you need for secure and successful service transactions",
+        "items": [
+          {
+            "title": "Escrow Protection",
+            "description": "Your money is safe. Funds are held securely until work is completed to your satisfaction."
+          },
+          {
+            "title": "Verified Professionals",
+            "description": "All service providers are thoroughly vetted and verified for quality and reliability."
+          },
+          {
+            "title": "Global Reach",
+            "description": "Connect with talented professionals from around the world, 24/7."
+          },
+          {
+            "title": "Transparent Pricing",
+            "description": "See exact costs upfront. No hidden fees, no surprises."
+          },
+          {
+            "title": "Quick Delivery",
+            "description": "Get your projects completed on time with milestone tracking and deadline management."
+          },
+          {
+            "title": "Quality Guarantee",
+            "description": "Request revisions until you're satisfied. Your success is our priority."
+          }
+        ]
+      },
+      "howItWorks": {
+        "title": "How It Works",
+        "subtitle": "Simple, secure, and straightforward process",
+        "steps": [
+          {
+            "title": "Post Your Project",
+            "description": "Describe what you need. Set your budget and timeline. It takes just minutes."
+          },
+          {
+            "title": "Review Proposals",
+            "description": "Receive proposals from qualified professionals. Compare rates, reviews, and portfolios."
+          },
+          {
+            "title": "Award & Pay Securely",
+            "description": "Choose the best fit and fund the escrow. Your payment is protected until work is complete."
+          },
+          {
+            "title": "Get Results",
+            "description": "Collaborate, review milestones, and approve the final work. Release payment when satisfied."
+          }
+        ]
+      },
+      "testimonials": {
+        "title": "What Our Users Say",
+        "subtitle": "Join thousands of satisfied clients and service providers",
+        "items": [
+          {
+            "name": "Sarah Chen",
+            "role": "Marketing Director",
+            "quote": "Found an amazing designer in 24 hours. The escrow system gave me complete peace of mind throughout the project."
+          },
+          {
+            "name": "Michael Torres",
+            "role": "Freelance Developer",
+            "quote": "As a service provider, I love the platform. Professional clients, fair pricing, and guaranteed payment. What more could I ask for?"
+          },
+          {
+            "name": "Emma Wilson",
+            "role": "Startup Founder",
+            "quote": "Hired 5 different specialists for our launch. The quality and professionalism exceeded expectations every time."
+          }
+        ]
+      },
+      "pricing": {
+        "title": "Simple, Transparent Pricing",
+        "subtitle": "Choose the plan that fits your needs",
+        "popularBadge": "Most Popular",
+        "plans": [
+          {
+            "name": "Free",
+            "description": "Perfect for trying out the platform",
+            "price": "$0",
+            "period": "forever",
+            "cta": "Get Started",
+            "featured": false,
+            "features": [
+              "3% transaction fee",
+              "Basic support",
+              "Access to all services",
+              "Standard processing",
+              "Community forum access"
+            ]
+          },
+          {
+            "name": "Professional",
+            "description": "For regular users and growing businesses",
+            "price": "$29",
+            "period": "month",
+            "cta": "Start Free Trial",
+            "featured": true,
+            "features": [
+              "1.5% transaction fee",
+              "Priority support",
+              "Advanced filters",
+              "Faster processing",
+              "Dedicated account manager",
+              "Custom proposals",
+              "Analytics dashboard"
+            ]
+          },
+          {
+            "name": "Enterprise",
+            "description": "For large teams and organizations",
+            "price": "Custom",
+            "period": null,
+            "cta": "Contact Sales",
+            "featured": false,
+            "features": [
+              "0.5% transaction fee",
+              "24/7 premium support",
+              "API access",
+              "White-label options",
+              "Custom integrations",
+              "Volume discounts",
+              "SLA guarantee",
+              "Training & onboarding"
+            ]
+          }
+        ]
+      },
+      "cta": {
+        "title": "Ready to Get Started?",
+        "subtitle": "Join thousands of businesses and professionals who trust our platform",
+        "button": "Create Free Account"
+      }
+    },
+    "footer": {
+      "templates": "Templates",
+      "allTemplates": "All Templates",
+      "professional": "Professional",
+      "creative": "Creative",
+      "modern": "Modern",
+      "resources": "Resources",
+      "documentation": "Documentation",
+      "guides": "Guides",
+      "support": "Support",
+      "connect": "Connect"
+    },
+    "buttons": {
+      "customizeTemplate": "Customize Template"
+    },
+    "_meta": {
+      "status": "complete",
+      "note": "Translated using GPT-4 mini on 2025-12-08T13:35:22.982Z",
+      "templateCount": 63
     }
   }
 }

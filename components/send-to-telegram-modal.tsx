@@ -11,12 +11,13 @@ import {
 } from "@/components/ui/dialog";
 import { Send, Copy, CheckCircle2 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { useI18n } from "@/lib/i18n-context";
 
 interface SendToTelegramModalProps {
   isOpen: boolean;
   onClose: () => void;
   templateData: any;
-  language?: 'en' | 'ru';
+  language?: 'en' | 'ru' | 'he';
 }
 
 export function SendToTelegramModal({
@@ -26,6 +27,7 @@ export function SendToTelegramModal({
   language = 'en',
 }: SendToTelegramModalProps) {
   const { toast } = useToast();
+  const { isRTL } = useI18n();
   const [copied, setCopied] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
@@ -56,6 +58,25 @@ export function SendToTelegramModal({
       lines.push('');
       lines.push('💾 Полный JSON скопирован в буфер обмена!');
       lines.push('(Вставьте следующим сообщением)');
+    } else if (language === 'he') {
+      lines.push('🎨 בקשה חדשה לתבנית');
+      lines.push('');
+      lines.push('👤 פרטי קשר:');
+      lines.push(`שם: ${formData.name || '[לא מולא]'}`);
+      lines.push(`אימייל: ${formData.email || '[לא מולא]'}`);
+      lines.push(`טלפון: ${formData.phone || '[לא מולא]'}`);
+      lines.push('');
+      lines.push('📋 סיכום תבנית:');
+      if (templateData?.templateId) lines.push(`מזהה: ${templateData.templateId}`);
+      if (templateData?.templateName) lines.push(`תבנית: ${templateData.templateName}`);
+      if (templateData?.language) lines.push(`שפה: ${templateData.language}`);
+      if (templateData?.nodes) {
+        const count = Object.keys(templateData.nodes).length;
+        lines.push(`רכיבים: ${count}`);
+      }
+      lines.push('');
+      lines.push('💾 JSON מלא הועתק ללוח!');
+      lines.push('(הדבק כהודעה שנייה)');
     } else {
       lines.push('🎨 New Template Submission');
       lines.push('');
@@ -98,17 +119,21 @@ export function SendToTelegramModal({
       await navigator.clipboard.writeText(fullMessageText);
       setCopied(true);
       toast({
-        title: language === 'ru' ? 'Скопировано!' : 'Copied!',
+        title: language === 'ru' ? 'Скопировано!' : language === 'he' ? 'הועתק!' : 'Copied!',
         description: language === 'ru'
           ? 'Полное сообщение скопировано в буфер обмена'
+          : language === 'he'
+          ? 'ההודעה המלאה הועתקה ללוח'
           : 'Full message copied to clipboard',
       });
       setTimeout(() => setCopied(false), 2000);
     } catch (error) {
       toast({
-        title: language === 'ru' ? 'Ошибка' : 'Error',
+        title: language === 'ru' ? 'Ошибка' : language === 'he' ? 'שגיאה' : 'Error',
         description: language === 'ru'
           ? 'Не удалось скопировать'
+          : language === 'he'
+          ? 'ההעתקה נכשלה'
           : 'Failed to copy',
         variant: 'destructive',
       });
@@ -119,16 +144,20 @@ export function SendToTelegramModal({
     try {
       await navigator.clipboard.writeText(JSON.stringify(templateData, null, 2));
       toast({
-        title: language === 'ru' ? 'JSON скопирован!' : 'JSON Copied!',
+        title: language === 'ru' ? 'JSON скопирован!' : language === 'he' ? 'JSON הועתק!' : 'JSON Copied!',
         description: language === 'ru'
           ? 'JSON данные скопированы в буфер обмена'
+          : language === 'he'
+          ? 'נתוני JSON הועתקו ללוח'
           : 'JSON data copied to clipboard',
       });
     } catch (error) {
       toast({
-        title: language === 'ru' ? 'Ошибка' : 'Error',
+        title: language === 'ru' ? 'Ошибка' : language === 'he' ? 'שגיאה' : 'Error',
         description: language === 'ru'
           ? 'Не удалось скопировать JSON'
+          : language === 'he'
+          ? 'ההעתקת JSON נכשלה'
           : 'Failed to copy JSON',
         variant: 'destructive',
       });
@@ -139,9 +168,11 @@ export function SendToTelegramModal({
     // Validate form
     if (!formData.name || !formData.email || !formData.phone) {
       toast({
-        title: language === 'ru' ? 'Ошибка' : 'Error',
+        title: language === 'ru' ? 'Ошибка' : language === 'he' ? 'שגיאה' : 'Error',
         description: language === 'ru'
           ? 'Пожалуйста, заполните все поля'
+          : language === 'he'
+          ? 'אנא מלא את כל השדות'
           : 'Please fill in all fields',
         variant: 'destructive',
       });
@@ -177,9 +208,11 @@ export function SendToTelegramModal({
 
       // Success toast
       toast({
-        title: language === 'ru' ? '✅ Отправлено в бот!' : '✅ Sent to Bot!',
+        title: language === 'ru' ? '✅ Отправлено в бот!' : language === 'he' ? '✅ נשלח לבוט!' : '✅ Sent to Bot!',
         description: language === 'ru'
           ? 'Данные сохранены. Telegram откроется для личного чата (JSON в буфере)'
+          : language === 'he'
+          ? 'הנתונים נשמרו. טלגרם נפתח לצ׳אט אישי (JSON בלוח)'
           : 'Data saved. Telegram opening for personal chat (JSON in clipboard)',
         duration: 6000,
       });
@@ -192,9 +225,11 @@ export function SendToTelegramModal({
     } catch (error) {
       console.error('Error sending to Telegram:', error);
       toast({
-        title: language === 'ru' ? 'Ошибка отправки' : 'Send Failed',
+        title: language === 'ru' ? 'Ошибка отправки' : language === 'he' ? 'שליחה נכשלה' : 'Send Failed',
         description: language === 'ru'
           ? 'Не удалось отправить в бот. Попробуйте снова.'
+          : language === 'he'
+          ? 'לא הצלחנו לשלוח לבוט. נסה שוב.'
           : 'Failed to send to bot. Please try again.',
         variant: 'destructive',
       });
@@ -205,13 +240,15 @@ export function SendToTelegramModal({
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="sm:max-w-[500px]">
         <DialogHeader>
-          <DialogTitle className="flex items-center gap-2">
+          <DialogTitle className={`flex items-center gap-2 ${isRTL ? 'flex-row-reverse text-right' : ''}`}>
             <Send className="w-5 h-5 text-blue-500" />
-            {language === 'ru' ? 'Отправить в Telegram' : 'Send via Telegram'}
+            {language === 'ru' ? 'Отправить в Telegram' : language === 'he' ? 'שלח דרך טלגרם' : 'Send via Telegram'}
           </DialogTitle>
-          <DialogDescription>
+          <DialogDescription className={isRTL ? 'text-right' : ''}>
             {language === 'ru'
               ? 'Нажмите кнопку ниже, чтобы открыть Telegram и отправить данные вашего шаблона'
+              : language === 'he'
+              ? 'לחץ על הכפתור למטה כדי לפתוח את טלגרם ולשלוח את נתוני התבנית שלך'
               : 'Click the button below to open Telegram and send your template data'}
           </DialogDescription>
         </DialogHeader>
@@ -219,32 +256,32 @@ export function SendToTelegramModal({
         <div className="space-y-4 py-4">
           {/* Contact Form */}
           <div className="space-y-3">
-            <h4 className="font-semibold text-sm">
-              {language === 'ru' ? '1️⃣ Ваши контактные данные:' : '1️⃣ Your Contact Information:'}
+            <h4 className={`font-semibold text-sm ${isRTL ? 'text-right' : ''}`}>
+              {language === 'ru' ? '1️⃣ Ваши контактные данные:' : language === 'he' ? '1️⃣ פרטי קשר שלך:' : '1️⃣ Your Contact Information:'}
             </h4>
             <div className="space-y-2">
               <input
                 type="text"
-                placeholder={language === 'ru' ? 'Имя *' : 'Name *'}
+                placeholder={language === 'ru' ? 'Имя *' : language === 'he' ? 'שם *' : 'Name *'}
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-sm"
+                className={`w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-sm ${isRTL ? 'text-right' : ''}`}
                 required
               />
               <input
                 type="email"
-                placeholder={language === 'ru' ? 'Email *' : 'Email *'}
+                placeholder={language === 'ru' ? 'Email *' : language === 'he' ? 'אימייל *' : 'Email *'}
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-sm"
+                className={`w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-sm ${isRTL ? 'text-right' : ''}`}
                 required
               />
               <input
                 type="tel"
-                placeholder={language === 'ru' ? 'Телефон *' : 'Phone *'}
+                placeholder={language === 'ru' ? 'Телефон *' : language === 'he' ? 'טלפון *' : 'Phone *'}
                 value={formData.phone}
                 onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-sm"
+                className={`w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-sm ${isRTL ? 'text-right' : ''}`}
                 required
               />
             </div>
@@ -252,9 +289,9 @@ export function SendToTelegramModal({
 
           {/* Message Preview */}
           <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-700 max-h-[300px] overflow-y-auto">
-            <div className="flex items-start justify-between gap-2 mb-2">
-              <h4 className="font-semibold text-sm">
-                {language === 'ru' ? '2️⃣ Предпросмотр сообщения:' : '2️⃣ Message Preview:'}
+            <div className={`flex items-start justify-between gap-2 mb-2 ${isRTL ? 'flex-row-reverse' : ''}`}>
+              <h4 className={`font-semibold text-sm ${isRTL ? 'text-right' : ''}`}>
+                {language === 'ru' ? '2️⃣ Предпросмотр сообщения:' : language === 'he' ? '2️⃣ תצוגה מקדימה של הודעה:' : '2️⃣ Message Preview:'}
               </h4>
               <Button
                 type="button"
@@ -274,18 +311,18 @@ export function SendToTelegramModal({
                 )}
               </Button>
             </div>
-            <pre className="text-xs text-gray-700 dark:text-gray-300 whitespace-pre-wrap font-mono">
+            <pre className={`text-xs text-gray-700 dark:text-gray-300 whitespace-pre-wrap font-mono ${isRTL ? 'text-right' : ''}`}>
               {fullMessageText}
             </pre>
           </div>
 
           {/* Instructions */}
           <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-4 border border-blue-200 dark:border-blue-800">
-            <div className="flex items-start gap-3">
+            <div className={`flex items-start gap-3 ${isRTL ? 'flex-row-reverse' : ''}`}>
               <div className="flex-shrink-0 w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold">
                 3️⃣
               </div>
-              <div className="flex-1 text-sm">
+              <div className={`flex-1 text-sm ${isRTL ? 'text-right' : ''}`}>
                 {language === 'ru' ? (
                   <div className="space-y-2">
                     <p className="font-semibold">Как это работает:</p>
@@ -299,6 +336,22 @@ export function SendToTelegramModal({
                     <div className="mt-3 p-2 bg-green-50 dark:bg-green-900/20 rounded border border-green-200 dark:border-green-800">
                       <p className="text-xs text-green-700 dark:text-green-300 font-semibold">
                         ✅ Два способа: Бот сохранит данные + Вы сможете написать мне лично!
+                      </p>
+                    </div>
+                  </div>
+                ) : language === 'he' ? (
+                  <div className="space-y-2">
+                    <p className="font-semibold">איך זה עובד:</p>
+                    <ol className="list-decimal list-inside space-y-1 text-gray-700 dark:text-gray-300">
+                      <li>מלא את פרטי הקשר למעלה</li>
+                      <li>לחץ על כפתור "פתח טלגרם"</li>
+                      <li><strong>אוטומטית:</strong> הנתונים נשלחים לבוט (נשמרים)</li>
+                      <li><strong>אז:</strong> טלגרם נפתח לצ׳אט אישי איתי</li>
+                      <li>הדבק JSON (Ctrl+V) ושלח לי ישירות</li>
+                    </ol>
+                    <div className="mt-3 p-2 bg-green-50 dark:bg-green-900/20 rounded border border-green-200 dark:border-green-800">
+                      <p className="text-xs text-green-700 dark:text-green-300 font-semibold">
+                        ✅ שתי דרכים: הבוט שומר נתונים + אתה יכול לשלוח לי הודעה אישית!
                       </p>
                     </div>
                   </div>
@@ -324,29 +377,31 @@ export function SendToTelegramModal({
           </div>
 
           {/* Action Buttons */}
-          <div className="flex flex-col sm:flex-row gap-2 pt-2">
+          <div className={`flex flex-col sm:flex-row gap-2 pt-2 ${isRTL ? 'sm:flex-row-reverse' : ''}`}>
             <Button
               type="button"
               variant="outline"
               onClick={onClose}
               className="flex-1"
             >
-              {language === 'ru' ? 'Отмена' : 'Cancel'}
+              {language === 'ru' ? 'Отмена' : language === 'he' ? 'ביטול' : 'Cancel'}
             </Button>
             <Button
               type="button"
               onClick={handleOpenTelegram}
-              className="flex-1 bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700"
+              className={`flex-1 bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 ${isRTL ? 'flex-row-reverse' : ''}`}
             >
-              <Send className="mr-2 h-4 w-4" />
-              {language === 'ru' ? 'Открыть Telegram' : 'Open Telegram'}
+              <Send className={`h-4 w-4 ${isRTL ? 'ml-2' : 'mr-2'}`} />
+              {language === 'ru' ? 'Открыть Telegram' : language === 'he' ? 'פתח טלגרם' : 'Open Telegram'}
             </Button>
           </div>
 
           {/* Alternative: Copy manually */}
-          <p className="text-xs text-center text-gray-500 dark:text-gray-400">
+          <p className={`text-xs text-center text-gray-500 dark:text-gray-400 ${isRTL ? 'text-right' : ''}`}>
             {language === 'ru'
               ? 'Или скопируйте текст выше и отправьте вручную: @MichaelMMM'
+              : language === 'he'
+              ? 'או העתק את הטקסט למעלה ושלח ידנית ל: @MichaelMMM'
               : 'Or copy the text above and send manually to: @MichaelMMM'}
           </p>
         </div>

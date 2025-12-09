@@ -92,6 +92,31 @@
     display: none;
   }
 
+  /* Hebrew-specific typography */
+  [lang="he"] {
+    font-family: var(--font-rubik), system-ui, sans-serif;
+    font-feature-settings: "kern" 1, "liga" 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Prevent Hebrew letters from being too close */
+  [lang="he"] h1,
+  [lang="he"] h2,
+  [lang="he"] h3 {
+    letter-spacing: 0.01em;
+  }
+
+  /* Logical properties for RTL support */
+  .ms-4 { margin-inline-start: 1rem; }
+  .me-4 { margin-inline-end: 1rem; }
+  .ps-4 { padding-inline-start: 1rem; }
+  .pe-4 { padding-inline-end: 1rem; }
+  .start-0 { inset-inline-start: 0; }
+  .end-0 { inset-inline-end: 0; }
+  .text-start { text-align: start; }
+  .text-end { text-align: end; }
+
   /* Accessibility: Respect prefers-reduced-motion (WCAG 2.1 Level AAA) */
   @media (prefers-reduced-motion: reduce) {
     *,

@@ -241,10 +241,13 @@ export function OnlineBusinessCoachTemplate() {
           {/* Bestselling Book */}
           <ScrollReveal delay={0.1}>
             <Card className="group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 border-transparent hover:border-amber-300 dark:hover:border-amber-600 overflow-hidden">
-              <div className="aspect-[3/4] bg-gradient-to-br from-amber-400 to-amber-600 relative">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <FiBook className="w-24 h-24 text-white/80" />
-                </div>
+              <div className="aspect-[3/4] relative overflow-hidden bg-gradient-to-br from-amber-100 to-amber-50 dark:from-amber-900/20 dark:to-amber-800/10">
+                <Image
+                  src="https://images.unsplash.com/photo-1512820790803-83ca734da794?w=800&h=1000&fit=crop&q=80"
+                  alt="Book about time management and productivity"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
               </div>
               <CardContent className="p-6">
                 <Badge className={`mb-3 bg-amber-100 dark:bg-amber-900/30 ${darkMode ? 'text-amber-400' : 'text-amber-700'}`}>
@@ -265,10 +268,13 @@ export function OnlineBusinessCoachTemplate() {
           {/* Online Course */}
           <ScrollReveal delay={0.2}>
             <Card className="group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 border-transparent hover:border-blue-300 dark:hover:border-blue-600 overflow-hidden">
-              <div className="aspect-[3/4] bg-gradient-to-br from-blue-400 to-blue-600 relative">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <FiVideo className="w-24 h-24 text-white/80" />
-                </div>
+              <div className="aspect-[3/4] relative overflow-hidden bg-gradient-to-br from-blue-100 to-blue-50 dark:from-blue-900/20 dark:to-blue-800/10">
+                <Image
+                  src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=1000&fit=crop&q=80"
+                  alt="Online learning and video courses"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
               </div>
               <CardContent className="p-6">
                 <Badge className={`mb-3 bg-blue-100 dark:bg-blue-900/30 ${darkMode ? 'text-blue-400' : 'text-blue-700'}`}>
@@ -289,10 +295,13 @@ export function OnlineBusinessCoachTemplate() {
           {/* 1:1 Coaching */}
           <ScrollReveal delay={0.3}>
             <Card className="group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 border-transparent hover:border-purple-300 dark:hover:border-purple-600 overflow-hidden">
-              <div className="aspect-[3/4] bg-gradient-to-br from-purple-400 to-purple-600 relative">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <FiUsers className="w-24 h-24 text-white/80" />
-                </div>
+              <div className="aspect-[3/4] relative overflow-hidden bg-gradient-to-br from-purple-100 to-purple-50 dark:from-purple-900/20 dark:to-purple-800/10">
+                <Image
+                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&h=1000&fit=crop&q=80"
+                  alt="One-on-one coaching session"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
                 <Badge className="absolute top-4 right-4 bg-white/90 text-purple-700">
                   <FiStar className="mr-1" />
                   {data.offerings?.coaching?.premiumBadge || "Premium"}
@@ -317,10 +326,13 @@ export function OnlineBusinessCoachTemplate() {
           {/* Podcast */}
           <ScrollReveal delay={0.4}>
             <Card className="group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 border-transparent hover:border-pink-300 dark:hover:border-pink-600 overflow-hidden">
-              <div className="aspect-[3/4] bg-gradient-to-br from-pink-400 to-pink-600 relative">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <FiHeadphones className="w-24 h-24 text-white/80" />
-                </div>
+              <div className="aspect-[3/4] relative overflow-hidden bg-gradient-to-br from-pink-100 to-pink-50 dark:from-pink-900/20 dark:to-pink-800/10">
+                <Image
+                  src="https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=800&h=1000&fit=crop&q=80"
+                  alt="Podcast recording and audio production"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
               </div>
               <CardContent className="p-6">
                 <Badge className={`mb-3 bg-pink-100 dark:bg-pink-900/30 ${darkMode ? 'text-pink-400' : 'text-pink-700'}`}>
@@ -341,10 +353,13 @@ export function OnlineBusinessCoachTemplate() {
           {/* Community */}
           <ScrollReveal delay={0.5}>
             <Card className="group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 border-transparent hover:border-green-300 dark:hover:border-green-600 overflow-hidden">
-              <div className="aspect-[3/4] bg-gradient-to-br from-green-400 to-green-600 relative">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <FiHeart className="w-24 h-24 text-white/80" />
-                </div>
+              <div className="aspect-[3/4] relative overflow-hidden bg-gradient-to-br from-green-100 to-green-50 dark:from-green-900/20 dark:to-green-800/10">
+                <Image
+                  src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=800&h=1000&fit=crop&q=80"
+                  alt="Community of professionals networking"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
               </div>
               <CardContent className="p-6">
                 <Badge className={`mb-3 bg-green-100 dark:bg-green-900/30 ${darkMode ? 'text-green-400' : 'text-green-700'}`}>

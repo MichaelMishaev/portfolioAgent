@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { useI18n } from "@/lib/i18n-context";
 
 export function Header() {
-  const { language, setLanguage } = useI18n();
+  const { language, setLanguage, isRTL } = useI18n();
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -16,28 +16,22 @@ export function Header() {
           {/* Category button is fixed positioned, so we just need space */}
         </div>
 
-        {/* Center - Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-1">
-          <Link 
-            href="/#contact" 
-            className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors px-4 py-2 rounded-md hover:bg-muted/50"
-          >
-            Contact
-          </Link>
-        </nav>
+        {/* Center - Empty space */}
+        <div className="flex-1"></div>
 
         {/* Right side - Controls */}
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2" data-testid="language-switcher">
           {/* Desktop: Language + Theme */}
           <div className="hidden md:flex items-center gap-2">
             {/* Language Switcher Group */}
-            <div className="flex items-center gap-0.5 bg-muted/50 rounded-md p-0.5">
+            <div className={`flex items-center gap-0.5 bg-muted/50 rounded-md p-0.5 ${isRTL ? 'flex-row-reverse' : ''}`}>
               <Button
                 variant={language === "en" ? "default" : "ghost"}
                 size="sm"
                 onClick={() => setLanguage("en")}
                 className="h-8 px-3 text-xs font-medium rounded-md min-w-[44px]"
                 aria-label="Switch to English"
+                data-testid="language-en"
               >
                 EN
               </Button>
@@ -47,8 +41,19 @@ export function Header() {
                 onClick={() => setLanguage("ru")}
                 className="h-8 px-3 text-xs font-medium rounded-md min-w-[44px]"
                 aria-label="Switch to Russian"
+                data-testid="language-ru"
               >
                 RU
+              </Button>
+              <Button
+                variant={language === "he" ? "default" : "ghost"}
+                size="sm"
+                onClick={() => setLanguage("he")}
+                className="h-8 px-3 text-xs font-medium rounded-md min-w-[44px]"
+                aria-label="Switch to Hebrew"
+                data-testid="language-he"
+              >
+                עב
               </Button>
             </div>
 
@@ -59,13 +64,14 @@ export function Header() {
           {/* Mobile: Language + Theme */}
           <div className="flex md:hidden items-center gap-2">
             {/* Language Switcher Group */}
-            <div className="flex items-center gap-0.5 bg-muted/50 rounded-lg p-0.5">
+            <div className={`flex items-center gap-0.5 bg-muted/50 rounded-lg p-0.5 ${isRTL ? 'flex-row-reverse' : ''}`}>
               <Button
                 variant={language === "en" ? "default" : "ghost"}
                 size="sm"
                 onClick={() => setLanguage("en")}
                 className="h-9 px-3 text-xs font-medium rounded-md min-w-[48px] touch-manipulation"
                 aria-label="Switch to English"
+                data-testid="language-en-mobile"
               >
                 EN
               </Button>
@@ -75,8 +81,19 @@ export function Header() {
                 onClick={() => setLanguage("ru")}
                 className="h-9 px-3 text-xs font-medium rounded-md min-w-[48px] touch-manipulation"
                 aria-label="Switch to Russian"
+                data-testid="language-ru-mobile"
               >
                 RU
+              </Button>
+              <Button
+                variant={language === "he" ? "default" : "ghost"}
+                size="sm"
+                onClick={() => setLanguage("he")}
+                className="h-9 px-3 text-xs font-medium rounded-md min-w-[48px] touch-manipulation"
+                aria-label="Switch to Hebrew"
+                data-testid="language-he-mobile"
+              >
+                עב
               </Button>
             </div>
 

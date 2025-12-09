@@ -70,6 +70,8 @@ const templateComponents: Record<string, any> = {
   "text-heavy": dynamic(() => import("@/components/templates/text-heavy/text-heavy-template").then(mod => mod.TextHeavyTemplate)),
   "voice-first": dynamic(() => import("@/components/templates/voice-first/voice-first-template").then(mod => mod.VoiceFirstTemplate)),
   "y2k-retro": dynamic(() => import("@/components/templates/y2k-retro/y2k-retro-template").then(mod => mod.Y2kRetroTemplate)),
+  "saas-growth": dynamic(() => import("@/components/templates/saas-growth/saas-growth-template").then(mod => mod.SaasGrowthTemplate)),
+  "freelancer-creative": dynamic(() => import("@/components/templates/freelancer-creative/freelancer-creative-template").then(mod => mod.FreelancerCreativeTemplate)),
 };
 
 export default function TemplateDemoPage() {

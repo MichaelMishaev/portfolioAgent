@@ -221,6 +221,9 @@ model Purchase {
   // Discount
   discountUsage     DiscountUsage?
 
+  // AI Generated Website
+  generatedWebsite  GeneratedWebsite?
+
   // Payment Provider
   stripePaymentIntentId String? @unique
   stripeCustomerId      String?
@@ -342,6 +345,78 @@ model Template {
   @@index([slug])
   @@index([categoryId])
   @@map("templates")
+}
+
+// ============================================
+// AI GENERATED WEBSITES
+// ============================================
+
+model GeneratedWebsite {
+  id                String   @id @default(cuid())
+
+  // Purchase Relationship
+  purchase          Purchase @relation(fields: [purchaseId], references: [id], onDelete: Cascade)
+  purchaseId        String   @unique
+
+  // Template Info
+  templateId        String
+
+  // Language
+  language          String   @db.VarChar(2)  // 'en', 'ru', 'he'
+
+  // Business Information (from questionnaire)
+  businessInfo      Json     // { name, email, phone, address, social }
+
+  // Generated Content (from GPT)
+  content           Json     // { hero, about, services, etc }
+
+  // Generated Images (from Ideogram)
+  images            String[] // Array of image URLs/paths
+
+  // Generation Metadata
+  generationStatus  GenerationStatus @default(PENDING)
+  generationError   String?  @db.Text
+  generationStartedAt DateTime?
+  generationCompletedAt DateTime?
+  generationDuration Int?   // Duration in seconds
+
+  // Costs Tracking
+  gptCost           Float?   // Cost of GPT generation
+  ideogramCost      Float?   // Cost of image generation
+  totalCost         Float?   // Total generation cost
+
+  // User Inputs (raw questionnaire data)
+  questionnaireData Json
+
+  // Download & Access
+  downloadUrl       String?  @db.Text
+  viewUrl           String?  @db.Text
+  downloadCount     Int      @default(0)
+  lastDownloadedAt  DateTime?
+
+  // Regeneration
+  regenerationCount Int      @default(0)
+  parentWebsiteId   String?  // If this is a regeneration
+
+  // Timestamps
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+
+  @@index([purchaseId])
+  @@index([generationStatus])
+  @@index([createdAt])
+  @@map("generated_websites")
+}
+
+enum GenerationStatus {
+  PENDING           // Waiting to start
+  GENERATING_CONTENT // GPT is generating content
+  GENERATING_IMAGES  // Ideogram is generating images
+  ASSEMBLING        // Assembling final website
+  COMPLETED         // Successfully completed
+  FAILED            // Generation failed
+
+  @@map("generation_status")
 }
 
 // ============================================

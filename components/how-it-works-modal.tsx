@@ -4,13 +4,15 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ArrowRight, Search, Eye, Layout, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useI18n } from "@/lib/i18n-context";
 
 interface HowItWorksModalProps {
-  language?: 'en' | 'ru';
+  language?: 'en' | 'ru' | 'he';
 }
 
 export function HowItWorksModal({ language = 'en' }: HowItWorksModalProps) {
   const [isOpen, setIsOpen] = useState(false);
+  const { isRTL } = useI18n();
 
   const content = {
     en: {
@@ -73,6 +75,36 @@ export function HowItWorksModal({ language = 'en' }: HowItWorksModalProps) {
       finalCTA: "Мы превратим ваш дизайн в готовый к запуску сайт!",
       startButton: "Начать изучение шаблонов",
     },
+    he: {
+      buttonText: "איך זה עובד?",
+      modalTitle: "איך זה עובד",
+      subtitle: "המסע שלך מרעיון לאתר מקצועי ב-3 שלבים פשוטים",
+      steps: [
+        {
+          number: "01",
+          title: "עיון וסינון תבניות",
+          description: "חקור את האוסף שלנו של 39+ תבניות מקצועיות. סנן לפי קטגוריה, סגנון או מטרה כדי למצוא את ההתאמה המושלמת לפרויקט שלך.",
+          icon: <Search className="w-8 h-8" />,
+          action: "סנן תבניות לפי קטגוריה",
+        },
+        {
+          number: "02",
+          title: "תצוגה מקדימה והתאמה אישית",
+          description: "צפה בדמו חי של תבניות. ראה איך הן נראות ומרגישות. בחר את האהובה עליך ולחץ על 'בנה' כדי להתחיל להתאים כל פרט.",
+          icon: <Eye className="w-8 h-8" />,
+          action: "צפה בדמו והתחל לבנות",
+        },
+        {
+          number: "03",
+          title: "עצב את הזרימה שלך",
+          description: "השתמש בבונה האינטואיטיבי שלנו כדי להתאים אישית קטעים, להוסיף תוכן ולסדר את הפריסה שלך. שלח את העיצוב שלך ואנחנו ניצור את האתר המקצועי שלך.",
+          icon: <Layout className="w-8 h-8" />,
+          action: "בנה ושלח את העיצוב שלך",
+        },
+      ],
+      finalCTA: "אנחנו הופכים את העיצוב שלך לאתר מוכן לייצור!",
+      startButton: "התחל לחקור תבניות",
+    },
   };
 
   const t = content[language];
@@ -116,7 +148,7 @@ export function HowItWorksModal({ language = 'en' }: HowItWorksModalProps) {
               <div className="relative bg-blue-600 px-4 sm:px-6 md:px-8 py-4 sm:py-6 md:py-8">
                 <button
                   onClick={() => setIsOpen(false)}
-                  className="absolute top-2 right-2 sm:top-4 sm:right-4 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white/20 hover:bg-white/30 backdrop-blur-sm flex items-center justify-center transition-all hover:scale-110 active:scale-95 touch-manipulation"
+                  className={`absolute top-2 sm:top-4 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white/20 hover:bg-white/30 backdrop-blur-sm flex items-center justify-center transition-all hover:scale-110 active:scale-95 touch-manipulation ${isRTL ? 'left-2 sm:left-4' : 'right-2 sm:right-4'}`}
                 >
                   <X className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
                 </button>
@@ -124,7 +156,7 @@ export function HowItWorksModal({ language = 'en' }: HowItWorksModalProps) {
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.2 }}
-                  className="pr-8 sm:pr-0"
+                  className={isRTL ? 'pl-8 sm:pl-0 text-right' : 'pr-8 sm:pr-0'}
                 >
                   <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-1 sm:mb-2">
                     {t.modalTitle}
@@ -170,15 +202,15 @@ export function HowItWorksModal({ language = 'en' }: HowItWorksModalProps) {
                         </div>
 
                         {/* Content */}
-                        <div className="flex-1 text-center lg:text-left">
+                        <div className={`flex-1 text-center ${isRTL ? 'lg:text-right' : 'lg:text-left'}`}>
                           <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-2 sm:mb-3 text-gray-900 dark:text-white">
                             {step.title}
                           </h3>
                           <p className="text-sm sm:text-base md:text-lg text-gray-600 dark:text-gray-300 mb-3 sm:mb-4 md:mb-5 leading-relaxed max-w-2xl mx-auto lg:mx-0">
                             {step.description}
                           </p>
-                          <div className="inline-flex items-center gap-2 px-3 py-2 sm:px-4 sm:py-2.5 md:px-5 md:py-3 bg-blue-50 dark:bg-blue-900/20 border-2 border-blue-200 dark:border-blue-800 rounded-lg text-xs sm:text-sm md:text-base font-medium text-blue-700 dark:text-blue-300 shadow-sm">
-                            <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
+                          <div className={`inline-flex items-center gap-2 px-3 py-2 sm:px-4 sm:py-2.5 md:px-5 md:py-3 bg-blue-50 dark:bg-blue-900/20 border-2 border-blue-200 dark:border-blue-800 rounded-lg text-xs sm:text-sm md:text-base font-medium text-blue-700 dark:text-blue-300 shadow-sm ${isRTL ? 'flex-row-reverse' : ''}`}>
+                            <ArrowRight className={`w-4 h-4 sm:w-5 sm:h-5 ${isRTL ? 'rotate-180' : ''}`} />
                             <span className="whitespace-nowrap">{step.action}</span>
                           </div>
                         </div>
@@ -209,23 +241,23 @@ export function HowItWorksModal({ language = 'en' }: HowItWorksModalProps) {
 
               {/* Footer */}
               <div className="border-t bg-gray-50 dark:bg-gray-800/50 px-4 sm:px-6 md:px-8 py-3 sm:py-4 md:py-6">
-                <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 justify-end">
+                <div className={`flex flex-col sm:flex-row gap-2 sm:gap-3 justify-end ${isRTL ? 'sm:flex-row-reverse' : ''}`}>
                   <Button
                     variant="outline"
                     onClick={() => setIsOpen(false)}
                     className="w-full sm:w-auto min-h-[44px] touch-manipulation"
                   >
-                    {language === 'ru' ? 'Закрыть' : 'Close'}
+                    {language === 'ru' ? 'Закрыть' : language === 'he' ? 'סגור' : 'Close'}
                   </Button>
                   <Button
                     onClick={() => {
                       setIsOpen(false);
                       document.getElementById('templates')?.scrollIntoView({ behavior: 'smooth' });
                     }}
-                    className="w-full sm:w-auto min-h-[44px] bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white shadow-lg hover:shadow-xl transition-all touch-manipulation"
+                    className={`w-full sm:w-auto min-h-[44px] bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white shadow-lg hover:shadow-xl transition-all touch-manipulation ${isRTL ? 'flex-row-reverse' : ''}`}
                   >
                     {t.startButton}
-                    <ArrowRight className="ml-2 w-4 h-4" />
+                    <ArrowRight className={`w-4 h-4 ${isRTL ? 'mr-2 rotate-180' : 'ml-2'}`} />
                   </Button>
                 </div>
               </div>
