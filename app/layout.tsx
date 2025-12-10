@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Rubik } from "next/font/google";
+import { cookies } from "next/headers";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { I18nProvider } from "@/lib/i18n-context";
@@ -23,13 +24,30 @@ export const metadata: Metadata = {
   keywords: ["full-stack developer", "web developer", "web designer", "portfolio", "React", "Next.js", "TypeScript", "modern web design"],
 };
 
-export default function RootLayout({
+// Helper to get language from cookies with fallback
+async function getServerLanguage(): Promise<"en" | "ru" | "he"> {
+  try {
+    const cookieStore = await cookies();
+    const savedLang = cookieStore.get("language")?.value;
+    if (savedLang === "en" || savedLang === "ru" || savedLang === "he") {
+      return savedLang;
+    }
+  } catch {
+    // Cookies not available (e.g., static generation)
+  }
+  return "en";
+}
+
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const language = await getServerLanguage();
+  const dir = language === "he" ? "rtl" : "ltr";
+
   return (
-    <html lang="en" dir="ltr" suppressHydrationWarning className={`${inter.variable} ${rubik.variable}`}>
+    <html lang={language} dir={dir} suppressHydrationWarning className={`${inter.variable} ${rubik.variable}`}>
       <body className="font-sans antialiased">
         <ThemeProvider
           attribute="class"

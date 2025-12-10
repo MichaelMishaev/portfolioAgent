@@ -50,16 +50,19 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
 
   // Load saved language on mount
   useEffect(() => {
+    // Try localStorage first for immediate client-side use
     const savedLanguage = localStorage.getItem("language") as Language;
     if (savedLanguage && (savedLanguage === "en" || savedLanguage === "ru" || savedLanguage === "he")) {
       setLanguageState(savedLanguage);
     }
   }, []);
 
-  // Persist to localStorage
+  // Persist to both localStorage and cookies
   const setLanguage = useCallback((lang: Language) => {
     setLanguageState(lang);
     localStorage.setItem("language", lang);
+    // Save to cookie so server can read it (expires in 1 year)
+    document.cookie = `language=${lang}; path=/; max-age=31536000; SameSite=Lax`;
   }, []);
 
   const t = translations[language];
