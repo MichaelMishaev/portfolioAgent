@@ -285,6 +285,36 @@ if (loading) return <Loader />;
 - Use `getServerTemplateTranslations` for NEW server components
 - Existing templates with `tt` will continue to work but are less performant
 
+### Server-Side Language Detection
+The root layout reads language preference from cookies for proper SSR:
+
+```typescript
+// app/layout.tsx
+import { cookies } from "next/headers";
+
+async function getServerLanguage(): Promise<"en" | "ru" | "he"> {
+  try {
+    const cookieStore = await cookies(); // MUST await in Next.js 15
+    const savedLang = cookieStore.get("language")?.value;
+    if (savedLang === "en" || savedLang === "ru" || savedLang === "he") {
+      return savedLang;
+    }
+  } catch {
+    // Fallback if cookies unavailable
+  }
+  return "en";
+}
+
+export default async function RootLayout({ children }) {
+  const language = await getServerLanguage();
+  const dir = language === "he" ? "rtl" : "ltr";
+
+  return <html lang={language} dir={dir}>...</html>;
+}
+```
+
+**CRITICAL**: The i18n context saves to BOTH localStorage and cookies to ensure server-side rendering works correctly.
+
 #### 2. Template System
 **61 templates** organized by category:
 - Blog (5): Editorial, Magazine, Personal, Tech, Archetypes
@@ -397,6 +427,28 @@ const isDark = theme === 'dark';
 ```
 
 ## Code Quality Standards
+
+### Next.js 15 Patterns
+- **Server Components**: Default to async server components when possible
+- **Async APIs**: Always `await` calls to `cookies()`, `headers()`, `params`
+- **Client Components**: Mark with `"use client"` directive only when needed
+- **Dynamic Imports**: Use for heavy client-side libraries
+
+```typescript
+// Server Component (async by default)
+export default async function Page({ params }: { params: { id: string } }) {
+  const { id } = await params; // Must await in Next.js 15
+  const cookieStore = await cookies(); // Must await
+  return <div>{id}</div>;
+}
+
+// Client Component (when interactivity needed)
+"use client";
+export function InteractiveComponent() {
+  const [state, setState] = useState();
+  return <button onClick={() => setState(...)}>Click</button>;
+}
+```
 
 ### TypeScript
 - Use strict type checking (enabled in `tsconfig.json`)
@@ -590,6 +642,8 @@ className={isDark ? 'bg-blue-900 text-blue-300' : 'bg-blue-100 text-blue-700'}
 3. **Image Optimization**: All images go through Next.js Image component
 4. **Build Warnings**: TypeScript errors are ignored in build (see `next.config.ts`)
 5. **Bug Tracking**: Use `/docs/bugs.md` for all bug documentation
+6. **Next.js 15 Async APIs**: `cookies()`, `headers()`, and `params` must be awaited in server components
+7. **Language Persistence**: Uses both localStorage (client) and cookies (server) for language preference
 
 ## Deployment
 
