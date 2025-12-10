@@ -1,0 +1,614 @@
+{
+  "en": {
+    "badge": {
+      "limitedEnrollment": "LIMITED ENROLLMENT",
+      "archetypeMasteryProgram": "THE ARCHETYPE MASTERY PROGRAM",
+      "limitedTimeOffer": "LIMITED TIME OFFER"
+    },
+    "hero": {
+      "title": "Who Are You Really Meant To Be?",
+      "description": "Most people spend their entire lives playing a role that isn't theirs. Discover your true archetype and unlock the power, presence, and purpose you were born to express.",
+      "claimArchetype": "CLAIM YOUR ARCHETYPE",
+      "takeFreeQuiz": "TAKE FREE QUIZ"
+    },
+    "stats": [
+      { "value": "50,000+", "label": "Lives Transformed" },
+      { "value": "7", "label": "Power Archetypes" },
+      { "value": "12 Weeks", "label": "To Mastery" },
+      { "value": "98%", "label": "Success Rate" }
+    ],
+    "archetypesSection": {
+      "title": "The Seven Archetypes",
+      "subtitle": "Each archetype represents a unique pathway to power, influence, and authentic expression. Which one is calling to you?"
+    },
+    "archetypes": [
+      {
+        "number": "01",
+        "title": "The Leader",
+        "subtitle": "Command Your Presence",
+        "description": "Master the art of influence and inspire others to follow your vision. Build unwavering confidence and executive presence.",
+        "color": "from-blue-600 to-indigo-600",
+        "traits": ["Decisive", "Visionary", "Confident", "Strategic"]
+      },
+      {
+        "number": "02",
+        "title": "The Nurturer",
+        "subtitle": "Create Deep Connections",
+        "description": "Develop profound empathy and build meaningful relationships. Transform lives through compassion and understanding.",
+        "color": "from-rose-600 to-pink-600",
+        "traits": ["Empathetic", "Supportive", "Caring", "Intuitive"]
+      },
+      {
+        "number": "03",
+        "title": "The Innovator",
+        "subtitle": "Disrupt & Transform",
+        "description": "Think beyond boundaries and create breakthrough solutions. Channel your creative energy into world-changing ideas.",
+        "color": "from-purple-600 to-violet-600",
+        "traits": ["Creative", "Bold", "Pioneering", "Original"]
+      },
+      {
+        "number": "04",
+        "title": "The Protector",
+        "subtitle": "Stand For Justice",
+        "description": "Defend what matters and create safe spaces. Become the guardian of values and advocate for change.",
+        "color": "from-amber-600 to-orange-600",
+        "traits": ["Courageous", "Loyal", "Principled", "Strong"]
+      },
+      {
+        "number": "05",
+        "title": "The Explorer",
+        "subtitle": "Chart New Territory",
+        "description": "Embrace adventure and discover hidden potential. Navigate uncertainty with confidence and curiosity.",
+        "color": "from-teal-600 to-cyan-600",
+        "traits": ["Adventurous", "Curious", "Independent", "Brave"]
+      },
+      {
+        "number": "06",
+        "title": "The Performer",
+        "subtitle": "Captivate & Inspire",
+        "description": "Own the spotlight and express your authentic self. Transform presence into magnetic influence and impact.",
+        "color": "from-fuchsia-600 to-purple-600",
+        "traits": ["Charismatic", "Expressive", "Dynamic", "Inspiring"]
+      },
+      {
+        "number": "07",
+        "title": "The Sage",
+        "subtitle": "Wisdom & Mastery",
+        "description": "Cultivate deep wisdom and share transformative knowledge. Guide others through insight and understanding.",
+        "color": "from-emerald-600 to-green-600",
+        "traits": ["Wise", "Reflective", "Knowledgeable", "Calm"]
+      }
+    ],
+    "archetypesCta": {
+      "title": "Ready to Discover Your Dominant Archetype?",
+      "subtitle": "Take our free 5-minute assessment and unlock your personalized archetype profile",
+      "button": "START FREE ASSESSMENT"
+    },
+    "qualification": {
+      "title": "Is This Your Journey?",
+      "forYouTitle": "This IS For You If...",
+      "forYouItems": [
+        "You feel like you're playing a role that isn't authentically YOU",
+        "You're ready to step into leadership but lack clarity on your unique approach",
+        "You want to amplify your influence without compromising your values",
+        "You're seeking a framework that honors your individuality while providing structure",
+        "You're committed to 12 weeks of deep inner work and transformation",
+        "You're ready to invest in becoming the person you were meant to be"
+      ],
+      "notForYouTitle": "This IS NOT For You If...",
+      "notForYouItems": [
+        "You're looking for quick fixes or surface-level personality tests",
+        "You're not willing to confront limiting beliefs and shadow patterns",
+        "You expect transformation without consistent practice and application",
+        "You're seeking external validation rather than internal alignment",
+        "You're not ready to invest time, energy, and resources in yourself",
+        "You prefer staying comfortable over embracing growth challenges"
+      ],
+      "ctaText": "If you're nodding YES to the left column, this program will change your life.",
+      "ctaButton": "APPLY NOW - LIMITED SPOTS"
+    },
+    "testimonials": {
+      "title": "Real People. Real Transformation.",
+      "subtitle": "See what happens when you align with your true archetype",
+      "items": [
+        {
+          "name": "Jennifer Martinez",
+          "role": "Executive Coach",
+          "quote": "This program completely transformed how I show up in the world. I finally understand my core archetype and leverage it for maximum impact."
+        },
+        {
+          "name": "Marcus Thompson",
+          "role": "Entrepreneur",
+          "quote": "The archetype framework gave me clarity I've been searching for years. My business and relationships have completely transformed."
+        },
+        {
+          "name": "Sarah Chen",
+          "role": "Leadership Consultant",
+          "quote": "Powerful beyond words. I now lead with authenticity and purpose. This is the missing piece I needed in my leadership journey."
+        },
+        {
+          "name": "David Park",
+          "role": "Creative Director",
+          "quote": "Understanding my archetype unlocked creative potential I didn't know existed. Game-changing for my career and personal growth."
+        }
+      ],
+      "socialProof": {
+        "avgRating": { "value": "4.9/5", "label": "Average Rating" },
+        "stories": { "value": "2,847", "label": "Success Stories" },
+        "recommend": { "value": "98%", "label": "Would Recommend" }
+      }
+    },
+    "program": {
+      "title": "The Mastery Program",
+      "subtitle": "12 weeks to discover, embody, and master your archetype",
+      "modules": [
+        {
+          "title": "Archetype Discovery",
+          "description": "Deep dive assessment to identify your primary and secondary archetypes",
+          "duration": "Week 1-2"
+        },
+        {
+          "title": "Shadow Integration",
+          "description": "Work through limiting beliefs and embrace your full authentic power",
+          "duration": "Week 3-4"
+        },
+        {
+          "title": "Mastery Activation",
+          "description": "Develop advanced strategies to leverage your archetype in all areas of life",
+          "duration": "Week 5-8"
+        },
+        {
+          "title": "Leadership Expression",
+          "description": "Apply your archetype mastery to create lasting impact and influence",
+          "duration": "Week 9-12"
+        }
+      ]
+    },
+    "pricing": {
+      "title": "Investment Options",
+      "subtitle": "Choose the payment plan that works for you",
+      "payInFull": {
+        "label": "PAY IN FULL",
+        "price": "$3,997",
+        "savings": "Save $781",
+        "button": "ENROLL NOW"
+      },
+      "paymentPlan": {
+        "label": "PAYMENT PLAN",
+        "price": "$397/month",
+        "detail": "12 Monthly Payments",
+        "button": "START PAYMENT PLAN"
+      },
+      "bonus": {
+        "title": "Limited Time: Receive $1,500 in exclusive bonuses",
+        "subtitle": "1-on-1 Strategy Session + Lifetime Community Access + Bonus Workshops"
+      },
+      "guarantee": {
+        "title": "100% Satisfaction Guarantee",
+        "description": "Complete the first 30 days. If you don't see profound shifts in your self-awareness and presence, we'll refund every penny. No questions asked."
+      }
+    },
+    "finalCta": {
+      "title": "Your True Self Is Waiting",
+      "subtitle": "Stop living someone else's story. Enrollment closes in 72 hours.",
+      "button": "CLAIM YOUR SPOT NOW",
+      "spotsRemaining": "Only 12 spots remaining in this cohort"
+    },
+    "footer": {
+      "title": "ARCHETYPES JOURNAL",
+      "tagline": "Discover who you were meant to be. Master your archetype. Transform your life.",
+      "privacyPolicy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "contact": "Contact Us",
+      "copyright": "© 2025 Archetypes Journal. All rights reserved."
+    }
+  },
+  "ru": {
+    "badge": {
+      "limitedEnrollment": "ОГРАНИЧЕННЫЙ НАБОР",
+      "archetypeMasteryProgram": "ПРОГРАММА МАСТЕРСТВА АРХЕТИПОВ",
+      "limitedTimeOffer": "ОГРАНИЧЕННОЕ ПРЕДЛОЖЕНИЕ"
+    },
+    "hero": {
+      "title": "Кем Вы Действительно Должны Быть?",
+      "description": "Большинство людей проводят всю свою жизнь, играя роль, которая им не принадлежит. Откройте свой истинный архетип и разблокируйте силу, присутствие и цель, для которых вы родились.",
+      "claimArchetype": "ПОЛУЧИТЬ СВОЙ АРХЕТИП",
+      "takeFreeQuiz": "ПРОЙТИ БЕСПЛАТНЫЙ ТЕСТ"
+    },
+    "stats": [
+      { "value": "50,000+", "label": "Жизней Изменено" },
+      { "value": "7", "label": "Архетипов Силы" },
+      { "value": "12 Недель", "label": "До Мастерства" },
+      { "value": "98%", "label": "Успеха" }
+    ],
+    "archetypesSection": {
+      "title": "Семь Архетипов",
+      "subtitle": "Каждый архетип представляет уникальный путь к силе, влиянию и аутентичному выражению. Какой зовет вас?"
+    },
+    "archetypes": [
+      {
+        "number": "01",
+        "title": "Лидер",
+        "subtitle": "Командуйте Своим Присутствием",
+        "description": "Овладейте искусством влияния и вдохновляйте других следовать вашему видению. Создайте непоколебимую уверенность и управленческое присутствие.",
+        "color": "from-blue-600 to-indigo-600",
+        "traits": ["Решительный", "Дальновидный", "Уверенный", "Стратегический"]
+      },
+      {
+        "number": "02",
+        "title": "Воспитатель",
+        "subtitle": "Создавайте Глубокие Связи",
+        "description": "Развивайте глубокую эмпатию и стройте значимые отношения. Трансформируйте жизни через сострадание и понимание.",
+        "color": "from-rose-600 to-pink-600",
+        "traits": ["Эмпатичный", "Поддерживающий", "Заботливый", "Интуитивный"]
+      },
+      {
+        "number": "03",
+        "title": "Инноватор",
+        "subtitle": "Разрушайте и Трансформируйте",
+        "description": "Мыслите за пределами границ и создавайте прорывные решения. Направьте свою творческую энергию на идеи, меняющие мир.",
+        "color": "from-purple-600 to-violet-600",
+        "traits": ["Креативный", "Смелый", "Первопроходец", "Оригинальный"]
+      },
+      {
+        "number": "04",
+        "title": "Защитник",
+        "subtitle": "Отстаивайте Справедливость",
+        "description": "Защищайте то, что важно, и создавайте безопасные пространства. Станьте хранителем ценностей и защитником перемен.",
+        "color": "from-amber-600 to-orange-600",
+        "traits": ["Смелый", "Верный", "Принципиальный", "Сильный"]
+      },
+      {
+        "number": "05",
+        "title": "Исследователь",
+        "subtitle": "Прокладывайте Новую Территорию",
+        "description": "Принимайте приключения и открывайте скрытый потенциал. Преодолевайте неопределенность с уверенностью и любопытством.",
+        "color": "from-teal-600 to-cyan-600",
+        "traits": ["Авантюрный", "Любопытный", "Независимый", "Храбрый"]
+      },
+      {
+        "number": "06",
+        "title": "Артист",
+        "subtitle": "Пленяйте и Вдохновляйте",
+        "description": "Владейте центром внимания и выражайте свое аутентичное я. Превратите присутствие в магнетическое влияние и воздействие.",
+        "color": "from-fuchsia-600 to-purple-600",
+        "traits": ["Харизматичный", "Выразительный", "Динамичный", "Вдохновляющий"]
+      },
+      {
+        "number": "07",
+        "title": "Мудрец",
+        "subtitle": "Мудрость и Мастерство",
+        "description": "Культивируйте глубокую мудрость и делитесь трансформирующими знаниями. Направляйте других через понимание и прозрение.",
+        "color": "from-emerald-600 to-green-600",
+        "traits": ["Мудрый", "Рефлексивный", "Знающий", "Спокойный"]
+      }
+    ],
+    "archetypesCta": {
+      "title": "Готовы Открыть Свой Доминирующий Архетип?",
+      "subtitle": "Пройдите нашу бесплатную 5-минутную оценку и разблокируйте свой персонализированный профиль архетипа",
+      "button": "НАЧАТЬ БЕСПЛАТНУЮ ОЦЕНКУ"
+    },
+    "qualification": {
+      "title": "Это Ваш Путь?",
+      "forYouTitle": "Это ДЛЯ ВАС, Если...",
+      "forYouItems": [
+        "Вы чувствуете, что играете роль, которая не является аутентично ВАШЕЙ",
+        "Вы готовы вступить в лидерство, но вам не хватает ясности в вашем уникальном подходе",
+        "Вы хотите усилить свое влияние, не жертвуя своими ценностями",
+        "Вы ищете структуру, которая чтит вашу индивидуальность, предоставляя структуру",
+        "Вы готовы к 12 неделям глубокой внутренней работы и трансформации",
+        "Вы готовы инвестировать в то, чтобы стать человеком, которым должны быть"
+      ],
+      "notForYouTitle": "Это НЕ ДЛЯ ВАС, Если...",
+      "notForYouItems": [
+        "Вы ищете быстрые решения или поверхностные личностные тесты",
+        "Вы не готовы противостоять ограничивающим убеждениям и теневым паттернам",
+        "Вы ожидаете трансформации без последовательной практики и применения",
+        "Вы ищете внешнее подтверждение, а не внутреннее согласование",
+        "Вы не готовы инвестировать время, энергию и ресурсы в себя",
+        "Вы предпочитаете оставаться в комфорте, а не принимать вызовы роста"
+      ],
+      "ctaText": "Если вы киваете ДА левому столбцу, эта программа изменит вашу жизнь.",
+      "ctaButton": "ПОДАТЬ ЗАЯВКУ - ОГРАНИЧЕННЫЕ МЕСТА"
+    },
+    "testimonials": {
+      "title": "Реальные Люди. Реальная Трансформация.",
+      "subtitle": "Посмотрите, что происходит, когда вы совпадаете с вашим истинным архетипом",
+      "items": [
+        {
+          "name": "Дженнифер Мартинес",
+          "role": "Коуч для Руководителей",
+          "quote": "Эта программа полностью изменила то, как я появляюсь в мире. Я наконец понимаю свой основной архетип и использую его для максимального воздействия."
+        },
+        {
+          "name": "Маркус Томпсон",
+          "role": "Предприниматель",
+          "quote": "Структура архетипов дала мне ясность, которую я искал годами. Мой бизнес и отношения полностью трансформировались."
+        },
+        {
+          "name": "Сара Чен",
+          "role": "Консультант по Лидерству",
+          "quote": "Мощно сверх слов. Теперь я веду с аутентичностью и целью. Это недостающая часть, которая мне нужна была в моем лидерском путешествии."
+        },
+        {
+          "name": "Дэвид Парк",
+          "role": "Креативный Директор",
+          "quote": "Понимание моего архетипа разблокировало творческий потенциал, о котором я не знал. Меняющая игру для моей карьеры и личностного роста."
+        }
+      ],
+      "socialProof": {
+        "avgRating": { "value": "4.9/5", "label": "Средний Рейтинг" },
+        "stories": { "value": "2,847", "label": "Историй Успеха" },
+        "recommend": { "value": "98%", "label": "Рекомендуют" }
+      }
+    },
+    "program": {
+      "title": "Программа Мастерства",
+      "subtitle": "12 недель, чтобы открыть, воплотить и освоить ваш архетип",
+      "modules": [
+        {
+          "title": "Открытие Архетипа",
+          "description": "Глубокая оценка для определения ваших основных и вторичных архетипов",
+          "duration": "Неделя 1-2"
+        },
+        {
+          "title": "Интеграция Тени",
+          "description": "Работа через ограничивающие убеждения и принятие вашей полной аутентичной силы",
+          "duration": "Неделя 3-4"
+        },
+        {
+          "title": "Активация Мастерства",
+          "description": "Разработка продвинутых стратегий для использования вашего архетипа во всех областях жизни",
+          "duration": "Неделя 5-8"
+        },
+        {
+          "title": "Выражение Лидерства",
+          "description": "Применение вашего мастерства архетипа для создания долгосрочного воздействия и влияния",
+          "duration": "Неделя 9-12"
+        }
+      ]
+    },
+    "pricing": {
+      "title": "Варианты Инвестиций",
+      "subtitle": "Выберите план оплаты, который работает для вас",
+      "payInFull": {
+        "label": "ПОЛНАЯ ОПЛАТА",
+        "price": "$3,997",
+        "savings": "Сэкономьте $781",
+        "button": "ЗАПИСАТЬСЯ СЕЙЧАС"
+      },
+      "paymentPlan": {
+        "label": "ПЛАН ОПЛАТЫ",
+        "price": "$397/месяц",
+        "detail": "12 Ежемесячных Платежей",
+        "button": "НАЧАТЬ ПЛАН ОПЛАТЫ"
+      },
+      "bonus": {
+        "title": "Ограниченное Время: Получите $1,500 эксклюзивных бонусов",
+        "subtitle": "Индивидуальная Стратегическая Сессия + Пожизненный Доступ к Сообществу + Бонусные Воркшопы"
+      },
+      "guarantee": {
+        "title": "100% Гарантия Удовлетворения",
+        "description": "Завершите первые 30 дней. Если вы не увидите глубоких изменений в вашем самосознании и присутствии, мы вернем каждый цент. Без вопросов."
+      }
+    },
+    "finalCta": {
+      "title": "Ваше Истинное Я Ждет",
+      "subtitle": "Перестаньте жить чужой историей. Регистрация закрывается через 72 часа.",
+      "button": "ЗАЙМИТЕ СВОЕ МЕСТО СЕЙЧАС",
+      "spotsRemaining": "Осталось только 12 мест в этом потоке"
+    },
+    "footer": {
+      "title": "ЖУРНАЛ АРХЕТИПОВ",
+      "tagline": "Откройте, кем вы должны были быть. Овладейте своим архетипом. Трансформируйте свою жизнь.",
+      "privacyPolicy": "Политика Конфиденциальности",
+      "terms": "Условия Использования",
+      "contact": "Связаться с Нами",
+      "copyright": "© 2025 Журнал Архетипов. Все права защищены."
+    }
+  },
+  "he": {
+    "badge": {
+      "limitedEnrollment": "הרשמה מוגבלת",
+      "archetypeMasteryProgram": "תכנית שליטה בארכיטיפים",
+      "limitedTimeOffer": "הצעה מוגבלת בזמן"
+    },
+    "hero": {
+      "title": "מי אתה באמת אמור להיות?",
+      "description": "רוב האנשים מבלים את כל חייהם במילוי תפקיד שאינו שלהם. גלה את הארכיטיפ האמיתי שלך ושחרר את הכוח, הנוכחות והמטרה שנולדת להביע.",
+      "claimArchetype": "תבע את הארכיטיפ שלך",
+      "takeFreeQuiz": "עבור מבחן חינם"
+    },
+    "stats": [
+      { "value": "50,000+", "label": "חיים שהשתנו" },
+      { "value": "7", "label": "ארכיטיפי כוח" },
+      { "value": "12 שבועות", "label": "עד שליטה" },
+      { "value": "98%", "label": "שיעור הצלחה" }
+    ],
+    "archetypesSection": {
+      "title": "שבעת הארכיטיפים",
+      "subtitle": "כל ארכיטיפ מייצג מסלול ייחודי לכוח, השפעה וביטוי אותנטי. איזה קורא לך?"
+    },
+    "archetypes": [
+      {
+        "number": "01",
+        "title": "המנהיג",
+        "subtitle": "שלוט בנוכחות שלך",
+        "description": "שלוט באמנות ההשפעה והשראה לאחרים לעקוב אחר החזון שלך. בנה ביטחון בלתי מעורער ונוכחות מנהלת.",
+        "color": "from-blue-600 to-indigo-600",
+        "traits": ["מכריע", "בעל חזון", "בטוח", "אסטרטגי"]
+      },
+      {
+        "number": "02",
+        "title": "המטפל",
+        "subtitle": "צור קשרים עמוקים",
+        "description": "פתח אמפתיה עמוקה ובנה קשרים משמעותיים. שנה חיים דרך חמלה והבנה.",
+        "color": "from-rose-600 to-pink-600",
+        "traits": ["אמפטי", "תומך", "דואג", "אינטואיטיבי"]
+      },
+      {
+        "number": "03",
+        "title": "החדשן",
+        "subtitle": "שבור ושנה",
+        "description": "חשוב מעבר לגבולות וצור פתרונות פורצי דרך. תעל את האנרגיה היצירתית שלך לרעיונות משני עולם.",
+        "color": "from-purple-600 to-violet-600",
+        "traits": ["יצירתי", "נועז", "חלוץ", "מקורי"]
+      },
+      {
+        "number": "04",
+        "title": "המגן",
+        "subtitle": "עמוד על צדק",
+        "description": "הגן על מה שחשוב וצור מרחבים בטוחים. הפוך לשומר הערכים ולתומך בשינוי.",
+        "color": "from-amber-600 to-orange-600",
+        "traits": ["אמיץ", "נאמן", "עקרוני", "חזק"]
+      },
+      {
+        "number": "05",
+        "title": "החוקר",
+        "subtitle": "סלול שטח חדש",
+        "description": "אמץ הרפתקה וגלה פוטנציאל נסתר. נווט באי-וודאות עם ביטחון וסקרנות.",
+        "color": "from-teal-600 to-cyan-600",
+        "traits": ["הרפתקן", "סקרן", "עצמאי", "אמיץ"]
+      },
+      {
+        "number": "06",
+        "title": "המבצע",
+        "subtitle": "הקסם והשראה",
+        "description": "החזק בזרקור והבע את האני האותנטי שלך. הפוך נוכחות להשפעה מגנטית ולהשפעה.",
+        "color": "from-fuchsia-600 to-purple-600",
+        "traits": ["כריזמטי", "אקספרסיבי", "דינמי", "מעורר השראה"]
+      },
+      {
+        "number": "07",
+        "title": "החכם",
+        "subtitle": "חוכמה ושליטה",
+        "description": "טפח חוכמה עמוקה ושתף ידע משנה. הדרך אחרים דרך תובנה והבנה.",
+        "color": "from-emerald-600 to-green-600",
+        "traits": ["חכם", "רפלקטיבי", "בעל ידע", "רגוע"]
+      }
+    ],
+    "archetypesCta": {
+      "title": "מוכן לגלות את הארכיטיפ הדומיננטי שלך?",
+      "subtitle": "עבור את ההערכה החינמית שלנו בת 5 דקות ושחרר את פרופיל הארכיטיפ המותאם אישית שלך",
+      "button": "התחל הערכה חינם"
+    },
+    "qualification": {
+      "title": "האם זה המסע שלך?",
+      "forYouTitle": "זה בשבילך אם...",
+      "forYouItems": [
+        "אתה מרגיש שאתה ממלא תפקיד שאינו אותנטית אתה",
+        "אתה מוכן להיכנס למנהיגות אך חסר לך בהירות בגישה הייחודית שלך",
+        "אתה רוצה להגביר את ההשפעה שלך מבלי להתפשר על הערכים שלך",
+        "אתה מחפש מסגרת שמכבדת את האינדיבידואליות שלך תוך מתן מבנה",
+        "אתה מחויב ל-12 שבועות של עבודה פנימית עמוקה ושינוי",
+        "אתה מוכן להשקיע בלהפוך לאדם שאתה אמור להיות"
+      ],
+      "notForYouTitle": "זה לא בשבילך אם...",
+      "notForYouItems": [
+        "אתה מחפש תיקונים מהירים או מבחני אישיות שטחיים",
+        "אתה לא מוכן להתעמת עם אמונות מגבילות ודפוסי צל",
+        "אתה מצפה לשינוי ללא תרגול ויישום עקבי",
+        "אתה מחפש אימות חיצוני במקום התאמה פנימית",
+        "אתה לא מוכן להשקיע זמן, אנרגיה ומשאבים בעצמך",
+        "אתה מעדיף להישאר בנוחות על פני קבלת אתגרי צמיחה"
+      ],
+      "ctaText": "אם אתה מהנהן כן לעמודה השמאלית, התכנית הזו תשנה את חייך.",
+      "ctaButton": "הגש מועמדות כעת - מקומות מוגבלים"
+    },
+    "testimonials": {
+      "title": "אנשים אמיתיים. שינוי אמיתי.",
+      "subtitle": "ראה מה קורה כשאתה מתיישר עם הארכיטיפ האמיתי שלך",
+      "items": [
+        {
+          "name": "ג'ניפר מרטינז",
+          "role": "מאמן מנהלים",
+          "quote": "התכנית הזו שינתה לחלוטין איך אני מופיעה בעולם. סוף סוף אני מבינה את הארכיטיפ המרכזי שלי ומנצלת אותו להשפעה מקסימלית."
+        },
+        {
+          "name": "מרקוס תומפסון",
+          "role": "יזם",
+          "quote": "מסגרת הארכיטיפ נתנה לי בהירות שחיפשתי במשך שנים. העסק והיחסים שלי השתנו לחלוטין."
+        },
+        {
+          "name": "שרה צ'ן",
+          "role": "יועצת מנהיגות",
+          "quote": "עוצמתי מעבר למילים. עכשיו אני מובילה באותנטיות ומטרה. זה החלק החסר שהייתי צריכה במסע המנהיגות שלי."
+        },
+        {
+          "name": "דיוויד פארק",
+          "role": "מנהל קריאייטיב",
+          "quote": "הבנת הארכיטיפ שלי שחררה פוטנציאל יצירתי שלא ידעתי שקיים. משנה משחק לקריירה והצמיחה האישית שלי."
+        }
+      ],
+      "socialProof": {
+        "avgRating": { "value": "4.9/5", "label": "דירוג ממוצע" },
+        "stories": { "value": "2,847", "label": "סיפורי הצלחה" },
+        "recommend": { "value": "98%", "label": "ממליצים" }
+      }
+    },
+    "program": {
+      "title": "תכנית השליטה",
+      "subtitle": "12 שבועות לגלות, לגלם ולשלוט בארכיטיפ שלך",
+      "modules": [
+        {
+          "title": "גילוי ארכיטיפ",
+          "description": "הערכה מעמיקה לזיהוי הארכיטיפים הראשוניים והמשניים שלך",
+          "duration": "שבוע 1-2"
+        },
+        {
+          "title": "אינטגרציית צל",
+          "description": "עבודה דרך אמונות מגבילות וקבלת הכוח האותנטי המלא שלך",
+          "duration": "שבוע 3-4"
+        },
+        {
+          "title": "הפעלת שליטה",
+          "description": "פיתוח אסטרטגיות מתקדמות לניצול הארכיטיפ שלך בכל תחומי החיים",
+          "duration": "שבוע 5-8"
+        },
+        {
+          "title": "ביטוי מנהיגות",
+          "description": "יישום שליטת הארכיטיפ שלך ליצירת השפעה והשפעה לאורך זמן",
+          "duration": "שבוע 9-12"
+        }
+      ]
+    },
+    "pricing": {
+      "title": "אפשרויות השקעה",
+      "subtitle": "בחר את תכנית התשלום שעובדת עבורך",
+      "payInFull": {
+        "label": "תשלום מלא",
+        "price": "$3,997",
+        "savings": "חסוך $781",
+        "button": "הירשם כעת"
+      },
+      "paymentPlan": {
+        "label": "תכנית תשלום",
+        "price": "$397/חודש",
+        "detail": "12 תשלומים חודשיים",
+        "button": "התחל תכנית תשלום"
+      },
+      "bonus": {
+        "title": "זמן מוגבל: קבל $1,500 בבונוסים אקסקלוסיביים",
+        "subtitle": "פגישת אסטרטגיה 1על1 + גישה לכל החיים לקהילה + סדנאות בונוס"
+      },
+      "guarantee": {
+        "title": "ערבות שביעות רצון 100%",
+        "description": "השלם את 30 הימים הראשונים. אם אתה לא רואה שינויים עמוקים במודעות העצמית והנוכחות שלך, נחזיר כל אגורה. ללא שאלות."
+      }
+    },
+    "finalCta": {
+      "title": "האני האמיתי שלך מחכה",
+      "subtitle": "הפסק לחיות את הסיפור של מישהו אחר. ההרשמה נסגרת בעוד 72 שעות.",
+      "button": "תבע את המקום שלך כעת",
+      "spotsRemaining": "רק 12 מקומות נותרו בקבוצה זו"
+    },
+    "footer": {
+      "title": "יומן ארכיטיפים",
+      "tagline": "גלה מי אתה אמור להיות. שלוט בארכיטיפ שלך. שנה את חייך.",
+      "privacyPolicy": "מדיניות פרטיות",
+      "terms": "תנאי שירות",
+      "contact": "צור קשר",
+      "copyright": "© 2025 יומן ארכיטיפים. כל הזכויות שמורות."
+    }
+  }
+}

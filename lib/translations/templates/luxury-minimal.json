@@ -1,0 +1,44 @@
+{
+  "en": {
+    "ui": {
+      "selectedWorks": "Selected Works",
+      "about": "About",
+      "services": "Services",
+      "testimonials": "Testimonials",
+      "gallery": "Gallery",
+      "expertise": "Expertise",
+      "investment": "Investment",
+      "bespokeSolutionsTailoredToYourVision": "Bespoke solutions tailored to your vision",
+      "journey": "Journey",
+      "questions": "Questions",
+      "closeNavigationMenu": "Close navigation menu",
+      "openNavigationMenu": "Open navigation menu",
+      "heroBackground": "Hero Background",
+      "portrait": "Portrait"
+    }
+  },
+  "ru": {
+    "ui": {
+      "about": "О нас",
+      "services": "Услуги",
+      "testimonials": "Отзывы",
+      "gallery": "Галерея",
+      "expertise": "Экспертиза",
+      "journey": "Путь",
+      "closeNavigationMenu": "Закрыть меню навигации",
+      "openNavigationMenu": "Открыть меню навигации"
+    }
+  },
+  "he": {
+    "ui": {
+      "about": "אודות",
+      "services": "שירותים",
+      "testimonials": "המלצות",
+      "gallery": "גלריה",
+      "expertise": "מומחיות",
+      "journey": "מסע",
+      "closeNavigationMenu": "סגור תפריט ניווט",
+      "openNavigationMenu": "פתח תפריט ניווט"
+    }
+  }
+}

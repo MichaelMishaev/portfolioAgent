@@ -1,0 +1,75 @@
+{
+  "en": {
+    "ui": {
+      "feature": "Feature",
+      "basic": "Basic",
+      "pro": "Pro",
+      "enterprise": "Enterprise",
+      "about": "About",
+      "journey": "Journey",
+      "testimonials": "Testimonials",
+      "closeNavigationMenu": "Close navigation menu",
+      "openNavigationMenu": "Open navigation menu",
+      "projects": "Projects",
+      "satisfaction": "Satisfaction",
+      "clients": "Clients",
+      "experience": "Experience",
+      "framerMotion": "Framer Motion",
+      "threejs": "Three.js",
+      "webgl": "WebGL",
+      "glassmorphism": "Glassmorphism",
+      "animation": "Animation",
+      "seniorUiEngineer": "Senior UI Engineer",
+      "techInnovationsInc": "Tech Innovations Inc",
+      "leadDesigner": "Lead Designer",
+      "creativeStudio": "Creative Studio",
+      "frontendDeveloper": "Frontend Developer",
+      "digitalAgency": "Digital Agency",
+      "startedFreelancing": "Started Freelancing",
+      "independent": "Independent",
+      "absolutelyStunningWorkTheGlassmorphismEffectsArePe": "Absolutely stunning work. The glassmorphism effects are perfection.",
+      "sarahJ": "Sarah J.",
+      "ceoTechcorp": "CEO, TechCorp",
+      "transformedOurBrandWithCuttingedgeDesignAndSmoothA": "Transformed our brand with cutting-edge design and smooth animations.",
+      "mikeR": "Mike R.",
+      "founderStartupx": "Founder, StartupX",
+      "professionalCreativeAndAheadOfTheCurveHighlyRecomm": "Professional, creative, and ahead of the curve. Highly recommended.",
+      "emmaL": "Emma L.",
+      "directorAgencyCo": "Director, Agency Co",
+      "absolutelyIProvideOngoingSupportAndMaintenancePack": "Absolutely. I provide ongoing support and maintenance packages.",
+      "getStarted": "Get Started",
+      "everyProjectIsAnOpportunityToPushBoundariesAndCrea": "Every project is an opportunity to push boundaries and create something extraordinary.",
+      "faq": "FAQ"
+    }
+  },
+  "ru": {
+    "ui": {
+      "enterprise": "Корпоративный",
+      "about": "О нас",
+      "journey": "Путь",
+      "testimonials": "Отзывы",
+      "closeNavigationMenu": "Закрыть меню навигации",
+      "openNavigationMenu": "Открыть меню навигации",
+      "projects": "Проекты",
+      "clients": "Клиенты",
+      "experience": "Опыт",
+      "getStarted": "Начать",
+      "faq": "Частые вопросы"
+    }
+  },
+  "he": {
+    "ui": {
+      "enterprise": "ארגוני",
+      "about": "אודות",
+      "journey": "מסע",
+      "testimonials": "המלצות",
+      "closeNavigationMenu": "סגור תפריט ניווט",
+      "openNavigationMenu": "פתח תפריט ניווט",
+      "projects": "פרויקטים",
+      "clients": "לקוחות",
+      "experience": "ניסיון",
+      "getStarted": "התחל",
+      "faq": "שאלות נפוצות"
+    }
+  }
+}

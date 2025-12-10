@@ -1,0 +1,54 @@
+{
+  "en": {
+    "ui": {
+      "start": "Start",
+      "growthRate": "Growth Rate",
+      "clientsServed": "Clients Served",
+      "quickLinks": "Quick Links",
+      "services": "Services",
+      "caseStudies": "Case Studies",
+      "testimonials": "Testimonials",
+      "contact": "Contact",
+      "coreCompetencies": "Core Competencies",
+      "servicePackages": "Service Packages",
+      "mostPopular": "Most Popular",
+      "companyMilestones": "Company Milestones",
+      "closeNavigationMenu": "Close navigation menu",
+      "openNavigationMenu": "Open navigation menu",
+      "howItWorks": "How It Works",
+      "ourProvenProcessToFillYourPipeline": "Our proven process to fill your pipeline",
+      "whyChooseUs": "Why Choose Us",
+      "whatSetsUsApart": "What sets us apart",
+      "industriesWeServe": "Industries We Serve",
+      "specializedExpertiseAcrossMultipleSectors": "Specialized expertise across multiple sectors",
+      "getStarted": "Get Started",
+      "trustedBy": "TRUSTED BY",
+      "featuredCaseStudy": "FEATURED CASE STUDY",
+      "readFullCaseStudy": "Read Full Case Study"
+    }
+  },
+  "ru": {
+    "ui": {
+      "services": "Услуги",
+      "caseStudies": "Кейсы",
+      "testimonials": "Отзывы",
+      "contact": "Контакты",
+      "mostPopular": "Самый популярный",
+      "closeNavigationMenu": "Закрыть меню навигации",
+      "openNavigationMenu": "Открыть меню навигации",
+      "getStarted": "Начать"
+    }
+  },
+  "he": {
+    "ui": {
+      "services": "שירותים",
+      "caseStudies": "מקרי בוחן",
+      "testimonials": "המלצות",
+      "contact": "יצירת קשר",
+      "mostPopular": "הפופולרי ביותר",
+      "closeNavigationMenu": "סגור תפריט ניווט",
+      "openNavigationMenu": "פתח תפריט ניווט",
+      "getStarted": "התחל"
+    }
+  }
+}

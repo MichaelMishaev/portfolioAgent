@@ -1,0 +1,56 @@
+{
+  "en": {
+    "ui": {
+      "stats": "Stats",
+      "about": "About",
+      "pricing": "Pricing",
+      "mostPopular": "Most Popular",
+      "testimonials": "Testimonials",
+      "timeline": "Timeline",
+      "alexQuantum": "Alex Quantum",
+      "buildingImmersiveDigitalExperiencesWithWebgl": "Building immersive digital experiences with WebGL",
+      "threejs": "Three.js",
+      "webgl": "WebGL",
+      "vrMuseumExperience": "VR Museum Experience",
+      "virtualRealityArtGalleryWithSpatialAudio": "Virtual reality art gallery with spatial audio",
+      "webxr": "WebXR",
+      "spatialAudio": "Spatial Audio",
+      "interactiveDataVisualization": "Interactive Data Visualization",
+      "gameEnginePrototype": "Game Engine Prototype",
+      "cannonjs": "Cannon.js",
+      "glslShaders": "GLSL Shaders",
+      "contact": "Contact",
+      "exploreMyWork": "Explore My Work",
+      "featuredProjects": "Featured Projects",
+      "technicalExpertise": "Technical Expertise",
+      "letsCreateTogether": "Let's Create Together",
+      "selectPlan": "Select Plan",
+      "letsCreateAnUnforgettableImmersiveExperience": "Let's create an unforgettable immersive experience",
+      "startProject": "Start Project",
+      "viewDemo": "View Demo",
+      "sendEmailToAlexquantum3ddev": "Send email to alex@quantum3d.dev",
+      "visitGithubProfile": "Visit GitHub profile",
+      "visitLinkedinProfile": "Visit LinkedIn profile"
+    }
+  },
+  "ru": {
+    "ui": {
+      "about": "О нас",
+      "pricing": "Цены",
+      "mostPopular": "Самый популярный",
+      "testimonials": "Отзывы",
+      "timeline": "Хронология",
+      "contact": "Контакты"
+    }
+  },
+  "he": {
+    "ui": {
+      "about": "אודות",
+      "pricing": "תמחור",
+      "mostPopular": "הפופולרי ביותר",
+      "testimonials": "המלצות",
+      "timeline": "ציר זמן",
+      "contact": "יצירת קשר"
+    }
+  }
+}

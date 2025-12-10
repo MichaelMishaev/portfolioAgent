@@ -1,0 +1,47 @@
+{
+  "en": {
+    "nav": {
+      "home": "Home",
+      "about": "About",
+      "services": "Services",
+      "programs": "Programs",
+      "testimonials": "Testimonials",
+      "contact": "Contact"
+    },
+    "hero": {
+      "title": "Transform Your Life",
+      "subtitle": "Professional coaching for personal and business growth",
+      "cta": "Book Consultation"
+    }
+  },
+  "ru": {
+    "nav": {
+      "home": "Главная",
+      "about": "О нас",
+      "services": "Услуги",
+      "programs": "Программы",
+      "testimonials": "Отзывы",
+      "contact": "Контакты"
+    },
+    "hero": {
+      "title": "Преобразуйте свою жизнь",
+      "subtitle": "Профессиональный коучинг для личностного и бизнес роста",
+      "cta": "Записаться на консультацию"
+    }
+  },
+  "he": {
+    "nav": {
+      "home": "דף הבית",
+      "about": "אודות",
+      "services": "שירותים",
+      "programs": "תוכניות",
+      "testimonials": "המלצות",
+      "contact": "צור קשר"
+    },
+    "hero": {
+      "title": "שנה את חייך",
+      "subtitle": "אימון מקצועי לצמיחה אישית ועסקית",
+      "cta": "קבע ייעוץ"
+    }
+  }
+}

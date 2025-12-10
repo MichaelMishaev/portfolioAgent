@@ -1,0 +1,44 @@
+{
+  "en": {
+    "ui": {
+      "whereTypographyMovesMorphsAndTellsStoriesThroughMo": "Where typography moves, morphs, and tells stories through motion.",
+      "contact": "CONTACT",
+      "selectedWork": "SELECTED WORK",
+      "capabilities": "CAPABILITIES",
+      "lets": "LET'S",
+      "talk": "TALK",
+      "startProject": "START PROJECT",
+      "skills": "SKILLS",
+      "about": "ABOUT",
+      "weCreateDigitalExperiencesThatMovePeopleLiterally": "WE CREATE DIGITAL EXPERIENCES THAT MOVE PEOPLE. LITERALLY.",
+      "withAFocusOnMotionDesignAndKineticTypographyWeBrin": "With a focus on motion design and kinetic typography, we bring brands to life through dynamic, engaging interfaces.",
+      "pricing": "PRICING",
+      "gallery": "GALLERY",
+      "build": "BUILD",
+      "contactNow": "CONTACT NOW",
+      "timeline": "TIMELINE"
+    }
+  },
+  "ru": {
+    "ui": {
+      "contact": "Контакты",
+      "selectedWork": "Избранные работы",
+      "skills": "Навыки",
+      "about": "О нас",
+      "pricing": "Цены",
+      "gallery": "Галерея",
+      "timeline": "Хронология"
+    }
+  },
+  "he": {
+    "ui": {
+      "contact": "יצירת קשר",
+      "selectedWork": "עבודות נבחרות",
+      "skills": "כישורים",
+      "about": "אודות",
+      "pricing": "תמחור",
+      "gallery": "גלריה",
+      "timeline": "ציר זמן"
+    }
+  }
+}

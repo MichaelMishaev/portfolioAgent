@@ -1,0 +1,299 @@
+{
+  "en": {
+    "attribution": {
+      "text": "Design inspired by",
+      "company": "Unilink Software",
+      "originalCreator": "originally created by",
+      "creator": "lin.co.il"
+    },
+    "navigation": {
+      "backToGallery": "← Back to Gallery",
+      "features": "Features",
+      "products": "Products",
+      "technology": "Technology",
+      "contact": "Contact"
+    },
+    "hero": {
+      "badge": "● Enterprise-Grade Solutions",
+      "name": "Unilink",
+      "tagline": "Enterprise Software Solutions",
+      "description": "Building the future of connected systems. Scalable, secure, and intelligent software solutions for modern enterprises.",
+      "getStarted": "Get Started Free",
+      "viewDemo": "View Demo"
+    },
+    "features": {
+      "title": "Built for",
+      "titleHighlight": "Modern Teams",
+      "subtitle": "Everything you need to build, deploy, and scale your applications",
+      "items": [
+        {
+          "title": "Modern Architecture",
+          "description": "Built with cutting-edge technologies and best practices for maximum scalability and performance."
+        },
+        {
+          "title": "Lightning Fast",
+          "description": "Optimized for speed with advanced caching, CDN delivery, and efficient data processing."
+        },
+        {
+          "title": "Enterprise Security",
+          "description": "Bank-grade encryption, SOC 2 compliance, and comprehensive security monitoring."
+        },
+        {
+          "title": "Global Scale",
+          "description": "Distributed infrastructure across multiple regions ensuring 99.99% uptime worldwide."
+        }
+      ]
+    },
+    "products": {
+      "title": "Our",
+      "titleHighlight": "Products",
+      "subtitle": "Comprehensive suite of tools designed for enterprise needs",
+      "items": [
+        {
+          "name": "Unilink Connect",
+          "description": "API integration platform connecting your systems seamlessly",
+          "features": [
+            "Real-time sync",
+            "100+ integrations",
+            "Custom webhooks"
+          ]
+        },
+        {
+          "name": "Unilink Analytics",
+          "description": "Business intelligence and data visualization suite",
+          "features": [
+            "Custom dashboards",
+            "AI insights",
+            "Export to any format"
+          ]
+        },
+        {
+          "name": "Unilink Security",
+          "description": "Enterprise-grade security and compliance management",
+          "features": [
+            "SOC 2 certified",
+            "GDPR compliant",
+            "24/7 monitoring"
+          ]
+        }
+      ]
+    },
+    "tech": {
+      "title": "Powered by",
+      "titleHighlight": "Modern Tech",
+      "subtitle": "Built with industry-leading technologies and best practices",
+      "codeExample": {
+        "filename": "example.ts",
+        "copy": "Copy"
+      }
+    },
+    "cta": {
+      "title": "Ready to Transform Your Business?",
+      "subtitle": "Join thousands of companies already using Unilink to power their operations",
+      "contactSales": "Contact Sales",
+      "startTrial": "Start Free Trial"
+    },
+    "footer": {
+      "copyright": "© 2024 Unilink. All rights reserved.",
+      "designCredit": "Design inspired by lin.co.il client work"
+    }
+  },
+  "ru": {
+    "attribution": {
+      "text": "Дизайн вдохновлен",
+      "company": "Unilink Software",
+      "originalCreator": "изначально создан",
+      "creator": "lin.co.il"
+    },
+    "navigation": {
+      "backToGallery": "← Вернуться в галерею",
+      "features": "Функции",
+      "products": "Продукты",
+      "technology": "Технологии",
+      "contact": "Контакты"
+    },
+    "hero": {
+      "badge": "● Решения корпоративного уровня",
+      "name": "Unilink",
+      "tagline": "Корпоративные программные решения",
+      "description": "Строим будущее связанных систем. Масштабируемые, безопасные и интеллектуальные программные решения для современных предприятий.",
+      "getStarted": "Начать бесплатно",
+      "viewDemo": "Посмотреть демо"
+    },
+    "features": {
+      "title": "Создано для",
+      "titleHighlight": "Современных Команд",
+      "subtitle": "Все необходимое для создания, развертывания и масштабирования ваших приложений",
+      "items": [
+        {
+          "title": "Современная Архитектура",
+          "description": "Построена на передовых технологиях и лучших практиках для максимальной масштабируемости и производительности."
+        },
+        {
+          "title": "Молниеносная Скорость",
+          "description": "Оптимизирована для скорости с продвинутым кэшированием, доставкой через CDN и эффективной обработкой данных."
+        },
+        {
+          "title": "Корпоративная Безопасность",
+          "description": "Банковское шифрование, соответствие SOC 2 и комплексный мониторинг безопасности."
+        },
+        {
+          "title": "Глобальный Масштаб",
+          "description": "Распределенная инфраструктура в нескольких регионах, обеспечивающая 99.99% времени безотказной работы по всему миру."
+        }
+      ]
+    },
+    "products": {
+      "title": "Наши",
+      "titleHighlight": "Продукты",
+      "subtitle": "Комплексный набор инструментов, разработанных для корпоративных потребностей",
+      "items": [
+        {
+          "name": "Unilink Connect",
+          "description": "Платформа интеграции API, бесшовно соединяющая ваши системы",
+          "features": [
+            "Синхронизация в реальном времени",
+            "100+ интеграций",
+            "Пользовательские вебхуки"
+          ]
+        },
+        {
+          "name": "Unilink Analytics",
+          "description": "Набор инструментов бизнес-аналитики и визуализации данных",
+          "features": [
+            "Пользовательские дашборды",
+            "ИИ-инсайты",
+            "Экспорт в любой формат"
+          ]
+        },
+        {
+          "name": "Unilink Security",
+          "description": "Управление безопасностью и соответствием корпоративного уровня",
+          "features": [
+            "Сертифицировано SOC 2",
+            "Соответствует GDPR",
+            "Мониторинг 24/7"
+          ]
+        }
+      ]
+    },
+    "tech": {
+      "title": "Работает на",
+      "titleHighlight": "Современных Технологиях",
+      "subtitle": "Построено на ведущих отраслевых технологиях и лучших практиках",
+      "codeExample": {
+        "filename": "example.ts",
+        "copy": "Копировать"
+      }
+    },
+    "cta": {
+      "title": "Готовы Преобразовать Ваш Бизнес?",
+      "subtitle": "Присоединяйтесь к тысячам компаний, уже использующих Unilink для управления своими операциями",
+      "contactSales": "Связаться с продажами",
+      "startTrial": "Начать бесплатный пробный период"
+    },
+    "footer": {
+      "copyright": "© 2024 Unilink. Все права защищены.",
+      "designCredit": "Дизайн вдохновлен работой клиента lin.co.il"
+    }
+  },
+  "he": {
+    "attribution": {
+      "text": "השראה מעיצוב של",
+      "company": "Unilink Software",
+      "originalCreator": "נוצר במקור על ידי",
+      "creator": "lin.co.il"
+    },
+    "navigation": {
+      "backToGallery": "← חזרה לגלריה",
+      "features": "מאפיינים",
+      "products": "מוצרים",
+      "technology": "טכנולוגיה",
+      "contact": "צור קשר"
+    },
+    "hero": {
+      "badge": "● פתרונות ברמה ארגונית",
+      "name": "Unilink",
+      "tagline": "פתרונות תוכנה ארגוניים",
+      "description": "בונים את עתיד המערכות המחוברות. פתרונות תוכנה ניתנים להרחבה, בטוחים וחכמים לארגונים מודרניים.",
+      "getStarted": "התחל בחינם",
+      "viewDemo": "צפה בהדגמה"
+    },
+    "features": {
+      "title": "נבנה עבור",
+      "titleHighlight": "צוותים מודרניים",
+      "subtitle": "כל מה שאתה צריך כדי לבנות, להפעיל ולהרחיב את היישומים שלך",
+      "items": [
+        {
+          "title": "ארכיטקטורה מודרנית",
+          "description": "נבנה עם טכנולוגיות חדישות ומתודולוגיות המובילות למקסימום סקלביליות וביצועים."
+        },
+        {
+          "title": "מהירות בזק",
+          "description": "מותאם למהירות עם ניהול מטמון מתקדם, שילוח CDN ועיבוד נתונים יעיל."
+        },
+        {
+          "title": "אבטחת ארגונית",
+          "description": "הצפנה ברמה של בנקים, תאימות ל-SOC 2 וניטור אבטחה מקיף."
+        },
+        {
+          "title": "קנה מידה גלובלי",
+          "description": "תשתית מבוזרת במספר אזורים שמבטיחה זמינות של 99.99% ברחבי העולם."
+        }
+      ]
+    },
+    "products": {
+      "title": "ה",
+      "titleHighlight": "מוצרים",
+      "subtitle": "סוויטת כלים מקיפה שתוכננה לצרכים ארגוניים",
+      "items": [
+        {
+          "name": "Unilink Connect",
+          "description": "פלטפורמת אינטגרציה של API המחברת את המערכות שלך בחלקות",
+          "features": [
+            "סינכרון בזמן אמת",
+            "יותר מ-100 אינטגרציות",
+            "Webhooks מותאמים אישית"
+          ]
+        },
+        {
+          "name": "Unilink Analytics",
+          "description": "סוויטת בינה עסקית והמחשה נתונים",
+          "features": [
+            "לוחות מחוונים מותאמים אישית",
+            "תובנות באמצעות AI",
+            "יצוא לכל פורמט"
+          ]
+        },
+        {
+          "name": "Unilink Security",
+          "description": "ניהול אבטחה ותאימות ברמה ארגונית",
+          "features": [
+            "מוסמך SOC 2",
+            "תואם GDPR",
+            "ניטור 24/7"
+          ]
+        }
+      ]
+    },
+    "tech": {
+      "title": "מופעל על ידי",
+      "titleHighlight": "טכנולוגיה מודרנית",
+      "subtitle": "נבנה עם טכנולוגיות מובילות בתעשייה ומתודולוגיות המובילות",
+      "codeExample": {
+        "filename": "example.ts",
+        "copy": "העתק"
+      }
+    },
+    "cta": {
+      "title": "מוכן לשנות את העסק שלך?",
+      "subtitle": "הצטרף לאלפי חברות שכבר משתמשות ב-Unilink להנעת הפעילויות שלהן",
+      "contactSales": "צור קשר עם מכירות",
+      "startTrial": "התחל ניסיון חינם"
+    },
+    "footer": {
+      "copyright": "© 2024 Unilink. כל הזכויות שמורות.",
+      "designCredit": "השראה מעיצוב של לקוח lin.co.il"
+    }
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "en": {
+    "ui": {
+      "closeMenu": "Close menu",
+      "openMenu": "Open menu",
+      "topSkills": "Top Skills",
+      "getInTouch": "Get in Touch",
+      "aboutOurPlatform": "About Our Platform",
+      "ourJourney": "Our Journey",
+      "frequentlyAskedQuestions": "Frequently Asked Questions",
+      "features": "Features",
+      "howItWorks": "How It Works",
+      "testimonials": "Testimonials",
+      "pricing": "Pricing",
+      "closeNavigationMenu": "Close navigation menu",
+      "openNavigationMenu": "Open navigation menu",
+      "trustedMarketplace": "Trusted Marketplace",
+      "connectWithProfessionalServiceProviders": "Connect with Professional Service Providers",
+      "buyAndSellBusinessServicesWithConfidence": "Buy and sell business services with confidence",
+      "getStarted": "Get Started",
+      "learnMore": "Learn More",
+      "whyChooseOurPlatform": "Why Choose Our Platform",
+      "everythingYouNeedForSecureTransactions": "Everything you need for secure transactions",
+      "simpleSecureAndStraightforwardProcess": "Simple, secure, and straightforward process",
+      "whatOurUsersSay": "What Our Users Say",
+      "joinThousandsOfSatisfiedClients": "Join thousands of satisfied clients",
+      "simpleTransparentPricing": "Simple, Transparent Pricing",
+      "chooseThePlanThatFitsYourNeeds": "Choose the plan that fits your needs",
+      "mostPopular": "Most Popular",
+      "joinThousandsOfBusinessesAndProfessionals": "Join thousands of businesses and professionals",
+      "createFreeAccount": "Create Free Account",
+      "serviceMarketplace": "Service Marketplace",
+      "sendMessage": "Send Message"
+    }
+  },
+  "ru": {
+    "ui": {
+      "getInTouch": "Связаться",
+      "frequentlyAskedQuestions": "Часто задаваемые вопросы",
+      "features": "Функции",
+      "testimonials": "Отзывы",
+      "pricing": "Цены",
+      "closeNavigationMenu": "Закрыть меню навигации",
+      "openNavigationMenu": "Открыть меню навигации",
+      "getStarted": "Начать",
+      "learnMore": "Узнать больше",
+      "mostPopular": "Самый популярный",
+      "sendMessage": "Отправить сообщение"
+    }
+  },
+  "he": {
+    "ui": {
+      "getInTouch": "צור קשר",
+      "frequentlyAskedQuestions": "שאלות נפוצות",
+      "features": "תכונות",
+      "testimonials": "המלצות",
+      "pricing": "תמחור",
+      "closeNavigationMenu": "סגור תפריט ניווט",
+      "openNavigationMenu": "פתח תפריט ניווט",
+      "getStarted": "התחל",
+      "learnMore": "למד עוד",
+      "mostPopular": "הפופולרי ביותר",
+      "sendMessage": "שלח הודעה"
+    }
+  }
+}

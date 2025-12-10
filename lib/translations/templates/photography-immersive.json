@@ -1,0 +1,42 @@
+{
+  "en": {
+    "ui": {
+      "scroll": "Scroll",
+      "services": "Services",
+      "specializations": "Specializations",
+      "packages": "Packages",
+      "kindWords": "Kind Words",
+      "journey": "Journey",
+      "closeNavigationMenu": "Close navigation menu",
+      "openNavigationMenu": "Open navigation menu",
+      "hero": "Hero",
+      "closeLightbox": "Close lightbox",
+      "portrait": "Portrait",
+      "gallery": "Gallery",
+      "availableForCommissionsAndCollaborations": "Available for commissions and collaborations",
+      "tailoredPhotographyExperiencesToCaptureYourMoments": "Tailored photography experiences to capture your moments",
+      "bookNow": "Book Now",
+      "faq": "FAQ"
+    }
+  },
+  "ru": {
+    "ui": {
+      "services": "Услуги",
+      "journey": "Путь",
+      "closeNavigationMenu": "Закрыть меню навигации",
+      "openNavigationMenu": "Открыть меню навигации",
+      "gallery": "Галерея",
+      "faq": "Частые вопросы"
+    }
+  },
+  "he": {
+    "ui": {
+      "services": "שירותים",
+      "journey": "מסע",
+      "closeNavigationMenu": "סגור תפריט ניווט",
+      "openNavigationMenu": "פתח תפריט ניווט",
+      "gallery": "גלריה",
+      "faq": "שאלות נפוצות"
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "en": {
+    "ui": {
+      "ourExpertise": "Our Expertise",
+      "whoWeAre": "Who We Are",
+      "ourPackages": "Our Packages",
+      "bestValue": "Best Value",
+      "ourStory": "Our Story",
+      "closeNavigationMenu": "Close navigation menu",
+      "openNavigationMenu": "Open navigation menu",
+      "watchShowreel": "Watch Showreel",
+      "featuredWork": "Featured Work",
+      "viewCaseStudy": "View Case Study",
+      "whatWeDo": "What We Do",
+      "clientLove": "Client Love",
+      "letsCollaborateAndBuildSomethingExtraordinaryToget": "Let's collaborate and build something extraordinary together.",
+      "startAProject": "Start a Project",
+      "wereAnInteractiveAgencyCreatingEngagingDigitalExpe": "We're an interactive agency creating engaging digital experiences that connect brands with audiences.",
+      "withATeamOfPassionateCreatorsWeBlendArtAndTechnolo": "With a team of passionate creators, we blend art and technology to build memorable interactive moments.",
+      "choosePlan": "Choose Plan"
+    }
+  },
+  "ru": {
+    "ui": {
+      "closeNavigationMenu": "Закрыть меню навигации",
+      "openNavigationMenu": "Открыть меню навигации",
+      "choosePlan": "Выбрать план"
+    }
+  },
+  "he": {
+    "ui": {
+      "closeNavigationMenu": "סגור תפריט ניווט",
+      "openNavigationMenu": "פתח תפריט ניווט",
+      "choosePlan": "בחר תוכנית"
+    }
+  }
+}

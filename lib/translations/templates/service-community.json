@@ -1,0 +1,173 @@
+{
+  "en": {
+    "name": "CREATOR COLLECTIVE",
+    "tagline": "Where Creators Connect, Grow, and Thrive",
+    "description": "Join 50,000+ creators building sustainable businesses through community, collaboration, and continuous learning.",
+    "nav": {
+      "features": "Features",
+      "successStories": "Success Stories",
+      "pricing": "Pricing",
+      "cta": "Start Free Trial"
+    },
+    "hero": {
+      "startTrial": "Start Free Trial",
+      "watchDemo": "Watch Demo"
+    },
+    "forCreatorsSection": {
+      "badge": "For Creators",
+      "title": "Build, Grow, and Monetize Your Community"
+    },
+    "forMembersSection": {
+      "badge": "For Members",
+      "title": "Connect with Creators You Love"
+    },
+    "successStoriesSection": {
+      "title": "Success Stories",
+      "subtitle": "Real creators building sustainable businesses on our platform.",
+      "members": "Members",
+      "earnings": "Earnings"
+    },
+    "pricingSection": {
+      "title": "Choose Your Plan",
+      "subtitle": "Start free. Upgrade as you grow. Cancel anytime.",
+      "monthly": "Monthly",
+      "annual": "Annual",
+      "save": "Save 20%",
+      "mostPopular": "Most Popular"
+    },
+    "platformSection": {
+      "reliability": "Built for Reliability",
+      "reliabilityDesc": "99.9% uptime SLA. Enterprise-grade infrastructure.",
+      "mobile": "Mobile-First",
+      "mobileDesc": "Beautiful native apps for iOS and Android.",
+      "payments": "Global Payments",
+      "paymentsDesc": "Accept payments in 135+ currencies. Instant payouts."
+    },
+    "onboardingSection": {
+      "title": "Get Started in Minutes"
+    },
+    "cta": {
+      "title": "Start Building Your Community Today",
+      "subtitle": "Join 50,000+ creators who've chosen Creator Collective. No credit card required.",
+      "startTrial": "Start Free Trial",
+      "note": "14-day free trial • No credit card required • Cancel anytime"
+    },
+    "footer": {
+      "copyright": "© 2024 Creator Collective. Empowering creators worldwide."
+    }
+  },
+  "ru": {
+    "name": "КОЛЛЕКТИВ СОЗДАТЕЛЕЙ",
+    "tagline": "Где Создатели Соединяются, Растут и Процветают",
+    "description": "Присоединяйтесь к 50,000+ создателям, строящим устойчивый бизнес через сообщество, сотрудничество и непрерывное обучение.",
+    "nav": {
+      "features": "Возможности",
+      "successStories": "Истории Успеха",
+      "pricing": "Цены",
+      "cta": "Начать Бесплатный Пробный Период"
+    },
+    "hero": {
+      "startTrial": "Начать Бесплатный Пробный Период",
+      "watchDemo": "Посмотреть Демо"
+    },
+    "forCreatorsSection": {
+      "badge": "Для Создателей",
+      "title": "Создавайте, Развивайте и Монетизируйте Ваше Сообщество"
+    },
+    "forMembersSection": {
+      "badge": "Для Участников",
+      "title": "Общайтесь с Любимыми Создателями"
+    },
+    "successStoriesSection": {
+      "title": "Истории Успеха",
+      "subtitle": "Реальные создатели, строящие устойчивый бизнес на нашей платформе.",
+      "members": "Участники",
+      "earnings": "Доход"
+    },
+    "pricingSection": {
+      "title": "Выберите Ваш План",
+      "subtitle": "Начните бесплатно. Обновляйтесь по мере роста. Отменяйте в любое время.",
+      "monthly": "Месячно",
+      "annual": "Годовой",
+      "save": "Экономия 20%",
+      "mostPopular": "Самый Популярный"
+    },
+    "platformSection": {
+      "reliability": "Создано для Надежности",
+      "reliabilityDesc": "SLA 99.9% времени безотказной работы. Инфраструктура корпоративного уровня.",
+      "mobile": "Мобильная Ориентация",
+      "mobileDesc": "Красивые нативные приложения для iOS и Android.",
+      "payments": "Глобальные Платежи",
+      "paymentsDesc": "Принимайте платежи в 135+ валютах. Мгновенные выплаты."
+    },
+    "onboardingSection": {
+      "title": "Начните за Минуты"
+    },
+    "cta": {
+      "title": "Начните Строить Ваше Сообщество Сегодня",
+      "subtitle": "Присоединяйтесь к 50,000+ создателям, выбравшим Creator Collective. Кредитная карта не требуется.",
+      "startTrial": "Начать Бесплатный Пробный Период",
+      "note": "14-дневный бесплатный пробный период • Без кредитной карты • Отменяйте в любое время"
+    },
+    "footer": {
+      "copyright": "© 2024 Creator Collective. Расширяем возможности создателей по всему миру."
+    }
+  },
+  "he": {
+    "name": "קולקטיב יוצרים",
+    "tagline": "שם שבו יוצרים נפגשים, גדלים ומשגשגים",
+    "description": "הצטרפו ל-50,000+ יוצרים שבונים עסקים ברי קיימא דרך קהילה, שיתוף פעולה ולמידה מתמדת.",
+    "nav": {
+      "features": "תכונות",
+      "successStories": "סיפורי הצלחה",
+      "pricing": "תמחור",
+      "cta": "התחל ניסיון חינם"
+    },
+    "hero": {
+      "startTrial": "התחל ניסיון חינם",
+      "watchDemo": "צפה בהדגמה"
+    },
+    "forCreatorsSection": {
+      "badge": "ליוצרים",
+      "title": "בנה, גדל והרוויח מהקהילה שלך"
+    },
+    "forMembersSection": {
+      "badge": "לחברים",
+      "title": "התחבר עם יוצרים שאתה אוהב"
+    },
+    "successStoriesSection": {
+      "title": "סיפורי הצלחה",
+      "subtitle": "יוצרים אמיתיים שבונים עסקים ברי קיימא על פלטפורמתנו.",
+      "members": "חברים",
+      "earnings": "הכנסות"
+    },
+    "pricingSection": {
+      "title": "בחר את התוכנית שלך",
+      "subtitle": "התחל בחינם. שדרג ככל שאתה גדל. בטל בכל עת.",
+      "monthly": "חודשי",
+      "annual": "שנתי",
+      "save": "חסוך 20%",
+      "mostPopular": "הכי פופולרי"
+    },
+    "platformSection": {
+      "reliability": "נבנה לאמינות",
+      "reliabilityDesc": "99.9% זמינות SLA. תשתית ברמה ארגונית.",
+      "mobile": "נייד תחילה",
+      "mobileDesc": "אפליקציות יפות ל-iOS ו-Android.",
+      "payments": "תשלומים גלובליים",
+      "paymentsDesc": "קבל תשלומים ב-135+ מטבעות. תשלומים מיידיים."
+    },
+    "onboardingSection": {
+      "title": "התחל בתוך דקות"
+    },
+    "cta": {
+      "title": "התחל לבנות את הקהילה שלך היום",
+      "subtitle": "הצטרף ל-50,000+ יוצרים שבחרו בקולקטיב היוצרים. לא נדרשת כרטיס אשראי.",
+      "startTrial": "התחל ניסיון חינם",
+      "note": "ניסיון חינם ל-14 יום • לא נדרשת כרטיס אשראי • ביטול בכל עת"
+    },
+    "footer": {
+      "copyright": "© 2024 קולקטיב היוצרים. מעצים יוצרים ברחבי העולם."
+    }
+  }
+}

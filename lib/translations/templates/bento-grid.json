@@ -1,0 +1,214 @@
+{
+  "en": {
+    "name": "Riley Chen",
+    "title": "Product Designer & Developer",
+    "location": "San Francisco, CA",
+    "availability": "Available for Projects",
+    "bio": "I design and build digital experiences that blend creativity with code. From mobile apps to web platforms, I turn ideas into products people love to use. With 5+ years across design and development, I bring a unique perspective that bridges the gap between beautiful interfaces and robust functionality.",
+    "stats": [
+      {
+        "label": "Projects",
+        "value": "100+"
+      },
+      {
+        "label": "Clients",
+        "value": "50+"
+      },
+      {
+        "label": "Years",
+        "value": "5+"
+      },
+      {
+        "label": "Countries",
+        "value": "15"
+      }
+    ],
+    "email": "hello@rileychen.com",
+    "ui": {
+      "featured": "Featured",
+      "aboutMe": "About Me",
+      "journey": "Journey",
+      "whatIDo": "What I Do",
+      "clientTestimonials": "Client Testimonials",
+      "latestWriting": "Latest Writing",
+      "followers": "Followers",
+      "articles": "Articles",
+      "talks": "Talks",
+      "mentees": "Mentees",
+      "research": "Research",
+      "understandingUserNeedsAndGoals": "Understanding user needs and goals",
+      "design": "Design",
+      "creatingBeautifulSolutions": "Creating beautiful solutions",
+      "build": "Build",
+      "bringingIdeasToLife": "Bringing ideas to life",
+      "stayInTheLoop": "Stay in the Loop",
+      "subscribe": "Subscribe",
+      "watchDemo": "Watch Demo",
+      "seeMyWorkInAction": "See my work in action",
+      "takingNewProjects": "Taking new projects",
+      "workingRemotelyWorldwide": "Working remotely worldwide",
+      "bookACall": "Book a Call",
+      "scheduleMeeting": "Schedule Meeting",
+      "connect": "Connect",
+      "pricing": "Pricing",
+      "choosePlan": "Choose Plan",
+      "gallery": "Gallery",
+      "rileyChen": "Riley Chen",
+      "sanFranciscoCa": "San Francisco, CA",
+      "availableForProjects": "Available for Projects",
+      "projects": "Projects",
+      "clients": "Clients",
+      "years": "Years",
+      "countries": "Countries",
+      "figma": "Figma",
+      "tailwind": "Tailwind",
+      "nodejs": "Node.js",
+      "framerMotion": "Framer Motion",
+      "designSystems": "Design Systems",
+      "threejs": "Three.js",
+      "python": "Python",
+      "productStrategy": "Product Strategy",
+      "bankingRevolution": "Banking Revolution",
+      "ecommercePlatform": "E-Commerce Platform",
+      "analyticsDashboardForOnlineRetailersWithRealtimeIn": "Analytics dashboard for online retailers with real-time insights",
+      "fitnessTrackingApp": "Fitness Tracking App",
+      "travelBookingSite": "Travel Booking Site",
+      "seamlessBookingExperienceWithAiRecommendations": "Seamless booking experience with AI recommendations",
+      "saasDashboard": "SaaS Dashboard",
+      "enterpriseAnalyticsPlatformWithCustomizableWidgets": "Enterprise analytics platform with customizable widgets",
+      "foodDeliveryApp": "Food Delivery App",
+      "ondemandDeliveryWithLiveTrackingAndSmartRecommenda": "On-demand delivery with live tracking and smart recommendations",
+      "sarahJohnson": "Sarah Johnson",
+      "ceoTechstart": "CEO, TechStart",
+      "bestDesignerWeveWorkedWithDeliveredBeyondExpectati": "Best designer we've worked with. Delivered beyond expectations every single time.",
+      "marcusWong": "Marcus Wong",
+      "ctoFinanceapp": "CTO, FinanceApp",
+      "rileyDoesntJustDesignTheyThinkStrategicallyAboutBu": "Riley doesn't just design - they think strategically about business impact and user needs.",
+      "elenaRodriguez": "Elena Rodriguez",
+      "productLeadEnterpriseCo": "Product Lead, Enterprise Co.",
+      "seniorProductDesignerAtTechGiant": "Senior Product Designer at Tech Giant",
+      "foundedDesignStudio": "Founded Design Studio",
+      "leadDesignerAtStartup": "Lead Designer at Startup",
+      "startedFreelancing": "Started Freelancing",
+      "productDesign": "Product Design",
+      "frontendDevelopment": "Frontend Development",
+      "scalableComponentLibrariesAndGuidelines": "Scalable component libraries and guidelines",
+      "awwwardsSotd": "Awwwards SOTD",
+      "bestMobileApp": "Best Mobile App",
+      "buildingDesignSystemsAtScale": "Building Design Systems at Scale",
+      "systems": "Systems",
+      "theFutureOfAiInDesign": "The Future of AI in Design",
+      "framer": "Framer",
+      "yourEmail": "Your email",
+      "designIsNotJustWhatItLooksLikeAndFeelsLikeDesignIs": "Design is not just what it looks like and feels like. Design is how it works.",
+      "starter": "Starter",
+      "professional": "Professional",
+      "enterprise": "Enterprise",
+      "contact": "Contact",
+      "getInTouch": "Get in Touch",
+      "toolsIUseDaily": "Tools I Use Daily",
+      "getDesignTipsProjectUpdatesAndExclusiveContentDeli": "Get design tips, project updates, and exclusive content delivered monthly",
+      "letsCreateSomethingAmazingTogether": "Let's create something amazing together",
+      "githubProfile": "GitHub Profile",
+      "linkedinProfile": "LinkedIn Profile"
+    }
+  },
+  "ru": {
+    "name": "Райли Чен",
+    "title": "Продуктовый дизайнер и разработчик",
+    "location": "Сан-Франциско, Калифорния",
+    "availability": "Доступен для проектов",
+    "bio": "Я проектирую и создаю цифровые продукты, сочетающие креативность с кодом. От мобильных приложений до веб-платформ — я превращаю идеи в продукты, которые люди любят использовать. С более чем 5-летним опытом в дизайне и разработке, я привношу уникальную перспективу, соединяющую красивые интерфейсы с надежной функциональностью.",
+    "stats": [
+      {
+        "label": "Проектов",
+        "value": "100+"
+      },
+      {
+        "label": "Клиентов",
+        "value": "50+"
+      },
+      {
+        "label": "Лет",
+        "value": "5+"
+      },
+      {
+        "label": "Стран",
+        "value": "15"
+      }
+    ],
+    "email": "hello@rileychen.com",
+    "ui": {
+      "aboutMe": "Обо мне",
+      "journey": "Путь",
+      "research": "Исследование",
+      "design": "Дизайн",
+      "subscribe": "Подписаться",
+      "watchDemo": "Посмотреть демо",
+      "bookACall": "Забронировать звонок",
+      "scheduleMeeting": "Назначить встречу",
+      "connect": "Связаться",
+      "pricing": "Цены",
+      "choosePlan": "Выбрать план",
+      "gallery": "Галерея",
+      "projects": "Проекты",
+      "clients": "Клиенты",
+      "years": "Лет",
+      "professional": "Профессиональный",
+      "enterprise": "Корпоративный",
+      "contact": "Контакты",
+      "getInTouch": "Связаться",
+      "githubProfile": "Профиль GitHub",
+      "linkedinProfile": "Профиль LinkedIn"
+    }
+  },
+  "he": {
+    "name": "Riley Chen",
+    "title": "מעצב ומפתח מוצרים",
+    "location": "סן פרנסיסקו, קליפורניה",
+    "availability": "זמין לפרויקטים",
+    "bio": "אני מעצב ובונה חוויות דיגיטליות שמשלבות יצירתיות עם קוד. החל מאפליקציות לנייד ועד לפלטפורמות אינטרנט, אני הופך רעיונות למוצרים שאנשים אוהבים להשתמש בהם. עם יותר מ-5 שנים של ניסיון בעיצוב ופיתוח, אני מביא נקודת מבט ייחודית שמגשרת בין ממשקים יפים לפונקציונליות חזקה.",
+    "stats": [
+      {
+        "label": "פרויקטים",
+        "value": "100+"
+      },
+      {
+        "label": "לקוחות",
+        "value": "50+"
+      },
+      {
+        "label": "שנים",
+        "value": "5+"
+      },
+      {
+        "label": "מדינות",
+        "value": "15"
+      }
+    ],
+    "email": "hello@rileychen.com",
+    "ui": {
+      "aboutMe": "אודותיי",
+      "journey": "מסע",
+      "research": "מחקר",
+      "design": "עיצוב",
+      "subscribe": "הירשם",
+      "watchDemo": "צפה בהדגמה",
+      "bookACall": "קבע שיחה",
+      "scheduleMeeting": "תזמן פגישה",
+      "connect": "התחבר",
+      "pricing": "תמחור",
+      "choosePlan": "בחר תוכנית",
+      "gallery": "גלריה",
+      "projects": "פרויקטים",
+      "clients": "לקוחות",
+      "years": "שנים",
+      "professional": "מקצועי",
+      "enterprise": "ארגוני",
+      "contact": "יצירת קשר",
+      "getInTouch": "צור קשר",
+      "githubProfile": "פרופיל GitHub",
+      "linkedinProfile": "פרופיל LinkedIn"
+    }
+  }
+}

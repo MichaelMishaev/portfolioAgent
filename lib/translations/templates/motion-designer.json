@@ -1,0 +1,62 @@
+{
+  "en": {
+    "ui": {
+      "show": "Show",
+      "work": "Work",
+      "tool": "Tool",
+      "style": "Style",
+      "frames": "Frames",
+      "about": "About",
+      "pricing": "Pricing",
+      "client": "Client",
+      "closeNavigationMenu": "Close navigation menu",
+      "openNavigationMenu": "Open navigation menu",
+      "showreel": "Showreel",
+      "hireMe": "Hire Me",
+      "motion": "Motion",
+      "designer": "Designer",
+      "watchShowreel": "Watch Showreel",
+      "viewProjects": "View Projects",
+      "featured": "Featured",
+      "trusted": "Trusted",
+      "letsCreate": "Let's Create",
+      "somethingEpic": "Something Epic",
+      "availableForFreelanceProjects": "Available for freelance projects",
+      "hireMeNow": "Hire Me Now",
+      "fromExplosiveTitleSequencesToSmoothUiAnimationsIBr": "From explosive title sequences to smooth UI animations, I bring energy and precision to every frame. My passion is making the impossible look effortless.",
+      "downloadCv": "Download CV",
+      "flexiblePackagesForEveryProjectSize": "Flexible packages for every project size",
+      "mostPopular": "MOST POPULAR",
+      "choosePlan": "Choose Plan",
+      "love": "Love",
+      "journey": "Journey",
+      "faq": "FAQ"
+    }
+  },
+  "ru": {
+    "ui": {
+      "show": "Показать",
+      "about": "О нас",
+      "pricing": "Цены",
+      "closeNavigationMenu": "Закрыть меню навигации",
+      "openNavigationMenu": "Открыть меню навигации",
+      "mostPopular": "Самый популярный",
+      "choosePlan": "Выбрать план",
+      "journey": "Путь",
+      "faq": "Частые вопросы"
+    }
+  },
+  "he": {
+    "ui": {
+      "show": "הצג",
+      "about": "אודות",
+      "pricing": "תמחור",
+      "closeNavigationMenu": "סגור תפריט ניווט",
+      "openNavigationMenu": "פתח תפריט ניווט",
+      "mostPopular": "הפופולרי ביותר",
+      "choosePlan": "בחר תוכנית",
+      "journey": "מסע",
+      "faq": "שאלות נפוצות"
+    }
+  }
+}

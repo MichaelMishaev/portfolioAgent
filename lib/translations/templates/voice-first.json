@@ -1,0 +1,63 @@
+{
+  "en": {
+    "ui": {
+      "voiceenabledSolutionsForEveryNeed": "Voice-enabled solutions for every need",
+      "mostPopular": "Most Popular",
+      "voiceuxPro": "VoiceUX Pro",
+      "voiceInterfaceDesigner": "Voice Interface Designer",
+      "designingConversationsNotJustInterfaces": "Designing conversations, not just interfaces",
+      "tellMeAboutYourWork": "Tell me about your work",
+      "iSpecializeInCreatingIntuitiveVoicefirstExperience": "I specialize in creating intuitive voice-first experiences. My work spans voice assistants, conversational AI, and multimodal interfaces.",
+      "iveDesignedVoiceExperiencesForSmartHomeDevicesAuto": "I've designed voice experiences for smart home devices, automotive interfaces, and healthcare applications. Each project focuses on natural conversation flow and accessibility.",
+      "showMeYourWork": "Show me your work",
+      "contactInformation": "Contact information",
+      "tellMeAboutVoiceDesign": "Tell me about voice design",
+      "viewCaseStudies": "View case studies",
+      "smartHomeAssistant": "Smart Home Assistant",
+      "naturalLanguageControlForConnectedHomeDevices": "Natural language control for connected home devices",
+      "alexaSkillsDialogflowNlu": "Alexa Skills, DialogFlow, NLU",
+      "automotiveVoiceUi": "Automotive Voice UI",
+      "handsfreeCarInterfaceWithMultimodalFeedback": "Hands-free car interface with multimodal feedback",
+      "nuanceVuiDesignSpeechRecognition": "Nuance, VUI Design, Speech Recognition",
+      "healthcareVoiceApp": "Healthcare Voice App",
+      "hipaacompliantVoiceAssistantForPatientCare": "HIPAA-compliant voice assistant for patient care",
+      "googleAssistantPrivacyDesignNlp": "Google Assistant, Privacy Design, NLP",
+      "bankingVoiceAuth": "Banking Voice Auth",
+      "voiceBiometricsForSecureTransactions": "Voice biometrics for secure transactions",
+      "voiceBiometricsSecurityUx": "Voice Biometrics, Security, UX",
+      "stopVoiceRecognition": "Stop voice recognition",
+      "startVoiceRecognition": "Start voice recognition",
+      "clickTheMicrophoneOrTryAVoiceCommand": "Click the microphone or try a voice command",
+      "naturalConversation": "Natural Conversation",
+      "designDialogsThatFeelHumanAndIntuitiveNotRobotic": "Design dialogs that feel human and intuitive, not robotic.",
+      "handleMisunderstandingsGracefullyWithHelpfulRecove": "Handle misunderstandings gracefully with helpful recovery paths.",
+      "contextAwareness": "Context Awareness",
+      "rememberUserPreferencesAndMaintainConversationCont": "Remember user preferences and maintain conversation context.",
+      "contact": "Contact",
+      "listening": "Listening...",
+      "sampleConversation": "Sample Conversation",
+      "voiceExperienceProjects": "Voice Experience Projects",
+      "voiceDesignPrinciples": "Voice Design Principles",
+      "letsTalkAboutVoice": "Let's Talk About Voice",
+      "scheduleCall": "Schedule Call",
+      "getStarted": "Get Started",
+      "letsBuildTheFutureOfVoiceInteractionTogether": "Let's build the future of voice interaction together",
+      "startVoiceProject": "Start Voice Project",
+      "seeDemo": "See Demo"
+    }
+  },
+  "ru": {
+    "ui": {
+      "mostPopular": "Самый популярный",
+      "contact": "Контакты",
+      "getStarted": "Начать"
+    }
+  },
+  "he": {
+    "ui": {
+      "mostPopular": "הפופולרי ביותר",
+      "contact": "יצירת קשר",
+      "getStarted": "התחל"
+    }
+  }
+}

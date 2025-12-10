@@ -1,0 +1,28 @@
+{
+  "en": {
+    "ui": {
+      "pricing": "Pricing",
+      "mostPopular": "Most Popular",
+      "clientFeedback": "Client Feedback",
+      "evolution": "Evolution",
+      "getStarted": "Get Started",
+      "faq": "FAQ"
+    }
+  },
+  "ru": {
+    "ui": {
+      "pricing": "Цены",
+      "mostPopular": "Самый популярный",
+      "getStarted": "Начать",
+      "faq": "Частые вопросы"
+    }
+  },
+  "he": {
+    "ui": {
+      "pricing": "תמחור",
+      "mostPopular": "הפופולרי ביותר",
+      "getStarted": "התחל",
+      "faq": "שאלות נפוצות"
+    }
+  }
+}

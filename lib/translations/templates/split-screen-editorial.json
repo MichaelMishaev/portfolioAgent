@@ -1,0 +1,70 @@
+{
+  "en": {
+    "ui": {
+      "careerHighlights": "Career Highlights",
+      "praise": "Praise",
+      "letsTellYourStory": "Let's Tell Your Story",
+      "years": "Years",
+      "stories": "Stories",
+      "readers": "Readers",
+      "awards": "Awards",
+      "editorinchief": "Editor-in-Chief",
+      "modernMagazine": "Modern Magazine",
+      "seniorWriter": "Senior Writer",
+      "theAtlantic": "The Atlantic",
+      "staffWriter": "Staff Writer",
+      "newYorkTimes": "New York Times",
+      "freelanceJournalist": "Freelance Journalist",
+      "variousPublications": "Various Publications",
+      "aMasterfulStorytellerWithAnEyeForDetail": "A masterful storyteller with an eye for detail",
+      "janeDoe": "Jane Doe",
+      "editorVogue": "Editor, Vogue",
+      "theirNarrativesCaptivateAndInspire": "Their narratives captivate and inspire",
+      "johnSmith": "John Smith",
+      "publisherTime": "Publisher, TIME",
+      "consistentlyDeliversAwardwinningJournalism": "Consistently delivers award-winning journalism",
+      "sarahLee": "Sarah Lee",
+      "directorColumbiaJschool": "Director, Columbia J-School",
+      "featureArticles": "Feature Articles",
+      "editorialConsulting": "Editorial Consulting",
+      "storyDevelopmentAndManuscriptReview": "Story development and manuscript review",
+      "speakingEngagements": "Speaking Engagements",
+      "contact": "Contact",
+      "keynotesPanelsAndWorkshops": "Keynotes, panels, and workshops",
+      "yesIWorkWithPublicationsAndBrandsOnCommissionedPie": "Yes, I work with publications and brands on commissioned pieces.",
+      "cultureTechnologyPoliticsAndHumanInterestStories": "Culture, technology, politics, and human interest stories.",
+      "connect": "CONNECT",
+      "faq": "FAQ",
+      "getInTouch": "Get in Touch",
+      "twitterProfile": "Twitter profile",
+      "linkedinProfile": "LinkedIn profile",
+      "instagramProfile": "Instagram profile"
+    }
+  },
+  "ru": {
+    "ui": {
+      "years": "Лет",
+      "awards": "Награды",
+      "contact": "Контакты",
+      "connect": "Связаться",
+      "faq": "Частые вопросы",
+      "getInTouch": "Связаться",
+      "twitterProfile": "Профиль Twitter",
+      "linkedinProfile": "Профиль LinkedIn",
+      "instagramProfile": "Профиль Instagram"
+    }
+  },
+  "he": {
+    "ui": {
+      "years": "שנים",
+      "awards": "פרסים",
+      "contact": "יצירת קשר",
+      "connect": "התחבר",
+      "faq": "שאלות נפוצות",
+      "getInTouch": "צור קשר",
+      "twitterProfile": "פרופיל Twitter",
+      "linkedinProfile": "פרופיל LinkedIn",
+      "instagramProfile": "פרופיל Instagram"
+    }
+  }
+}

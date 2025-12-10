@@ -1,0 +1,44 @@
+{
+  "en": {
+    "nav": {
+      "home": "Home",
+      "about": "About",
+      "services": "Services",
+      "portfolio": "Portfolio",
+      "contact": "Contact"
+    },
+    "hero": {
+      "title": "Welcome",
+      "subtitle": "Demo Template",
+      "cta": "Get Started"
+    }
+  },
+  "ru": {
+    "nav": {
+      "home": "Главная",
+      "about": "О нас",
+      "services": "Услуги",
+      "portfolio": "Портфолио",
+      "contact": "Контакты"
+    },
+    "hero": {
+      "title": "Добро пожаловать",
+      "subtitle": "Демо шаблон",
+      "cta": "Начать"
+    }
+  },
+  "he": {
+    "nav": {
+      "home": "בית",
+      "about": "אודות",
+      "services": "שירותים",
+      "portfolio": "תיק עבודות",
+      "contact": "צור קשר"
+    },
+    "hero": {
+      "title": "ברוכים הבאים",
+      "subtitle": "תבנית דוגמא",
+      "cta": "התחל עכשיו"
+    }
+  }
+}

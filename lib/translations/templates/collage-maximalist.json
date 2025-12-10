@@ -1,0 +1,81 @@
+{
+  "en": {
+    "ui": {
+      "lunaMartinez": "Luna Martinez",
+      "brooklynNy": "Brooklyn, NY",
+      "iBlendDigitalAndAnalogCreatingVisualStoriesThrough": "I blend digital and analog, creating visual stories through collage, illustration, and experimental design. Every piece is a conversation between chaos and control.",
+      "artworks": "Artworks",
+      "exhibitions": "Exhibitions",
+      "yearsCreating": "Years Creating",
+      "photoshop": "Photoshop",
+      "procreate": "Procreate",
+      "vintageMagazines": "Vintage Magazines",
+      "scanner": "Scanner",
+      "analogCameras": "Analog Cameras",
+      "urbanCollageSeries": "Urban Collage Series",
+      "collage": "Collage",
+      "photography": "Photography",
+      "vintageZineProject": "Vintage Zine Project",
+      "editorial": "Editorial",
+      "illustration": "Illustration",
+      "monthlyZineCelebratingAnalogArtTechniquesAndDiyCul": "Monthly zine celebrating analog art techniques and DIY culture",
+      "brandIdentity": "Brand Identity",
+      "design": "Design",
+      "collagebasedVisualIdentityForIndieMusicLabel": "Collage-based visual identity for indie music label",
+      "artExhibition": "Art Exhibition",
+      "mixedMedia": "Mixed Media",
+      "soloShowFeaturingLargescaleCollageInstallations": "Solo show featuring large-scale collage installations",
+      "editorialLayouts": "Editorial Layouts",
+      "magazine": "Magazine",
+      "layout": "Layout",
+      "magazineSpreadsCombiningTraditionalTypographyWithC": "Magazine spreads combining traditional typography with collage elements",
+      "albumArtwork": "Album Artwork",
+      "music": "Music",
+      "coverArtForIndieBandsBlendingPhotographyAndHanddra": "Cover art for indie bands blending photography and hand-drawn elements",
+      "alexChen": "Alex Chen",
+      "galleryOwner": "Gallery Owner",
+      "mariaRodriguez": "Maria Rodriguez",
+      "creativeDirector": "Creative Director",
+      "sheTransformedOurBrandIdentityIntoSomethingUnforge": "She transformed our brand identity into something unforgettable.",
+      "collect": "Collect",
+      "gatherMaterialsImagesTextures": "Gather materials, images, textures",
+      "experiment": "Experiment",
+      "layer": "Layer",
+      "buildUpTexturesAndDepth": "Build up textures and depth",
+      "refine": "Refine",
+      "findBalanceInTheMadness": "Find balance in the madness",
+      "contact": "CONTACT",
+      "viewWork": "VIEW WORK",
+      "aboutMe": "ABOUT ME",
+      "recentWork": "RECENT WORK",
+      "myProcess": "MY PROCESS",
+      "whatTheySay": "WHAT THEY SAY",
+      "getInTouch": "GET IN TOUCH",
+      "availableForCommissionsCollaborationsAndCreativePr": "Available for commissions, collaborations, and creative projects that push boundaries.",
+      "buyNow": "BUY NOW",
+      "seeWork": "SEE WORK"
+    }
+  },
+  "ru": {
+    "ui": {
+      "brandIdentity": "Фирменный стиль",
+      "design": "Дизайн",
+      "creativeDirector": "Креативный директор",
+      "contact": "Контакты",
+      "aboutMe": "Обо мне",
+      "myProcess": "Мой процесс",
+      "getInTouch": "Связаться"
+    }
+  },
+  "he": {
+    "ui": {
+      "brandIdentity": "זהות מותג",
+      "design": "עיצוב",
+      "creativeDirector": "מנהל/ת יצירה",
+      "contact": "יצירת קשר",
+      "aboutMe": "אודותיי",
+      "myProcess": "התהליך שלי",
+      "getInTouch": "צור קשר"
+    }
+  }
+}

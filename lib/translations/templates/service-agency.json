@@ -1,0 +1,131 @@
+{
+  "en": {
+    "name": "PIXEL PERFECT AGENCY",
+    "tagline": "Where Creativity Meets Performance",
+    "description": "Award-winning digital agency specializing in brand strategy, creative design, and performance marketing for ambitious brands.",
+    "nav": {
+      "services": "Services",
+      "portfolio": "Portfolio",
+      "process": "Process",
+      "cta": "Start a Project"
+    },
+    "hero": {
+      "badge": "Award-Winning Agency",
+      "viewWork": "View Our Work",
+      "watchShowreel": "Watch Showreel"
+    },
+    "servicesSection": {
+      "title": "Our Services",
+      "subtitle": "End-to-end solutions for modern brands",
+      "timeline": "Timeline:",
+      "investment": "Investment:"
+    },
+    "portfolioSection": {
+      "title": "Featured Work",
+      "subtitle": "Transforming brands, driving results"
+    },
+    "teamSection": {
+      "title": "Meet the Team",
+      "subtitle": "World-class talent, focused on your success"
+    },
+    "processSection": {
+      "title": "Our Proven Process",
+      "subtitle": "Consistent excellence, every time"
+    },
+    "cta": {
+      "title": "Ready to Transform Your Brand?",
+      "subtitle": "Let's create something extraordinary together. Book a free strategy call today.",
+      "startProject": "Start Your Project",
+      "viewPricing": "View Pricing"
+    },
+    "footer": {
+      "copyright": "© 2025 Pixel Perfect Agency. New York • London • Tokyo"
+    }
+  },
+  "ru": {
+    "name": "ПИКСЕЛЬНОЕ СОВЕРШЕНСТВО",
+    "tagline": "Где Креативность Встречается с Эффективностью",
+    "description": "Отмеченное наградами цифровое агентство, специализирующееся на бренд-стратегии, креативном дизайне и performance-маркетинге для амбициозных брендов.",
+    "nav": {
+      "services": "Услуги",
+      "portfolio": "Портфолио",
+      "process": "Процесс",
+      "cta": "Начать Проект"
+    },
+    "hero": {
+      "badge": "Агентство с Наградами",
+      "viewWork": "Посмотреть Работы",
+      "watchShowreel": "Смотреть Шоурил"
+    },
+    "servicesSection": {
+      "title": "Наши Услуги",
+      "subtitle": "Комплексные решения для современных брендов",
+      "timeline": "Сроки:",
+      "investment": "Инвестиции:"
+    },
+    "portfolioSection": {
+      "title": "Избранные Работы",
+      "subtitle": "Трансформируем бренды, обеспечиваем результаты"
+    },
+    "teamSection": {
+      "title": "Познакомьтесь с Командой",
+      "subtitle": "Мировой уровень таланта, сосредоточенный на вашем успехе"
+    },
+    "processSection": {
+      "title": "Наш Проверенный Процесс",
+      "subtitle": "Последовательное совершенство, каждый раз"
+    },
+    "cta": {
+      "title": "Готовы Преобразовать Ваш Бренд?",
+      "subtitle": "Давайте создадим что-то выдающееся вместе. Забронируйте бесплатную стратегическую консультацию сегодня.",
+      "startProject": "Начать Ваш Проект",
+      "viewPricing": "Посмотреть Цены"
+    },
+    "footer": {
+      "copyright": "© 2025 Pixel Perfect Agency. Нью-Йорк • Лондон • Токио"
+    }
+  },
+  "he": {
+    "name": "סוכנות פיקסל מושלם",
+    "tagline": "שם היצירתיות פוגשת ביצועים",
+    "description": "סוכנות דיגיטלית זוכת פרסים המתמחה באסטרטגיית מותג, עיצוב יצירתי ושיווק ביצועים למותגים שואפים.",
+    "nav": {
+      "services": "שירותים",
+      "portfolio": "תיק עבודות",
+      "process": "תהליך",
+      "cta": "התחל פרויקט"
+    },
+    "hero": {
+      "badge": "סוכנות זוכת פרסים",
+      "viewWork": "צפה בעבודות שלנו",
+      "watchShowreel": "צפה בשואוריל"
+    },
+    "servicesSection": {
+      "title": "השירותים שלנו",
+      "subtitle": "פתרונות מקצה לקצה למותגים מודרניים",
+      "timeline": "לוח זמנים:",
+      "investment": "השקעה:"
+    },
+    "portfolioSection": {
+      "title": "עבודות מובילות",
+      "subtitle": "מתמיר מותגים, מניע תוצאות"
+    },
+    "teamSection": {
+      "title": "הכירו את הצוות",
+      "subtitle": "כישרון מהדרג הראשון, ממוקד בהצלחה שלך"
+    },
+    "processSection": {
+      "title": "התהליך המוכח שלנו",
+      "subtitle": "מצוינות עקבית, בכל פעם"
+    },
+    "cta": {
+      "title": "מוכנים לשנות את המותג שלכם?",
+      "subtitle": "בואו ניצור משהו יוצא דופן יחד. תזמינו שיחת אסטרטגיה חינם היום.",
+      "startProject": "התחל את הפרויקט שלך",
+      "viewPricing": "צפה במחירון"
+    },
+    "footer": {
+      "copyright": "© 2025 סוכנות פיקסל מושלם. ניו יורק • לונדון • טוקיו"
+    }
+  }
+}

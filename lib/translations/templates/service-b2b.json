@@ -1,0 +1,149 @@
+{
+  "en": {
+    "name": "STRATEX CONSULTING",
+    "tagline": "Strategy. Execution. Excellence.",
+    "description": "We partner with Fortune 500 companies to drive transformational change and measurable results.",
+    "nav": {
+      "capabilities": "Capabilities",
+      "caseStudies": "Case Studies",
+      "insights": "Insights",
+      "cta": "Apply Now"
+    },
+    "hero": {
+      "scheduleConsultation": "Schedule Consultation"
+    },
+    "capabilitiesSection": {
+      "title": "Our Capabilities",
+      "subtitle": "Integrated services that deliver measurable business impact across your organization."
+    },
+    "caseStudiesSection": {
+      "title": "Proven Results",
+      "subtitle": "Real transformations. Real impact. Real ROI.",
+      "challenge": "Challenge",
+      "solution": "Solution"
+    },
+    "industrySection": {
+      "title": "Industry Expertise",
+      "subtitle": "Deep sector knowledge combined with cross-industry best practices."
+    },
+    "insightsSection": {
+      "title": "Insights & Research",
+      "subtitle": "Download our latest thinking on critical business challenges.",
+      "download": "Download"
+    },
+    "clientsSection": {
+      "title": "Trusted by Industry Leaders"
+    },
+    "processSection": {
+      "title": "Our Engagement Process",
+      "subtitle": "A rigorous, collaborative approach designed to deliver lasting impact."
+    },
+    "cta": {
+      "title": "Ready to Transform?",
+      "subtitle": "Schedule a complimentary consultation to explore how we can help you achieve your strategic objectives.",
+      "apply": "Apply for Engagement",
+      "note": "Application review typically takes 3-5 business days"
+    },
+    "footer": {
+      "copyright": "© 2024 StratEx Consulting. Offices in New York, London, Singapore."
+    }
+  },
+  "ru": {
+    "name": "СТРАТЕКС КОНСАЛТИНГ",
+    "tagline": "Стратегия. Исполнение. Совершенство.",
+    "description": "Мы сотрудничаем с компаниями из списка Fortune 500 для обеспечения трансформационных изменений и измеримых результатов.",
+    "nav": {
+      "capabilities": "Возможности",
+      "caseStudies": "Кейсы",
+      "insights": "Аналитика",
+      "cta": "Подать Заявку"
+    },
+    "hero": {
+      "scheduleConsultation": "Записаться на Консультацию"
+    },
+    "capabilitiesSection": {
+      "title": "Наши Возможности",
+      "subtitle": "Интегрированные услуги, обеспечивающие измеримое влияние на бизнес во всей вашей организации."
+    },
+    "caseStudiesSection": {
+      "title": "Проверенные Результаты",
+      "subtitle": "Реальные трансформации. Реальное влияние. Реальная окупаемость инвестиций.",
+      "challenge": "Проблема",
+      "solution": "Решение"
+    },
+    "industrySection": {
+      "title": "Отраслевая Экспертиза",
+      "subtitle": "Глубокие знания секторов в сочетании с межотраслевыми лучшими практиками."
+    },
+    "insightsSection": {
+      "title": "Аналитика и Исследования",
+      "subtitle": "Загрузите наши последние размышления о критических бизнес-вызовах.",
+      "download": "Скачать"
+    },
+    "clientsSection": {
+      "title": "Доверяют Лидеры Индустрии"
+    },
+    "processSection": {
+      "title": "Наш Процесс Взаимодействия",
+      "subtitle": "Строгий, совместный подход, разработанный для обеспечения долгосрочного эффекта."
+    },
+    "cta": {
+      "title": "Готовы к Трансформации?",
+      "subtitle": "Запланируйте бесплатную консультацию, чтобы узнать, как мы можем помочь вам достичь ваших стратегических целей.",
+      "apply": "Подать Заявку на Сотрудничество",
+      "note": "Рассмотрение заявки обычно занимает 3-5 рабочих дней"
+    },
+    "footer": {
+      "copyright": "© 2024 StratEx Consulting. Офисы в Нью-Йорке, Лондоне, Сингапуре."
+    }
+  },
+  "he": {
+    "name": "סטראטקס ייעוץ",
+    "tagline": "אסטרטגיה. ביצוע. מצוינות.",
+    "description": "אנו שותפים עם חברות מתוך רשימת Fortune 500 כדי להניע שינוי טרנספורמטיבי ותוצאות מדידות.",
+    "nav": {
+      "capabilities": "יכולות",
+      "caseStudies": "מקרי מחקר",
+      "insights": "תובנות",
+      "cta": "הגש בקשה עכשיו"
+    },
+    "hero": {
+      "scheduleConsultation": "תזמן ייעוץ"
+    },
+    "capabilitiesSection": {
+      "title": "היכולות שלנו",
+      "subtitle": "שירותים משולבים המספקים השפעה עסקית מדידה ברחבי הארגון שלך."
+    },
+    "caseStudiesSection": {
+      "title": "תוצאות מוכחות",
+      "subtitle": "שינויים אמיתיים. השפעה אמיתית. תשואה אמיתית.",
+      "challenge": "אתגר",
+      "solution": "פתרון"
+    },
+    "industrySection": {
+      "title": "מומחיות תעשייתית",
+      "subtitle": "ידע עמוק בתחום יחד עם מיטב המתודולוגיות מתחומים שונים."
+    },
+    "insightsSection": {
+      "title": "תובנות ומחקר",
+      "subtitle": "הורד את המחשבות העדכניות ביותר שלנו על אתגרים עסקיים קריטיים.",
+      "download": "הורדה"
+    },
+    "clientsSection": {
+      "title": "מהותפכים על ידי מנהיגי תעשייה"
+    },
+    "processSection": {
+      "title": "תהליך ההתערבות שלנו",
+      "subtitle": "גישה מקיפה ושיתופית שנועדה לספק השפעה נמשכת."
+    },
+    "cta": {
+      "title": "מוכן לשינוי?",
+      "subtitle": "תזמן ייעוץ ללא תשלום כדי לחקור איך אנחנו יכולים לעזור לך להשיג את המטרות האסטרטגיות שלך.",
+      "apply": "הגש בקשה להתערבות",
+      "note": "בדיקת הבקשה לוקחת בדרך כלל 3-5 ימי עסקים"
+    },
+    "footer": {
+      "copyright": "© 2024 סטרטקס ייעוץ. משרדים בניו יורק, לונדון, סינגפור."
+    }
+  }
+}

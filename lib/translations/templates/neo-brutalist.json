@@ -1,0 +1,46 @@
+{
+  "en": {
+    "name": "ASH WOLF",
+    "title": "ANTI-DESIGNER",
+    "manifesto": "DESIGN SHOULDN'T BE POLITE. IT SHOULD CHALLENGE. DISRUPT. DEMAND ATTENTION.",
+    "bio": "10+ YEARS BREAKING RULES. STARTED IN PUNK SCENE. NOW LEADING ANTI-DESIGN MOVEMENT. CLIENTS WHO DARE TO BE DIFFERENT.",
+    "contact": "ash@antistudio.xyz",
+    "ui": {
+      "contact": "CONTACT",
+      "skills": "SKILLS",
+      "stats": "STATS",
+      "pricing": "PRICING",
+      "select": "SELECT",
+      "gallery": "GALLERY",
+      "timeline": "TIMELINE"
+    }
+  },
+  "ru": {
+    "name": "ЭШ ВУЛФ",
+    "title": "АНТИ-ДИЗАЙНЕР",
+    "manifesto": "ДИЗАЙН НЕ ДОЛЖЕН БЫТЬ ВЕЖЛИВЫМ. ОН ДОЛЖЕН БРОСАТЬ ВЫЗОВ. РАЗРУШАТЬ. ТРЕБОВАТЬ ВНИМАНИЯ.",
+    "bio": "10+ ЛЕТ НАРУШЕНИЯ ПРАВИЛ. НАЧИНАЛ В ПАНК-СЦЕНЕ. СЕЙЧАС ВОЗГЛАВЛЯЮ ДВИЖЕНИЕ АНТИ-ДИЗАЙНА. КЛИЕНТЫ, КОТОРЫЕ ОСМЕЛИВАЮТСЯ БЫТЬ ДРУГИМИ.",
+    "contact": "ash@antistudio.xyz",
+    "ui": {
+      "contact": "Контакты",
+      "skills": "Навыки",
+      "pricing": "Цены",
+      "gallery": "Галерея",
+      "timeline": "Хронология"
+    }
+  },
+  "he": {
+    "name": "אש וולף",
+    "title": "אנטי-מעצב",
+    "manifesto": "עיצוב לא צריך להיות מנומס. הוא צריך להאתגר. להפריע. לדרוש תשומת לב.",
+    "bio": "יותר מ-10 שנים שובר כללים. התחיל בסצנת הפאנק. כעת מוביל את תנועת האנטי-עיצוב. לקוחות שמעזים להיות שונים.",
+    "contact": "ash@antistudio.xyz",
+    "ui": {
+      "contact": "יצירת קשר",
+      "skills": "כישורים",
+      "pricing": "תמחור",
+      "gallery": "גלריה",
+      "timeline": "ציר זמן"
+    }
+  }
+}

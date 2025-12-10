@@ -1,0 +1,54 @@
+{
+  "en": {
+    "ui": {
+      "conversion": "Conversion",
+      "saasPlatform": "SaaS Platform",
+      "product": "Product",
+      "features": "Features",
+      "pricing": "Pricing",
+      "security": "Security",
+      "connect": "Connect",
+      "platformCapabilities": "Platform Capabilities",
+      "aboutOurPlatform": "About Our Platform",
+      "caseStudies": "Case Studies",
+      "productRoadmap": "Product Roadmap",
+      "frequentlyAskedQuestions": "Frequently Asked Questions",
+      "closeNavigationMenu": "Close navigation menu",
+      "openNavigationMenu": "Open navigation menu",
+      "startFreeTrial": "Start Free Trial",
+      "mostPopular": "MOST POPULAR",
+      "enterprisegradeSaasPlatformDesignedToScaleWithYour": "Enterprise-grade SaaS platform designed to scale with your business. Built with modern technology and best practices.",
+      "twitter": "Twitter",
+      "linkedin": "LinkedIn",
+      "email": "Email"
+    }
+  },
+  "ru": {
+    "ui": {
+      "features": "Функции",
+      "pricing": "Цены",
+      "connect": "Связаться",
+      "caseStudies": "Кейсы",
+      "frequentlyAskedQuestions": "Часто задаваемые вопросы",
+      "closeNavigationMenu": "Закрыть меню навигации",
+      "openNavigationMenu": "Открыть меню навигации",
+      "startFreeTrial": "Начать бесплатный пробный период",
+      "mostPopular": "Самый популярный",
+      "email": "Email"
+    }
+  },
+  "he": {
+    "ui": {
+      "features": "תכונות",
+      "pricing": "תמחור",
+      "connect": "התחבר",
+      "caseStudies": "מקרי בוחן",
+      "frequentlyAskedQuestions": "שאלות נפוצות",
+      "closeNavigationMenu": "סגור תפריט ניווט",
+      "openNavigationMenu": "פתח תפריט ניווט",
+      "startFreeTrial": "התחל תקופת ניסיון",
+      "mostPopular": "הפופולרי ביותר",
+      "email": "דוא״ל"
+    }
+  }
+}

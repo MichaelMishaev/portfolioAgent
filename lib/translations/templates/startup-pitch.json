@@ -1,0 +1,55 @@
+{
+  "en": {
+    "ui": {
+      "powerfulFeatures": "Powerful Features",
+      "howItWorks": "How It Works",
+      "simpleTransparentPricing": "Simple, Transparent Pricing",
+      "chooseThePlanThatsRightForYou": "Choose the plan that's right for you",
+      "lovedByThousands": "Loved by Thousands",
+      "seeWhatOurCustomersHaveToSay": "See what our customers have to say",
+      "aboutFlowmetrics": "About FlowMetrics",
+      "ourExpertise": "Our Expertise",
+      "ourJourney": "Our Journey",
+      "fromStartupToScale": "From startup to scale",
+      "getInTouch": "Get in Touch",
+      "closeNavigationMenu": "Close navigation menu",
+      "openNavigationMenu": "Open navigation menu",
+      "enterYourEmail": "Enter your email",
+      "startFreeTrial": "Start free trial",
+      "productDashboard": "Product Dashboard",
+      "scheduleAProductDemo": "Schedule a product demo",
+      "contactSalesTeam": "Contact sales team",
+      "getStarted": "Get Started",
+      "startFreeTrial1": "Start Free Trial",
+      "everythingYouNeedToGrowYourBusinessAllInOnePlace": "Everything you need to grow your business, all in one place",
+      "mostPopular": "Most Popular",
+      "scheduleADemo": "Schedule a Demo",
+      "contactSales": "Contact Sales",
+      "joinThousandsOfCompaniesAlreadyGrowingWithOurPlatf": "Join thousands of companies already growing with our platform",
+      "startYourFreeTrial": "Start Your Free Trial",
+      "emailAddress": "Email address"
+    }
+  },
+  "ru": {
+    "ui": {
+      "getInTouch": "Связаться",
+      "closeNavigationMenu": "Закрыть меню навигации",
+      "openNavigationMenu": "Открыть меню навигации",
+      "startFreeTrial": "Начать бесплатный пробный период",
+      "getStarted": "Начать",
+      "startFreeTrial1": "Начать бесплатный пробный период",
+      "mostPopular": "Самый популярный"
+    }
+  },
+  "he": {
+    "ui": {
+      "getInTouch": "צור קשר",
+      "closeNavigationMenu": "סגור תפריט ניווט",
+      "openNavigationMenu": "פתח תפריט ניווט",
+      "startFreeTrial": "התחל תקופת ניסיון",
+      "getStarted": "התחל",
+      "startFreeTrial1": "התחל תקופת ניסיון",
+      "mostPopular": "הפופולרי ביותר"
+    }
+  }
+}

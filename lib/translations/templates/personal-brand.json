@@ -1,0 +1,47 @@
+{
+  "en": {
+    "ui": {
+      "selectedWork": "Selected Work",
+      "frequentlyAskedQuestions": "Frequently Asked Questions",
+      "byTheNumbers": "By The Numbers",
+      "whatIDoBest": "What I Do Best",
+      "workWithMe": "Work With Me",
+      "getStarted": "Get Started",
+      "whatPeopleSay": "What People Say",
+      "myJourney": "My Journey",
+      "closeNavigationMenu": "Close navigation menu",
+      "openNavigationMenu": "Open navigation menu",
+      "faq": "FAQ",
+      "scheduleACall": "Schedule a Call",
+      "linkedinProfile": "LinkedIn profile",
+      "twitterProfile": "Twitter profile",
+      "githubProfile": "GitHub profile"
+    }
+  },
+  "ru": {
+    "ui": {
+      "selectedWork": "Избранные работы",
+      "frequentlyAskedQuestions": "Часто задаваемые вопросы",
+      "getStarted": "Начать",
+      "closeNavigationMenu": "Закрыть меню навигации",
+      "openNavigationMenu": "Открыть меню навигации",
+      "faq": "Частые вопросы",
+      "linkedinProfile": "Профиль LinkedIn",
+      "twitterProfile": "Профиль Twitter",
+      "githubProfile": "Профиль GitHub"
+    }
+  },
+  "he": {
+    "ui": {
+      "selectedWork": "עבודות נבחרות",
+      "frequentlyAskedQuestions": "שאלות נפוצות",
+      "getStarted": "התחל",
+      "closeNavigationMenu": "סגור תפריט ניווט",
+      "openNavigationMenu": "פתח תפריט ניווט",
+      "faq": "שאלות נפוצות",
+      "linkedinProfile": "פרופיל LinkedIn",
+      "twitterProfile": "פרופיל Twitter",
+      "githubProfile": "פרופיל GitHub"
+    }
+  }
+}

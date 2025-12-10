@@ -1,0 +1,161 @@
+{
+  "en": {
+    "name": "APEX STRATEGIC CONSULTING",
+    "tagline": "Transform. Execute. Excel.",
+    "description": "Elite management consulting for CEOs and boards. We partner with global leaders to solve their most critical challenges and capture their greatest opportunities.",
+    "nav": {
+      "services": "Services",
+      "caseStudies": "Case Studies",
+      "team": "Our Team",
+      "insights": "Insights",
+      "cta": "Contact Us"
+    },
+    "hero": {
+      "badge": "Trusted by Fortune 500 Leaders",
+      "scheduleConsultation": "Schedule Consultation",
+      "downloadInsights": "Download Insights"
+    },
+    "servicesSection": {
+      "title": "Our Services",
+      "subtitle": "Strategic solutions for your most critical challenges",
+      "coreCapabilities": "Core Capabilities",
+      "ourApproach": "Our Approach",
+      "typicalEngagement": "Typical Engagement:",
+      "investmentRange": "Investment Range:"
+    },
+    "engagementsSection": {
+      "title": "Client Engagements",
+      "subtitle": "Transformational results for global enterprises",
+      "situation": "Situation",
+      "intervention": "Our Intervention"
+    },
+    "teamSection": {
+      "title": "Our Partners",
+      "subtitle": "Senior leaders from the world's top firms"
+    },
+    "methodologySection": {
+      "title": "The Apex Method",
+      "subtitle": "Battle-tested methodology refined over 1,000+ engagements"
+    },
+    "insightsSection": {
+      "title": "Latest Insights",
+      "subtitle": "Research and perspectives from our experts",
+      "downloadPdf": "Download PDF"
+    },
+    "cta": {
+      "title": "Let's Discuss Your Strategic Priorities",
+      "subtitle": "Schedule a confidential consultation with one of our senior partners.",
+      "scheduleConsultation": "Schedule Consultation",
+      "requestProposal": "Request Proposal"
+    },
+    "footer": {
+      "copyright": "© 2025 Apex Strategic Consulting. New York • London • Dubai • Singapore • Hong Kong"
+    }
+  },
+  "ru": {
+    "name": "АПЕКС СТРАТЕГИЧЕСКИЙ КОНСАЛТИНГ",
+    "tagline": "Трансформируем. Исполняем. Превосходим.",
+    "description": "Элитный управленческий консалтинг для генеральных директоров и советов директоров. Мы партнеры глобальных лидеров в решении их самых критических задач и использовании величайших возможностей.",
+    "nav": {
+      "services": "Услуги",
+      "caseStudies": "Кейсы",
+      "team": "Наша Команда",
+      "insights": "Аналитика",
+      "cta": "Связаться с Нами"
+    },
+    "hero": {
+      "badge": "Доверяют Лидеры Fortune 500",
+      "scheduleConsultation": "Записаться на Консультацию",
+      "downloadInsights": "Скачать Аналитику"
+    },
+    "servicesSection": {
+      "title": "Наши Услуги",
+      "subtitle": "Стратегические решения для ваших самых критических задач",
+      "coreCapabilities": "Основные Возможности",
+      "ourApproach": "Наш Подход",
+      "typicalEngagement": "Типичное Взаимодействие:",
+      "investmentRange": "Диапазон Инвестиций:"
+    },
+    "engagementsSection": {
+      "title": "Клиентское Взаимодействие",
+      "subtitle": "Трансформационные результаты для глобальных предприятий",
+      "situation": "Ситуация",
+      "intervention": "Наше Вмешательство"
+    },
+    "teamSection": {
+      "title": "Наши Партнеры",
+      "subtitle": "Старшие руководители из ведущих мировых компаний"
+    },
+    "methodologySection": {
+      "title": "Метод Apex",
+      "subtitle": "Проверенная в боях методология, отточенная на более чем 1000 проектах"
+    },
+    "insightsSection": {
+      "title": "Последняя Аналитика",
+      "subtitle": "Исследования и перспективы от наших экспертов",
+      "downloadPdf": "Скачать PDF"
+    },
+    "cta": {
+      "title": "Обсудим Ваши Стратегические Приоритеты",
+      "subtitle": "Запланируйте конфиденциальную консультацию с одним из наших старших партнеров.",
+      "scheduleConsultation": "Записаться на Консультацию",
+      "requestProposal": "Запросить Предложение"
+    },
+    "footer": {
+      "copyright": "© 2025 Apex Strategic Consulting. Нью-Йорк • Лондон • Дубай • Сингапур • Гонконг"
+    }
+  },
+  "he": {
+    "name": "אפקס ייעוץ אסטרטגי",
+    "tagline": "להתמיר. לבצע. להצטיין.",
+    "description": "ייעוץ ניהול אליטה למנכ\"לים ולדירקטוריונים. אנו שותפים עם מנהיגים גלובליים לפתור את האתגרים הקריטיים ביותר שלהם ולתפוס את ההזדמנויות הגדולות ביותר שלהם.",
+    "nav": {
+      "services": "שירותים",
+      "caseStudies": "מקרי מחקר",
+      "team": "הצוות שלנו",
+      "insights": "תובנות",
+      "cta": "צור קשר"
+    },
+    "hero": {
+      "badge": "מהימנים על ידי מנהיגי Fortune 500",
+      "scheduleConsultation": "תזמן ייעוץ",
+      "downloadInsights": "הורד תובנות"
+    },
+    "servicesSection": {
+      "title": "השירותים שלנו",
+      "subtitle": "פתרונות אסטרטגיים לאתגרים הקריטיים ביותר שלך",
+      "coreCapabilities": "יכולות מרכזיות",
+      "ourApproach": "הגישה שלנו",
+      "typicalEngagement": "התערבות טיפוסית:",
+      "investmentRange": "טווח השקעה:"
+    },
+    "engagementsSection": {
+      "title": "התערבויות עם לקוחות",
+      "subtitle": "תוצאות מהפכניות לחברות גלובליות",
+      "situation": "מצב",
+      "intervention": "התערבות שלנו"
+    },
+    "teamSection": {
+      "title": "השותפים שלנו",
+      "subtitle": "מנהיגים בכירים מחברות המובילות בעולם"
+    },
+    "methodologySection": {
+      "title": "שיטת Apex",
+      "subtitle": "מתודולוגיה שעברה מבחן קרב ביותר מ-1,000 התערבויות"
+    },
+    "insightsSection": {
+      "title": "תובנות אחרונות",
+      "subtitle": "מחקרים ונקודות מבט מהמומחים שלנו",
+      "downloadPdf": "הורד PDF"
+    },
+    "cta": {
+      "title": "בואו נדון בעדיפויות האסטרטגיות שלך",
+      "subtitle": "תזמן פגישת ייעוץ חסויה עם אחד מהשותפים הבכירים שלנו.",
+      "scheduleConsultation": "תזמן ייעוץ",
+      "requestProposal": "בקש הצעה"
+    },
+    "footer": {
+      "copyright": "© 2025 Apex ייעוץ אסטרטגי. ניו יורק • לונדון • דובאי • סינגפור • הונג קונג"
+    }
+  }
+}

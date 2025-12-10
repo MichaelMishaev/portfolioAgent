@@ -1,0 +1,31 @@
+{
+  "en": {
+    "ui": {
+      "retroGamingUi": "Retro Gaming UI",
+      "holographicStickers": "Holographic Stickers",
+      "animeMerchStore": "Anime Merch Store",
+      "vaporwaveAlbumArt": "Vaporwave Album Art",
+      "uiDesign": "UI design",
+      "pricing": "PRICING",
+      "gallery": "GALLERY",
+      "timeline": "TIMELINE",
+      "faq": "FAQ"
+    }
+  },
+  "ru": {
+    "ui": {
+      "pricing": "Цены",
+      "gallery": "Галерея",
+      "timeline": "Хронология",
+      "faq": "Частые вопросы"
+    }
+  },
+  "he": {
+    "ui": {
+      "pricing": "תמחור",
+      "gallery": "גלריה",
+      "timeline": "ציר זמן",
+      "faq": "שאלות נפוצות"
+    }
+  }
+}

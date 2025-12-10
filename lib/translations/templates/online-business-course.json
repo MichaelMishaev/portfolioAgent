@@ -1,0 +1,269 @@
+{
+  "en": {
+    "badge": "100,000+ Students Enrolled",
+    "heroTitle": "Master Digital Marketing",
+    "heroTitleEnd": "in 90 Days",
+    "heroSubtitle": "Step-by-step video courses, practical assignments, and lifetime access. Learn at your own pace from industry experts.",
+    "nav": {
+      "courses": "Courses",
+      "curriculum": "Curriculum",
+      "faq": "FAQ"
+    },
+    "hero": {
+      "startLearning": "Start Learning Now",
+      "freeSample": "Free Sample Lessons",
+      "moneyBack": "30-Day Money Back",
+      "lifetimeAccess": "Lifetime Access",
+      "certificate": "Certificate Included",
+      "videoLessons": "Video Lessons",
+      "totalDuration": "Total Duration",
+      "students": "Students",
+      "reviews": "reviews"
+    },
+    "features": {
+      "onDemand": {
+        "title": "On-Demand Videos",
+        "description": "Watch anytime, anywhere"
+      },
+      "workbooks": {
+        "title": "Workbooks & PDFs",
+        "description": "Downloadable resources"
+      },
+      "community": {
+        "title": "Private Community",
+        "description": "Network with peers"
+      },
+      "certificate": {
+        "title": "Certificate",
+        "description": "Upon completion"
+      }
+    },
+    "curriculum": {
+      "title": "Complete Course Curriculum",
+      "subtitle": "8 comprehensive modules covering everything from beginner to advanced",
+      "lessons": "lessons",
+      "preview": "Preview"
+    },
+    "pricing": {
+      "title": "Choose Your Learning Path",
+      "subtitle": "All plans include lifetime access. No subscriptions. Pay once, learn forever.",
+      "oneTime": "one-time",
+      "essentials": {
+        "title": "Essentials",
+        "description": "Perfect for getting started",
+        "cta": "Get Started"
+      },
+      "complete": {
+        "title": "Complete Course",
+        "description": "Everything you need to succeed",
+        "badge": "MOST POPULAR",
+        "cta": "Enroll Now"
+      },
+      "vip": {
+        "title": "VIP Mentorship",
+        "description": "For serious entrepreneurs",
+        "cta": "Apply Now"
+      },
+      "guarantee": "💳 Secure payment • 30-day money-back guarantee • No subscriptions"
+    },
+    "testimonials": {
+      "title": "Student Success Stories",
+      "subtitle": "Real results from real students",
+      "quote": "This course completely changed my life. The strategies are practical, actionable, and actually work. Worth every penny!"
+    },
+    "cta": {
+      "title": "Ready to Transform Your Life?",
+      "subtitle": "Join 100,000+ students who have already started their journey. 30-day money-back guarantee.",
+      "button": "Enroll in Complete Course - $697",
+      "limited": "⏰ Limited Time: Save $300 (Regular price $997)"
+    },
+    "footer": {
+      "allCourses": "All Courses",
+      "bundles": "Bundles",
+      "freeLessons": "Free Lessons",
+      "templates": "Templates",
+      "tools": "Tools",
+      "helpCenter": "Help Center",
+      "refundPolicy": "Refund Policy",
+      "copyright": "© 2025 Digital Academy. All rights reserved. | Terms • Privacy • Refunds"
+    }
+  },
+  "ru": {
+    "badge": "100,000+ записавшихся студентов",
+    "heroTitle": "Освойте цифровой маркетинг",
+    "heroTitleEnd": "за 90 дней",
+    "heroSubtitle": "Пошаговые видео-курсы, практические задания и пожизненный доступ. Учитесь в своем темпе у отраслевых экспертов.",
+    "nav": {
+      "courses": "Курсы",
+      "curriculum": "Программа",
+      "faq": "FAQ"
+    },
+    "hero": {
+      "startLearning": "Начать обучение",
+      "freeSample": "Бесплатные примеры уроков",
+      "moneyBack": "Возврат денег 30 дней",
+      "lifetimeAccess": "Пожизненный доступ",
+      "certificate": "Сертификат включен",
+      "videoLessons": "Видео-уроков",
+      "totalDuration": "Общая длительность",
+      "students": "Студентов",
+      "reviews": "отзывов"
+    },
+    "features": {
+      "onDemand": {
+        "title": "Видео по запросу",
+        "description": "Смотрите в любое время и в любом месте"
+      },
+      "workbooks": {
+        "title": "Рабочие тетради и PDF",
+        "description": "Загружаемые ресурсы"
+      },
+      "community": {
+        "title": "Частное сообщество",
+        "description": "Сеть с коллегами"
+      },
+      "certificate": {
+        "title": "Сертификат",
+        "description": "По завершении"
+      }
+    },
+    "curriculum": {
+      "title": "Полная программа курса",
+      "subtitle": "8 комплексных модулей, охватывающих все от начального до продвинутого уровня",
+      "lessons": "уроков",
+      "preview": "Предпросмотр"
+    },
+    "pricing": {
+      "title": "Выберите свой путь обучения",
+      "subtitle": "Все планы включают пожизненный доступ. Никаких подписок. Оплата один раз, обучение навсегда.",
+      "oneTime": "единоразово",
+      "essentials": {
+        "title": "Основы",
+        "description": "Идеально для начала",
+        "cta": "Начать"
+      },
+      "complete": {
+        "title": "Полный курс",
+        "description": "Все необходимое для успеха",
+        "badge": "САМЫЙ ПОПУЛЯРНЫЙ",
+        "cta": "Записаться"
+      },
+      "vip": {
+        "title": "VIP наставничество",
+        "description": "Для серьезных предпринимателей",
+        "cta": "Подать заявку"
+      },
+      "guarantee": "💳 Безопасная оплата • Гарантия возврата денег 30 дней • Без подписок"
+    },
+    "testimonials": {
+      "title": "Истории успеха студентов",
+      "subtitle": "Реальные результаты от реальных студентов",
+      "quote": "Этот курс полностью изменил мою жизнь. Стратегии практичные, действенные и действительно работают. Стоит каждого пенни!"
+    },
+    "cta": {
+      "title": "Готовы трансформировать свою жизнь?",
+      "subtitle": "Присоединяйтесь к 100,000+ студентам, которые уже начали свой путь. Гарантия возврата денег 30 дней.",
+      "button": "Записаться на полный курс - $697",
+      "limited": "⏰ Ограниченное время: Сэкономьте $300 (обычная цена $997)"
+    },
+    "footer": {
+      "allCourses": "Все курсы",
+      "bundles": "Пакеты",
+      "freeLessons": "Бесплатные уроки",
+      "templates": "Шаблоны",
+      "tools": "Инструменты",
+      "helpCenter": "Центр помощи",
+      "refundPolicy": "Политика возврата",
+      "copyright": "© 2025 Digital Academy. Все права защищены. | Условия • Конфиденциальность • Возвраты"
+    }
+  },
+  "he": {
+    "badge": "מעל 100,000 סטודנטים נרשמו",
+    "heroTitle": "להתמצא בשיווק דיגיטלי",
+    "heroTitleEnd": "בתוך 90 ימים",
+    "heroSubtitle": "קורסי וידאו צעד אחר צעד, מטלות מעשיות, וגישה לכל החיים. למידה בקצב שלך ממומחי התעשייה.",
+    "nav": {
+      "courses": "קורסים",
+      "curriculum": "תכנית הלימודים",
+      "faq": "שאלות נפוצות"
+    },
+    "hero": {
+      "startLearning": "התחל ללמוד עכשיו",
+      "freeSample": "שיעורי דוגמה חינם",
+      "moneyBack": "החזר כספי בתוך 30 יום",
+      "lifetimeAccess": "גישה לכל החיים",
+      "certificate": "תעודה כלולה",
+      "videoLessons": "שיעורי וידאו",
+      "totalDuration": "משך זמן כולל",
+      "students": "סטודנטים",
+      "reviews": "ביקורות"
+    },
+    "features": {
+      "onDemand": {
+        "title": "וידאו לפי דרישה",
+        "description": "צפייה בכל זמן ומכל מקום"
+      },
+      "workbooks": {
+        "title": "ספרי עבודה ו-PDFים",
+        "description": "משאבים להורדה"
+      },
+      "community": {
+        "title": "קהילה פרטית",
+        "description": "רשתות עם עמיתים"
+      },
+      "certificate": {
+        "title": "תעודה",
+        "description": "לאחר השלמה"
+      }
+    },
+    "curriculum": {
+      "title": "תכנית הלימודים המלאה",
+      "subtitle": "8 מודולים מקיפים הכוללים הכל מרמת המתחילים ועד למתקדמים",
+      "lessons": "שיעורים",
+      "preview": "תצוגה מקדימה"
+    },
+    "pricing": {
+      "title": "בחר את דרך הלמידה שלך",
+      "subtitle": "כל התוכניות כוללות גישה לכל החיים. אין מנויים. תשלום חד פעמי, למידה לנצח.",
+      "oneTime": "תשלום חד פעמי",
+      "essentials": {
+        "title": "הכרחי",
+        "description": "מושלם להתחלה",
+        "cta": "התחל עכשיו"
+      },
+      "complete": {
+        "title": "קורס מלא",
+        "description": "כל מה שאתה צריך כדי להצליח",
+        "badge": "הכי פופולרי",
+        "cta": "הירשם עכשיו"
+      },
+      "vip": {
+        "title": "חונכות VIP",
+        "description": "ליזמים הרציניים",
+        "cta": "הגש בקשה עכשיו"
+      },
+      "guarantee": "💳 תשלום מאובטח • החזר כספי בתוך 30 יום • אין מנויים"
+    },
+    "testimonials": {
+      "title": "סיפורי הצלחה של סטודנטים",
+      "subtitle": "תוצאות אמיתיות מסטודנטים אמיתיים",
+      "quote": "הקורס הזה שינה לי את החיים לחלוטין. האסטרטגיות הן מעשיות, ניתנות ליישום, ובאמת עובדות. שווה כל שקל!"
+    },
+    "cta": {
+      "title": "מוכן לשנות את חייך?",
+      "subtitle": "הצטרף למעל 100,000 סטודנטים שכבר התחילו את מסעם. החזר כספי בתוך 30 יום.",
+      "button": "הירשם לקורס המלא - $697",
+      "limited": "⏰ זמן מוגבל: חסוך $300 (מחיר רגיל $997)"
+    },
+    "footer": {
+      "allCourses": "כל הקורסים",
+      "bundles": "חבילות",
+      "freeLessons": "שיעורים חינם",
+      "templates": "תבניות",
+      "tools": "כלים",
+      "helpCenter": "מרכז עזרה",
+      "refundPolicy": "מדיניות החזרים",
+      "copyright": "© 2025 אקדמיה דיגיטלית. כל הזכויות שמורות. | תנאים • פרטיות • החזרים"
+    }
+  }
+}

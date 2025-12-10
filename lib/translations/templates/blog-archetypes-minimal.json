@@ -1,0 +1,44 @@
+{
+  "en": {
+    "nav": {
+      "home": "Home",
+      "about": "About",
+      "writing": "Writing",
+      "projects": "Projects",
+      "contact": "Contact"
+    },
+    "hero": {
+      "title": "Minimal Blog",
+      "subtitle": "Thoughts, ideas, and explorations",
+      "cta": "Read More"
+    }
+  },
+  "ru": {
+    "nav": {
+      "home": "Главная",
+      "about": "О нас",
+      "writing": "Статьи",
+      "projects": "Проекты",
+      "contact": "Контакты"
+    },
+    "hero": {
+      "title": "Минималистичный блог",
+      "subtitle": "Мысли, идеи и исследования",
+      "cta": "Читать далее"
+    }
+  },
+  "he": {
+    "nav": {
+      "home": "דף הבית",
+      "about": "אודות",
+      "writing": "כתיבה",
+      "projects": "פרויקטים",
+      "contact": "צור קשר"
+    },
+    "hero": {
+      "title": "בלוג מינימליסטי",
+      "subtitle": "מחשבות, רעיונות וחקירות",
+      "cta": "קרא עוד"
+    }
+  }
+}

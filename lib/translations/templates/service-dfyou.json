@@ -1,0 +1,176 @@
+{
+  "en": {
+    "name": "DESIGN ON TAP",
+    "tagline": "Unlimited Design. Fixed Price. Blazing Fast.",
+    "description": "Subscribe to unlimited graphic design, branding, and web design. Pause or cancel anytime. No surprises.",
+    "speed": "48-hour turnaround",
+    "nav": {
+      "work": "Work",
+      "pricing": "Pricing",
+      "faq": "FAQ",
+      "cta": "Subscribe Now"
+    },
+    "hero": {
+      "getStarted": "Get Started",
+      "viewExamples": "View Examples",
+      "badges": {
+        "turnaround": "48hr avg. turnaround",
+        "revisions": "Unlimited revisions",
+        "pause": "Pause or cancel anytime"
+      }
+    },
+    "howItWorksSection": {
+      "title": "How It Works"
+    },
+    "portfolioSection": {
+      "title": "Recent Work",
+      "subtitle": "Real projects. Real fast. All delivered in under 48 hours.",
+      "all": "All",
+      "branding": "Branding",
+      "webDesign": "Web Design",
+      "socialMedia": "Social Media",
+      "marketing": "Marketing"
+    },
+    "pricingSection": {
+      "title": "Simple, Transparent Pricing",
+      "subtitle": "One flat monthly fee. Unlimited requests. Pause or cancel anytime.",
+      "subscribeNow": "Subscribe Now",
+      "pauseNote": "Pause or cancel anytime",
+      "notIncluded": "Not Included:"
+    },
+    "guaranteesSection": {
+      "title": "Our Guarantees"
+    },
+    "testimonialsSection": {
+      "title": "What Clients Say"
+    },
+    "faqSection": {
+      "title": "Frequently Asked Questions"
+    },
+    "cta": {
+      "title": "Ready for Unlimited Design?",
+      "subtitle": "Subscribe today and get your first design delivered in 48 hours. Pause or cancel anytime.",
+      "subscribe": "Subscribe for $2,995/month",
+      "note": "75% refund guarantee • Pause anytime • No contracts"
+    },
+    "footer": {
+      "copyright": "© 2024 Design on Tap. Unlimited design for modern teams."
+    }
+  },
+  "ru": {
+    "name": "ДИЗАЙН НА ЗАКАЗ",
+    "tagline": "Безлимитный Дизайн. Фиксированная Цена. Молниеносно Быстро.",
+    "description": "Подпишитесь на безлимитный графический дизайн, брендинг и веб-дизайн. Приостановите или отмените в любое время. Без сюрпризов.",
+    "speed": "Срок выполнения 48 часов",
+    "nav": {
+      "work": "Работы",
+      "pricing": "Цены",
+      "faq": "FAQ",
+      "cta": "Подписаться Сейчас"
+    },
+    "hero": {
+      "getStarted": "Начать",
+      "viewExamples": "Посмотреть Примеры",
+      "badges": {
+        "turnaround": "Средний срок 48 ч.",
+        "revisions": "Безлимитные правки",
+        "pause": "Приостановите или отмените в любое время"
+      }
+    },
+    "howItWorksSection": {
+      "title": "Как Это Работает"
+    },
+    "portfolioSection": {
+      "title": "Недавние Работы",
+      "subtitle": "Реальные проекты. Реально быстро. Все выполнено менее чем за 48 часов.",
+      "all": "Все",
+      "branding": "Брендинг",
+      "webDesign": "Веб-дизайн",
+      "socialMedia": "Социальные Сети",
+      "marketing": "Маркетинг"
+    },
+    "pricingSection": {
+      "title": "Простая, Прозрачная Цена",
+      "subtitle": "Одна фиксированная ежемесячная плата. Безлимитные запросы. Приостановите или отмените в любое время.",
+      "subscribeNow": "Подписаться Сейчас",
+      "pauseNote": "Приостановите или отмените в любое время",
+      "notIncluded": "Не Включено:"
+    },
+    "guaranteesSection": {
+      "title": "Наши Гарантии"
+    },
+    "testimonialsSection": {
+      "title": "Что Говорят Клиенты"
+    },
+    "faqSection": {
+      "title": "Часто Задаваемые Вопросы"
+    },
+    "cta": {
+      "title": "Готовы к Безлимитному Дизайну?",
+      "subtitle": "Подпишитесь сегодня и получите ваш первый дизайн за 48 часов. Приостановите или отмените в любое время.",
+      "subscribe": "Подписаться за $2,995/месяц",
+      "note": "75% гарантия возврата • Приостановка в любое время • Без контрактов"
+    },
+    "footer": {
+      "copyright": "© 2024 Design on Tap. Безлимитный дизайн для современных команд."
+    }
+  },
+  "he": {
+    "name": "עיצוב לפי דרישה",
+    "tagline": "עיצוב ללא הגבלה. מחיר קבוע. מהירות מסחררת.",
+    "description": "הירשם לעיצוב גרפי, ברנדינג ועיצוב אתרים ללא הגבלה. ניתן להשהות או לבטל בכל עת. ללא הפתעות.",
+    "speed": "מהירות הסבה 48 שעות",
+    "nav": {
+      "work": "עבודות",
+      "pricing": "תמחור",
+      "faq": "שאלות נפוצות",
+      "cta": "הירשם עכשיו"
+    },
+    "hero": {
+      "getStarted": "התחל עכשיו",
+      "viewExamples": "צפה בדוגמאות",
+      "badges": {
+        "turnaround": "ממוצע הסבה 48 שעות",
+        "revisions": "תיקונים ללא הגבלה",
+        "pause": "ניתן להשהות או לבטל בכל עת"
+      }
+    },
+    "howItWorksSection": {
+      "title": "איך זה עובד"
+    },
+    "portfolioSection": {
+      "title": "עבודות אחרונות",
+      "subtitle": "פרויקטים אמיתיים. מהירות אמיתית. הכל מוסר תוך פחות מ-48 שעות.",
+      "all": "הכל",
+      "branding": "ברנדינג",
+      "webDesign": "עיצוב אתרים",
+      "socialMedia": "מדיה חברתית",
+      "marketing": "שיווק"
+    },
+    "pricingSection": {
+      "title": "תמחור פשוט ושקוף",
+      "subtitle": "עלות חודשית קבועה אחת. בקשות ללא הגבלה. ניתן להשהות או לבטל בכל עת.",
+      "subscribeNow": "הירשם עכשיו",
+      "pauseNote": "ניתן להשהות או לבטל בכל עת",
+      "notIncluded": "לא כלול:"
+    },
+    "guaranteesSection": {
+      "title": "הבטחות שלנו"
+    },
+    "testimonialsSection": {
+      "title": "מה לקוחות אומרים"
+    },
+    "faqSection": {
+      "title": "שאלות נפוצות"
+    },
+    "cta": {
+      "title": "מוכן לעיצוב ללא הגבלה?",
+      "subtitle": "הירשם היום וקבל את העיצוב הראשון שלך תוך 48 שעות. ניתן להשהות או לבטל בכל עת.",
+      "subscribe": "הירשם ב-$2,995 לחודש",
+      "note": "החזר כספי 75% • ניתן להשהות בכל עת • ללא חוזים"
+    },
+    "footer": {
+      "copyright": "© 2024 עיצוב לפי דרישה. עיצוב ללא הגבלה לצוותים מודרניים."
+    }
+  }
+}

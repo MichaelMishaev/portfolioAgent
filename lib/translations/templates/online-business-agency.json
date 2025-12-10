@@ -1,0 +1,481 @@
+{
+  "en": {
+    "badge": "Award-Winning Digital Agency",
+    "heroTitle": "Experiences That Convert",
+    "heroSubtitle": "We help ambitious businesses scale with custom web development, strategic marketing, and data-driven growth solutions.",
+    "nav": {
+      "ourWork": "Our Work",
+      "process": "Process"
+    },
+    "hero": {
+      "mainTitle": "We Build Digital",
+      "startProject": "Start Your Project",
+      "viewCaseStudies": "View Case Studies"
+    },
+    "stats": {
+      "projects": "Projects Completed",
+      "satisfaction": "Client Satisfaction",
+      "revenue": "Revenue Generated",
+      "experience": "Years Experience"
+    },
+    "services": {
+      "title": "Full-Service Digital Solutions",
+      "subtitle": "From strategy to execution, we handle everything your business needs to thrive online",
+      "seeAll": "See All Services",
+      "webDev": {
+        "title": "Web Development",
+        "description": "Custom websites and web applications built with modern technologies",
+        "features": [
+          "React & Next.js",
+          "E-commerce",
+          "API Integration",
+          "Performance Optimization"
+        ]
+      },
+      "marketing": {
+        "title": "Digital Marketing",
+        "description": "Data-driven marketing strategies that deliver measurable results",
+        "features": [
+          "SEO & SEM",
+          "Social Media",
+          "Content Marketing",
+          "Analytics"
+        ]
+      },
+      "growth": {
+        "title": "Growth Strategy",
+        "description": "Comprehensive growth plans tailored to your business goals",
+        "features": [
+          "Market Research",
+          "Competitor Analysis",
+          "Growth Hacking",
+          "Conversion Optimization"
+        ]
+      }
+    },
+    "work": {
+      "title": "Recent Work",
+      "subtitle": "Case studies from our portfolio",
+      "projects": [
+        {
+          "title": "E-Commerce Platform",
+          "client": "TechStart Inc.",
+          "result": "+240% Revenue",
+          "category": "Development",
+          "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=450&fit=crop&q=80"
+        },
+        {
+          "title": "Brand Redesign",
+          "client": "Fashion Co.",
+          "result": "+180% Engagement",
+          "category": "Design",
+          "image": "https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=800&h=450&fit=crop&q=80"
+        },
+        {
+          "title": "Marketing Campaign",
+          "client": "FinTech Pro",
+          "result": "+500 Leads/mo",
+          "category": "Marketing",
+          "image": "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=800&h=450&fit=crop&q=80"
+        },
+        {
+          "title": "App Development",
+          "client": "HealthTech",
+          "result": "100K Downloads",
+          "category": "Mobile",
+          "image": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=450&fit=crop&q=80"
+        }
+      ]
+    },
+    "process": {
+      "title": "Our Proven Process",
+      "subtitle": "A systematic approach to delivering exceptional results",
+      "discovery": {
+        "title": "Discovery",
+        "description": "We learn your business, goals, and challenges"
+      },
+      "strategy": {
+        "title": "Strategy",
+        "description": "Create a data-driven plan tailored to you"
+      },
+      "execution": {
+        "title": "Execution",
+        "description": "Build and launch with precision and care"
+      },
+      "optimize": {
+        "title": "Optimize",
+        "description": "Continuously improve and scale results"
+      }
+    },
+    "testimonials": {
+      "title": "Trusted by Industry Leaders",
+      "quote": "Working with this agency transformed our digital presence. Professional, efficient, and results-driven. Highly recommended!",
+      "clients": [
+        {
+          "name": "Michael Chen",
+          "role": "CEO, TechStart",
+          "company": "TechStart Inc."
+        },
+        {
+          "name": "Sarah Williams",
+          "role": "CMO, Fashion Brand",
+          "company": "Fashion Co."
+        },
+        {
+          "name": "David Park",
+          "role": "Founder, FinTech",
+          "company": "FinTech Pro"
+        }
+      ]
+    },
+    "cta": {
+      "title": "Ready to Scale Your Business?",
+      "subtitle": "Let's discuss how we can help you achieve your goals. Book a free strategy call today.",
+      "features": [
+        "Free consultation",
+        "Custom proposal",
+        "No obligation"
+      ],
+      "namePlaceholder": "Your Name",
+      "emailPlaceholder": "Your Email",
+      "websitePlaceholder": "Company Website",
+      "budgetLabel": "Project Budget",
+      "button": "Book Strategy Call"
+    },
+    "footer": {
+      "webDev": "Web Development",
+      "digitalMarketing": "Digital Marketing",
+      "brandStrategy": "Brand Strategy",
+      "growthConsulting": "Growth Consulting",
+      "company": "Company",
+      "aboutUs": "About Us",
+      "ourTeam": "Our Team",
+      "careers": "Careers",
+      "resources": "Resources",
+      "blog": "Blog",
+      "caseStudies": "Case Studies",
+      "whitepapers": "Whitepapers",
+      "webinars": "Webinars",
+      "connect": "Connect",
+      "copyright": "© 2025 Digital Agency. All rights reserved. | Privacy Policy • Terms of Service"
+    }
+  },
+  "ru": {
+    "badge": "Отмеченное наградами цифровое агентство",
+    "heroTitle": "Впечатления, которые конвертируют",
+    "heroSubtitle": "Мы помогаем амбициозным бизнесам масштабироваться с помощью кастомной веб-разработки, стратегического маркетинга и решений для роста на основе данных.",
+    "nav": {
+      "ourWork": "Наши работы",
+      "process": "Процесс"
+    },
+    "hero": {
+      "mainTitle": "Мы создаем цифровое",
+      "startProject": "Начать проект",
+      "viewCaseStudies": "Смотреть кейсы"
+    },
+    "stats": {
+      "projects": "Завершенных проектов",
+      "satisfaction": "Удовлетворенность клиентов",
+      "revenue": "Сгенерированная выручка",
+      "experience": "Лет опыта"
+    },
+    "services": {
+      "title": "Полный комплекс цифровых решений",
+      "subtitle": "От стратегии до реализации, мы обрабатываем все, что нужно вашему бизнесу для успеха в онлайне",
+      "seeAll": "Смотреть все услуги",
+      "webDev": {
+        "title": "Веб-разработка",
+        "description": "Кастомные веб-сайты и веб-приложения на современных технологиях",
+        "features": [
+          "React & Next.js",
+          "E-commerce",
+          "Интеграция API",
+          "Оптимизация производительности"
+        ]
+      },
+      "marketing": {
+        "title": "Цифровой маркетинг",
+        "description": "Маркетинговые стратегии на основе данных с измеримыми результатами",
+        "features": [
+          "SEO & SEM",
+          "Социальные сети",
+          "Контент-маркетинг",
+          "Аналитика"
+        ]
+      },
+      "growth": {
+        "title": "Стратегия роста",
+        "description": "Комплексные планы роста, адаптированные к вашим бизнес-целям",
+        "features": [
+          "Исследование рынка",
+          "Анализ конкурентов",
+          "Growth Hacking",
+          "Оптимизация конверсии"
+        ]
+      }
+    },
+    "work": {
+      "title": "Недавние работы",
+      "subtitle": "Кейсы из нашего портфолио",
+      "projects": [
+        {
+          "title": "Платформа E-Commerce",
+          "client": "TechStart Inc.",
+          "result": "+240% Выручка",
+          "category": "Разработка",
+          "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=450&fit=crop&q=80"
+        },
+        {
+          "title": "Ребрендинг",
+          "client": "Fashion Co.",
+          "result": "+180% Вовлеченность",
+          "category": "Дизайн",
+          "image": "https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=800&h=450&fit=crop&q=80"
+        },
+        {
+          "title": "Маркетинговая кампания",
+          "client": "FinTech Pro",
+          "result": "+500 Лидов/мес",
+          "category": "Маркетинг",
+          "image": "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=800&h=450&fit=crop&q=80"
+        },
+        {
+          "title": "Разработка приложения",
+          "client": "HealthTech",
+          "result": "100K Загрузок",
+          "category": "Мобильное",
+          "image": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=450&fit=crop&q=80"
+        }
+      ]
+    },
+    "process": {
+      "title": "Наш проверенный процесс",
+      "subtitle": "Системный подход к достижению исключительных результатов",
+      "discovery": {
+        "title": "Исследование",
+        "description": "Изучаем ваш бизнес, цели и задачи"
+      },
+      "strategy": {
+        "title": "Стратегия",
+        "description": "Создаем план на основе данных, адаптированный под вас"
+      },
+      "execution": {
+        "title": "Реализация",
+        "description": "Создаем и запускаем с точностью и заботой"
+      },
+      "optimize": {
+        "title": "Оптимизация",
+        "description": "Непрерывное улучшение и масштабирование"
+      }
+    },
+    "testimonials": {
+      "title": "Отзывы клиентов",
+      "subtitle": "Смотрите, что говорят наши партнеры",
+      "quote": "Работа с этим агентством изменила наше цифровое присутствие. Профессионально, эффективно и ориентировано на результат. Очень рекомендую!",
+      "clients": [
+        {
+          "name": "Michael Chen",
+          "role": "CEO, TechStart",
+          "company": "TechStart Inc."
+        },
+        {
+          "name": "Sarah Williams",
+          "role": "CMO, Fashion Brand",
+          "company": "Fashion Co."
+        },
+        {
+          "name": "David Park",
+          "role": "Основатель, FinTech",
+          "company": "FinTech Pro"
+        }
+      ]
+    },
+    "cta": {
+      "title": "Готовы начать свой проект?",
+      "subtitle": "Давайте обсудим, как мы можем помочь вашему бизнесу расти",
+      "button": "Связаться"
+    },
+    "footer": {
+      "company": "Компания",
+      "about": "О нас",
+      "careers": "Карьера",
+      "services": "Услуги",
+      "webDev": "Веб-разработка",
+      "digitalMarketing": "Цифровой маркетинг",
+      "brandStrategy": "Стратегия бренда",
+      "growthConsulting": "Консалтинг по росту",
+      "aboutUs": "О нас",
+      "ourTeam": "Наша команда",
+      "marketing": "Маркетинг",
+      "branding": "Брендинг",
+      "resources": "Ресурсы",
+      "blog": "Блог",
+      "caseStudies": "Кейсы",
+      "whitepapers": "Белые книги",
+      "webinars": "Вебинары",
+      "connect": "Связаться",
+      "copyright": "© 2025 Цифровое агентство. Все права защищены. | Условия • Конфиденциальность"
+    }
+  },
+  "he": {
+    "badge": "סוכנות דיגיטלית זוכת פרסים",
+    "heroTitle": "חוויות שממירות",
+    "heroSubtitle": "אנו עוזרים לעסקים שאפתניים להתרחב באמצעות פיתוח אתרים מותאם אישית, שיווק אסטרטגי ופתרונות צמיחה מבוססי נתונים.",
+    "nav": {
+      "ourWork": "העבודות שלנו",
+      "process": "תהליך"
+    },
+    "hero": {
+      "mainTitle": "אנו בונים דיגיטל",
+      "startProject": "התחל את הפרויקט שלך",
+      "viewCaseStudies": "צפה במחקרי מקרה"
+    },
+    "stats": {
+      "projects": "פרויקטים שהושלמו",
+      "satisfaction": "שביעות רצון לקוחות",
+      "revenue": "הכנסה שנוצרה",
+      "experience": "שנות ניסיון"
+    },
+    "services": {
+      "title": "פתרונות דיגיטליים מלאים",
+      "subtitle": "מאסטרטגיה ועד ביצוע, אנו מטפלים בכל מה שהעסק שלך צריך כדי לצמוח ברשת",
+      "seeAll": "ראה את כל השירותים",
+      "webDev": {
+        "title": "פיתוח אתרים",
+        "description": "אתרים מותאמים אישית ויישומי אינטרנט בנויים עם טכנולוגיות מודרניות",
+        "features": [
+          "React & Next.js",
+          "מסחר אלקטרוני",
+          "אינטגרציה ל-API",
+          "אופטימיזציה לביצועים"
+        ]
+      },
+      "marketing": {
+        "title": "שיווק דיגיטלי",
+        "description": "אסטרטגיות שיווק מבוססות נתונים שמספקות תוצאות מדידות",
+        "features": [
+          "SEO & SEM",
+          "מדיה חברתית",
+          "שיווק תוכן",
+          "אנליטיקה"
+        ]
+      },
+      "growth": {
+        "title": "אסטרטגיית צמיחה",
+        "description": "תוכניות צמיחה מקיפות המותאמות למטרות העסק שלך",
+        "features": [
+          "מחקר שוק",
+          "ניתוח מתחרים",
+          "האקינג צמיחה",
+          "אופטימיזציה להמרה"
+        ]
+      }
+    },
+    "work": {
+      "title": "עבודות אחרונות",
+      "subtitle": "מחקרי מקרה מתוך התיק שלנו",
+      "projects": [
+        {
+          "title": "פלטפורמת מסחר אלקטרוני",
+          "client": "TechStart Inc.",
+          "result": "+240% הכנסה",
+          "category": "פיתוח",
+          "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=450&fit=crop&q=80"
+        },
+        {
+          "title": "עיצוב מותג מחדש",
+          "client": "Fashion Co.",
+          "result": "+180% מעורבות",
+          "category": "עיצוב",
+          "image": "https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=800&h=450&fit=crop&q=80"
+        },
+        {
+          "title": "קמפיין שיווקי",
+          "client": "FinTech Pro",
+          "result": "+500 לידים לחודש",
+          "category": "שיווק",
+          "image": "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=800&h=450&fit=crop&q=80"
+        },
+        {
+          "title": "פיתוח אפליקציה",
+          "client": "HealthTech",
+          "result": "100K הורדות",
+          "category": "נייד",
+          "image": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=450&fit=crop&q=80"
+        }
+      ]
+    },
+    "process": {
+      "title": "התהליך המוכח שלנו",
+      "subtitle": "גישה מערכתית להשגת תוצאות יוצאות דופן",
+      "discovery": {
+        "title": "גילוי",
+        "description": "אנו לומדים את העסק, המטרות והאתגרים שלך"
+      },
+      "strategy": {
+        "title": "אסטרטגיה",
+        "description": "יצירת תוכנית מבוססת נתונים המותאמת אישית לך"
+      },
+      "execution": {
+        "title": "ביצוע",
+        "description": "בנייה והשקה בדיוק ובקפידה"
+      },
+      "optimize": {
+        "title": "אופטימיזציה",
+        "description": "שיפור והרחבה מתמדתים של התוצאות"
+      }
+    },
+    "testimonials": {
+      "title": "מהם מנהיגי התעשייה",
+      "quote": "העבודה עם הסוכנות הזו הפכה את הנוכחות הדיגיטלית שלנו. מקצועית, יעילה ומובילה לתוצאות. מומלצת בחום!",
+      "clients": [
+        {
+          "name": "Michael Chen",
+          "role": "מנכ\"ל, TechStart",
+          "company": "TechStart Inc."
+        },
+        {
+          "name": "Sarah Williams",
+          "role": "CMO, מותג אופנה",
+          "company": "Fashion Co."
+        },
+        {
+          "name": "David Park",
+          "role": "מייסד, FinTech",
+          "company": "FinTech Pro"
+        }
+      ]
+    },
+    "cta": {
+      "title": "מוכנים להרחיב את העסק שלכם?",
+      "subtitle": "בואו נדבר על איך אנחנו יכולים לעזור לכם להשיג את מטרותיכם. קבעו שיחת אסטרטגיה חינם כבר היום.",
+      "features": [
+        "ייעוץ חינם",
+        "הצעה מותאמת אישית",
+        "ללא התחייבות"
+      ],
+      "namePlaceholder": "השם שלך",
+      "emailPlaceholder": "האימייל שלך",
+      "websitePlaceholder": "אתר החברה",
+      "budgetLabel": "תקציב הפרויקט",
+      "button": "קבע שיחת אסטרטגיה"
+    },
+    "footer": {
+      "webDev": "פיתוח אתרים",
+      "digitalMarketing": "שיווק דיגיטלי",
+      "brandStrategy": "אסטרטגיית מותג",
+      "growthConsulting": "ייעוץ צמיחה",
+      "company": "החברה",
+      "aboutUs": "אודותינו",
+      "ourTeam": "הצוות שלנו",
+      "careers": "קריירות",
+      "resources": "משאבים",
+      "blog": "בלוג",
+      "caseStudies": "מחקרי מקרה",
+      "whitepapers": "מסמכי עמדה",
+      "webinars": "וובינרים",
+      "connect": "צור קשר",
+      "copyright": "© 2025 סוכנות דיגיטלית. כל הזכויות שמורות. | מדיניות פרטיות • תנאי שימוש"
+    }
+  }
+}

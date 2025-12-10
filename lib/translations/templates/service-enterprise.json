@@ -1,0 +1,146 @@
+{
+  "en": {
+    "name": "ENTERPRISE CLOUD PLATFORM",
+    "tagline": "Enterprise-Grade Solutions That Scale",
+    "description": "Trusted by Fortune 500 companies worldwide. Secure, compliant, and built for global enterprise operations.",
+    "nav": {
+      "solutions": "Solutions",
+      "clients": "Clients",
+      "pricing": "Pricing",
+      "cta": "Contact Sales"
+    },
+    "hero": {
+      "badge": "SOC 2 Type II Certified",
+      "scheduleDemo": "Schedule Demo",
+      "viewCaseStudies": "View Case Studies"
+    },
+    "solutionsSection": {
+      "title": "Enterprise Solutions",
+      "subtitle": "Built for scale, security, and global operations"
+    },
+    "integrationsSection": {
+      "title": "Seamless Integrations",
+      "subtitle": "Works with your existing enterprise stack"
+    },
+    "clientsSection": {
+      "title": "Trusted by Industry Leaders",
+      "subtitle": "Enterprise success stories",
+      "challenge": "Challenge",
+      "result": "Result"
+    },
+    "supportSection": {
+      "title": "Enterprise Support That Never Sleeps",
+      "subtitle": "World-class support for mission-critical operations"
+    },
+    "pricingSection": {
+      "title": "Enterprise Pricing",
+      "subtitle": "Flexible plans that scale with your organization",
+      "mostPopular": "MOST POPULAR"
+    },
+    "cta": {
+      "title": "Ready to Scale Your Enterprise?",
+      "subtitle": "Join 500+ enterprise clients who trust us with their mission-critical operations.",
+      "scheduleDemo": "Schedule Demo",
+      "downloadWhitepaper": "Download White Paper"
+    },
+    "footer": {
+      "copyright": "© 2025 EnterpriseCloud Platform. San Francisco • London • Singapore • Tokyo"
+    }
+  },
+  "ru": {
+    "name": "КОРПОРАТИВНАЯ ОБЛАЧНАЯ ПЛАТФОРМА",
+    "tagline": "Решения Корпоративного Уровня, Которые Масштабируются",
+    "description": "Доверяют компании Fortune 500 по всему миру. Безопасно, соответствует требованиям и создано для глобальных корпоративных операций.",
+    "nav": {
+      "solutions": "Решения",
+      "clients": "Клиенты",
+      "pricing": "Цены",
+      "cta": "Связаться с Продажами"
+    },
+    "hero": {
+      "badge": "Сертифицировано SOC 2 Type II",
+      "scheduleDemo": "Записаться на Демо",
+      "viewCaseStudies": "Посмотреть Кейсы"
+    },
+    "solutionsSection": {
+      "title": "Корпоративные Решения",
+      "subtitle": "Создано для масштаба, безопасности и глобальных операций"
+    },
+    "integrationsSection": {
+      "title": "Бесшовные Интеграции",
+      "subtitle": "Работает с вашим существующим корпоративным стеком"
+    },
+    "clientsSection": {
+      "title": "Доверяют Лидеры Индустрии",
+      "subtitle": "Истории успеха корпоративных клиентов",
+      "challenge": "Проблема",
+      "result": "Результат"
+    },
+    "supportSection": {
+      "title": "Корпоративная Поддержка, Которая Никогда Не Спит",
+      "subtitle": "Поддержка мирового класса для критически важных операций"
+    },
+    "pricingSection": {
+      "title": "Корпоративные Цены",
+      "subtitle": "Гибкие планы, масштабирующиеся с вашей организацией",
+      "mostPopular": "САМЫЙ ПОПУЛЯРНЫЙ"
+    },
+    "cta": {
+      "title": "Готовы Масштабировать Ваше Предприятие?",
+      "subtitle": "Присоединяйтесь к 500+ корпоративным клиентам, доверяющим нам свои критически важные операции.",
+      "scheduleDemo": "Записаться на Демо",
+      "downloadWhitepaper": "Скачать Белую Книгу"
+    },
+    "footer": {
+      "copyright": "© 2025 EnterpriseCloud Platform. Сан-Франциско • Лондон • Сингапур • Токио"
+    }
+  },
+  "he": {
+    "name": "פלטפורמת ענן ארגונית",
+    "tagline": "פתרונות ברמה ארגונית שניתנים להרחבה",
+    "description": "מהימנים על ידי חברות מה-500 הגדולות בעולם. בטוחים, תואמים לתקנים, ונבנו לפעולות ארגוניות גלובליות.",
+    "nav": {
+      "solutions": "פתרונות",
+      "clients": "לקוחות",
+      "pricing": "תמחור",
+      "cta": "צור קשר עם מכירות"
+    },
+    "hero": {
+      "badge": "מוסמך SOC 2 סוג II",
+      "scheduleDemo": "תזמן הדגמה",
+      "viewCaseStudies": "צפה בלימודי מקרה"
+    },
+    "solutionsSection": {
+      "title": "פתרונות לארגונים",
+      "subtitle": "בנויים לקנה מידה, אבטחה, ופעולות גלובליות"
+    },
+    "integrationsSection": {
+      "title": "אינטגרציה חלקה",
+      "subtitle": "עובד עם מחסנית הארגון הקיימת שלך"
+    },
+    "clientsSection": {
+      "title": "בטוחים על ידי מנהיגי תעשייה",
+      "subtitle": "סיפורי הצלחה של ארגונים",
+      "challenge": "אתגר",
+      "result": "תוצאה"
+    },
+    "supportSection": {
+      "title": "תמיכה ארגונית שאינה נרדמת",
+      "subtitle": "תמיכה מהדרג הראשון לפעולות קריטיות"
+    },
+    "pricingSection": {
+      "title": "תמחור לארגונים",
+      "subtitle": "תוכניות גמישות שמתרחבות עם הארגון שלך",
+      "mostPopular": "הכי פופולרי"
+    },
+    "cta": {
+      "title": "מוכן להרחיב את הארגון שלך?",
+      "subtitle": "הצטרף ל-500+ לקוחות ארגוניים שמאמינים בנו עם הפעולות הקריטיות שלהם.",
+      "scheduleDemo": "תזמן הדגמה",
+      "downloadWhitepaper": "הורד מסמך לבן"
+    },
+    "footer": {
+      "copyright": "© 2025 פלטפורמת EnterpriseCloud. סן פרנסיסקו • לונדון • סינגפור • טוקיו"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "en": {
+    "ui": {
+      "closeNavigationMenu": "Close navigation menu",
+      "openNavigationMenu": "Open navigation menu",
+      "ourSkills": "OUR SKILLS",
+      "aboutUs": "ABOUT US",
+      "weAreABoldCreativeAgencyPushingBoundariesAndBreaki": "WE ARE A BOLD CREATIVE AGENCY PUSHING BOUNDARIES AND BREAKING RULES.",
+      "withATeamOfFearlessCreativesWeTransformBrandsThrou": "With a team of fearless creatives, we transform brands through daring design and innovative thinking.",
+      "pricing": "PRICING",
+      "mostPopular": "MOST POPULAR",
+      "letsGo": "LET'S GO",
+      "whatClientsSay": "WHAT CLIENTS SAY",
+      "ourJourney": "OUR JOURNEY"
+    }
+  },
+  "ru": {
+    "ui": {
+      "closeNavigationMenu": "Закрыть меню навигации",
+      "openNavigationMenu": "Открыть меню навигации",
+      "pricing": "Цены",
+      "mostPopular": "Самый популярный"
+    }
+  },
+  "he": {
+    "ui": {
+      "closeNavigationMenu": "סגור תפריט ניווט",
+      "openNavigationMenu": "פתח תפריט ניווט",
+      "pricing": "תמחור",
+      "mostPopular": "הפופולרי ביותר"
+    }
+  }
+}

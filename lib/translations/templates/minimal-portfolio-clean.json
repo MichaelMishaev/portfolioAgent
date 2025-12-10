@@ -1,0 +1,79 @@
+{
+  "en": {
+    "ui": {
+      "selectedWork": "Selected Work",
+      "years": "Years",
+      "projects": "Projects",
+      "clients": "Clients",
+      "awards": "Awards",
+      "archive": "Archive",
+      "experience": "Experience",
+      "testimonials": "Testimonials",
+      "services": "Services",
+      "questions": "Questions",
+      "letsWorkTogether": "Let's work together",
+      "closeNavigationMenu": "Close navigation menu",
+      "openNavigationMenu": "Open navigation menu",
+      "mobileInterface": "Mobile Interface",
+      "dashboardDesign": "Dashboard Design",
+      "designSystem": "Design System",
+      "brandIdentity": "Brand Identity",
+      "webApplication": "Web Application",
+      "productStrategy": "Product Strategy",
+      "designLeadAtlasFintech": "Design Lead, Atlas Fintech",
+      "seniorDesignerCreatorco": "Senior Designer, CreatorCo",
+      "productDesignerStartupx": "Product Designer, StartupX",
+      "startedIndependentPractice": "Started independent practice",
+      "alexsAttentionToDetailIsUnmatchedCleanThoughtfulDe": "Alex's attention to detail is unmatched. Clean, thoughtful design.",
+      "sarahKim": "Sarah Kim",
+      "ceoHealthflow": "CEO, HealthFlow",
+      "deliveredExactlyWhatWeNeededProfessionalAndEfficie": "Delivered exactly what we needed. Professional and efficient.",
+      "markWilson": "Mark Wilson",
+      "founderCreatorStudio": "Founder, Creator Studio",
+      "theDesignSystemAlexCreatedScaledPerfectlyWithOurGr": "The design system Alex created scaled perfectly with our growth.",
+      "lisaChen": "Lisa Chen",
+      "vpProductFinancehub": "VP Product, FinanceHub",
+      "consultation": "Consultation",
+      "strategicDesignConsultationAndAudit": "Strategic design consultation and audit",
+      "project": "Project",
+      "retainer": "Retainer",
+      "ongoingDesignPartnership": "Ongoing design partnership",
+      "yesIWorkWithClientsGloballyViaVideoCallsAndAsyncCo": "Yes. I work with clients globally via video calls and async collaboration.",
+      "yesIOfferMonthlyRetainersForContinuedDesignPartner": "Yes. I offer monthly retainers for continued design partnership.",
+      "sendAMessage": "Send a Message",
+      "getInTouch": "Get in touch"
+    }
+  },
+  "ru": {
+    "ui": {
+      "selectedWork": "Избранные работы",
+      "years": "Лет",
+      "projects": "Проекты",
+      "clients": "Клиенты",
+      "awards": "Награды",
+      "experience": "Опыт",
+      "testimonials": "Отзывы",
+      "services": "Услуги",
+      "closeNavigationMenu": "Закрыть меню навигации",
+      "openNavigationMenu": "Открыть меню навигации",
+      "brandIdentity": "Фирменный стиль",
+      "getInTouch": "Связаться"
+    }
+  },
+  "he": {
+    "ui": {
+      "selectedWork": "עבודות נבחרות",
+      "years": "שנים",
+      "projects": "פרויקטים",
+      "clients": "לקוחות",
+      "awards": "פרסים",
+      "experience": "ניסיון",
+      "testimonials": "המלצות",
+      "services": "שירותים",
+      "closeNavigationMenu": "סגור תפריט ניווט",
+      "openNavigationMenu": "פתח תפריט ניווט",
+      "brandIdentity": "זהות מותג",
+      "getInTouch": "צור קשר"
+    }
+  }
+}
